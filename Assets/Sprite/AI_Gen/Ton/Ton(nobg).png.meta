@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: dcfa88205147c1d4db32ecffb2c1c677
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2505035035697117340
+    second: Ton(nobg)_0
+  - first:
+      213: -2004825961987316834
+    second: Ton(nobg)_1
+  - first:
+      213: 3773553555526618210
+    second: Ton(nobg)_2
+  - first:
+      213: 1363299413678940675
+    second: Ton(nobg)_3
+  - first:
+      213: -8108444248586498261
+    second: Ton(nobg)_4
+  - first:
+      213: -461308019038668509
+    second: Ton(nobg)_5
+  - first:
+      213: -3445994410843566849
+    second: Ton(nobg)_6
+  - first:
+      213: -7386306298174316819
+    second: Ton(nobg)_7
+  - first:
+      213: -3733105304889807496
+    second: Ton(nobg)_8
+  - first:
+      213: 3705417090186485037
+    second: Ton(nobg)_9
+  - first:
+      213: -7831142596096884607
+    second: Ton(nobg)_10
+  - first:
+      213: -415822593941180800
+    second: Ton(nobg)_11
+  - first:
+      213: -1468564400735401037
+    second: Ton(nobg)_12
+  - first:
+      213: -4363097800728743229
+    second: Ton(nobg)_13
+  - first:
+      213: 5788358498395041037
+    second: Ton(nobg)_14
+  - first:
+      213: 1945177557201799739
+    second: Ton(nobg)_15
+  - first:
+      213: 4786825381915285258
+    second: Ton(nobg)_16
+  - first:
+      213: 8506687225113948628
+    second: Ton(nobg)_17
+  - first:
+      213: -9057679985883596866
+    second: Ton(nobg)_18
+  - first:
+      213: -4792959335526815090
+    second: Ton(nobg)_19
+  - first:
+      213: 7979188492240235293
+    second: Ton(nobg)_20
+  - first:
+      213: -4151610380676521249
+    second: Ton(nobg)_21
+  - first:
+      213: 9193648562147405832
+    second: Ton(nobg)_22
+  - first:
+      213: 6835937737417192593
+    second: Ton(nobg)_23
+  - first:
+      213: -2688380407058993697
+    second: Ton(nobg)_24
+  - first:
+      213: -7243025392966402937
+    second: Ton(nobg)_25
+  - first:
+      213: 1797583772121110421
+    second: Ton(nobg)_26
+  - first:
+      213: 77557840863639119
+    second: Ton(nobg)_27
+  - first:
+      213: -335754599581936110
+    second: Ton(nobg)_28
+  - first:
+      213: 1097500688942541582
+    second: Ton(nobg)_29
+  - first:
+      213: -7644782536350709795
+    second: Ton(nobg)_30
+  - first:
+      213: -6540005830103751851
+    second: Ton(nobg)_31
+  - first:
+      213: 5584294036662346149
+    second: Ton(nobg)_32
+  - first:
+      213: -6163759052465243295
+    second: Ton(nobg)_33
+  - first:
+      213: -8218625472210337292
+    second: Ton(nobg)_34
+  - first:
+      213: -671841037772221677
+    second: Ton(nobg)_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ton(run)_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 848
+        width: 179
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4678d5348e35c3dd0800000000000000
+      internalID: -2505035035697117340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(run)_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 849
+        width: 159
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93e34bd86d6d24e0800000000000000
+      internalID: -2004825961987316834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(run)_2
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 848
+        width: 163
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c831237fa5e5430800000000000000
+      internalID: 3773553555526618210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(run)_3
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 848
+        width: 166
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302e4daf7996be210800000000000000
+      internalID: 1363299413678940675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(run)_4
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 848
+        width: 170
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f41f19ae4097f80800000000000000
+      internalID: -8108444248586498261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(run)_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 848
+        width: 154
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32939210dca1999f0800000000000000
+      internalID: -461308019038668509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(atk)_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 688
+        width: 162
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc00bb475e5d20d0800000000000000
+      internalID: -3445994410843566849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(atk)_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 688
+        width: 155
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deed61f5e819e7990800000000000000
+      internalID: -7386306298174316819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(atk)_2
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 672
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87daae80188513cc0800000000000000
+      internalID: -3733105304889807496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_9
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 688
+        width: 140
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d1a3d16394c6330800000000000000
+      internalID: 3705417090186485037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_10
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 688
+        width: 131
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180073ecc41325390800000000000000
+      internalID: -7831142596096884607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_11
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 688
+        width: 138
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08eed8ecd83ba3af0800000000000000
+      internalID: -415822593941180800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 530
+        width: 171
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbc164557c9e9be0800000000000000
+      internalID: -1468564400735401037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 529
+        width: 146
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2764bbaa92373c0800000000000000
+      internalID: -4363097800728743229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_3
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 530
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d2371e261645050800000000000000
+      internalID: 5788358498395041037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 530
+        width: 127
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a431aaea8aefa10800000000000000
+      internalID: 1945177557201799739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_5
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 530
+        width: 139
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0752eab2583e6240800000000000000
+      internalID: 4786825381915285258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(sit)_6
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 530
+        width: 131
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1354cf5f2dd0670800000000000000
+      internalID: 8506687225113948628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 370
+        width: 145
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb73e30ea08ac4280800000000000000
+      internalID: -9057679985883596866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 369
+        width: 139
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a2807e0ecfb7db0800000000000000
+      internalID: -4792959335526815090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_20
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 369
+        width: 135
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b2ddb78a5cbbe60800000000000000
+      internalID: 7979188492240235293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_21
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 369
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2a3fdda548266c0800000000000000
+      internalID: -4151610380676521249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_22
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 369
+        width: 135
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800b39048a6669f70800000000000000
+      internalID: 9193648562147405832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_23
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 369
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194707167212ede50800000000000000
+      internalID: 6835937737417192593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_24
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 210
+        width: 133
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdde0207344f0bad0800000000000000
+      internalID: -2688380407058993697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_25
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 210
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c7a11c7ca9b7b90800000000000000
+      internalID: -7243025392966402937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_26
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 210
+        width: 130
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597194faaec42f810800000000000000
+      internalID: 1797583772121110421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_27
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 210
+        width: 144
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f463932027a831100800000000000000
+      internalID: 77557840863639119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_28
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 210
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216173878f8275bf0800000000000000
+      internalID: -335754599581936110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_29
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 210
+        width: 137
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0baa21df0b1b3f00800000000000000
+      internalID: 1097500688942541582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 52
+        width: 144
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7c4b779c648e590800000000000000
+      internalID: -7644782536350709795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_31
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 52
+        width: 139
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553aea3195b3d35a0800000000000000
+      internalID: -6540005830103751851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_32
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 52
+        width: 136
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a16798e6d56f7d40800000000000000
+      internalID: 5584294036662346149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_33
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 52
+        width: 135
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bf5bc7ccde57aa0800000000000000
+      internalID: -6163759052465243295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_34
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 52
+        width: 147
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f10dea5da391fd80800000000000000
+      internalID: -8218625472210337292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ton(nobg)_35
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 52
+        width: 143
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3139e0eb2242da6f0800000000000000
+      internalID: -671841037772221677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0e95001ce983c244ab231b5020532aae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ton(atk)_0: -3445994410843566849
+      Ton(atk)_1: -7386306298174316819
+      Ton(atk)_2: -3733105304889807496
+      Ton(nobg)_10: -7831142596096884607
+      Ton(nobg)_11: -415822593941180800
+      Ton(nobg)_18: -9057679985883596866
+      Ton(nobg)_19: -4792959335526815090
+      Ton(nobg)_20: 7979188492240235293
+      Ton(nobg)_21: -4151610380676521249
+      Ton(nobg)_22: 9193648562147405832
+      Ton(nobg)_23: 6835937737417192593
+      Ton(nobg)_24: -2688380407058993697
+      Ton(nobg)_25: -7243025392966402937
+      Ton(nobg)_26: 1797583772121110421
+      Ton(nobg)_27: 77557840863639119
+      Ton(nobg)_28: -335754599581936110
+      Ton(nobg)_29: 1097500688942541582
+      Ton(nobg)_30: -7644782536350709795
+      Ton(nobg)_31: -6540005830103751851
+      Ton(nobg)_32: 5584294036662346149
+      Ton(nobg)_33: -6163759052465243295
+      Ton(nobg)_34: -8218625472210337292
+      Ton(nobg)_35: -671841037772221677
+      Ton(nobg)_9: 3705417090186485037
+      Ton(run)_0: -2505035035697117340
+      Ton(run)_1: -2004825961987316834
+      Ton(run)_2: 3773553555526618210
+      Ton(run)_3: 1363299413678940675
+      Ton(run)_4: -8108444248586498261
+      Ton(run)_5: -461308019038668509
+      Ton(sit)_1: -1468564400735401037
+      Ton(sit)_2: -4363097800728743229
+      Ton(sit)_3: 5788358498395041037
+      Ton(sit)_4: 1945177557201799739
+      Ton(sit)_5: 4786825381915285258
+      Ton(sit)_6: 8506687225113948628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
