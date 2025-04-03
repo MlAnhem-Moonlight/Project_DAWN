@@ -1,15 +1,13 @@
 using BehaviorTree;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-public class TonSetTargetNode : Nodes
+public class MageSetTargetNode : Nodes
 {
-    private TonMovement _tonMovement;
+    private TheMageMovement _theMageMovement;
 
-    public TonSetTargetNode(TonMovement tonMovement)
+    public MageSetTargetNode(TheMageMovement theMageMovement)
     {
-        _tonMovement = tonMovement;
+        _theMageMovement = theMageMovement;
     }
 
     public override NodeState Evaluate()
@@ -17,7 +15,7 @@ public class TonSetTargetNode : Nodes
         Transform target = (Transform)GetData("target");
         if (target != null)
         {
-            _tonMovement.SetTarget(target);
+            _theMageMovement.SetTarget(target);
             state = NodeState.SUCCESS;
         }
         else

@@ -1,13 +1,13 @@
 using BehaviorTree;
 using UnityEngine;
 
-public class TonAttackNode : Nodes
+public class MageAttackNode : Nodes
 {
-    private TonMovement _tonMovement;
+    private TheMageMovement _theMageMovement;
 
-    public TonAttackNode(TonMovement tonMovement)
+    public MageAttackNode(TheMageMovement theMageMovement)
     {
-        _tonMovement = tonMovement;
+        _theMageMovement = theMageMovement;
     }
 
     public override NodeState Evaluate()

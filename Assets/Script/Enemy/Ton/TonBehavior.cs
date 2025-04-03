@@ -19,8 +19,8 @@ public class TonBehavior : Tree
             new Sequence(new List<Nodes>
             {
                 new CheckEnemyInRange(transform, attackRange, defaultTarget),
-                new SetTargetNode(_tonMovement),
-                new AttackNode(_tonMovement),
+                new TonSetTargetNode(_tonMovement),
+                new TonAttackNode(_tonMovement),
             }),
             _tonMovement,
         });
