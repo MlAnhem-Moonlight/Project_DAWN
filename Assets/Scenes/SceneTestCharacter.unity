@@ -662,7 +662,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16359758, y: 0.6060423, z: -0.09934902}
+  m_LocalPosition: {x: 0.16359758, y: 0.4812426, z: -0.09934902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,7 +1004,7 @@ Transform:
   m_GameObject: {fileID: 618847594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.51, y: -1.4732, z: 0}
+  m_LocalPosition: {x: 4.51, y: -1.598, z: 0}
   m_LocalScale: {x: 1.0571147, y: 0.8289326, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1270,7 +1270,7 @@ Transform:
   m_GameObject: {fileID: 872909248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16359758, y: 0.6060423, z: -0.09934902}
+  m_LocalPosition: {x: 0.16359758, y: 0.4812426, z: -0.09934902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1461,8 +1461,9 @@ GameObject:
   - component: {fileID: 1512669358}
   - component: {fileID: 1512669359}
   - component: {fileID: 1512669360}
+  - component: {fileID: 1512669361}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: TheMage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,8 +1478,8 @@ Transform:
   m_GameObject: {fileID: 1512669357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.4952, y: -0.9635, z: 0}
-  m_LocalScale: {x: 1.007117, y: 0.9610837, z: 1}
+  m_LocalPosition: {x: -17.94, y: -3.32, z: 0}
+  m_LocalScale: {x: 2.1866524, y: 1.9443913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1674047518}
@@ -1526,8 +1527,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 2614798891608858598, guid: 6175b6adaf78e3547b8bac5235014046, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1555,6 +1556,29 @@ MonoBehaviour:
   spellRange: 15
   spellCooldown: 5
   defaultTarget: {fileID: 1238175306}
+  animator: {fileID: 1512669361}
+--- !u!95 &1512669361
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512669357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3378d48d8f9e1f408c8b0a5a3a134c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1674047516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +1992,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

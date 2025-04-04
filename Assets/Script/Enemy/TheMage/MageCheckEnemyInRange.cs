@@ -39,8 +39,10 @@ public class MageCheckEnemyInRange : Nodes
                 }
             }
         }
+        parent.SetData("target", closestTarget);
+        state = NodeState.SUCCESS;
 
-        if (closestTarget != null)
+        /*if (closestTarget != null)
         {
             parent.SetData("target", closestTarget);
             state = NodeState.SUCCESS;
@@ -50,7 +52,7 @@ public class MageCheckEnemyInRange : Nodes
             parent.SetData("target", _defaultTarget);
             state = NodeState.FAILURE;
         }
-
+        */
         return state;
     }
 }

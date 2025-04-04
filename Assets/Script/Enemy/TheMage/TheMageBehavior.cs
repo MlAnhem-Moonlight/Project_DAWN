@@ -10,22 +10,23 @@ public class TheMageBehavior : Tree
     public float spellRange = 10f;
     public float spellCooldown = 5f;
     public UnityEngine.Transform defaultTarget;
+    public UnityEngine.Animator animator;
     private TheMageMovement _theMageMovement;
 
     protected override Nodes SetupTree()
     {
-        _theMageMovement = new TheMageMovement(transform, speed, attackRange, defaultTarget);
+        _theMageMovement = new TheMageMovement(transform, speed, attackRange, animator, defaultTarget);
 
         Nodes root = new Selector(new List<Nodes>
         {
             new Sequence(new List<Nodes>
             {
-                new MageCheckEnemyInRange(transform, spellRange, defaultTarget,"Human"),
+                new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human"),
                 new CastSpellNode(_theMageMovement, spellCooldown),
             }),
             new Sequence(new List<Nodes>
             {
-                new MageCheckEnemyInRange(transform, attackRange, defaultTarget,"Human"),
+                new MageCheckEnemyInRange(transform, attackRange, defaultTarget, "Human"),
                 new MageSetTargetNode(_theMageMovement),
                 new MageAttackNode(_theMageMovement),
             }),
