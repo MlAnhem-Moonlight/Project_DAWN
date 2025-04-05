@@ -13,7 +13,7 @@ public class TheMageMovement : Nodes
     private float _range;
     public int direction { get; private set; }
 
-    public TheMageMovement(Transform transform, float speed, float range, Animator animator, Transform defaultTarget = null, Transform target = null)
+    public TheMageMovement(Transform transform, float speed, float range,Animator animator, Transform defaultTarget = null, Transform target = null)
     {
         _transform = transform;
         _speed = speed;
@@ -22,7 +22,7 @@ public class TheMageMovement : Nodes
         _target = target ?? defaultTarget;
         _animator = animator;
         direction = 0;
-        _animator.SetFloat("Movement", direction);
+
 
     }
 
@@ -32,11 +32,11 @@ public class TheMageMovement : Nodes
     }
     public override NodeState Evaluate()
     {
+        _animator.SetBool("IsAttack",false);
         if (_target == null)
         {
             state = NodeState.FAILURE;
             direction = 0;
-            _animator.SetFloat("Movement", direction);
             return state;
         }
 
@@ -53,13 +53,11 @@ public class TheMageMovement : Nodes
         {
             state = NodeState.SUCCESS;
             direction = 0;
-            _animator.SetFloat("Movement", direction);
         }
         else
         {
             state = NodeState.RUNNING;
-            direction = _target.position.x > _transform.position.x ? 1 : -1;
-            _animator.SetFloat("Movement", direction);
+
         }
 
         return state;

@@ -1,4 +1,4 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using UnityEngine;
 
 public class MageCheckEnemyInRange : Nodes
@@ -7,19 +7,21 @@ public class MageCheckEnemyInRange : Nodes
     private float _range;
     private Transform _defaultTarget;
     private string _layerName;
+    private Animator _animator;
 
-    public MageCheckEnemyInRange(Transform transform, float range, Transform defaultTarget, string layerName)
+    public MageCheckEnemyInRange(Transform transform, float range, Transform defaultTarget, string layerName, Animator animator)
     {
         _transform = transform;
         _range = range;
         _defaultTarget = defaultTarget;
         _layerName = layerName;
+        _animator = animator;
     }
 
     public override NodeState Evaluate()
     {
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_transform.position, _range);
-        Transform closestTarget = null;
+        Transform _closestTarget = null;
         float closestDistance = float.MaxValue;
 
         foreach (var hitCollider in hitColliders)
@@ -29,18 +31,22 @@ public class MageCheckEnemyInRange : Nodes
                 float distance = Vector3.Distance(_transform.position, hitCollider.transform.position);
                 if (hitCollider.transform == _defaultTarget)
                 {
-                    closestTarget = _defaultTarget;
+                    _closestTarget = _defaultTarget;
                     break;
                 }
                 else if (distance < closestDistance)
                 {
-                    closestTarget = hitCollider.transform;
+                    _closestTarget = hitCollider.transform;
                     closestDistance = distance;
                 }
             }
         }
-        parent.SetData("target", closestTarget);
+        parent.SetData("target", _closestTarget);
+        if(_closestTarget != null)
+            _animator.SetFloat("Movement", _transform.position.x - _closestTarget.position.x > 0 ? -1 : 1);
+        else _animator.SetFloat("Movement", _transform.position.x - _defaultTarget.position.x > 0 ? -1 : 1);
         state = NodeState.SUCCESS;
+        //cải tiến nếu người chơi quá gần thì sẽ tạo khoảng cách với người chơi
 
         /*if (closestTarget != null)
         {

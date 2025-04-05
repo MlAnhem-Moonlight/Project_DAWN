@@ -21,14 +21,14 @@ public class TheMageBehavior : Tree
         {
             new Sequence(new List<Nodes>
             {
-                new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human"),
-                new CastSpellNode(_theMageMovement, spellCooldown),
+                new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human",animator),
+                new CastSpellNode(_theMageMovement, spellCooldown,animator),
             }),
             new Sequence(new List<Nodes>
             {
-                new MageCheckEnemyInRange(transform, attackRange, defaultTarget, "Human"),
+                new MageCheckEnemyInRange(transform, attackRange, defaultTarget, "Human",animator),
                 new MageSetTargetNode(_theMageMovement),
-                new MageAttackNode(_theMageMovement),
+                new MageAttackNode(_theMageMovement,animator),
             }),
             _theMageMovement,
         });
