@@ -12,6 +12,7 @@ public class TonBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _tonMovement = new TonMovement(transform, speed, attackRange, defaultTarget);
 
         Nodes root = new Selector(new List<Nodes>

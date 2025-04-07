@@ -15,6 +15,7 @@ public class TheMageBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _theMageMovement = new TheMageMovement(transform, speed, attackRange, animator, defaultTarget);
 
         Nodes root = new Selector(new List<Nodes>
