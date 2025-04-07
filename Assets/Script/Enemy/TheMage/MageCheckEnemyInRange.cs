@@ -47,7 +47,7 @@ public class MageCheckEnemyInRange : Nodes
         else _animator.SetFloat("Movement", _transform.position.x - _defaultTarget.position.x > 0 ? -1 : 1);
         state = NodeState.SUCCESS;
         //cải tiến nếu người chơi quá gần thì sẽ tạo khoảng cách với người chơi
-
+        
         /*if (closestTarget != null)
         {
             parent.SetData("target", closestTarget);
