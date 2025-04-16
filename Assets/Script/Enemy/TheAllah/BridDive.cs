@@ -18,13 +18,16 @@ public class BridDive : Nodes
         _target = target;
         _diveSpeed = diveSpeed;
         _animator = animator;
-
+        if (GetData("LastSeenTargetPosition") is Vector3 lastSeenPosition)
+        {
+            _target.position = lastSeenPosition;
+        }
         _collisionHandler.OnBridCollision += HandleCollision; // Đăng ký sự kiện va chạm
-        _rb.gravityScale = 0.5f; // Tạo cảm giác quái bị hút xuống nhưng vẫn có thể chỉnh hướng
     }
 
     public override NodeState Evaluate()
     {
+        _rb.gravityScale = 0.5f; // Tạo cảm giác quái bị hút xuống nhưng vẫn có thể chỉnh hướng
         if (_target == null)
         {
             state = NodeState.FAILURE;
@@ -33,10 +36,8 @@ public class BridDive : Nodes
 
         _animator.SetTrigger("Dive"); // Kích hoạt animation lao xuống
 
-
         // Di chuyển quái theo hướng của mục tiêu tại vị trí được phát hiện
         Vector2 directionToTarget = (_target.position - _transform.position).normalized;
-
         // Chỉ cần lao thẳng vào hướng của mục tiêu tại thời điểm phát hiện
         _rb.linearVelocity = directionToTarget * _diveSpeed;
 

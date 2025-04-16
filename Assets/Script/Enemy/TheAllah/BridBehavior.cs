@@ -31,14 +31,14 @@ public class BridBehavior : Tree
 
         bridMovement = new BridMovement(transform, rb, speed, animator, target, minHeight);
         bridCheckDistance = new BridCheckDistance(transform, target, diveThreshold);
-        bridDive = new BridDive(transform, rb, collisionHandler, target, speed * 2, animator);
+        //bridDive = new BridDive(transform, rb, collisionHandler, target, speed * 2, animator);
 
         Nodes root = new Selector(new List<Nodes>
         {
             new Sequence(new List<Nodes>
             {
                 bridCheckDistance,
-                bridDive
+                new BridDive(transform, rb, collisionHandler, target, speed * 2, animator)
             }),
             bridMovement
         });

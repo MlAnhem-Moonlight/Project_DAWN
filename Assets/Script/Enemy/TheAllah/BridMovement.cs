@@ -36,6 +36,8 @@ public class BridMovement : Nodes
     private void FlyTowardsTarget()
     {
         Vector2 direction = (_target.position - _transform.position).normalized;
+
+        // Chỉ gán giá trị tốc độ theo trục x
         _rb.linearVelocity = new Vector2(direction.x * _speed, _rb.linearVelocity.y);
 
         // Khi độ cao giảm xuống dưới mức tối thiểu, vỗ cánh đẩy lên
