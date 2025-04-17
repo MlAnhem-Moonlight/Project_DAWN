@@ -3,12 +3,12 @@
 public class RandomSpawnManager : MonoBehaviour
 {
     public GameObject[] enemies; // Array chứa các prefab quái
-    public Transform[] spawnPoints; // Các vị trí spawn quái
+    public Transform spawnPoint; // Vị trí spawn quái
     public float spawnInterval = 5f; // Thời gian chờ giữa các lần spawn
     public int maxEnemiesPerSpawn = 4; // Số lượng quái tối đa sinh ra mỗi lần
     public int maxEnemiesOnField = 15; // Giới hạn số lượng quái trên sân
 
-    private float spawnTimer = 0f;
+    private float spawnTimer = 10f;
 
     void Update()
     {
@@ -29,7 +29,7 @@ public class RandomSpawnManager : MonoBehaviour
     bool CanSpawn()
     {
         // Lấy tất cả các GameObject hiện tại trên sân
-        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+        GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         int demonCount = 0;
 
         // Kiểm tra các đối tượng có Layer là "Demon"
@@ -53,7 +53,7 @@ public class RandomSpawnManager : MonoBehaviour
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             // Kiểm tra xem số lượng quái có vượt quá giới hạn sau lượt spawn hay không
-            GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+            GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
             int currentDemonCount = 0;
 
             foreach (GameObject obj in allObjects)
@@ -74,10 +74,10 @@ public class RandomSpawnManager : MonoBehaviour
             // Chọn ngẫu nhiên prefab quái
             GameObject randomEnemy = enemies[Random.Range(0, enemies.Length)];
 
-            // Chọn ngẫu nhiên vị trí spawn
-            //Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            Transform randomSpawnPoint = transform;
-            // Instantiate (spawn) quái tại vị trí ngẫu nhiên
+            // Chọn vị trí spawn
+            Transform randomSpawnPoint = spawnPoint;
+
+            // Instantiate (spawn) quái tại vị trí
             GameObject spawnedEnemy = Instantiate(randomEnemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
 
             // Gán Layer cho quái đã spawn (nếu chưa được đặt)

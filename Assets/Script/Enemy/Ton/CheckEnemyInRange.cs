@@ -6,39 +6,24 @@ public class CheckEnemyInRange : Nodes
     private Transform _transform;
     private float _range;
     private Transform _defaultTarget;
+    private string _layerHuman;
+    private string _layerConstruction;
 
-    public CheckEnemyInRange(Transform transform, float range, Transform defaultTarget)
+    public CheckEnemyInRange(Transform transform, float range, Transform defaultTarget, string layerHuman, string layerConstruction)
     {
         _transform = transform;
         _range = range;
         _defaultTarget = defaultTarget;
+        _layerHuman = layerHuman;
+        _layerConstruction = layerConstruction;
     }
 
     public override NodeState Evaluate()
     {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_transform.position, _range);
-        Transform closestTarget = null;
-        float closestDistance = float.MaxValue;
+        Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction, _defaultTarget);
 
-        foreach (var hitCollider in hitColliders)
-        {
-            if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Human") || hitCollider.transform == _defaultTarget)
-            {
-                float distance = Vector3.Distance(_transform.position, hitCollider.transform.position);
-                if (hitCollider.transform == _defaultTarget)
-                {
-                    closestTarget = _defaultTarget;
-                    break;
-                }
-                else if (distance < closestDistance)
-                {
-                    closestTarget = hitCollider.transform;
-                    closestDistance = distance;
-                }
-            }
-        }
-
-        if (closestTarget != null)
+        // Check if the closest target is within range
+        if (closestTarget != null && Vector3.Distance(_transform.position, closestTarget.position) <= _range)
         {
             parent.SetData("target", closestTarget);
             state = NodeState.SUCCESS;

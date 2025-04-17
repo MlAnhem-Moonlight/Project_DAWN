@@ -21,7 +21,7 @@ public class TheHandBehavior : Tree
         {
             new Sequence(new List<Nodes>
             {
-                new TheHandCheckTarget(transform, attackRange, target, "Human",animator),
+                new TheHandCheckTarget(transform, attackRange, target, "Human","Construction",animator),
                 new TheHandSetTarget(theHandMovement),
                 new TheHandAttack(theHandMovement,animator),
             }),

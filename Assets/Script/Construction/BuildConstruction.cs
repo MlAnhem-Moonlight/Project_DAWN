@@ -18,6 +18,7 @@ public class BuildConstruction : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && isBuilt == false)
         {
             isBuilt = true;
+            constructionHP = 100;
             construction.SetActive(true);
             GetComponent<SpriteRenderer>().enabled = false;
         }

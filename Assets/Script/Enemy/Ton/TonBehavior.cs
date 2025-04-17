@@ -19,7 +19,7 @@ public class TonBehavior : Tree
         {
             new Sequence(new List<Nodes>
             {
-                new CheckEnemyInRange(transform, attackRange, defaultTarget),
+                new CheckEnemyInRange(transform, attackRange, defaultTarget,"Human", "Construction"),
                 new TonSetTargetNode(_tonMovement),
                 new TonAttackNode(_tonMovement),
             }),
