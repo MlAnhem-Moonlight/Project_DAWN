@@ -1,0 +1,135 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using BehaviorTree;
+
+public class SpearBehavior : Tree
+{
+    [Header("Movement Settings")]
+    public float speed = 10f;
+    public float defensiveOffset = 1.5f;
+    public float patrolRadius = 5f;
+
+    [Header("References")]
+    public Transform defensiveTarget;   // GameObject cần bảo vệ
+    public Transform mainBase;          // Tâm khu vực trung tâm
+    public Transform camp;              // Vị trí trại
+
+    // Current state (set từ ngoài, ví dụ qua Animator hoặc AI Manager)
+    public AllyState spearState = AllyState.Neutral;
+
+    // Internal patrol
+    private Vector3 _currentPatrolPoint;
+
+    protected override Nodes SetupTree()
+    {
+        // Tạo 3 nhánh Sequence: Aggressive, Defensive, Neutral
+        return new Selector(new List<Nodes>
+        {
+            // 1. Nếu Aggressive thì chase demon
+            new Sequence(new List<Nodes>
+            {
+                new ConditionNode(() => spearState == AllyState.Aggressive),
+                new ActionNode(() => {
+                    MoveToNearestLayer("Demon");
+                    return NodeState.RUNNING;
+                })
+            }),
+
+            // 2. Nếu Defensive thì giữ vị trí bên trái ngang defensiveTarget
+            new Sequence(new List<Nodes>
+            {
+                new ConditionNode(() => spearState == AllyState.Defensive),
+                new ActionNode(() => {
+                    MoveToDefensivePosition();
+                    return NodeState.RUNNING;
+                })
+            }),
+
+            // 3. Nếu Neutral thì patrol quanh mainBase hoặc về camp
+            new Sequence(new List<Nodes>
+            {
+                new ConditionNode(() => spearState == AllyState.Neutral),
+                new ActionNode(() => {
+                    PatrolOrReturn();
+                    return NodeState.RUNNING;
+                })
+            })
+        });
+    }
+
+    #region Action Methods
+
+    private void MoveToNearestLayer(string layerName)
+    {
+        int layer = LayerMask.NameToLayer(layerName);
+        GameObject[] all = GameObject.FindObjectsOfType<GameObject>();
+        GameObject nearest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var go in all)
+        {
+            if (go.layer != layer) continue;
+            float d = Vector3.Distance(transform.position, go.transform.position);
+            if (d < minDist)
+            {
+                minDist = d;
+                nearest = go;
+            }
+        }
+
+        if (nearest != null)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                nearest.transform.position,
+                speed * Time.deltaTime
+            );
+        }
+    }
+
+    private void MoveToDefensivePosition()
+    {
+        if (defensiveTarget == null) return;
+        Vector3 targetPos = defensiveTarget.position + Vector3.left * defensiveOffset;
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            targetPos,
+            speed * Time.deltaTime
+        );
+    }
+
+    private void PatrolOrReturn()
+    {
+        // Nếu chưa có điểm patrol, sinh 1 điểm ngẫu nhiên quanh mainBase
+        if (_currentPatrolPoint == Vector3.zero)
+        {
+            _currentPatrolPoint = mainBase.position + UnityEngine.Random.insideUnitSphere * patrolRadius;
+            _currentPatrolPoint.y = mainBase.position.y; // cùng độ cao
+        }
+
+        // Di chuyển đến patrol point
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            _currentPatrolPoint,
+            speed * Time.deltaTime
+        );
+
+        // Khi đến gần, reset điểm tiếp theo hoặc quay về camp nếu quá xa
+        if (Vector3.Distance(transform.position, _currentPatrolPoint) < 0.3f)
+        {
+            // 50% chọn quay về camp, 50% tiếp tục patrol
+            if (UnityEngine.Random.value < 0.5f && camp != null)
+            {
+                _currentPatrolPoint = camp.position;
+            }
+            else
+            {
+                _currentPatrolPoint = mainBase.position + UnityEngine.Random.insideUnitSphere * patrolRadius;
+                _currentPatrolPoint.y = mainBase.position.y;
+            }
+        }
+    }
+
+    #endregion
+}
