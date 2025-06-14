@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: 58f035591a5cd1f47bdf553c8e141862
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6434983238663376758
+    second: broken_ore_0
+  - first:
+      213: -7214223877365708230
+    second: broken_ore_1
+  - first:
+      213: 2327053171890774751
+    second: broken_ore_2
+  - first:
+      213: 8166215953161865632
+    second: broken_ore_3
+  - first:
+      213: 658816068196941804
+    second: broken_ore_4
+  - first:
+      213: 7112523647802949108
+    second: broken_ore_5
+  - first:
+      213: -2368306685592385093
+    second: broken_ore_6
+  - first:
+      213: -3578109174527808188
+    second: broken_ore_7
+  - first:
+      213: 3561540708182585185
+    second: broken_ore_8
+  - first:
+      213: -995699612323475959
+    second: broken_ore_9
+  - first:
+      213: 6673042055606951946
+    second: broken_ore_10
+  - first:
+      213: 2207383566208601421
+    second: broken_ore_11
+  - first:
+      213: -2648666048754247877
+    second: broken_ore_12
+  - first:
+      213: 6404902384705219711
+    second: broken_ore_13
+  - first:
+      213: 1454611500854996165
+    second: broken_ore_14
+  - first:
+      213: -8974972296897125481
+    second: broken_ore_15
+  - first:
+      213: 5856441437287409915
+    second: broken_ore_16
+  - first:
+      213: -8248063983342967481
+    second: broken_ore_17
+  - first:
+      213: -6583187755289909887
+    second: broken_ore_18
+  - first:
+      213: 7512725167579769577
+    second: broken_ore_19
+  - first:
+      213: 3575983142451177973
+    second: broken_ore_20
+  - first:
+      213: -5977513269917928722
+    second: broken_ore_21
+  - first:
+      213: -5248787659265949660
+    second: broken_ore_22
+  - first:
+      213: -5085258521694328261
+    second: broken_ore_23
+  - first:
+      213: 651852159388002165
+    second: broken_ore_24
+  - first:
+      213: 2236335262701253446
+    second: broken_ore_25
+  - first:
+      213: 4219291949948716601
+    second: broken_ore_26
+  - first:
+      213: 3522144072437067351
+    second: broken_ore_27
+  - first:
+      213: -2364601696318298014
+    second: broken_ore_28
+  - first:
+      213: 6444452412671120305
+    second: broken_ore_29
+  - first:
+      213: 4784432455759875335
+    second: broken_ore_30
+  - first:
+      213: 6265486805673164471
+    second: broken_ore_31
+  - first:
+      213: 6940609036001446974
+    second: broken_ore_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 244
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: broken_ore_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 631
+        width: 244
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f8f1c5927ad4950800000000000000
+      internalID: 6434983238663376758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_ore_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 629
+        width: 244
+        height: 287
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ac97b2b9de1eb90800000000000000
+      internalID: -7214223877365708230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_ore_2
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 630
+        width: 244
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5293a9fb957034a9ee7eabf2fc6c62
+      internalID: 2070621474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_ore_3
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 196
+        width: 244
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2c219017b09464ab2105e793c9778e
+      internalID: -185207857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_ore_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 187
+        width: 244
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63abc36ce7193d942b4072976934c881
+      internalID: 1296877148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_ore_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 189
+        width: 244
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e593e3546694ea4bab9ac716d5dd656
+      internalID: 1597552671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dbe7aaef7ee38c541996dc4dc8b3b389
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      broken_ore_2: 2070621474
+      broken_ore_3: -185207857
+      broken_ore_4: 1296877148
+      broken_ore_5: 1597552671
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

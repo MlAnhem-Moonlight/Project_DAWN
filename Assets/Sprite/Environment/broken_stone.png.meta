@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: 8b7a4c8576c08874b95ecc4b109249fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3675677795489797030
+    second: broken_stone_0
+  - first:
+      213: 1937502146490148924
+    second: broken_stone_1
+  - first:
+      213: 1200475019902748240
+    second: broken_stone_2
+  - first:
+      213: 2622123514343460043
+    second: broken_stone_3
+  - first:
+      213: -1918423664933596204
+    second: broken_stone_4
+  - first:
+      213: -7946056844405931749
+    second: broken_stone_5
+  - first:
+      213: 1560672147375781815
+    second: broken_stone_6
+  - first:
+      213: -1455635644758161860
+    second: broken_stone_7
+  - first:
+      213: -1101538230945590683
+    second: broken_stone_8
+  - first:
+      213: 6234640449628524733
+    second: broken_stone_9
+  - first:
+      213: -187705054192728756
+    second: broken_stone_10
+  - first:
+      213: 9205155027085119858
+    second: broken_stone_11
+  - first:
+      213: -3749517167938611060
+    second: broken_stone_12
+  - first:
+      213: 6755210286753169508
+    second: broken_stone_13
+  - first:
+      213: -2054283176906820600
+    second: broken_stone_14
+  - first:
+      213: 4022848545978654082
+    second: broken_stone_15
+  - first:
+      213: 4203107417614953180
+    second: broken_stone_16
+  - first:
+      213: -904363860685066050
+    second: broken_stone_17
+  - first:
+      213: 1152958215054452051
+    second: broken_stone_18
+  - first:
+      213: 5942799576401444867
+    second: broken_stone_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 246
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: broken_stone_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 627
+        width: 246
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3d5fcfa71a20330800000000000000
+      internalID: 3675677795489797030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 627
+        width: 246
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c382a19dfe363ea10800000000000000
+      internalID: 1937502146490148924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone_2
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 631
+        width: 236
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50a6bfe11ed7aa4d85ab465cc87126e
+      internalID: 1169804642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 140
+        width: 246
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a489f7651a4fa4438204370bff9ef7e
+      internalID: -1796019209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone_4
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 142
+        width: 246
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afdba8423703e7459f31d788864159f
+      internalID: -417419086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone_5
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 144
+        width: 246
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a118e68a5300d4da640d1fb09ff8f8
+      internalID: 745041329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5a59793cbe1ffef4e866f0ef8af73e9a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      broken_stone_2: 1169804642
+      broken_stone_20: 475028680
+      broken_stone_3: -1796019209
+      broken_stone_4: -417419086
+      broken_stone_5: 745041329
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

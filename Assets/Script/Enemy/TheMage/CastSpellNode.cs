@@ -20,7 +20,6 @@ public class CastSpellNode : Nodes
         _isCasting = false;
         _animator = animator;
         RuntimeAnimatorController controller = animator.runtimeAnimatorController;
-        AnimationClip specificClip = null;
 
         foreach (AnimationClip clip in controller.animationClips)
         {

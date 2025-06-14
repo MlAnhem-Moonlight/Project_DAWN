@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: dabb215c22fd6f84097bdbb57888eb53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5758833990204774190
+    second: broken_stone2_0
+  - first:
+      213: 976571468613798080
+    second: broken_stone2_1
+  - first:
+      213: 3769236787357955172
+    second: broken_stone2_2
+  - first:
+      213: 1268474590253149682
+    second: broken_stone2_3
+  - first:
+      213: -6920501712358444100
+    second: broken_stone2_4
+  - first:
+      213: -4737530483798265041
+    second: broken_stone2_5
+  - first:
+      213: -8253151364159164411
+    second: broken_stone2_6
+  - first:
+      213: 9063312479556644650
+    second: broken_stone2_7
+  - first:
+      213: -5005648477655981012
+    second: broken_stone2_8
+  - first:
+      213: -4471816149063964442
+    second: broken_stone2_9
+  - first:
+      213: 7805601752959034579
+    second: broken_stone2_10
+  - first:
+      213: 4499422185745100675
+    second: broken_stone2_11
+  - first:
+      213: 8550900134994679547
+    second: broken_stone2_12
+  - first:
+      213: 5986733592900873472
+    second: broken_stone2_13
+  - first:
+      213: 7707957821085035239
+    second: broken_stone2_14
+  - first:
+      213: -9031918958627400059
+    second: broken_stone2_15
+  - first:
+      213: -2781550936726709306
+    second: broken_stone2_16
+  - first:
+      213: -6733535931640760328
+    second: broken_stone2_17
+  - first:
+      213: 5078530594441859232
+    second: broken_stone2_18
+  - first:
+      213: -2548103788157809049
+    second: broken_stone2_19
+  - first:
+      213: -1813276036010571974
+    second: broken_stone2_20
+  - first:
+      213: -8547263705140987692
+    second: broken_stone2_21
+  - first:
+      213: -7151982500437597546
+    second: broken_stone2_22
+  - first:
+      213: -1656392484669410635
+    second: broken_stone2_23
+  - first:
+      213: -7643437930125892116
+    second: broken_stone2_24
+  - first:
+      213: 2770995422914206637
+    second: broken_stone2_25
+  - first:
+      213: -1511895786392906515
+    second: broken_stone2_26
+  - first:
+      213: -1881738757405879845
+    second: broken_stone2_27
+  - first:
+      213: 3150584804360605413
+    second: broken_stone2_28
+  - first:
+      213: 3335138111818643591
+    second: broken_stone2_29
+  - first:
+      213: -1670699618353446713
+    second: broken_stone2_30
+  - first:
+      213: -855362067281938634
+    second: broken_stone2_31
+  - first:
+      213: 6288463686496977248
+    second: broken_stone2_32
+  - first:
+      213: -6568765245805546249
+    second: broken_stone2_33
+  - first:
+      213: 5552216380051228747
+    second: broken_stone2_34
+  - first:
+      213: 8956050345604569561
+    second: broken_stone2_35
+  - first:
+      213: -699747146416479727
+    second: broken_stone2_36
+  - first:
+      213: -1688975637909674516
+    second: broken_stone2_37
+  - first:
+      213: -7010303389064206351
+    second: broken_stone2_38
+  - first:
+      213: 2739812770597280276
+    second: broken_stone2_39
+  - first:
+      213: 8237322616270135998
+    second: broken_stone2_40
+  - first:
+      213: 7205770664546273741
+    second: broken_stone2_41
+  - first:
+      213: 7888441156340122540
+    second: broken_stone2_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 209
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: broken_stone2_0
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 569
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22d8a605442eab44b938a2aaee3d6cf
+      internalID: -1456545950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone2_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 569
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287763de359ec4f4da8e520b70901765
+      internalID: -1813220289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone2_2
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 573
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db6205beab73534f87a65aa700ed000
+      internalID: -467105766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone2_7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 263
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb366e31233687439f97ffc3bf2b33f
+      internalID: 1342458267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone2_20
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 249
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce0116e7f44cc4498d0fb66c28f0142
+      internalID: 1000796524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken_stone2_31
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 252
+        width: 209
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229ee270cece9e5459b514b78c932f22
+      internalID: 1808214535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0ef32edb0c3b8e84aae8ce5cd165a49b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      broken_stone2_0: -1456545950
+      broken_stone2_1: -1813220289
+      broken_stone2_10: -1933035486
+      broken_stone2_11: 1643062288
+      broken_stone2_12: 1886634275
+      broken_stone2_13: 851370244
+      broken_stone2_14: 1739053109
+      broken_stone2_15: -2126298583
+      broken_stone2_16: -1448428677
+      broken_stone2_17: -1705346328
+      broken_stone2_18: -2010209953
+      broken_stone2_19: -312831793
+      broken_stone2_2: -467105766
+      broken_stone2_20: 1000796524
+      broken_stone2_21: -2079134823
+      broken_stone2_22: -945235918
+      broken_stone2_23: 850474581
+      broken_stone2_24: 395833062
+      broken_stone2_25: -548314978
+      broken_stone2_26: 1061597784
+      broken_stone2_27: -1003522943
+      broken_stone2_28: 48337106
+      broken_stone2_29: -231223290
+      broken_stone2_3: 414341734
+      broken_stone2_30: -384300389
+      broken_stone2_31: 1808214535
+      broken_stone2_32: 509621939
+      broken_stone2_33: 2133875258
+      broken_stone2_34: 1686129003
+      broken_stone2_35: -139761966
+      broken_stone2_36: -318551839
+      broken_stone2_37: -173965865
+      broken_stone2_38: -1917227755
+      broken_stone2_39: -1671500004
+      broken_stone2_4: 221710601
+      broken_stone2_40: -84673585
+      broken_stone2_41: -1590129507
+      broken_stone2_42: 502182999
+      broken_stone2_43: 1903356003
+      broken_stone2_5: 230944976
+      broken_stone2_6: 1208623086
+      broken_stone2_7: 1342458267
+      broken_stone2_8: -1990270648
+      broken_stone2_9: -1533294961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2,7 +2,7 @@
 - Project name: DAWN
 - Unity version: Unity 6000.0.44f1
 - Active game object:
-  - Name: Spear
+  - Name: CastleArea
   - Tag: Untagged
-  - Layer: Human
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
