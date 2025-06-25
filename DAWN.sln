@@ -191,6 +191,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.AppUI.InternalAPIBrid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.AppUI.Navigation.Editor", "Unity.AppUI.Navigation.Editor.csproj", "{4AD58AE1-2B02-674F-8739-A00AB9F8BD10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.DocCodeExamples", "Unity.VisualScripting.DocCodeExamples.csproj", "{70FB6EC3-02BA-3137-0AF3-028856E2EF92}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializableGUID", "SerializableGUID.csproj", "{96F495A2-3100-4C08-7E5E-960293D372FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Collections.Editor", "Unity.Collections.Editor.csproj", "{A0643E12-22F6-8313-ADFD-90872FAACE1E}"
@@ -589,6 +591,10 @@ Global
 		{4AD58AE1-2B02-674F-8739-A00AB9F8BD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD58AE1-2B02-674F-8739-A00AB9F8BD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD58AE1-2B02-674F-8739-A00AB9F8BD10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70FB6EC3-02BA-3137-0AF3-028856E2EF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FB6EC3-02BA-3137-0AF3-028856E2EF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FB6EC3-02BA-3137-0AF3-028856E2EF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FB6EC3-02BA-3137-0AF3-028856E2EF92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96F495A2-3100-4C08-7E5E-960293D372FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96F495A2-3100-4C08-7E5E-960293D372FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F495A2-3100-4C08-7E5E-960293D372FF}.Release|Any CPU.ActiveCfg = Release|Any CPU

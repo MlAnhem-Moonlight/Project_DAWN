@@ -11,5 +11,4 @@ public enum animalState
     Sleep,
     Eat,
     Flee
-        
 }

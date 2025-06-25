@@ -40,4 +40,28 @@ public static class TargetSelector
 
         return closestTarget ?? defaultTarget;
     }
+
+    public static Transform GetClosestTarget(Transform origin, float range, string layerHuman, string layerConstruction)
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(origin.position, range);
+        Transform closestTarget = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.gameObject.layer == LayerMask.NameToLayer(layerHuman) ||
+                hitCollider.gameObject.layer == LayerMask.NameToLayer(layerConstruction))
+            {
+                float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
+
+                if (distance < closestDistance)
+                {
+                    closestTarget = hitCollider.transform;
+                    closestDistance = distance;
+                }
+            }
+        }
+
+        return closestTarget;
+    }
 }
