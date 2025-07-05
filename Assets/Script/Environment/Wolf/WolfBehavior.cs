@@ -18,14 +18,13 @@ public class WolfBehavior : Tree
     {
         Nodes root = new Selector(new List<Nodes>
         {
-            // thêm script di chuyển, có thể chuyển từ wander(speed 5f) sang hunt(chaseSpeed 7f)
             new Sequence(new List<Nodes>
             {
-                new CheckInRange(transform, attackRange, animator, "Human", "Deer"),
-                //chuyển trạng thái sang hunt(chaseSpeed 7f)
+                new CheckInRange(transform, attackRange, animator, "Human", "Deer"),// thêm code thay đổi trạng thái chuyển từ wander sang hunt
+                new EnvMovement(transform, chaseSpeed, 10f, null, false),// sai logic, do cây sẽ khởi tạo các node cùng lúc nên biến cần thay đổi trong node chứ không phải trong khởi tạo
+                new WolfAttack(),
             }),
-            // wander(speed 5f)
-            new EnvMovement(transform, speed, 10f, null, startArea, endArea),
+            new EnvMovement(transform, speed, 10f, startArea, endArea, true),
         });
         return root;
     }

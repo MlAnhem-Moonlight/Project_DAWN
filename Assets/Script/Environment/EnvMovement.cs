@@ -53,12 +53,15 @@ public class EnvMovement : Nodes
 
     public override NodeState Evaluate()
     {
-        if (!_isWandering) 
+        
+        if (_isWandering == false) 
         {
+            Debug.Log("ryydy"); 
             Hunting();
         } 
         else 
         {
+            Debug.Log("ryydyyyyyyyyyyyy");
             Wander();
         }
         return state;
@@ -67,77 +70,51 @@ public class EnvMovement : Nodes
     private void Wander()
     {
         float step = _speed * Time.deltaTime;
-        if (_target == null)
+        if (walkState == 0)
         {
-
-            if (walkState == 0)
-            {
-                Debug.Log("Sleep");
-                walkState = Random.Range(0, 7);
-                state = NodeState.RUNNING;
-            }
-            else
-            {
-                Debug.Log("Wandering");
-                // Store the wander target as a persistent field to avoid picking a new one every frame
-                if (_wanderTarget == null)// || Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f
-                {
-                    _wanderTarget = new Vector3(Random.Range(_startArea.position.x, _endArea.position.x), _transform.position.y, _transform.position.z);
-                }
-                _transform.position = Vector3.MoveTowards(_transform.position, _wanderTarget.Value, step);
-                if (Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f)
-                {
-                    walkState = Random.Range(0, 7);
-                    Debug.Log("Walk State: " + walkState);
-                    _wanderTarget = null;
-                }
-                state = NodeState.RUNNING;
-            }
+            walkState = Random.Range(0, 7);
+            state = NodeState.RUNNING;
         }
         else
         {
-            Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-            _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
+            // Store the wander target as a persistent field to avoid picking a new one every frame
+            if (_wanderTarget == null)// || Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f
+            {
+                _wanderTarget = new Vector3(Random.Range(_startArea.position.x, _endArea.position.x), _transform.position.y, _transform.position.z);
+            }
+            _transform.position = Vector3.MoveTowards(_transform.position, _wanderTarget.Value, step);
+            if (Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f)
+            {
+                walkState = Random.Range(0, 7);
+                Debug.Log("Walk State: " + walkState);
+                _wanderTarget = null;
+            }
             state = NodeState.RUNNING;
         }
+
         
     }
 
     private void Hunting()
     {
-        float step = _speed * Time.deltaTime;
+        
         if (_target == null)
         {
+            state = NodeState.FAILURE;
 
-            if (walkState == 0)
-            {
-                Debug.Log("Sleep");
-                walkState = Random.Range(0, 7);
-                state = NodeState.RUNNING;
-            }
-            else
-            {
-                Debug.Log("Wandering");
-                // Store the wander target as a persistent field to avoid picking a new one every frame
-                if (_wanderTarget == null)// || Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f
-                {
-                    _wanderTarget = new Vector3(Random.Range(_startArea.position.x, _endArea.position.x), _transform.position.y, _transform.position.z);
-                }
-                _transform.position = Vector3.MoveTowards(_transform.position, _wanderTarget.Value, step);
-                if (Vector3.Distance(_transform.position, _wanderTarget.Value) < 0.05f)
-                {
-                    walkState = Random.Range(0, 7);
-                    Debug.Log("Walk State: " + walkState);
-                    _wanderTarget = null;
-                }
-                state = NodeState.RUNNING;
-            }
         }
         else
         {
+            float step = _speed * Time.deltaTime;
             Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
             _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
             state = NodeState.RUNNING;
+            if (Vector3.Distance(_transform.position, targetPosition) < 0.05f)
+            {
+                Debug.Log("Target reached: " + _target.name);
+                state = NodeState.SUCCESS;
+            }
+            
         }
 
     }

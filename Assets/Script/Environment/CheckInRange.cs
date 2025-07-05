@@ -22,7 +22,7 @@ public class CheckInRange : Nodes
 
     public override NodeState Evaluate()
     {
-
+        Debug.Log("Checking in range for target");
         Target = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerDeer, _defaultTarget);
         if (Target != null)
         { 

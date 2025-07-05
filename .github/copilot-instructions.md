@@ -2,7 +2,7 @@
 - Project name: DAWN
 - Unity version: Unity 6000.0.44f1
 - Active game object:
-  - Name: wolf_0
+  - Name: Frame_0
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Deer
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
