@@ -21,11 +21,11 @@ public class WolfBehavior : Tree
             new Sequence(new List<Nodes>
             {
                 new CheckInRange(transform, attackRange, animator, "Human", "Deer"),// thêm code thay đổi trạng thái chuyển từ wander sang hunt
-                new EnvMovement(transform, chaseSpeed, 10f, null, false),// sai logic, do cây sẽ khởi tạo các node cùng lúc nên biến cần thay đổi trong node chứ không phải trong khởi tạo
-                new WolfAttack(),
+                
             }),
-            new EnvMovement(transform, speed, 10f, startArea, endArea, true),
+            new EnvMovement(transform, speed, 10f, startArea, endArea, true, animator),
         });
         return root;
     }
+
 }

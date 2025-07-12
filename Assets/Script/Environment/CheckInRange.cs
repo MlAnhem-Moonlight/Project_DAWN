@@ -28,6 +28,7 @@ public class CheckInRange : Nodes
         { 
             parent.SetData("target", Target);
             EnvMovement.SetTarget(Target);
+            EnvMovement.SetWandering(false);
             state = NodeState.SUCCESS;
         }
         state = NodeState.FAILURE;
