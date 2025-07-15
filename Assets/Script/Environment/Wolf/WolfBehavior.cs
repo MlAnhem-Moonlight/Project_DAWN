@@ -23,9 +23,20 @@ public class WolfBehavior : Tree
                 new CheckInRange(transform, attackRange, animator, "Human", "Deer"),// thêm code thay đổi trạng thái chuyển từ wander sang hunt
                 
             }),
-            new EnvMovement(transform, speed, 10f, startArea, endArea, true, animator),
+            new Sequence(new List<Nodes>
+            {
+                new EnvMovement(transform, speed, 10f, startArea, endArea, true, animator),
+                //new WolfAttack(),
+
+            }),
+            //new EnvMovement(transform, speed, 10f, startArea, endArea, true, animator),
         });
         return root;
+    }
+
+    public void SetAtk()
+    {
+        EnvMovement.SetAtk(UnityEngine.Random.Range(4,6));
     }
 
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WolfAttack : Nodes
 {
+    
     public WolfAttack()
     {
     }
