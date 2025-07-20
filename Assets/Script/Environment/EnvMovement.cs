@@ -14,7 +14,7 @@ public class EnvMovement : Nodes
     private static Transform _target;
     private Vector3? _wanderTarget = null;
     private static bool _isWandering = false;
-    private static int _atk = 4;
+    private static int _atk = 2;
 
     private Animator _animator;
 
@@ -86,8 +86,30 @@ public class EnvMovement : Nodes
         return state;
     }
 
+    private void Flip(Vector3? pos)
+    {
+        if (pos.HasValue)
+        {
+            Vector3 targetPosition = pos.Value;
+            Vector3 scale = _transform.localScale;
+
+            // Flip logic based on target position
+            if (targetPosition.x > _transform.position.x)
+            {
+                scale.x = Mathf.Abs(scale.x); // Face right
+            }
+            else if (targetPosition.x < _transform.position.x)
+            {
+                scale.x = -Mathf.Abs(scale.x); // Face left
+            }
+
+            _transform.localScale = scale;
+        }
+    }
+
     private void Wander()
     {
+        
         float step = _speed * Time.deltaTime;
         if (walkState == 0)
         {
@@ -124,6 +146,7 @@ public class EnvMovement : Nodes
             {
                 _wanderTarget = new Vector3(Random.Range(_startArea.position.x, _endArea.position.x), _transform.position.y, _transform.position.z);
             }
+            Flip(_wanderTarget);
             _transform.position = Vector3.MoveTowards(_transform.position, _wanderTarget.Value, step);
             if (Vector3.Distance(_transform.position, _wanderTarget.Value) < 1f)
             {
@@ -139,23 +162,21 @@ public class EnvMovement : Nodes
 
     private void Hunting()
     {
-        
-        //Debug.Log("Hunting for target: " + _target);
         if (_target == null)
         {
             _animator.SetFloat("State", -1);
             _isWandering = true;
             state = NodeState.FAILURE;
-
         }
         else
         {
+            Flip(_target.position); // Pass the position of the target
             float step = _speed * Time.deltaTime;
             Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-            
 
-            if (Vector3.Distance(_transform.position, targetPosition) < 1f)
+            if (Vector3.Distance(_transform.position, targetPosition) < 1f && _animator.GetFloat("State") != _atk)
             {
+                Debug.Log("Attacking target: " + _target);
                 _animator.SetFloat("State", _atk); // Set attack animation state
             }
             else if (Vector3.Distance(_transform.position, targetPosition) > 8f)
@@ -163,13 +184,12 @@ public class EnvMovement : Nodes
                 _animator.SetFloat("State", -1);
                 _target = null;
             }
-            else 
+            else if (Vector3.Distance(_transform.position, targetPosition) >= 1f)
             {
+                _animator.SetFloat("State", -1);
                 _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
-                
             }
             state = NodeState.RUNNING;
         }
-
     }
 }

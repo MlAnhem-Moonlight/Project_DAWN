@@ -36,7 +36,7 @@ public class WolfBehavior : Tree
 
     public void SetAtk()
     {
-        EnvMovement.SetAtk(UnityEngine.Random.Range(4,6));
+        EnvMovement.SetAtk(UnityEngine.Random.Range(2,4));
     }
 
 }
