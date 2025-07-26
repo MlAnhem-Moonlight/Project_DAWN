@@ -1,0 +1,1 @@
+Tách riêng movement ra, dùng static cho các biến nên khi thay đổi thì tất cả đều ảnh hưởng, tạo movement riêng cho từng quái ( cách này hơi đần nhưng chưa tìm ra giải pháp)

@@ -25,7 +25,7 @@ public class CheckInRange : Nodes
         //Debug.Log("Checking in range for target");
         Target = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerDeer, _defaultTarget);
         if (Target != null)
-        { 
+        {
             parent.SetData("target", Target);
             EnvMovement.SetTarget(Target);
             EnvMovement.SetWandering(false);

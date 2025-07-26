@@ -75,12 +75,10 @@ public class EnvMovement : Nodes
         
         if (_isWandering == false) 
         {
-            //Debug.Log("ryydy"); 
             Hunting();
         } 
         else 
         {
-            //Debug.Log("ryydyyyyyyyyyyyy");
             Wander();
         }
         return state;
@@ -113,8 +111,8 @@ public class EnvMovement : Nodes
         float step = _speed * Time.deltaTime;
         if (walkState == 0)
         {
-                // Load and play sleep animation
-                Debug.Log("Sleeping");
+            // Load and play sleep animation
+            Debug.Log("Sleeping");
 
             if (!sleepingBefore && _sleepTimer == 0f)
             {
@@ -130,12 +128,12 @@ public class EnvMovement : Nodes
 
             // Wait for animation duration
             _sleepTimer += Time.deltaTime;
-                if (_sleepTimer >= SLEEP_DURATION)
-                {
-                    _sleepTimer = 0f;
-                    walkState = Random.Range(0, 5);
-                    _animator.SetFloat("State", -1); // Reset animation state
-                }
+            if (_sleepTimer >= SLEEP_DURATION)
+            {
+                _sleepTimer = 0f;
+                walkState = Random.Range(0, 5);
+                _animator.SetFloat("State", -1); // Reset animation state
+            }
             state = NodeState.RUNNING;
         }
         else
@@ -155,9 +153,7 @@ public class EnvMovement : Nodes
                 _wanderTarget = null;
             }
             state = NodeState.RUNNING;
-        }
-
-        
+        }  
     }
 
     private void Hunting()
