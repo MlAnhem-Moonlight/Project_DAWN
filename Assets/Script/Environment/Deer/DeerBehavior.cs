@@ -15,7 +15,7 @@ public class DeerBehavior : Tree
         Nodes root = new Selector(new List<Nodes>
         {
 
-            new EnvMovement(transform, speed, rangeDetection, startArea, endArea, true, animator),
+            new DeerMovement(transform, speed, runSpeed, rangeDetection, startArea, endArea, animator),
         });
         return root;
     }

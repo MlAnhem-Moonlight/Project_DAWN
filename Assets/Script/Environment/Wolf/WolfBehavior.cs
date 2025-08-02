@@ -25,7 +25,7 @@ public class WolfBehavior : Tree
             }),
             new Sequence(new List<Nodes>
             {
-                new EnvMovement(transform, speed, 10f, startArea, endArea, true, animator),
+                new WolfMovement(transform, speed, 10f, startArea, endArea, true, animator),
                 //new WolfAttack(),
 
             }),
@@ -36,7 +36,7 @@ public class WolfBehavior : Tree
 
     public void SetAtk()
     {
-        EnvMovement.SetAtk(UnityEngine.Random.Range(2,4));
+        WolfMovement.SetAtk(UnityEngine.Random.Range(2,4));
     }
 
 }

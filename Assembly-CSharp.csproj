@@ -67,6 +67,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
@@ -84,13 +85,13 @@
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />
-    <Compile Include="Assets\Script\Environment\EnvMovement.cs" />
     <Compile Include="Assets\Script\Q-Learning\Q-Learning(no01).cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Script\Environment\CheckInRange.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfState.cs" />
+    <Compile Include="Assets\Script\Mics\Flip.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\AttackNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Selector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\Script\Environment\Deer\DeerMovement.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandSetTarget.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\AggressiveMovement.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\CheckDistance.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
+    <Compile Include="Assets\Script\Environment\pickup\PickingUp.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonMovement.cs" />
   </ItemGroup>

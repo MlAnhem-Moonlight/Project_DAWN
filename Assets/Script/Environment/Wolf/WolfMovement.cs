@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class EnvMovement : Nodes 
+public class WolfMovement : Nodes 
 {
     private Transform _transform;
     private Transform _startArea,_endArea;
@@ -22,7 +22,7 @@ public class EnvMovement : Nodes
     private bool sleepingBefore = false;
     private const float SLEEP_DURATION = 3f; // Duration of sleep state
 
-    public EnvMovement(Transform transform, float speed, float range,Transform target, Transform startArea, Transform endArea, bool iswandering, Animator animator)
+    public WolfMovement(Transform transform, float speed, float range,Transform target, Transform startArea, Transform endArea, bool iswandering, Animator animator)
     {
         _transform = transform;
         _speed = speed;
@@ -33,7 +33,7 @@ public class EnvMovement : Nodes
         _animator = animator;
     }
 
-    public EnvMovement(Transform transform, float speed, float range, Transform target, bool iswandering, Animator animator)
+    public WolfMovement(Transform transform, float speed, float range, Transform target, bool iswandering, Animator animator)
     {
         _transform = transform;
         _speed = speed;
@@ -44,7 +44,7 @@ public class EnvMovement : Nodes
         _animator = animator;
     }
 
-    public EnvMovement(Transform transform, float speed, float range, Transform startArea, Transform endArea, bool iswandering, Animator animator)
+    public WolfMovement(Transform transform, float speed, float range, Transform startArea, Transform endArea, bool iswandering, Animator animator)
     {
         _transform = transform;
         _speed = speed;
@@ -112,8 +112,6 @@ public class EnvMovement : Nodes
         if (walkState == 0)
         {
             // Load and play sleep animation
-            Debug.Log("Sleeping");
-
             if (!sleepingBefore && _sleepTimer == 0f)
             {
 

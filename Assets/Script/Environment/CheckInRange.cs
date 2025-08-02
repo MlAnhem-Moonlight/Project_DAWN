@@ -27,8 +27,8 @@ public class CheckInRange : Nodes
         if (Target != null)
         {
             parent.SetData("target", Target);
-            EnvMovement.SetTarget(Target);
-            EnvMovement.SetWandering(false);
+            WolfMovement.SetTarget(Target);
+            WolfMovement.SetWandering(false);
             state = NodeState.SUCCESS;
         }
         state = NodeState.FAILURE;

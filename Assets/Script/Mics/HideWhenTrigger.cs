@@ -19,7 +19,7 @@ public class HideWhenTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter2D called with tag: " + other.tag);
+        
         try
         {
             // Kiểm tra tag của vật thể kích hoạt
@@ -37,7 +37,7 @@ public class HideWhenTrigger : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter2D called with tag: " + other.tag);
+       
         try
         {
             // Kiểm tra tag của vật thể kích hoạt
