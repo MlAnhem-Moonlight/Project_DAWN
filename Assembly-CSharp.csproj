@@ -104,6 +104,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Tree.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTBaseNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Script\Environment\Interact\Harvest.cs" />
     <Compile Include="Assets\Script\State.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\NeutralMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Script\Environment\Deer\DeerBehavior.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\Movement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Script\Environment\Interact\PickingUp.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonBehavior.cs" />
@@ -150,7 +152,6 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\CheckDistance.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
-    <Compile Include="Assets\Script\Environment\pickup\PickingUp.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonMovement.cs" />
   </ItemGroup>
