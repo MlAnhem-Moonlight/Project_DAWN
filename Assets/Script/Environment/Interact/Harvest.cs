@@ -1,64 +1,131 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class Harvest : MonoBehaviour
+public class HarvestInteraction : MonoBehaviour
 {
-    [Header("Prefab hiển thị khi Player ở gần")]
-    public GameObject displayPrefab;
+    [Header("Harvest Settings")]
+    public float holdSeconds = 3f;
 
-    [Header("Thời gian giữ phím E để thu hoạch (giây)")]
-    public float holdSeconds = 2f;
+    [Header("UI References")]
+    public GameObject uiPrefab; // Prefab chứa UI (Canvas với Image)
+    public Image fillCircle; // Reference đến Image component trong prefab
 
-    private GameObject _displayInstance;
-    private bool _playerInRange = false;
     private float _holdTimer = 0f;
+    private bool _playerInRange = false;
+    private GameObject _currentUIInstance;
+    private Transform _playerTransform;
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        _playerInRange = true;
-    //        if (displayPrefab != null && _displayInstance == null)
-    //        {
-    //            Vector3 spawnPos = other.transform.position + Vector3.up * 1f;
-    //            _displayInstance = Instantiate(displayPrefab, spawnPos, Quaternion.identity, transform);
-    //            _displayInstance.SetActive(true);
-    //        }
-    //    }
-    //}
-
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            _playerInRange = true;
+            _playerTransform = other.transform;
+            ShowUI();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _playerInRange = false;
+            _playerTransform = null;
+            HideUI();
+            ResetProgress();
+        }
+    }
+
+    private void Update()
+    {
+        if (_playerInRange && _playerTransform != null)
+        {
+            // Cập nhật vị trí UI theo vị trí player
+            //UpdateUIPosition();
+
+            if (Input.GetKey(KeyCode.E))
             {
-                Debug.Log("Player is holding E to harvest");
                 _holdTimer += Time.deltaTime;
+                UpdateFillAmount();
+
                 if (_holdTimer >= holdSeconds)
                 {
-                    Debug.Log("Harvested");
-                    gameObject.SetActive(false);
+                    CompleteHarvest();
                 }
             }
-            else
+            else if (_holdTimer > 0)
             {
-                Debug.Log("Player release E");
-                _holdTimer = 0f;
+                // Người chơi thả phím E, reset progress
+                ResetProgress();
             }
         }
     }
 
-    //private void OnTriggerExit2D(Collider2D other)
+    private void ShowUI()
+    {
+        if (uiPrefab != null && _currentUIInstance == null)
+        {
+            _currentUIInstance = Instantiate(uiPrefab);
+
+            // Nếu chưa có reference đến fillCircle, tìm trong prefab
+            if (fillCircle == null && _currentUIInstance != null)
+            {
+                fillCircle = _currentUIInstance.GetComponentInChildren<Image>();
+            }
+
+            //UpdateUIPosition();
+        }
+    }
+
+    private void HideUI()
+    {
+        if (_currentUIInstance != null)
+        {
+            Destroy(_currentUIInstance);
+            _currentUIInstance = null;
+        }
+    }
+
+    //private void UpdateUIPosition()
     //{
-    //    if (other.CompareTag("Player"))
+    //    if (_currentUIInstance != null && _playerTransform != null)
     //    {
-    //        _playerInRange = false;
-    //        _holdTimer = 0f;
-    //        if (_displayInstance != null)
-    //        {
-    //            Destroy(_displayInstance);
-    //            _displayInstance = null;
-    //        }
+    //        // Tính toán hướng từ object này đến player
+    //        Vector3 directionToPlayer = (_playerTransform.position - transform.position).normalized;
+
+    //        // Đặt UI ở vị trí giữa object và player, hoặc offset theo hướng player
+    //        Vector3 uiPosition = transform.position + directionToPlayer * 1.5f; // 1.5f là khoảng cách offset
+
+    //        // Chuyển đổi world position sang screen position cho UI
+    //        Vector3 screenPosition = Camera.main.WorldToScreenPoint(uiPosition);
+    //        _currentUIInstance.transform.position = screenPosition;
     //    }
     //}
+
+    private void UpdateFillAmount()
+    {
+        if (fillCircle != null)
+        {
+            fillCircle.fillAmount = _holdTimer / holdSeconds;
+        }
+    }
+
+    private void ResetProgress()
+    {
+        _holdTimer = 0f;
+        UpdateFillAmount();
+    }
+
+    private void CompleteHarvest()
+    {
+        Debug.Log("Harvested successfully!");
+        HideUI();
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        // Đảm bảo UI được ẩn khi object bị disable
+        HideUI();
+    }
 }

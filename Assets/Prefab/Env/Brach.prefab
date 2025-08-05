@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4442779190542695514}
   - component: {fileID: 2808450174249871711}
   - component: {fileID: 4595928027949532735}
+  - component: {fileID: 669704667136195506}
   m_Layer: 0
   m_Name: Brach
   m_TagString: Untagged
@@ -138,3 +139,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
+--- !u!114 &669704667136195506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678146443917284625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77b64334d73ca94bbc696d339edf19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: 0
+  value: 5

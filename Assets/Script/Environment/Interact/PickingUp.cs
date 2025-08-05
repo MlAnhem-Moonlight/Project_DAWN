@@ -1,61 +1,23 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PickingUp : MonoBehaviour
 {
     [Header("Assign the prefab to show when player is in range")]
     public GameObject displayPrefab;
 
-    //[Header("Trigger Settings")]
-    //public float radius = 2f;
+    [Header("Display Settings")]
+    public Vector3 displayOffset = Vector3.up * 1f; // Offset từ vị trí object
 
     private GameObject _displayInstance;
     private bool _playerInRange = false;
 
-    //private void Reset()
-    //{
-    //    // Auto-add a CircleCollider2D set as trigger if not present
-    //    CircleCollider2D col = GetComponent<CircleCollider2D>();
-    //    if (col == null)
-    //        col = gameObject.AddComponent<CircleCollider2D>();
-    //    col.isTrigger = true;
-    //    col.radius = radius;
-    //}
-
-    //private void OnValidate()
-    //{
-    //    // Update collider radius in editor if changed
-    //    CircleCollider2D col = GetComponent<CircleCollider2D>();
-    //    if (col != null)
-    //    {
-    //        col.isTrigger = true;
-    //        col.radius = radius;
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.CompareTag("Player"))
         {
-            Debug.Log("OnTriggerEnter2D called with tag: " + other.tag);
+            Debug.Log("Player entered interaction range");
             _playerInRange = true;
-            if (displayPrefab != null && _displayInstance == null)
-            {
-                Vector3 spawnPos = transform.position + Vector3.up * 1f;
-                _displayInstance = Instantiate(displayPrefab, spawnPos, Quaternion.identity);
-                _displayInstance.SetActive(true);
-            }
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                gameObject.SetActive(false);
-            }
+            ShowDisplay();
         }
     }
 
@@ -63,12 +25,56 @@ public class PickingUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player left interaction range");
             _playerInRange = false;
-            if (_displayInstance != null)
-            {
-                Destroy(_displayInstance);
-                _displayInstance = null;
-            }
+            HideDisplay();
         }
+    }
+
+    private void Update()
+    {
+        // Chỉ kiểm tra input khi player đang trong tầm
+        if (_playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Player pressed E - Object picked up");
+            PickUpObject();
+        }
+    }
+
+    private void ShowDisplay()
+    {
+        if (displayPrefab != null && _displayInstance == null)
+        {
+            // Tạo display tại vị trí cố định (vị trí object + offset)
+            Vector3 displayPosition = transform.position + displayOffset;
+            _displayInstance = Instantiate(displayPrefab, displayPosition, Quaternion.identity);
+            _displayInstance.SetActive(true);
+            Debug.Log("Display shown at fixed position");
+        }
+    }
+
+    private void HideDisplay()
+    {
+        if (_displayInstance != null)
+        {
+            Destroy(_displayInstance);
+            _displayInstance = null;
+            Debug.Log("Display hidden");
+        }
+    }
+
+    private void PickUpObject()
+    {
+        // Ẩn display trước khi tắt object
+        HideDisplay();
+
+        // Tắt object
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        // Đảm bảo display được ẩn khi object bị disable
+        HideDisplay();
     }
 }
