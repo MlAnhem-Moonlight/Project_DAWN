@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7582679774815074048}
   - component: {fileID: 1545631847195720909}
-  - component: {fileID: 7247297693909349759}
   - component: {fileID: 6843646510696369400}
+  - component: {fileID: 7247297693909349759}
+  - component: {fileID: 2760426653264428696}
   m_Layer: 0
   m_Name: Pebble
   m_TagString: Untagged
@@ -89,19 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7247297693909349759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7524757457618230153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90352ddfb32b6ca4ea0bfe1fe85f302f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
 --- !u!58 &6843646510696369400
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -132,9 +120,38 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.51
+--- !u!114 &7247297693909349759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524757457618230153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90352ddfb32b6ca4ea0bfe1fe85f302f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
+  displayOffset: {x: 0, y: 1, z: 0}
+--- !u!114 &2760426653264428696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524757457618230153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77b64334d73ca94bbc696d339edf19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredients:
+  - type: 1
+    quantity: 5

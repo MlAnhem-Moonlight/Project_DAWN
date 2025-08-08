@@ -22,12 +22,15 @@ public class HideWhenTrigger : MonoBehaviour
         
         try
         {
-            // Kiểm tra tag của vật thể kích hoạt
-            if (other.CompareTag("Enemy") || other.CompareTag("Ally") || other.CompareTag("Player"))
+            if(GetComponent<Tilemap>() != null)// Kiểm tra tag của vật thể kích hoạt
             {
-                // Thay đổi màu của Tilemap để ẩn nó
-                GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 0f); // Sử dụng giá trị từ 0-1
+                if (other.CompareTag("Enemy") || other.CompareTag("Ally") || other.CompareTag("Player"))
+                {
+                    // Thay đổi màu của Tilemap để ẩn nó
+                    GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 0.7f); // Sử dụng giá trị từ 0-1
+                }
             }
+            else GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.7f); // Nếu không có Tilemap thì sử dụng SpriteRenderer
         }
         catch (System.Exception e)
         {
@@ -40,12 +43,15 @@ public class HideWhenTrigger : MonoBehaviour
        
         try
         {
-            // Kiểm tra tag của vật thể kích hoạt
-            if (other.CompareTag("Enemy") || other.CompareTag("Ally") || other.CompareTag("Player"))
+            if (GetComponent<Tilemap>() != null)// Kiểm tra tag của vật thể kích hoạt
             {
-                // Thay đổi màu của Tilemap để hiện lại nó
-                GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 1f); // Sử dụng giá trị từ 0-1
+                if (other.CompareTag("Enemy") || other.CompareTag("Ally") || other.CompareTag("Player"))
+                {
+                    // Thay đổi màu của Tilemap để ẩn nó
+                    GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 1f); // Sử dụng giá trị từ 0-1
+                }
             }
+            else GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f); // Nếu không có Tilemap thì sử dụng SpriteRenderer
         }
         catch (System.Exception e)
         {

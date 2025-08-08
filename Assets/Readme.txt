@@ -1,1 +1,2 @@
-Tách riêng movement ra, dùng static cho các biến nên khi thay đổi thì tất cả đều ảnh hưởng, tạo movement riêng cho từng quái ( cách này hơi đần nhưng chưa tìm ra giải pháp)
+Tách riêng movement ra, dùng static cho các biến nên khi thay đổi thì tất cả đều ảnh hưởng, tạo movement riêng cho từng quái ( cách này hơi đần nhưng chưa tìm ra giải pháp) (V)
+Trong GameManagement cần thêm script để quản lý tài nguyên, quản lý quái, quản lý item, quản lý skill, quản lý level, quản lý game

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.20754719, g: 0.15897381, b: 0.11258456, a: 1}
   m_FlipX: 0
@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2668290620063590755}
   - component: {fileID: 8904953102171573572}
   - component: {fileID: 7209621132629519211}
+  - component: {fileID: 3956274532415128418}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -235,5 +236,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbc53fda7958f44c945ea7f9cc994e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
   holdSeconds: 2
+  uiPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
+  fillCircle: {fileID: 0}
+--- !u!114 &3956274532415128418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380188898874140717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77b64334d73ca94bbc696d339edf19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredients:
+  - type: 0
+    quantity: 20

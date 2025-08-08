@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 public class Ingredient : MonoBehaviour
 {
@@ -11,21 +12,25 @@ public class Ingredient : MonoBehaviour
         Meat
     }
 
-    [Header("Tên nguyên liệu")]
-    public IngredientType ingredientName;
+    [Serializable]
+    public struct IngredientEntry
+    {
+        public IngredientType type;
+        public int quantity;
+    }
 
-    [Header("Số lượng nguyên liệu")]
-    public int value = 1; // Số lượng nguyên liệu mặc định là 1
+    [Header("Danh sách nguyên liệu và số lượng")]
+    public IngredientEntry[] ingredients;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
