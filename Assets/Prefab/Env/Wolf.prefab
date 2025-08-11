@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77b64334d73ca94bbc696d339edf19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectId: Wolf
   ingredients:
   - type: 4
     quantity: 1

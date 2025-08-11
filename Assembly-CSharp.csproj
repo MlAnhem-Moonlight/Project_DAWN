@@ -104,6 +104,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Tree.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTBaseNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Script\Environment\IngridientManager.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvest.cs" />
     <Compile Include="Assets\Script\State.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\NeutralMovement.cs" />

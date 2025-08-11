@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77b64334d73ca94bbc696d339edf19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectId: Pebble
   ingredients:
   - type: 1
     quantity: 5

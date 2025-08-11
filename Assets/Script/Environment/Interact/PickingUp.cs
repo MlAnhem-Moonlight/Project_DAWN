@@ -68,6 +68,16 @@ public class PickingUp : MonoBehaviour
         // Ẩn display trước khi tắt object
         HideDisplay();
 
+        // Lấy các nguyên liệu từ Ingredient và đẩy vào IngridientManager
+        Ingredient ingredient = GetComponent<Ingredient>();
+        IngridientManager manager = Object.FindFirstObjectByType<IngridientManager>();
+        if (ingredient != null && manager != null && ingredient.ingredients != null)
+        {
+            foreach (var entry in ingredient.ingredients)
+            {
+                manager.AddIngredient(entry.type, entry.quantity);
+            }
+        }
         // Tắt object
         gameObject.SetActive(false);
     }
