@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 916111628044553438}
   - component: {fileID: 7112335418088625258}
   - component: {fileID: 4107589482227006022}
-  - component: {fileID: 9178355676662724437}
+  - component: {fileID: 5236967540585975844}
   - component: {fileID: 2551002348269437532}
   - component: {fileID: 8115407256364945971}
   m_Layer: 0
@@ -181,7 +181,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.000000059604645}
   m_Radius: 0.5
---- !u!114 &9178355676662724437
+--- !u!114 &5236967540585975844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,12 +190,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1533317237706665498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbc53fda7958f44c945ea7f9cc994e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 53bfba70e50f45f4ca8b726556204e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdSeconds: 5
-  uiPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
-  fillCircle: {fileID: 0}
+  isHarvested: 0
+  harvestTime: 4
+  uiAnchor: {fileID: 0}
 --- !u!114 &2551002348269437532
 MonoBehaviour:
   m_ObjectHideFlags: 0
