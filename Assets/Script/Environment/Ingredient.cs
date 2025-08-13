@@ -47,7 +47,6 @@ public class Ingredient : MonoBehaviour
                 if (obj.id == objectId)
                 {
                     ingredients = obj.ingredients;
-                    Debug.Log($"Đã load nguyên liệu cho ID: {objectId}");
                     return;
                 }
             }

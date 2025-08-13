@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7582679774815074048}
   - component: {fileID: 1545631847195720909}
   - component: {fileID: 6843646510696369400}
-  - component: {fileID: 7247297693909349759}
+  - component: {fileID: 2701037577753333002}
   - component: {fileID: 2760426653264428696}
   m_Layer: 0
   m_Name: Pebble
@@ -126,7 +126,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.51
---- !u!114 &7247297693909349759
+--- !u!114 &2701037577753333002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,11 +135,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7524757457618230153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90352ddfb32b6ca4ea0bfe1fe85f302f, type: 3}
+  m_Script: {fileID: 11500000, guid: 53bfba70e50f45f4ca8b726556204e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayPrefab: {fileID: 5793012421590072329, guid: b03578ad0f3d9a84fb20a3b0d0806f9b, type: 3}
-  displayOffset: {x: 0, y: 1, z: 0}
+  isHarvested: 0
+  harvestTime: 0
+  uiAnchor: {fileID: 0}
 --- !u!114 &2760426653264428696
 MonoBehaviour:
   m_ObjectHideFlags: 0
