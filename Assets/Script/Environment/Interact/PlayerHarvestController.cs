@@ -204,7 +204,7 @@ public class PlayerHarvestController : MonoBehaviour
             Canvas canvas = uiObject.GetComponentInParent<Canvas>();
             if (canvas == null)
             {
-                canvas = FindObjectOfType<Canvas>();
+                canvas = UnityEngine.Object.FindFirstObjectByType<Canvas>();
             }
 
             RectTransform canvasRect = canvas.GetComponent<RectTransform>();
@@ -258,7 +258,16 @@ public class PlayerHarvestController : MonoBehaviour
         }
 
         // Last resort: find any active camera
-        Camera[] cameras = UnityEngine.Object.FindObjectsOfType<Camera>();
+        Camera mainCam = null;
+        Camera[] cameras = UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None);
+        foreach (var cam in cameras)
+        {
+            if (cam.CompareTag("MainCamera"))
+            {
+                mainCam = cam;
+                break;
+            }
+        }
         foreach (Camera cam in cameras)
         {
             if (cam.isActiveAndEnabled)
