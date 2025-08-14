@@ -1,4 +1,4 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +21,7 @@ public class DeerMovement : Nodes
     private float _threatTimer = 0f;
     private const float THREAT_SAFE_TIME = 2f;
     private const float THREAT_SAFE_DISTANCE_FACTOR = 1.5f;
+    private Vector3 runTarget;
 
     public DeerMovement(Transform transform, float speed, float runSpeed, float range, Transform startArea, Transform endArea, Animator animator)
     {
@@ -63,29 +64,66 @@ public class DeerMovement : Nodes
                 _threatTimer = 0f;
             }
         }
-
+        Debug.Log($"Current Threat: {_currentThreat?.name ?? "None"}");
         // If there is a threat, always run away
         if (_currentThreat != null)
         {
-            Vector3 runDirection = new Vector3
-                (
-                    Mathf.Sign(_transform.position.x - _currentThreat.position.x), 
-                    0f, 
+            Vector3 runDirection;
+
+            // Nếu ở mép phải -> luôn chạy sang trái, vượt qua threat
+            if (_transform.position.x >= _endArea.position.x)
+            {
+                runTarget = new Vector3(
+                    _currentThreat.position.x - 1f, // 1f = khoảng cách an toàn
+                    _transform.position.y,
+                    _transform.position.z
+                );
+            }
+            // Nếu ở mép trái -> luôn chạy sang phải, vượt qua threat
+            else if (_transform.position.x <= _startArea.position.x)
+            {
+                runTarget = new Vector3(
+                    _currentThreat.position.x + 1f, // 1f = khoảng cách an toàn
+                    _transform.position.y,
+                    _transform.position.z
+                );
+            }
+            // Bình thường thì chạy xa threat
+            else if (runTarget == _transform.position)
+            {
+                runDirection = new Vector3(
+                    Mathf.Sign(_transform.position.x - _currentThreat.position.x),
+                    0f,
                     0f
                 );
-            Vector3 runTarget = new Vector3
-                (
+                runTarget = new Vector3(
                     _transform.position.x + runDirection.x * _runSpeed * Time.deltaTime,
                     _transform.position.y,
                     _transform.position.z
                 );
-            _transform.position = runTarget;
+            }
+
+            // Flip theo hướng chạy
             RotationObject.Flip(runTarget, _transform);
+
+            // Di chuyển chỉ trên trục X
+            _transform.position = new Vector3(
+                Vector3.MoveTowards(_transform.position, runTarget, _runSpeed * Time.deltaTime).x,
+                _transform.position.y,
+                _transform.position.z
+            );
+
+            // Animation
             _animator.SetFloat("State", 4); // Running animation
+
+            // Reset hành vi bình thường
             _currentDestination = null;
             _idleTimer = 4f;
+
             return NodeState.RUNNING;
         }
+
+
 
         // Normal behavior
         if (walkState == 0)

@@ -147,7 +147,6 @@ public class WolfMovement : Nodes
             if (Vector3.Distance(_transform.position, _wanderTarget.Value) < 1f)
             {
                 walkState = Random.Range(0, 5);
-                Debug.Log("Walk State: " + walkState);
                 _wanderTarget = null;
             }
             state = NodeState.RUNNING;

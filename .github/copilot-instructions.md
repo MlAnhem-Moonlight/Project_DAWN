@@ -2,7 +2,7 @@
 - Project name: DAWN
 - Unity version: Unity 6000.0.44f1
 - Active game object:
-  - Name: GameManagement
-  - Tag: Untagged
-  - Layer: Default
+  - Name: Wolf
+  - Tag: Enemy
+  - Layer: Wolf
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
