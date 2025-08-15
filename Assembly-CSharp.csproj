@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
+    <Compile Include="Assets\Script\Environment\ObjectPooler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
@@ -83,9 +84,11 @@
     <Compile Include="Assets\Script\Enemy\AnimationHolder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageCheckEnemyInRange.cs" />
+    <Compile Include="Assets\Script\Environment\MaterialSpawner.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />
+    <Compile Include="Assets\Script\Environment\MaterialPool.cs" />
     <Compile Include="Assets\Script\Q-Learning\Q-Learning(no01).cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
