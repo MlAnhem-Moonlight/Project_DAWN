@@ -81,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 390
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -190,7 +190,7 @@ TextureImporter:
       name: TreeFixed_2
       rect:
         serializedVersion: 2
-        x: 668
+        x: 663
         y: 443
         width: 212
         height: 567
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreeFixed_6
+      name: Stumb
       rect:
         serializedVersion: 2
         x: 13
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreeFixed_9
+      name: SmallTree
       rect:
         serializedVersion: 2
         x: 1350
@@ -332,16 +332,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      SmallTree: -7460918167680999427
+      Stumb: 3489412875923189006
       TreeFixed_0: -4772331785479053142
       TreeFixed_1: -3882241659978476112
       TreeFixed_2: -3682507985038840717
       TreeFixed_3: -1688161550518416859
       TreeFixed_4: 7061626635151797736
       TreeFixed_5: 4116165030376740751
-      TreeFixed_6: 3489412875923189006
       TreeFixed_7: -2309404445142586345
       TreeFixed_8: -2123991472558730922
-      TreeFixed_9: -7460918167680999427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

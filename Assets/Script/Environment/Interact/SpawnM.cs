@@ -24,7 +24,7 @@ public class SpawnM : MonoBehaviour
             //float y = Random.Range(areaStart.y, areaEnd.y);
             Vector2 spawnPos = new Vector2(x, yOffset);
 
-            Instantiate(objectPrefab, spawnPos, Quaternion.identity, PObject.transform);
+            Instantiate(objectPrefab, spawnPos, objectPrefab.transform.rotation, PObject.transform);
         }
     }
 

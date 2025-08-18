@@ -16,6 +16,9 @@ public class MaterialSpawner : MonoBehaviour
     [Header("Test trong Inspector")]
     public bool spawnNow = false;
 
+    [Header("Parent Object")]
+    public GameObject parentObject; // GameObject cha để gom nhóm các object được spawn
+
     private void Update()
     {
         if (spawnNow)
@@ -24,7 +27,6 @@ public class MaterialSpawner : MonoBehaviour
             SpawnMaterials();
         }
     }
-
     public void SpawnMaterials()
     {
         if (spawnPoints.Length == 0)
@@ -51,20 +53,27 @@ public class MaterialSpawner : MonoBehaviour
 
         int prefab1Count = Mathf.RoundToInt(totalSpawnCount * firstPrefabRatio);
         int prefab2Count = totalSpawnCount - prefab1Count;
-
         int pointIndex = 0;
 
         // Spawn prefab thứ nhất (index = 0)
         for (int i = 0; i < prefab1Count; i++)
         {
-            ObjectPooler.Instance.GetFromPool(poolName, 0, shuffledPoints[pointIndex].position);
+            GameObject spawnedObj = ObjectPooler.Instance.GetFromPool(poolName, 0, shuffledPoints[pointIndex].position);
+            if (spawnedObj != null && parentObject != null)
+            {
+                spawnedObj.transform.SetParent(parentObject.transform);
+            }
             pointIndex++;
         }
 
         // Spawn prefab thứ hai (index = 1)
         for (int i = 0; i < prefab2Count; i++)
         {
-            ObjectPooler.Instance.GetFromPool(poolName, 1, shuffledPoints[pointIndex].position);
+            GameObject spawnedObj = ObjectPooler.Instance.GetFromPool(poolName, 1, shuffledPoints[pointIndex].position);
+            if (spawnedObj != null && parentObject != null)
+            {
+                spawnedObj.transform.SetParent(parentObject.transform);
+            }
             pointIndex++;
         }
     }
