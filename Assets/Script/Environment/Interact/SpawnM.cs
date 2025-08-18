@@ -1,7 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnM : MonoBehaviour
 {
+    [Header("PoolName")]
+    public string poolName = "SpawnM"; // Unique ID for this spawner
+
     [Header("Spawn Settings")]
     public GameObject objectPrefab, PObject; // Prefab to spawn
     public int spawnCount = 10; // Number of objects to spawn

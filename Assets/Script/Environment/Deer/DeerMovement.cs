@@ -23,6 +23,11 @@ public class DeerMovement : Nodes
     private const float THREAT_SAFE_DISTANCE_FACTOR = 1.5f;
     private Vector3 runTarget;
 
+    // Rest after escape
+    private bool _isRestingAfterEscape = false;
+    private float _restTimer = 0f;
+    private float _restDuration = 0f;
+
     public DeerMovement(Transform transform, float speed, float runSpeed, float range, Transform startArea, Transform endArea, Animator animator)
     {
         _transform = transform;
@@ -34,19 +39,19 @@ public class DeerMovement : Nodes
         _animator = animator;
     }
 
-    /* Sửa hành vi, do hiện tại hành vi random ra chạy quá nhiều, sau khi chạy khỏi threat thì nên là state nghỉ ngơi*/
-
     public override NodeState Evaluate()
     {
-
-        // Always check for threats
-        Transform threat = TargetSelector.GetClosestTarget(_transform, _detectionRange, "Human", "Wolf", null);
+        // Always check for threats with priority for wolves
+        Transform threat = GetPriorityThreat();
         bool isThreatened = threat != null;
 
         if (isThreatened)
         {
             _currentThreat = threat;
             _threatTimer = 0f;
+            // Cancel rest state when new threat appears
+            _isRestingAfterEscape = false;
+            _restTimer = 0f;
         }
         else if (_currentThreat != null)
         {
@@ -57,6 +62,13 @@ public class DeerMovement : Nodes
                 _threatTimer += Time.deltaTime;
                 if (_threatTimer >= THREAT_SAFE_TIME)
                 {
+                    // Start resting after escaping
+                    if (!_isRestingAfterEscape)
+                    {
+                        _isRestingAfterEscape = true;
+                        _restDuration = Random.Range(3f, 6f);
+                        _restTimer = 0f;
+                    }
                     _currentThreat = null;
                     _threatTimer = 0f;
                 }
@@ -66,7 +78,8 @@ public class DeerMovement : Nodes
                 _threatTimer = 0f;
             }
         }
-        Debug.Log($"Current Threat: {_currentThreat?.name ?? "None"}");
+
+
         // If there is a threat, always run away
         if (_currentThreat != null)
         {
@@ -125,9 +138,26 @@ public class DeerMovement : Nodes
             return NodeState.RUNNING;
         }
 
+        // Rest after escaping from threat
+        if (_isRestingAfterEscape)
+        {
+            _restTimer += Time.deltaTime;
 
+            // Stand still and rest
+            _animator.SetFloat("State", Random.Range(-1, 1)); // Idle animations
 
-        // Normal behavior
+            if (_restTimer >= _restDuration)
+            {
+                // Finish resting, return to normal behavior
+                _isRestingAfterEscape = false;
+                _restTimer = 0f;
+                walkState = Random.Range(0, 3); // Reset walk state
+            }
+
+            return NodeState.RUNNING;
+        }
+
+        // Normal behavior (only when not resting after escape)
         if (walkState == 0)
         {
             if (_currentDestination == null)
@@ -151,7 +181,7 @@ public class DeerMovement : Nodes
         }
         else
         {
-            if(_idleTimer == 4f) _animator.SetFloat("State", Random.Range(-1, 1));
+            if (_idleTimer == 4f) _animator.SetFloat("State", Random.Range(-1, 1));
             if (_idleTimer <= 0)
             {
                 walkState = Random.Range(0, 3);
@@ -166,4 +196,23 @@ public class DeerMovement : Nodes
         return NodeState.RUNNING;
     }
 
+    // Get priority threat - wolves first, then humans
+    private Transform GetPriorityThreat()
+    {
+        // First check for wolves (higher priority)
+        Transform wolf = TargetSelector.GetClosestTarget(_transform, _detectionRange, "Wolf", null, null);
+        if (wolf != null)
+        {
+            return wolf;
+        }
+
+        // Then check for humans
+        Transform human = TargetSelector.GetClosestTarget(_transform, _detectionRange, "Human", null, null);
+        if (human != null)
+        {
+            return human;
+        }
+
+        return null;
+    }
 }

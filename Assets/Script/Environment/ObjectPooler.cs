@@ -4,21 +4,22 @@ using UnityEngine;
 [System.Serializable]
 public class PrefabConfig
 {
-    public GameObject prefab;
-
     [Header("Sorting")]
-    public bool autoSortByY = true;
+    //public bool autoSortByY = true;
     public string sortingLayerName = "Default";
     public int baseOrderInLayer = 0;
-    public Color defaultColor = Color.white;
+
+    [Header("Color Settings")]
+    public Color possibleColors ;
 }
 
 [System.Serializable]
 public class PoolItem
 {
     public string poolName;
-    public PrefabConfig[] prefabs; // Nhiều prefab + config sorting riêng
-    public int initialSize = 10;   // Đảm bảo có biến này cho khởi tạo pool
+    public GameObject prefab; // Chỉ cần 1 prefab
+    public PrefabConfig[] configPool; // Bể config
+    public int initialSize = 10;
     public bool expandable = true;
 }
 
@@ -30,61 +31,68 @@ public class ObjectPooler : MonoBehaviour
     public List<PoolItem> itemsToPool;
 
     private Dictionary<string, List<GameObject>> pooledObjects;
+    private Dictionary<GameObject, int> objectConfigIndex = new Dictionary<GameObject, int>();
 
     void Awake()
     {
         if (Instance == null) Instance = this;
         pooledObjects = new Dictionary<string, List<GameObject>>();
 
-        // Khởi tạo tất cả pool
         foreach (var item in itemsToPool)
         {
             List<GameObject> objectList = new List<GameObject>();
-
             for (int i = 0; i < item.initialSize; i++)
             {
-                int prefabIndex = i % item.prefabs.Length;
-                GameObject prefab = item.prefabs[prefabIndex].prefab;
-                if (prefab == null) continue;
-                GameObject obj = Instantiate(prefab);
+                GameObject obj = Instantiate(item.prefab);
                 obj.SetActive(false);
                 objectList.Add(obj);
             }
-
             pooledObjects.Add(item.poolName, objectList);
         }
     }
 
-    // Lấy object từ pool với chỉ số prefab cụ thể
-    public GameObject GetFromPool(string poolName, int prefabIndex, Vector3 position)
+    // Spawn object với config ngẫu nhiên
+    public GameObject GetFromPool(string poolName, Vector3 position)
     {
-        var itemConfig = itemsToPool.Find(x => x.poolName == poolName);
-        if (itemConfig == null || prefabIndex < 0 || prefabIndex >= itemConfig.prefabs.Length)
+        var item = itemsToPool.Find(x => x.poolName == poolName);
+        if (item == null || item.configPool == null || item.configPool.Length == 0)
             return null;
 
         var list = pooledObjects[poolName];
+        int configIndex = Random.Range(0, item.configPool.Length);
 
         foreach (var obj in list)
         {
             if (!obj.activeInHierarchy)
             {
-                SetupObject(obj, position, itemConfig.prefabs[prefabIndex]);
+                SetupObject(obj, position, item.configPool[configIndex]);
+                objectConfigIndex[obj] = configIndex;
                 return obj;
             }
         }
 
-        // Nếu không có object trống và được phép mở rộng
-        if (itemConfig.expandable)
+        if (item.expandable)
         {
-            GameObject prefab = itemConfig.prefabs[prefabIndex].prefab;
-            if (prefab == null) return null;
-            GameObject obj = Instantiate(prefab, position, Quaternion.identity);
-            SetupObject(obj, position, itemConfig.prefabs[prefabIndex]);
+            GameObject obj = Instantiate(item.prefab, position, Quaternion.identity);
+            SetupObject(obj, position, item.configPool[configIndex]);
+            objectConfigIndex[obj] = configIndex;
             list.Add(obj);
             return obj;
         }
 
         return null;
+    }
+
+    // Hàm public để đổi config của object (có thể gọi từ script thời gian)
+    public void RefreshObjectConfig(GameObject obj, string poolName)
+    {
+        var item = itemsToPool.Find(x => x.poolName == poolName);
+        if (item == null || item.configPool == null || item.configPool.Length == 0)
+            return;
+
+        int configIndex = Random.Range(0, item.configPool.Length);
+        SetupObject(obj, obj.transform.position, item.configPool[configIndex]);
+        objectConfigIndex[obj] = configIndex;
     }
 
     private void SetupObject(GameObject obj, Vector3 position, PrefabConfig config)
@@ -96,12 +104,12 @@ public class ObjectPooler : MonoBehaviour
         if (sr != null)
         {
             sr.sortingLayerName = config.sortingLayerName;
-            sr.color = config.defaultColor;
+            sr.sortingOrder = config.baseOrderInLayer; //config.autoSortByY
+                                                       //? config.baseOrderInLayer + Mathf.RoundToInt(-position.y * 100)
+                                                       //: config.baseOrderInLayer;
 
-            if (config.autoSortByY)
-                sr.sortingOrder = config.baseOrderInLayer + Mathf.RoundToInt(-position.y * 100);
-            else
-                sr.sortingOrder = config.baseOrderInLayer;
+            sr.color = config.possibleColors;
+
         }
     }
 
