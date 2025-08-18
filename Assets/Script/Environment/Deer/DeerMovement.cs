@@ -34,6 +34,8 @@ public class DeerMovement : Nodes
         _animator = animator;
     }
 
+    /* Sửa hành vi, do hiện tại hành vi random ra chạy quá nhiều, sau khi chạy khỏi threat thì nên là state nghỉ ngơi*/
+
     public override NodeState Evaluate()
     {
 

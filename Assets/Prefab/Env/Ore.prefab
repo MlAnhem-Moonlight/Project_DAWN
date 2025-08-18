@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3158854896717607219}
   - component: {fileID: 1221468885095107115}
   - component: {fileID: 51344902984056782}
-  - component: {fileID: 8655652135362269886}
   - component: {fileID: 1718450744385927935}
   m_Layer: 0
   m_Name: Ore
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 8708242654378187539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0222, z: 0}
-  m_LocalScale: {x: 1, y: 3.3849437, z: 1}
+  m_LocalPosition: {x: -0.99, y: -0.0099, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -201,18 +200,6 @@ MonoBehaviour:
     quantity: 1
   - type: 3
     quantity: 1
---- !u!114 &8655652135362269886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8708242654378187539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2edd312456a6b2e46b77faf56ed970bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1718450744385927935
 MonoBehaviour:
   m_ObjectHideFlags: 0
