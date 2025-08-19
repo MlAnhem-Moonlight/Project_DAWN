@@ -37,10 +37,10 @@ public class Harvestable : MonoBehaviour
     {
         if (uiAnchor != null)
         {
-            Debug.Log($"Using UI anchor position: {uiAnchor.position}");
+            //Debug.Log($"Using UI anchor position: {uiAnchor.position}");
             return uiAnchor.position;
         }
-        Debug.Log($"Using transform position for UI: {transform.position}");
+        //Debug.Log($"Using transform position for UI: {transform.position}");
         return transform.position + Vector3.up * 1.2f;
     }
 }

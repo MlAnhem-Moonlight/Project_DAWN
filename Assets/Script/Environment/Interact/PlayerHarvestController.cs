@@ -214,7 +214,7 @@ public class PlayerHarvestController : MonoBehaviour
             Camera activeCamera = GetActiveCamera();
 
             // Convert world position to screen position
-            Vector3 worldPos = currentTarget.GetUIWorldPosition();
+            Vector3 worldPos = currentTarget.GetUIWorldPosition() + Vector3.up * 0.1f;
             Vector3 screenPos = activeCamera.WorldToScreenPoint(worldPos);
 
             // Check if target is behind camera or outside screen

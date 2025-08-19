@@ -19,14 +19,14 @@ public class MaterialSpawner : MonoBehaviour
     [Header("Parent Object")]
     public GameObject parentObject; // GameObject cha để gom nhóm các object được spawn
 
-    [Header("Daily Refresh")]
-    public bool refreshDaily = true;
-    private float nextRefreshTime;
-    private float dayLength = 24f * 60f; // 24 minutes = 1 game day
+    //[Header("Daily Refresh")]
+    //public bool refreshDaily = true;
+    //private float nextRefreshTime;
+    //private float dayLength = 24f * 60f; // 24 minutes = 1 game day
 
     private void Start()
     {
-        nextRefreshTime = Time.time + dayLength;
+        //nextRefreshTime = Time.time + dayLength;
         SpawnMaterials(); // Initial spawn
     }
 
@@ -38,12 +38,12 @@ public class MaterialSpawner : MonoBehaviour
             SpawnMaterials();
         }
 
-        // Check for daily refresh
-        if (refreshDaily && Time.time >= nextRefreshTime)
-        {
-            RefreshAllMaterials();
-            nextRefreshTime = Time.time + dayLength;
-        }
+        //// Check for daily refresh
+        //if (refreshDaily && Time.time >= nextRefreshTime)
+        //{
+        //    RefreshAllMaterials();
+        //    nextRefreshTime = Time.time + dayLength;
+        //}
     }
 
     public void SpawnMaterials()
@@ -84,8 +84,8 @@ public class MaterialSpawner : MonoBehaviour
         }
 
     }
-
-    private void RefreshAllMaterials()
+    [ContextMenu("Refresh All Materials")]
+    public void RefreshAllMaterials()
     {
         // Return all active objects to pool
         if (parentObject != null)

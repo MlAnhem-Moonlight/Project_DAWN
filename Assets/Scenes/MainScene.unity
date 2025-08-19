@@ -7688,7 +7688,6 @@ MonoBehaviour:
   firstPrefabRatio: 0.5
   spawnNow: 1
   parentObject: {fileID: 1862641948}
-  refreshDaily: 1
 --- !u!114 &887977609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7730,7 +7729,6 @@ MonoBehaviour:
   firstPrefabRatio: 0.5
   spawnNow: 1
   parentObject: {fileID: 976874048}
-  refreshDaily: 1
 --- !u!114 &887977610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7781,7 +7779,6 @@ MonoBehaviour:
   firstPrefabRatio: 0.5
   spawnNow: 1
   parentObject: {fileID: 1307023697}
-  refreshDaily: 1
 --- !u!114 &887977611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7868,7 +7865,6 @@ MonoBehaviour:
   firstPrefabRatio: 0.5
   spawnNow: 1
   parentObject: {fileID: 2009994716}
-  refreshDaily: 1
 --- !u!1001 &891571237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17905,11 +17901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3347587473105108146, guid: f1eb1c6c6f59dea47bffe038a911090f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.4131
+      value: 176.2
       objectReference: {fileID: 0}
     - target: {fileID: 3347587473105108146, guid: f1eb1c6c6f59dea47bffe038a911090f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.95
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 3347587473105108146, guid: f1eb1c6c6f59dea47bffe038a911090f, type: 3}
       propertyPath: m_LocalPosition.z
