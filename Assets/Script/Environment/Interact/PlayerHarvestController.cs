@@ -35,54 +35,54 @@ public class PlayerHarvestController : MonoBehaviour
     }
 
     // If you use player trigger (recommended):
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log($"Trigger entered: {other.name}");
-        var h = other.GetComponent<Harvestable>();
-        if (h != null && !nearby.Contains(h) && !h.isHarvested)
-        {
-            Debug.Log($"Harvestable entered: {h.name}");
-            nearby.Add(h);
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    //Debug.Log($"Trigger entered: {other.name}");
+    //    var h = other.GetComponent<Harvestable>();
+    //    if (h != null && !nearby.Contains(h) && !h.isHarvested)
+    //    {
+    //        //Debug.Log($"Harvestable entered: {h.name}");
+    //        nearby.Add(h);
 
-            // Nếu chưa có target nào được chọn, tự động chọn cái đầu tiên
-            if (currentTarget == null)
-            {
-                SelectTarget(0);
-            }
-        }
-    }
+    //        // Nếu chưa có target nào được chọn, tự động chọn cái đầu tiên
+    //        if (currentTarget == null)
+    //        {
+    //            SelectTarget(0);
+    //        }
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        var h = other.GetComponent<Harvestable>();
-        if (h != null && nearby.Contains(h))
-        {
-            int removedIndex = nearby.IndexOf(h);
-            nearby.Remove(h);
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    var h = other.GetComponent<Harvestable>();
+    //    if (h != null && nearby.Contains(h))
+    //    {
+    //        int removedIndex = nearby.IndexOf(h);
+    //        nearby.Remove(h);
 
-            // Nếu target bị remove là target hiện tại
-            if (currentTarget == h)
-            {
-                ClearTarget();
-                // Tự động chọn target khác nếu còn
-                if (nearby.Count > 0)
-                {
-                    int newIndex = Mathf.Min(removedIndex, nearby.Count - 1);
-                    SelectTarget(newIndex);
-                }
-            }
-            else if (removedIndex < currentTargetIndex)
-            {
-                // Điều chỉnh index nếu item bị remove ở trước current target
-                currentTargetIndex--;
-            }
-        }
-    }
+    //        // Nếu target bị remove là target hiện tại
+    //        if (currentTarget == h)
+    //        {
+    //            ClearTarget();
+    //            // Tự động chọn target khác nếu còn
+    //            if (nearby.Count > 0)
+    //            {
+    //                int newIndex = Mathf.Min(removedIndex, nearby.Count - 1);
+    //                SelectTarget(newIndex);
+    //            }
+    //        }
+    //        else if (removedIndex < currentTargetIndex)
+    //        {
+    //            // Điều chỉnh index nếu item bị remove ở trước current target
+    //            currentTargetIndex--;
+    //        }
+    //    }
+    //}
 
     private void Update()
     {
         // Nếu bạn không dùng trigger collider trên player, bạn có thể uncomment kiểm tra bằng OverlapCircle:
-        // UpdateNearbyWithOverlap();
+         UpdateNearbyWithOverlap();
 
         // Làm sạch danh sách nearby (loại bỏ null hoặc đã harvest)
         CleanupNearbyList();
@@ -99,7 +99,7 @@ public class PlayerHarvestController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 holdSeconds = currentTarget.harvestTime; // lấy thời gian thu hoạch từ target
-                Debug.Log($"Starting harvest on: {currentTarget.name} for {holdSeconds} seconds");
+                //Debug.Log($"Starting harvest on: {currentTarget.name} for {holdSeconds} seconds");
 
                 if (holdSeconds > 0)
                 {
