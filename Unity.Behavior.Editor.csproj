@@ -62,23 +62,22 @@
     <Analyzer Include="C:\Users\Admin\DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Utilities\GraphAssetSubgraphUpdater.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Windows\BehaviorWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Windows\WindowUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Windows\BehaviorAssetPostProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Utilities\BlackboardReferenceUpdater.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Utilities\BehaviorGraphDropHandler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\SceneProcessing\SceneProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Windows\BehaviorAssetDeletionProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Utilities\IL2CPPGenericTypesGenerator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Windows\BlackboardWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Inspectors\RuntimeBehaviorGraphEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Inspectors\BehaviorGraphAgentEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Inspectors\BehaviorAuthoringGraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\WindowUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorAssetPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Utilities\BehaviorGraphDropHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Tools\BehaviorGraphAssetUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\SceneProcessing\SceneProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorAssetDeletionProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Utilities\IL2CPPGenericTypesGenerator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BlackboardWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\RuntimeBehaviorGraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\BehaviorGraphAgentEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\BehaviorAuthoringGraphEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.behavior@9aa96a37293c\Editor\Unity.Behavior.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Unity.Behavior.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

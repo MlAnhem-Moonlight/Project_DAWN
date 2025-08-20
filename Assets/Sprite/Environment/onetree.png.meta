@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 461aab558c6e70443a75422f1798b510
+guid: d939170ae3091f540b5186b7fad5a54b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1532899778469800246
-    second: RubbleHouse2_0
+      213: 1133624713670440586
+    second: onetree_0
   - first:
-      213: -3154776383186521721
-    second: RubbleHouse2_1
+      213: 2096203797499812593
+    second: onetree_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -51,16 +51,16 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -116,23 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RubbleHouse2_0
+      name: onetree_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 69
-        width: 988
-        height: 904
-      alignment: 9
-      pivot: {x: 0.5, y: 0.73077685}
+        x: 0
+        y: 0
+        width: 180
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac6580ce5cb0abae0800000000000000
-      internalID: -1532899778469800246
+      spriteID: a863eeebba17bbf00800000000000000
+      internalID: 1133624713670440586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onetree_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 99
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa1dc66f36371d10800000000000000
+      internalID: 2096203797499812593
       vertices: []
       indices: 
       edges: []
@@ -141,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 928d485f1f7325f4eb2750924fc2a9ce
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,9 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      RubbleHouse2_0: -1532899778469800246
-      RubbleHouse2_1: -3154776383186521721
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
