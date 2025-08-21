@@ -135,8 +135,8 @@
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\RunSubgraphDynamic.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForPhysicsMessageAction.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Navigation\NavigateToTargetAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\IRepeater.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Utilities\NavigationUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\IRepeater.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\IParent.cs" />
     <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\AttachObjectAction.cs" />

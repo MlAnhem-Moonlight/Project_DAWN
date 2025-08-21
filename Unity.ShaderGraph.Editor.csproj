@@ -537,8 +537,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Data\Graphs\NormalMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Drawing\Views\ReorderableSlotListView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Generation\Descriptors\SubShaderDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Data\Nodes\Utility\DropdownNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Drawing\Inspector\PropertyDrawers\GraphDataPropertyDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Data\Nodes\Utility\DropdownNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Generation\Targets\BuiltIn\Editor\ShaderGUI\BaseShaderGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Generation\Processors\GenerationUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@bbf164badec6\Editor\Drawing\Controllers\BlackboardCategoryController.cs" />

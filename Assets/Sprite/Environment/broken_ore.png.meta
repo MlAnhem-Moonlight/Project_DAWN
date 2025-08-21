@@ -144,7 +144,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 244
@@ -212,10 +212,10 @@ TextureImporter:
       name: broken_ore_0
       rect:
         serializedVersion: 2
-        x: 81
+        x: 75
         y: 631
-        width: 244
-        height: 281
+        width: 268
+        height: 299
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
