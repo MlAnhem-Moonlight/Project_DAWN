@@ -15,6 +15,11 @@ public class PlayerHarvestController : MonoBehaviour
     [Header("Selection Visual")]
     public GameObject selectionIndicatorPrefab; // Visual indicator for selected target
 
+    [Header("Material Highlighting")]
+    public Material highlightMaterial; // Material để highlight target
+    public Color targetColor = Color.yellow; // Màu cho object được target
+    public string colorPropertyName = "_Color"; // Tên property color trong material (thường là "_Color" hoặc "_BaseColor")
+
     private List<Harvestable> nearby = new List<Harvestable>();
     private Harvestable currentTarget;
     private int currentTargetIndex = -1; // Index of currently selected target
@@ -23,6 +28,10 @@ public class PlayerHarvestController : MonoBehaviour
     private Image fillImage;
     private float holdTimer = 0f;
     private bool isHarvesting = false;
+
+    // Để lưu trữ material gốc
+    private Dictionary<Harvestable, Material> originalMaterials = new Dictionary<Harvestable, Material>();
+    private Dictionary<Harvestable, Color> originalColors = new Dictionary<Harvestable, Color>();
 
     private void Awake()
     {
@@ -44,6 +53,9 @@ public class PlayerHarvestController : MonoBehaviour
             //Debug.Log($"Harvestable entered: {h.name}");
             nearby.Add(h);
 
+            // Lưu material gốc
+            SaveOriginalMaterial(h);
+
             // Nếu chưa có target nào được chọn, tự động chọn cái đầu tiên
             if (currentTarget == null)
             {
@@ -58,6 +70,10 @@ public class PlayerHarvestController : MonoBehaviour
         if (h != null && nearby.Contains(h))
         {
             int removedIndex = nearby.IndexOf(h);
+
+            // Khôi phục material gốc trước khi remove
+            RestoreOriginalMaterial(h);
+
             nearby.Remove(h);
 
             // Nếu target bị remove là target hiện tại
@@ -82,7 +98,7 @@ public class PlayerHarvestController : MonoBehaviour
     private void Update()
     {
         // Nếu bạn không dùng trigger collider trên player, bạn có thể uncomment kiểm tra bằng OverlapCircle:
-         //UpdateNearbyWithOverlap();
+        //UpdateNearbyWithOverlap();
 
         // Làm sạch danh sách nearby (loại bỏ null hoặc đã harvest)
         CleanupNearbyList();
@@ -115,6 +131,117 @@ public class PlayerHarvestController : MonoBehaviour
         }
     }
 
+    private void HandleTargetSelection()
+    {
+        if (nearby.Count <= 1) return;
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            // Lưu target hiện tại để khôi phục
+            var oldTarget = currentTarget;
+            
+            // Chuyển đến target tiếp theo
+            int nextIndex = (currentTargetIndex + 1) % nearby.Count;
+            
+            // Khôi phục material của target cũ trước khi chọn target mới
+            if (oldTarget != null)
+            {
+                RestoreOriginalMaterial(oldTarget);
+            }
+
+            SelectTarget(nextIndex);
+        }
+    }
+
+    private void SelectTarget(int index)
+    {
+        if (index < 0 || index >= nearby.Count) return;
+
+        // Gán target mới
+        currentTargetIndex = index;
+        currentTarget = nearby[index];
+
+        // Áp dụng highlight cho target mới
+        if (currentTarget != null)
+        {
+            // Lưu material gốc nếu chưa có
+            SaveOriginalMaterial(currentTarget);
+            // Áp dụng highlight
+            ApplyHighlightMaterial(currentTarget);
+        }
+    }
+
+    private void SaveOriginalMaterial(Harvestable harvestable)
+    {
+        var renderer = harvestable.GetComponent<Renderer>();
+        if (renderer != null && renderer.material != null)
+        {
+            // Chỉ lưu material gốc nếu chưa có trong dictionary
+            if (!originalMaterials.ContainsKey(harvestable))
+            {
+                originalMaterials[harvestable] = renderer.material;
+            }
+            if (renderer.material.HasProperty(colorPropertyName) && !originalColors.ContainsKey(harvestable))
+            {
+                originalColors[harvestable] = renderer.material.GetColor(colorPropertyName);
+            }
+        }
+    }
+
+    private void ApplyHighlightMaterial(Harvestable harvestable)
+    {
+        //targetColor = harvestable.GetComponent<SpriteRenderer>().color;
+        var renderer = harvestable.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            if (highlightMaterial != null)
+            {
+                // Sử dụng highlight material và set màu
+                renderer.material = highlightMaterial;
+                if (renderer.material.HasProperty(colorPropertyName))
+                {
+                    renderer.material.SetColor(colorPropertyName, targetColor);
+                }
+            }
+            else
+            {
+                // Chỉ thay đổi màu của material hiện tại
+                if (renderer.material.HasProperty(colorPropertyName))
+                {
+                    renderer.material.SetColor(colorPropertyName, targetColor);
+                }
+            }
+        }
+    }
+
+    private void RestoreOriginalMaterial(Harvestable harvestable)
+    {
+        var renderer = harvestable.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            // Khôi phục material gốc
+            if (originalMaterials.ContainsKey(harvestable))
+            {
+                renderer.material = originalMaterials[harvestable];
+                originalMaterials.Remove(harvestable);
+            }
+            // Hoặc khôi phục màu gốc
+            else if (originalColors.ContainsKey(harvestable))
+            {
+                if (renderer.material.HasProperty(colorPropertyName))
+                {
+                    renderer.material.SetColor(colorPropertyName, originalColors[harvestable]);
+                }
+            }
+
+            // Xóa khỏi dictionary
+            if (originalColors.ContainsKey(harvestable))
+            {
+                originalColors.Remove(harvestable);
+            }
+        }
+    }
+
     private void CleanupNearbyList()
     {
         // Loại bỏ các object null hoặc đã được harvest
@@ -122,6 +249,9 @@ public class PlayerHarvestController : MonoBehaviour
         {
             if (nearby[i] == null || nearby[i].isHarvested)
             {
+                // Khôi phục material trước khi remove
+                RestoreOriginalMaterial(nearby[i]);
+
                 if (i == currentTargetIndex)
                 {
                     ClearTarget();
@@ -146,37 +276,27 @@ public class PlayerHarvestController : MonoBehaviour
         }
     }
 
-    private void HandleTargetSelection()
-    {
-        if (nearby.Count <= 1) return; // Không cần chuyển đổi nếu chỉ có 1 hoặc 0 target
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            // Chuyển đến target tiếp theo
-            int nextIndex = (currentTargetIndex + 1) % nearby.Count;
-            SelectTarget(nextIndex);
-        }
-    }
-
-    private void SelectTarget(int index)
-    {
-        if (index < 0 || index >= nearby.Count) return;
-
-        currentTargetIndex = index;
-        currentTarget = nearby[index];
-
-        Debug.Log($"Selected target: {currentTarget.name}");
-    }
-
-    // Option: dùng Physics2D.OverlapCircle để cập nhật nearby nếu bạn không muốn trigger collider
     private void UpdateNearbyWithOverlap()
     {
+        // Clear highlight cho tất cả nearby objects cũ
+        foreach (var harvestable in nearby)
+        {
+            if (harvestable != null)
+            {
+                RestoreOriginalMaterial(harvestable);
+            }
+        }
+
         Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
         nearby.Clear();
         foreach (var c in cols)
         {
             var h = c.GetComponent<Harvestable>();
-            if (h != null && !h.isHarvested) nearby.Add(h);
+            if (h != null && !h.isHarvested)
+            {
+                nearby.Add(h);
+                SaveOriginalMaterial(h);
+            }
         }
 
         // Reset target selection khi update bằng overlap
@@ -322,6 +442,12 @@ public class PlayerHarvestController : MonoBehaviour
 
     private void ClearTarget()
     {
+        // Khôi phục material của target hiện tại
+        if (currentTarget != null)
+        {
+            RestoreOriginalMaterial(currentTarget);
+        }
+
         currentTarget = null;
         currentTargetIndex = -1;
         ResetProgress();
@@ -385,12 +511,30 @@ public class PlayerHarvestController : MonoBehaviour
 
     private void OnDisable()
     {
+        // Khôi phục tất cả materials trước khi disable
+        foreach (var harvestable in nearby)
+        {
+            if (harvestable != null)
+            {
+                RestoreOriginalMaterial(harvestable);
+            }
+        }
+
         HideUI();
         HideSelectionIndicator();
     }
 
     private void OnDestroy()
     {
+        // Khôi phục tất cả materials trước khi destroy
+        foreach (var harvestable in nearby)
+        {
+            if (harvestable != null)
+            {
+                RestoreOriginalMaterial(harvestable);
+            }
+        }
+
         if (selectionIndicator != null)
         {
             Destroy(selectionIndicator);

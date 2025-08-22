@@ -11,6 +11,8 @@ public class PrefabConfig
 
     [Header("Color Settings")]
     public Color possibleColors ;
+
+    
 }
 
 [System.Serializable]
@@ -26,6 +28,7 @@ public class PoolItem
 public class ObjectPooler : MonoBehaviour
 {
     public static ObjectPooler Instance;
+    public Transform parentObject;
 
     [Header("Danh sách pool")]
     public List<PoolItem> itemsToPool;
@@ -43,7 +46,7 @@ public class ObjectPooler : MonoBehaviour
             List<GameObject> objectList = new List<GameObject>();
             for (int i = 0; i < item.initialSize; i++)
             {
-                GameObject obj = Instantiate(item.prefab);
+                GameObject obj = Instantiate(item.prefab, parentObject);
                 obj.SetActive(false);
                 objectList.Add(obj);
             }

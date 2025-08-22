@@ -27,10 +27,10 @@ public class HideWhenTrigger : MonoBehaviour
                 if (other.CompareTag("Enemy") || other.CompareTag("Ally") || other.CompareTag("Player"))
                 {
                     // Thay đổi màu của Tilemap để ẩn nó
-                    GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 0.7f); // Sử dụng giá trị từ 0-1
+                    GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 0.2f); // Sử dụng giá trị từ 0-1
                 }
             }
-            else GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.7f); // Nếu không có Tilemap thì sử dụng SpriteRenderer
+            else GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.2f); // Nếu không có Tilemap thì sử dụng SpriteRenderer
         }
         catch (System.Exception e)
         {

@@ -1186,6 +1186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ton(Demo)
       objectReference: {fileID: 0}
+    - target: {fileID: 2218499173624817928, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1263,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &852662363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2146,6 +2150,61 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &1789539470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789539471}
+  - component: {fileID: 1789539472}
+  m_Layer: 0
+  m_Name: TestScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789539471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789539470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8635361, y: 2.4307597, z: -0.1679224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789539472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789539470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be422682ba46bf4cb7b2785c3107e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 300
+  stone: 250
+  iron: 100
+  gold: 80
+  meat: 55
+  populationSize: 150
+  generations: 300
+  mutationRate: 0.15
+  crossoverRate: 0.85
+  runOnStart: 1
+  showDetailedResults: 1
 --- !u!1 &1801777696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,3 +2548,4 @@ SceneRoots:
   - {fileID: 1801777699}
   - {fileID: 852662364}
   - {fileID: 790839226}
+  - {fileID: 1789539471}

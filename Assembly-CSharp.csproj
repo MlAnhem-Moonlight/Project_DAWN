@@ -161,6 +161,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\CheckDistance.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
+    <Compile Include="Assets\Guide\ResourceAllocationManager.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonMovement.cs" />
   </ItemGroup>
