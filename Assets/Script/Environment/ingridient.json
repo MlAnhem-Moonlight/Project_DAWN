@@ -1,0 +1,119 @@
+{
+  "trainingData": [
+    {
+      "currentResources": {
+        "wood": 500,
+        "stone": 300,
+        "iron": 150,
+        "gold": 50,
+        "meat": 200
+      },
+      "consumedResources": {
+        "wood": 50,
+        "stone": 30,
+        "iron": 15,
+        "gold": 5,
+        "meat": 20
+      },
+      "spawnedResources": {
+        "wood": 80,
+        "stone": 45,
+        "iron": 25,
+        "gold": 8,
+        "meat": 35
+      }
+    },
+    {
+      "currentResources": {
+        "wood": 800,
+        "stone": 600,
+        "iron": 400,
+        "gold": 200,
+        "meat": 500
+      },
+      "consumedResources": {
+        "wood": 100,
+        "stone": 80,
+        "iron": 50,
+        "gold": 20,
+        "meat": 60
+      },
+      "spawnedResources": {
+        "wood": 150,
+        "stone": 110,
+        "iron": 75,
+        "gold": 30,
+        "meat": 95
+      }
+    },
+    {
+      "currentResources": {
+        "wood": 200,
+        "stone": 150,
+        "iron": 80,
+        "gold": 30,
+        "meat": 120
+      },
+      "consumedResources": {
+        "wood": 40,
+        "stone": 25,
+        "iron": 12,
+        "gold": 8,
+        "meat": 25
+      },
+      "spawnedResources": {
+        "wood": 60,
+        "stone": 35,
+        "iron": 20,
+        "gold": 10,
+        "meat": 40
+      }
+    },
+    {
+      "currentResources": {
+        "wood": 1000,
+        "stone": 750,
+        "iron": 500,
+        "gold": 100,
+        "meat": 600
+      },
+      "consumedResources": {
+        "wood": 200,
+        "stone": 150,
+        "iron": 80,
+        "gold": 15,
+        "meat": 100
+      },
+      "spawnedResources": {
+        "wood": 280,
+        "stone": 200,
+        "iron": 120,
+        "gold": 20,
+        "meat": 160
+      }
+    },
+    {
+      "currentResources": {
+        "wood": 100,
+        "stone": 80,
+        "iron": 40,
+        "gold": 20,
+        "meat": 60
+      },
+      "consumedResources": {
+        "wood": 20,
+        "stone": 15,
+        "iron": 8,
+        "gold": 5,
+        "meat": 12
+      },
+      "spawnedResources": {
+        "wood": 35,
+        "stone": 25,
+        "iron": 15,
+        "gold": 8,
+        "meat": 20
+      }
+    }
+  ]
+}

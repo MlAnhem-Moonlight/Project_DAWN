@@ -74,6 +74,7 @@
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
     <Compile Include="Assets\Script\Environment\ObjectPooler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Guide\ResourceSpawnPredictor.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />

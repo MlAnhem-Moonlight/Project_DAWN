@@ -140,7 +140,7 @@ namespace ResourceAllocationGA
 
             _objectCosts[GameObjectType.Quang] = new ObjectCost(
                 GameObjectType.Quang,
-                new Resources(0, 10, 10, 5, 0), 7);
+                new Resources(0, 5, 10, 5, 0), 3);
 
             _objectCosts[GameObjectType.BuiCay] = new ObjectCost(
                 GameObjectType.BuiCay,
@@ -235,10 +235,29 @@ namespace ResourceAllocationGA
                 var chromosome = new Chromosome();
                 var remainingResources = _availableResources.Clone();
 
-                foreach (GameObjectType objectType in System.Enum.GetValues(typeof(GameObjectType)))
+                // First, handle ore (quặng) to ensure iron/gold resources are used
+                if (remainingResources.Iron > 0 || remainingResources.Gold > 0)
+                {
+                    int maxPossibleOre = CalculateMaxPossible(GameObjectType.Quang, remainingResources);
+                    // Ensure at least some ore is generated if resources allow
+                    int minOre = Math.Min(maxPossibleOre, 2); // Guarantee minimum ore spawn
+                    chromosome.Genes[GameObjectType.Quang] = _random.Next(minOre, maxPossibleOre + 1);
+
+                    // Deduct resources used for ore
+                    var oreCost = _objectCosts[GameObjectType.Quang].Cost;
+                    remainingResources.Stone -= chromosome.Genes[GameObjectType.Quang] * oreCost.Stone;
+                    remainingResources.Iron -= chromosome.Genes[GameObjectType.Quang] * oreCost.Iron;
+                    remainingResources.Gold -= chromosome.Genes[GameObjectType.Quang] * oreCost.Gold;
+                }
+
+                // Then handle remaining resources for other objects
+                var remainingTypes = new List<GameObjectType>((GameObjectType[])System.Enum.GetValues(typeof(GameObjectType)));
+                remainingTypes.Remove(GameObjectType.Quang); // Remove ore since we already handled it
+
+                foreach (GameObjectType objectType in remainingTypes)
                 {
                     int maxPossible = CalculateMaxPossible(objectType, remainingResources);
-                    chromosome.Genes[objectType] = _random.Next(0, Math.Max(1, maxPossible + 1));
+                    chromosome.Genes[objectType] = _random.Next(0, maxPossible + 1);
 
                     var cost = _objectCosts[objectType].Cost;
                     remainingResources.Wood -= chromosome.Genes[objectType] * cost.Wood;
@@ -269,13 +288,13 @@ namespace ResourceAllocationGA
             return Math.Max(0, max == int.MaxValue ? 10 : max);
         }
 
-        // Tính fitness của một nhiễm sắc thể
+        // Thay đổi hàm CalculateFitness để ưu tiên phân bổ quặng khi còn sắt/vàng dư
         private double CalculateFitness(Chromosome chromosome)
         {
             var usedResources = new Resources(0, 0, 0, 0, 0);
             double totalValue = 0;
+            double harvestableValue = 0;
 
-            // Tính tổng tài nguyên sử dụng và giá trị
             foreach (var kvp in chromosome.Genes)
             {
                 var cost = _objectCosts[kvp.Key].Cost;
@@ -287,6 +306,34 @@ namespace ResourceAllocationGA
                 usedResources.Gold += count * cost.Gold;
                 usedResources.Meat += count * cost.Meat;
 
+                switch (kvp.Key)
+                {
+                    case GameObjectType.DaTang:
+                        harvestableValue += count * (cost.Stone * 2.5f);
+                        break;
+                    case GameObjectType.Soi:
+                        harvestableValue += count * (cost.Stone * 1.2f);
+                        break;
+                    case GameObjectType.CanhCay:
+                        harvestableValue += count * (cost.Wood * 1.5f);
+                        break;
+                    case GameObjectType.CayTo:
+                        harvestableValue += count * (cost.Wood * 3.0f);
+                        break;
+                    case GameObjectType.Quang:
+                        harvestableValue += count * ((cost.Iron * 2.0f) + (cost.Gold * 1.5f));
+                        break;
+                    case GameObjectType.BuiCay:
+                        harvestableValue += count * (cost.Wood * 1.2f);
+                        break;
+                    case GameObjectType.Huou:
+                        harvestableValue += count * (cost.Meat * 2.0f);
+                        break;
+                    case GameObjectType.Soi_Animal:
+                        harvestableValue += count * (cost.Meat * 1.5f);
+                        break;
+                }
+
                 totalValue += count * _objectCosts[kvp.Key].Priority;
             }
 
@@ -297,29 +344,201 @@ namespace ResourceAllocationGA
                 usedResources.Gold > _availableResources.Gold ||
                 usedResources.Meat > _availableResources.Meat)
             {
-                return 0; // Fitness = 0 nếu vi phạm ràng buộc
+                return 0;
             }
 
-            // Áp dụng ràng buộc sinh thái: sói ăn hươu
+            // Tính tài nguyên dư thừa
+            int remainingIron = _availableResources.Iron - usedResources.Iron;
+            int remainingGold = _availableResources.Gold - usedResources.Gold;
+            int remainingStone = _availableResources.Stone - usedResources.Stone;
+
+            // Nếu còn dư sắt/vàng mà không có quặng thì phạt điểm
+            int quangCount = chromosome.Genes[GameObjectType.Quang];
+            double orePenalty = 0;
+            if ((remainingIron > 0 || remainingGold > 0) && quangCount == 0)
+            {
+                orePenalty = (remainingIron + remainingGold) * 5; // phạt mạnh nếu không tạo quặng
+            }
+
+            // Nếu còn dư đá mà đã tạo quặng thì thưởng nhẹ
+            double oreBonus = 0;
+            if (quangCount > 0 && remainingStone > 0)
+            {
+                oreBonus = Math.Min(remainingStone, quangCount * 10);
+            }
+
+            // Các thành phần khác giữ nguyên
+            double spaceDistribution = CalculateSpaceDistribution(chromosome);
+            double ecologicalValue = CalculateEcologicalValue(chromosome);
+            double harvestWeight = 2.0;
+            double distributionWeight = 1.0;
+            double ecologicalWeight = 1.5;
+            double usageRatio =
+                (usedResources.Wood + usedResources.Stone + usedResources.Iron + usedResources.Gold + usedResources.Meat) /
+                (double)(_availableResources.Wood + _availableResources.Stone + _availableResources.Iron + _availableResources.Gold + _availableResources.Meat);
+            double resourceUsageScore = usageRatio * 50;
+
+            int remainingWood = _availableResources.Wood - usedResources.Wood;
+            int remainingMeat = _availableResources.Meat - usedResources.Meat;
+            int totalRemaining = Math.Max(0, remainingWood) +
+                                 Math.Max(0, remainingStone) +
+                                 Math.Max(0, remainingIron) +
+                                 Math.Max(0, remainingGold) +
+                                 Math.Max(0, remainingMeat);
+            int totalProvided = _availableResources.Wood +
+                                _availableResources.Stone +
+                                _availableResources.Iron +
+                                _availableResources.Gold +
+                                _availableResources.Meat;
+            double excessPenalty = (totalProvided > 0) ? ((double)totalRemaining / totalProvided) * 50.0 : 0.0;
+
+            // Add ore-specific fitness calculation
+            double oreFitness = CalculateOreFitness(chromosome, usedResources);
+
+            // Modify final fitness calculation to include ore fitness
+            return (harvestableValue * harvestWeight) +
+                   (spaceDistribution * distributionWeight) +
+                   (ecologicalValue * ecologicalWeight) +
+                   resourceUsageScore +
+                   oreFitness -
+                   excessPenalty
+                   - orePenalty;
+        }
+
+        // Add a new method to calculate ore-specific fitness contribution
+        private double CalculateOreFitness(Chromosome chromosome, Resources usedResources)
+        {
+            double oreFitness = 0;
+            int oreCount = chromosome.Genes[GameObjectType.Quang];
+            
+            if (oreCount > 0)
+            {
+                // Base value for having ore
+                oreFitness += 30;
+
+                // Bonus for efficient iron/gold usage
+                double ironUsageRatio = _availableResources.Iron > 0 ? 
+                    (double)usedResources.Iron / _availableResources.Iron : 0;
+                double goldUsageRatio = _availableResources.Gold > 0 ? 
+                    (double)usedResources.Gold / _availableResources.Gold : 0;
+
+                oreFitness += (ironUsageRatio + goldUsageRatio) * 50;
+
+                // Extra bonus for balanced stone usage between ore and other objects
+                double stoneForOre = oreCount * _objectCosts[GameObjectType.Quang].Cost.Stone;
+                double totalStoneUsed = usedResources.Stone;
+                if (totalStoneUsed > 0)
+                {
+                    double oreStoneRatio = stoneForOre / totalStoneUsed;
+                    // Optimal ratio around 0.3-0.4 (30-40% stone for ore)
+                    if (oreStoneRatio >= 0.3 && oreStoneRatio <= 0.4)
+                    {
+                        oreFitness += 25;
+                    }
+                }
+            }
+            else if (_availableResources.Iron > 0 || _availableResources.Gold > 0)
+            {
+                // Significant penalty if no ore is created when iron/gold is available
+                oreFitness -= 50;
+            }
+
+            return oreFitness;
+        }
+
+        // Thêm phương thức tính toán phân bố không gian
+        private double CalculateSpaceDistribution(Chromosome chromosome)
+        {
+            double distribution = 0;
+            
+            // Thưởng cho việc phân bố đều các loại tài nguyên
+            var resourceTypes = new Dictionary<string, int>
+            {
+                {"Stone", 0},  // Đá tảng và sỏi
+                {"Wood", 0},   // Cây to và cành cây
+                {"Mineral", 0},// Quặng
+                {"Animal", 0}  // Hươu và sói
+            };
+
+            foreach (var kvp in chromosome.Genes)
+            {
+                switch (kvp.Key)
+                {
+                    case GameObjectType.DaTang:
+                    case GameObjectType.Soi:
+                        resourceTypes["Stone"] += kvp.Value;
+                        break;
+                    case GameObjectType.CanhCay:
+                    case GameObjectType.CayTo:
+                    case GameObjectType.BuiCay:
+                        resourceTypes["Wood"] += kvp.Value;
+                        break;
+                    case GameObjectType.Quang:
+                        resourceTypes["Mineral"] += kvp.Value;
+                        break;
+                    case GameObjectType.Huou:
+                    case GameObjectType.Soi_Animal:
+                        resourceTypes["Animal"] += kvp.Value;
+                        break;
+                }
+            }
+
+            // Thưởng cho sự đa dạng và phân bố cân đối
+            foreach (var type in resourceTypes)
+            {
+                if (type.Value > 0)
+                {
+                    distribution += 10; // Thưởng cho mỗi loại tài nguyên có mặt
+                }
+                // Phạt nếu một loại tài nguyên chiếm quá nhiều
+                if (type.Value > 10)
+                {
+                    distribution -= (type.Value - 10) * 0.5;
+                }
+            }
+
+            return Math.Max(0, distribution);
+        }
+
+        // Thêm phương thức tính toán giá trị sinh thái
+        private double CalculateEcologicalValue(Chromosome chromosome)
+        {
+            double ecologicalValue = 0;
             int deer = chromosome.Genes[GameObjectType.Huou];
             int wolves = chromosome.Genes[GameObjectType.Soi_Animal];
+            int trees = chromosome.Genes[GameObjectType.CayTo] + chromosome.Genes[GameObjectType.CanhCay];
+            int bushes = chromosome.Genes[GameObjectType.BuiCay];
+
+            // Thưởng cho hệ sinh thái cân bằng
             if (deer > 0)
             {
-                totalValue += 20; // thưởng có Hươu
+                ecologicalValue += 20; // Cơ bản cho việc có hươu
+                
+                // Tỷ lệ sói/hươu lý tưởng
+                double wolfDeerRatio = wolves / (double)deer;
+                if (wolfDeerRatio >= 0.3 && wolfDeerRatio <= 0.7)
+                {
+                    ecologicalValue += 30; // Thưởng cho tỷ lệ cân bằng
+                }
+                else if (wolfDeerRatio > 0.7)
+                {
+                    ecologicalValue -= (wolfDeerRatio - 0.7) * 20; // Phạt cho quá nhiều sói
+                }
             }
-            // Nếu có nhiều sói hơn hươu thì hươu bị ăn hết
-            if (wolves > deer)
+
+            // Thưởng cho môi trường sống
+            if (trees > 0 || bushes > 0)
             {
-                totalValue -= (wolves - deer) * 2; // Penalty cho mất cân bằng sinh thái
+                double vegetation = trees * 1.5 + bushes;
+                double vegetationPerAnimal = (deer + wolves) > 0 ? vegetation / (deer + wolves) : 0;
+                
+                if (vegetationPerAnimal >= 2)
+                {
+                    ecologicalValue += 25; // Thưởng cho đủ thảm thực vật cho động vật
+                }
             }
 
-            // Thêm bonus cho việc sử dụng hiệu quả tài nguyên
-            double resourceUtilization = (double)(usedResources.Wood + usedResources.Stone +
-                                                 usedResources.Iron + usedResources.Gold + usedResources.Meat) /
-                                        (_availableResources.Wood + _availableResources.Stone +
-                                         _availableResources.Iron + _availableResources.Gold + _availableResources.Meat);
-
-            return totalValue + resourceUtilization * 10;
+            return Math.Max(0, ecologicalValue);
         }
 
         // Chọn cha mẹ cho crossover (tournament selection)
