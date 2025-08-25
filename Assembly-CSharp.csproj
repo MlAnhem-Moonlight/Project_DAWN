@@ -62,6 +62,7 @@
     <Analyzer Include="C:\Users\Admin\DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Guide\ResourceAllocationGA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvestable.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\CastSpellNode.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
+    <Compile Include="Assets\Guide\ResourceAllocationGA_NewMutation.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
@@ -162,7 +164,6 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\CheckDistance.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
-    <Compile Include="Assets\Guide\ResourceAllocationManager.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonMovement.cs" />
   </ItemGroup>

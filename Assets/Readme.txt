@@ -3,3 +3,4 @@ Trong GameManagement cần thêm script để quản lý tài nguyên, quản l�
 Cần thêm script để object con lấy sorting layer theo parent (V)
 Sửa lại genetic phân phối tài nguyên, hiện tại đang coi các ingridient là tiêu tốn chứ không phải là tài nguyên cung cấp cho người chơi (~)
 sửa lại Linear Regression đưa ra dự đoán về tài nguyên cần spawn cho level tiếp theo 
+chỉ cần cân bằng hươu sói cho việc spawn còn đâu không cần tracking ecosystem (?)

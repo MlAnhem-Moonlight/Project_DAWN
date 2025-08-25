@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 [Serializable]
-public struct ResourceData
+public class ResourceData
 {
     public float wood;
     public float stone;
