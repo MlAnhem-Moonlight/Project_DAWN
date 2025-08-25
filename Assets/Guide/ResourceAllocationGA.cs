@@ -347,6 +347,26 @@ public class ResourceAllocationGA : MonoBehaviour
                 }
             }
         }
+
+        // In RandomizeWithPriority (after allocating wolves and before allocating deer)
+        var wolfAlloc = individual.allocations.FirstOrDefault(a => a.objectName == "Wolf");
+        var deerAlloc = individual.allocations.FirstOrDefault(a => a.objectName == "Deer");
+
+        if (wolfAlloc != null && deerAlloc != null)
+        {
+            int maxDeer = CalculateMaxQuantity(deerAlloc.resourceCost, remaining);
+            int minDeer = wolfAlloc.quantity * 3;
+            // Ensure at least 3 deer per wolf, but not exceeding available resources
+            minDeer = Mathf.Min(minDeer, maxDeer);
+            int deerQty = random.Next(minDeer, maxDeer + 1);
+            deerAlloc.quantity = deerQty;
+            var used = deerAlloc.GetTotalCost();
+            remaining.wood -= used.wood;
+            remaining.stone -= used.stone;
+            remaining.iron -= used.iron;
+            remaining.gold -= used.gold;
+            remaining.meat -= used.meat;
+        }
     }
 
     List<string> GetResourcePriorityOrder()
@@ -498,7 +518,7 @@ public class ResourceAllocationGA : MonoBehaviour
         individual.fitness = (utilization + priorityBonus + diversityBonus) * (1 + ecosystemScore);
 
         // --- Ecosystem balance for small vs large objects ---
-        int bigTree = 1, branch = 0, boulder = 0, pebble = 0, bush = 0;
+        int bigTree = 3, branch = 0, boulder = 3, pebble = 0, bush = 0;
         foreach (var allocation in individual.allocations)
         {
             switch (allocation.objectName)
@@ -513,24 +533,55 @@ public class ResourceAllocationGA : MonoBehaviour
 
         // Penalty for too many branches vs big trees
         float branchPenalty = 0f;
-        if (bigTree > 0 && branch > bigTree * 2)
-            branchPenalty = (branch - bigTree * 2) * 0.05f;
+        if ( branch > bigTree * 2)
+            branchPenalty = (branch - bigTree * 2) * 10f;
 
         // Penalty for too many pebbles vs boulders
         float pebblePenalty = 0f;
-        if (boulder > 0 && pebble > boulder * 2)
-            pebblePenalty = (pebble - boulder * 2) * 0.05f;
+        if (pebble > boulder * 2)
+            pebblePenalty = (pebble - boulder * 2) * 10f;
 
         // Penalty for too many bushes vs big trees
         float bushPenalty = 0f;
-        if (bigTree > 0 && bush > bigTree * 2)
-            bushPenalty = (bush - bigTree * 2) * 0.05f;
+        if (bush > bigTree * 3)
+            bushPenalty = (bush - bigTree * 2) * 1f;
 
         // Total penalty
         float clutterPenalty = branchPenalty + pebblePenalty + bushPenalty;
 
         // Subtract penalty from fitness
-        individual.fitness -= clutterPenalty;
+        individual.fitness -= Math.Abs(clutterPenalty);
+
+        //// In CalculateIndividualFitness, after reading wolf and deer quantities:
+        //int wolves = 0, deer = 0;
+        //foreach (var allocation in individual.allocations)
+        //{
+        //    if (allocation.objectName == "Wolf") wolves = allocation.quantity;
+        //    if (allocation.objectName == "Deer") deer = allocation.quantity;
+        //}
+        //if (wolves > 0 && deer < wolves * 3)
+        //{
+        //    // Strong penalty if not enough deer for wolves
+        //    individual.fitness -= Math.Abs(wolves * 3 - deer) * 10f;
+        //}
+
+        //// After all other penalties in CalculateIndividualFitness
+        //var unusedWood = available.wood - used.wood;
+        //var unusedStone = available.stone - used.stone;
+        //var unusedIron = available.iron - used.iron;
+        //var unusedGold = available.gold - used.gold;
+        //var unusedMeat = available.meat - used.meat;
+
+        //// Penalty: subtract 2 points for each unused unit (adjust multiplier as needed)
+        //float leftoverPenalty = 2f * (
+        //    Math.Max(0, unusedWood) +
+        //    Math.Max(0, unusedStone) +
+        //    Math.Max(0, unusedIron) +
+        //    Math.Max(0, unusedGold) +
+        //    Math.Max(0, unusedMeat)
+        //);
+
+        //individual.fitness -= Math.Abs(leftoverPenalty);
     }
 
     float GetPriorityWeight(string resourceType)
