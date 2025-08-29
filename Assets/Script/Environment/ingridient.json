@@ -1,119 +1,64 @@
 {
   "trainingData": [
     {
-      "currentResources": {
-        "wood": 500,
-        "stone": 300,
-        "iron": 150,
-        "gold": 50,
-        "meat": 200
-      },
-      "consumedResources": {
-        "wood": 50,
-        "stone": 30,
-        "iron": 15,
-        "gold": 5,
-        "meat": 20
-      },
-      "spawnedResources": {
-        "wood": 80,
-        "stone": 45,
-        "iron": 25,
-        "gold": 8,
-        "meat": 35
-      }
+      "levelIndex": 1,
+      "remainingResources": { "wood": 100, "stone": 80, "iron": 50, "gold": 30, "meat": 60 },
+      "consumedResources": { "wood": 200, "stone": 150, "iron": 80, "gold": 50, "meat": 100 },
+      "nextLevelSpawnResources": { "wood": 250, "stone": 180, "iron": 100, "gold": 60, "meat": 120 }
     },
     {
-      "currentResources": {
-        "wood": 800,
-        "stone": 600,
-        "iron": 400,
-        "gold": 200,
-        "meat": 500
-      },
-      "consumedResources": {
-        "wood": 100,
-        "stone": 80,
-        "iron": 50,
-        "gold": 20,
-        "meat": 60
-      },
-      "spawnedResources": {
-        "wood": 150,
-        "stone": 110,
-        "iron": 75,
-        "gold": 30,
-        "meat": 95
-      }
+      "levelIndex": 2,
+      "remainingResources": { "wood": 110, "stone": 85, "iron": 55, "gold": 35, "meat": 65 },
+      "consumedResources": { "wood": 220, "stone": 170, "iron": 90, "gold": 60, "meat": 120 },
+      "nextLevelSpawnResources": { "wood": 280, "stone": 200, "iron": 120, "gold": 80, "meat": 140 }
     },
     {
-      "currentResources": {
-        "wood": 200,
-        "stone": 150,
-        "iron": 80,
-        "gold": 30,
-        "meat": 120
-      },
-      "consumedResources": {
-        "wood": 40,
-        "stone": 25,
-        "iron": 12,
-        "gold": 8,
-        "meat": 25
-      },
-      "spawnedResources": {
-        "wood": 60,
-        "stone": 35,
-        "iron": 20,
-        "gold": 10,
-        "meat": 40
-      }
+      "levelIndex": 3,
+      "remainingResources": { "wood": 120, "stone": 90, "iron": 60, "gold": 38, "meat": 70 },
+      "consumedResources": { "wood": 240, "stone": 180, "iron": 100, "gold": 70, "meat": 130 },
+      "nextLevelSpawnResources": { "wood": 300, "stone": 220, "iron": 140, "gold": 90, "meat": 160 }
     },
     {
-      "currentResources": {
-        "wood": 1000,
-        "stone": 750,
-        "iron": 500,
-        "gold": 100,
-        "meat": 600
-      },
-      "consumedResources": {
-        "wood": 200,
-        "stone": 150,
-        "iron": 80,
-        "gold": 15,
-        "meat": 100
-      },
-      "spawnedResources": {
-        "wood": 280,
-        "stone": 200,
-        "iron": 120,
-        "gold": 20,
-        "meat": 160
-      }
+      "levelIndex": 4,
+      "remainingResources": { "wood": 125, "stone": 95, "iron": 63, "gold": 42, "meat": 75 },
+      "consumedResources": { "wood": 260, "stone": 190, "iron": 110, "gold": 80, "meat": 140 },
+      "nextLevelSpawnResources": { "wood": 320, "stone": 240, "iron": 150, "gold": 100, "meat": 180 }
     },
     {
-      "currentResources": {
-        "wood": 100,
-        "stone": 80,
-        "iron": 40,
-        "gold": 20,
-        "meat": 60
-      },
-      "consumedResources": {
-        "wood": 20,
-        "stone": 15,
-        "iron": 8,
-        "gold": 5,
-        "meat": 12
-      },
-      "spawnedResources": {
-        "wood": 35,
-        "stone": 25,
-        "iron": 15,
-        "gold": 8,
-        "meat": 20
-      }
+      "levelIndex": 5,
+      "remainingResources": { "wood": 130, "stone": 100, "iron": 68, "gold": 45, "meat": 80 },
+      "consumedResources": { "wood": 280, "stone": 200, "iron": 120, "gold": 90, "meat": 150 },
+      "nextLevelSpawnResources": { "wood": 340, "stone": 260, "iron": 170, "gold": 120, "meat": 200 }
+    },
+    {
+      "levelIndex": 6,
+      "remainingResources": { "wood": 138, "stone": 105, "iron": 72, "gold": 48, "meat": 85 },
+      "consumedResources": { "wood": 300, "stone": 220, "iron": 130, "gold": 100, "meat": 160 },
+      "nextLevelSpawnResources": { "wood": 360, "stone": 280, "iron": 180, "gold": 130, "meat": 220 }
+    },
+    {
+      "levelIndex": 7,
+      "remainingResources": { "wood": 145, "stone": 110, "iron": 75, "gold": 52, "meat": 90 },
+      "consumedResources": { "wood": 320, "stone": 230, "iron": 140, "gold": 110, "meat": 180 },
+      "nextLevelSpawnResources": { "wood": 380, "stone": 300, "iron": 200, "gold": 140, "meat": 240 }
+    },
+    {
+      "levelIndex": 8,
+      "remainingResources": { "wood": 155, "stone": 115, "iron": 80, "gold": 55, "meat": 95 },
+      "consumedResources": { "wood": 340, "stone": 250, "iron": 150, "gold": 120, "meat": 190 },
+      "nextLevelSpawnResources": { "wood": 400, "stone": 320, "iron": 220, "gold": 160, "meat": 260 }
+    },
+    {
+      "levelIndex": 9,
+      "remainingResources": { "wood": 165, "stone": 120, "iron": 85, "gold": 60, "meat": 100 },
+      "consumedResources": { "wood": 360, "stone": 260, "iron": 160, "gold": 130, "meat": 200 },
+      "nextLevelSpawnResources": { "wood": 420, "stone": 340, "iron": 240, "gold": 180, "meat": 280 }
+    },
+    {
+      "levelIndex": 10,
+      "remainingResources": { "wood": 175, "stone": 125, "iron": 90, "gold": 65, "meat": 110 },
+      "consumedResources": { "wood": 380, "stone": 280, "iron": 180, "gold": 150, "meat": 220 },
+      "nextLevelSpawnResources": { "wood": 450, "stone": 360, "iron": 260, "gold": 200, "meat": 300 }
     }
   ]
 }

@@ -1,50 +1,201 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using static Ingredient;
+
+[System.Serializable]
+public class GAEntry
+{
+    public int Tree;
+    public int Rock;
+    public int Pebble;
+    public int Branch;
+    public int Bush;
+    public int Ore;
+    public int Wolf;
+    public int Deer;
+}
+
+[System.Serializable]
+public class GAResultWrapper
+{
+    public List<GAEntry> GA_Result;
+}
+
 
 public class MaterialSpawner : MonoBehaviour
 {
+    [Header("JSON Data File")]
+    public TextAsset jsonFile; // Kéo thả file JSON vào đây trong Inspector
+
     [Header("Tên pool chứa các prefab")]
-    public string poolName = "Tree"; // Pool này có thể chứa nhiều prefab khác nhau
+    public string poolName = "Tree";
 
     [Header("Điểm spawn trên map")]
     public Transform[] spawnPoints;
 
-    [Header("Số lượng spawn mỗi lần")]
-    public int totalSpawnCount = 5; // Tổng số object muốn spawn mỗi lần
+    [Header("Spawn Configuration")]
+    public bool useJsonData = true; // Có sử dụng data từ JSON không
+    public int manualSpawnCount = 5; // Số lượng spawn thủ công nếu không dùng JSON
+
     [Range(0f, 1f)]
-    public float firstPrefabRatio = 0.5f; // Tỷ lệ prefab 1 trong pool (còn lại là prefab 2)
+    public float firstPrefabRatio = 0.5f; // Giữ lại cho trường hợp không dùng JSON
 
     [Header("Test trong Inspector")]
     public bool spawnNow = false;
 
     [Header("Parent Object")]
-    public GameObject parentObject; // GameObject cha để gom nhóm các object được spawn
+    public GameObject parentObject;
 
-    //[Header("Daily Refresh")]
-    //public bool refreshDaily = true;
-    //private float nextRefreshTime;
-    //private float dayLength = 24f * 60f; // 24 minutes = 1 game day
+    // Lưu trữ data từ JSON - Dictionary chứa tất cả pool counts
+    private Dictionary<string, int> allPoolCounts = new Dictionary<string, int>();
 
     private void Start()
     {
-        //nextRefreshTime = Time.time + dayLength;
-        SpawnMaterials(); // Initial spawn
+        LoadJsonData();
+        SpawnMaterials();
+        StartCoroutine(WaitForGAResultAndSpawn());
     }
 
     private void Update()
     {
         if (spawnNow)
         {
-            spawnNow = false; // reset nút
+            spawnNow = false;
             SpawnMaterials();
         }
-
-        //// Check for daily refresh
-        //if (refreshDaily && Time.time >= nextRefreshTime)
-        //{
-        //    RefreshAllMaterials();
-        //    nextRefreshTime = Time.time + dayLength;
-        //}
     }
+    private IEnumerator WaitForGAResultAndSpawn()
+    {
+        string gaResultPath = System.IO.Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        float timeout = 5f; // seconds
+        float timer = 0f;
+
+        // Wait until GA result file exists and is updated (simple check: file exists and last write time is recent)
+        while (!System.IO.File.Exists(gaResultPath) && timer < timeout)
+        {
+            yield return new WaitForSeconds(0.2f);
+            timer += 0.2f;
+        }
+
+        // Optionally, wait a bit more for file write to finish
+        yield return new WaitForSeconds(0.2f);
+
+        LoadJsonData();
+        SpawnMaterials();
+    }
+
+
+    private void LoadJsonData()
+    {
+        if (!useJsonData || jsonFile == null)
+        {
+            Debug.LogWarning("Không sử dụng JSON data hoặc chưa gán file JSON!");
+            return;
+        }
+
+        try
+        {
+            GAResultWrapper wrapper = JsonUtility.FromJson<GAResultWrapper>(jsonFile.text);
+
+            if (wrapper != null && wrapper.GA_Result != null && wrapper.GA_Result.Count > 0)
+            {
+                allPoolCounts.Clear();
+
+                GAEntry entry = wrapper.GA_Result[0]; // lấy entry đầu tiên
+                allPoolCounts["Tree"] = entry.Tree;
+                allPoolCounts["Rock"] = entry.Rock;
+                allPoolCounts["Pebble"] = entry.Pebble;
+                allPoolCounts["Branch"] = entry.Branch;
+                allPoolCounts["Bush"] = entry.Bush;
+                allPoolCounts["Ore"] = entry.Ore;
+                allPoolCounts["Wolf"] = entry.Wolf;
+                allPoolCounts["Deer"] = entry.Deer;
+
+                Debug.Log("Đã load GA_Result thành công!");
+            }
+            else
+            {
+                Debug.LogError("Không tìm thấy GA_Result hợp lệ trong JSON!");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Lỗi khi parse GA_Result: " + e.Message);
+        }
+    }
+
+
+    // Trả về spawn count cho pool hiện tại
+    private int GetSpawnCountForPool()
+    {
+        if (useJsonData && allPoolCounts.ContainsKey(poolName))
+        {
+            return allPoolCounts[poolName];
+        }
+        else
+        {
+            if (useJsonData)
+            {
+                Debug.LogWarning($"Không tìm thấy pool '{poolName}' trong JSON data! Sử dụng manual count: {manualSpawnCount}");
+            }
+            return manualSpawnCount;
+        }
+    }
+
+    //// Backup method để parse JSON trực tiếp nếu JsonUtility fail
+    //private void TryParseDirectly()
+    //{
+    //    try
+    //    {
+    //        string jsonString = jsonFile.text;
+
+    //        // Tìm phần GA_Result trong JSON
+    //        int gaResultStart = jsonString.IndexOf("\"GA_Result\"");
+    //        if (gaResultStart == -1)
+    //        {
+    //            Debug.LogError("Không tìm thấy GA_Result trong JSON!");
+    //            return;
+    //        }
+
+    //        // Tìm phần dictionary đầu tiên trong GA_Result
+    //        int firstDictStart = jsonString.IndexOf("{", gaResultStart);
+    //        int firstDictEnd = jsonString.IndexOf("}", firstDictStart);
+
+    //        if (firstDictStart == -1 || firstDictEnd == -1)
+    //        {
+    //            Debug.LogError("Không thể parse GA_Result dictionary!");
+    //            return;
+    //        }
+
+    //        string dictContent = jsonString.Substring(firstDictStart + 1, firstDictEnd - firstDictStart - 1);
+
+    //        // Parse các key-value pairs
+    //        string[] pairs = dictContent.Split(',');
+    //        allPoolCounts.Clear();
+
+    //        foreach (string pair in pairs)
+    //        {
+    //            string[] keyValue = pair.Split(':');
+    //            if (keyValue.Length == 2)
+    //            {
+    //                string key = keyValue[0].Trim().Replace("\"", "");
+    //                if (int.TryParse(keyValue[1].Trim(), out int value))
+    //                {
+    //                    allPoolCounts[key] = value;
+    //                    Debug.Log($"Backup parse - Loaded pool '{key}': {value}");
+    //                }
+    //            }
+    //        }
+
+    //        Debug.Log("Parse JSON thành công bằng method backup!");
+    //    }
+    //    catch (System.Exception e)
+    //    {
+    //        Debug.LogError("Lỗi khi parse JSON backup: " + e.Message);
+    //    }
+    //}
 
     public void SpawnMaterials()
     {
@@ -54,10 +205,19 @@ public class MaterialSpawner : MonoBehaviour
             return;
         }
 
+        // Xác định số lượng spawn từ JSON data
+        int totalSpawnCount = GetSpawnCountForPool();
+
+        if (totalSpawnCount <= 0)
+        {
+            Debug.LogWarning($"Pool '{poolName}' có spawn count = 0. Không spawn object nào!");
+            return;
+        }
+
         if (totalSpawnCount > spawnPoints.Length)
         {
-            Debug.LogWarning("Số lượng spawn vượt quá số điểm spawn!");
-            totalSpawnCount = spawnPoints.Length; // Giới hạn lại
+            Debug.LogWarning($"Số lượng spawn ({totalSpawnCount}) vượt quá số điểm spawn ({spawnPoints.Length})! Giới hạn lại.");
+            totalSpawnCount = spawnPoints.Length;
         }
 
         // Tạo bản copy của spawnPoints và shuffle
@@ -70,20 +230,19 @@ public class MaterialSpawner : MonoBehaviour
             shuffledPoints[randIndex] = temp;
         }
 
-        int prefab1Count = Mathf.RoundToInt(totalSpawnCount * firstPrefabRatio);
-        int pointIndex = 0;
-
-        for (int i = 0; i < prefab1Count; i++)
+        // Spawn objects
+        for (int i = 0; i < totalSpawnCount; i++)
         {
-            GameObject spawnedObj = ObjectPooler.Instance.GetFromPool(poolName,  shuffledPoints[pointIndex].position);
+            GameObject spawnedObj = ObjectPooler.Instance.GetFromPool(poolName, shuffledPoints[i].position);
             if (spawnedObj != null && parentObject != null)
             {
                 spawnedObj.transform.SetParent(parentObject.transform);
             }
-            pointIndex++;
         }
 
+        Debug.Log($"Đã spawn {totalSpawnCount} {poolName} objects!");
     }
+
     [ContextMenu("Refresh All Materials")]
     public void RefreshAllMaterials()
     {
@@ -99,5 +258,43 @@ public class MaterialSpawner : MonoBehaviour
 
         // Respawn all materials
         SpawnMaterials();
+    }
+
+    [ContextMenu("Reload JSON Data")]
+    public void ReloadJsonData()
+    {
+        LoadJsonData();
+    }
+
+    [ContextMenu("Show Current Pool Count")]
+    public void ShowCurrentPoolCount()
+    {
+        int count = GetSpawnCountForPool();
+        Debug.Log($"Pool '{poolName}' sẽ spawn {count} objects");
+
+        if (useJsonData && allPoolCounts.Count > 0)
+        {
+            Debug.Log("=== All Pool Counts từ GA_Result ===");
+            foreach (var kvp in allPoolCounts)
+            {
+                Debug.Log($"{kvp.Key}: {kvp.Value}");
+            }
+        }
+    }
+
+    // Method mới để get spawn count cho bất kỳ pool nào
+    public int GetSpawnCountForSpecificPool(string specificPoolName)
+    {
+        if (useJsonData && allPoolCounts.ContainsKey(specificPoolName))
+        {
+            return allPoolCounts[specificPoolName];
+        }
+        return 0;
+    }
+
+    // Method mới để get tất cả pool data
+    public Dictionary<string, int> GetAllPoolCounts()
+    {
+        return new Dictionary<string, int>(allPoolCounts);
     }
 }

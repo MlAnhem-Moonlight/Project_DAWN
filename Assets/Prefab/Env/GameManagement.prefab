@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5298066143546370134}
   - component: {fileID: 4786980259887309386}
   - component: {fileID: 7782305108022120653}
+  - component: {fileID: 2140761166584586751}
+  - component: {fileID: 6127381556460186418}
   m_Layer: 0
   m_Name: GameManagement
   m_TagString: Untagged
@@ -60,7 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5d9b83aadb574488245aa1d66b7233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
+  poolName: Branch
+  objectPrefab: {fileID: 4678146443917284625, guid: f15fab713fbc6ae43bd02da2792a9bd6, type: 3}
   PObject: {fileID: 0}
   spawnCount: 10
   areaStart: {fileID: 0}
@@ -78,12 +81,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5d9b83aadb574488245aa1d66b7233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolName: Pebble
   objectPrefab: {fileID: 0}
   PObject: {fileID: 0}
   spawnCount: 10
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
-  yOffset: -1.771
+  yOffset: -1.983
 --- !u!114 &7782305108022120653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,60 +100,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6399784aa97aa4c4b82537333d2bc5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentObject: {fileID: 0}
   itemsToPool:
   - poolName: Tree
-    prefabs:
-    - prefab: {fileID: 4213007648232339188, guid: 26891f2b4db24184ca9fddcde3d8d930, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
-      baseOrderInLayer: 3
-      defaultColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
-    - prefab: {fileID: 4213007648232339188, guid: 26891f2b4db24184ca9fddcde3d8d930, type: 3}
-      autoSortByY: 0
-      sortingLayerName: front
+    prefab: {fileID: 4213007648232339188, guid: 26891f2b4db24184ca9fddcde3d8d930, type: 3}
+    configPool:
+    - sortingLayerName: front
       baseOrderInLayer: 1
-      defaultColor: {r: 1, g: 1, b: 1, a: 1}
-    initialSize: 10
+      possibleColors: {r: 1, g: 1, b: 1, a: 1}
+    - sortingLayerName: back
+      baseOrderInLayer: 3
+      possibleColors: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    initialSize: 20
     expandable: 1
-  - poolName: Stone
-    prefabs:
-    - prefab: {fileID: 8702647193932527259, guid: 19f2cce1e89a4df43b66bb8ec13f779f, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
+  - poolName: Rock
+    prefab: {fileID: 4087409716635606176, guid: 9cb4dc28964a81b4f8b16525fec9f476, type: 3}
+    configPool:
+    - sortingLayerName: back
       baseOrderInLayer: 1
-      defaultColor: {r: 1, g: 1, b: 1, a: 1}
-    - prefab: {fileID: 8702647193932527259, guid: 19f2cce1e89a4df43b66bb8ec13f779f, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
+      possibleColors: {r: 1, g: 1, b: 1, a: 1}
+    - sortingLayerName: back
       baseOrderInLayer: 3
-      defaultColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
     initialSize: 10
     expandable: 1
   - poolName: Ore
-    prefabs:
-    - prefab: {fileID: 6943810918648113672, guid: ba21ad025ce3c7d4ea66741e12b83b60, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
+    prefab: {fileID: 8708242654378187539, guid: 7f87214819521bd42a53eada7e9f5a5e, type: 3}
+    configPool:
+    - sortingLayerName: back
       baseOrderInLayer: 1
-      defaultColor: {r: 1, g: 1, b: 1, a: 1}
-    - prefab: {fileID: 6943810918648113672, guid: ba21ad025ce3c7d4ea66741e12b83b60, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
+      possibleColors: {r: 1, g: 1, b: 1, a: 1}
+    - sortingLayerName: back
       baseOrderInLayer: 3
-      defaultColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
     initialSize: 10
     expandable: 1
   - poolName: Bush
-    prefabs:
-    - prefab: {fileID: 2049640328760161653, guid: c014289a2bfb1c546a80a5cb40adb944, type: 3}
-      autoSortByY: 0
-      sortingLayerName: front
+    prefab: {fileID: 2049640328760161653, guid: c014289a2bfb1c546a80a5cb40adb944, type: 3}
+    configPool:
+    - sortingLayerName: front
       baseOrderInLayer: 2
-      defaultColor: {r: 1, g: 1, b: 1, a: 1}
-    - prefab: {fileID: 2049640328760161653, guid: c014289a2bfb1c546a80a5cb40adb944, type: 3}
-      autoSortByY: 0
-      sortingLayerName: back
+      possibleColors: {r: 1, g: 1, b: 1, a: 1}
+    - sortingLayerName: back
       baseOrderInLayer: 1
-      defaultColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
     initialSize: 10
     expandable: 1
+--- !u!114 &2140761166584586751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be422682ba46bf4cb7b2785c3107e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableResources:
+    wood: 300
+    stone: 250
+    iron: 100
+    gold: 180
+    meat: 350
+  populationSize: 50
+  generations: 100
+  mutationRate: 0.5
+  crossoverRate: 0.8
+  eliteCount: 5
+  usePriorityAllocation: 1
+  meatPriority: 1
+  goldPriority: 2
+  ironPriority: 3
+  stonePriority: 4
+  woodPriority: 5
+  bestSolution:
+    allocations: []
+    fitness: 0
+  isOptimized: 0
+  baseHuntTime: 80
+  huntTimeReductionPerWolf: 10
+  minHuntTime: 20
+--- !u!114 &6127381556460186418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041cd014b4306ab4c8b8b22943cd0021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoLoadAndTrain: 1
+  learningRate: 0.001
+  epochs: 1500
+  trainingDataJsonPath: Assets/Script/Environment/ingridient.json
+  trainingDataSet: []
+  woodFactor: 1
+  stoneFactor: 1
+  ironFactor: 1
+  goldFactor: 1
+  meatFactor: 1
+  maxLevel: 30
+  maxResourceValue: 1000
+  testLevel: 2
+  testRemainingWood: 145
+  testRemainingStone: 110
+  testRemainingIron: 75
+  testRemainingGold: 52
+  testRemainingMeat: 90
+  testConsumedWood: 38
+  testConsumedStone: 28
+  testConsumedIron: 18
+  testConsumedGold: 15
+  testConsumedMeat: 22

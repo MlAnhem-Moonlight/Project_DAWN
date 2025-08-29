@@ -1,0 +1,573 @@
+using System.Collections.Generic;
+using UnityEngine;
+using System.Linq;
+using System;
+
+[System.Serializable]
+public class ResourceDataGA
+{
+    public int wood = 0;
+    public int stone = 0;
+    public int iron = 0;
+    public int gold = 0;
+    public int meat = 0;
+
+    public ResourceDataGA() { }
+
+    public ResourceDataGA(int w, int s, int i, int g, int m)
+    {
+        wood = w; stone = s; iron = i; gold = g; meat = m;
+    }
+
+    public ResourceDataGA Clone()
+    {
+        return new ResourceDataGA(wood, stone, iron, gold, meat);
+    }
+
+    public int Total => wood + stone + iron + gold + meat;
+}
+
+[System.Serializable]
+public class GameObjectAllocation
+{
+    public string objectName;
+    public ResourceDataGA resourceCost;
+    public int quantity;
+
+    public GameObjectAllocation(string name, ResourceDataGA cost)
+    {
+        objectName = name;
+        resourceCost = cost;
+        quantity = 0;
+    }
+
+    public ResourceDataGA GetTotalCost()
+    {
+        return new ResourceDataGA(
+            resourceCost.wood * quantity,
+            resourceCost.stone * quantity,
+            resourceCost.iron * quantity,
+            resourceCost.gold * quantity,
+            resourceCost.meat * quantity
+        );
+    }
+}
+
+[System.Serializable]
+public class Individual
+{
+    public List<GameObjectAllocation> allocations;
+    public float fitness;
+
+    public Individual(List<GameObjectAllocation> template)
+    {
+        allocations = new List<GameObjectAllocation>();
+        foreach (var allocation in template)
+        {
+            allocations.Add(new GameObjectAllocation(allocation.objectName, allocation.resourceCost));
+        }
+        fitness = 0f;
+    }
+
+    public ResourceDataGA GetTotalUsedResources()
+    {
+        var total = new ResourceDataGA();
+        foreach (var allocation in allocations)
+        {
+            var cost = allocation.GetTotalCost();
+            total.wood += cost.wood;
+            total.stone += cost.stone;
+            total.iron += cost.iron;
+            total.gold += cost.gold;
+            total.meat += cost.meat;
+        }
+        return total;
+    }
+
+    public Individual Clone()
+    {
+        var clone = new Individual(allocations);
+        for (int i = 0; i < allocations.Count; i++)
+        {
+            clone.allocations[i].quantity = allocations[i].quantity;
+        }
+        clone.fitness = fitness;
+        return clone;
+    }
+}
+
+public class ResourceAllocationGA : MonoBehaviour
+{
+    [Header("Available Resources")]
+    public ResourceDataGA availableResources = new ResourceDataGA(300, 250, 100, 180, 350);
+
+    [Header("GA Parameters")]
+    public int populationSize = 50;
+    public int generations = 100;
+    public float mutationRate = 0.5f;
+    public float crossoverRate = 0.8f;
+    public int eliteCount = 5;
+
+    [Header("Resource Priority (1=highest, 5=lowest)")]
+    public int meatPriority = 1;
+    public int goldPriority = 2;
+    public int ironPriority = 3;
+    public int stonePriority = 4;
+    public int woodPriority = 5;
+
+    [Header("Results")]
+    public Individual bestSolution;
+    public bool isOptimized = false;
+
+    private List<GameObjectAllocation> objectTemplate;
+    private List<Individual> population;
+    private System.Random random;
+
+    void Start()
+    {
+        random = new System.Random();
+        InitializeObjectTemplate();
+        RunGeneticAlgorithm();
+        RepairSolutionWithGreedy();
+    }
+
+    void InitializeObjectTemplate()
+    {
+        objectTemplate = new List<GameObjectAllocation>
+        {
+            new GameObjectAllocation("BigTree", new ResourceDataGA(20, 0, 0, 0, 0)),
+            new GameObjectAllocation("Boulder", new ResourceDataGA(0, 15, 2, 0, 0)),
+            new GameObjectAllocation("Pebble", new ResourceDataGA(0, 5, 0, 0, 0)),
+            new GameObjectAllocation("Branch", new ResourceDataGA(5, 0, 0, 0, 0)),
+            new GameObjectAllocation("Bush", new ResourceDataGA(5, 0, 0, 0, 5)),
+            new GameObjectAllocation("Ore", new ResourceDataGA(0, 5, 10, 10, 0)),
+            new GameObjectAllocation("Wolf", new ResourceDataGA(0, 0, 0, 5, 10)),
+            new GameObjectAllocation("Deer", new ResourceDataGA(0, 0, 0, 2, 15))
+        };
+    }
+
+    void RunGeneticAlgorithm()
+    {
+        Debug.Log("Starting Genetic Algorithm...");
+        
+        InitializePopulation();
+
+        for (int generation = 0; generation < generations; generation++)
+        {
+            EvaluateFitness();
+            population = population.OrderByDescending(ind => ind.fitness).ToList();
+
+            if (generation % 20 == 0)
+            {
+                Debug.Log($"Gen {generation}: Best Fitness = {population[0].fitness:F2}");
+            }
+
+            var newPopulation = new List<Individual>();
+
+            // Elite selection
+            for (int i = 0; i < eliteCount && i < population.Count; i++)
+            {
+                newPopulation.Add(population[i].Clone());
+            }
+
+            // Generate offspring
+            while (newPopulation.Count < populationSize)
+            {
+                var parent1 = SelectParent();
+                var parent2 = SelectParent();
+                var children = Crossover(parent1, parent2);
+
+                Mutate(children.Item1);
+                Mutate(children.Item2);
+
+                newPopulation.Add(children.Item1);
+                if (newPopulation.Count < populationSize)
+                    newPopulation.Add(children.Item2);
+            }
+
+            population = newPopulation;
+        }
+
+        EvaluateFitness();
+        bestSolution = population.OrderByDescending(ind => ind.fitness).First();
+        isOptimized = true;
+        
+        Debug.Log("GA completed. Starting repair phase...");
+    }
+
+    void InitializePopulation()
+    {
+        population = new List<Individual>();
+        for (int i = 0; i < populationSize; i++)
+        {
+            var individual = new Individual(objectTemplate);
+            RandomizeAllocation(individual);
+            population.Add(individual);
+        }
+    }
+
+    void RandomizeAllocation(Individual individual)
+    {
+        var remaining = availableResources.Clone();
+        var priorityOrder = GetResourcePriorityOrder();
+
+        foreach (var resourceType in priorityOrder)
+        {
+            var objects = GetObjectsThatUseResource(individual.allocations, resourceType);
+            foreach (var allocation in objects.OrderBy(x => random.Next()))
+            {
+                int maxQty = CalculateMaxQuantity(allocation.resourceCost, remaining);
+                if (maxQty > 0)
+                {
+                    float priorityMultiplier = GetPriorityMultiplier(resourceType);
+                    int quantity = random.Next(0, Mathf.Max(1, (int)(maxQty * priorityMultiplier)));
+                    allocation.quantity = quantity;
+                    
+                    var used = allocation.GetTotalCost();
+                    remaining.wood -= used.wood;
+                    remaining.stone -= used.stone;
+                    remaining.iron -= used.iron;
+                    remaining.gold -= used.gold;
+                    remaining.meat -= used.meat;
+                }
+            }
+        }
+    }
+
+    // **REPAIR STEP: Greedy heuristic to allocate leftover resources**
+    void RepairSolutionWithGreedy()
+    {
+        if (bestSolution == null) return;
+
+        Debug.Log("=== REPAIR PHASE ===");
+        var used = bestSolution.GetTotalUsedResources();
+        var leftover = new ResourceDataGA(
+            availableResources.wood - used.wood,
+            availableResources.stone - used.stone,
+            availableResources.iron - used.iron,
+            availableResources.gold - used.gold,
+            availableResources.meat - used.meat
+        );
+
+        Debug.Log($"Leftover before repair: Wood:{leftover.wood}, Stone:{leftover.stone}, Iron:{leftover.iron}, Gold:{leftover.gold}, Meat:{leftover.meat}");
+
+        // Greedy allocation by priority
+        var priorityOrder = GetResourcePriorityOrder();
+        
+        foreach (var resourceType in priorityOrder)
+        {
+            AllocateLeftoverByResource(resourceType, leftover);
+        }
+
+        // Final ecosystem balance check
+        BalanceWolfDeerRatio(leftover);
+
+        // Recalculate fitness after repair
+        CalculateIndividualFitness(bestSolution);
+        
+        var finalUsed = bestSolution.GetTotalUsedResources();
+        var finalLeftover = new ResourceDataGA(
+            availableResources.wood - finalUsed.wood,
+            availableResources.stone - finalUsed.stone,
+            availableResources.iron - finalUsed.iron,
+            availableResources.gold - finalUsed.gold,
+            availableResources.meat - finalUsed.meat
+        );
+
+        Debug.Log($"Leftover after repair: Wood:{finalLeftover.wood}, Stone:{finalLeftover.stone}, Iron:{finalLeftover.iron}, Gold:{finalLeftover.gold}, Meat:{finalLeftover.meat}");
+        Debug.Log($"Final fitness after repair: {bestSolution.fitness:F2}");
+        
+        DisplayResults();
+    }
+
+    void AllocateLeftoverByResource(string resourceType, ResourceDataGA leftover)
+    {
+        var objects = GetObjectsThatUseResource(bestSolution.allocations, resourceType)
+                     .OrderByDescending(o => GetObjectPriority(o.objectName))
+                     .ToList();
+
+        foreach (var allocation in objects)
+        {
+            int maxAdditional = CalculateMaxQuantity(allocation.resourceCost, leftover);
+            if (maxAdditional > 0)
+            {
+                allocation.quantity += maxAdditional;
+                var used = new ResourceDataGA(
+                    allocation.resourceCost.wood * maxAdditional,
+                    allocation.resourceCost.stone * maxAdditional,
+                    allocation.resourceCost.iron * maxAdditional,
+                    allocation.resourceCost.gold * maxAdditional,
+                    allocation.resourceCost.meat * maxAdditional
+                );
+                
+                leftover.wood -= used.wood;
+                leftover.stone -= used.stone;
+                leftover.iron -= used.iron;
+                leftover.gold -= used.gold;
+                leftover.meat -= used.meat;
+            }
+        }
+    }
+
+    void BalanceWolfDeerRatio(ResourceDataGA leftover)
+    {
+        var wolfAlloc = bestSolution.allocations.FirstOrDefault(a => a.objectName == "Wolf");
+        var deerAlloc = bestSolution.allocations.FirstOrDefault(a => a.objectName == "Deer");
+
+        if (wolfAlloc != null && deerAlloc != null)
+        {
+            int wolves = wolfAlloc.quantity;
+            int deer = deerAlloc.quantity;
+            int minRequiredDeer = wolves * 2;
+
+            if (deer < minRequiredDeer)
+            {
+                int neededDeer = minRequiredDeer - deer;
+                int maxAffordable = CalculateMaxQuantity(deerAlloc.resourceCost, leftover);
+                int addDeer = Mathf.Min(neededDeer, maxAffordable);
+                
+                if (addDeer > 0)
+                {
+                    deerAlloc.quantity += addDeer;
+                    leftover.gold -= deerAlloc.resourceCost.gold * addDeer;
+                    leftover.meat -= deerAlloc.resourceCost.meat * addDeer;
+                }
+            }
+        }
+    }
+
+    int GetObjectPriority(string objectName)
+    {
+        return objectName switch
+        {
+            "Ore" => 1,        // Highest priority (gives iron + gold)
+            "Wolf" => 2,       // High priority for ecosystem
+            "Deer" => 3,       // High priority for ecosystem
+            "BigTree" => 4,    // Better than small objects
+            "Boulder" => 5,    // Better than small objects
+            "Bush" => 6,       // Medium priority
+            "Branch" => 7,     // Lower priority (small object)
+            "Pebble" => 8,     // Lowest priority (small object)
+            _ => 9
+        };
+    }
+
+    List<string> GetResourcePriorityOrder()
+    {
+        var resources = new List<(string name, int priority)>
+        {
+            ("meat", meatPriority),
+            ("gold", goldPriority),
+            ("iron", ironPriority),
+            ("stone", stonePriority),
+            ("wood", woodPriority)
+        };
+        return resources.OrderBy(r => r.priority).Select(r => r.name).ToList();
+    }
+
+    List<GameObjectAllocation> GetObjectsThatUseResource(List<GameObjectAllocation> allocations, string resourceType)
+    {
+        return allocations.Where(allocation =>
+            resourceType switch
+            {
+                "meat" => allocation.resourceCost.meat > 0,
+                "gold" => allocation.resourceCost.gold > 0,
+                "iron" => allocation.resourceCost.iron > 0,
+                "stone" => allocation.resourceCost.stone > 0,
+                "wood" => allocation.resourceCost.wood > 0,
+                _ => false
+            }).ToList();
+    }
+
+    float GetPriorityMultiplier(string resourceType)
+    {
+        int priority = resourceType switch
+        {
+            "meat" => meatPriority,
+            "gold" => goldPriority,
+            "iron" => ironPriority,
+            "stone" => stonePriority,
+            "wood" => woodPriority,
+            _ => 5
+        };
+        return 1.0f - (priority - 1) * 0.15f;
+    }
+
+    int CalculateMaxQuantity(ResourceDataGA cost, ResourceDataGA available)
+    {
+        int max = int.MaxValue;
+        if (cost.wood > 0) max = Mathf.Min(max, available.wood / cost.wood);
+        if (cost.stone > 0) max = Mathf.Min(max, available.stone / cost.stone);
+        if (cost.iron > 0) max = Mathf.Min(max, available.iron / cost.iron);
+        if (cost.gold > 0) max = Mathf.Min(max, available.gold / cost.gold);
+        if (cost.meat > 0) max = Mathf.Min(max, available.meat / cost.meat);
+        return max == int.MaxValue ? 0 : Mathf.Max(0, max);
+    }
+
+    void EvaluateFitness()
+    {
+        foreach (var ind in population)
+        {
+            CalculateIndividualFitness(ind);
+        }
+    }
+
+    void CalculateIndividualFitness(Individual individual)
+    {
+        var used = individual.GetTotalUsedResources();
+        
+        // Validity check
+        bool isValid = used.wood <= availableResources.wood &&
+                      used.stone <= availableResources.stone &&
+                      used.iron <= availableResources.iron &&
+                      used.gold <= availableResources.gold &&
+                      used.meat <= availableResources.meat;
+
+        if (!isValid)
+        {
+            individual.fitness = 0f;
+            return;
+        }
+
+        // Priority-weighted utilization
+        float utilization = 0f;
+        if (availableResources.meat > 0) utilization += (float)used.meat / availableResources.meat * (6f - meatPriority);
+        if (availableResources.gold > 0) utilization += (float)used.gold / availableResources.gold * (6f - goldPriority);
+        if (availableResources.iron > 0) utilization += (float)used.iron / availableResources.iron * (6f - ironPriority);
+        if (availableResources.stone > 0) utilization += (float)used.stone / availableResources.stone * (6f - stonePriority);
+        if (availableResources.wood > 0) utilization += (float)used.wood / availableResources.wood * (6f - woodPriority);
+
+        // Ecosystem balance
+        int wolves = 0, deer = 0;
+        foreach (var allocation in individual.allocations)
+        {
+            if (allocation.objectName == "Wolf") wolves = allocation.quantity;
+            if (allocation.objectName == "Deer") deer = allocation.quantity;
+        }
+
+        float ecosystemPenalty = 0f;
+        if (deer < wolves * 2)
+        {
+            ecosystemPenalty = (wolves * 2 - deer) * 5f;
+        }
+
+        // Object size balance penalty
+        int bigTree = 0, branch = 0, boulder = 0, pebble = 0;
+        foreach (var allocation in individual.allocations)
+        {
+            switch (allocation.objectName)
+            {
+                case "BigTree": bigTree = allocation.quantity; break;
+                case "Branch": branch = allocation.quantity; break;
+                case "Boulder": boulder = allocation.quantity; break;
+                case "Pebble": pebble = allocation.quantity; break;
+            }
+        }
+
+        float clutterPenalty = 0f;
+        if (branch > bigTree * 2) clutterPenalty += (branch - bigTree * 2) * 2f;
+        if (pebble > boulder * 2) clutterPenalty += (pebble - boulder * 2) * 2f;
+
+        individual.fitness = utilization - ecosystemPenalty - clutterPenalty;
+    }
+
+    Individual SelectParent()
+    {
+        // Tournament selection
+        Individual best = null;
+        for (int i = 0; i < 3; i++)
+        {
+            var candidate = population[random.Next(population.Count)];
+            if (best == null || candidate.fitness > best.fitness)
+                best = candidate;
+        }
+        return best;
+    }
+
+    (Individual, Individual) Crossover(Individual parent1, Individual parent2)
+    {
+        var child1 = parent1.Clone();
+        var child2 = parent2.Clone();
+
+        if (random.NextDouble() < crossoverRate)
+        {
+            for (int i = 0; i < child1.allocations.Count; i++)
+            {
+                if (random.NextDouble() < 0.5f)
+                {
+                    var temp = child1.allocations[i].quantity;
+                    child1.allocations[i].quantity = child2.allocations[i].quantity;
+                    child2.allocations[i].quantity = temp;
+                }
+            }
+        }
+        return (child1, child2);
+    }
+
+    void Mutate(Individual individual)
+    {
+        if (random.NextDouble() < mutationRate)
+        {
+            int index = random.Next(individual.allocations.Count);
+            var allocation = individual.allocations[index];
+
+            var used = individual.GetTotalUsedResources();
+            var remaining = new ResourceDataGA(
+                availableResources.wood - used.wood + allocation.GetTotalCost().wood,
+                availableResources.stone - used.stone + allocation.GetTotalCost().stone,
+                availableResources.iron - used.iron + allocation.GetTotalCost().iron,
+                availableResources.gold - used.gold + allocation.GetTotalCost().gold,
+                availableResources.meat - used.meat + allocation.GetTotalCost().meat
+            );
+
+            int maxQuantity = CalculateMaxQuantity(allocation.resourceCost, remaining);
+            allocation.quantity = random.Next(0, maxQuantity + 1);
+        }
+    }
+
+    void DisplayResults()
+    {
+        Debug.Log("=== FINAL RESULTS ===");
+        var used = bestSolution.GetTotalUsedResources();
+
+        Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
+        Debug.Log($"Resource Usage:");
+        Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
+        Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
+        Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
+        Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
+        Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
+
+        Debug.Log("\nObject Allocations:");
+        foreach (var allocation in bestSolution.allocations.Where(a => a.quantity > 0))
+        {
+            var cost = allocation.GetTotalCost();
+            Debug.Log($"  {allocation.objectName}: {allocation.quantity} units");
+        }
+    }
+
+    public Dictionary<string, int> GetObjectQuantities()
+    {
+        var result = new Dictionary<string, int>();
+        if (bestSolution != null)
+        {
+            foreach (var allocation in bestSolution.allocations)
+            {
+                result[allocation.objectName] = allocation.quantity;
+            }
+        }
+        return result;
+    }
+
+    public ResourceDataGA GetUsedResources()
+    {
+        return bestSolution?.GetTotalUsedResources() ?? new ResourceDataGA();
+    }
+
+    public float GetResourceUtilizationPercentage()
+    {
+        if (bestSolution == null) return 0f;
+        var used = bestSolution.GetTotalUsedResources();
+        return availableResources.Total > 0 ? (float)used.Total / availableResources.Total * 100f : 0f;
+    }
+}

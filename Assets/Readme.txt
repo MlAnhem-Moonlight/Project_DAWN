@@ -2,6 +2,8 @@ Tách riêng movement ra, dùng static cho các biến nên khi thay đổi thì
 Trong GameManagement cần thêm script để quản lý tài nguyên, quản lý quái, quản lý item, quản lý skill, quản lý level, quản lý game (~)
 Cần thêm script để object con lấy sorting layer theo parent (V)
 Sửa lại genetic phân phối tài nguyên, hiện tại đang coi các ingridient là tiêu tốn chứ không phải là tài nguyên cung cấp cho người chơi (~)
-sửa lại Linear Regression đưa ra dự đoán về tài nguyên cần spawn cho level tiếp theo 
+sửa lại Linear Regression đưa ra dự đoán về tài nguyên cần spawn cho level tiếp theo (V ?)
 chỉ cần cân bằng hươu sói cho việc spawn còn đâu không cần tracking ecosystem (?)
-PHẦN GA PHÂN BỐ TÀI NGUYÊN ĐANG SAI, CẦN XEM LẠI PENATY (~)	
+PHẦN GA PHÂN BỐ TÀI NGUYÊN ĐANG SAI, CẦN XEM LẠI PENATY (V ?)	
+
+Phần đọc dữ liệu để spawn object đang bị chạy trước phần ghi dữ liệu lại vào file json

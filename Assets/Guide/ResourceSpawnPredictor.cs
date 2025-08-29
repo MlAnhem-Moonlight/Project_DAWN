@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using UnityEngine;
 
 [Serializable]
 public class ResourceData
 {
-    public float wood;
-    public float stone;
-    public float iron;
-    public float gold;
-    public float meat;
-    
+    public float wood { get; set; }
+    public float stone { get; set; }
+    public float iron { get; set; }
+    public float gold { get; set; }
+    public float meat { get; set; }
+
+    public ResourceData() { }
+
     public ResourceData(float wood, float stone, float iron, float gold, float meat)
     {
         this.wood = wood;
@@ -20,31 +23,48 @@ public class ResourceData
         this.gold = gold;
         this.meat = meat;
     }
-    
+
     public float[] ToArray()
     {
         return new float[] { wood, stone, iron, gold, meat };
     }
-    
+
     public static ResourceData FromArray(float[] array)
     {
+        if (array.Length < 5)
+            throw new ArgumentException("Array must have at least 5 elements");
         return new ResourceData(array[0], array[1], array[2], array[3], array[4]);
+    }
+
+    public ResourceData Clone()
+    {
+        return new ResourceData(wood, stone, iron, gold, meat);
     }
 }
 
 [Serializable]
 public class TrainingData
 {
-    public ResourceData currentResources;
-    public ResourceData consumedResources;
-    public ResourceData spawnedResources;
-    
-    public TrainingData(ResourceData current, ResourceData consumed, ResourceData spawned)
+    public int levelIndex { get; set; }
+    public ResourceData remainingResources { get; set; }
+    public ResourceData consumedResources { get; set; }
+    public ResourceData nextLevelSpawnResources { get; set; }
+
+    public TrainingData() { }
+
+    public TrainingData(int levelIndex, ResourceData current, ResourceData consumed, ResourceData spawned)
     {
-        currentResources = current;
+        this.levelIndex = levelIndex;
+        remainingResources = current;
         consumedResources = consumed;
-        spawnedResources = spawned;
+        nextLevelSpawnResources = spawned;
     }
+}
+
+[Serializable]
+public class TrainingDataWrapper
+{
+    public List<TrainingData> trainingData;
 }
 
 public class LinearRegressionModel
@@ -53,7 +73,10 @@ public class LinearRegressionModel
     private float[] bias;
     private int inputFeatures;
     private int outputFeatures;
-    
+    private bool isTrained = false;
+
+    public bool IsTrained => isTrained;
+
     public LinearRegressionModel(int inputFeatures, int outputFeatures)
     {
         this.inputFeatures = inputFeatures;
@@ -62,31 +85,30 @@ public class LinearRegressionModel
         this.bias = new float[outputFeatures];
         InitializeWeights();
     }
-    
+
     private void InitializeWeights()
     {
-        // Khởi tạo weights ngẫu nhiên nhỏ
+        System.Random random = new System.Random();
         for (int i = 0; i < inputFeatures; i++)
         {
             for (int j = 0; j < outputFeatures; j++)
             {
-                weights[i, j] = UnityEngine.Random.Range(-0.01f, 0.01f);
+                weights[i, j] = (float)(random.NextDouble() - 0.5) * 0.02f;
             }
         }
-        
+
         for (int j = 0; j < outputFeatures; j++)
         {
             bias[j] = 0f;
         }
     }
-    
+
     public float[] Predict(float[] input)
     {
         if (input.Length != inputFeatures)
-            throw new ArgumentException("Input size mismatch");
-            
+            throw new ArgumentException($"Input size mismatch. Expected {inputFeatures}, got {input.Length}");
+
         float[] output = new float[outputFeatures];
-        
         for (int j = 0; j < outputFeatures; j++)
         {
             output[j] = bias[j];
@@ -95,48 +117,59 @@ public class LinearRegressionModel
                 output[j] += input[i] * weights[i, j];
             }
         }
-        
+
         return output;
     }
-    
+
     public void Train(List<float[]> inputs, List<float[]> outputs, float learningRate = 0.001f, int epochs = 1000)
     {
         if (inputs.Count != outputs.Count)
             throw new ArgumentException("Input and output count mismatch");
-            
+
+        if (inputs.Count == 0)
+        {
+            Debug.LogWarning("No training data provided");
+            return;
+        }
+
         int sampleCount = inputs.Count;
-        
+        float bestLoss = float.MaxValue;
+
         for (int epoch = 0; epoch < epochs; epoch++)
         {
             float totalLoss = 0f;
-            
+
             // Forward pass and calculate gradients
             float[,] weightGradients = new float[inputFeatures, outputFeatures];
             float[] biasGradients = new float[outputFeatures];
-            
+
             for (int sample = 0; sample < sampleCount; sample++)
             {
                 float[] prediction = Predict(inputs[sample]);
-                
-                // Calculate error
+
+                // Calculate error and loss
                 float[] error = new float[outputFeatures];
                 for (int j = 0; j < outputFeatures; j++)
                 {
                     error[j] = prediction[j] - outputs[sample][j];
                     totalLoss += error[j] * error[j];
                 }
-                
+
                 // Accumulate gradients
                 for (int i = 0; i < inputFeatures; i++)
                 {
                     for (int j = 0; j < outputFeatures; j++)
                     {
                         weightGradients[i, j] += error[j] * inputs[sample][i];
-                        biasGradients[j] += error[j];
                     }
                 }
+
+                for (int j = 0; j < outputFeatures; j++)
+                {
+                    biasGradients[j] += error[j];
+                }
             }
-            
+
             // Update weights and bias
             for (int i = 0; i < inputFeatures; i++)
             {
@@ -145,45 +178,41 @@ public class LinearRegressionModel
                     weights[i, j] -= learningRate * weightGradients[i, j] / sampleCount;
                 }
             }
-            
+
             for (int j = 0; j < outputFeatures; j++)
             {
                 bias[j] -= learningRate * biasGradients[j] / sampleCount;
             }
-            
-            // Log progress
-            if (epoch % 100 == 0)
+
+            totalLoss /= sampleCount;
+            if (totalLoss < bestLoss)
             {
-                Debug.Log($"Epoch {epoch}: Loss = {totalLoss / sampleCount}");
+                bestLoss = totalLoss;
+            }
+
+            // Log progress
+            if (epoch % 200 == 0 || epoch == epochs - 1)
+            {
+                Debug.Log($"Training Epoch {epoch}/{epochs}: Loss = {totalLoss:F6}");
             }
         }
+
+        isTrained = true;
+        Debug.Log($"Training completed! Best loss: {bestLoss:F6}");
     }
 }
 
 public class ResourceSpawnPredictor : MonoBehaviour
 {
+    [Header("Model Configuration")]
     [SerializeField] private LinearRegressionModel model;
-    [SerializeField] private List<TrainingData> trainingDataSet = new List<TrainingData>();
-    [SerializeField] private bool autoTrain = true;
+    [SerializeField] private bool autoLoadAndTrain = true;
     [SerializeField] private float learningRate = 0.001f;
-    [SerializeField] private int epochs = 1000;
+    [SerializeField] private int epochs = 1500;
 
-    [Header("JSON Training Data")]
+    [Header("Training Data")]
     [SerializeField] private string trainingDataJsonPath = "Assets/Script/Environment/ingridient.json";
-
-    [Header("Input prediction own")]
-    public float ownWood;
-    public float ownStone;
-    public float ownIron;
-    public float ownGold;
-    public float ownMeat;
-
-    [Header("Input prediction used")]
-    public float usedWood;
-    public float usedStone;
-    public float usedIron;
-    public float usedGold;
-    public float usedMeat;
+    [SerializeField] private List<TrainingData> trainingDataSet = new List<TrainingData>();
 
     [Header("Balance Factors")]
     [SerializeField] private float woodFactor = 1.0f;
@@ -192,59 +221,115 @@ public class ResourceSpawnPredictor : MonoBehaviour
     [SerializeField] private float goldFactor = 1.0f;
     [SerializeField] private float meatFactor = 1.0f;
 
-    private const int INPUT_FEATURES = 10;
-    private const int OUTPUT_FEATURES = 5;
+    [Header("Normalization Constants")]
+    [SerializeField] private float maxLevel = 30.0f;
+    [SerializeField] private float maxResourceValue = 1000.0f;
+
+    [Header("Test Prediction")]
+    [SerializeField] private int testLevel = 1;
+    [SerializeField] private float testRemainingWood = 100f;
+    [SerializeField] private float testRemainingStone = 80f;
+    [SerializeField] private float testRemainingIron = 50f;
+    [SerializeField] private float testRemainingGold = 30f;
+    [SerializeField] private float testRemainingMeat = 60f;
+    [SerializeField] private float testConsumedWood = 20f;
+    [SerializeField] private float testConsumedStone = 15f;
+    [SerializeField] private float testConsumedIron = 10f;
+    [SerializeField] private float testConsumedGold = 5f;
+    [SerializeField] private float testConsumedMeat = 12f;
+
+    private ResourceDataGA resourceDataGA = new ResourceDataGA();
+
+    // Input features: levelIndex(1) + remaining_resources(5) + consumed_resources(5) = 11
+    private const int INPUT_FEATURES = 11;
+    private const int OUTPUT_FEATURES = 5; // spawn_resources(5)
 
     void Start()
     {
         InitializeModel();
 
-        LoadTrainingDataFromJson();
-
-        if (autoTrain && trainingDataSet.Count > 0)
+        if (autoLoadAndTrain)
         {
-            TrainModel();
+            LoadTrainingDataFromJson();
+            if (trainingDataSet.Count > 0)
+            {
+                TrainModel();
+            }
+            else
+            {
+                Debug.LogWarning("No training data found! Model will use default predictions.");
+            }
         }
     }
 
     private void InitializeModel()
     {
         model = new LinearRegressionModel(INPUT_FEATURES, OUTPUT_FEATURES);
+        Debug.Log($"Model initialized with {INPUT_FEATURES} input features and {OUTPUT_FEATURES} output features.");
     }
 
     private void LoadTrainingDataFromJson()
     {
         trainingDataSet.Clear();
+
         if (!File.Exists(trainingDataJsonPath))
         {
             Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
+            CreateSampleTrainingData();
             return;
         }
 
-        string json = File.ReadAllText(trainingDataJsonPath);
-        TrainingDataWrapper wrapper = JsonUtility.FromJson<TrainingDataWrapper>(json);
-        if (wrapper != null && wrapper.trainingData != null)
+        try
         {
-            trainingDataSet.AddRange(wrapper.trainingData);
-            Debug.Log($"Loaded {trainingDataSet.Count} training samples from JSON.");
+            string json = File.ReadAllText(trainingDataJsonPath);
+            var wrapper = JsonConvert.DeserializeObject<TrainingDataWrapper>(json);
+
+            if (wrapper?.trainingData != null)
+            {
+                trainingDataSet.AddRange(wrapper.trainingData);
+                Debug.Log($"Successfully loaded {trainingDataSet.Count} training samples from JSON.");
+            }
+            else
+            {
+                Debug.LogWarning("Invalid JSON format. Creating sample data.");
+                CreateSampleTrainingData();
+            }
         }
-        else
+        catch (Exception e)
         {
-            Debug.LogWarning("Failed to parse training data from JSON.");
+            Debug.LogError($"Error loading training data: {e.Message}");
+            CreateSampleTrainingData();
         }
     }
 
-    [Serializable]
-    private class TrainingDataWrapper
+    private void CreateSampleTrainingData()
     {
-        public List<TrainingData> trainingData;
+        Debug.Log("Creating sample training data...");
+
+        trainingDataSet.Add(new TrainingData(
+            1,
+            new ResourceData(100, 80, 50, 30, 60),
+            new ResourceData(20, 15, 10, 5, 12),
+            new ResourceData(25, 20, 12, 8, 15)));
+
+        trainingDataSet.Add(new TrainingData(
+            2,
+            new ResourceData(150, 120, 80, 50, 90),
+            new ResourceData(30, 25, 15, 10, 18),
+            new ResourceData(35, 30, 18, 12, 22)));
+
+        trainingDataSet.Add(new TrainingData(
+            3,
+            new ResourceData(200, 160, 110, 70, 120),
+            new ResourceData(40, 35, 20, 15, 25),
+            new ResourceData(45, 40, 25, 18, 30)));
     }
 
     public void TrainModel()
     {
         if (trainingDataSet.Count == 0)
         {
-            Debug.LogWarning("No training data available!");
+            Debug.LogWarning("No training data available for training!");
             return;
         }
 
@@ -253,74 +338,172 @@ public class ResourceSpawnPredictor : MonoBehaviour
 
         foreach (var data in trainingDataSet)
         {
-            inputs.Add(PrepareInput(data.currentResources, data.consumedResources));
-            outputs.Add(data.spawnedResources.ToArray());
+            inputs.Add(PrepareInput(data.levelIndex, data.remainingResources, data.consumedResources));
+            // FIX: Normalize output data during training
+            outputs.Add(NormalizeOutput(data.nextLevelSpawnResources.ToArray()));
         }
 
-        Debug.Log($"Training model with {trainingDataSet.Count} samples...");
+        Debug.Log($"Starting model training with {trainingDataSet.Count} samples...");
         model.Train(inputs, outputs, learningRate, epochs);
-        Debug.Log("Model training completed!");
+        Debug.Log("Model training completed successfully!");
     }
 
-    private float[] PrepareInput(ResourceData current, ResourceData consumed)
+    private float[] PrepareInput(int levelIndex, ResourceData remaining, ResourceData consumed)
     {
         float[] input = new float[INPUT_FEATURES];
-        float[] currentArray = current.ToArray();
+        float[] remainingArray = remaining.ToArray();
         float[] consumedArray = consumed.ToArray();
 
+        // Normalize levelIndex
+        input[0] = levelIndex / maxLevel;
+
+        // Normalize remaining resources
         for (int i = 0; i < 5; i++)
         {
-            input[i] = currentArray[i];
-            input[i + 5] = consumedArray[i];
+            input[i + 1] = remainingArray[i] / maxResourceValue;
+        }
+
+        // Normalize consumed resources
+        for (int i = 0; i < 5; i++)
+        {
+            input[i + 6] = consumedArray[i] / maxResourceValue;
         }
 
         return input;
     }
 
-    public ResourceData PredictSpawn(ResourceData currentResources, ResourceData consumedResources)
+    // FIX: Add method to normalize output data
+    private float[] NormalizeOutput(float[] output)
     {
-        float[] input = PrepareInput(currentResources, consumedResources);
-        float[] prediction = model.Predict(input);
-
-        prediction[0] *= woodFactor;
-        prediction[1] *= stoneFactor;
-        prediction[2] *= ironFactor;
-        prediction[3] *= goldFactor;
-        prediction[4] *= meatFactor;
-
-        for (int i = 0; i < prediction.Length; i++)
+        float[] normalizedOutput = new float[output.Length];
+        for (int i = 0; i < output.Length; i++)
         {
-            prediction[i] = Mathf.Max(0, prediction[i]);
+            normalizedOutput[i] = output[i] / maxResourceValue;
+        }
+        return normalizedOutput;
+    }
+
+    // FIX: Add method to denormalize output data
+    private float[] DenormalizeOutput(float[] normalizedOutput)
+    {
+        float[] output = new float[normalizedOutput.Length];
+        for (int i = 0; i < normalizedOutput.Length; i++)
+        {
+            output[i] = normalizedOutput[i] * maxResourceValue;
+        }
+        return output;
+    }
+
+    public ResourceData PredictNextLevelSpawn(int currentLevel, ResourceData remainingResources, ResourceData consumedResources)
+    {
+        // Dự đoán chính dựa trên lượng còn dư và tiêu hao hiện tại, sử dụng mô hình LinearRegressionModel
+        if (!model.IsTrained)
+        {
+            Debug.LogWarning("Model is not trained yet! Using fallback prediction.");
+            return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
         }
 
-        return ResourceData.FromArray(prediction);
+        try
+        {
+            float[] input = PrepareInput(currentLevel, remainingResources, consumedResources);
+            float[] normalizedPrediction = model.Predict(input);
+            float[] prediction = DenormalizeOutput(normalizedPrediction);
+
+            // Làm tròn và áp dụng balance factor
+            for (int i = 0; i < prediction.Length; i++)
+            {
+                prediction[i] = Mathf.Max(0, Mathf.Round(prediction[i]));
+            }
+            prediction[0] = Mathf.Round(prediction[0] * woodFactor);
+            prediction[1] = Mathf.Round(prediction[1] * stoneFactor);
+            prediction[2] = Mathf.Round(prediction[2] * ironFactor);
+            prediction[3] = Mathf.Round(prediction[3] * goldFactor);
+            prediction[4] = Mathf.Round(prediction[4] * meatFactor);
+
+            var result = ResourceData.FromArray(prediction);
+            Debug.Log($"[Predict] Model prediction for level {currentLevel + 1}: " +
+                      $"Wood={result.wood}, Stone={result.stone}, Iron={result.iron}, Gold={result.gold}, Meat={result.meat}");
+            return result;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error during prediction: {e.Message}");
+            return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
+        }
     }
 
-    // Chạy dự đoán với input nhập từ bên ngoài
-    public ResourceData RunPredictionFromInput(float wood, float stone, float iron, float gold, float meat,
-                                               float consumedWood, float consumedStone, float consumedIron, float consumedGold, float consumedMeat)
+    private ResourceData GetFallbackPrediction(int level, ResourceData remaining, ResourceData consumed)
     {
-        ResourceData current = new ResourceData(wood, stone, iron, gold, meat);
-        ResourceData consumed = new ResourceData(consumedWood, consumedStone, consumedIron, consumedGold, consumedMeat);
-        ResourceData predicted = PredictSpawn(current, consumed);
-        Debug.Log($"Input: Wood={wood}, Stone={stone}, Iron={iron}, Gold={gold}, Meat={meat} | Consumed: Wood={consumedWood}, Stone={consumedStone}, Iron={consumedIron}, Gold={consumedGold}, Meat={consumedMeat}");
-        Debug.Log($"Predicted Spawn: Wood={predicted.wood:F1}, Stone={predicted.stone:F1}, Iron={predicted.iron:F1}, Gold={predicted.gold:F1}, Meat={predicted.meat:F1}");
-        return predicted;
+        float levelMultiplier = 1.0f + (level * 0.1f);
+
+        return new ResourceData(
+            (20f + consumed.wood * 0.5f) * levelMultiplier,
+            (15f + consumed.stone * 0.5f) * levelMultiplier,
+            (10f + consumed.iron * 0.5f) * levelMultiplier,
+            (8f + consumed.gold * 0.5f) * levelMultiplier,
+            (12f + consumed.meat * 0.5f) * levelMultiplier
+        );
     }
 
-    public void AddTrainingData(ResourceData current, ResourceData consumed, ResourceData actualSpawned)
+    public void AddTrainingData(int levelIndex, ResourceData current, ResourceData consumed, ResourceData actualSpawn)
     {
-        trainingDataSet.Add(new TrainingData(current, consumed, actualSpawned));
+        trainingDataSet.Add(new TrainingData(levelIndex, current.Clone(), consumed.Clone(), actualSpawn.Clone()));
+        Debug.Log($"Added new training data for level {levelIndex}");
     }
 
     public void RetrainModel()
     {
-        TrainModel();
+        if (trainingDataSet.Count > 0)
+        {
+            TrainModel();
+        }
+        else
+        {
+            Debug.LogWarning("No training data available for retraining!");
+        }
     }
 
     [ContextMenu("Test Prediction")]
     public void TestPrediction()
     {
-        RunPredictionFromInput(ownWood, ownStone, ownIron, ownGold, ownMeat, usedWood, usedStone, usedIron, usedGold, usedMeat);
+        ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
+        ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
+
+        Debug.Log($"Testing prediction for level {testLevel}:");
+        Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+        Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+
+        ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
+        Debug.Log($"Prediction for level {testLevel + 1}: Wood={prediction.wood:F1}, Stone={prediction.stone:F1}, Iron={prediction.iron:F1}, Gold={prediction.gold:F1}, Meat={prediction.meat:F1}");
+    }
+
+    public ResourceDataGA Prediction()
+    {
+        ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
+        ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
+
+        Debug.Log($"Testing prediction for level {testLevel}:");
+        Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+        Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+
+        ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
+        resourceDataGA = new ResourceDataGA((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
+        return resourceDataGA;
+    }
+
+    [ContextMenu("Save Sample Training Data")]
+    public void SaveSampleTrainingData()
+    {
+        CreateSampleTrainingData();
+
+        TrainingDataWrapper wrapper = new TrainingDataWrapper()
+        {
+            trainingData = trainingDataSet
+        };
+
+        string json = JsonConvert.SerializeObject(wrapper, Formatting.Indented);
+        File.WriteAllText(trainingDataJsonPath, json);
+
+        Debug.Log($"Sample training data saved to {trainingDataJsonPath}");
     }
 }

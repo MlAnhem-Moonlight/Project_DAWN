@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using System.Linq;
 using System;
@@ -98,8 +99,9 @@ public class Individual
 
 public class ResourceAllocationGA : MonoBehaviour
 {
+    private ResourceSpawnPredictor predictor;
     [Header("Available Resources")]
-    public ResourceDataGA availableResources = new ResourceDataGA(300, 250, 100, 180, 350);
+    public ResourceDataGA availableResources;
 
     [Header("GA Parameters")]
     public int populationSize = 50;
@@ -140,8 +142,24 @@ public class ResourceAllocationGA : MonoBehaviour
     }
     private EcosystemState ecosystemState;
 
+    void Awake()
+    {
+        predictor = GetComponent<ResourceSpawnPredictor>();
+    }
+
     void Start()
     {
+        // Wait until predictor is ready and has run its initialization
+        StartCoroutine(WaitForPredictionAndStart());
+    }
+
+    IEnumerator WaitForPredictionAndStart()
+    {
+        // Wait for one frame to ensure predictor's Start has run
+        yield return null;
+
+        // Now get the prediction and initialize GA
+        availableResources = predictor != null ? predictor.Prediction() : new ResourceDataGA(300, 250, 100, 180, 350);
         random = new System.Random();
         InitializeObjectTemplate();
         RunGeneticAlgorithm();
@@ -149,32 +167,51 @@ public class ResourceAllocationGA : MonoBehaviour
 
     void InitializeObjectTemplate()
     {
-        objectTemplate = new List<GameObjectAllocation>
-        {
-            // Cây to - chủ yếu gỗ
-            new GameObjectAllocation("BigTree", new ResourceDataGA(20, 0, 0, 0, 0)),
+        objectTemplate = new List<GameObjectAllocation>();
 
-            // Đá tảng - chủ yếu đá
-            new GameObjectAllocation("Boulder", new ResourceDataGA(0, 15, 2, 0, 0)),
-            
-            // Sỏi - ít đá
-            new GameObjectAllocation("Pebble", new ResourceDataGA(0, 5, 0, 0, 0)),
-            
-            // Cành cây - ít gỗ
-            new GameObjectAllocation("Branch", new ResourceDataGA(5, 0, 0, 0, 0)),
-            
-            // Bụi cây - ít gỗ
-            new GameObjectAllocation("Bush", new ResourceDataGA(5, 0, 0, 0, 5)),
-            
-            // Quặng - sắt và vàng
-            new GameObjectAllocation("Ore", new ResourceDataGA(0, 5, 10, 10, 0)),
-            
-            // Sói - thịt
-            new GameObjectAllocation("Wolf", new ResourceDataGA(0, 0, 0, 5, 10)),
-            
-            // Hươu - thịt
-            new GameObjectAllocation("Deer", new ResourceDataGA(0, 0, 0, 2, 15))
-        };
+        // Load data từ JSON thông qua Ingredient class
+        var envData = Ingredient.GetEnvironmentData();
+
+        if (envData != null && envData.objects != null)
+        {
+            foreach (var obj in envData.objects)
+            {
+                // Chuyển đổi từ IngredientEntry[] thành ResourceDataGA
+                var resourceCost = new ResourceDataGA();
+
+                foreach (var ingredient in obj.ingredients)
+                {
+                    switch (ingredient.type.ToLower())
+                    {
+                        case "wood":
+                            resourceCost.wood = ingredient.quantity;
+                            break;
+                        case "stone":
+                            resourceCost.stone = ingredient.quantity;
+                            break;
+                        case "iron":
+                            resourceCost.iron = ingredient.quantity;
+                            break;
+                        case "gold":
+                            resourceCost.gold = ingredient.quantity;
+                            break;
+                        case "meat":
+                            resourceCost.meat = ingredient.quantity;
+                            break;
+                    }
+                }
+
+                objectTemplate.Add(new GameObjectAllocation(obj.id, resourceCost));
+            }
+
+            Debug.Log($"Đã load {objectTemplate.Count} object templates từ JSON");
+        }
+        else
+        {
+            Debug.LogError("Không thể load environment data từ JSON, sử dụng default template");
+            // Fallback to default template nếu không load được từ JSON
+            LoadDefaultTemplate();
+        }
     }
 
     void RunGeneticAlgorithm()
@@ -298,8 +335,8 @@ public class ResourceAllocationGA : MonoBehaviour
             }
         }
 
-        // Then allocate Boulder and Pebble
-        foreach (var name in new[] { "Boulder", "Pebble" })
+        // Then allocate Rock and Pebble
+        foreach (var name in new[] { "Rock", "Pebble" })
         {
             var alloc = individual.allocations.FirstOrDefault(a => a.objectName == name);
             if (alloc != null)
@@ -328,8 +365,8 @@ public class ResourceAllocationGA : MonoBehaviour
 
             foreach (var allocation in objectsForResource)
             {
-                // Skip Ore, Boulder, Pebble (already handled)
-                if (allocation.objectName == "Ore" || allocation.objectName == "Boulder" || allocation.objectName == "Pebble")
+                // Skip Ore, Rock, Pebble (already handled)
+                if (allocation.objectName == "Ore" || allocation.objectName == "Rock" || allocation.objectName == "Pebble")
                     continue;
 
                 int maxQuantity = CalculateMaxQuantity(allocation.resourceCost, remaining);
@@ -488,6 +525,14 @@ public class ResourceAllocationGA : MonoBehaviour
             if (available.meat > 0) utilization += (float)used.meat / available.meat;
         }
 
+        // --- Hybrid GA: reward for low leftover ---
+        float totalSupply = available.Total;
+        float totalUsed = used.Total;
+        float leftoverRatio = totalSupply > 0 ? (totalSupply - totalUsed) / totalSupply : 0f;
+        // Reward is higher when leftover is lower (exponential for stronger effect)
+        float leftoverReward = 1.0f - leftoverRatio;
+        leftoverReward = Mathf.Pow(leftoverReward, 2.0f); // Sharper reward curve
+
         // Priority bonus - higher bonus for using high-priority resources completely
         float priorityBonus = 0f;
         if (usePriorityAllocation)
@@ -515,17 +560,17 @@ public class ResourceAllocationGA : MonoBehaviour
         float ecosystemScore = EvaluateEcosystemBalance(individual);
         
         // Modify final fitness calculation to include ecosystem score
-        individual.fitness = (utilization + priorityBonus + diversityBonus) * (1 + ecosystemScore);
+        individual.fitness = (utilization * leftoverReward + priorityBonus + diversityBonus) * (1 + ecosystemScore);
 
         // --- Ecosystem balance for small vs large objects ---
-        int bigTree = 3, branch = 0, boulder = 3, pebble = 0, bush = 0;
+        int Tree = 3, branch = 0, Rock = 3, pebble = 0, bush = 0;
         foreach (var allocation in individual.allocations)
         {
             switch (allocation.objectName)
             {
-                case "BigTree": bigTree = allocation.quantity; break;
+                case "Tree": Tree = allocation.quantity; break;
                 case "Branch": branch = allocation.quantity; break;
-                case "Boulder": boulder = allocation.quantity; break;
+                case "Rock": Rock = allocation.quantity; break;
                 case "Pebble": pebble = allocation.quantity; break;
                 case "Bush": bush = allocation.quantity; break;
             }
@@ -533,18 +578,18 @@ public class ResourceAllocationGA : MonoBehaviour
 
         // Penalty for too many branches vs big trees
         float branchPenalty = 0f;
-        if ( branch > bigTree * 2)
-            branchPenalty = (branch - bigTree * 2) * 10f;
+        if ( branch > Tree * 2)
+            branchPenalty = (branch - Tree * 2) * 10f;
 
-        // Penalty for too many pebbles vs boulders
+        // Penalty for too many pebbles vs Rocks
         float pebblePenalty = 0f;
-        if (pebble > boulder * 2)
-            pebblePenalty = (pebble - boulder * 2) * 10f;
+        if (pebble > Rock * 2)
+            pebblePenalty = (pebble - Rock * 2) * 10f;
 
         // Penalty for too many bushes vs big trees
         float bushPenalty = 0f;
-        if (bush > bigTree * 3)
-            bushPenalty = (bush - bigTree * 2) * 1f;
+        if (bush > Tree * 3)
+            bushPenalty = (bush - Tree * 2) * 1f;
 
         // Total penalty
         float clutterPenalty = branchPenalty + pebblePenalty + bushPenalty;
@@ -552,36 +597,18 @@ public class ResourceAllocationGA : MonoBehaviour
         // Subtract penalty from fitness
         individual.fitness -= Math.Abs(clutterPenalty);
 
-        //// In CalculateIndividualFitness, after reading wolf and deer quantities:
-        //int wolves = 0, deer = 0;
-        //foreach (var allocation in individual.allocations)
-        //{
-        //    if (allocation.objectName == "Wolf") wolves = allocation.quantity;
-        //    if (allocation.objectName == "Deer") deer = allocation.quantity;
-        //}
-        //if (wolves > 0 && deer < wolves * 3)
-        //{
-        //    // Strong penalty if not enough deer for wolves
-        //    individual.fitness -= Math.Abs(wolves * 3 - deer) * 10f;
-        //}
-
-        //// After all other penalties in CalculateIndividualFitness
-        //var unusedWood = available.wood - used.wood;
-        //var unusedStone = available.stone - used.stone;
-        //var unusedIron = available.iron - used.iron;
-        //var unusedGold = available.gold - used.gold;
-        //var unusedMeat = available.meat - used.meat;
-
-        //// Penalty: subtract 2 points for each unused unit (adjust multiplier as needed)
-        //float leftoverPenalty = 2f * (
-        //    Math.Max(0, unusedWood) +
-        //    Math.Max(0, unusedStone) +
-        //    Math.Max(0, unusedIron) +
-        //    Math.Max(0, unusedGold) +
-        //    Math.Max(0, unusedMeat)
-        //);
-
-        //individual.fitness -= Math.Abs(leftoverPenalty);
+        // In CalculateIndividualFitness, after reading wolf and deer quantities:
+        int wolves = 0, deer = 0;
+        foreach (var allocation in individual.allocations)
+        {
+            if (allocation.objectName == "Wolf") wolves = allocation.quantity;
+            if (allocation.objectName == "Deer") deer = allocation.quantity;
+        }
+        if (deer < wolves * 2 || deer > wolves *5)
+        {
+            // Strong penalty if not enough deer for wolves
+            individual.fitness -= Math.Abs(wolves * 3 - deer) * 10f;
+        }
     }
 
     float GetPriorityWeight(string resourceType)
@@ -678,6 +705,8 @@ public class ResourceAllocationGA : MonoBehaviour
         Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
 
         Debug.Log("\nObject Allocations:");
+        var resultDict = new Dictionary<string, int>();
+
         foreach (var allocation in bestSolution.allocations)
         {
             if (allocation.quantity > 0)
@@ -685,7 +714,13 @@ public class ResourceAllocationGA : MonoBehaviour
                 var cost = allocation.GetTotalCost();
                 Debug.Log($"  {allocation.objectName}: {allocation.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
             }
+
+            // Thêm vào dictionary để lưu (bao gồm cả quantity = 0)
+            resultDict[allocation.objectName] = allocation.quantity;
         }
+
+        // Lưu kết quả vào JSON file
+        Ingredient.SaveGAResult(resultDict);
     }
 
     // Public methods for accessing results
@@ -840,7 +875,25 @@ public class ResourceAllocationGA : MonoBehaviour
             ecosystemState.huntTimer = ecosystemState.currentHuntTime;
         }
     }
+    
 
+    void LoadDefaultTemplate()
+    {
+        objectTemplate = new List<GameObjectAllocation>
+        {
+            new GameObjectAllocation("Tree", new ResourceDataGA(20, 0, 0, 0, 0)),
+            new GameObjectAllocation("Rock", new ResourceDataGA(0, 15, 2, 0, 0)),
+            new GameObjectAllocation("Pebble", new ResourceDataGA(0, 5, 0, 0, 0)),
+            new GameObjectAllocation("Branch", new ResourceDataGA(5, 0, 0, 0, 0)),
+            new GameObjectAllocation("Bush", new ResourceDataGA(5, 0, 0, 0, 5)),
+            new GameObjectAllocation("Ore", new ResourceDataGA(0, 5, 10, 10, 0)),
+            new GameObjectAllocation("Wolf", new ResourceDataGA(0, 0, 0, 5, 10)),
+            new GameObjectAllocation("Deer", new ResourceDataGA(0, 0, 0, 2, 15))
+        };
+    }
+
+    // Cập nhật DisplayResults để lưu kết quả vào JSON
+    
     void Update()
     {
         UpdateEcosystemState();
