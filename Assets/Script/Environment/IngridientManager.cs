@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class IngridientManager : MonoBehaviour
 {
+    
     [Header("Tài nguyên của người chơi")]
     public List<Ingredient.IngredientEntry> playerIngredients = new List<Ingredient.IngredientEntry>();
 

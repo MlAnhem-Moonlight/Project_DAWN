@@ -49,13 +49,11 @@ public class MaterialSpawner : MonoBehaviour
     public GameObject parentObject;
 
     // Lưu trữ data từ JSON - Dictionary chứa tất cả pool counts
-    private Dictionary<string, int> allPoolCounts = new Dictionary<string, int>();
+    public Dictionary<string, int> allPoolCounts = new Dictionary<string, int>();
 
     private void Start()
     {
-        LoadJsonData();
-        SpawnMaterials();
-        StartCoroutine(WaitForGAResultAndSpawn());
+
     }
 
     private void Update()
@@ -65,27 +63,24 @@ public class MaterialSpawner : MonoBehaviour
             spawnNow = false;
             SpawnMaterials();
         }
+
     }
-    private IEnumerator WaitForGAResultAndSpawn()
+
+    private void OnEnable()
     {
-        string gaResultPath = System.IO.Path.Combine(Application.dataPath, "Script/Environment/env.json");
-        float timeout = 5f; // seconds
-        float timer = 0f;
+        ResourceAllocationGA.onGAResultSaved += OnGAResultSaved;
+    }
 
-        // Wait until GA result file exists and is updated (simple check: file exists and last write time is recent)
-        while (!System.IO.File.Exists(gaResultPath) && timer < timeout)
-        {
-            yield return new WaitForSeconds(0.2f);
-            timer += 0.2f;
-        }
+    private void OnDisable()
+    {
+        ResourceAllocationGA.onGAResultSaved -= OnGAResultSaved;
+    }
 
-        // Optionally, wait a bit more for file write to finish
-        yield return new WaitForSeconds(0.2f);
-
+    private void OnGAResultSaved()
+    {
         LoadJsonData();
         SpawnMaterials();
     }
-
 
     private void LoadJsonData()
     {
@@ -123,6 +118,10 @@ public class MaterialSpawner : MonoBehaviour
         catch (System.Exception e)
         {
             Debug.LogError("Lỗi khi parse GA_Result: " + e.Message);
+        }
+        foreach (var kvp in allPoolCounts)
+        {
+            Debug.Log($"Loaded pool '{kvp.Key}': {kvp.Value}");
         }
     }
 

@@ -154,6 +154,7 @@
     <Compile Include="Assets\Script\Environment\Deer\DeerMovement.cs" />
     <Compile Include="Assets\Script\Environment\Ingredient.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\SetTargetNode.cs" />
+    <Compile Include="Assets\Script\Environment\GAController.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandSetTarget.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\AggressiveMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
