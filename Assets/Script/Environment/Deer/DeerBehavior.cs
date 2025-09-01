@@ -12,6 +12,8 @@ public class DeerBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        startArea = UnityEngine.GameObject.Find("Start").transform;
+        endArea = UnityEngine.GameObject.Find("End").transform;
         Nodes root = new Selector(new List<Nodes>
         {
 

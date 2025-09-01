@@ -14434,10 +14434,6 @@ PrefabInstance:
       propertyPath: areaStart
       value: 
       objectReference: {fileID: 472684186}
-    - target: {fileID: 4786980259887309386, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: objectPrefab
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5298066143546370134, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
       propertyPath: PObject
       value: 
@@ -14450,26 +14446,6 @@ PrefabInstance:
       propertyPath: areaStart
       value: 
       objectReference: {fileID: 472684186}
-    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: testConsumedGold
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: testConsumedIron
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: testConsumedMeat
-      value: 175
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: testConsumedWood
-      value: 340
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
-      propertyPath: testConsumedStone
-      value: 290
-      objectReference: {fileID: 0}
     - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
       propertyPath: parentObject
       value: 

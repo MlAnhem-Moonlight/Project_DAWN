@@ -64,12 +64,12 @@ public class MaterialSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        ResourceAllocationGA.onGAResultSaved += OnGAResultSaved;
+        Ingredient.onGAResultSaved += OnGAResultSaved;
     }
 
     private void OnDisable()
     {
-        ResourceAllocationGA.onGAResultSaved -= OnGAResultSaved;
+        Ingredient.onGAResultSaved -= OnGAResultSaved;
     }
 
     private void OnGAResultSaved()
@@ -81,21 +81,29 @@ public class MaterialSpawner : MonoBehaviour
 
     private void LoadJsonData()
     {
-        if (!useJsonData || jsonFile == null)
+        if (!useJsonData)
         {
-            Debug.LogWarning("Không sử dụng JSON data hoặc chưa gán file JSON!");
+            Debug.LogWarning("Không sử dụng JSON data!");
+            return;
+        }
+
+        string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        if (!File.Exists(filePath))
+        {
+            Debug.LogWarning("Không tìm thấy file JSON!");
             return;
         }
 
         try
         {
-            GAResultWrapper wrapper = JsonUtility.FromJson<GAResultWrapper>(jsonFile.text);
+            string jsonText = File.ReadAllText(filePath);
+            GAResultWrapper wrapper = JsonUtility.FromJson<GAResultWrapper>(jsonText);
 
             if (wrapper != null && wrapper.GA_Result != null && wrapper.GA_Result.Count > 0)
             {
                 allPoolCounts.Clear();
 
-                GAEntry entry = wrapper.GA_Result[0]; // lấy entry đầu tiên
+                GAEntry entry = wrapper.GA_Result[0];
                 allPoolCounts["Tree"] = entry.Tree;
                 allPoolCounts["Rock"] = entry.Rock;
                 allPoolCounts["Pebble"] = entry.Pebble;
@@ -105,7 +113,7 @@ public class MaterialSpawner : MonoBehaviour
                 allPoolCounts["Wolf"] = entry.Wolf;
                 allPoolCounts["Deer"] = entry.Deer;
 
-                Debug.Log("Đã load GA_Result thành công!");
+                //Debug.Log("Đã load GA_Result thành công!");
             }
             else
             {
@@ -116,10 +124,7 @@ public class MaterialSpawner : MonoBehaviour
         {
             Debug.LogError("Lỗi khi parse GA_Result: " + e.Message);
         }
-        foreach (var kvp in allPoolCounts)
-        {
-            Debug.Log($"Loaded pool '{kvp.Key}': {kvp.Value}");
-        }
+
     }
 
 
@@ -236,7 +241,7 @@ public class MaterialSpawner : MonoBehaviour
             }
         }
 
-        Debug.Log($"Đã spawn {totalSpawnCount} {poolName} objects!");
+        //Debug.Log($"Đã spawn {totalSpawnCount} {poolName} objects!");
     }
 
     [ContextMenu("Refresh All Materials")]
@@ -266,7 +271,7 @@ public class MaterialSpawner : MonoBehaviour
     public void ShowCurrentPoolCount()
     {
         int count = GetSpawnCountForPool();
-        Debug.Log($"Pool '{poolName}' sẽ spawn {count} objects");
+        //Debug.Log($"Pool '{poolName}' sẽ spawn {count} objects");
 
         if (useJsonData && allPoolCounts.Count > 0)
         {

@@ -16,6 +16,8 @@ public class WolfBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        startArea = UnityEngine.GameObject.Find("Start").transform;
+        endArea = UnityEngine.GameObject.Find("End").transform;
         Nodes root = new Selector(new List<Nodes>
         {
             new Sequence(new List<Nodes>

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
@@ -172,6 +173,10 @@ public class Ingredient : MonoBehaviour
         return environmentData;
     }
 
+
+    // Add event for GA result saved notification
+    public static event System.Action onGAResultSaved;
+
     // Method để save GA results vào file
     public static void SaveGAResult(Dictionary<string, int> result)
     {
@@ -181,17 +186,14 @@ public class Ingredient : MonoBehaviour
         {
             string jsonText = File.ReadAllText(filePath);
 
-            // Tìm vị trí của "GA_Result"
             int gaResultStart = jsonText.IndexOf("\"GA_Result\":");
             if (gaResultStart >= 0)
             {
-                // Tìm vị trí bắt đầu của mảng GA_Result
                 int arrayStart = jsonText.IndexOf('[', gaResultStart);
                 int arrayEnd = FindMatchingBracket(jsonText, arrayStart);
 
                 if (arrayStart >= 0 && arrayEnd >= 0)
                 {
-                    // Tạo string mới cho GA_Result
                     string newGAResult = "[\n    {\n";
                     bool first = true;
                     foreach (var kvp in result)
@@ -202,11 +204,19 @@ public class Ingredient : MonoBehaviour
                     }
                     newGAResult += "\n    }\n  ]";
 
-                    // Thay thế phần GA_Result cũ
                     string newJsonText = jsonText.Substring(0, arrayStart) + newGAResult + jsonText.Substring(arrayEnd + 1);
 
-                    File.WriteAllText(filePath, newJsonText);
+                    // 🔒 Ghi với flush đảm bảo
+                    using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (var sw = new StreamWriter(fs))
+                    {
+                        sw.Write(newJsonText);
+                        sw.Flush();
+                        fs.Flush(true); // ép xuống ổ đĩa
+                    }
+
                     Debug.Log("Đã lưu kết quả GA vào env.json");
+                    onGAResultSaved?.Invoke();
                 }
             }
             else
@@ -219,4 +229,5 @@ public class Ingredient : MonoBehaviour
             Debug.LogError($"Lỗi khi lưu GA result: {e.Message}");
         }
     }
+
 }

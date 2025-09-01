@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5529166804507998553}
   - component: {fileID: 5298066143546370134}
   - component: {fileID: 4786980259887309386}
+  - component: {fileID: 4449887098484519372}
+  - component: {fileID: 1501330005798410616}
   - component: {fileID: 7782305108022120653}
   - component: {fileID: 2140761166584586751}
   - component: {fileID: 6127381556460186418}
@@ -82,12 +84,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolName: Pebble
-  objectPrefab: {fileID: 0}
+  objectPrefab: {fileID: 7524757457618230153, guid: 3b0f958f291fe5a49a0c835e4ef08a74, type: 3}
   PObject: {fileID: 0}
   spawnCount: 10
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
   yOffset: -1.983
+--- !u!114 &4449887098484519372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5d9b83aadb574488245aa1d66b7233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: Deer
+  objectPrefab: {fileID: 5823285585516278095, guid: 893c245280612f047b081270f9d40432, type: 3}
+  PObject: {fileID: 0}
+  spawnCount: 10
+  areaStart: {fileID: 0}
+  areaEnd: {fileID: 0}
+  yOffset: -2.0493
+--- !u!114 &1501330005798410616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5d9b83aadb574488245aa1d66b7233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: Wolf
+  objectPrefab: {fileID: 1230696821796250990, guid: f1eb1c6c6f59dea47bffe038a911090f, type: 3}
+  PObject: {fileID: 0}
+  spawnCount: 10
+  areaStart: {fileID: 0}
+  areaEnd: {fileID: 0}
+  yOffset: -1.93
 --- !u!114 &7782305108022120653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +252,8 @@ MonoBehaviour:
   testRemainingIron: 75
   testRemainingGold: 52
   testRemainingMeat: 90
-  testConsumedWood: 38
-  testConsumedStone: 28
-  testConsumedIron: 18
-  testConsumedGold: 15
-  testConsumedMeat: 22
+  testConsumedWood: 340
+  testConsumedStone: 290
+  testConsumedIron: 120
+  testConsumedGold: 90
+  testConsumedMeat: 175

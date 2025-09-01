@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 
@@ -8,10 +9,6 @@ public class SpawnM : MonoBehaviour
 {
     [Header("PoolName")]
     public string poolName = "SpawnM"; // Unique ID for this spawner
-
-    [Header("JSON Data File")]
-    public TextAsset jsonFile; // Kéo thả file JSON vào đây trong Inspector
-    public bool useJsonData = true; // Có sử dụng data từ JSON không
 
     [Header("Spawn Settings")]
     public GameObject objectPrefab, PObject; // Prefab to spawn
@@ -28,12 +25,12 @@ public class SpawnM : MonoBehaviour
     }
     private void OnEnable()
     {
-        ResourceAllocationGA.onGAResultSaved += OnGAResultSaved;
+        Ingredient.onGAResultSaved += OnGAResultSaved;
     }
 
     private void OnDisable()
     {
-        ResourceAllocationGA.onGAResultSaved -= OnGAResultSaved;
+        Ingredient.onGAResultSaved -= OnGAResultSaved;
     }
 
     private void OnGAResultSaved()
@@ -77,21 +74,25 @@ public class SpawnM : MonoBehaviour
 
     private void LoadJsonData()
     {
-        if (!useJsonData || jsonFile == null)
+
+
+        string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        if (!File.Exists(filePath))
         {
-            Debug.LogWarning("Không sử dụng JSON data hoặc chưa gán file JSON!");
+            Debug.LogWarning("Không tìm thấy file JSON!");
             return;
         }
 
         try
         {
-            GAResultWrapper wrapper = JsonUtility.FromJson<GAResultWrapper>(jsonFile.text);
+            string jsonText = File.ReadAllText(filePath);
+            GAResultWrapper wrapper = JsonUtility.FromJson<GAResultWrapper>(jsonText);
 
             if (wrapper != null && wrapper.GA_Result != null && wrapper.GA_Result.Count > 0)
             {
                 allPoolCounts.Clear();
 
-                GAEntry entry = wrapper.GA_Result[0]; // lấy entry đầu tiên
+                GAEntry entry = wrapper.GA_Result[0];
                 allPoolCounts["Tree"] = entry.Tree;
                 allPoolCounts["Rock"] = entry.Rock;
                 allPoolCounts["Pebble"] = entry.Pebble;
@@ -101,7 +102,7 @@ public class SpawnM : MonoBehaviour
                 allPoolCounts["Wolf"] = entry.Wolf;
                 allPoolCounts["Deer"] = entry.Deer;
 
-                Debug.Log("Đã load GA_Result thành công!");
+                //Debug.Log("Đã load GA_Result thành công!");
             }
             else
             {
@@ -117,7 +118,7 @@ public class SpawnM : MonoBehaviour
     // Method mới để get spawn count cho bất kỳ pool nào
     public int GetSpawnCountForSpecificPool(string specificPoolName)
     {
-        if (useJsonData && allPoolCounts.ContainsKey(specificPoolName))
+        if (allPoolCounts.ContainsKey(specificPoolName))
         {
             return allPoolCounts[specificPoolName];
         }

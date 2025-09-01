@@ -99,8 +99,7 @@ public class Individual
 
 public class ResourceAllocationGA : MonoBehaviour
 {
-    // Add event for GA result saved notification
-    public static event System.Action onGAResultSaved;
+
     
     private ResourceSpawnPredictor predictor;
     [Header("Available Resources")]
@@ -724,7 +723,7 @@ public class ResourceAllocationGA : MonoBehaviour
 
         // Lưu kết quả vào JSON file
         Ingredient.SaveGAResult(resultDict);
-        onGAResultSaved?.Invoke();
+
     }
 
     // Public methods for accessing results
