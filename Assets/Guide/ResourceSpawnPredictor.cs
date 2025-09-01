@@ -265,7 +265,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
     private void InitializeModel()
     {
         model = new LinearRegressionModel(INPUT_FEATURES, OUTPUT_FEATURES);
-        Debug.Log($"Model initialized with {INPUT_FEATURES} input features and {OUTPUT_FEATURES} output features.");
+        //Debug.Log($"Model initialized with {INPUT_FEATURES} input features and {OUTPUT_FEATURES} output features.");
     }
 
     private void LoadTrainingDataFromJson()

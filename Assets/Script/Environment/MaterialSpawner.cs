@@ -49,12 +49,8 @@ public class MaterialSpawner : MonoBehaviour
     public GameObject parentObject;
 
     // Lưu trữ data từ JSON - Dictionary chứa tất cả pool counts
+    [SerializeField]
     public Dictionary<string, int> allPoolCounts = new Dictionary<string, int>();
-
-    private void Start()
-    {
-
-    }
 
     private void Update()
     {
@@ -78,6 +74,7 @@ public class MaterialSpawner : MonoBehaviour
 
     private void OnGAResultSaved()
     {
+        Debug.Log("Nhận được sự kiện GA Result Saved, load lại JSON và spawn materials.");
         LoadJsonData();
         SpawnMaterials();
     }

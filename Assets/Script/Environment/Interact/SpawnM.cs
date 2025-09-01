@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class SpawnM : MonoBehaviour
 {
     [Header("PoolName")]
@@ -22,26 +24,40 @@ public class SpawnM : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(WaitForGAResultAndSpawn());
+        //StartCoroutine(WaitForGAResultAndSpawn());
+    }
+    private void OnEnable()
+    {
+        ResourceAllocationGA.onGAResultSaved += OnGAResultSaved;
     }
 
-    private IEnumerator WaitForGAResultAndSpawn()
+    private void OnDisable()
     {
-        string gaResultPath = System.IO.Path.Combine(Application.dataPath, "Script/Environment/env.json");
-        float timeout = 5f;
-        float timer = 0f;
+        ResourceAllocationGA.onGAResultSaved -= OnGAResultSaved;
+    }
 
-        while (!System.IO.File.Exists(gaResultPath) && timer < timeout)
-        {
-            yield return new WaitForSeconds(0.2f);
-            timer += 0.2f;
-        }
-
-        yield return new WaitForSeconds(0.2f);
-
+    private void OnGAResultSaved()
+    {
         LoadJsonData();
         SpawnObjects();
     }
+    //private IEnumerator WaitForGAResultAndSpawn()
+    //{
+    //    string gaResultPath = System.IO.Path.Combine(Application.dataPath, "Script/Environment/env.json");
+    //    float timeout = 5f;
+    //    float timer = 0f;
+
+    //    while (!System.IO.File.Exists(gaResultPath) && timer < timeout)
+    //    {
+    //        yield return new WaitForSeconds(0.2f);
+    //        timer += 0.2f;
+    //    }
+
+    //    yield return new WaitForSeconds(0.2f);
+
+    //    LoadJsonData();
+    //    SpawnObjects();
+    //}
 
     [ContextMenu("Spawn Now")]
     public void SpawnObjects()

@@ -7681,7 +7681,7 @@ MonoBehaviour:
   useJsonData: 1
   manualSpawnCount: 5
   firstPrefabRatio: 0.5
-  spawnNow: 1
+  spawnNow: 0
   parentObject: {fileID: 1862641948}
 --- !u!114 &887977609
 MonoBehaviour:
@@ -7724,7 +7724,7 @@ MonoBehaviour:
   useJsonData: 1
   manualSpawnCount: 5
   firstPrefabRatio: 0.5
-  spawnNow: 1
+  spawnNow: 0
   parentObject: {fileID: 976874048}
 --- !u!114 &887977610
 MonoBehaviour:
@@ -7776,7 +7776,7 @@ MonoBehaviour:
   useJsonData: 1
   manualSpawnCount: 5
   firstPrefabRatio: 0.5
-  spawnNow: 1
+  spawnNow: 0
   parentObject: {fileID: 1307023697}
 --- !u!114 &887977611
 MonoBehaviour:
@@ -7864,7 +7864,7 @@ MonoBehaviour:
   useJsonData: 1
   manualSpawnCount: 5
   firstPrefabRatio: 0.5
-  spawnNow: 1
+  spawnNow: 0
   parentObject: {fileID: 2009994716}
 --- !u!1001 &891571237
 PrefabInstance:
