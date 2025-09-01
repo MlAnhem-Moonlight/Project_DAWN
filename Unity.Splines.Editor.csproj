@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>UnityEditor.Splines</RootNamespace>
-    <ProjectGuid>{2FB5ADBA-5338-EA91-27F2-8EE2D1EA7D7D}</ProjectGuid>
+    <ProjectGuid>{03D3F134-5E2A-10D7-CACB-25E69E85C543}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Splines.Editor</AssemblyName>
@@ -627,10 +627,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -709,14 +705,6 @@
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.MQTTnet">
       <HintPath>Packages\com.merry-yellow.code-assist\Editor\ExternalReferences\Meryel.UnityCodeAssist.MQTTnet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
@@ -1222,31 +1210,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Settings.Editor.csproj">
-      <Project>{25099869-46FA-D9A4-3514-47E8BF110FEF}</Project>
+      <Project>{BB78246E-A3D0-7887-30D6-91DCA2963F56}</Project>
       <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Splines.csproj">
-      <Project>{98C5A743-FB08-7DAC-CD51-CFF38F33A66A}</Project>
+      <Project>{35079FA9-CDA9-9939-AB0C-8DF4ADD465B5}</Project>
       <Name>Unity.Splines</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{7364FE63-B61C-A433-8D5F-C0268291CEBE}</Project>
+      <Project>{8ABEC43B-6036-81C4-EABC-D5474559B69C}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{749B97C2-C87B-5463-20AA-263FCB6DF8DC}</Project>
+      <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{BAD4228C-2818-28CB-6398-2B8C692871F1}</Project>
+      <Project>{C6183A80-586C-8237-EAAB-0EFA18194AB8}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{7B4DB231-069C-F8EF-0EC9-81562F992C56}</Project>
+      <Project>{8E421866-9BC9-9B4F-FA75-1751B21F3E50}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{99DA2AF8-378B-4DA5-49EA-BBBB356E606B}</Project>
+      <Project>{8C4DD862-495A-3D75-A593-13EEF30E2E6C}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2782FDA0-8810-37FE-A393-A78B2C94C48E}</ProjectGuid>
+    <ProjectGuid>{F5E79D78-02D9-A0C0-A02B-90E8FF4BDBC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Universal.Editor</AssemblyName>
@@ -868,10 +868,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -950,14 +946,6 @@
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.MQTTnet">
       <HintPath>Packages\com.merry-yellow.code-assist\Editor\ExternalReferences\Meryel.UnityCodeAssist.MQTTnet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
@@ -1463,63 +1451,63 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{3A544337-2B26-4487-8AE3-AACD54D4BDE6}</Project>
+      <Project>{5A83EE46-C99E-124A-3AE7-0D7908EB8869}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{BFDEF1A9-525E-B337-9673-A683DC22B9F5}</Project>
+      <Project>{D8201A9A-42BD-B24E-6532-351B67D014DD}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj">
-      <Project>{8C7C9753-79EF-D3ED-80F3-D561BBF7EE9A}</Project>
+      <Project>{15CE804C-7C51-E2F4-B515-9F50EA33EEF9}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{A3AC92AD-BBCC-4959-57D6-F8C4B0FE2C1F}</Project>
+      <Project>{23073801-9C59-C098-040B-D1334D8605AB}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj">
-      <Project>{59803E7B-85A1-8B35-61F6-B65880BC38CC}</Project>
+      <Project>{951A853B-CDF3-4A8B-21EE-A799D2DCA724}</Project>
       <Name>Unity.RenderPipelines.Core.Editor.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
-      <Project>{7CCBC97A-4875-65E6-E69C-21756C07980B}</Project>
+      <Project>{D352AA29-06DA-13F6-272A-9A1987D42744}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{1A8CDD53-7A66-5454-3FDE-29056C651BF9}</Project>
+      <Project>{D4295607-9E54-C70E-B168-D9C65414A68F}</Project>
       <Name>Unity.Burst.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{CA6B4183-602C-CEF7-64FA-CE568587F3A1}</Project>
+      <Project>{BBBAE444-DD55-BAB7-0255-4B3EC5C5E249}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
-      <Project>{3337F235-8B3F-B969-403D-0993AF285172}</Project>
+      <Project>{17A7654A-C77A-C9FA-55B1-3FF800E80AFF}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
-      <Project>{546F36AE-8161-84D4-4164-913EF43FB667}</Project>
+      <Project>{B8868151-8C75-00F6-E1BF-74DA54DA60B0}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{322FD75C-24D0-35FA-AF43-E44AA59B1B6F}</Project>
+      <Project>{56E7A329-1AD5-291B-82AF-D5CCC9354FB2}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{749B97C2-C87B-5463-20AA-263FCB6DF8DC}</Project>
+      <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{BAD4228C-2818-28CB-6398-2B8C692871F1}</Project>
+      <Project>{C6183A80-586C-8237-EAAB-0EFA18194AB8}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{7B4DB231-069C-F8EF-0EC9-81562F992C56}</Project>
+      <Project>{8E421866-9BC9-9B4F-FA75-1751B21F3E50}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{99DA2AF8-378B-4DA5-49EA-BBBB356E606B}</Project>
+      <Project>{8C4DD862-495A-3D75-A593-13EEF30E2E6C}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

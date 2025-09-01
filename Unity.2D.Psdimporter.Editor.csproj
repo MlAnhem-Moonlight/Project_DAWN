@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A5879303-BFE2-500B-F697-9EA9FD3DFA07}</ProjectGuid>
+    <ProjectGuid>{0954ED0B-3C76-3D51-D03F-19349C157C17}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Psdimporter.Editor</AssemblyName>
@@ -579,10 +579,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -661,14 +657,6 @@
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.MQTTnet">
       <HintPath>Packages\com.merry-yellow.code-assist\Editor\ExternalReferences\Meryel.UnityCodeAssist.MQTTnet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
@@ -1174,55 +1162,55 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PsdPlugin.csproj">
-      <Project>{E7D345B3-D0FD-2C59-E154-E4D6A839D3FC}</Project>
+      <Project>{513B4762-9CCA-90DA-CAA2-BFA7D897E560}</Project>
       <Name>PsdPlugin</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{65CAED60-E5CC-0EE2-E54F-7A9DAF97D328}</Project>
+      <Project>{934418E9-AF54-F1D2-E926-3624898492FA}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{4B3D493B-94E9-7824-06F1-3047500DC7A6}</Project>
+      <Project>{3FE4B6F6-9AA9-B6E0-2614-B936B834EB09}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{7BB4D278-AE84-089D-C3B3-54A062F7941F}</Project>
+      <Project>{73C089C2-8D1D-8255-187F-71B54D02DF4B}</Project>
       <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{322FD75C-24D0-35FA-AF43-E44AA59B1B6F}</Project>
+      <Project>{56E7A329-1AD5-291B-82AF-D5CCC9354FB2}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{18525CBA-6F0D-E5E3-F564-B4EE49176195}</Project>
+      <Project>{297E65DE-3109-A664-8E52-969D7E06CAAF}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{7364FE63-B61C-A433-8D5F-C0268291CEBE}</Project>
+      <Project>{8ABEC43B-6036-81C4-EABC-D5474559B69C}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{4E097DD1-0C17-46D1-658F-292A4034D3FA}</Project>
+      <Project>{FDA6BB83-17DA-4B95-CE55-05C335C56685}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{3C1ECAF0-C0D7-5BB7-7374-425D1C3E2FF6}</Project>
+      <Project>{303D7E53-D450-D0A5-BDE7-C1FB13ABC417}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{749B97C2-C87B-5463-20AA-263FCB6DF8DC}</Project>
+      <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{BAD4228C-2818-28CB-6398-2B8C692871F1}</Project>
+      <Project>{C6183A80-586C-8237-EAAB-0EFA18194AB8}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{7B4DB231-069C-F8EF-0EC9-81562F992C56}</Project>
+      <Project>{8E421866-9BC9-9B4F-FA75-1751B21F3E50}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{99DA2AF8-378B-4DA5-49EA-BBBB356E606B}</Project>
+      <Project>{8C4DD862-495A-3D75-A593-13EEF30E2E6C}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
