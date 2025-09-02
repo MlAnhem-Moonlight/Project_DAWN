@@ -87,6 +87,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageCheckEnemyInRange.cs" />
     <Compile Include="Assets\Script\Environment\MaterialSpawner.cs" />
+    <Compile Include="Assets\Guide\ResourceManager.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />

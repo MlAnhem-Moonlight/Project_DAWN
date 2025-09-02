@@ -74,7 +74,7 @@ public class MaterialSpawner : MonoBehaviour
 
     private void OnGAResultSaved()
     {
-        Debug.Log("Nhận được sự kiện GA Result Saved, load lại JSON và spawn materials.");
+        //Debug.Log("Nhận được sự kiện GA Result Saved, load lại JSON và spawn materials.");
         LoadJsonData();
         SpawnMaterials();
     }

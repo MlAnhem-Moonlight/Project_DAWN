@@ -1,0 +1,36 @@
+{
+  "DefaultLevel": [
+    {
+      "Mode": 1,
+      "Inventory": {
+        "Wood": 300,
+        "Stone": 300,
+        "Iron": 150,
+        "Gold": 200,
+        "Meat": 200
+      }
+
+    },
+    {
+      "Mode": 2,
+      "Inventory": {
+        "Wood": 300,
+        "Stone": 300,
+        "Iron": 100,
+        "Gold": 150,
+        "Meat": 200
+      }
+
+    },
+    {
+      "Mode": 3,
+      "Inventory": {
+        "Wood": 200,
+        "Stone": 200,
+        "Iron": 100,
+        "Gold": 100,
+        "Meat": 150
+      }
+    }
+  ]
+}

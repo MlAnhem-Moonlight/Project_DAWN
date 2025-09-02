@@ -102,6 +102,7 @@ public class ResourceAllocationGA : MonoBehaviour
 
     
     private ResourceSpawnPredictor predictor;
+    private IngridientManager ingredientManager;
     [Header("Available Resources")]
     public ResourceDataGA availableResources;
 
@@ -147,6 +148,7 @@ public class ResourceAllocationGA : MonoBehaviour
     void Awake()
     {
         predictor = GetComponent<ResourceSpawnPredictor>();
+        ingredientManager = GetComponent<IngridientManager>();
     }
 
     void Start()
@@ -160,6 +162,9 @@ public class ResourceAllocationGA : MonoBehaviour
         // Wait for one frame to ensure predictor's Start has run
         yield return null;
 
+        yield return null;
+        ingredientManager.UpdateResourcePredictor();
+        yield return null;
         // Now get the prediction and initialize GA
         availableResources = predictor != null ? predictor.Prediction() : new ResourceDataGA(300, 250, 100, 180, 350);
         random = new System.Random();

@@ -14459,6 +14459,26 @@ PrefabInstance:
       propertyPath: areaStart
       value: 
       objectReference: {fileID: 472684186}
+    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: testConsumedGold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: testConsumedIron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: testConsumedMeat
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: testConsumedWood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127381556460186418, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: testConsumedStone
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
       propertyPath: parentObject
       value: 
