@@ -11,6 +11,9 @@ public class IngridientManager : MonoBehaviour
 
     [Header("Level")]
     public int currentLevel = 0;
+    [Header("Save Index")]
+    public int saveIndex = 0;
+
     private void Start()
     {
         ResetConsumedResources();
@@ -34,19 +37,24 @@ public class IngridientManager : MonoBehaviour
 
 
     // Lấy dữ liệu từ save, nếu là level 0 thì lấy ở file DefaultLevel.json còn không lấy ở Save.json
-    //public void getDataFromSave()
-    //{
-    //    if(currentLevel == 0) ;
-    //    else
-    //    {
-    //        var saveData = SaveSystem.LoadPlayerData(currentLevel);
-    //        if (saveData != null)
-    //        {
-    //            playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
-    //            consumedResources = new List<Ingredient.IngredientEntry>(saveData.consumedResources);
-    //        }
-    //    }
-    //}
+    public void getDataFromSave()
+    {
+        if (currentLevel == 0)
+        {
+            ResetConsumedResources();
+            var saveData = SaveSystem.LoadDefaultData();
+            playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
+        }
+        else
+        {
+            var saveData = SaveSystem.LoadPlayerData(saveIndex); // 👉 bạn cần viết hàm này trong SaveSystem
+            if (saveData != null)
+            {
+                playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
+                consumedResources = new List<Ingredient.IngredientEntry>(saveData.consumedResources);
+            }
+        }
+    }
 
     // Thêm tài nguyên mới hoặc tăng số lượng
     public void AddIngredient(string typePlus, int amount)

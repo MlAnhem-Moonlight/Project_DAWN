@@ -153,7 +153,13 @@ public class ResourceAllocationGA : MonoBehaviour
 
     void Start()
     {
+        // cần kiểm tra có cần chạy GA và predictor không, vì load save có thể là load giữa chừng
         // Wait until predictor is ready and has run its initialization
+        //StartCoroutine(WaitForPredictionAndStart());
+    }
+    [ContextMenu("Run Genetic Algorithm")]
+    public void RunGA()
+    {
         StartCoroutine(WaitForPredictionAndStart());
     }
 
@@ -162,7 +168,7 @@ public class ResourceAllocationGA : MonoBehaviour
         // Wait for one frame to ensure predictor's Start has run
         yield return null;
 
-        yield return null;
+        //yield return null;
         ingredientManager.UpdateResourcePredictor();
         yield return null;
         // Now get the prediction and initialize GA

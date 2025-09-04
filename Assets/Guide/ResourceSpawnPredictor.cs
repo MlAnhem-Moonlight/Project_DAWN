@@ -41,6 +41,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
     [SerializeField] private float testConsumedMeat = 12f;
 
     private ResourceDataGA resourceDataGA = new ResourceDataGA();
+    private ResourceDataDE resourceDataDE = new ResourceDataDE();
 
     // Input features: levelIndex(1) + remaining_resources(5) + consumed_resources(5) = 11
     private const int INPUT_FEATURES = 11;
@@ -292,6 +293,21 @@ public class ResourceSpawnPredictor : MonoBehaviour
         ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
         resourceDataGA = new ResourceDataGA((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
         return resourceDataGA;
+    }
+
+    public ResourceDataDE PredictionDE()
+    {
+
+        ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
+        ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
+
+        Debug.Log($"Testing prediction for level {testLevel}:");
+        Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+        Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+
+        ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
+        resourceDataDE = new ResourceDataDE((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
+        return resourceDataDE;
     }
 
     [ContextMenu("Save Sample Training Data")]

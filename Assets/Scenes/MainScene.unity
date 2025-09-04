@@ -3827,6 +3827,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1246875177615460547, guid: 8d71141ad95a41b4eb36b897047e6340, type: 3}
   m_PrefabInstance: {fileID: 409528101}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &423590995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216859575004034585, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+  m_PrefabInstance: {fileID: 1849695140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &423590996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423590995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125aae8d92c0329479a29b26b28ebc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableResources:
+    wood: 0
+    stone: 0
+    iron: 0
+    gold: 0
+    meat: 0
+  populationSize: 50
+  generations: 100
+  mutationFactor: 0.8
+  crossoverRate: 0.9
+  strategy: 1
+  usePriorityAllocation: 1
+  meatPriority: 1
+  goldPriority: 2
+  ironPriority: 3
+  stonePriority: 4
+  woodPriority: 5
+  bestSolution:
+    genes: []
+    fitness: 0
+    allocations: []
+  isOptimized: 0
+  baseHuntTime: 80
+  huntTimeReductionPerWolf: 10
+  minHuntTime: 20
+--- !u!114 &423590997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423590995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa93a3cae4c78c42a166b3a360959d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableResources:
+    wood: 0
+    stone: 0
+    iron: 0
+    gold: 0
+    meat: 0
+  usePriorityAllocation: 1
+  meatPriority: 1
+  goldPriority: 2
+  ironPriority: 3
+  stonePriority: 4
+  woodPriority: 5
+  populationSize: 48
+  parentCount: 0
+  generations: 100
+  initSigma: 1.5
+  cCov: 0.2
+  sigmaIncrease: 1.2
+  sigmaDecrease: 0.82
+  baseHuntTime: 80
+  huntTimeReductionPerWolf: 10
+  minHuntTime: 20
+  bestSolution:
+    allocations: []
+    fitness: 0
+  isOptimized: 0
 --- !u!1001 &436875324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14483,10 +14563,32 @@ PrefabInstance:
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 887977607}
+    - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: itemsToPool.Array.data[0].initialSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: itemsToPool.Array.data[1].initialSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: itemsToPool.Array.data[2].initialSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782305108022120653, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: itemsToPool.Array.data[3].initialSize
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1216859575004034585, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 423590997}
+    - targetCorrespondingSourceObject: {fileID: 1216859575004034585, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 423590996}
   m_SourcePrefab: {fileID: 100100000, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
 --- !u!1001 &1850039081
 PrefabInstance:

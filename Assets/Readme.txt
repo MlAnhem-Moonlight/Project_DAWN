@@ -8,4 +8,6 @@ PHẦN GA PHÂN BỐ TÀI NGUYÊN ĐANG SAI, CẦN XEM LẠI PENATY (V ?)
 
 Phần đọc dữ liệu để spawn object đang bị chạy trước phần ghi dữ liệu lại vào file json(V) nguyên nhân do dùng cách gắn file lên inspector(luôn đọc dữ liệu cũ không update theo frame) -> chuyển sang dùng file path để đọc ghi (V)
 
-Thêm inventory cho player 
+Thêm inventory cho player (~)
+
+thêm phần load save xong mới đưa ra quyết định sử dụng spawn nào (GA hay Load số lượng từ save) 
