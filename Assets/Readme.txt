@@ -11,3 +11,7 @@ Phần đọc dữ liệu để spawn object đang bị chạy trước phần g
 Thêm inventory cho player (~)
 
 thêm phần load save xong mới đưa ra quyết định sử dụng spawn nào (GA hay Load số lượng từ save) 
+
+bảng cấp độ (Level Table) trong ScriptableObject (?)
+
+tìm giải pháp để truyền atkRanger từ stats vào BehaviorTree (callback function || switch / if) (~)

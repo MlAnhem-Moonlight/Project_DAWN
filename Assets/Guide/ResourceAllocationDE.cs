@@ -106,10 +106,7 @@ public class ResourceAllocationDE : MonoBehaviour
     public DEIndividual bestSolution;
     public bool isOptimized = false;
 
-    [Header("Ecosystem Balance")]
-    [SerializeField] private float baseHuntTime = 80f;
-    [SerializeField] private float huntTimeReductionPerWolf = 10f;
-    [SerializeField] private float minHuntTime = 20f;
+
 
     private List<GameObjectAllocationDE> objectTemplate;
     private List<DEIndividual> population;

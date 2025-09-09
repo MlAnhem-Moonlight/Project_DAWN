@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: -9200444253522333713}
   - component: {fileID: 1654625820116861191}
   - component: {fileID: 2329034817607845094}
+  - component: {fileID: 8147435167210863253}
   m_Layer: 7
   m_Name: TheMage(Demo)
   m_TagString: Untagged
@@ -265,7 +266,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &-9200444253522333713
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -334,3 +335,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 405458774386553277}
+--- !u!114 &8147435167210863253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768994202510114446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52ec5e8e94e9af4fa1ae7e75844ba69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 11400000, guid: c419331a943fbd746b6c02d1ac9d118b, type: 2}
+  currentHP: 0
+  currentDMG: 0
+  currentSPD: 0
+  currentSkillCD: 0
+  currentShield: 0
+  currentAtkSpd: 0
+  level: 3
+  maxLevel: 8
+  hpLinear: 30
+  dmgMultiplier: 1.2
+  atkSpdMultiplier: 1.03
+  atkSpdCap: 2.5
+  spdLinear: 0.12
+  shieldLinear: 0.5
+  shieldCap: 30
+  skillCDMultiplier: 0.97
+  skillCDMinFactor: 0.5

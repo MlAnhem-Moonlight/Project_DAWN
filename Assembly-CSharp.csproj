@@ -70,7 +70,9 @@
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
+    <Compile Include="Assets\Script\Enemy\TheAllah\BomberStats.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
+    <Compile Include="Assets\Script\Enemy\Ton\TankStats.cs" />
     <Compile Include="Assets\Guide\ResourceAllocationCMAES.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
@@ -80,8 +82,10 @@
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />
+    <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\Collision2D.cs" />
+    <Compile Include="Assets\Script\Enemy\CharacterStatsSO.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Script\Enemy\AnimationHolder.cs" />
@@ -97,6 +101,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Script\System\SaveSystem.cs" />
+    <Compile Include="Assets\Script\Ally\Archer\ArcherStats.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Script\Environment\CheckInRange.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfState.cs" />
@@ -108,6 +113,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageMovement.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Selector.cs" />
+    <Compile Include="Assets\Script\Enemy\TheMage\MageStats.cs" />
     <Compile Include="Assets\Script\Construction\BuildConstruction.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridDive.cs" />
@@ -129,6 +135,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PickingUp.cs" />
     <Compile Include="Assets\Script\Environment\Interact\SpawnM.cs" />
+    <Compile Include="Assets\Script\Enemy\Stats.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonBehavior.cs" />
@@ -138,6 +145,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Action.cs" />
     <Compile Include="Assets\Script\Enemy\TargetSelector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Script\Ally\Knight\KnightStats.cs" />
     <Compile Include="Assets\Script\Mics\MonsterSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridMovement.cs" />
@@ -147,6 +155,7 @@
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Script\Ally\Spear\SpearStats.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\IMovementStrategy.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Action.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandBehavior.cs" />
@@ -170,6 +179,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TonMovement.cs" />
+    <Compile Include="Assets\Script\Enemy\DealingDmg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

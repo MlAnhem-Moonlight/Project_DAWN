@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7782305108022120653}
   - component: {fileID: 2140761166584586751}
   - component: {fileID: 6127381556460186418}
+  - component: {fileID: 761394577998230840}
+  - component: {fileID: 3897038614424180748}
   m_Layer: 0
   m_Name: GameManagement
   m_TagString: Untagged
@@ -73,6 +75,8 @@ MonoBehaviour:
     quantity: 0
   - type: meat
     quantity: 0
+  currentLevel: 0
+  saveIndex: 0
 --- !u!114 &5298066143546370134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,3 +282,78 @@ MonoBehaviour:
   testConsumedIron: 120
   testConsumedGold: 90
   testConsumedMeat: 175
+--- !u!114 &761394577998230840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa93a3cae4c78c42a166b3a360959d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableResources:
+    wood: 0
+    stone: 0
+    iron: 0
+    gold: 0
+    meat: 0
+  usePriorityAllocation: 1
+  meatPriority: 1
+  goldPriority: 2
+  ironPriority: 3
+  stonePriority: 4
+  woodPriority: 5
+  populationSize: 48
+  parentCount: 0
+  generations: 100
+  initSigma: 1.5
+  cCov: 0.2
+  sigmaIncrease: 1.2
+  sigmaDecrease: 0.82
+  baseHuntTime: 80
+  huntTimeReductionPerWolf: 10
+  minHuntTime: 20
+  bestSolution:
+    allocations: []
+    fitness: 0
+  isOptimized: 0
+--- !u!114 &3897038614424180748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125aae8d92c0329479a29b26b28ebc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableResources:
+    wood: 0
+    stone: 0
+    iron: 0
+    gold: 0
+    meat: 0
+  populationSize: 50
+  generations: 100
+  mutationFactor: 0.8
+  crossoverRate: 0.9
+  strategy: 1
+  usePriorityAllocation: 1
+  meatPriority: 1
+  goldPriority: 2
+  ironPriority: 3
+  stonePriority: 4
+  woodPriority: 5
+  bestSolution:
+    genes: []
+    fitness: 0
+    allocations: []
+  isOptimized: 0
+  baseHuntTime: 80
+  huntTimeReductionPerWolf: 10
+  minHuntTime: 20
