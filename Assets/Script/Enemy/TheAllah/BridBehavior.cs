@@ -46,6 +46,7 @@ public class BridBehavior : Tree
     protected override Nodes SetupTree()
     {
         //target = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
+        speed = GetComponent<BomberStats>() ? GetComponent<BomberStats>().currentSPD : 10f;
         rb = GetComponent<UnityEngine.Rigidbody2D>();
         if(target == null)
         {

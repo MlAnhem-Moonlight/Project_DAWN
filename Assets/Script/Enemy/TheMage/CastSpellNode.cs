@@ -32,15 +32,15 @@ public class CastSpellNode : Nodes
 
     public override NodeState Evaluate()
     {
-        if (Time.time - _lastCastTime >= _cooldown)
+        if (Time.time - _lastCastTime >= _cooldown && !_isCasting)
         {
+            state = NodeState.RUNNING;
             if (!_isCasting)
             {
                 Debug.Log("Casting Spell");
                 _castStartTime = Time.time;
                 _isCasting = true;
                 _animator.SetBool("IsCastingSpell", true);
-                state = NodeState.RUNNING;
             }
 
             if (Time.time - _castStartTime >= _castDuration)

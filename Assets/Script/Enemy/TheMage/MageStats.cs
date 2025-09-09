@@ -17,6 +17,7 @@ public class MageStats : Stats
     public float skillCDMultiplier = 0.97f;
     public float skillCDMinFactor = 0.5f;
 
+
     protected new void Awake()
     {
         base.Awake();

@@ -14,21 +14,25 @@ public class TheMageBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        speed = GetComponent<MageStats>() ? GetComponent<MageStats>().currentSPD : 10f; 
         defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _theMageMovement = new TheMageMovement(transform, speed, attackRange, animator, defaultTarget);
 
         Nodes root = new Selector(new List<Nodes>
         {
-            new Sequence(new List<Nodes>
+            new Parallel(new List<Nodes>
             {
-                new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human","Human",animator),
-                new CastSpellNode(_theMageMovement, spellCooldown,animator),
-            }),
-            new Sequence(new List<Nodes>
-            {
-                new MageCheckEnemyInRange(transform, attackRange, defaultTarget, "Human","Construction",animator),
-                new MageSetTargetNode(_theMageMovement),
-                new MageAttackNode(_theMageMovement,animator),
+                new Sequence(new List<Nodes>
+                {
+                    new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human","Human",animator),
+                    new CastSpellNode(_theMageMovement, spellCooldown,animator),
+                }),
+                new Sequence(new List<Nodes>
+                {
+                    new MageCheckEnemyInRange(transform, attackRange, defaultTarget, "Human","Construction",animator),
+                    new MageSetTargetNode(_theMageMovement),
+                    new MageAttackNode(_theMageMovement,animator),
+                }),
             }),
             _theMageMovement,
         });

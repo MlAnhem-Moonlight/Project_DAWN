@@ -1,5 +1,4 @@
 using BehaviorTree;
-using UnityEditor.Experimental.GraphView;
 using System.Collections.Generic;
 using System;
 
@@ -12,6 +11,7 @@ public class TonBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        speed = GetComponent<TankStats>() ? GetComponent<TankStats>().currentSPD : 10f;
         defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _tonMovement = new TonMovement(transform, speed, attackRange, defaultTarget);
 

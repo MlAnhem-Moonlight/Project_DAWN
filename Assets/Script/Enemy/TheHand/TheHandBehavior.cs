@@ -1,5 +1,4 @@
 ﻿using BehaviorTree;
-using UnityEditor.Experimental.GraphView;
 using System.Collections.Generic;
 using System;
 
@@ -14,6 +13,8 @@ public class TheHandBehavior : Tree
 
     protected override Nodes SetupTree()
     {
+        //skill tăng x3 tốc độ tấn công trong x giây tăng dần theo thời gian
+        speed = GetComponent<MeleeDPSStats>() ? GetComponent<MeleeDPSStats>().currentSPD : 10f;
         target = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         theHandMovement = new TheHandMovement(transform, speed, attackRange, animator, target);
 

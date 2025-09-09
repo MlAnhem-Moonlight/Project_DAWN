@@ -82,6 +82,7 @@
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />
+    <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\Collision2D.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\FlyTowardsTarget.cs" />
+    <Compile Include="Assets\Script\Enemy\SkillScaling.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Action.cs" />
     <Compile Include="Assets\Script\Enemy\TargetSelector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

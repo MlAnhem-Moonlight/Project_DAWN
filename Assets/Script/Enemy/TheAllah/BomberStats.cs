@@ -16,6 +16,8 @@ public class BomberStats : Stats
 
     public float spdLinear = 0.08f;
 
+
+
     protected new void Awake()
     {
         base.Awake();

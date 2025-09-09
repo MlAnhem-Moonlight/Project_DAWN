@@ -47,18 +47,21 @@ public class TheMageMovement : Nodes
         
         float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-        _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
+        
 
-        if (Vector3.Distance(_transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(_transform.position, targetPosition) < _range)
         {
             state = NodeState.SUCCESS;
             direction = 0;
         }
         else
         {
+            _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
             state = NodeState.RUNNING;
 
         }
+
+        
 
         return state;
     }
