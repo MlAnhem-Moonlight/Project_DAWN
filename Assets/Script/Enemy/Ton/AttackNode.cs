@@ -13,7 +13,7 @@ public class TonAttackNode : Nodes
     public override NodeState Evaluate()
     {
         // Implement attack logic here
-        Debug.Log("Attacking");
+        //Debug.Log("Attacking");
         state = NodeState.SUCCESS;
         return state;
     }

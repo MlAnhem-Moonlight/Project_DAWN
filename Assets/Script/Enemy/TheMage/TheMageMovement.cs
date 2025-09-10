@@ -11,7 +11,8 @@ public class TheMageMovement : Nodes
     private Transform _defaultTarget;
     private float _speed;
     private float _range;
-    public int direction { get; private set; }
+    public bool isAttack { get; set; }
+    public Vector3 _targetPosition;
 
     public TheMageMovement(Transform transform, float speed, float range,Animator animator, Transform defaultTarget = null, Transform target = null)
     {
@@ -21,8 +22,8 @@ public class TheMageMovement : Nodes
         _defaultTarget = defaultTarget;
         _target = target ?? defaultTarget;
         _animator = animator;
-        direction = 0;
 
+        isAttack = false;
 
     }
 
@@ -30,38 +31,40 @@ public class TheMageMovement : Nodes
     {
         _target = target;
     }
+
     public override NodeState Evaluate()
     {
-        _animator.SetBool("IsAttack",false);
-        if (_target == null)
-        {
-            state = NodeState.FAILURE;
-            direction = 0;
-            return state;
-        }
+        _animator.SetInteger("Anim", 0);
+        //if (_target == null)
+        //{
+        //    state = NodeState.FAILURE;
+        //    direction = 0;
+        //    return state;
+        //}
 
         if (_target == null)
         {
             _target = _defaultTarget;
         }
-        
-        float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
+        _targetPosition = targetPosition;
+        float step = _speed * Time.deltaTime;
         
 
-        if (Vector3.Distance(_transform.position, targetPosition) < _range)
-        {
-            state = NodeState.SUCCESS;
-            direction = 0;
-        }
-        else
-        {
-            _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
-            state = NodeState.RUNNING;
+        _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
+        if (!isAttack)
+        {    
+            if (Vector3.Distance(_transform.position, targetPosition) < _range )
+            {
+                state = NodeState.SUCCESS;
+            }
+            else
+            {
+                _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
+                state = NodeState.RUNNING;
 
-        }
-
-        
+            }
+        } else state = NodeState.SUCCESS;
 
         return state;
     }

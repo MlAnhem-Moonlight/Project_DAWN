@@ -12,8 +12,8 @@ public class MageSetTargetNode : Nodes
 
     public override NodeState Evaluate()
     {
-        Transform target = (Transform)GetData("target");
-        if (target != null)
+        Transform target = (Transform)parent.GetData("target");
+        if (target != null && !_theMageMovement.isAttack)
         {
             _theMageMovement.SetTarget(target);
             state = NodeState.SUCCESS;
