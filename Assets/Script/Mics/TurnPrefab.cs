@@ -1,26 +1,50 @@
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnPrefab : MonoBehaviour
 {
-    public GameObject prefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Danh sách prefab cần bật/tắt")]
+    public List<GameObject> prefabs = new List<GameObject>();
+
+    // Bật tất cả
+    public void TurnOnAll()
     {
-        
+        foreach (var obj in prefabs)
+            if (obj) obj.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Tắt tất cả
+    public void TurnOffAll()
     {
-        
+        foreach (var obj in prefabs)
+            if (obj) obj.SetActive(false);
     }
 
-    public void TurnOnPrefab()
+    // Animator có thể gọi và truyền Index (int)
+    public void TurnOnByIndex(int index)
     {
-        prefab.SetActive(true);
+        if (index >= 0 && index < prefabs.Count && prefabs[index])
+            prefabs[index].SetActive(true);
     }
-    public void TurnOffPrefab()
+
+    public void TurnOffByIndex(int index)
     {
-        prefab.SetActive(false);
+        if (index >= 0 && index < prefabs.Count && prefabs[index])
+            prefabs[index].SetActive(false);
+    }
+
+    // Animator có thể gọi và truyền Name (string)
+    public void TurnOnByName(string prefabName)
+    {
+        foreach (var obj in prefabs)
+            if (obj && obj.name == prefabName)
+                obj.SetActive(true);
+    }
+
+    public void TurnOffByName(string prefabName)
+    {
+        foreach (var obj in prefabs)
+            if (obj && obj.name == prefabName)
+                obj.SetActive(false);
     }
 }

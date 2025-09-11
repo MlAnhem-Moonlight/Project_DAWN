@@ -10,6 +10,7 @@ public class MageAttackNode : Nodes
     private bool _isAttacking;
     private Transform _transform;
 
+
     private string attackClipName = "Attack"; // tên clip animation attack
 
     public MageAttackNode(Transform transform, Animator animator)
@@ -52,10 +53,11 @@ public class MageAttackNode : Nodes
         else
         {
             // Bắt đầu attack
-            Debug.Log("Start Attack");
+            //Debug.Log("Start Attack");
             _animator.SetInteger("Anim", -1); // trigger attack anim
             Transform target = (Transform)parent.GetData("target");
             _animator.SetFloat("Attack", _transform.position.x - target.position.x > 0 ? -1f : 1f);
+
             _attackStartTime = Time.time;
             _isAttacking = true;
             state = NodeState.RUNNING;

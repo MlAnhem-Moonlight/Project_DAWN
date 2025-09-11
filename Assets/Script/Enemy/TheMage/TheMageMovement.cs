@@ -54,7 +54,7 @@ public class TheMageMovement : Nodes
         _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
         if (!isAttack)
         {    
-            if (Vector3.Distance(_transform.position, targetPosition) < _range )
+            if (Vector3.Distance(_transform.position, targetPosition) < _range - 0.3f )
             {
                 state = NodeState.SUCCESS;
             }

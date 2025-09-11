@@ -23,13 +23,14 @@ public class CastSpellNode : Nodes
         _animator = animator;
 
         // Lấy duration từ clip
-        _castDuration = 1.5f;
+        //_castDuration = 1.5f;
         RuntimeAnimatorController controller = animator.runtimeAnimatorController;
         foreach (AnimationClip clip in controller.animationClips)
         {
             if (clip.name == animationClipName)
             {
                 _castDuration = clip.length;
+                Debug.Log($"Casting spell animation duration set to {_castDuration} seconds.");
                 break;
             }
         }
