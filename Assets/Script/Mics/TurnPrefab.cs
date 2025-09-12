@@ -5,7 +5,9 @@ public class TurnPrefab : MonoBehaviour
 {
     [Header("Danh sách prefab cần bật/tắt")]
     public List<GameObject> prefabs = new List<GameObject>();
+    public List<GameObject> projectiles = new List<GameObject>();
 
+    private int index = 0;
     // Bật tất cả
     public void TurnOnAll()
     {
@@ -46,5 +48,19 @@ public class TurnPrefab : MonoBehaviour
         foreach (var obj in prefabs)
             if (obj && obj.name == prefabName)
                 obj.SetActive(false);
+    }
+
+    public void TurnOnProjectiles()
+    {
+
+        projectiles[index].SetActive(true);
+        //index = index == projectiles.Count ? 0 : index++;
+        index = (index + 1) % projectiles.Count;
+
+    }
+    public void TurnOffAllProjectiles()
+    {
+        foreach (var obj in projectiles)
+            if (obj) obj.SetActive(false);
     }
 }

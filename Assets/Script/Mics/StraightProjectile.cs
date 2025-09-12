@@ -15,11 +15,15 @@ public class StraightProjectile : MonoBehaviour
     [Range(-1f, 1f)]
     public int direction = 1;   // chỉ nên set -1 hoặc 1
 
-    public Animator animator;
+    public Animator animator, fireAnimator;
     public string animationClipName = "Attack";
+
+    private bool hasHit = false;
 
     private void OnEnable()
     {
+        hasHit = false;
+        direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
         // Khi bật lại, đưa về vị trí gốc và hướng gốc
         transform.position = _startPosition.position;
         transform.rotation = Quaternion.Euler(
@@ -28,7 +32,6 @@ public class StraightProjectile : MonoBehaviour
             _startRotation.eulerAngles.z * direction
         );
         Invoke(nameof(DisableProjectile), lifeTime);
-        direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
 
         // Có thể thêm direction = transform.forward nếu cần.
     }
@@ -46,17 +49,19 @@ public class StraightProjectile : MonoBehaviour
         int dir = direction >= 0 ? 1 : -1;
 
         // Di chuyển thẳng trên trục X
-        transform.position += Vector3.right * dir * speed * Time.deltaTime;
+        if(!hasHit) transform.position += Vector3.right * dir * speed * Time.deltaTime;
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Kiểm tra layer bằng tên
         if (other.gameObject.layer == LayerMask.NameToLayer("Human") ||
             other.gameObject.layer == LayerMask.NameToLayer("Construction"))
         {
-            DisableProjectile();
+            //DisableProjectile();
+            fireAnimator.SetTrigger("Hit");
+            hasHit = true;
         }
     }
 
