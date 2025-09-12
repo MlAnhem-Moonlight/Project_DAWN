@@ -9,14 +9,16 @@ public class TonMovement : Nodes
     private Transform _defaultTarget;
     private float _speed;
     private float _range;
+    private Animator _animator;
 
-    public TonMovement(Transform transform, float speed, float range, Transform defaultTarget = null, Transform target = null)
+    public TonMovement(Transform transform, float speed, float range, Animator animator, Transform defaultTarget)
     {
         _transform = transform;
         _speed = speed;
         _range = range;
         _defaultTarget = defaultTarget;
-        _target = target ?? defaultTarget; // Sử dụng defaultTarget nếu target không được thiết lập
+        _target = defaultTarget;
+        _animator = animator;
     }
 
     public void SetTarget(Transform target)
@@ -24,32 +26,32 @@ public class TonMovement : Nodes
         _target = target;
     }
 
+    public Transform getTarget()
+    {
+        return _target;
+    }
     public override NodeState Evaluate()
     {
-        if (_target == null)
-        {
-            state = NodeState.FAILURE;
-            return state;
-        }
-
-        if (_target != _defaultTarget && Vector3.Distance(_transform.position, _target.position) > _range)
+        
+        if (_target != _defaultTarget && Vector3.Distance(_transform.position, _target.position) > _range+6f)
         {
             _target = _defaultTarget;
         }
 
         float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-        _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
-
-        if (Vector3.Distance(_transform.position, targetPosition) < 0.1f)
+        _animator.SetInteger("State", 0);
+        _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
+        if (Vector3.Distance(_transform.position, targetPosition) < _range - 0.1f)
         {
             state = NodeState.SUCCESS;
         }
         else
         {
             state = NodeState.RUNNING;
+            _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
         }
-
+        //Debug.Log(Vector3.Distance(_transform.position, targetPosition) < _range - 0.1f);
         return state;
     }
 }

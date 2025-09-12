@@ -14,4 +14,6 @@ thêm phần load save xong mới đưa ra quyết định sử dụng spawn nà
 
 bảng cấp độ (Level Table) trong ScriptableObject (?)
 
-tìm giải pháp để truyền atkRanger từ stats vào BehaviorTree (callback function || switch / if) (~)
+tìm giải pháp để truyền atkRanger từ stats vào BehaviorTree (callback function || switch / if) (V)
+
+Phần target default target của enemy đang bị lỗi, fix ? (X)

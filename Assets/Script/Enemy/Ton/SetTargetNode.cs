@@ -24,7 +24,7 @@ public class TonSetTargetNode : Nodes
         {
             state = NodeState.FAILURE;
         }
-
+        
         return state;
     }
 }
