@@ -12,6 +12,7 @@ public class Stats : MonoBehaviour
     public float currentSkillCD;
     public float currentShield;
     public float currentAtkSpd;
+    public float currentSkillDmg;
 
     public void Awake()
     {
@@ -24,6 +25,7 @@ public class Stats : MonoBehaviour
             currentSkillCD = baseStats.SkillCD;
             currentShield = baseStats.Shield;
             currentAtkSpd = baseStats.AtkSpd;
+            currentSkillDmg = baseStats.DMG * 1.5f;
         }
     }
 
@@ -51,6 +53,6 @@ public class Stats : MonoBehaviour
 
     public void SetDmg()
     {
-        GetComponentInChildren<DealingDmg>().setDamageAmount(currentDMG);
+        GetComponentInChildren<DealingDmg>().setDamageAmount(currentDMG, currentDMG * 1.5f);
     }
 }

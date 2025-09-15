@@ -193,7 +193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1
+  skillCD: 5
   defaultTarget: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &6447278737625200912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +215,7 @@ MonoBehaviour:
   currentSkillCD: 0
   currentShield: 0
   currentAtkSpd: 0
+  currentSkillDmg: 0
   level: 3
   maxLevel: 8
   hpLinear: 100
@@ -318,3 +321,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 5
   damageAmount: 5
+  skillDamageAmount: 10
+  animator: {fileID: 0}
