@@ -53,6 +53,20 @@ public class Stats : MonoBehaviour
 
     public void SetDmg()
     {
-        GetComponentInChildren<DealingDmg>().setDamageAmount(currentDMG, currentDMG * 1.5f);
+        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentDMG * 1.5f);
+        Debug.Log("Activate: " + GetComponentInChildren<DealingDmg>());
+    }
+
+    public void Attack()
+    {
+        GetComponentInChildren<DealingDmg>()?.AttackHit();
+        Debug.Log("Attack: " + GetComponentInChildren<DealingDmg>());
+    }
+
+    public void UseSkill()
+    {
+        GetComponentInChildren<DealingDmg>()?.SetUsingSkill();
+        GetComponentInChildren<DealingDmg>()?.AttackHit();
+        Debug.Log("Using skill: " + GetComponentInChildren<DealingDmg>());
     }
 }

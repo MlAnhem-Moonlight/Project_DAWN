@@ -19,6 +19,11 @@ public class ArcherStats : Stats
     {
         base.Awake();
         ApplyGrowth();
+
+    }
+
+    private void Start()
+    {
         SetDmg();
     }
 

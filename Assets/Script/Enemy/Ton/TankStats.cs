@@ -22,7 +22,13 @@ public class TankStats : Stats
     {
         base.Awake();
         ApplyGrowth();
+        
+    }
+
+    public void Start()
+    {
         SetDmg();
+        Debug.Log("Done");
     }
 
     /// <summary>

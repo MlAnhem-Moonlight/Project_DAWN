@@ -20,6 +20,11 @@ public class SpearStats : Stats
     {
         base.Awake();
         ApplyGrowth();
+        
+    }
+
+    private void Start()
+    {
         SetDmg();
     }
 

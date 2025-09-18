@@ -17,3 +17,11 @@ bảng cấp độ (Level Table) trong ScriptableObject (?)
 tìm giải pháp để truyền atkRanger từ stats vào BehaviorTree (callback function || switch / if) (V)
 
 Phần target default target của enemy đang bị lỗi, fix ? (X)
+
+Phần CheckInRange bị lỗi tính khoảng cách từ privot, đề xuất sửa chỉ tính khoảng cách X (X)
+
+Bug Script DealingDmg gameobject được bật lên bởi nguyên nhân không rõ (Remove)
+
+Khớp attack và animation:
+  - khớp điều kiện tấn công và sử dụng skill (V)
+  - khớp atkspd và animation (~)

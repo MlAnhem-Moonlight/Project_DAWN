@@ -21,9 +21,13 @@ public class KnightStats : Stats
     {
         base.Awake();
         ApplyGrowth();
-        SetDmg();
+
     }
 
+    private void Start()
+    {
+        SetDmg();
+    }
     public void ApplyGrowth()
     {
         if (baseStats == null) return;

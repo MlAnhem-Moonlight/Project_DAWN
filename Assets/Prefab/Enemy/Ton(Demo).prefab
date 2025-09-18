@@ -30,12 +30,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2218499173624817928}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.0113, y: -0.9912, z: 0}
   m_LocalScale: {x: 0.36755964, y: 0.46270588, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5176730995750153055}
+  - {fileID: 7825919664756325924}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &836056969046561520
@@ -176,7 +176,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.626884, y: -0.3131614}
+  m_Offset: {x: -0.3, y: -0.3131614}
   m_Size: {x: 3.3059392, y: 3.8171823}
   m_Direction: 0
 --- !u!114 &2212884053681926967
@@ -195,7 +195,8 @@ MonoBehaviour:
   attackRange: 1
   skillCD: 5
   defaultTarget: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 6142494942016248799}
+  isUsingSkill: 0
 --- !u!114 &6447278737625200912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +229,7 @@ MonoBehaviour:
   shieldCap: 50
   skillCDMultiplier: 0.99
   skillCDMinFactor: 0.6
---- !u!1 &5602399983159998125
+--- !u!1 &4752862329397874238
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,23 +237,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5176730995750153055}
-  - component: {fileID: 1052414967396224471}
-  - component: {fileID: 1460991502440582939}
+  - component: {fileID: 7825919664756325924}
+  - component: {fileID: 6335354361595342468}
+  - component: {fileID: 9201609811734140115}
   m_Layer: 7
-  m_Name: AtkHitBox
+  m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5176730995750153055
+--- !u!4 &7825919664756325924
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5602399983159998125}
+  m_GameObject: {fileID: 4752862329397874238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -261,13 +262,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 929393111439331100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1052414967396224471
+--- !u!61 &6335354361595342468
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5602399983159998125}
+  m_GameObject: {fileID: 4752862329397874238}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -291,11 +292,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.759935, y: 0.2596351}
+  m_Offset: {x: 2.5884664, y: 0.09138656}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -305,15 +306,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6033971, y: 4.594947}
+  m_Size: {x: 2.4188628, y: 4.228996}
   m_EdgeRadius: 0
---- !u!114 &1460991502440582939
+--- !u!114 &9201609811734140115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5602399983159998125}
+  m_GameObject: {fileID: 4752862329397874238}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4dc654db0cce294998fc23ca92c24c6, type: 3}
@@ -322,4 +323,7 @@ MonoBehaviour:
   knockbackForce: 5
   damageAmount: 5
   skillDamageAmount: 10
-  animator: {fileID: 0}
+  attackerAnimator: {fileID: 0}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0

@@ -5,76 +5,102 @@ using UnityEngine;
 
 public class DealingDmg : MonoBehaviour
 {
-    public float knockbackForce = 5f; // Lực đẩy ngược (có thể tùy chỉnh)
-    public float damageAmount = 5f;
-    public float skillDamageAmount = 10f;
-    public bool usingSkill = false;
+    [Header("Damage Settings")]
+    public float knockbackForce = 5f;          // Lực đẩy
+    public float damageAmount = 5f;            // Damage thường
+    public float skillDamageAmount = 10f;      // Damage skill
 
+    [Header("References")]
+    public Animator attackerAnimator;          // Animator của nhân vật
+    public LayerMask targetLayers;             // Layer mục tiêu (VD: Human)
 
-    public void setDamageAmount(float basic,float skill)
+    private bool usingSkill = false;
+    private bool pendingAttack = false;        // Đang chờ thực thi hit (được Animator báo)
+
+    void Awake()
+    {
+        if (!attackerAnimator)
+            attackerAnimator = GetComponentInParent<Animator>();
+    }
+
+    public void SetDamageAmount(float basic, float skill)
     {
         damageAmount = basic;
         skillDamageAmount = skill;
-        gameObject.SetActive(false);
+        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
+        // gameObject.SetActive(false);
     }
 
-    public void setUsingSkill(bool val)
+    public void SetUsingSkill()
     {
-        usingSkill = val;
+        usingSkill = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    // Gọi từ Animation Event: đặt trong clip Attack/Skill
+    // Ở thời điểm vung vũ khí chạm mục tiêu
+    public void AttackHit()
     {
-        Debug.Log("Found " + collision.gameObject.name);
-        if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Stats>() != null)
+        pendingAttack = true;
+    }
+
+    void Update()
+    {
+        // Nếu animator đã gửi tín hiệu đánh
+        if (pendingAttack)
         {
-            try
-            {
-                if(usingSkill) // Skill attack
-                {
-                    Debug.Log("Skill hit " + collision.gameObject.name);
-                    collision.gameObject.GetComponent<Stats>().TakeDamage(skillDamageAmount);
-                    // Tính lực đẩy ngược (knockback)
-                    ApplyKnockback(collision.gameObject);
-                }
-                else
-                {
-                    Debug.Log("Attack " + collision.gameObject.name);
-                    collision.gameObject.GetComponent<Stats>().TakeDamage(damageAmount);
-                }
+            pendingAttack = false; // reset
 
+            // Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
+            Collider2D[] hits = Physics2D.OverlapBoxAll(
+                transform.position,
+                GetComponent<BoxCollider2D>().size,
+                0f,
+                targetLayers);
 
-            }
-            catch (Exception e)
+            foreach (var hit in hits)
             {
-                Debug.Log("Error: " + e.Message);
+                if (hit.gameObject == gameObject) continue;
+
+                Stats stats = hit.GetComponent<Stats>();
+                if (stats)
+                {
+                    float dmg = usingSkill ? skillDamageAmount : damageAmount;
+                    stats.TakeDamage(dmg);
+                    if(usingSkill) ApplyKnockback(hit.gameObject);
+                    Debug.Log((usingSkill ? "Skill hit " : "Attack ") + hit.name);
+                }
             }
         }
     }
 
     void ApplyKnockback(GameObject target)
     {
-        Rigidbody2D targetRb = target.GetComponent<Rigidbody2D>(); // Lấy Rigidbody của đối tượng bị đẩy
-        Debug.Log("Knockback to " + target.name);
-        if (targetRb != null)
-        {
-            Rigidbody2D attackerRb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody của đối tượng gây damage
-            float attackerMass = attackerRb != null ? attackerRb.mass : 1f; // Nếu không có Rigidbody, đặt khối lượng mặc định = 1
+        Rigidbody2D targetRb = target.GetComponent<Rigidbody2D>();
+        if (targetRb == null) return;
 
-            // Hướng đẩy theo hướng nhìn của gameobject (phía trước hoặc phải)
-            Vector2 knockbackDirection = transform.right.normalized; // Use the "right" direction of the attacker object
+        Rigidbody2D attackerRb = GetComponent<Rigidbody2D>();
+        float attackerMass = attackerRb ? attackerRb.mass : 1f;
 
-            float massFactor = targetRb.mass / attackerMass; // Hệ số khối lượng: dựa trên mass của đối tượng bị đẩy và gây damage
+        Vector2 knockbackDirection = transform.right.normalized;
+        float massFactor = targetRb.mass / attackerMass;
+        float scalingFactor = 0.5f;
+        float finalForce = knockbackForce * massFactor * scalingFactor;
+        float knockbackDistance = finalForce * 0.1f;
 
-            // Giảm lực đẩy bằng cách thêm một hệ số giảm
-            float scalingFactor = 0.5f; // Bạn có thể điều chỉnh giá trị này để giảm lực đẩy
-            float finalForce = knockbackForce * massFactor * scalingFactor;
-
-            //targetRb.AddForce(knockbackDirection * finalForce, ForceMode2D.Impulse); // Áp dụng lực đẩy ngược đã giảm
-            float knockbackDistance = finalForce * 0.1f; // 0.1f: hệ số chuyển lực sang quãng đường
-            targetRb.MovePosition(targetRb.position + knockbackDirection * knockbackDistance);
-        }
+        targetRb.MovePosition(targetRb.position + knockbackDirection * knockbackDistance);
+        usingSkill = false; // reset sau khi dùng skill
     }
 
-
+#if UNITY_EDITOR
+    // Vẽ vùng quét trong Scene view
+    void OnDrawGizmosSelected()
+    {
+        BoxCollider2D box = GetComponent<BoxCollider2D>();
+        if (box)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(transform.position, box.size);
+        }
+    }
+#endif
 }
