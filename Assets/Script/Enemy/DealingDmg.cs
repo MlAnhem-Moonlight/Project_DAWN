@@ -9,12 +9,13 @@ public class DealingDmg : MonoBehaviour
     public float knockbackForce = 5f;          // Lực đẩy
     public float damageAmount = 5f;            // Damage thường
     public float skillDamageAmount = 10f;      // Damage skill
+    public float _atkSpd = 1f;                     // Tốc độ đánh
 
     [Header("References")]
     public Animator attackerAnimator;          // Animator của nhân vật
     public LayerMask targetLayers;             // Layer mục tiêu (VD: Human)
 
-    private bool usingSkill = false;
+    private int usingSkill = 0;
     private bool pendingAttack = false;        // Đang chờ thực thi hit (được Animator báo)
 
     void Awake()
@@ -23,17 +24,18 @@ public class DealingDmg : MonoBehaviour
             attackerAnimator = GetComponentInParent<Animator>();
     }
 
-    public void SetDamageAmount(float basic, float skill)
+    public void SetDamageAmount(float basic, float skill, float atkSpd)
     {
         damageAmount = basic;
         skillDamageAmount = skill;
+        _atkSpd = atkSpd;
         // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
         // gameObject.SetActive(false);
     }
 
-    public void SetUsingSkill()
+    public void SetUsingSkill(int skill)
     {
-        usingSkill = true;
+        usingSkill = skill;
     }
 
     // Gọi từ Animation Event: đặt trong clip Attack/Skill
@@ -60,14 +62,28 @@ public class DealingDmg : MonoBehaviour
             foreach (var hit in hits)
             {
                 if (hit.gameObject == gameObject) continue;
-
+                
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
-                    float dmg = usingSkill ? skillDamageAmount : damageAmount;
-                    stats.TakeDamage(dmg);
-                    if(usingSkill) ApplyKnockback(hit.gameObject);
-                    Debug.Log((usingSkill ? "Skill hit " : "Attack ") + hit.name);
+                    float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
+                    //stats.TakeDamage(dmg);
+                    switch (usingSkill)
+                    {
+                        case 1:
+                            ApplyKnockback(hit.gameObject);
+                            break;
+                        case 2:
+                            Rage(_atkSpd*3);
+                            break;
+                        case 3:
+                            Rage(_atkSpd);
+                            break;
+                        default:
+
+                            break;
+                    }
+                    Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack ") + hit.name);
                 }
             }
         }
@@ -85,10 +101,16 @@ public class DealingDmg : MonoBehaviour
         float massFactor = targetRb.mass / attackerMass;
         float scalingFactor = 0.5f;
         float finalForce = knockbackForce * massFactor * scalingFactor;
-        float knockbackDistance = finalForce * 0.1f;
-
+        float knockbackDistance = finalForce * 0.7f;
+        Debug.Log($"Knockback {target.name}: Force={finalForce}, Distance={knockbackDistance}");
         targetRb.MovePosition(targetRb.position + knockbackDirection * knockbackDistance);
-        usingSkill = false; // reset sau khi dùng skill
+        usingSkill = 0; // reset sau khi dùng skill
+    }
+
+    void Rage(float atkSpdBonus)
+    {
+        GetComponentInParent<Stats>()?.GetComponentInParent<Stats>().Rage(atkSpdBonus);
+        usingSkill = 0; // reset sau khi dùng skill
     }
 
 #if UNITY_EDITOR

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System;
 
-public class TheMageBehavior : Tree
+public class TheMageBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 5f;
+    public float attackSpeed = 1f; // đòn/giây
     public float spellRange = 10f;
     public float spellCooldown = 5f;
     public UnityEngine.Transform defaultTarget;
@@ -15,6 +16,9 @@ public class TheMageBehavior : Tree
     protected override Nodes SetupTree()
     {
         speed = GetComponent<MageStats>() ? GetComponent<MageStats>().currentSPD : 10f;
+        attackSpeed = GetComponent<MageStats>() ? GetComponent<MageStats>().currentAtkSpd : 1f;
+        SetupAttackSpeed(animator, attackSpeed);
+
         defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _theMageMovement = new TheMageMovement(transform, speed, attackRange, animator, defaultTarget);
 

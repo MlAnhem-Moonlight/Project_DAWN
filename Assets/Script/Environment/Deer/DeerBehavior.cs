@@ -1,7 +1,7 @@
 using BehaviorTree;
 using System.Collections.Generic;
 
-public class DeerBehavior : Tree
+public class DeerBehavior : BhTree
 {
     public float speed = 4f;
     public float runSpeed = 6f;

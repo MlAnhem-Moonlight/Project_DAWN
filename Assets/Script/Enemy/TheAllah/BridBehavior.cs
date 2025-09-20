@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class BridBehavior : Tree
+public class BridBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 2f;

@@ -24,4 +24,6 @@ Bug Script DealingDmg gameobject được bật lên bởi nguyên nhân không 
 
 Khớp attack và animation:
   - khớp điều kiện tấn công và sử dụng skill (V)
-  - khớp atkspd và animation (~)
+  - khớp atkspd và animation (V)
+
+Phần knockback chưa hoạt động (~)

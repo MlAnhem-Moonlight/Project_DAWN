@@ -194,9 +194,10 @@ MonoBehaviour:
   speed: 2
   attackRange: 1
   skillCD: 5
+  attackSpeed: 1
   defaultTarget: {fileID: 0}
   animator: {fileID: 6142494942016248799}
-  isUsingSkill: 0
+  isAttacking: 0
 --- !u!114 &6447278737625200912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 4752862329397874238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.58, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -296,7 +297,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.5884664, y: 0.09138656}
+  m_Offset: {x: 3.7495725, y: 0.09138656}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -306,7 +307,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4188628, y: 4.228996}
+  m_Size: {x: 2.5, y: 4.228996}
   m_EdgeRadius: 0
 --- !u!114 &9201609811734140115
 MonoBehaviour:
@@ -326,4 +327,4 @@ MonoBehaviour:
   attackerAnimator: {fileID: 0}
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64

@@ -1,15 +1,18 @@
-using BehaviorTree;
-using System.Collections.Generic;
+﻿using BehaviorTree;
 using System;
+using System.Collections.Generic;
 
-public class TonBehavior : Tree
+
+public class TonBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 2.9f;
     public float skillCD = 5f;
+    public float attackSpeed = 1f; // đòn/giây  
     public UnityEngine.Transform defaultTarget;
     public UnityEngine.Animator animator;
     public bool isAttacking = false;
+
 
     private TonMovement tonMovement;
     private TonAttackNode tonAttackNode;
@@ -19,15 +22,13 @@ public class TonBehavior : Tree
         tonAttackNode.resetAttacking();
     }
 
-    private void SetupAnimator()
-    {
-
-    }
-
     protected override Nodes SetupTree()
     {
         speed = GetComponent<TankStats>() ? GetComponent<TankStats>().currentSPD : 10f;
         skillCD = GetComponent<TankStats>() ? GetComponent<TankStats>().currentSkillCD : 5f;
+        attackSpeed = GetComponent<TankStats>() ? GetComponent<TankStats>().currentAtkSpd : 1f;
+        //animator.SetFloat("AttackSpd", attackSpeed);
+        SetupAttackSpeed(animator, attackSpeed);
 
         defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         tonMovement = new TonMovement(transform, speed, attackRange, animator, defaultTarget);

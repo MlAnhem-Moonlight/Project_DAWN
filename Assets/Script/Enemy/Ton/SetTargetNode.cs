@@ -14,6 +14,7 @@ public class TonSetTargetNode : Nodes
 
     public override NodeState Evaluate()
     {
+        
         Transform target = (Transform)GetData("target");
         if (target != null)
         {

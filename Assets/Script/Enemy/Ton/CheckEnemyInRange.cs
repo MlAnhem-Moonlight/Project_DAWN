@@ -18,6 +18,7 @@ public class CheckEnemyInRange : Nodes
 
     public override NodeState Evaluate()
     {
+        
         Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction);
         // Check if the closest target is within range
         if (closestTarget != null && Vector3.Distance(_transform.position, closestTarget.position) <= _range)

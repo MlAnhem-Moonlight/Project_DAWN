@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-public class TheHandBehavior : Tree
+public class TheHandBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 2f;

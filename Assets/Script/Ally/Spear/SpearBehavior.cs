@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Spear.Movement;
 
 [UnityEngine.RequireComponent(typeof(UnityEngine.Transform))]
-public class SpearBehavior : Tree
+public class SpearBehavior : BhTree
 {
     [UnityEngine.Header("Settings")]
     public AllyState spearState = AllyState.Neutral;

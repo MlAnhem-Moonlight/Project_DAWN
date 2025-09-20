@@ -1,7 +1,7 @@
 ﻿using BehaviorTree;
 using System.Collections.Generic;
 
-public class WolfBehavior : Tree
+public class WolfBehavior : BhTree
 {
     public float speed = 5f;
     public float chaseSpeed = 7f;
