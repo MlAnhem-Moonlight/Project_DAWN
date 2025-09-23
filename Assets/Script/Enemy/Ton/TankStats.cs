@@ -25,11 +25,11 @@ public class TankStats : Stats
         
     }
 
-    public void Start()
-    {
-        SetDmg();
-        Debug.Log("Done");
-    }
+    //public void Start()
+    //{
+        
+    //    Debug.Log("Done");
+    //}
 
     /// <summary>
     /// Cập nhật chỉ số theo level hiện tại
@@ -60,7 +60,7 @@ public class TankStats : Stats
         // SkillDMG
         currentSkillDmg = currentDMG * 1.5f;
 
-
+        SetDmg();
         Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s | SkillDMG {currentSkillDmg:F2}");
     }
 

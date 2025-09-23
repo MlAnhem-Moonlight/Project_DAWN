@@ -10,6 +10,7 @@ public class DealingDmg : MonoBehaviour
     public float damageAmount = 5f;            // Damage thường
     public float skillDamageAmount = 10f;      // Damage skill
     public float _atkSpd = 1f;                     // Tốc độ đánh
+    public float _rageDuration = 5f;             // Thời gian tăng tốc độ đánh khi dùng skill
 
     [Header("References")]
     public Animator attackerAnimator;          // Animator của nhân vật
@@ -29,6 +30,17 @@ public class DealingDmg : MonoBehaviour
         damageAmount = basic;
         skillDamageAmount = skill;
         _atkSpd = atkSpd;
+
+        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
+        // gameObject.SetActive(false);
+    }
+
+    public void SetDamageAmount(float basic, float skill, float atkSpd, float rageDuration)
+    {
+        damageAmount = basic;
+        skillDamageAmount = skill;
+        _atkSpd = atkSpd;
+        _rageDuration = rageDuration;
         // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
         // gameObject.SetActive(false);
     }
@@ -74,10 +86,7 @@ public class DealingDmg : MonoBehaviour
                             ApplyKnockback(hit.gameObject);
                             break;
                         case 2:
-                            Rage(_atkSpd*3);
-                            break;
-                        case 3:
-                            Rage(_atkSpd);
+                            RageSkill(_rageDuration);
                             break;
                         default:
 
@@ -87,6 +96,18 @@ public class DealingDmg : MonoBehaviour
                 }
             }
         }
+    }
+
+    void RageSkill(float duration)
+    {
+        Rage(_atkSpd * 3);
+        StartCoroutine(RageDuration(duration));
+    }
+
+    IEnumerator RageDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Rage(_atkSpd);
     }
 
     void ApplyKnockback(GameObject target)

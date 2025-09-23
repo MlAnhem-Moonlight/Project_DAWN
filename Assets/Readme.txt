@@ -26,4 +26,6 @@ Khớp attack và animation:
   - khớp điều kiện tấn công và sử dụng skill (V)
   - khớp atkspd và animation (V)
 
-Phần knockback chưa hoạt động (~)
+Phần knockback chưa hoạt động (V)
+
+Hoàn thiện script và khớp anim cho TheHand (~)

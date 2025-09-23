@@ -53,34 +53,40 @@ public class Stats : MonoBehaviour
 
     public void Rage(float atkSpdIncrease)
     {
-        currentAtkSpd += atkSpdIncrease;
-        Debug.Log($"{gameObject.name} tăng tốc độ đánh thêm {atkSpdIncrease}, hiện tại: {currentAtkSpd}");
+        currentAtkSpd = atkSpdIncrease;
+        Debug.Log($"{gameObject.name} tăng tốc độ đánh : {currentAtkSpd}");
     }
 
     public void SetDmg()
     {
         GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentDMG * 1.5f,currentAtkSpd);
-        //Debug.Log("Activate: " + GetComponentInChildren<DealingDmg>());
+
+    }
+
+    public void SetDmg(float duration)
+    {
+        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentDMG * 1.5f, currentAtkSpd, duration);
+
     }
 
     public void Attack()
     {
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-        //Debug.Log("Attack: " + GetComponentInChildren<DealingDmg>());
+
     }
 
     public void UseSkill()
     {
         GetComponentInChildren<DealingDmg>()?.SetUsingSkill(1);
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-        //Debug.Log("Using skill: " + GetComponentInChildren<DealingDmg>());
+
     }
 
     public void UseSkill1()
     {
         GetComponentInChildren<DealingDmg>()?.SetUsingSkill(2);
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-        //Debug.Log("Using skill: " + GetComponentInChildren<DealingDmg>());
+
     }
 
 }

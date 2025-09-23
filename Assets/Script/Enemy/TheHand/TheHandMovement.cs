@@ -20,7 +20,6 @@ public class TheHandMovement : Nodes
         _target = target;
         _animator = animator;
         direction = 0;
-        Debug.Log("TheHandMovement");
     }
 
     public void SetTarget(Transform target)
@@ -30,7 +29,7 @@ public class TheHandMovement : Nodes
 
     public override NodeState Evaluate()
     {
-        //_animator.SetBool("IsAttack", false);
+        _animator.SetInteger("State", 0);
         Debug.Log("TheHandMovement");
         if (_target == null)
         {
