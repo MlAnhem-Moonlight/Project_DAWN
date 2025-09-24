@@ -35,7 +35,7 @@ public class TonAttackNode : Nodes
         // Xác định hướng để flip/rotate
         float dir = _transform.position.x - target.position.x > 0 ? -1f : 1f;
         _animator.SetFloat("Attack", dir);
-        Debug.Log($"Attacking:  {_isAttacking}");
+        //Debug.Log($"Attacking:  {_isAttacking}");
         if (_isAttacking) // nếu đang đánh thì không làm gì
         {
             //Debug.Log("In state attacking");

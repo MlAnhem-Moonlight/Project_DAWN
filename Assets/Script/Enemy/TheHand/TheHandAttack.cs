@@ -33,8 +33,8 @@ public class TheHandAttack : Nodes
 
         // Xác định hướng để flip/rotate
         float dir = _transform.position.x - target.position.x > 0 ? -1f : 1f;
-        _animator.SetFloat("Attack", dir);
-        Debug.Log($"Attacking:  {_isAttacking}");
+        _animator.SetFloat("Direct", dir);
+        //Debug.Log($"Attacking:  {_isAttacking}");
         if (_isAttacking) // nếu đang đánh thì không làm gì
         {
             //Debug.Log("In state attacking");
@@ -42,21 +42,16 @@ public class TheHandAttack : Nodes
         }
 
         //Debug.Log($"CD : {Time.time} : {nextSkillTime}");
-
+        //Debug.Log($"Target layer: {LayerMask.LayerToName(target.gameObject.layer)}");
         // === Quyết định dùng skill hay đánh thường ===
         if (Time.time >= nextSkillTime && target.gameObject.layer == LayerMask.NameToLayer("Human"))
         {
             // Phát skill
-            _animator.SetInteger("State", 2); // đảm bảo state này chuyển sang các clip có Tag = "Skill"
+            _transform.gameObject.GetComponentInChildren<DealingDmg>()?.SetUsingSkill(2); // dùng skill Rage
             nextSkillTime += _skillCD;
-            //Debug.Log("Using skill");
+            Debug.Log("Using skill");
         }
-        else
-        {
-            // Phát normal attack
-            _animator.SetInteger("State", 1); // đảm bảo state này chuyển sang các clip có Tag = "Attack"
-            //Debug.Log("Normal attack");
-        }
+        _animator.SetInteger("State", 1);
         _isAttacking = true;
         return state = NodeState.RUNNING;
     }

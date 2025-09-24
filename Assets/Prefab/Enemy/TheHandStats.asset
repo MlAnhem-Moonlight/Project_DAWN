@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaf8f1ffb2e549489223102c082c456, type: 3}
   m_Name: TheHandStats
   m_EditorClassIdentifier: 
-  HP: 100
-  DMG: 10
-  SPD: 5
-  SkillCD: 3
+  HP: 15
+  DMG: 2
+  SPD: 10
+  SkillCD: 8
   Shield: 0
-  AtkSpd: 1
+  AtkSpd: 8

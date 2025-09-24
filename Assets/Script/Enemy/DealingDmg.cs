@@ -16,7 +16,8 @@ public class DealingDmg : MonoBehaviour
     public Animator attackerAnimator;          // Animator của nhân vật
     public LayerMask targetLayers;             // Layer mục tiêu (VD: Human)
 
-    private int usingSkill = 0;
+    [Header("Skill state")]
+    public int usingSkill = 0;
     private bool pendingAttack = false;        // Đang chờ thực thi hit (được Animator báo)
 
     void Awake()
@@ -64,22 +65,27 @@ public class DealingDmg : MonoBehaviour
         {
             pendingAttack = false; // reset
 
-            // Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
-            Collider2D[] hits = Physics2D.OverlapBoxAll(
-                transform.position,
-                GetComponent<BoxCollider2D>().size,
-                0f,
-                targetLayers);
-
+            var box = GetComponent<BoxCollider2D>();
+            Vector2 center = (Vector2)transform.position + box.offset;
+            Vector2 size = box.size;
+            Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, targetLayers);
+            //// Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
+            //Collider2D[] hits = Physics2D.OverlapBoxAll(
+            //    transform.position,
+            //    GetComponent<BoxCollider2D>().size,
+            //    0f,
+            //    targetLayers);
+            //Debug.Log($"Detected {hits.Length} hits");
             foreach (var hit in hits)
             {
+                Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
                 
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
                     float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-                    //stats.TakeDamage(dmg);
+                    //stats.TakeDamage(dmg); //Dealing damage
                     switch (usingSkill)
                     {
                         case 1:
@@ -92,7 +98,7 @@ public class DealingDmg : MonoBehaviour
 
                             break;
                     }
-                    Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack ") + hit.name);
+                    Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
                 }
             }
         }
@@ -100,6 +106,7 @@ public class DealingDmg : MonoBehaviour
 
     void RageSkill(float duration)
     {
+        Debug.Log("Rage skill");
         Rage(_atkSpd * 3);
         StartCoroutine(RageDuration(duration));
     }
@@ -108,6 +115,8 @@ public class DealingDmg : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         Rage(_atkSpd);
+        usingSkill = 0;
+        Debug.Log("End Rage");
     }
 
     void ApplyKnockback(GameObject target)
@@ -131,6 +140,23 @@ public class DealingDmg : MonoBehaviour
     void Rage(float atkSpdBonus)
     {
         GetComponentInParent<Stats>()?.GetComponentInParent<Stats>().Rage(atkSpdBonus);
+        float attackInterval = 1f / atkSpdBonus;
+        // Lấy độ dài clip gốc
+        float clipLength = 1f;
+        foreach (var clip in attackerAnimator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == "Attack") // đúng tên clip
+            {
+                clipLength = clip.length;
+                break;
+            }
+        }
+        // Công thức: cần tốc độ gấp clipLength/attackInterval
+        float attackSpeedMultiplier = clipLength / attackInterval;
+
+        // Gán vào parameter thay vì animator.speed
+        attackerAnimator.SetFloat("AttackSpd", attackSpeedMultiplier);
+
         usingSkill = 0; // reset sau khi dùng skill
     }
 
@@ -139,10 +165,12 @@ public class DealingDmg : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         BoxCollider2D box = GetComponent<BoxCollider2D>();
+        Vector2 center = (Vector2)transform.position + box.offset;
+        Vector2 size = box.size;
         if (box)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(transform.position, box.size);
+            Gizmos.DrawWireCube(center, size);
         }
     }
 #endif
