@@ -46,7 +46,7 @@ public class MageStats : Stats
         // SkillCD
         float minSkillCD = baseStats.SkillCD * skillCDMinFactor;
         currentSkillCD = Mathf.Round(Mathf.Max(baseStats.SkillCD * Mathf.Pow(skillCDMultiplier, level - 1), minSkillCD) * 100f) / 100f;
-
+        SetDmg();
         // Debug log
         Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
     }

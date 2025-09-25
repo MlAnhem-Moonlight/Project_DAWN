@@ -23,11 +23,6 @@ public class SpearStats : Stats
         
     }
 
-    private void Start()
-    {
-        SetDmg();
-    }
-
     public void ApplyGrowth()
     {
         if (baseStats == null) return;
@@ -53,6 +48,7 @@ public class SpearStats : Stats
         currentSkillCD = Mathf.Max(baseStats.SkillCD * Mathf.Pow(skillCdMultiplier, level - 1), minCD);
         currentSkillCD = Mathf.Round(currentSkillCD * 100f) / 100f;
 
+        SetDmg(currentDMG*2,3f);
         Debug.Log($"{gameObject.name} (Spear) | L{level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
     }
 

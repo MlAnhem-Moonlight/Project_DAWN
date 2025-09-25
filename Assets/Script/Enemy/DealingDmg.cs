@@ -36,6 +36,15 @@ public class DealingDmg : MonoBehaviour
         // gameObject.SetActive(false);
     }
 
+    public void SetDamageAmount(float basic,float atkSpd)
+    {
+        damageAmount = basic;
+        _atkSpd = atkSpd;
+
+        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
+        // gameObject.SetActive(false);
+    }
+
     public void SetDamageAmount(float basic, float skill, float atkSpd, float rageDuration)
     {
         damageAmount = basic;
@@ -78,7 +87,7 @@ public class DealingDmg : MonoBehaviour
             //Debug.Log($"Detected {hits.Length} hits");
             foreach (var hit in hits)
             {
-                Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
+                //Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
                 
                 Stats stats = hit.GetComponent<Stats>();
@@ -98,7 +107,7 @@ public class DealingDmg : MonoBehaviour
 
                             break;
                     }
-                    Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
+                    //Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
                 }
             }
         }
@@ -107,7 +116,7 @@ public class DealingDmg : MonoBehaviour
     void RageSkill(float duration)
     {
         Debug.Log("Rage skill");
-        Rage(_atkSpd * 3);
+        Rage(_atkSpd * 1.5f);
         StartCoroutine(RageDuration(duration));
     }
 

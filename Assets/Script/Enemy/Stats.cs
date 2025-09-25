@@ -59,11 +59,23 @@ public class Stats : MonoBehaviour
 
     public void SetDmg()
     {
-        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentDMG * 1.5f,currentAtkSpd);
+        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentAtkSpd);
 
     }
 
-    public void SetDmg(float duration)
+    public void SetDmg(float skillDmg)
+    {
+        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, skillDmg, currentAtkSpd);
+
+    }
+
+    public void SetDmg(float skillDmg, float duration)
+    {
+        GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, skillDmg, currentAtkSpd, duration);
+
+    }
+
+    public void SetDmgDur(float duration)
     {
         GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, currentDMG * 1.5f, currentAtkSpd, duration);
 

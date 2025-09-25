@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 1654625820116861191}
   - component: {fileID: 2329034817607845094}
   - component: {fileID: 8147435167210863253}
+  - component: {fileID: 6049412643008032788}
   m_Layer: 7
   m_Name: TheMage(Demo)
   m_TagString: Untagged
@@ -354,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   attackRange: 5
+  attackSpeed: 1
   spellRange: 15
   spellCooldown: 5
   defaultTarget: {fileID: 0}
@@ -394,6 +396,7 @@ MonoBehaviour:
   currentSkillCD: 0
   currentShield: 0
   currentAtkSpd: 0
+  currentSkillDmg: 0
   level: 1
   maxLevel: 8
   hpLinear: 30
@@ -405,6 +408,24 @@ MonoBehaviour:
   shieldCap: 30
   skillCDMultiplier: 0.97
   skillCDMinFactor: 0.5
+--- !u!114 &6049412643008032788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768994202510114446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c794b2e81e487478c12fd4ebdacaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCameraDistance: 5
+  maxCameraDistance: 30
+  minCheckRadius: 1
+  maxCheckRadius: 5
+  separationStrength: 3
+  desiredSeparation: 1.2
 --- !u!1001 &4034222512152983414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,6 +437,18 @@ PrefabInstance:
     - target: {fileID: 5954624142014961628, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: m_Name
       value: Fire (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842500479463323731, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842500479463323731, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418588982192090529, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8418588982192090529, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: animator
@@ -499,6 +532,18 @@ PrefabInstance:
     - target: {fileID: 5954624142014961628, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842500479463323731, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842500479463323731, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418588982192090529, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8418588982192090529, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: animator

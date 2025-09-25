@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine;
 
 public class StraightProjectile : MonoBehaviour
 {
     [Header("Projectile Settings")]
     public float speed = 10f;              // Tốc độ bay
     public float lifeTime = 5f;            // Tự hủy nếu không va
+    public float dmg = 10f;
 
     [Header("Vị trí và hướng ban đầu")]
     public Transform _startPosition; // Có thể set trong Inspector hoặc code
@@ -22,6 +24,7 @@ public class StraightProjectile : MonoBehaviour
 
     private void OnEnable()
     {
+        dmg = GetComponentInParent<Stats>().currentDMG;
         hasHit = false;
         direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
         // Khi bật lại, đưa về vị trí gốc và hướng gốc
@@ -47,9 +50,9 @@ public class StraightProjectile : MonoBehaviour
         // Bảo đảm direction luôn chỉ là -1 hoặc 1
         //direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
         int dir = direction >= 0 ? 1 : -1;
-
+        
         // Di chuyển thẳng trên trục X
-        if(!hasHit) transform.position += Vector3.right * dir * speed * Time.deltaTime;
+        if (!hasHit) transform.position += Vector3.right * dir * speed * Time.deltaTime;
     }
 
 
@@ -62,6 +65,7 @@ public class StraightProjectile : MonoBehaviour
             //DisableProjectile();
             fireAnimator.SetTrigger("Hit");
             hasHit = true;
+            other.gameObject.GetComponent<Stats>().TakeDamage(dmg); //Dealing damage
         }
     }
 
