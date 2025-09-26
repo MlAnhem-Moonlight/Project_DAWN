@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1eaf8f1ffb2e549489223102c082c456, type: 3}
-  m_Name: TheMageStats
+  m_Name: KnightStats
   m_EditorClassIdentifier: 
-  HP: 6
-  DMG: 6
-  SPD: 8
-  SkillCD: 20
-  Shield: 3
-  AtkSpd: 5
+  HP: 20
+  DMG: 1
+  SPD: 4
+  SkillCD: 12
+  Shield: 10
+  AtkSpd: 0.75

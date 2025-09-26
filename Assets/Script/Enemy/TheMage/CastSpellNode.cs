@@ -8,12 +8,14 @@ public class CastSpellNode : Nodes
     private float _lastCastTime;
     private float _castDuration;
     private float _castStartTime;
+    private float _spellRange;
     private bool _isCasting;
     private Transform _transform;
     private Animator _animator;
     private string animationClipName = "CastingSpell";
+    
 
-    public CastSpellNode(TheMageMovement theMageMovement,Transform transform, float cooldown, Animator animator)
+    public CastSpellNode(TheMageMovement theMageMovement,Transform transform, float cooldown, Animator animator, float spellRange)
     {
         _theMageMovement = theMageMovement;
         _transform = transform;
@@ -21,7 +23,6 @@ public class CastSpellNode : Nodes
         _lastCastTime = -cooldown; // cho cast ngay từ đầu
         _isCasting = false;
         _animator = animator;
-
         // Lấy duration từ clip
         //_castDuration = 1.5f;
         RuntimeAnimatorController controller = animator.runtimeAnimatorController;
@@ -48,6 +49,7 @@ public class CastSpellNode : Nodes
                 _lastCastTime = Time.time; // bắt đầu tính cooldown
                 _isCasting = false;
                 _theMageMovement.isAttack = false;
+
                 state = NodeState.SUCCESS;
             }
             else
@@ -65,8 +67,10 @@ public class CastSpellNode : Nodes
             _isCasting = true;
             _animator.SetInteger("Anim", 1);
 
+
             Transform target = (Transform)parent.GetData("target");
             _animator.SetFloat("Spell", _transform.position.x - target.position.x > 0 ? -1f : 1f);
+
             state = NodeState.RUNNING;
         }
         else
@@ -77,4 +81,6 @@ public class CastSpellNode : Nodes
 
         return state;
     }
+
+
 }

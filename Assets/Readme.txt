@@ -28,4 +28,6 @@ Khớp attack và animation:
 
 Phần knockback chưa hoạt động (V)
 
-Hoàn thiện script và khớp anim cho TheHand (~)
+Hoàn thiện script và khớp anim cho TheHand (V)
+
+Thêm duration cho skill của Mage, còn thiếu 3 unit ally 

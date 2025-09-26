@@ -115,7 +115,7 @@ AnimatorState:
   m_SpeedParameter: AttackSpd
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: Movement
 --- !u!206 &-4022018245404966683
 BlendTree:
   m_ObjectHideFlags: 1
@@ -347,7 +347,7 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4964394051804019905}
-    m_Position: {x: 120, y: 30, z: 0}
+    m_Position: {x: 170, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2806128897271331908}
     m_Position: {x: 290, y: -70, z: 0}

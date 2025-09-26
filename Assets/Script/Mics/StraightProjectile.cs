@@ -59,20 +59,19 @@ public class StraightProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Kiểm tra layer bằng tên
-        if (other.gameObject.layer == LayerMask.NameToLayer("Human") ||
+            if (other.gameObject.layer == LayerMask.NameToLayer("Human") ||
             other.gameObject.layer == LayerMask.NameToLayer("Construction"))
-        {
-            //DisableProjectile();
-            fireAnimator.SetTrigger("Hit");
-            hasHit = true;
-            other.gameObject.GetComponent<Stats>().TakeDamage(dmg); //Dealing damage
-        }
+            {
+                fireAnimator.SetTrigger("Hit");
+                hasHit = true;
+                other.gameObject.GetComponent<Stats>().TakeDamage(dmg); //Dealing damage
+            }
     }
-
     public void DisableProjectile()
     {
         // Hủy Invoke để không gọi lại
         CancelInvoke(nameof(DisableProjectile));
+
         // Tắt GameObject (có thể dùng object pool)
         gameObject.SetActive(false);
         // Reset vị trí khi bật lại sẽ được OnEnable xử lý

@@ -45,6 +45,11 @@ public class Stats : MonoBehaviour
         }
     }
 
+    public void BreakShield(float percent)
+    {
+        currentShield = currentShield - currentShield*percent;
+    }
+
     private void Die()
     {
         Debug.Log($"{gameObject.name} đã chết!");

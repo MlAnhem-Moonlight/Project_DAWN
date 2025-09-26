@@ -123,6 +123,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Script\Environment\Interact\ParentInheritance.cs" />
     <Compile Include="Assets\Script\Environment\IngridientManager.cs" />
+    <Compile Include="Assets\Script\Enemy\TheMage\SpellEffect.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvest.cs" />
     <Compile Include="Assets\Guide\ResourceAllocationDE.cs" />
     <Compile Include="Assets\Script\State.cs" />

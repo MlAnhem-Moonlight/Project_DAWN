@@ -9,8 +9,10 @@ public class TheMageBehavior : BhTree
     public float attackSpeed = 1f; // đòn/giây
     public float spellRange = 10f;
     public float spellCooldown = 5f;
+
     public UnityEngine.Transform defaultTarget;
     public UnityEngine.Animator animator;
+
     private TheMageMovement _theMageMovement;
 
     protected override Nodes SetupTree()
@@ -18,6 +20,7 @@ public class TheMageBehavior : BhTree
         speed = GetComponent<MageStats>() ? GetComponent<MageStats>().currentSPD : 10f;
         attackSpeed = GetComponent<MageStats>() ? GetComponent<MageStats>().currentAtkSpd : 1f;
         SetupAttackSpeed(animator, attackSpeed);
+
 
         defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         _theMageMovement = new TheMageMovement(transform, speed, attackRange, animator, defaultTarget);
@@ -28,7 +31,7 @@ public class TheMageBehavior : BhTree
             new Sequence(new List<Nodes>
             {
                 new MageCheckEnemyInRange(transform, spellRange, defaultTarget, "Human","Human",animator),
-                new CastSpellNode(_theMageMovement,transform, spellCooldown, animator),
+                new CastSpellNode(_theMageMovement,transform, spellCooldown, animator, spellRange),
             }),
             
             // ƯU TIÊN 2: Attack nếu trong range
