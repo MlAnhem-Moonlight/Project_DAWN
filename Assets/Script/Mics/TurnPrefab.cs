@@ -7,7 +7,23 @@ public class TurnPrefab : MonoBehaviour
     public List<GameObject> prefabs = new List<GameObject>();
     public List<GameObject> projectiles = new List<GameObject>();
 
+    [Header("Animator")]
+    public float duration = 2f; // Duration in seconds
+    public Animator animator;
+    public string clipName = "CastingSpell";
+
     private int index = 0;
+
+    void Awake()
+    {
+        SetupAnimatorDuration(animator, duration, clipName);
+    }
+
+    private void OnEnable()
+    {
+        SetupAnimatorDuration(animator, duration, clipName);
+    }
+
     // Bật tất cả
     public void TurnOnAll()
     {
@@ -63,4 +79,36 @@ public class TurnPrefab : MonoBehaviour
         foreach (var obj in projectiles)
             if (obj) obj.SetActive(false);
     }
+
+    public void GetAnimDuration()
+    {
+        animator.SetFloat("CastingSpellEffectSpd", 1f);
+    }
+
+    public void SetupAnimatorDuration(Animator animator, float speed, string clipName)
+    {
+
+        // Lấy độ dài clip gốc
+        float clipLength = 1f;
+        foreach (var clip in animator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == clipName) // đúng tên clip
+            {
+                clipLength = clip.length;
+                Debug.Log($"Found {clipName} clip length: {clipLength}s");
+                break;
+            }
+        }
+
+        // Công thức: cần animator chạy với tốc độ này
+        float attackSpeedMultiplier = clipLength / speed;
+
+        // Gán vào parameter thay vì animator.speed
+        animator.SetFloat(clipName + "Spd", attackSpeedMultiplier);
+
+        //Debug.Log($"ClipLength={clipLength:F2}s, AttackInterval={attackInterval:F2}s, " +
+        //          $"AttackSpeedMul={attackSpeedMultiplier:F2}");
+    }
+
+
 }

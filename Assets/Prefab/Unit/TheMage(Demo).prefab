@@ -157,6 +157,9 @@ MonoBehaviour:
   prefabs:
   - {fileID: 405458774386553277}
   projectiles: []
+  duration: 2
+  animator: {fileID: 0}
+  clipName: CastingSpell
 --- !u!1 &6768994202510114446
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +380,9 @@ MonoBehaviour:
   projectiles:
   - {fileID: 1020748113067357137}
   - {fileID: 7304666090750566570}
+  duration: 2
+  animator: {fileID: 0}
+  clipName: CastingSpell
 --- !u!114 &8147435167210863253
 MonoBehaviour:
   m_ObjectHideFlags: 0

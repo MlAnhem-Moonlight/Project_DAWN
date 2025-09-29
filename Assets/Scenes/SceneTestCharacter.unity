@@ -1173,11 +1173,11 @@ PrefabInstance:
       objectReference: {fileID: 2015650903}
     - target: {fileID: 2007904176929595276, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.98
+      value: -80.69
       objectReference: {fileID: 0}
     - target: {fileID: 2007904176929595276, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.83
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 2007904176929595276, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1211,15 +1211,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2329034817607845094, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 678070647}
+    - target: {fileID: 2329034817607845094, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103530380703261879, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2015650903}
+    - target: {fileID: 4103530380703261879, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103530380703261879, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: parentAnimator
+      value: 
+      objectReference: {fileID: 678070647}
+    - target: {fileID: 4103530380703261879, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: parentClipName
+      value: CastingSpell
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888929044553706985, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2015650903}
+    - target: {fileID: 4888929044553706985, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: clipName
+      value: CastingSpellEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888929044553706985, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6768994202510114446, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: m_Name
       value: TheMage(Demo)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8674636969653686401, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 678070647}
+    - target: {fileID: 8674636969653686401, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674636969653686401, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: childAnimator
+      value: 
+      objectReference: {fileID: 2015650903}
+    m_RemovedComponents:
+    - {fileID: 8674636969653686401, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+--- !u!95 &678070647 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 581198636875506792, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+  m_PrefabInstance: {fileID: 669235679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &790839226
 PrefabInstance:
   m_ObjectHideFlags: 0

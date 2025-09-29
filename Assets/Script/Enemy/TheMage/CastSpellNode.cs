@@ -30,7 +30,8 @@ public class CastSpellNode : Nodes
         {
             if (clip.name == animationClipName)
             {
-                _castDuration = clip.length;
+                _castDuration = clip.length / _animator.GetFloat("CastingSpellSpd");
+
                 Debug.Log($"Casting spell animation duration set to {_castDuration} seconds.");
                 break;
             }
