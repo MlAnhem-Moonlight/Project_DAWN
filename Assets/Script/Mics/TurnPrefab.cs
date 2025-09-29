@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class TurnPrefab : MonoBehaviour
 {
+    [Header("GameObject Stats")]
+    public GameObject owner;
+
     [Header("Danh sách prefab cần bật/tắt")]
     public List<GameObject> prefabs = new List<GameObject>();
     public List<GameObject> projectiles = new List<GameObject>();
@@ -14,13 +17,9 @@ public class TurnPrefab : MonoBehaviour
 
     private int index = 0;
 
-    void Awake()
-    {
-        SetupAnimatorDuration(animator, duration, clipName);
-    }
-
     private void OnEnable()
     {
+        duration = owner.GetComponent<Stats>().currentSkillDuration;
         SetupAnimatorDuration(animator, duration, clipName);
     }
 

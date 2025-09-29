@@ -2,10 +2,6 @@
 
 public class MageStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;
-    public int maxLevel = 8;
-
     [Header("Growth Config")]
     public float hpLinear = 30f;
     public float dmgMultiplier = 1.2f;
@@ -46,6 +42,12 @@ public class MageStats : Stats
         // SkillCD
         float minSkillCD = baseStats.SkillCD * skillCDMinFactor;
         currentSkillCD = Mathf.Round(Mathf.Max(baseStats.SkillCD * Mathf.Pow(skillCDMultiplier, level - 1), minSkillCD) * 100f) / 100f;
+
+        //SkillDmg
+        currentSkillDmg = 10f + 3 * (level - 1);
+        //SkillDuration
+        currentSkillDuration = 2f + 0.3f * (level - 1);
+
         SetDmg();
         // Debug log
         Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");

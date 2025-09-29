@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7775841118204165973}
   - component: {fileID: 6045735850285897262}
   - component: {fileID: 4888929044553706985}
+  - component: {fileID: 7173478134349462717}
   m_Layer: 7
   m_Name: CastingEffect
   m_TagString: Untagged
@@ -160,6 +161,24 @@ MonoBehaviour:
   duration: 2
   animator: {fileID: 0}
   clipName: CastingSpell
+--- !u!114 &7173478134349462717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405458774386553277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c5ea5354655974f9e7f304d0539eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  value: 5
+  type: 0
 --- !u!1 &6768994202510114446
 GameObject:
   m_ObjectHideFlags: 0

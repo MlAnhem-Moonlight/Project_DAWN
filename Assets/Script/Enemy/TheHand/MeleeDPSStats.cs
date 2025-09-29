@@ -2,10 +2,6 @@
 
 public class MeleeDPSStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;
-    public int maxLevel = 8;
-
     [Header("Growth Config")]
     public float hpLinear = 25f;
 

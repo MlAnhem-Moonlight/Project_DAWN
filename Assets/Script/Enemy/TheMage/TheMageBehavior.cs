@@ -1,6 +1,7 @@
 ﻿using BehaviorTree;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class TheMageBehavior : BhTree
 {
@@ -48,4 +49,12 @@ public class TheMageBehavior : BhTree
 
         return root;
     }
+//#if UNITY_EDITOR
+//    // Vẽ vùng tròn quét trong Scene view để dễ chỉnh sửa
+//    private void OnDrawGizmosSelected()
+//    {
+//        Gizmos.color = Color.yellow;
+//        Gizmos.DrawWireSphere(transform.position, spellRange);
+//    }
+//#endif
 }

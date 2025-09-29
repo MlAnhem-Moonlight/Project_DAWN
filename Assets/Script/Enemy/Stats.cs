@@ -1,7 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Stats : MonoBehaviour
 {
+    [Header("Level Settings")]
+    public int level = 1;
+    public int maxLevel = 8;
+
     [Header("Base Stats Reference")]
     public CharacterStatsSO baseStats;
 
@@ -13,6 +19,7 @@ public class Stats : MonoBehaviour
     public float currentShield;
     public float currentAtkSpd;
     public float currentSkillDmg;
+    public float currentSkillDuration;
 
     public void Awake()
     {
@@ -45,10 +52,65 @@ public class Stats : MonoBehaviour
         }
     }
 
-    public void BreakShield(float percent)
+    public void ApplyDebuff(float value, float castDuration, int type)
     {
-        currentShield = currentShield - currentShield*percent;
+        switch (type)
+        {
+            case 0: // Giảm tốc độ di chuyển
+                float baseSPD = currentSPD; // lưu giá trị gốc
+                StartCoroutine(DebuffRoutine(
+                    () => { currentSPD -= value * currentSPD; if (currentSPD < 0) currentSPD = 0; },
+                    () => { currentSPD = baseSPD; },   // trả về giá trị gốc
+                    castDuration,
+                    $"{gameObject.name} bị giảm tốc độ"
+                ));
+                break;
+
+            case 1: // Phá giáp
+                float baseShield = currentShield; // lưu giá trị gốc
+                StartCoroutine(DebuffRoutine(
+                    () => { currentShield -= currentShield * value; },
+                    () => { currentShield = baseShield; },
+                    castDuration,
+                    $"{gameObject.name} bị phá giáp"
+                ));
+                break;
+
+            case 2: // Giảm sát thương
+                float baseDMG = currentDMG; // lưu giá trị gốc
+                StartCoroutine(DebuffRoutine(
+                    () => { currentDMG -= value; if (currentDMG < 0) currentDMG = 0; },
+                    () => { currentDMG = baseDMG; },
+                    castDuration,
+                    $"{gameObject.name} bị giảm sát thương"
+                ));
+                break;
+
+            case 3: // Giảm tốc độ đánh
+                float baseAtkSpd = currentAtkSpd; // lưu giá trị gốc
+                StartCoroutine(DebuffRoutine(
+                    () => { currentAtkSpd -= value * currentAtkSpd; if (currentAtkSpd < 0) currentAtkSpd = 0; },
+                    () => { currentAtkSpd = baseAtkSpd; },
+                    castDuration,
+                    $"{gameObject.name} bị giảm tốc độ đánh"
+                ));
+                break;
+
+            default:
+                Debug.LogWarning("Loại debuff không hợp lệ");
+                break;
+        }
     }
+
+    private IEnumerator DebuffRoutine(System.Action apply, System.Action revert, float duration, string log)
+    {
+        apply?.Invoke();
+        Debug.Log($"{log} trong {duration}s");
+        yield return new WaitForSeconds(duration);
+        revert?.Invoke();
+        Debug.Log($"{gameObject.name} hết debuff");
+    }
+
 
     private void Die()
     {

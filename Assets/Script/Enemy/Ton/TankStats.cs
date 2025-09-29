@@ -2,10 +2,6 @@
 
 public class TankStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;              // level hiện tại
-    public int maxLevel = 8;          // level tối đa (có thể chỉnh)
-
     [Header("Growth Parameters")]
     public float hpLinear = 100f;      // +200 HP mỗi level
     public float hpMultiplier = 1.03f; // HP scale %

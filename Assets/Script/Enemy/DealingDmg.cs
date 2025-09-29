@@ -169,6 +169,7 @@ public class DealingDmg : MonoBehaviour
         usingSkill = 0; // reset sau khi dùng skill
     }
 
+
 #if UNITY_EDITOR
     // Vẽ vùng quét trong Scene view
     void OnDrawGizmosSelected()

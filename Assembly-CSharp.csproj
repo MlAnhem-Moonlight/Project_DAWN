@@ -142,6 +142,7 @@
     <Compile Include="Assets\Script\Enemy\Ton\TonBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Script\Enemy\TheMage\DebuffSkill.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\FlyTowardsTarget.cs" />
     <Compile Include="Assets\Script\Enemy\SkillScaling.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Action.cs" />

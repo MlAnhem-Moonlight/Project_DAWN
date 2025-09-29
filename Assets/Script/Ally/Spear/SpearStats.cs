@@ -2,10 +2,6 @@
 
 public class SpearStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;
-    public int maxLevel = 8;
-
     public float hpLinear = 40f;
     public float dmgMultiplier = 1.08f;
     public float atkSpdMultiplier = 1.03f;

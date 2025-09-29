@@ -2,10 +2,6 @@
 
 public class ArcherStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;
-    public int maxLevel = 8;
-
     public float hpLinear = 20f;
     public float dmgMultiplier = 1.09f;
     public float atkSpdMultiplier = 1.06f;

@@ -8,7 +8,6 @@ public class CastSpellNode : Nodes
     private float _lastCastTime;
     private float _castDuration;
     private float _castStartTime;
-    private float _spellRange;
     private bool _isCasting;
     private Transform _transform;
     private Animator _animator;

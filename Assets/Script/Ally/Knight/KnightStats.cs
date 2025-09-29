@@ -2,10 +2,6 @@
 
 public class KnightStats : Stats
 {
-    [Header("Level Settings")]
-    public int level = 1;
-    public int maxLevel = 8;
-
     // Growth params (tweakable in Inspector)
     public float hpScalePerLevel = 0.18f;
     public float dmgLinear = 3f;

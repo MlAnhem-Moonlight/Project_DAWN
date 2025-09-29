@@ -1059,6 +1059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffea5b534a00a4d449c0239b0ca0fcd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
   baseStats: {fileID: 0}
   currentHP: 100
   currentDMG: 0
@@ -1067,6 +1069,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
+  currentSkillDuration: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1167,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1654625820116861191, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: spellRange
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654625820116861191, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: defaultTarget
       value: 
       objectReference: {fileID: 618847597}
@@ -1212,6 +1219,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2329034817607845094, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 1037384829}
+    - target: {fileID: 2329034817607845094, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 678070647}
@@ -1236,6 +1247,10 @@ PrefabInstance:
       value: CastingSpell
       objectReference: {fileID: 0}
     - target: {fileID: 4888929044553706985, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 1037384829}
+    - target: {fileID: 4888929044553706985, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 2015650903}
@@ -1250,6 +1265,22 @@ PrefabInstance:
     - target: {fileID: 6768994202510114446, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: m_Name
       value: TheMage(Demo)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173478134349462717, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173478134349462717, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173478134349462717, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 1037384829}
+    - target: {fileID: 7173478134349462717, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8674636969653686401, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
       propertyPath: animator
@@ -1603,6 +1634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7ffb0ac8a9fad42815239f39dfad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
   baseStats: {fileID: 11400000, guid: 74e56c82fc59d1840a05dade4fa6634e, type: 2}
   currentHP: 0
   currentDMG: 0
@@ -1611,8 +1644,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
-  level: 1
-  maxLevel: 8
+  currentSkillDuration: 0
   hpScalePerLevel: 0.18
   dmgLinear: 3
   atkSpdPerLevel: 0.015
@@ -1750,7 +1782,7 @@ Transform:
   m_GameObject: {fileID: 917770130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.04, y: -0.77, z: 0}
+  m_LocalPosition: {x: -60.43, y: -0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1787,6 +1819,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 580284767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1037384829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6768994202510114446, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+  m_PrefabInstance: {fileID: 669235679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1238175304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7ffb0ac8a9fad42815239f39dfad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
   baseStats: {fileID: 11400000, guid: 74e56c82fc59d1840a05dade4fa6634e, type: 2}
   currentHP: 0
   currentDMG: 0
@@ -2815,8 +2854,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
-  level: 1
-  maxLevel: 8
+  currentSkillDuration: 0
   hpScalePerLevel: 0.18
   dmgLinear: 3
   atkSpdPerLevel: 0.015
