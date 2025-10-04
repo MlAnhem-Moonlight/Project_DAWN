@@ -6,33 +6,47 @@ public class BridDive : Nodes
     private Transform _transform;
     private Rigidbody2D _rb;
     private Animator _animator;
-    private BridCollisionHandler _collisionHandler;
 
-    public BridDive(Transform transform, Rigidbody2D rb, BridCollisionHandler collisionHandler, Animator animator)
+
+    public BridDive(Transform transform, Rigidbody2D rb, Animator animator)
     {
         _transform = transform;
         _rb = rb;
-        _collisionHandler = collisionHandler;
         _animator = animator;
     }
 
     public override NodeState Evaluate()
     {
         // Kích hoạt animation rơi xuống
-        _animator.SetTrigger("Dive");
-        // Set mass and gravity scale for falling straight down
-        _rb.mass = 100f; // Tăng khối lượng
-        _rb.gravityScale = 1f; // Tăng gravity scale để rơi thẳng xuống
+        //_animator.SetTrigger("Dive");
 
-        _collisionHandler.OnBridCollision += HandleCollision; // Đăng ký sự kiện va chạm
-        // Không cần thiết lập vận tốc vì gravity sẽ tự động kéo đối tượng xuống
+        // Set mass and gravity scale để rơi thẳng xuống
+        _rb.mass = 100f;
+        _rb.gravityScale = 1f;
+
+        // Xoay hướng chim theo vector rơi
+        RotateDownward();
+
+
+
         return NodeState.RUNNING;
     }
 
-    private void HandleCollision()
+    private void RotateDownward()
     {
-        //nếu va chạm gọi animation nổ và tính dmg sau đó gọi destroy
-        GameObject.Destroy(_transform.gameObject); // Hủy đối tượng khi va chạm
-        state = NodeState.SUCCESS;
+        Vector2 velocity = _rb.linearVelocity;
+
+        if (velocity.sqrMagnitude > 0.01f) // tránh lỗi khi velocity = 0
+        {
+            float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
+            _transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+        else
+        {
+            // Nếu chưa có vận tốc, ép xoay thẳng xuống
+            _transform.rotation = Quaternion.Euler(0, 0, -90f);
+        }
     }
+
+
 }

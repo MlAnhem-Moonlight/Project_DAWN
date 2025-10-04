@@ -30,4 +30,10 @@ Phần knockback chưa hoạt động (V)
 
 Hoàn thiện script và khớp anim cho TheHand (V)
 
-Thêm duration cho skill của Mage, còn thiếu 3 unit ally 
+Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
+	- Brid: chỉnh sửa phần gây sát thương AOE, thêm phần luôn hướng theo vị trị rơi(V)
+	- Spear: chỉnh sửa hành theo trạng thái, bổ xung aggressive, defensive, neutral movement
+		+ aggressive: tấn công tất cả Demon tìm thấy(chủ động tìm kiếm)
+		+ defensive: chỉ tấn công khi Demon trong tầm phòng thủ
+		+ neutral: di chuyển xung quanh khi cắm trại
+		+ phần defensive chưa khớp anim và chí số trong Stats 

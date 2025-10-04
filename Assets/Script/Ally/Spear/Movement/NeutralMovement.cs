@@ -1,100 +1,121 @@
-using BehaviorTree;
-using Spear.Movement;
+﻿using BehaviorTree;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Spear.Movement
 {
     /// <summary>
-    /// Handles platformer-style patrol movement, moving left and right from a base position
+    /// Neutral wandering movement with idle-walk switching.
+    /// NPC luôn di chuyển tới 1 waypoint duy nhất, 
+    /// sau khi tới nơi thì waypoint đó sẽ đổi sang vị trí mới.
     /// </summary>
     public class NeutralMovement : IMovementStrategy
     {
         private Transform _transform;
-        private List<Transform> _waypoints;
+        private Transform _waypoint;   // chỉ dùng 1 waypoint
         private float _speed;
-
-        private int _currentWaypointIndex = 0;
-        private int _movementCount = 0; // Tracks the number of movements
 
         private float _waitTime = 1f, _waitCounter = 0f;
         private bool _waiting = false;
 
-        public NeutralMovement(Transform transform, Transform[] waypoints, float speed)
+        private Transform _startPos;
+        private Transform _endPos;
+
+        private Animator _animator;
+        private int _currentState = 4; // 4 = walk, 5 = idle
+
+        public NeutralMovement(Transform transform, Transform waypoint, float speed,
+                               Transform startPos, Transform endPos, Animator animator)
         {
             _transform = transform;
-            _waypoints = new List<Transform>(waypoints);
+            _waypoint = waypoint;
             _speed = speed;
+            _startPos = startPos;
+            _endPos = endPos;
+            _animator = animator;
         }
 
         public void Tick()
         {
+            
             if (_waiting)
             {
                 _waitCounter += Time.deltaTime;
                 if (_waitCounter >= _waitTime)
                 {
                     _waiting = false;
+
                 }
             }
             else
             {
-                Transform wp = _waypoints[_currentWaypointIndex];
-                if (Mathf.Abs(_transform.position.x - wp.position.x) < 0.01f)
+                if (Mathf.Abs(_transform.position.x - _waypoint.position.x) < 0.5f)
                 {
-                    _transform.position = new Vector3(wp.position.x, _transform.position.y, _transform.position.z);
+                    // Đặt NPC tại waypoint (chặn rung)
+                    //_transform.position = new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z);
+
+                    
                     _waitCounter = 0f;
                     _waiting = true;
 
-                    _movementCount++;
-                    if (_movementCount % 3 == 0)
-                    {
-                        AddRandomWaypoint();
-                    }
-
-                    _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Count;
+                    // Random Idle hoặc Walk
+                    ChooseNextState();
+                    float targetPosition = _waypoint.position.x,
+                    dir = _transform.position.x - targetPosition > 0 ? -1f : 1f;
+                    _animator?.SetFloat("Direct", dir);
                 }
                 else
                 {
-                    _transform.position = Vector3.MoveTowards(
-                        _transform.position,
-                        new Vector3(wp.position.x, _transform.position.y, _transform.position.z),
-                        _speed * Time.deltaTime
-                    );
+                    if (_currentState == 4) // Walk
+                    {
+                        _transform.position = Vector3.MoveTowards(
+                            _transform.position,
+                            new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z),
+                            _speed * Time.deltaTime
+                        );
+                    }
+                    // Nếu Idle thì đứng yên
                 }
             }
         }
 
-        private void AddRandomWaypoint()
+        private void MoveWaypointToNewPosition()
         {
-            if (_waypoints.Count < 2) return;
+            if (_startPos == null || _endPos == null) return;
 
-            // Find the two farthest waypoints
-            float maxDistance = 0f;
-            Transform farthestA = null, farthestB = null;
+            // Random vị trí mới trong khoảng start – end
+            Vector3 newPosition = new Vector3(
+                Random.Range(_startPos.position.x, _endPos.position.x),
+                _transform.position.y,
+                _transform.position.z
+            );
 
-            for (int i = 0; i < _waypoints.Count; i++)
+            _waypoint.position = newPosition;
+            Debug.Log($"New waypoint position: {_waypoint.position}");
+        }
+
+        private void ChooseNextState()
+        {
+            int choice = Random.Range(0, 2); // 0 = Idle, 1 = Walk
+
+            if (choice == 0) // Idle
             {
-                for (int j = i + 1; j < _waypoints.Count; j++)
-                {
-                    float distance = Vector3.Distance(_waypoints[i].position, _waypoints[j].position);
-                    if (distance > maxDistance)
-                    {
-                        maxDistance = distance;
-                        farthestA = _waypoints[i];
-                        farthestB = _waypoints[j];
-                    }
-                }
+                _currentState = 5;
+                _animator?.SetInteger("State", 5);
+                
+
+                _waitTime = Random.Range(5f, 6f); // Idle lâu
             }
-
-            if (farthestA != null && farthestB != null)
+            else // Walk
             {
-                // Generate a random waypoint between the two farthest waypoints
-                Vector3 randomPosition = Vector3.Lerp(farthestA.position, farthestB.position, Random.Range(0.3f, 0.7f));
-                GameObject newWaypoint = new GameObject("RandomWaypoint");
-                newWaypoint.transform.position = randomPosition;
+                _currentState = 4;
+                _animator?.SetInteger("State", 4);
 
-                _waypoints.Add(newWaypoint.transform);
+
+                _waitTime = 1f;
+
+                // Ngay khi chọn Walk thì random vị trí waypoint mới
+                MoveWaypointToNewPosition();
             }
         }
     }

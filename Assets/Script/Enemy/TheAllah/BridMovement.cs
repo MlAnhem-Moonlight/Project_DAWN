@@ -45,7 +45,7 @@ public class BridMovement : Nodes
         if (_transform.position.y < _minHeight)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _flapForce);
-            _animator.SetTrigger("Flap"); // Animation vỗ cánh
+            //_animator.SetTrigger("Flap"); // Animation vỗ cánh
         }
     }
 }

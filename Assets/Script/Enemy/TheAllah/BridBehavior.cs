@@ -59,7 +59,7 @@ public class BridBehavior : BhTree
         }
 
 
-        BridCollisionHandler collisionHandler = gameObject.AddComponent<BridCollisionHandler>(); // Thêm script vào quái
+        //BridCollisionHandler collisionHandler = gameObject.AddComponent<BridCollisionHandler>(); // Thêm script vào quái
 
         //bridMovement = new BridMovement(transform, rb, speed, animator, target, minHeight);
         //bridCheckDistance = new BridCheckDistance(transform, target, diveThreshold);
@@ -70,7 +70,7 @@ public class BridBehavior : BhTree
                     new Sequence(new List<Nodes>
                     {
                         new BridCheckDistance(transform, target, diveThreshold),
-                        new BridDive(transform, rb, collisionHandler, animator)
+                        new BridDive(transform, rb, animator)
                     }),
                     new BridMovement(transform, rb, speed, animator, target, minHeight),
                 });

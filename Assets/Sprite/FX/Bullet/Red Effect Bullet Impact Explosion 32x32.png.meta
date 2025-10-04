@@ -2054,15 +2054,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Red Effect Bullet Impact Explosion 32x32_40
+      name: Spriral1
       rect:
         serializedVersion: 2
         x: 352
         y: 416
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2076,15 +2076,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Red Effect Bullet Impact Explosion 32x32_41
+      name: Spriral2
       rect:
         serializedVersion: 2
         x: 384
         y: 416
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2098,15 +2098,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Red Effect Bullet Impact Explosion 32x32_42
+      name: Spriral3
       rect:
         serializedVersion: 2
         x: 416
         y: 416
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2120,15 +2120,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Red Effect Bullet Impact Explosion 32x32_43
+      name: Spriral4
       rect:
         serializedVersion: 2
         x: 448
         y: 416
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6530,10 +6530,6 @@ TextureImporter:
       Red Effect Bullet Impact Explosion 32x32_38: -1707101438
       Red Effect Bullet Impact Explosion 32x32_39: 1758971827
       Red Effect Bullet Impact Explosion 32x32_4: -965807747
-      Red Effect Bullet Impact Explosion 32x32_40: 1456329759
-      Red Effect Bullet Impact Explosion 32x32_41: 750256645
-      Red Effect Bullet Impact Explosion 32x32_42: 992596896
-      Red Effect Bullet Impact Explosion 32x32_43: 1335796878
       Red Effect Bullet Impact Explosion 32x32_44: 338833009
       Red Effect Bullet Impact Explosion 32x32_45: -1746216002
       Red Effect Bullet Impact Explosion 32x32_46: 249866708
@@ -6593,6 +6589,10 @@ TextureImporter:
       Red Effect Bullet Impact Explosion 32x32_95: -1532190346
       Red Effect Bullet Impact Explosion 32x32_96: 328595008
       Red Effect Bullet Impact Explosion 32x32_97: 904335887
+      Spriral1: 1456329759
+      Spriral2: 750256645
+      Spriral3: 992596896
+      Spriral4: 1335796878
       fireBurning1: 2022020782
       fireBurning2: -1653334458
       fireBurning3: 1114613596
