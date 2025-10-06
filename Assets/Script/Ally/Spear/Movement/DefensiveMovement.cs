@@ -32,7 +32,7 @@ namespace Spear.Movement
                 return state;
             }
             if (_defensiveTarget == null) return state = NodeState.FAILURE;
-
+            //Debug.Log($"[{_transform.name}] Thực hiện hành động phòng thủ.");
             // Tính vị trí mục tiêu phòng thủ lý tưởng
             Vector3 targetPos = _defensiveTarget.position + Vector3.left * _offset;
 

@@ -13,29 +13,29 @@ public class CheckEnemyInRangeAlly : Nodes
         _self = self;
         _detectionRadius = detectionRadius;
         _enemyLayer = enemyLayer;
-        Debug.Log($"Enemy layer: {enemyLayer}");
     }
 
     public override NodeState Evaluate()
     {
-        
-        // chỉ lấy collider trong enemyLayer
         Collider2D[] hits = Physics2D.OverlapCircleAll(_self.position, _detectionRadius, _enemyLayer);
-
+        
         Transform nearestEnemy = hits
+            .Where(h => h.GetComponent<Stats>() != null) // chỉ lấy object có script Stats
             .OrderBy(h => Vector2.Distance(_self.position, h.transform.position))
             .Select(h => h.transform)
             .FirstOrDefault();
-        Debug.Log($"{nearestEnemy.name} && {nearestEnemy.parent?.name}");
+
         if (nearestEnemy != null)
         {
-            SetData("target", nearestEnemy); // lưu vào blackboard
+            parent.SetData("target", nearestEnemy); // lưu vào blackboard
             state = NodeState.SUCCESS;
             return state;
         }
 
-        ClearData("target");
+        parent.ClearData("target");
         state = NodeState.FAILURE;
         return state;
     }
+
+
 }

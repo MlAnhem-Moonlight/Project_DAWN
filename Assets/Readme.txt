@@ -35,6 +35,7 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 	- Spear: chỉnh sửa hành theo trạng thái, bổ xung aggressive, defensive, neutral movement
 		+ aggressive: tấn công tất cả Demon tìm thấy(chủ động tìm kiếm)
 		+ defensive: chỉ tấn công khi Demon trong tầm phòng thủ
-			. đang xảy ra lỗi ở CheckEnemyInRangeAlly, tầm quét đang không rõ ràng, cần thêm điều kiện gameObject phải có Stats
+			. đang xảy ra lỗi ở CheckEnemyInRangeAlly, tầm quét đang không rõ ràng, cần thêm điều kiện gameObject phải có Stats(V)
+			. Bổ xung callback đảm bảo animation kết thúc thì mới chạy tiếp
 		+ neutral: di chuyển xung quanh khi cắm trại
 		+ phần defensive chưa khớp anim và chí số trong Stats 

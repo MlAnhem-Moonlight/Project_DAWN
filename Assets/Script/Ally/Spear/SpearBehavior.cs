@@ -57,10 +57,20 @@ public class SpearBehavior : BhTree
                  {
 
                     _defensiveMovement, //Movement
-                    //Check Range from transform to Defensive Target, cant go too far from it
-                    new CheckEnemyInRangeAlly(mainBase, mainBaseRadius, LayerMask.GetMask("Demon")), // Indicate that an enemy was found and "attacked".)
-                    //&& check if any monster in range ? attack(chase if out of attack range) : patrol around
-                    new DefensiveAction(transform, defensiveTarget, patrolRadius, atkRange, speed, animator) // If no enemy in range, patrol around defensive target
+                    
+                    new Sequence(new List<Nodes>
+                    {
+                        //Check Range from transform to Defensive Target, cant go too far from it
+                        new CheckEnemyInRangeAlly(transform, mainBaseRadius, LayerMask.GetMask("Demon")), // Indicate that an enemy was found and "attacked".)
+                        //&& check if any monster in range ? attack(chase if out of attack range) : patrol around
+                        new DefensiveAction(transform, 
+                                            defensiveTarget, 
+                                            patrolRadius, 
+                                            atkRange, 
+                                            speed, 
+                                            animator,
+                                            defensiveOffset) // If no enemy in range, patrol around defensive target
+                    }),
                  }),
                  _neutralMovement //Movement
 
@@ -80,17 +90,16 @@ public class SpearBehavior : BhTree
     private void OnDrawGizmos()
     {
         if (transform == null) return;
+        Vector3 targetDef = defensiveTarget.position + Vector3.left * defensiveOffset;
         // Màu xanh lam cho phạm vi bảo vệ
         Gizmos.color = new Color(0f, 0.5f, 1f, 0.3f);
-        Gizmos.DrawWireSphere(defensiveTarget != null ? defensiveTarget.position : transform.position, patrolRadius);
+        Gizmos.DrawWireSphere(defensiveTarget != null ? targetDef : transform.position, patrolRadius);
         // Màu đỏ cho tầm tấn công
         Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
         Gizmos.DrawWireSphere(transform.position, atkRange);
-
+        // Màu vàng cho phạm vi quét kẻ địch
         Gizmos.color = new Color(1f, 1f, 0f, 0.3f);
         Gizmos.DrawWireSphere(transform.position, mainBaseRadius);
-        // Màu đỏ cho tầm tấn công
-        //Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
-        //Gizmos.DrawWireSphere(_self.position, _attackRange);
+
     }
 }
