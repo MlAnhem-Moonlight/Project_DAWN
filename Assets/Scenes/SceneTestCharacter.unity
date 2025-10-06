@@ -645,7 +645,7 @@ Transform:
   m_GameObject: {fileID: 502785926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1935973, y: 3.7393718, z: -13.099349}
+  m_LocalPosition: {x: 2.8435974, y: 3.619372, z: -13.099349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1098,7 +1098,7 @@ Transform:
   m_GameObject: {fileID: 618847594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.54, y: -1.19, z: 0}
+  m_LocalPosition: {x: 7.19, y: -1.31, z: 0}
   m_LocalScale: {x: 1.0571147, y: 0.8289326, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1463,6 +1463,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2212884053681926967, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212884053681926967, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: defaultTarget
       value: 
       objectReference: {fileID: 1238175306}
@@ -1472,6 +1476,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218499173624817928, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142494942016248799, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2311,7 +2319,7 @@ Transform:
   m_GameObject: {fileID: 1780798502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1935973, y: 3.7393718, z: -13.099349}
+  m_LocalPosition: {x: 2.8435974, y: 3.619372, z: -13.099349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3192,6 +3200,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 688801503}
     - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
+      propertyPath: atkRange
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
       propertyPath: mainBase
       value: 
       objectReference: {fileID: 1959153839}
@@ -3203,6 +3215,14 @@ PrefabInstance:
       propertyPath: waypoints
       value: 
       objectReference: {fileID: 419090725}
+    - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
+      propertyPath: spearState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
+      propertyPath: mainBaseRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
       propertyPath: defensiveTarget
       value: 

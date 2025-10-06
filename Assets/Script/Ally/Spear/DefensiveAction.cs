@@ -11,7 +11,8 @@ public class DefensiveAction : Nodes
     private readonly float _speed;
     private readonly Animator _anim;
 
-    private IMovementStrategy _patrolMovement;
+    private DefensiveMovement _patrolMovement;
+    private SpearBehavior _spear;
 
     // Cooldown skill
     private float _skillCooldown = 2f;   // 2 giây hồi chiêu
@@ -26,62 +27,73 @@ public class DefensiveAction : Nodes
         _speed = speed;
         _anim = anim;
 
-        _patrolMovement = new DefensiveMovement(_self, _defTarget, 1.5f, _speed / 2);
+        _patrolMovement = new DefensiveMovement(_self, _defTarget, 1.5f, _speed / 2, _defRadius);
+        _spear = _self.GetComponent<SpearBehavior>();
     }
 
     public override NodeState Evaluate()
     {
-        object targetObj = GetData("target");
-        if (targetObj == null)
+        // Nếu không phải trạng thái phòng thủ thì bỏ qua
+        if (_spear == null || _spear.spearState != AllyState.Defensive)
         {
-            // Không có enemy thì patrol quanh defensive target
-            _patrolMovement.Tick();
-            state = NodeState.RUNNING;
+            state = NodeState.FAILURE;
             return state;
         }
 
-        Transform target = (Transform)targetObj;
+        // Lấy mục tiêu enemy (được CheckEnemyInRangeAlly đặt vào blackboard)
+        object targetObj = GetData("target");
+        Transform target = targetObj as Transform;
+
+        // Không có enemy → tuần tra quanh defensive target
+        if (target == null)
+        {
+            _patrolMovement.Evaluate(); // gọi logic phòng thủ tuần tra
+            state = NodeState.RUNNING;
+            return state;
+        }
 
         float distToDef = Vector2.Distance(_self.position, _defTarget.position);
         float distToEnemy = Vector2.Distance(_self.position, target.position);
 
-        // Nếu ra ngoài phạm vi bảo vệ -> quay lại
+        // Nếu ra ngoài phạm vi phòng thủ → quay lại
         if (distToDef > _defRadius)
         {
-            _patrolMovement.Tick();
+            Debug.Log($"[{_self.name}] Ra ngoài phạm vi bảo vệ ({distToDef:F1} > {_defRadius}), quay lại vị trí phòng thủ.");
+            _patrolMovement.Evaluate();
             state = NodeState.RUNNING;
             return state;
         }
 
-        // Nếu enemy trong tầm đánh
+        // Nếu enemy trong tầm tấn công
         if (distToEnemy <= _attackRange)
         {
             if (Time.time >= _lastSkillTime + _skillCooldown)
             {
                 UseSkill(target);
                 _lastSkillTime = Time.time;
-                state = NodeState.SUCCESS; // thành công vì dùng skill
-                return state;
+                state = NodeState.SUCCESS; // đã tấn công
             }
             else
             {
-                // đang hồi chiêu → idle chờ hoặc di chuyển nhẹ
-                if (_anim != null) _anim.SetInteger("State", 0); // idle
-                state = NodeState.RUNNING;
-                return state;
+                if (_anim != null)
+                {
+                    _anim.SetInteger("State", 5); // idle chờ
+                    _anim.SetFloat("Direct", target.position.x - _self.position.x > 0 ? 1f : -1f);
+                }
+                state = NodeState.RUNNING; // vẫn đang chờ hồi chiêu
             }
-        }
-        else
-        {
-            // Nếu enemy trong phạm vi bảo vệ nhưng ngoài attack range → chase
-            ChaseTarget(target);
-            state = NodeState.RUNNING;
             return state;
         }
+
+        // Nếu enemy trong phạm vi bảo vệ nhưng ngoài tầm đánh → chase
+        Debug.Log($"[{_self.name}] Đuổi mục tiêu {target.name} (cách {distToEnemy:F1})");
+        ChaseTarget(target);
+        state = NodeState.RUNNING;
+        return state;
     }
 
     /// <summary>
-    /// Hàm di chuyển đến target (chase).
+    /// Di chuyển đuổi mục tiêu (chase).
     /// </summary>
     private void ChaseTarget(Transform target)
     {
@@ -96,23 +108,23 @@ public class DefensiveAction : Nodes
 
         if (_anim != null)
         {
-            _anim.SetInteger("State", 0); // ví dụ 0 = chạy bộ
-            float dir = target.position.x - _self.position.x;
-            _anim.SetFloat("Direct", dir > 0 ? 1 : -1);
+            _anim.SetInteger("State", 0); // 0 = chạy
+            _anim.SetFloat("Direct", target.position.x - _self.position.x > 0 ? 1f : -1f);
         }
     }
 
     /// <summary>
-    /// Hàm sử dụng skill (attack).
+    /// Dùng skill tấn công mục tiêu.
     /// </summary>
     private void UseSkill(Transform target)
     {
         if (_anim != null)
         {
             _anim.SetInteger("State", 1); // 1 = animation skill
+            _anim.SetFloat("Direct", target.position.x - _self.position.x > 0 ? 1f : -1f);
         }
 
         // Thêm logic gây damage hoặc spawn skill object
-        Debug.Log($"{_self.name} dùng skill vào {target.name} lúc {Time.time}");
+        Debug.Log($"[{_self.name}] Dùng skill vào {target.name} lúc {Time.time:F2}");
     }
 }

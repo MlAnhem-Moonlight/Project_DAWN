@@ -9,7 +9,7 @@ namespace Spear.Movement
     /// NPC luôn di chuyển tới 1 waypoint duy nhất, 
     /// sau khi tới nơi thì waypoint đó sẽ đổi sang vị trí mới.
     /// </summary>
-    public class NeutralMovement : IMovementStrategy
+    public class NeutralMovement : Nodes
     {
         private Transform _transform;
         private Transform _waypoint;   // chỉ dùng 1 waypoint
@@ -35,9 +35,13 @@ namespace Spear.Movement
             _animator = animator;
         }
 
-        public void Tick()
+        public override NodeState Evaluate()
         {
-            
+            if (_transform.GetComponent<SpearBehavior>().spearState != AllyState.Neutral)
+            {
+                state = NodeState.FAILURE;
+                return state;
+            }
             if (_waiting)
             {
                 _waitCounter += Time.deltaTime;
@@ -77,6 +81,7 @@ namespace Spear.Movement
                     // Nếu Idle thì đứng yên
                 }
             }
+            return state = NodeState.RUNNING;
         }
 
         private void MoveWaypointToNewPosition()
