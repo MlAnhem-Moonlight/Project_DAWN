@@ -94,7 +94,7 @@ public class DealingDmg : MonoBehaviour
                 if (stats)
                 {
                     float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-                    //stats.TakeDamage(dmg); //Dealing damage
+                    stats.TakeDamage(dmg); //Dealing damage
                     switch (usingSkill)
                     {
                         case 1:
@@ -115,7 +115,7 @@ public class DealingDmg : MonoBehaviour
 
     void RageSkill(float duration)
     {
-        Debug.Log("Rage skill");
+        //Debug.Log("Rage skill");
         Rage(_atkSpd * 1.5f);
         StartCoroutine(RageDuration(duration));
     }
@@ -125,7 +125,7 @@ public class DealingDmg : MonoBehaviour
         yield return new WaitForSeconds(duration);
         Rage(_atkSpd);
         usingSkill = 0;
-        Debug.Log("End Rage");
+        //Debug.Log("End Rage");
     }
 
     void ApplyKnockback(GameObject target)
@@ -141,7 +141,7 @@ public class DealingDmg : MonoBehaviour
         float scalingFactor = 0.5f;
         float finalForce = knockbackForce * massFactor * scalingFactor;
         float knockbackDistance = finalForce * 0.7f;
-        Debug.Log($"Knockback {target.name}: Force={finalForce}, Distance={knockbackDistance}");
+        //Debug.Log($"Knockback {target.name}: Force={finalForce}, Distance={knockbackDistance}");
         targetRb.MovePosition(targetRb.position + knockbackDirection * knockbackDistance);
         usingSkill = 0; // reset sau khi dùng skill
     }

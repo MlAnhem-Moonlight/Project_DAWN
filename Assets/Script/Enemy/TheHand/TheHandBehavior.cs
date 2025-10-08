@@ -1,11 +1,13 @@
 ﻿using BehaviorTree;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class TheHandBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 2f;
+    public float scanRange = 100f;
     public float skillCD = 5f;
     public float attackSpeed = 1f; // đòn/giây  
     public UnityEngine.Animator animator;
@@ -36,7 +38,7 @@ public class TheHandBehavior : BhTree
         {
             new Sequence(new List<Nodes>
             {
-                new TheHandCheckTarget(transform, attackRange, target, "Human","Construction",animator),
+                new TheHandCheckTarget(transform, scanRange, target, "Human","Construction",animator),
                 new TheHandSetTarget(theHandMovement),
                 theHandAttack,
             }),
@@ -44,5 +46,18 @@ public class TheHandBehavior : BhTree
             theHandMovement,
         });
         return root;
+    }
+
+    /// <summary>
+    /// Vẽ Gizmo hiển thị phạm vi bảo vệ và tầm tấn công.
+    /// </summary>
+    private void OnDrawGizmos()
+    {
+        if (transform == null) return;
+
+        // Màu vàng cho phạm vi quét kẻ địch
+        Gizmos.color = new Color(1f, 1f, 0f, 0.3f);
+        Gizmos.DrawWireSphere(transform.position, scanRange);
+
     }
 }

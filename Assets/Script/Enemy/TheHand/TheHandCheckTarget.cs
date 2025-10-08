@@ -22,8 +22,12 @@ public class TheHandCheckTarget : Nodes
 
     public override NodeState Evaluate()
     {
-        Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction, _defaultTarget);
-
+        Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction);
+        Debug.Log($"[TheHandCheckTarget] Closest target: {(closestTarget != null ? closestTarget.name : "null")} isActive: {closestTarget.gameObject.activeInHierarchy}");
+        if (closestTarget != null && !closestTarget.gameObject.activeInHierarchy)
+        {
+            closestTarget = null;
+        }
         // Check if the closest target is within range
         if (closestTarget != null && Vector3.Distance(_transform.position, closestTarget.position) <= _range) //Mathf.Abs(_transform.position.x - closestTarget.position.x) <= _range
         {

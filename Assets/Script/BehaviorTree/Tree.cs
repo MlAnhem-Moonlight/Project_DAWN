@@ -69,6 +69,31 @@ namespace BehaviorTree
             //Debug.Log($"ClipLength={clipLength:F2}s, AttackInterval={attackInterval:F2}s, " +
             //          $"AttackSpeedMul={attackSpeedMultiplier:F2}");
         }
+
+        public void SetupAnimatorSpeedDirect(Animator animator, float attackSpeed, string clipName, string parameter)
+        {
+            float attackInterval = 1f / attackSpeed;
+            // Lấy độ dài clip gốc
+            float clipLength = 1f;
+            foreach (var clip in animator.runtimeAnimatorController.animationClips)
+            {
+                if (clip.name == clipName) // đúng tên clip
+                {
+                    clipLength = clip.length;
+                    Debug.Log($"Found {clipName} clip length: {clipLength}s");
+                    break;
+                }
+            }
+
+            // Công thức: cần tốc độ gấp clipLength/attackInterval
+            float attackSpeedMultiplier = clipLength / attackInterval;
+
+            // Gán vào parameter thay vì animator.speed
+            animator.SetFloat(parameter, attackSpeedMultiplier);
+
+            //Debug.Log($"ClipLength={clipLength:F2}s, AttackInterval={attackInterval:F2}s, " +
+            //          $"AttackSpeedMul={attackSpeedMultiplier:F2}");
+        }
     }
 
 }

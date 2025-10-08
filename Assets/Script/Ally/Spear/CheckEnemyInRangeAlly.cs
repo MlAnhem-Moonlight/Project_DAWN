@@ -28,11 +28,14 @@ public class CheckEnemyInRangeAlly : Nodes
         if (nearestEnemy != null)
         {
             parent.SetData("target", nearestEnemy); // lưu vào blackboard
+            parent?.parent?.SetData("target", nearestEnemy); // lưu vào blackboard của root (nếu có)
             state = NodeState.SUCCESS;
             return state;
         }
 
         parent.ClearData("target");
+        parent?.parent ?.ClearData("target");
+        _self.GetComponent<SpearBehavior>().currentState = AnimatorState.Idle;
         state = NodeState.FAILURE;
         return state;
     }

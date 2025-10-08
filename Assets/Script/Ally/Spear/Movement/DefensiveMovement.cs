@@ -14,19 +14,27 @@ namespace Spear.Movement
         private readonly float _offset;
         private readonly float _speed;
         private readonly float _patrolRadius;
+        private AnimationController _controller;
+        private float _atkRange;
 
-        public DefensiveMovement(Transform transform, Transform defensiveTarget, float offset, float speed, float patrolRadius)
+
+        public DefensiveMovement(Transform transform, Transform defensiveTarget, float offset, float speed, float patrolRadius, float atkRange)
         {
             _transform = transform;
             _defensiveTarget = defensiveTarget;
             _offset = offset;
             _speed = speed;
             _patrolRadius = patrolRadius;
+            _atkRange = atkRange;
+            _controller = _transform.GetComponent<AnimationController>();
         }
+
 
         public override NodeState Evaluate()
         {
-            if (_transform.GetComponent<SpearBehavior>().spearState != AllyState.Defensive)
+            if (_transform.GetComponent<SpearBehavior>().spearState != AllyState.Defensive 
+                || _transform.GetComponent<SpearBehavior>().currentState == AnimatorState.Attack 
+                || _transform.GetComponent<SpearBehavior>().currentState == AnimatorState.UsingSkill)
             {
                 state = NodeState.FAILURE;
                 return state;
@@ -38,16 +46,19 @@ namespace Spear.Movement
 
             // Tính khoảng cách hiện tại
             float distance = Vector2.Distance(_transform.position, targetPos);
-
+            if (parent?.GetData("target") != null) return state = NodeState.FAILURE;
             // Nếu ở trong phạm vi tuần tra thì không di chuyển
+            Debug.Log(parent?.GetData("target"));
             if (distance <= _patrolRadius)
             {
-                _transform.GetComponent<Animator>()?.SetInteger("State", 5);
-                _transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
+                //_transform.GetComponent<Animator>()?.SetInteger("State", 5);
+                //_transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
+                CheckMovement(targetPos, "Idle 1", "Idle 0");
                 return state = NodeState.FAILURE;
             }
-            _transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
-            _transform.GetComponent<Animator>()?.SetInteger("State",0);
+            //_transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
+            //_transform.GetComponent<Animator>()?.SetInteger("State",0);
+            CheckMovement(targetPos, "Run2 1", "Run2");
             // Nếu ra ngoài phạm vi tuần tra -> di chuyển về
             _transform.position = Vector3.MoveTowards(
                 _transform.position,
@@ -59,5 +70,10 @@ namespace Spear.Movement
             
         }
 
+        private void CheckMovement(Vector3 targetPos, string state1, string state2)
+        {
+            if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state1);
+            else _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state2);
+        }
     }
 }

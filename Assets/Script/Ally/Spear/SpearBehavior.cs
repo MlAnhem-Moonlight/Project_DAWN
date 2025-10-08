@@ -4,11 +4,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AnimatorState
+{
+    Idle,
+    Walk,
+    Attack,
+    Die,
+    Running,
+    UsingSkill
+}
+
 [RequireComponent(typeof(Transform))]
 public class SpearBehavior : BhTree
 {
     [Header("Settings")]
     public AllyState spearState = AllyState.Neutral;
+    public AnimatorState currentState = AnimatorState.Idle;
     public float speed = 10f;
     public float defensiveOffset = 1.5f;
     public float patrolRadius = 5f;
@@ -29,29 +40,40 @@ public class SpearBehavior : BhTree
     private AggressiveMovement _aggressiveMovement;
     private DefensiveMovement _defensiveMovement;
     private NeutralMovement _neutralMovement;
+    private DefensiveAction _defensiveAction;
+
+    public void ChangeState(AnimatorState state)
+    {
+        currentState = state;
+    }
 
     protected override Nodes SetupTree()
     {
         speed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSPD : 10f;
-
-        _aggressiveMovement = new AggressiveMovement(transform, speed);
-        _defensiveMovement = new DefensiveMovement(transform, defensiveTarget, defensiveOffset, speed, patrolRadius);
+        skillCD = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSkillCD : 2.9f;
+        attackSpeed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentAtkSpd : 1f;
+        SetupAnimatorSpeedDirect(animator, attackSpeed,"Attack 0", "AttackSpd");
+        _aggressiveMovement = new AggressiveMovement(transform, speed, atkRange, skillCD);
+        _defensiveMovement = new DefensiveMovement(transform, 
+                                                    defensiveTarget, 
+                                                    defensiveOffset, 
+                                                    speed, 
+                                                    patrolRadius, 
+                                                    atkRange);
         _neutralMovement = new NeutralMovement(transform, waypoints, speed / 2, startPos, endPos, animator);
-
+        _defensiveAction =  new DefensiveAction(transform,
+                    defensiveTarget,
+                    patrolRadius,
+                    atkRange,
+                    speed,
+                    skillCD,
+                    animator,
+                    defensiveOffset);
         Nodes root = new Selector(new List<Nodes>
             {
-                 new Selector(new List<Nodes> // Aggressive behavior branch
+                 new Sequence(new List<Nodes> // Aggressive behavior branch
                  {
-                    new Sequence(new List<Nodes>
-                    {
-                        new Condition(() => spearState == AllyState.Aggressive),
-                        new Action(() => {
-                            _currentStrategy = _aggressiveMovement;
-                            _currentStrategy.Tick();
-                            return NodeState.SUCCESS;
-                        })
-                    }), //Movement
-                    //Find nearest enemy in range ? attack : move to nearest enemy
+                    _aggressiveMovement, //Movement
                  }),
                  new Selector(new List<Nodes> // Defensive behavior branch
                  {
@@ -63,13 +85,7 @@ public class SpearBehavior : BhTree
                         //Check Range from transform to Defensive Target, cant go too far from it
                         new CheckEnemyInRangeAlly(transform, mainBaseRadius, LayerMask.GetMask("Demon")), // Indicate that an enemy was found and "attacked".)
                         //&& check if any monster in range ? attack(chase if out of attack range) : patrol around
-                        new DefensiveAction(transform, 
-                                            defensiveTarget, 
-                                            patrolRadius, 
-                                            atkRange, 
-                                            speed, 
-                                            animator,
-                                            defensiveOffset) // If no enemy in range, patrol around defensive target
+                        _defensiveAction// If no enemy in range, patrol around defensive target
                     }),
                  }),
                  _neutralMovement //Movement
@@ -89,7 +105,7 @@ public class SpearBehavior : BhTree
     /// </summary>
     private void OnDrawGizmos()
     {
-        if (transform == null) return;
+        if (transform == null || defensiveTarget == null) return;
         Vector3 targetDef = defensiveTarget.position + Vector3.left * defensiveOffset;
         // Màu xanh lam cho phạm vi bảo vệ
         Gizmos.color = new Color(0f, 0.5f, 1f, 0.3f);

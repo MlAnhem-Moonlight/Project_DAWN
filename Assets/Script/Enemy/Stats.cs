@@ -105,23 +105,24 @@ public class Stats : MonoBehaviour
     private IEnumerator DebuffRoutine(System.Action apply, System.Action revert, float duration, string log)
     {
         apply?.Invoke();
-        Debug.Log($"{log} trong {duration}s");
+        //Debug.Log($"{log} trong {duration}s");
         yield return new WaitForSeconds(duration);
         revert?.Invoke();
-        Debug.Log($"{gameObject.name} hết debuff");
+        //Debug.Log($"{gameObject.name} hết debuff");
     }
 
 
     private void Die()
     {
         Debug.Log($"{gameObject.name} đã chết!");
+        gameObject.SetActive(false);
         // ở đây bạn có thể gọi animation, destroy, event...
     }
 
     public void Rage(float atkSpdIncrease)
     {
         currentAtkSpd = atkSpdIncrease;
-        Debug.Log($"{gameObject.name} tăng tốc độ đánh : {currentAtkSpd}");
+        //Debug.Log($"{gameObject.name} tăng tốc độ đánh : {currentAtkSpd}");
     }
 
     public void SetDmg()
@@ -151,7 +152,7 @@ public class Stats : MonoBehaviour
     public void Attack()
     {
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-
+        //Debug.Log("Attack");
     }
 
     public void UseSkill()

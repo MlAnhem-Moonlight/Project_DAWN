@@ -28,31 +28,38 @@ public class TheHandAttack : Nodes
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
-        if (target == null)
-            return state = NodeState.FAILURE;
 
-        // Xác định hướng để flip/rotate
-        float dir = _transform.position.x - target.position.x > 0 ? -1f : 1f;
-        _animator.SetFloat("Direct", dir);
-        //Debug.Log($"Attacking:  {_isAttacking}");
-        if (_isAttacking) // nếu đang đánh thì không làm gì
+        // 🔹 Kiểm tra target null hoặc bị ẩn
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
-            //Debug.Log("In state attacking");
-            return state = NodeState.RUNNING;
+            parent.ClearData("target");
+            return state = NodeState.FAILURE;
         }
 
-        //Debug.Log($"CD : {Time.time} : {nextSkillTime}");
-        //Debug.Log($"Target layer: {LayerMask.LayerToName(target.gameObject.layer)}");
-        // === Quyết định dùng skill hay đánh thường ===
+        Stats stats = target.GetComponent<Stats>();
+        if (stats == null || stats.currentHP <= 0)
+        {
+            parent.ClearData("target");
+            return state = NodeState.FAILURE;
+        }
+
+        // ====== Vẫn còn hoạt động, tiến hành đánh ======
+        float dir = _transform.position.x - target.position.x > 0 ? -1f : 1f;
+        _animator.SetFloat("Direct", dir);
+
+        if (_isAttacking)
+            return state = NodeState.RUNNING;
+
         if (Time.time >= nextSkillTime && target.gameObject.layer == LayerMask.NameToLayer("Human"))
         {
-            // Phát skill
-            _transform.gameObject.GetComponentInChildren<DealingDmg>()?.SetUsingSkill(2); // dùng skill Rage
+            _transform.gameObject.GetComponentInChildren<DealingDmg>()?.SetUsingSkill(2);
             nextSkillTime += _skillCD;
             Debug.Log("Using skill");
         }
+
         _animator.SetInteger("State", 1);
         _isAttacking = true;
         return state = NodeState.RUNNING;
     }
+
 }

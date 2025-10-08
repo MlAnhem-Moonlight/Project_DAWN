@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7632967097304233221}
   - component: {fileID: 994714012947197654}
   - component: {fileID: 745418574626960579}
+  - component: {fileID: 9208890349712012610}
   m_Layer: 6
   m_Name: Spear
   m_TagString: Untagged
@@ -191,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spearState: 2
+  currentState: 0
   speed: 2
   defensiveOffset: 1.5
   patrolRadius: 5
@@ -198,14 +200,13 @@ MonoBehaviour:
   defensiveTarget: {fileID: 0}
   mainBase: {fileID: 0}
   camp: {fileID: 0}
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: {fileID: 0}
   startPos: {fileID: 0}
   endPos: {fileID: 0}
   animator: {fileID: 0}
+  attackSpeed: 1
+  skillCD: 2.9
+  atkRange: 3
 --- !u!114 &745418574626960579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +239,16 @@ MonoBehaviour:
   shieldCap: 20
   skillCdMultiplier: 0.96
   skillCdMinFactor: 0.6
+--- !u!114 &9208890349712012610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782325935010371254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34d967eb9e4a5748805804a3ec3e73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAnimation: 

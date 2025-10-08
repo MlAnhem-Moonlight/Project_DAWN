@@ -65,6 +65,7 @@
     <Compile Include="Assets\Guide\ResourceAllocationGA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvestable.cs" />
+    <Compile Include="Assets\OnFinish.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\CastSpellNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Script\Environment\Interact\ParentInheritance.cs" />
     <Compile Include="Assets\Script\Environment\IngridientManager.cs" />
+    <Compile Include="Assets\OnBegin.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvest.cs" />
     <Compile Include="Assets\Guide\ResourceAllocationDE.cs" />
     <Compile Include="Assets\Script\State.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearStats.cs" />
+    <Compile Include="Assets\Script\Mics\LifetimeTracker.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\IMovementStrategy.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Action.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandBehavior.cs" />
@@ -171,6 +174,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Script\Environment\Deer\DeerMovement.cs" />
+    <Compile Include="Assets\Script\Mics\AnimationController.cs" />
     <Compile Include="Assets\Script\Environment\Ingredient.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\SetTargetNode.cs" />
     <Compile Include="Assets\Script\Environment\GAController.cs" />
