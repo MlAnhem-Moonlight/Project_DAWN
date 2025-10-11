@@ -30,15 +30,15 @@ public class TheHandBehavior : BhTree
         attackSpeed = GetComponent<MeleeDPSStats>() ? GetComponent<MeleeDPSStats>().currentAtkSpd : 1f;
 
         SetupAttackSpeed(animator, attackSpeed);
-        target = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
-        theHandMovement = new TheHandMovement(transform, speed, attackRange, animator, target);
+        target = GameObject.FindGameObjectWithTag("DefaultTarget").transform;
+        theHandMovement = new TheHandMovement(transform, speed, attackRange, animator, target, GameObject.FindGameObjectWithTag("DefaultTarget").transform);
         theHandAttack = new TheHandAttack(transform, animator, isAttacking, skillCD);
 
         Nodes root = new Selector(new List<Nodes>
         {
             new Sequence(new List<Nodes>
             {
-                new TheHandCheckTarget(transform, scanRange, target, "Human","Construction",animator),
+                new TheHandCheckTarget(transform, attackRange, target, "Human","Construction",animator),
                 new TheHandSetTarget(theHandMovement),
                 theHandAttack,
             }),

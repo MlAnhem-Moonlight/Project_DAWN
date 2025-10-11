@@ -6,19 +6,20 @@ using UnityEngine;
 public class TheHandMovement : Nodes
 {
     private Transform _transform;
-    private Transform _target;
+    private Transform _target, _defaultTarget;
     private Animator _animator;
     private float _speed;
     private float _range;
 
 
-    public TheHandMovement(Transform transform, float speed, float range, Animator animator, Transform target)
+    public TheHandMovement(Transform transform, float speed, float range, Animator animator, Transform target, Transform defaultTarget)
     {
         _transform = transform;
         _speed = speed;
         _range = range;
         _target = target;
         _animator = animator;
+        _defaultTarget = defaultTarget;
 
     }
 
@@ -30,13 +31,10 @@ public class TheHandMovement : Nodes
     public override NodeState Evaluate()
     {
         _animator.SetInteger("State", 0);
-
-        //Debug.Log("TheHandMovement");
-        if (_target == null)
+        Debug.Log(_target);
+        if (_target == null || _target.gameObject.activeInHierarchy == false)
         {
-            state = NodeState.FAILURE;
-
-            return state;
+            _target = _defaultTarget;
         }
         float dir = _transform.position.x - _target.position.x > 0 ? -1f : 1f;
         _animator.SetFloat("Direct", dir);

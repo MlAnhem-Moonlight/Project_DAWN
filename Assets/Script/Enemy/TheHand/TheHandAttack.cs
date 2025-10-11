@@ -17,7 +17,6 @@ public class TheHandAttack : Nodes
         _isAttacking = isAttacking;
         _skillCD = skillCD;
         nextSkillTime += _skillCD;
-
     }
 
     public void resetAttacking()
@@ -28,8 +27,6 @@ public class TheHandAttack : Nodes
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
-
-        // 🔹 Kiểm tra target null hoặc bị ẩn
         if (target == null || !target.gameObject.activeInHierarchy)
         {
             parent.ClearData("target");
@@ -43,7 +40,6 @@ public class TheHandAttack : Nodes
             return state = NodeState.FAILURE;
         }
 
-        // ====== Vẫn còn hoạt động, tiến hành đánh ======
         float dir = _transform.position.x - target.position.x > 0 ? -1f : 1f;
         _animator.SetFloat("Direct", dir);
 
@@ -54,12 +50,10 @@ public class TheHandAttack : Nodes
         {
             _transform.gameObject.GetComponentInChildren<DealingDmg>()?.SetUsingSkill(2);
             nextSkillTime += _skillCD;
-            Debug.Log("Using skill");
         }
 
         _animator.SetInteger("State", 1);
         _isAttacking = true;
         return state = NodeState.RUNNING;
     }
-
 }

@@ -22,26 +22,50 @@ public class TheHandCheckTarget : Nodes
 
     public override NodeState Evaluate()
     {
-        Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction);
-        Debug.Log($"[TheHandCheckTarget] Closest target: {(closestTarget != null ? closestTarget.name : "null")} isActive: {closestTarget.gameObject.activeInHierarchy}");
-        if (closestTarget != null && !closestTarget.gameObject.activeInHierarchy)
+        Transform currentTarget = parent.GetData("target") as Transform;
+
+        // Nếu đã có target và nó vẫn còn tồn tại
+        if (currentTarget != null && currentTarget.gameObject.activeInHierarchy)
         {
-            closestTarget = null;
-        }
-        // Check if the closest target is within range
-        if (closestTarget != null && Vector3.Distance(_transform.position, closestTarget.position) <= _range) //Mathf.Abs(_transform.position.x - closestTarget.position.x) <= _range
-        {
-            _animator.SetFloat("Direct", _transform.position.x - closestTarget.position.x > 0 ? -1 : 1);
-            parent.SetData("target", closestTarget);
-            state = NodeState.SUCCESS;
-        }
-        else
-        {
-            _animator.SetFloat("Direct", _transform.position.x - _defaultTarget.position.x > 0 ? -1 : 1);
-            parent.SetData("target", _defaultTarget);
-            state = NodeState.FAILURE;
+            Stats stats = currentTarget.GetComponent<Stats>();
+            if (stats != null && stats.currentHP > 0)
+            {
+                float distance = Vector2.Distance(_transform.position, currentTarget.position);
+
+                // Kiểm tra hướng
+                _animator.SetFloat("Direct", _transform.position.x - currentTarget.position.x > 0 ? -1 : 1);
+
+                // Nếu trong tầm đánh -> SUCCESS
+                if (distance <= _range)
+                {
+                    state = NodeState.SUCCESS;
+                    return state;
+                }
+
+                // Ngoài tầm đánh -> FAILURE để di chuyển lại gần
+                state = NodeState.FAILURE;
+                return state;
+            }
         }
 
+        // Nếu target không hợp lệ => tìm mới
+        Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction);
+        if (closestTarget != null && closestTarget.gameObject.activeInHierarchy)
+        {
+            Stats stats = closestTarget.GetComponent<Stats>();
+            if (stats != null && stats.currentHP > 0)
+            {
+                _animator.SetFloat("Direct", _transform.position.x - closestTarget.position.x > 0 ? -1 : 1);
+                parent.SetData("target", closestTarget);
+                state = NodeState.FAILURE; // mới phát hiện target mới => cần di chuyển tới
+                return state;
+            }
+        }
+
+        // Không có mục tiêu khả dụng, fallback về default
+        _animator.SetFloat("Direct", _transform.position.x - _defaultTarget.position.x > 0 ? -1 : 1);
+        parent.SetData("target", _defaultTarget);
+        state = NodeState.FAILURE;
         return state;
     }
 }

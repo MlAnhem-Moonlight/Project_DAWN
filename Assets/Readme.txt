@@ -40,3 +40,4 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 			. Bổ xung callback đảm bảo animation kết thúc thì mới chạy tiếp (V)
 		+ neutral: di chuyển xung quanh khi cắm trại(V)
 		+ phần defensive chưa khớp anim và chí số trong Stats 
+	- Thehand: Bug hitbox, anim bị lệch, 
