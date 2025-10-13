@@ -69,6 +69,52 @@ public class DealingDmg : MonoBehaviour
 
     void Update()
     {
+        //// Nếu animator đã gửi tín hiệu đánh
+        //if (pendingAttack)
+        //{
+        //    pendingAttack = false; // reset
+
+        //    var box = GetComponent<BoxCollider2D>();
+        //    Vector2 center = (Vector2)transform.position + box.offset;
+        //    Vector2 size = box.size;
+        //    Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, targetLayers);
+        //    //// Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
+        //    //Collider2D[] hits = Physics2D.OverlapBoxAll(
+        //    //    transform.position,
+        //    //    GetComponent<BoxCollider2D>().size,
+        //    //    0f,
+        //    //    targetLayers);
+        //    //Debug.Log($"Detected {hits.Length} hits");
+        //    foreach (var hit in hits)
+        //    {
+        //        Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
+        //        if (hit.gameObject == gameObject) continue;
+                
+        //        Stats stats = hit.GetComponent<Stats>();
+        //        if (stats)
+        //        {
+        //            float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
+        //            stats.TakeDamage(dmg); //Dealing damage
+        //            switch (usingSkill)
+        //            {
+        //                case 1:
+        //                    ApplyKnockback(hit.gameObject);
+        //                    break;
+        //                case 2:
+        //                    RageSkill(_rageDuration);
+        //                    break;
+        //                default:
+
+        //                    break;
+        //            }
+        //            //Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
+        //        }
+        //    }
+        //}
+    }
+
+    void LateUpdate()
+    {
         // Nếu animator đã gửi tín hiệu đánh
         if (pendingAttack)
         {
@@ -89,7 +135,7 @@ public class DealingDmg : MonoBehaviour
             {
                 Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
-                
+
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
@@ -112,6 +158,7 @@ public class DealingDmg : MonoBehaviour
             }
         }
     }
+
 
     void RageSkill(float duration)
     {

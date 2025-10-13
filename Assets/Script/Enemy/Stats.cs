@@ -152,7 +152,7 @@ public class Stats : MonoBehaviour
     public void Attack()
     {
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-        //Debug.Log("Attack");
+        Debug.Log("Attack");
     }
 
     public void UseSkill()

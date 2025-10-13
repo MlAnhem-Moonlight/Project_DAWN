@@ -1,29 +1,34 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using UnityEngine;
 
 public class TheHandSetTarget : Nodes
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private TheHandMovement _theHandMovement;
+    private Transform _transform;
+    private float _range;
 
-    public TheHandSetTarget(TheHandMovement theHandMovement)
+    public TheHandSetTarget(TheHandMovement theHandMovement, Transform transform, float range)
     {
         _theHandMovement = theHandMovement;
+        _transform = transform;
+        _range = range;
     }
 
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
-        if (target != null)
-        {
-            _theHandMovement.SetTarget(target);
-            state = NodeState.SUCCESS;
-        }
-        else
-        {
-            state = NodeState.FAILURE;
-        }
 
+        _theHandMovement.SetTarget(target);
+        float distance = Vector2.Distance(_transform.position, target.position);
+
+        // Nếu trong tầm đánh -> SUCCESS
+        if (distance <= _range)
+        {
+            state = NodeState.SUCCESS;
+            return state;
+        }
+        state = NodeState.FAILURE;
         return state;
     }
 }

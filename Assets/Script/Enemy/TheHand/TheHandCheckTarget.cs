@@ -23,7 +23,7 @@ public class TheHandCheckTarget : Nodes
     public override NodeState Evaluate()
     {
         Transform currentTarget = parent.GetData("target") as Transform;
-
+        Debug.Log("Checking target: " + (currentTarget != null ? currentTarget.name : "null"));
         // Nếu đã có target và nó vẫn còn tồn tại
         if (currentTarget != null && currentTarget.gameObject.activeInHierarchy)
         {
@@ -35,15 +35,8 @@ public class TheHandCheckTarget : Nodes
                 // Kiểm tra hướng
                 _animator.SetFloat("Direct", _transform.position.x - currentTarget.position.x > 0 ? -1 : 1);
 
-                // Nếu trong tầm đánh -> SUCCESS
-                if (distance <= _range)
-                {
-                    state = NodeState.SUCCESS;
-                    return state;
-                }
-
                 // Ngoài tầm đánh -> FAILURE để di chuyển lại gần
-                state = NodeState.FAILURE;
+                state = NodeState.SUCCESS;
                 return state;
             }
         }

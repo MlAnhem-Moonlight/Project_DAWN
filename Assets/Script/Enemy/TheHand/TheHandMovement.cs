@@ -40,17 +40,16 @@ public class TheHandMovement : Nodes
         _animator.SetFloat("Direct", dir);
         float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-        _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
+        
 
-        if (Vector3.Distance(_transform.position, targetPosition) < 0.3f)
+        if (Vector3.Distance(_transform.position, targetPosition) < _range)
         {
-            state = NodeState.SUCCESS;
-
+            state = NodeState.FAILURE;
         }
         else
         {
+            _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
             state = NodeState.RUNNING;
-
         }
 
         return state;

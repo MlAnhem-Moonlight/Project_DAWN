@@ -7,7 +7,6 @@ public class TheHandBehavior : BhTree
 {
     public float speed = 10f;
     public float attackRange = 2f;
-    public float scanRange = 100f;
     public float skillCD = 5f;
     public float attackSpeed = 1f; // đòn/giây  
     public UnityEngine.Animator animator;
@@ -38,8 +37,8 @@ public class TheHandBehavior : BhTree
         {
             new Sequence(new List<Nodes>
             {
-                new TheHandCheckTarget(transform, attackRange, target, "Human","Construction",animator),
-                new TheHandSetTarget(theHandMovement),
+                new TheHandCheckTarget(transform, attackRange + 2f, target, "Human","Construction",animator),
+                new TheHandSetTarget(theHandMovement,transform, attackRange),
                 theHandAttack,
             }),
 
@@ -57,7 +56,7 @@ public class TheHandBehavior : BhTree
 
         // Màu vàng cho phạm vi quét kẻ địch
         Gizmos.color = new Color(1f, 1f, 0f, 0.3f);
-        Gizmos.DrawWireSphere(transform.position, scanRange);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
 
     }
 }

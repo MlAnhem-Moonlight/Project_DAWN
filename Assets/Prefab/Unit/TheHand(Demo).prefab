@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cdb56a728c6474d9a69437fcb077c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
   baseStats: {fileID: 11400000, guid: 9c5f7d099d00c8a4db68ae209cfbeb6a, type: 2}
   currentHP: 0
   currentDMG: 0
@@ -219,8 +221,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
-  level: 1
-  maxLevel: 8
+  currentSkillDuration: 0
   hpLinear: 25
   dmgMultiplier: 1.1
   atkSpdMultiplier: 1.04
@@ -255,12 +256,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8579773715081558179}
-  - component: {fileID: 2886045691033659830}
+  - component: {fileID: 2154923747338101727}
   - component: {fileID: 6362623516715296329}
   m_Layer: 7
   m_Name: AttackBox
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -273,13 +274,13 @@ Transform:
   m_GameObject: {fileID: 7820319488651036133}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.435, y: 0.304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 799796206133411358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2886045691033659830
+--- !u!61 &2154923747338101727
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,11 +310,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49841326, y: 0.3224232}
+  m_Offset: {x: 0.023145676, y: 0.11927402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -323,7 +324,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32713544, y: 0.86181873}
+  m_Size: {x: 0.38404465, y: 1.0961311}
   m_EdgeRadius: 0
 --- !u!114 &6362623516715296329
 MonoBehaviour:
