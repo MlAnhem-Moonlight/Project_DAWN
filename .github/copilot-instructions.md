@@ -2,7 +2,7 @@
 - Project name: Project_DAWN
 - Unity version: Unity 6000.0.44f1
 - Active game object:
-  - Name: AttackBox
+  - Name: Canvas
   - Tag: Untagged
-  - Layer: Demon
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

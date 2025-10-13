@@ -7,9 +7,9 @@ namespace BehaviorTree
 
     public abstract class BhTree : MonoBehaviour
     {
-        private Nodes _root = null;
+        public Nodes _root = null;
 
-        protected void Start()
+        protected virtual void Start()
         {
             _root = SetupTree();
         }

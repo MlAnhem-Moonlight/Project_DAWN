@@ -1,0 +1,4417 @@
+fileFormatVersion: 2
+guid: 4d577097b6a5366489fd686de8b87806
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2586897719047682689
+    second: Spear Level 3A above_0
+  - first:
+      213: 561442642622365876
+    second: Spear Level 3A above_1
+  - first:
+      213: 6891769119564045935
+    second: Spear Level 3A above_2
+  - first:
+      213: 8423986492590032022
+    second: Spear Level 3A above_3
+  - first:
+      213: 8080233080935969354
+    second: Spear Level 3A above_4
+  - first:
+      213: -3036578759711203385
+    second: Spear Level 3A above_5
+  - first:
+      213: 5415213856167301609
+    second: Spear Level 3A above_6
+  - first:
+      213: 2875544504121629623
+    second: Spear Level 3A above_7
+  - first:
+      213: 7080917665468657280
+    second: Spear Level 3A above_8
+  - first:
+      213: 155212726069462400
+    second: Spear Level 3A above_9
+  - first:
+      213: 929006991162265132
+    second: Spear Level 3A above_10
+  - first:
+      213: -6569676945478649862
+    second: Spear Level 3A above_11
+  - first:
+      213: 6461911649701075928
+    second: Spear Level 3A above_12
+  - first:
+      213: 566289088143044476
+    second: Spear Level 3A above_13
+  - first:
+      213: 4782974274807396437
+    second: Spear Level 3A above_14
+  - first:
+      213: 7669061321523876171
+    second: Spear Level 3A above_15
+  - first:
+      213: -744594436148207666
+    second: Spear Level 3A above_16
+  - first:
+      213: 3669011166272133407
+    second: Spear Level 3A above_17
+  - first:
+      213: 5855769691804295119
+    second: Spear Level 3A above_18
+  - first:
+      213: 4195573567736276482
+    second: Spear Level 3A above_19
+  - first:
+      213: -6742903146608768207
+    second: Spear Level 3A above_20
+  - first:
+      213: -6979412360570732357
+    second: Spear Level 3A above_21
+  - first:
+      213: -7309991958061969516
+    second: Spear Level 3A above_22
+  - first:
+      213: 1656602151256777062
+    second: Spear Level 3A above_23
+  - first:
+      213: -5592721451334616952
+    second: Spear Level 3A above_24
+  - first:
+      213: 8701358995038397328
+    second: Spear Level 3A above_25
+  - first:
+      213: -211983899132325595
+    second: Spear Level 3A above_26
+  - first:
+      213: 8292450669986167857
+    second: Spear Level 3A above_27
+  - first:
+      213: -3565086751491733677
+    second: Spear Level 3A above_28
+  - first:
+      213: -1139309703398435027
+    second: Spear Level 3A above_29
+  - first:
+      213: -5139117799694121842
+    second: Spear Level 3A above_30
+  - first:
+      213: 2431272190753552250
+    second: Spear Level 3A above_31
+  - first:
+      213: -3364120195934051074
+    second: Spear Level 3A above_32
+  - first:
+      213: 5995241212838238528
+    second: Spear Level 3A above_33
+  - first:
+      213: 2237455468075207501
+    second: Spear Level 3A above_34
+  - first:
+      213: 3630175981113359374
+    second: Spear Level 3A above_35
+  - first:
+      213: -6586795489548099165
+    second: Spear Level 3A above_36
+  - first:
+      213: 8706518161700306566
+    second: Spear Level 3A above_37
+  - first:
+      213: -7947571752838686306
+    second: Spear Level 3A above_38
+  - first:
+      213: -4241700021636421058
+    second: Spear Level 3A above_39
+  - first:
+      213: -3049748426252509519
+    second: Spear Level 3A above_40
+  - first:
+      213: -6776992683828824979
+    second: Spear Level 3A above_41
+  - first:
+      213: -8717926914913877056
+    second: Spear Level 3A above_42
+  - first:
+      213: -7530876457797688430
+    second: Spear Level 3A above_43
+  - first:
+      213: -3731168556321049191
+    second: Spear Level 3A above_44
+  - first:
+      213: -6392307527779545159
+    second: Spear Level 3A above_45
+  - first:
+      213: -1482865565541446072
+    second: Spear Level 3A above_46
+  - first:
+      213: -6060702720338260532
+    second: Spear Level 3A above_47
+  - first:
+      213: -4912048494452604896
+    second: Spear Level 3A above_48
+  - first:
+      213: -7873007035475253522
+    second: Spear Level 3A above_49
+  - first:
+      213: 6896346615416838679
+    second: Spear Level 3A above_50
+  - first:
+      213: 7447145570151516090
+    second: Spear Level 3A above_51
+  - first:
+      213: -2927982542075916513
+    second: Spear Level 3A above_52
+  - first:
+      213: 527943697469135949
+    second: Spear Level 3A above_53
+  - first:
+      213: 8030034684061271750
+    second: Spear Level 3A above_54
+  - first:
+      213: -476167227697301169
+    second: Spear Level 3A above_55
+  - first:
+      213: 4367159748760309823
+    second: Spear Level 3A above_56
+  - first:
+      213: 591816769469848
+    second: Spear Level 3A above_57
+  - first:
+      213: -3528857390747355931
+    second: Spear Level 3A above_58
+  - first:
+      213: -7192806674081406163
+    second: Spear Level 3A above_59
+  - first:
+      213: -8382622764920533926
+    second: Spear Level 3A above_60
+  - first:
+      213: 2456874383261579732
+    second: Spear Level 3A above_61
+  - first:
+      213: -5274071664892189723
+    second: Spear Level 3A above_62
+  - first:
+      213: -3814806727261712697
+    second: Spear Level 3A above_63
+  - first:
+      213: -1123750640547279971
+    second: Spear Level 3A above_64
+  - first:
+      213: -7214123784619652685
+    second: Spear Level 3A above_65
+  - first:
+      213: -8511350980657567515
+    second: Spear Level 3A above_66
+  - first:
+      213: -9126096221386690014
+    second: Spear Level 3A above_67
+  - first:
+      213: 8750335827645178238
+    second: Spear Level 3A above_68
+  - first:
+      213: -2219493270280349626
+    second: Spear Level 3A above_69
+  - first:
+      213: -1326128790890991841
+    second: Spear Level 3A above_70
+  - first:
+      213: 7631749234548051347
+    second: Spear Level 3A above_71
+  - first:
+      213: 1204624235632304122
+    second: Spear Level 3A above_72
+  - first:
+      213: -6966140477059759601
+    second: Spear Level 3A above_73
+  - first:
+      213: 3488333221289267768
+    second: Spear Level 3A above_74
+  - first:
+      213: 8570888078009151765
+    second: Spear Level 3A above_75
+  - first:
+      213: 853585047119877649
+    second: Spear Level 3A above_76
+  - first:
+      213: 3988262050933929324
+    second: Spear Level 3A above_77
+  - first:
+      213: -5530437895872919778
+    second: Spear Level 3A above_78
+  - first:
+      213: 7922534739797362105
+    second: Spear Level 3A above_79
+  - first:
+      213: 1681867768285114794
+    second: Spear Level 3A above_80
+  - first:
+      213: 1162136373982243250
+    second: Spear Level 3A above_81
+  - first:
+      213: -4688003208550271233
+    second: Spear Level 3A above_82
+  - first:
+      213: 5858296908982848053
+    second: Spear Level 3A above_83
+  - first:
+      213: -3924076520145077853
+    second: Spear Level 3A above_84
+  - first:
+      213: -1970294539142721364
+    second: Spear Level 3A above_85
+  - first:
+      213: -2983037029084042192
+    second: Spear Level 3A above_86
+  - first:
+      213: 4019696989588494162
+    second: Spear Level 3A above_87
+  - first:
+      213: 98647599761041936
+    second: Spear Level 3A above_88
+  - first:
+      213: -2112647190922060248
+    second: Spear Level 3A above_89
+  - first:
+      213: -8718627009007368229
+    second: Spear Level 3A above_90
+  - first:
+      213: 1884863459735041004
+    second: Spear Level 3A above_91
+  - first:
+      213: 531563876024994176
+    second: Spear Level 3A above_92
+  - first:
+      213: -9103485121316601740
+    second: Spear Level 3A above_93
+  - first:
+      213: 1668351011306896368
+    second: Spear Level 3A above_94
+  - first:
+      213: 7454377023549521166
+    second: Spear Level 3A above_95
+  - first:
+      213: 2797213201383898495
+    second: Spear Level 3A above_96
+  - first:
+      213: 4586032741926824926
+    second: Spear Level 3A above_97
+  - first:
+      213: 6795479263226086122
+    second: Spear Level 3A above_98
+  - first:
+      213: 33045169051923916
+    second: Spear Level 3A above_99
+  - first:
+      213: 3102270857520293740
+    second: Spear Level 3A above_100
+  - first:
+      213: 3741906473095789027
+    second: Spear Level 3A above_101
+  - first:
+      213: -3958213255881227877
+    second: Spear Level 3A above_102
+  - first:
+      213: -6927079369821901165
+    second: Spear Level 3A above_103
+  - first:
+      213: -5827046319755477268
+    second: Spear Level 3A above_104
+  - first:
+      213: -18293185747152304
+    second: Spear Level 3A above_105
+  - first:
+      213: -1202908630341990572
+    second: Spear Level 3A above_106
+  - first:
+      213: -2478952509087607775
+    second: Spear Level 3A above_107
+  - first:
+      213: 6783364870155074301
+    second: Spear Level 3A above_108
+  - first:
+      213: 2518097834126652506
+    second: Spear Level 3A above_109
+  - first:
+      213: 7125111770428463060
+    second: Spear Level 3A above_110
+  - first:
+      213: -2131056207971232848
+    second: Spear Level 3A above_111
+  - first:
+      213: -1193556874871888830
+    second: Spear Level 3A above_112
+  - first:
+      213: 8386431593846343524
+    second: Spear Level 3A above_113
+  - first:
+      213: -4743009256430169601
+    second: Spear Level 3A above_114
+  - first:
+      213: -2613451031333541738
+    second: Spear Level 3A above_115
+  - first:
+      213: -2055038382714457351
+    second: Spear Level 3A above_116
+  - first:
+      213: -2595037605425003477
+    second: Spear Level 3A above_117
+  - first:
+      213: 2065754252347962324
+    second: Spear Level 3A above_118
+  - first:
+      213: 9149568638946611530
+    second: Spear Level 3A above_119
+  - first:
+      213: 2477543217123501997
+    second: Spear Level 3A above_120
+  - first:
+      213: 4489056166820876174
+    second: Spear Level 3A above_121
+  - first:
+      213: 9056032363211369602
+    second: Spear Level 3A above_122
+  - first:
+      213: -4446340392857973007
+    second: Spear Level 3A above_123
+  - first:
+      213: -3329527082138897387
+    second: Spear Level 3A above_124
+  - first:
+      213: -1871067661257941773
+    second: Spear Level 3A above_125
+  - first:
+      213: -6745396627169002609
+    second: Spear Level 3A above_126
+  - first:
+      213: 7237591594471849399
+    second: Spear Level 3A above_127
+  - first:
+      213: 1736804476144472241
+    second: Spear Level 3A above_128
+  - first:
+      213: -7316965599491527374
+    second: Spear Level 3A above_129
+  - first:
+      213: 392539584041210629
+    second: Spear Level 3A above_130
+  - first:
+      213: 6176135009544567483
+    second: Spear Level 3A above_131
+  - first:
+      213: 2177992105205799567
+    second: Spear Level 3A above_132
+  - first:
+      213: 861013728621946765
+    second: Spear Level 3A above_133
+  - first:
+      213: 909903382226492039
+    second: Spear Level 3A above_134
+  - first:
+      213: 6978524880113871903
+    second: Spear Level 3A above_135
+  - first:
+      213: -1190551903130221516
+    second: Spear Level 3A above_136
+  - first:
+      213: 5350782106224805966
+    second: Spear Level 3A above_137
+  - first:
+      213: -3584865393379164887
+    second: Spear Level 3A above_138
+  - first:
+      213: 6219930970052549700
+    second: Spear Level 3A above_139
+  - first:
+      213: -3259102468865030259
+    second: Spear Level 3A above_140
+  - first:
+      213: -4151469639865013808
+    second: Spear Level 3A above_141
+  - first:
+      213: -2298462838446293659
+    second: Spear Level 3A above_142
+  - first:
+      213: 6725057174524917162
+    second: Spear Level 3A above_143
+  - first:
+      213: 8775604975808888799
+    second: Spear Level 3A above_144
+  - first:
+      213: -584080448275018931
+    second: Spear Level 3A above_145
+  - first:
+      213: -120667154592304571
+    second: Spear Level 3A above_146
+  - first:
+      213: 3862499621932140697
+    second: Spear Level 3A above_147
+  - first:
+      213: -9025090418194777974
+    second: Spear Level 3A above_148
+  - first:
+      213: -5766654453293411178
+    second: Spear Level 3A above_149
+  - first:
+      213: 6399320425571153717
+    second: Spear Level 3A above_150
+  - first:
+      213: 6111585639065460972
+    second: Spear Level 3A above_151
+  - first:
+      213: -6696406670221965035
+    second: Spear Level 3A above_152
+  - first:
+      213: 4102549553439714883
+    second: Spear Level 3A above_153
+  - first:
+      213: -7502470661258290455
+    second: Spear Level 3A above_154
+  - first:
+      213: -7405535328284542495
+    second: Spear Level 3A above_155
+  - first:
+      213: 450835861944590455
+    second: Spear Level 3A above_156
+  - first:
+      213: -4788101079478434742
+    second: Spear Level 3A above_157
+  - first:
+      213: -5517337087460423520
+    second: Spear Level 3A above_158
+  - first:
+      213: -8670008025958761292
+    second: Spear Level 3A above_159
+  - first:
+      213: 6704570169651764825
+    second: Spear Level 3A above_160
+  - first:
+      213: -6594367424644121169
+    second: Spear Level 3A above_161
+  - first:
+      213: -6724369910595750082
+    second: Spear Level 3A above_162
+  - first:
+      213: -6327068857778870871
+    second: Spear Level 3A above_163
+  - first:
+      213: -3440553599393419436
+    second: Spear Level 3A above_164
+  - first:
+      213: 7949466115160711846
+    second: Spear Level 3A above_165
+  - first:
+      213: 9127976906609224112
+    second: Spear Level 3A above_166
+  - first:
+      213: 4776791291585204055
+    second: Spear Level 3A above_167
+  - first:
+      213: 7632076892173664401
+    second: Spear Level 3A above_168
+  - first:
+      213: -6332378038372704390
+    second: Spear Level 3A above_169
+  - first:
+      213: -1584503814329184193
+    second: Spear Level 3A above_170
+  - first:
+      213: 2083197316306661851
+    second: Spear Level 3A above_171
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spear Level 3A above_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1989
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7505e10b3e791cd0800000000000000
+      internalID: -2586897719047682689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1989
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0434bdb15aac700800000000000000
+      internalID: 561442642622365876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1989
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e1f95008b74af50800000000000000
+      internalID: 6891769119564045935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_3
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1989
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6948483351308e470800000000000000
+      internalID: 8423986492590032022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1931
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a427c8b1d21c22070800000000000000
+      internalID: 8080233080935969354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1931
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfdaeed4b7ebd5d0800000000000000
+      internalID: -3036578759711203385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_6
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1931
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e110a7af44b62b40800000000000000
+      internalID: 5415213856167301609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_7
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1931
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb1fffbd7cf7e720800000000000000
+      internalID: 2875544504121629623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1828
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e2c06b919744260800000000000000
+      internalID: 7080917665468657280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1828
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0858df9e62d672200800000000000000
+      internalID: 155212726069462400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_10
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1828
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ec416bfee74ec00800000000000000
+      internalID: 929006991162265132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_11
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1828
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7fbaf20a1d3d4a0800000000000000
+      internalID: -6569676945478649862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_12
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1771
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db1462a8625da950800000000000000
+      internalID: 6461911649701075928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_13
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1771
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f22f2ececdbd700800000000000000
+      internalID: 566289088143044476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_14
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1771
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558f9bbf2c9806240800000000000000
+      internalID: 4782974274807396437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_15
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1771
+        width: 14
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b415e16b3aafd6a60800000000000000
+      internalID: 7669061321523876171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1676
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf57ab2e4baaa5f0800000000000000
+      internalID: -744594436148207666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_17
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1676
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19979a6732fae230800000000000000
+      internalID: 3669011166272133407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_18
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1676
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf5e7e628fd34150800000000000000
+      internalID: 5855769691804295119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_19
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1676
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20660f54eeba93a30800000000000000
+      internalID: 4195573567736276482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_20
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1635
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b458740556c62a0800000000000000
+      internalID: -6742903146608768207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_21
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1635
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb00633cf65242f90800000000000000
+      internalID: -6979412360570732357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_22
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1635
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f01cc4b01bd8a90800000000000000
+      internalID: -7309991958061969516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_23
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1635
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661eec721ee6df610800000000000000
+      internalID: 1656602151256777062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_24
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1476
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8883e75b879a262b0800000000000000
+      internalID: -5592721451334616952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_25
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1479
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093e96a77ef61c870800000000000000
+      internalID: 8701358995038397328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_26
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1475
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5219d1254c1ee0df0800000000000000
+      internalID: -211983899132325595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_27
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1478
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cb9f5f2f3b41370800000000000000
+      internalID: 8292450669986167857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_28
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1486
+        width: 70
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35742e7fc74468ec0800000000000000
+      internalID: -3565086751491733677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_29
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1491
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27d7cf6cdb5030f0800000000000000
+      internalID: -1139309703398435027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_30
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1486
+        width: 57
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e844852e69f2ea8b0800000000000000
+      internalID: -5139117799694121842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_31
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1489
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77b6221d2d9db120800000000000000
+      internalID: 2431272190753552250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_32
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1484
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef422a3718e3051d0800000000000000
+      internalID: -3364120195934051074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_33
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1483
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04951027e10633350800000000000000
+      internalID: 5995241212838238528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_34
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1304
+        width: 21
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bc067c4e90d0f10800000000000000
+      internalID: 2237455468075207501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_35
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1399
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0cba6242d9f06230800000000000000
+      internalID: 3630175981113359374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_36
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1388
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1275d86600794a0800000000000000
+      internalID: -6586795489548099165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_37
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1383
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e32a29324c3d870800000000000000
+      internalID: 8706518161700306566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_38
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1372
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e991f1d499d84b190800000000000000
+      internalID: -7947571752838686306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_39
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1356
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a2896cd447225c0800000000000000
+      internalID: -4241700021636421058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_40
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1345
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be99eee6fd1da5d0800000000000000
+      internalID: -3049748426252509519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_41
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1304
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6436f26f0943f1a0800000000000000
+      internalID: -6776992683828824979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_42
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1307
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3cdb219a3b30780800000000000000
+      internalID: -8717926914913877056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_43
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1302
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293ed9d03c3fc7790800000000000000
+      internalID: -7530876457797688430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_44
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1305
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995706377f9383cc0800000000000000
+      internalID: -3731168556321049191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_45
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1221
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf05afdb26f947a0800000000000000
+      internalID: -6392307527779545159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_46
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1229
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e4e3cef9dcb6be0800000000000000
+      internalID: -1482865565541446072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_47
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1129
+        width: 21
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd8ef0acfe04eba0800000000000000
+      internalID: -6060702720338260532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1205
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02009a06be5e4dbb0800000000000000
+      internalID: -4912048494452604896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_49
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1213
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6a85070d57db290800000000000000
+      internalID: -7873007035475253522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_50
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1178
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a53e355beb4bf50800000000000000
+      internalID: 6896346615416838679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_51
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1186
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7418b7073995760800000000000000
+      internalID: 7447145570151516090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_52
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1180
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f050f1467bd57d0800000000000000
+      internalID: -2927982542075916513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_53
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1183
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4cdd05eef1a35700800000000000000
+      internalID: 527943697469135949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_54
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1161
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6c98d000a607f60800000000000000
+      internalID: 8030034684061271750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_55
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1140
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f497b63ed605469f0800000000000000
+      internalID: -476167227697301169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_56
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1165
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f301e3e37a44b9c30800000000000000
+      internalID: 4367159748760309823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_57
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1137
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89df054114a120000800000000000000
+      internalID: 591816769469848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_58
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1052
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4fd7956eaf60fc0800000000000000
+      internalID: -3528857390747355931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_59
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1050
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23a15560740e2c90800000000000000
+      internalID: -7192806674081406163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_60
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1048
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c0fc22201faab80800000000000000
+      internalID: -8382622764920533926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_61
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1050
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d930180c32981220800000000000000
+      internalID: 2456874383261579732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_62
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 993
+        width: 14
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3e52693cbbec6b0800000000000000
+      internalID: -5274071664892189723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_63
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 991
+        width: 14
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce8bc64e751f0bc0800000000000000
+      internalID: -3814806727261712697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_64
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 989
+        width: 14
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9bcf0e0fb2a760f0800000000000000
+      internalID: -1123750640547279971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_65
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 991
+        width: 14
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b98c04d3a842eb90800000000000000
+      internalID: -7214123784619652685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_66
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 839
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8ab3fc06b91e980800000000000000
+      internalID: -8511350980657567515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_67
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 847
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222363ab6d7995180800000000000000
+      internalID: -9126096221386690014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_68
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 842
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e712a20f2107f6970800000000000000
+      internalID: 8750335827645178238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_69
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 840
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648d19b41a6c231e0800000000000000
+      internalID: -2219493270280349626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_70
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 848
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f268c04e4a89de0800000000000000
+      internalID: -1326128790890991841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_71
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 843
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d881c7e7b69e960800000000000000
+      internalID: 7631749234548051347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_72
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 838
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff90b42c5fa7b010800000000000000
+      internalID: 1204624235632304122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 846
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f020261f42c435f90800000000000000
+      internalID: -6966140477059759601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_74
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 841
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8321421359c096030800000000000000
+      internalID: 3488333221289267768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_75
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 838
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511bd53eb49e1f670800000000000000
+      internalID: 8570888078009151765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_76
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 846
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1165a2fe31b88db00800000000000000
+      internalID: 853585047119877649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_77
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 841
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6576116437295730800000000000000
+      internalID: 3988262050933929324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_78
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 682
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17c2240900ff33b0800000000000000
+      internalID: -5530437895872919778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_79
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 687
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b54056de5f72fd60800000000000000
+      internalID: 7922534739797362105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_80
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 679
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa130d703d1375710800000000000000
+      internalID: 1681867768285114794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_81
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 683
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9a5c7ffdcb02010800000000000000
+      internalID: 1162136373982243250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_82
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 688
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff638708bedd0feb0800000000000000
+      internalID: -4688003208550271233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_83
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 680
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a01b8000adc4150800000000000000
+      internalID: 5858296908982848053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_84
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 681
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a93d411231ea89c0800000000000000
+      internalID: -3924076520145077853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_85
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 686
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca091834e8b18a4e0800000000000000
+      internalID: -1970294539142721364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_86
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 678
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ceb9970af1a96d0800000000000000
+      internalID: -2983037029084042192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_87
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 681
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25711216d15d8c730800000000000000
+      internalID: 4019696989588494162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_88
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 686
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01aa3b528777e5100800000000000000
+      internalID: 98647599761041936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_89
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 678
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e1d59b29e5ea2e0800000000000000
+      internalID: -2112647190922060248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_90
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 547
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd74df6bde6310780800000000000000
+      internalID: -8718627009007368229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_91
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 547
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3fe978451682a10800000000000000
+      internalID: 1884863459735041004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_92
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 534
+        width: 74
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08946e5678e706700800000000000000
+      internalID: 531563876024994176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_93
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 537
+        width: 56
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470ced5b38ce9a180800000000000000
+      internalID: -9103485121316601740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_94
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 532
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb7c9dc76c272710800000000000000
+      internalID: 1668351011306896368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_95
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 535
+        width: 56
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0db08e6864437760800000000000000
+      internalID: 7454377023549521166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_96
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 504
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d358d1692b1d620800000000000000
+      internalID: 2797213201383898495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_97
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 504
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edbebde1b7cd4af30800000000000000
+      internalID: 4586032741926824926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_98
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 441
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2cf1bc2646e4e50800000000000000
+      internalID: 6795479263226086122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_99
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 431
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5f1eaf766657000800000000000000
+      internalID: 33045169051923916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_100
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 379
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c672b8b88ea7d0b20800000000000000
+      internalID: 3102270857520293740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_101
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 369
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9fb9f9c1cede330800000000000000
+      internalID: 3741906473095789027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_102
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 387
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9105f9e30a9119c0800000000000000
+      internalID: -3958213255881227877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_103
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 391
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e24dea3021edf90800000000000000
+      internalID: -6927079369821901165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_104
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 363
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee3a35ce3c222fa0800000000000000
+      internalID: -5827046319755477268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_105
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 367
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0521bb9c1720fbff0800000000000000
+      internalID: -18293185747152304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_106
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 327
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457c63759f86e4fe0800000000000000
+      internalID: -1202908630341990572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_107
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 331
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12415c8b3ddf89dd0800000000000000
+      internalID: -2478952509087607775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_108
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 93
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfaf47bd86a532e50800000000000000
+      internalID: 6783364870155074301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_109
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 152
+        width: 33
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54bcc083a412f220800000000000000
+      internalID: 2518097834126652506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_110
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 81
+        width: 100
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7d75d976b71e260800000000000000
+      internalID: 7125111770428463060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_111
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 142
+        width: 51
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3db7f6ba7fc62e0800000000000000
+      internalID: -2131056207971232848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_112
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 104
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24429069852af6fe0800000000000000
+      internalID: -1193556874871888830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_113
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 104
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4670354f917926470800000000000000
+      internalID: 8386431593846343524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_114
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 132
+        width: 105
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff11718f5327d2eb0800000000000000
+      internalID: -4743009256430169601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_115
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6986c7732282bbbd0800000000000000
+      internalID: -2613451031333541738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_116
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2f28e9a790b73e0800000000000000
+      internalID: -2055038382714457351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_117
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24ccd50c039cfbd0800000000000000
+      internalID: -2595037605425003477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_118
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3f3743c880bac10800000000000000
+      internalID: 2065754252347962324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_119
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41977c533cc9fe70800000000000000
+      internalID: 9149568638946611530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_120
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7235ced60026220800000000000000
+      internalID: 2477543217123501997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_121
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f8228bcc45c4e30800000000000000
+      internalID: 4489056166820876174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_122
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ca7a3147d7dad70800000000000000
+      internalID: 9056032363211369602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_123
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 92
+        width: 81
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feca3d68fc6b42c0800000000000000
+      internalID: -4446340392857973007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_124
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 84
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514711762c42bc1d0800000000000000
+      internalID: -3329527082138897387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_125
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 73
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcdffb10e1a806e0800000000000000
+      internalID: -1871067661257941773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_126
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 84
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b397891898362a0800000000000000
+      internalID: -6745396627169002609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_127
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 82
+        width: 93
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdf8d17537117460800000000000000
+      internalID: 7237591594471849399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_128
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b056e4187e5a1810800000000000000
+      internalID: 1736804476144472241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_129
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ded80ed8ae47a90800000000000000
+      internalID: -7316965599491527374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_130
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5035e030ca4927500800000000000000
+      internalID: 392539584041210629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_131
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbaf1c0911a06b550800000000000000
+      internalID: 6176135009544567483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_132
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a956ab748c93e10800000000000000
+      internalID: 2177992105205799567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_133
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87ee31ac6fe2fb00800000000000000
+      internalID: 861013728621946765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_134
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a59852e40a0ac00800000000000000
+      internalID: 909903382226492039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_135
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ca9679763b8d060800000000000000
+      internalID: 6978524880113871903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_136
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 72
+        width: 69
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43402471a5f4a7fe0800000000000000
+      internalID: -1190551903130221516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_137
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 73
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48cb08d9fbc14a40800000000000000
+      internalID: 5350782106224805966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_138
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 73
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d3b0c0befff3ec0800000000000000
+      internalID: -3584865393379164887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_139
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 73
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44cde6d3342a15650800000000000000
+      internalID: 6219930970052549700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_140
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 74
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8783b0729755c2d0800000000000000
+      internalID: -3259102468865030259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_141
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 74
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9e604ab540366c0800000000000000
+      internalID: -4151469639865013808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_142
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 47
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56df8f8e9383a10e0800000000000000
+      internalID: -2298462838446293659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_143
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5ffbd8ed3345d50800000000000000
+      internalID: 6725057174524917162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_144
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf3d38fa3639c970800000000000000
+      internalID: 8775604975808888799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_145
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b01584dede4e7f0800000000000000
+      internalID: -584080448275018931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_146
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542f77abcdd435ef0800000000000000
+      internalID: -120667154592304571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_147
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 50
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998885611fa5a9530800000000000000
+      internalID: 3862499621932140697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_148
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 50
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f7b5e41070c280800000000000000
+      internalID: -9025090418194777974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_149
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 14
+        width: 134
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6949509e35ab8ffa0800000000000000
+      internalID: -5766654453293411178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_150
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 22
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537f112a504fec850800000000000000
+      internalID: 6399320425571153717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_151
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce020e612c6b0d450800000000000000
+      internalID: 6111585639065460972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_152
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5190dddcc959113a0800000000000000
+      internalID: -6696406670221965035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_153
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e2636251f2fe830800000000000000
+      internalID: 4102549553439714883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_154
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ead8e1feaed1e790800000000000000
+      internalID: -7502470661258290455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_155
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e97ef9ead04a3990800000000000000
+      internalID: -7405535328284542495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_156
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 28
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770e63be3d0b14600800000000000000
+      internalID: 450835861944590455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_157
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 155
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a440609cf6f3d8db0800000000000000
+      internalID: -4788101079478434742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_158
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a845dba62b7e63b0800000000000000
+      internalID: -5517337087460423520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_159
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc31f4d2a1fda780800000000000000
+      internalID: -8670008025958761292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_160
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e16c50c0b6b0d50800000000000000
+      internalID: 6704570169651764825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_161
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadfda704c91c74a0800000000000000
+      internalID: -6594367424644121169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_162
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e377d9c813d3ea2a0800000000000000
+      internalID: -6724369910595750082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_163
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a567a6656cb138a0800000000000000
+      internalID: -6327068857778870871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_164
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fa67deab2b040d0800000000000000
+      internalID: -3440553599393419436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_165
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2a82c405d225e60800000000000000
+      internalID: 7949466115160711846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_166
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9696c62a61dae70800000000000000
+      internalID: 9127976906609224112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_167
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 8
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f8d150f529a4240800000000000000
+      internalID: 4776791291585204055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_168
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 8
+        width: 40
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1908a783f759ae960800000000000000
+      internalID: 7632076892173664401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_169
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 8
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f5f4779bfde18a0800000000000000
+      internalID: -6332378038372704390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_170
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 8
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3058a90d26b20ae0800000000000000
+      internalID: -1584503814329184193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spear Level 3A above_171
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 8
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd171830ce009ec10800000000000000
+      internalID: 2083197316306661851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

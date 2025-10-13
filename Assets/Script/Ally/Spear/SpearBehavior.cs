@@ -27,8 +27,6 @@ public class SpearBehavior : BhTree
 
     [Header("References")]
     public Transform defensiveTarget;
-    public Transform mainBase;
-    public Transform camp;
     public Transform waypoints;
     public Transform startPos, endPos;
     public Animator animator;
@@ -36,7 +34,6 @@ public class SpearBehavior : BhTree
     public float skillCD = 2.9f;
     public float atkRange = 3f;
 
-    private IMovementStrategy _currentStrategy;
     private AggressiveMovement _aggressiveMovement;
     private DefensiveMovement _defensiveMovement;
     private NeutralMovement _neutralMovement;
@@ -47,6 +44,20 @@ public class SpearBehavior : BhTree
         currentState = state;
     }
 
+    public void ChangeDefensiveTarget(string name)
+    {
+        defensiveTarget = GameObject.Find(name).transform;
+    }    
+
+    protected override void Start()
+    {
+        defensiveTarget = GameObject.Find("Player").transform;
+        startPos = GameObject.Find("PatrolStartPos").transform;
+        endPos = GameObject.Find("PatrolEndPos").transform;
+        waypoints = GameObject.Find("Waypoint").transform;
+        animator = GetComponent<Animator>();
+        _root = SetupTree();
+    }
     protected override Nodes SetupTree()
     {
         speed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSPD : 10f;
