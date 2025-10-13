@@ -83,6 +83,7 @@ namespace BehaviorTree
                     Debug.Log($"Found {clipName} clip length: {clipLength}s");
                     break;
                 }
+                
             }
 
             // Công thức: cần tốc độ gấp clipLength/attackInterval
