@@ -17,10 +17,12 @@ namespace Spear.Movement
         private AnimationController _controller;
         private float _atkRange;
 
+        private Vector3 lastPos;
 
         public DefensiveMovement(Transform transform, Transform defensiveTarget, float offset, float speed, float patrolRadius, float atkRange)
         {
             _transform = transform;
+            lastPos = transform.position;
             _defensiveTarget = defensiveTarget;
             _offset = offset;
             _speed = speed;
@@ -43,37 +45,42 @@ namespace Spear.Movement
             //Debug.Log($"[{_transform.name}] Thực hiện hành động phòng thủ.");
             // Tính vị trí mục tiêu phòng thủ lý tưởng
             Vector3 targetPos = _defensiveTarget.position + Vector3.left * _offset;
-
+            Debug.DrawLine(_transform.position, targetPos, Color.green);
             // Tính khoảng cách hiện tại
             float distance = Vector2.Distance(_transform.position, targetPos);
             if (parent?.GetData("target") != null) return state = NodeState.FAILURE;
             // Nếu ở trong phạm vi tuần tra thì không di chuyển
-            Debug.Log(parent?.GetData("target"));
-            if (distance <= _patrolRadius)
-            {
+            //Debug.Log(parent?.GetData("target"));
+            float speed = (_transform.position - lastPos).magnitude / Time.deltaTime;
+            lastPos = _transform.position;
+
+
+            if(speed < 0.01f && distance <= _patrolRadius)
+            { 
                 //_transform.GetComponent<Animator>()?.SetInteger("State", 5);
                 //_transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
-                CheckMovement(targetPos, "Idle 1", "Idle 0");
+                CheckMovement(targetPos, "Idle 1", "Idle 0",0.2f);
                 return state = NodeState.FAILURE;
             }
             //_transform.GetComponent<Animator>()?.SetFloat("Direct", _transform.position.x - targetPos.x > 0 ? -1f : 1f);
             //_transform.GetComponent<Animator>()?.SetInteger("State",0);
+
             CheckMovement(targetPos, "Run2 1", "Run2");
             // Nếu ra ngoài phạm vi tuần tra -> di chuyển về
             _transform.position = Vector3.MoveTowards(
                 _transform.position,
-                new Vector3(targetPos.x, _transform.position.y, _transform.position.z),
-                _speed * Time.deltaTime
-            );
+                        new Vector3(targetPos.x, _transform.position.y, _transform.position.z),
+                        _speed* Time.deltaTime
+                    );
             //Debug.Log($"{_transform.name} di chuyển về vị trí phòng thủ {targetPos} (cách {distance:F2})");
             return state = NodeState.RUNNING;
             
         }
 
-        private void CheckMovement(Vector3 targetPos, string state1, string state2)
+        private void CheckMovement(Vector3 targetPos, string state1, string state2,float crossFade = 0.1f)
         {
-            if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state1);
-            else _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state2);
+            if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state1, crossFade);
+            else _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state2, crossFade);
         }
     }
 }

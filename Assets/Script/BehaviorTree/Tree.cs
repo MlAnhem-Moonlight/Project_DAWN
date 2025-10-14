@@ -9,7 +9,7 @@ namespace BehaviorTree
     {
         public Nodes _root = null;
 
-        protected virtual void Start()
+        protected void Start()
         {
             _root = SetupTree();
         }

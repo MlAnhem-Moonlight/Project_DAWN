@@ -49,17 +49,16 @@ public class SpearBehavior : BhTree
         defensiveTarget = GameObject.Find(name).transform;
     }    
 
-    protected override void Start()
+    protected override Nodes SetupTree()
     {
         defensiveTarget = GameObject.Find("Player").transform;
+        Debug.Log(defensiveTarget);
         startPos = GameObject.Find("PatrolStartPos").transform;
         endPos = GameObject.Find("PatrolEndPos").transform;
         waypoints = GameObject.Find("Waypoint").transform;
         animator = GetComponent<Animator>();
-        _root = SetupTree();
-    }
-    protected override Nodes SetupTree()
-    {
+
+        Debug.Log("Setting up Spear Behavior Tree");
         speed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSPD : 10f;
         skillCD = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSkillCD : 2.9f;
         attackSpeed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentAtkSpd : 1f;
