@@ -21,7 +21,7 @@ public class OnFinish : StateMachineBehaviour
         if (spear == null) return;
 
         // Nếu đang không trong Skill hoặc animation override thì mới cho về Idle
-        if (spear.currentState == AnimatorState.Attack)
+        if (spear.currentState == AnimatorState.Attack || spear.currentState == AnimatorState.UsingSkill)
         {
             // chỉ chuyển về Idle nếu ko bị đổi state khác trong lúc OnStateExit
             spear.ChangeState(AnimatorState.Idle);

@@ -20,6 +20,11 @@ public class KnightStats : Stats
 
     }
 
+    public void UsingSkill()
+    {
+
+    }
+
     private void Start()
     {
         SetDmg();
