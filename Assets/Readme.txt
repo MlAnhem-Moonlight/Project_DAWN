@@ -41,4 +41,6 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 		+ neutral: di chuyển xung quanh khi cắm trại(V)
 		+ phần defensive chưa khớp anim và chí số trong Stats 
 	- Thehand: Bug hitbox, anim bị lệch, (?)
-	- boor xung wolf và knight; thêm attack cho player
+	- bổ xung wolf và knight; thêm attack cho player:
+		+ knight: tấn công cận chiến(2 hit trên 1 lần), skill buff shield
+		! Thêm attack box cho knight và spear
