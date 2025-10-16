@@ -26,6 +26,7 @@ public class SpearBehavior : BhTree
     public float mainBaseRadius = 3f;
 
     [Header("References")]
+    public bool isSpear;
     public Transform defensiveTarget;
     public Transform waypoints;
     public Transform startPos, endPos;
@@ -52,16 +53,24 @@ public class SpearBehavior : BhTree
     protected override Nodes SetupTree()
     {
         defensiveTarget = GameObject.Find("Player").transform;
-        Debug.Log(defensiveTarget);
         startPos = GameObject.Find("PatrolStartPos").transform;
         endPos = GameObject.Find("PatrolEndPos").transform;
         waypoints = GameObject.Find("Waypoint").transform;
         animator = GetComponent<Animator>();
+        //Only work for Spear and Knight
+        if (isSpear)
+        {
+            speed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSPD : 10f;
+            skillCD = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSkillCD : 2.9f;
+            attackSpeed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentAtkSpd : 1f;
+        }
+        else
+        {
+            speed = GetComponent<KnightStats>() ? GetComponent<KnightStats>().currentSPD : 10f;
+            skillCD = GetComponent<KnightStats>() ? GetComponent<KnightStats>().currentSkillCD : 2.9f;
+            attackSpeed = GetComponent<KnightStats>() ? GetComponent<KnightStats>().currentAtkSpd : 1f;
+        }
 
-        Debug.Log("Setting up Spear Behavior Tree");
-        speed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSPD : 10f;
-        skillCD = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentSkillCD : 2.9f;
-        attackSpeed = GetComponent<SpearStats>() ? GetComponent<SpearStats>().currentAtkSpd : 1f;
         SetupAnimatorSpeedDirect(animator, attackSpeed,"Attack 0", "AttackSpd");
         _aggressiveMovement = new AggressiveMovement(transform, speed, atkRange, skillCD);
         _defensiveMovement = new DefensiveMovement(transform, 

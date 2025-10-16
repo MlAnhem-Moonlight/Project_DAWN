@@ -1226,11 +1226,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 929393111439331100, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.55
+      value: -61.319
       objectReference: {fileID: 0}
     - target: {fileID: 929393111439331100, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.73
+      value: -1.066
       objectReference: {fileID: 0}
     - target: {fileID: 929393111439331100, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2212884053681926967, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2212884053681926967, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: defaultTarget
@@ -1278,11 +1278,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218499173624817928, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752862329397874238, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4752862329397874238, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6142494942016248799, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335354361595342468, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335354361595342468, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335354361595342468, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Offset.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335354361595342468, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447278737625200912, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512457635445865454, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825919664756325924, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201609811734140115, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2624,7 +2664,7 @@ Transform:
   m_GameObject: {fileID: 1841635900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58.44, y: -1.1, z: 0}
+  m_LocalPosition: {x: -58.44, y: -1.205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2707,7 +2747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7ffb0ac8a9fad42815239f39dfad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 4
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: 74e56c82fc59d1840a05dade4fa6634e, type: 2}
   currentHP: 0
@@ -2718,15 +2758,21 @@ MonoBehaviour:
   currentAtkSpd: 0
   currentSkillDmg: 0
   currentSkillDuration: 0
-  hpScalePerLevel: 0.18
+  hpLinear: 60
+  hpMultiplier: 1.03
   dmgLinear: 3
-  atkSpdPerLevel: 0.015
+  atkSpdMultiplier: 1.01
   atkSpdCap: 1
   spdLinear: 0.04
   shieldLinear: 6
   shieldCap: 75
-  skillCdReducePerLevel: 0.04
-  skillCdMinFactor: 0.65
+  skillCDMultiplier: 0.96
+  skillCDMinFactor: 0.65
+  skillDuration: 4
+  synergyRadius: 2.5
+  allyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1841635906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2791,7 @@ MonoBehaviour:
   defensiveOffset: 1.5
   patrolRadius: 5
   mainBaseRadius: 3
+  isSpear: 0
   defensiveTarget: {fileID: 0}
   waypoints: {fileID: 0}
   startPos: {fileID: 0}
@@ -2935,7 +2982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 799796206133411358, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.545
+      value: -1.716
       objectReference: {fileID: 0}
     - target: {fileID: 799796206133411358, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2981,9 +3028,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2154923747338101727, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
+      propertyPath: m_Size.x
+      value: 0.40301514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154923747338101727, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03263092
+      objectReference: {fileID: 0}
     - target: {fileID: 3598325914348284247, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: scanRange
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598325914348284247, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
+      propertyPath: attackRange
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 7820319488651036133, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_Icon

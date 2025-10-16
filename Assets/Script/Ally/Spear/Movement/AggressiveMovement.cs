@@ -79,7 +79,7 @@ namespace Spear.Movement
                     {
                         //_anim.SetInteger("State", 1); // normal attack
                         //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-                        CheckMovement(nearestEnemy.position, "Attack 1", "Attack 0");
+                        CheckMovement(nearestEnemy.position, "Attack 1", "Attack 0", 0f);
                     }
                     //state = NodeState.RUNNING; // vẫn đang chờ hồi chiêu
                 }
@@ -102,7 +102,7 @@ namespace Spear.Movement
             {
                 //_anim.SetInteger("State", 2); // 1 = animation skill
                 //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-                CheckMovement(target.position, "Skill 1", "Skill 0");
+                CheckMovement(target.position, "Skill 1", "Skill 0", 0f);
             }
 
             // Thêm logic gây damage hoặc spawn skill object
@@ -110,7 +110,7 @@ namespace Spear.Movement
         }
 
 
-        private void CheckMovement(Vector3 targetPos, string state1, string state2)
+        private void CheckMovement(Vector3 targetPos, string state1, string state2, float crossFade = 0.1f)
         {
             if (_transform.position.x - targetPos.x > 0)
                 _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state1);

@@ -80,7 +80,7 @@ public class DefensiveAction : Nodes
                 {
                     //_anim.SetInteger("State", 1); // normal attack
                     //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-                    SwitchAnim(target.position, "Attack 1", "Attack 0");
+                    SwitchAnim(target.position, "Attack 1", "Attack 0",0f);
                 }
                 state = NodeState.RUNNING; // vẫn đang chờ hồi chiêu
             }
@@ -150,16 +150,16 @@ public class DefensiveAction : Nodes
         {
             //_anim.SetInteger("State", 2); // 1 = animation skill
             //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-            SwitchAnim(target.position, "Skill 1", "Skill 0");
+            SwitchAnim(target.position, "Skill 1", "Skill 0",0f);
         }
 
         // Thêm logic gây damage hoặc spawn skill object
         Debug.Log($"[{_transform.name}] Dùng skill vào {target.name} lúc {Time.time:F2}");
     }
 
-    private void SwitchAnim(Vector3 targetPos, string state1, string state2)
+    private void SwitchAnim(Vector3 targetPos, string state1, string state2,float crossFade = 0.1f)
     {
-        if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_anim, state1);
-        else _controller.ChangeAnimation(_anim, state2);
+        if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_anim, state1, crossFade);
+        else _controller.ChangeAnimation(_anim, state2, crossFade);
     }
 }
