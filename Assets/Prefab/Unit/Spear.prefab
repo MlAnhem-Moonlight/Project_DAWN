@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2910912393590115405, guid: 40574823fcd9ea14ba975e3e73ae6ef5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -191,22 +191,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5025604b7fda1bc4ab3bdc2912cb117b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spearState: 2
+  spearState: 1
   currentState: 0
   speed: 2
   defensiveOffset: 1.5
   patrolRadius: 5
-  mainBaseRadius: 3
+  mainBaseRadius: 4
+  isSpear: 1
   defensiveTarget: {fileID: 0}
-  mainBase: {fileID: 0}
-  camp: {fileID: 0}
   waypoints: {fileID: 0}
   startPos: {fileID: 0}
   endPos: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 7632967097304233221}
   attackSpeed: 1
   skillCD: 2.9
-  atkRange: 3
+  atkRange: 0.99
 --- !u!114 &745418574626960579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   maxLevel: 8
-  baseStats: {fileID: 0}
+  baseStats: {fileID: 11400000, guid: fb7acc5c5eaa48446912e350f4e3de1b, type: 2}
   currentHP: 0
   currentDMG: 0
   currentSPD: 0

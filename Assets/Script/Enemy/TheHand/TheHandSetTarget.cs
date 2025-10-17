@@ -20,7 +20,7 @@ public class TheHandSetTarget : Nodes
         Transform target = (Transform)GetData("target");
 
         _theHandMovement.SetTarget(target);
-        float distance = Vector2.Distance(_transform.position, target.position);
+        float distance = Mathf.Abs(_transform.position.x - target.position.x);
 
         // Nếu trong tầm đánh -> SUCCESS
         if (distance <= _range)

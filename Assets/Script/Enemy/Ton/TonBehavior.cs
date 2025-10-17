@@ -1,6 +1,7 @@
 ﻿using BehaviorTree;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 
 public class TonBehavior : BhTree
@@ -45,5 +46,12 @@ public class TonBehavior : BhTree
             tonMovement,
         });
         return root;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Vẽ vòng tròn kiểm tra trong Scene View (sử dụng bán kính hiện tại nếu đang chạy)
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

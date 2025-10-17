@@ -21,10 +21,13 @@ public class CheckEnemyInRange : Nodes
         
         Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction);
         // Check if the closest target is within range
-        if (closestTarget != null && Vector3.Distance(_transform.position, closestTarget.position) <= _range)
+        if (closestTarget != null 
+            && Vector3.Distance(_transform.position, closestTarget.position) <= _range 
+            && closestTarget.gameObject.tag != "AttackBox")
         {
             parent.SetData("target", closestTarget);
             state = NodeState.SUCCESS;
+            Debug.Log("Enemy in range: " + closestTarget.name + _range);
         }
         else
         {

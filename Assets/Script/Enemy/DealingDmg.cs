@@ -133,7 +133,7 @@ public class DealingDmg : MonoBehaviour
             //Debug.Log($"Detected {hits.Length} hits");
             foreach (var hit in hits)
             {
-                Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
+                //Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
 
                 Stats stats = hit.GetComponent<Stats>();

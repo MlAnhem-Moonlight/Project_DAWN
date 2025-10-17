@@ -7,6 +7,7 @@ TagManager:
   - DefaultTarget
   - Ally
   - Enemy
+  - AttackBox
   layers:
   - Default
   - TransparentFX

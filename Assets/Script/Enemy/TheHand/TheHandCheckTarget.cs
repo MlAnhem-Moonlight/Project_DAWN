@@ -23,7 +23,7 @@ public class TheHandCheckTarget : Nodes
     public override NodeState Evaluate()
     {
         Transform currentTarget = parent.GetData("target") as Transform;
-        Debug.Log("Checking target: " + (currentTarget != null ? currentTarget.name : "null"));
+        //Debug.Log("Checking target: " + (currentTarget != null ? currentTarget.name : "null"));
         // Nếu đã có target và nó vẫn còn tồn tại
         if (currentTarget != null && currentTarget.gameObject.activeInHierarchy)
         {

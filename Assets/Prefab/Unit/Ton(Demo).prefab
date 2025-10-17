@@ -1,5 +1,106 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1949955592855148858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6925553500575183442}
+  - component: {fileID: 5604100334853847343}
+  - component: {fileID: 4981770821114925485}
+  m_Layer: 7
+  m_Name: GameObject
+  m_TagString: AttackBox
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6925553500575183442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949955592855148858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.478, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929393111439331100}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5604100334853847343
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949955592855148858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.027597427, y: -0.03177291}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6280556, y: 1.2914926}
+  m_EdgeRadius: 0
+--- !u!114 &4981770821114925485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949955592855148858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc654db0cce294998fc23ca92c24c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 5
+  damageAmount: 5
+  skillDamageAmount: 10
+  _atkSpd: 1
+  _rageDuration: 5
+  attackerAnimator: {fileID: 0}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  usingSkill: 0
 --- !u!1 &2218499173624817928
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +116,6 @@ GameObject:
   - component: {fileID: 802997937601556764}
   - component: {fileID: 2212884053681926967}
   - component: {fileID: 6447278737625200912}
-  - component: {fileID: 7512457635445865454}
   m_Layer: 7
   m_Name: Ton(Demo)
   m_TagString: Untagged
@@ -32,11 +132,11 @@ Transform:
   m_GameObject: {fileID: 2218499173624817928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.0113, y: -0.9912, z: 0}
-  m_LocalScale: {x: 0.36755964, y: 0.46270588, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7825919664756325924}
+  - {fileID: 6925553500575183442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &836056969046561520
@@ -177,8 +277,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.3, y: -0.3131614}
-  m_Size: {x: 3.3059392, y: 3.8171823}
+  m_Offset: {x: 0.07944083, y: -0.027121425}
+  m_Size: {x: 0.88919353, y: 1.3070362}
   m_Direction: 0
 --- !u!114 &2212884053681926967
 MonoBehaviour:
@@ -193,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  attackRange: 1
+  attackRange: 0.85
   skillCD: 5
   attackSpeed: 1
   defaultTarget: {fileID: 0}
@@ -211,6 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3938261d6bade724dbab9d57549473dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 3
+  maxLevel: 8
   baseStats: {fileID: 11400000, guid: 34029168005ca7d42990ff59e9adaae1, type: 2}
   currentHP: 0
   currentDMG: 0
@@ -219,8 +321,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
-  level: 3
-  maxLevel: 8
+  currentSkillDuration: 0
   hpLinear: 100
   hpMultiplier: 1.03
   dmgLinear: 2
@@ -231,122 +332,3 @@ MonoBehaviour:
   shieldCap: 50
   skillCDMultiplier: 0.99
   skillCDMinFactor: 0.6
---- !u!114 &7512457635445865454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218499173624817928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2c794b2e81e487478c12fd4ebdacaad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minCameraDistance: 5
-  maxCameraDistance: 30
-  minCheckRadius: 1
-  maxCheckRadius: 5
-  separationStrength: 3
-  desiredSeparation: 1.2
---- !u!1 &4752862329397874238
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7825919664756325924}
-  - component: {fileID: 6335354361595342468}
-  - component: {fileID: 9201609811734140115}
-  m_Layer: 7
-  m_Name: HitBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7825919664756325924
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752862329397874238}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 929393111439331100}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6335354361595342468
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752862329397874238}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 3.7898617, y: 0.09138656}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.5805779, y: 4.228996}
-  m_EdgeRadius: 0
---- !u!114 &9201609811734140115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752862329397874238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4dc654db0cce294998fc23ca92c24c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockbackForce: 5
-  damageAmount: 5
-  skillDamageAmount: 10
-  _atkSpd: 1
-  _rageDuration: 5
-  attackerAnimator: {fileID: 6142494942016248799}
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  usingSkill: 0

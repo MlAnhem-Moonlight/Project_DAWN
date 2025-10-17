@@ -2,6 +2,7 @@
 
 public class OnFinish : StateMachineBehaviour
 {
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -17,12 +18,15 @@ public class OnFinish : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
         var spear = animator.GetComponent<SpearBehavior>();
+        Debug.Log($"[{spear.name}].");
         if (spear == null) return;
 
         // Nếu đang không trong Skill hoặc animation override thì mới cho về Idle
         if (spear.currentState == AnimatorState.Attack || spear.currentState == AnimatorState.UsingSkill)
         {
+            Debug.Log($"[{spear.name}] tại {stateInfo.fullPathHash} OnFinish: Hoàn thành {spear.currentState}, chuyển về Idle.");
             // chỉ chuyển về Idle nếu ko bị đổi state khác trong lúc OnStateExit
             spear.ChangeState(AnimatorState.Idle);
         }

@@ -6,8 +6,9 @@ public class DefensiveAction : Nodes
 {
     private readonly Transform _transform;
     private readonly Transform _defTarget;
-    private readonly float _defRadius;
-    private readonly float _attackRange;
+    private readonly float _defRadius;      // mainBaseRadius (vùng quét)
+    private readonly float _attackRange;    // attack range
+    private readonly float _patrolRadius;   // patrol radius (vùng cho phép di chuyển)
     private readonly float _speed;
     private readonly Animator _anim;
     private readonly float _offset;
@@ -16,150 +17,146 @@ public class DefensiveAction : Nodes
     private DefensiveMovement _patrolMovement;
     private SpearBehavior _spear;
 
-    // Cooldown skill
-    private float _skillCooldown = 2f;   // 2 giây hồi chiêu
+    private float _skillCooldown = 2f;
     private float _lastSkillTime = -Mathf.Infinity;
 
-    public DefensiveAction(Transform self, Transform defTarget, float defRadius, float attackRange, float speed, float skillCD, Animator anim, float offset)
+    // Ngưỡng xem là "rìa" patrol (tolerance)
+    private const float EDGE_EPS = 0.15f;
+
+    public DefensiveAction(Transform self, Transform defTarget, float patrolRadius, float attackRange, float mainBaseRadius, float speed, float skillCD, Animator anim, float offset)
     {
         _transform = self;
         _defTarget = defTarget;
-        _defRadius = defRadius;
+        _patrolRadius = patrolRadius;
         _attackRange = attackRange;
+        _defRadius = mainBaseRadius;
         _speed = speed;
         _anim = anim;
         _offset = offset;
         _skillCooldown = skillCD;
-        _patrolMovement = new DefensiveMovement(_transform, _defTarget, offset, speed, _defRadius, attackRange);
+
+        _patrolMovement = new DefensiveMovement(_transform, _defTarget, offset, speed, patrolRadius, attackRange);
         _spear = _transform.GetComponent<SpearBehavior>();
         _controller = _transform.GetComponent<AnimationController>();
     }
 
-
-
     public override NodeState Evaluate()
     {
-        //Debug.Log($"[{_transform.name}] Thực hiện hành động tấn công bảo vệ.");
-        // Nếu không phải trạng thái phòng thủ thì bỏ qua
-        if (_spear == null || _spear.spearState != AllyState.Defensive 
-            || _spear.currentState == AnimatorState.Attack
-            || _spear.currentState == AnimatorState.UsingSkill)
+        // Kiểm tra trạng thái hợp lệ để thực hiện hành động
+        if (_spear == null || _spear.spearState != AllyState.Defensive ||
+            _spear.currentState == AnimatorState.Attack ||
+            _spear.currentState == AnimatorState.UsingSkill)
         {
             state = NodeState.FAILURE;
             return state;
         }
 
-        // Lấy mục tiêu enemy (được CheckEnemyInRangeAlly đặt vào blackboard)
+        // Lấy target từ blackboard
         object targetObj = parent.GetData("target");
         Transform target = targetObj as Transform;
 
-        // Không có enemy → tuần tra quanh defensive target
+        // Nếu không có mục tiêu → patrol
         if (target == null)
         {
-            _patrolMovement.Evaluate(); // gọi logic phòng thủ tuần tra
+            _patrolMovement.Evaluate();
             state = NodeState.FAILURE;
             return state;
         }
-        Vector3 pos = _defTarget.position + Vector3.left * _offset;
-        float distToDef = Vector2.Distance(_transform.position, pos);
-        float distToEnemy = Mathf.Sqrt(_transform.position.x -  target.position.x);
 
-        // Nếu enemy trong tầm tấn công
-        if (distToEnemy <= _attackRange)
+        // Vị trí tham chiếu
+        Vector3 defPos = _defTarget.position + Vector3.left * _offset;
+
+        // Khoảng cách:
+        float distSpearToDef = Mathf.Abs(_transform.position.x - defPos.x);
+        float distEnemyToDef = Vector2.Distance(new Vector2(target.position.x, target.position.y), new Vector2(defPos.x, defPos.y));
+        float distSpearToEnemy = Mathf.Abs(_transform.position.x - target.position.x);
+
+        bool spearInsidePatrol = distSpearToDef <= _patrolRadius + 0.001f;
+        //bool spearAtEdge = Mathf.Abs(distSpearToDef - _patrolRadius) <= EDGE_EPS || distSpearToDef >= _patrolRadius - EDGE_EPS;
+        bool enemyInPatrolArea = distEnemyToDef <= _patrolRadius;
+        bool enemyInMainBase = distEnemyToDef <= _defRadius;
+        bool enemyInAttack = distSpearToEnemy <= _attackRange;
+        // Nếu spear đang ở ngoài vùng cho phép (vô tình đi quá xa) -> quay về patrol
+        if (!spearInsidePatrol)
         {
+            _patrolMovement.Evaluate();
+            state = NodeState.FAILURE;
+            return state;
+        }
 
+        // Ưu tiên: nếu spear có thể tấn công mục tiêu ngay (tức distSpearToEnemy <= attackRange), thì tấn công bất kể vị trí enemy
+        // (theo yêu cầu: spear ở rìa có thể đánh dù enemy ở đâu)
+        if (enemyInAttack)
+        {
+            // Attack ngay
             if (Time.time >= _lastSkillTime + _skillCooldown)
             {
                 UseSkill(target);
                 _lastSkillTime = Time.time;
-                state = NodeState.SUCCESS; // đã tấn công
+                state = NodeState.SUCCESS;
             }
             else
             {
-                if (_anim != null)
-                {
-                    //_anim.SetInteger("State", 1); // normal attack
-                    //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-                    SwitchAnim(target.position, "Attack 1", "Attack 0");
-                }
-                state = NodeState.RUNNING; // vẫn đang chờ hồi chiêu
+                SwitchAnim(target.position, "Attack 1", "Attack 0", 0f);
+                state = NodeState.RUNNING;
             }
             return state;
         }
-        else
+        Debug.Log($"{enemyInPatrolArea && enemyInMainBase}");
+        // Nếu enemy nằm trong cùng patrolRadius và trong vùng quét (mainBaseRadius)
+        if (enemyInPatrolArea && enemyInMainBase)
         {
-            // Nếu ra ngoài phạm vi phòng thủ → quay lại
-            if (distToDef > _defRadius)
+            // Nếu chưa vào tầm đánh thì chase, nhưng đảm bảo không rời khỏi patrolRadius khi chase
+            if (!enemyInAttack)
             {
-                //Debug.Log($"[{_transform.name}] Ra ngoài phạm vi bảo vệ ({distToDef:F1} > {_defRadius}), quay lại vị trí phòng thủ.");
-                _patrolMovement.Evaluate();
-                state = NodeState.FAILURE;
-                return state;
-            }
-            else
-            {
+                // Tính vị trí dự kiến khi chase: di chuyển một bước và kiểm tra khoảng cách đến defPos
+                Vector3 desiredPos = Vector3.MoveTowards(_transform.position, new Vector3(target.position.x, _transform.position.y, _transform.position.z), _speed * Time.deltaTime);
+                float distDesiredToDef = Vector2.Distance(new Vector2(desiredPos.x, desiredPos.y), new Vector2(defPos.x, defPos.y));
 
-                // Nếu enemy trong phạm vi bảo vệ nhưng ngoài tầm đánh → chase
-                ChaseTarget(target, distToEnemy, _attackRange, Vector2.Distance(target.position, pos), _defRadius);
+                if (distDesiredToDef <= _patrolRadius + 0.001f)
+                {
+                    ChaseTarget(target);
+                    state = NodeState.RUNNING;
+                    return state;
+                }
+                else
+                {
+                    // Nếu chase sẽ làm vượt patrolRadius -> không chase, quay lại patrol
+                    _patrolMovement.Evaluate();
+                    state = NodeState.FAILURE;
+                    return state;
+                }
             }
-
+            // else branch attack already handled above
         }
 
-        state = NodeState.RUNNING;
+        // Các trường hợp khác: không đủ điều kiện tấn công/chase -> patrol
+        _patrolMovement.Evaluate();
+        state = NodeState.FAILURE;
         return state;
     }
 
-    /// <summary>
-    /// Di chuyển đuổi mục tiêu (chase).
-    /// </summary>
-    private void ChaseTarget(Transform target, float disToEnemy, float atkRange, float distToDef, float defRadius)
+    private void ChaseTarget(Transform target)
     {
-        if (target == null)
-        {
-            //Debug.LogWarning($"[{_transform.name}] Không có mục tiêu để đuổi.");
-            return;
-        }
-        if (distToDef > _defRadius) return;
-        if (disToEnemy <= atkRange) 
-        {
-            //Debug.Log($"[{_transform.name}] Đã trong tầm tấn công, không di chuyển.");
-            return;
-        } 
-        //Debug.Log($"[{_transform.name}] Đuổi mục tiêu {target.name} (cách {Vector2.Distance(_transform.position, target.position):F1})");
-        Vector3 targetPos = new Vector3(target.position.x, _transform.position.y, _transform.position.z);
-        _transform.position = Vector3.MoveTowards(
-            _transform.position,
-            targetPos,
-            _speed * Time.deltaTime
-        );
+        if (target == null) return;
 
-        if (_anim != null)
-        {
-            //_anim.SetInteger("State", 0); // 0 = chạy
-            //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-            SwitchAnim(target.position, "Run2 1", "Run2");
-        }
+        Vector3 targetPos = new Vector3(target.position.x, _transform.position.y, _transform.position.z);
+        _transform.position = Vector3.MoveTowards(_transform.position, targetPos, _speed * Time.deltaTime);
+        SwitchAnim(target.position, "Run2 1", "Run2");
     }
 
-    /// <summary>
-    /// Dùng skill tấn công mục tiêu.
-    /// </summary>
     private void UseSkill(Transform target)
     {
-        if (_anim != null)
-        {
-            //_anim.SetInteger("State", 2); // 1 = animation skill
-            //_anim.SetFloat("Direct", target.position.x - _transform.position.x > 0 ? 1f : -1f);
-            SwitchAnim(target.position, "Skill 1", "Skill 0");
-        }
-
-        // Thêm logic gây damage hoặc spawn skill object
+        SwitchAnim(target.position, "Skill 1", "Skill 0", 0f);
         Debug.Log($"[{_transform.name}] Dùng skill vào {target.name} lúc {Time.time:F2}");
+        // TODO: thêm logic gây damage / spawn skill object tại đây
     }
 
-    private void SwitchAnim(Vector3 targetPos, string state1, string state2)
+    private void SwitchAnim(Vector3 targetPos, string leftState, string rightState, float crossFade = 0.1f)
     {
-        if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_anim, state1);
-        else _controller.ChangeAnimation(_anim, state2);
+        if (_transform.position.x - targetPos.x > 0)
+            _controller.ChangeAnimation(_anim, leftState, crossFade);
+        else
+            _controller.ChangeAnimation(_anim, rightState, crossFade);
     }
 }
