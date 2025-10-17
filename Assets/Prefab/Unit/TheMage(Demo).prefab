@@ -155,12 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5990856b54454f1478170ed62560a8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 6768994202510114446}
   prefabs:
   - {fileID: 405458774386553277}
   projectiles: []
-  duration: 2
-  animator: {fileID: 0}
-  clipName: CastingSpell
+  duration: 4
+  animator: {fileID: 7775841118204165973}
+  clipName: CastingSpellEffect
 --- !u!114 &7173478134349462717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,12 +174,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c5ea5354655974f9e7f304d0539eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
+  owner: {fileID: 6768994202510114446}
+  size: 12
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   value: 5
-  type: 0
+  castDuration: 0
+  type: 1
 --- !u!1 &6768994202510114446
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,14 +198,13 @@ GameObject:
   - component: {fileID: 1654625820116861191}
   - component: {fileID: 2329034817607845094}
   - component: {fileID: 8147435167210863253}
-  - component: {fileID: 6049412643008032788}
   m_Layer: 7
   m_Name: TheMage(Demo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2007904176929595276
 Transform:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ MonoBehaviour:
   speed: 1
   attackRange: 5
   attackSpeed: 1
-  spellRange: 15
+  spellRange: 12
   spellCooldown: 5
   defaultTarget: {fileID: 0}
   animator: {fileID: 581198636875506792}
@@ -394,13 +396,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5990856b54454f1478170ed62560a8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 6768994202510114446}
   prefabs:
   - {fileID: 405458774386553277}
   projectiles:
   - {fileID: 1020748113067357137}
   - {fileID: 7304666090750566570}
-  duration: 2
-  animator: {fileID: 0}
+  duration: 4
+  animator: {fileID: 581198636875506792}
   clipName: CastingSpell
 --- !u!114 &8147435167210863253
 MonoBehaviour:
@@ -414,6 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52ec5e8e94e9af4fa1ae7e75844ba69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
   baseStats: {fileID: 11400000, guid: c419331a943fbd746b6c02d1ac9d118b, type: 2}
   currentHP: 0
   currentDMG: 0
@@ -422,8 +427,7 @@ MonoBehaviour:
   currentShield: 0
   currentAtkSpd: 0
   currentSkillDmg: 0
-  level: 1
-  maxLevel: 8
+  currentSkillDuration: 0
   hpLinear: 30
   dmgMultiplier: 1.2
   atkSpdMultiplier: 1.03
@@ -433,24 +437,6 @@ MonoBehaviour:
   shieldCap: 30
   skillCDMultiplier: 0.97
   skillCDMinFactor: 0.5
---- !u!114 &6049412643008032788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6768994202510114446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2c794b2e81e487478c12fd4ebdacaad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minCameraDistance: 5
-  maxCameraDistance: 30
-  minCheckRadius: 1
-  maxCheckRadius: 5
-  separationStrength: 3
-  desiredSeparation: 1.2
 --- !u!1001 &4034222512152983414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 5954624142014961628, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954624142014961628, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
+      propertyPath: m_TagString
+      value: AttackBox
       objectReference: {fileID: 0}
     - target: {fileID: 7842500479463323731, guid: aa41278271f8db84a92b6719481dbb6a, type: 3}
       propertyPath: m_SortingLayer

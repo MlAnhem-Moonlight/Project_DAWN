@@ -15,14 +15,13 @@ GameObject:
   - component: {fileID: 2746002706559184935}
   - component: {fileID: 3598325914348284247}
   - component: {fileID: 990429837741316815}
-  - component: {fileID: 6903945117398233951}
   m_Layer: 7
   m_Name: TheHand(Demo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &799796206133411358
 Transform:
   m_ObjectHideFlags: 0
@@ -193,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  attackRange: 1
+  attackRange: 0.64
   skillCD: 5
   attackSpeed: 1
   animator: {fileID: 2746002706559184935}
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cdb56a728c6474d9a69437fcb077c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 4
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: 9c5f7d099d00c8a4db68ae209cfbeb6a, type: 2}
   currentHP: 0
@@ -229,24 +228,6 @@ MonoBehaviour:
   spdLinear: 0.1
   skillCDMultiplier: 0.985
   skillCDMinFactor: 0.7
---- !u!114 &6903945117398233951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509663465344702900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2c794b2e81e487478c12fd4ebdacaad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minCameraDistance: 5
-  maxCameraDistance: 30
-  minCheckRadius: 0
-  maxCheckRadius: 2
-  separationStrength: 3
-  desiredSeparation: 1.2
 --- !u!1 &7820319488651036133
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +241,7 @@ GameObject:
   - component: {fileID: 6362623516715296329}
   m_Layer: 7
   m_Name: AttackBox
-  m_TagString: Untagged
+  m_TagString: AttackBox
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 7820319488651036133}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.435, y: 0.304, z: 0}
+  m_LocalPosition: {x: 0.402, y: 0.304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -314,7 +295,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.023145676, y: 0.11927402}
+  m_Offset: {x: 0.03263092, y: 0.11927402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -324,7 +305,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.38404465, y: 1.0961311}
+  m_Size: {x: 0.40301514, y: 1.0961311}
   m_EdgeRadius: 0
 --- !u!114 &6362623516715296329
 MonoBehaviour:

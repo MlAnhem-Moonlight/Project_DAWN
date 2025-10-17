@@ -31,7 +31,7 @@ public class TheHandMovement : Nodes
     public override NodeState Evaluate()
     {
         _animator.SetInteger("State", 0);
-        Debug.Log(_target);
+        //Debug.Log(_target);
         if (_target == null || _target.gameObject.activeInHierarchy == false)
         {
             _target = _defaultTarget;
