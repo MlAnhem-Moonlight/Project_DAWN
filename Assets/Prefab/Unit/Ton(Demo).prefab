@@ -14,7 +14,11 @@ GameObject:
   m_Layer: 7
   m_Name: GameObject
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_TagString: Untagged
+=======
+  m_TagString: AttackBox
+>>>>>>> Stashed changes
 =======
   m_TagString: AttackBox
 >>>>>>> Stashed changes
@@ -32,7 +36,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 1.79, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: 0.478, y: 0, z: 0}
+>>>>>>> Stashed changes
 =======
   m_LocalPosition: {x: 0.478, y: 0, z: 0}
 >>>>>>> Stashed changes
@@ -76,7 +84,11 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Offset: {x: -0.16422236, y: 0.17393613}
+=======
+  m_Offset: {x: -0.027597427, y: -0.03177291}
+>>>>>>> Stashed changes
 =======
   m_Offset: {x: -0.027597427, y: -0.03177291}
 >>>>>>> Stashed changes
@@ -90,7 +102,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Size: {x: 2.072913, y: 4.930962}
+=======
+  m_Size: {x: 0.6280556, y: 1.2914926}
+>>>>>>> Stashed changes
 =======
   m_Size: {x: 0.6280556, y: 1.2914926}
 >>>>>>> Stashed changes
@@ -103,7 +119,11 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949955592855148858}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Enabled: 0
+=======
+  m_Enabled: 1
+>>>>>>> Stashed changes
 =======
   m_Enabled: 1
 >>>>>>> Stashed changes
@@ -353,6 +373,7 @@ MonoBehaviour:
   skillCDMultiplier: 0.99
   skillCDMinFactor: 0.6
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &7512457635445865454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,5 +392,7 @@ MonoBehaviour:
   maxCheckRadius: 5
   separationStrength: 3
   desiredSeparation: 1.2
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

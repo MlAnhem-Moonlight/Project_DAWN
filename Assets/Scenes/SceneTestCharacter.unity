@@ -1175,8 +1175,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2212884053681926967, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       propertyPath: m_Enabled
       value: 1
+=======
+      propertyPath: attackRange
+      value: 0.97
+>>>>>>> Stashed changes
 =======
       propertyPath: attackRange
       value: 0.97
@@ -1194,6 +1199,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 4752862329397874238, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1243,6 +1249,11 @@ PrefabInstance:
     - target: {fileID: 9201609811734140115, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_Enabled
       value: 1
+=======
+    - target: {fileID: 6925553500575183442, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.678
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3124,6 +3135,7 @@ PrefabInstance:
     - target: {fileID: 1509663465344702900, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_IsActive
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154923747338101727, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
@@ -3144,6 +3156,9 @@ PrefabInstance:
     - target: {fileID: 3598325914348284247, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: attackRange
       value: 0.64
+=======
+      value: 0
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 7820319488651036133, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_Icon
