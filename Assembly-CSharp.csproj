@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Guide\ResourceAllocationGA.cs" />
+    <Compile Include="Assets\Script\Ally\Archer\ArcherNeu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvestable.cs" />
+    <Compile Include="Assets\Script\Ally\Archer\ArcherDef.cs" />
     <Compile Include="Assets\OnFinish.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\CastSpellNode.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Assets\Guide\ResourceManager.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Script\Ally\Archer\ArcherArg.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />
     <Compile Include="Assets\Script\Environment\MaterialPool.cs" />
     <Compile Include="Assets\Script\Q-Learning\Q-Learning(no01).cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PlayerHarvestController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Script\Ally\Archer\ArcherBehavior.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageMovement.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Selector.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageStats.cs" />

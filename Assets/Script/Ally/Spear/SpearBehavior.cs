@@ -91,11 +91,11 @@ public class SpearBehavior : BhTree
                                                 defensiveOffset);
         Nodes root = new Selector(new List<Nodes>
             {
-                 new Sequence(new List<Nodes> // Aggressive behavior branch
+                 new Sequence(new List<Nodes> 
                  {
                     _aggressiveMovement, //Movement
-                 }),
-                 new Selector(new List<Nodes> // Defensive behavior branch
+                 }),// Aggressive behavior branch
+                 new Selector(new List<Nodes> 
                  {
 
                     _defensiveMovement, //Movement
@@ -107,9 +107,8 @@ public class SpearBehavior : BhTree
                         //&& check if any monster in range ? attack(chase if out of attack range) : patrol around
                         _defensiveAction// If no enemy in range, patrol around defensive target
                     }),
-                 }),
+                 }),// Defensive behavior branch
                  _neutralMovement //Movement
-
             });
 
         return root;

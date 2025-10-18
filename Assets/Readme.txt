@@ -42,5 +42,10 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 		+ phần defensive chưa khớp anim và chí số trong Stats 
 	- Thehand: Bug hitbox, anim bị lệch, (?)
 	- bổ xung wolf và knight; thêm attack cho player:
-		+ knight: tấn công cận chiến(2 hit trên 1 lần), skill buff shield
-		! Thêm attack box cho knight và spear
+		+ knight: tấn công cận chiến(2 hit trên 1 lần), skill buff shield (V)
+		! Thêm attack box cho knight(V) và spear
+		+ Cần script chỉ định vị trí (tạo checkpoint) cho unit khi di chuyển trong lúc phòng thủ (V))
+		+ Archer chỉ đứng tại checkpoint:
+			* Arg: tấn công enemy xa nhất trong tầm bắn 
+			* Def: tấn công enemy gần nhất trong tầm bắn
+			* Neu: di chuyển xung quanh checkpoint
