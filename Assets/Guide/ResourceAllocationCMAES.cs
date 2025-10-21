@@ -136,11 +136,11 @@ public class ResourceAllocationCMAES : MonoBehaviour
                 }
                 objectTemplate.Add(new GameObjectAllocation(obj.id, resourceCost));
             }
-            Debug.Log($"[CMA-ES] Loaded {objectTemplate.Count} templates from JSON");
+            //Debug.Log($"[CMA-ES] Loaded {objectTemplate.Count} templates from JSON");
         }
         else
         {
-            Debug.LogWarning("[CMA-ES] Failed to load JSON. Using default template.");
+            //Debug.LogWarning("[CMA-ES] Failed to load JSON. Using default template.");
             LoadDefaultTemplate();
         }
     }
@@ -248,8 +248,8 @@ public class ResourceAllocationCMAES : MonoBehaviour
                 bestSolution = sorted[0].ind.Clone();
             }
 
-            if (gen % 20 == 0)
-                Debug.Log($"[CMA-ES] Gen {gen} | BestFit {bestThisGen:F3} | Sigma {sigma:F2}");
+            //if (gen % 20 == 0)
+            //    //Debug.Log($"[CMA-ES] Gen {gen} | BestFit {bestThisGen:F3} | Sigma {sigma:F2}");
         }
 
         isOptimized = true;
@@ -529,18 +529,18 @@ public class ResourceAllocationCMAES : MonoBehaviour
     {
         if (bestSolution == null)
         {
-            Debug.LogWarning("[CMA-ES] No solution found.");
+            ////Debug.LogWarning("[CMA-ES] No solution found.");
             return;
         }
 
         var used = bestSolution.GetTotalUsedResources();
-        Debug.Log("=== CMA-ES RESOURCE ALLOCATION RESULTS ===");
-        Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
-        Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100f:F1}%)");
-        Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100f:F1}%)");
-        Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100f:F1}%)");
-        Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100f:F1}%)");
-        Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100f:F1}%)");
+        ////Debug.Log("=== CMA-ES RESOURCE ALLOCATION RESULTS ===");
+        ////Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
+        ////Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100f:F1}%)");
+        ////Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100f:F1}%)");
+        ////Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100f:F1}%)");
+        ////Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100f:F1}%)");
+        ////Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100f:F1}%)");
 
         var resultDict = new Dictionary<string, int>();
         foreach (var a in bestSolution.allocations)
@@ -548,7 +548,7 @@ public class ResourceAllocationCMAES : MonoBehaviour
             if (a.quantity > 0)
             {
                 var cost = a.GetTotalCost();
-                Debug.Log($"  {a.objectName}: {a.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
+                ////Debug.Log($"  {a.objectName}: {a.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
             }
             resultDict[a.objectName] = a.quantity;
         }

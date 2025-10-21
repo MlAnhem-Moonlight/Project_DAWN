@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 4449887098484519372}
   - component: {fileID: 1501330005798410616}
   - component: {fileID: 7782305108022120653}
-  - component: {fileID: 2140761166584586751}
   - component: {fileID: 6127381556460186418}
+  - component: {fileID: 2140761166584586751}
   - component: {fileID: 761394577998230840}
   - component: {fileID: 3897038614424180748}
   m_Layer: 0
@@ -211,6 +211,41 @@ MonoBehaviour:
       possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
     initialSize: 10
     expandable: 1
+--- !u!114 &6127381556460186418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216859575004034585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041cd014b4306ab4c8b8b22943cd0021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoLoadAndTrain: 1
+  learningRate: 0.001
+  epochs: 1500
+  trainingDataJsonPath: Assets/Script/Environment/ingridient.json
+  trainingDataSet: []
+  woodFactor: 1
+  stoneFactor: 1
+  ironFactor: 1
+  goldFactor: 1
+  meatFactor: 1
+  maxLevel: 30
+  maxResourceValue: 1000
+  testLevel: 2
+  testRemainingWood: 145
+  testRemainingStone: 110
+  testRemainingIron: 75
+  testRemainingGold: 52
+  testRemainingMeat: 90
+  testConsumedWood: 340
+  testConsumedStone: 290
+  testConsumedIron: 120
+  testConsumedGold: 90
+  testConsumedMeat: 175
 --- !u!114 &2140761166584586751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,41 +282,6 @@ MonoBehaviour:
   baseHuntTime: 80
   huntTimeReductionPerWolf: 10
   minHuntTime: 20
---- !u!114 &6127381556460186418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216859575004034585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 041cd014b4306ab4c8b8b22943cd0021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoLoadAndTrain: 1
-  learningRate: 0.001
-  epochs: 1500
-  trainingDataJsonPath: Assets/Script/Environment/ingridient.json
-  trainingDataSet: []
-  woodFactor: 1
-  stoneFactor: 1
-  ironFactor: 1
-  goldFactor: 1
-  meatFactor: 1
-  maxLevel: 30
-  maxResourceValue: 1000
-  testLevel: 2
-  testRemainingWood: 145
-  testRemainingStone: 110
-  testRemainingIron: 75
-  testRemainingGold: 52
-  testRemainingMeat: 90
-  testConsumedWood: 340
-  testConsumedStone: 290
-  testConsumedIron: 120
-  testConsumedGold: 90
-  testConsumedMeat: 175
 --- !u!114 &761394577998230840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +354,3 @@ MonoBehaviour:
     fitness: 0
     allocations: []
   isOptimized: 0
-  baseHuntTime: 80
-  huntTimeReductionPerWolf: 10
-  minHuntTime: 20

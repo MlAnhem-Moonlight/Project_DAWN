@@ -119,6 +119,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PlayerHarvestController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Guide\TestScript.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherBehavior.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageMovement.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Selector.cs" />

@@ -60,7 +60,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("No training data found! Model will use default predictions.");
+                //Debug.LogWarning("No training data found! Model will use default predictions.");
             }
         }
     }
@@ -68,7 +68,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
     private void InitializeModel()
     {
         model = new LinearRegressionModel(INPUT_FEATURES, OUTPUT_FEATURES);
-        //Debug.Log($"Model initialized with {INPUT_FEATURES} input features and {OUTPUT_FEATURES} output features.");
+        ////Debug.Log($"Model initialized with {INPUT_FEATURES} input features and {OUTPUT_FEATURES} output features.");
     }
 
     private void LoadTrainingDataFromJson()
@@ -77,7 +77,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
 
         if (!File.Exists(trainingDataJsonPath))
         {
-            Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
+            //Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
             CreateSampleTrainingData();
             return;
         }
@@ -90,24 +90,24 @@ public class ResourceSpawnPredictor : MonoBehaviour
             if (wrapper?.trainingData != null)
             {
                 trainingDataSet.AddRange(wrapper.trainingData);
-                Debug.Log($"Successfully loaded {trainingDataSet.Count} training samples from JSON.");
+                //Debug.Log($"Successfully loaded {trainingDataSet.Count} training samples from JSON.");
             }
             else
             {
-                Debug.LogWarning("Invalid JSON format. Creating sample data.");
+                //Debug.LogWarning("Invalid JSON format. Creating sample data.");
                 CreateSampleTrainingData();
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error loading training data: {e.Message}");
+            //Debug.LogError($"Error loading training data: {e.Message}");
             CreateSampleTrainingData();
         }
     }
 
     private void CreateSampleTrainingData()
     {
-        Debug.Log("Creating sample training data...");
+        //Debug.Log("Creating sample training data...");
 
         trainingDataSet.Add(new TrainingData(
             1,
@@ -132,7 +132,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
     {
         if (trainingDataSet.Count == 0)
         {
-            Debug.LogWarning("No training data available for training!");
+            //Debug.LogWarning("No training data available for training!");
             return;
         }
 
@@ -146,9 +146,9 @@ public class ResourceSpawnPredictor : MonoBehaviour
             outputs.Add(NormalizeOutput(data.nextLevelSpawnResources.ToArray()));
         }
 
-        Debug.Log($"Starting model training with {trainingDataSet.Count} samples...");
+        //Debug.Log($"Starting model training with {trainingDataSet.Count} samples...");
         model.Train(inputs, outputs, learningRate, epochs);
-        Debug.Log("Model training completed successfully!");
+        //Debug.Log("Model training completed successfully!");
     }
 
     private float[] PrepareInput(int levelIndex, ResourceData remaining, ResourceData consumed)
@@ -202,7 +202,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         // Dự đoán chính dựa trên lượng còn dư và tiêu hao hiện tại, sử dụng mô hình LinearRegressionModel
         if (!model.IsTrained)
         {
-            Debug.LogWarning("Model is not trained yet! Using fallback prediction.");
+            //Debug.LogWarning("Model is not trained yet! Using fallback prediction.");
             return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
         }
 
@@ -224,13 +224,12 @@ public class ResourceSpawnPredictor : MonoBehaviour
             prediction[4] = Mathf.Round(prediction[4] * meatFactor);
 
             var result = ResourceData.FromArray(prediction);
-            Debug.Log($"[Predict] Model prediction for level {currentLevel + 1}: " +
-                      $"Wood={result.wood}, Stone={result.stone}, Iron={result.iron}, Gold={result.gold}, Meat={result.meat}");
+            //Debug.Log($"[Predict] Model prediction for level {currentLevel + 1}: " + $"Wood={result.wood}, Stone={result.stone}, Iron={result.iron}, Gold={result.gold}, Meat={result.meat}");
             return result;
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error during prediction: {e.Message}");
+            //Debug.LogError($"Error during prediction: {e.Message}");
             return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
         }
     }
@@ -251,7 +250,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
     public void AddTrainingData(int levelIndex, ResourceData current, ResourceData consumed, ResourceData actualSpawn)
     {
         trainingDataSet.Add(new TrainingData(levelIndex, current.Clone(), consumed.Clone(), actualSpawn.Clone()));
-        Debug.Log($"Added new training data for level {levelIndex}");
+        //Debug.Log($"Added new training data for level {levelIndex}");
     }
 
     public void RetrainModel()
@@ -262,7 +261,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No training data available for retraining!");
+            //Debug.LogWarning("No training data available for retraining!");
         }
     }
 
@@ -272,12 +271,12 @@ public class ResourceSpawnPredictor : MonoBehaviour
     //    ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
     //    ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
 
-    //    Debug.Log($"Testing prediction for level {testLevel}:");
-    //    Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
-    //    Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+    //    //Debug.Log($"Testing prediction for level {testLevel}:");
+    //    //Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+    //    //Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
 
     //    ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
-    //    Debug.Log($"Prediction for level {testLevel + 1}: Wood={prediction.wood:F1}, Stone={prediction.stone:F1}, Iron={prediction.iron:F1}, Gold={prediction.gold:F1}, Meat={prediction.meat:F1}");
+    //    //Debug.Log($"Prediction for level {testLevel + 1}: Wood={prediction.wood:F1}, Stone={prediction.stone:F1}, Iron={prediction.iron:F1}, Gold={prediction.gold:F1}, Meat={prediction.meat:F1}");
     //}
 
     public ResourceDataGA Prediction()
@@ -286,9 +285,9 @@ public class ResourceSpawnPredictor : MonoBehaviour
         ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
         ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
 
-        Debug.Log($"Testing prediction for level {testLevel}:");
-        Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
-        Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+        //Debug.Log($"Testing prediction for level {testLevel}:");
+        //Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+        //Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
 
         ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
         resourceDataGA = new ResourceDataGA((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
@@ -301,9 +300,9 @@ public class ResourceSpawnPredictor : MonoBehaviour
         ResourceData remaining = new ResourceData(testRemainingWood, testRemainingStone, testRemainingIron, testRemainingGold, testRemainingMeat);
         ResourceData consumed = new ResourceData(testConsumedWood, testConsumedStone, testConsumedIron, testConsumedGold, testConsumedMeat);
 
-        Debug.Log($"Testing prediction for level {testLevel}:");
-        Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
-        Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
+        //Debug.Log($"Testing prediction for level {testLevel}:");
+        //Debug.Log($"Remaining: Wood={remaining.wood}, Stone={remaining.stone}, Iron={remaining.iron}, Gold={remaining.gold}, Meat={remaining.meat}");
+        //Debug.Log($"Consumed: Wood={consumed.wood}, Stone={consumed.stone}, Iron={consumed.iron}, Gold={consumed.gold}, Meat={consumed.meat}");
 
         ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
         resourceDataDE = new ResourceDataDE((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
@@ -323,7 +322,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         string json = JsonConvert.SerializeObject(wrapper, Formatting.Indented);
         File.WriteAllText(trainingDataJsonPath, json);
 
-        Debug.Log($"Sample training data saved to {trainingDataJsonPath}");
+        //Debug.Log($"Sample training data saved to {trainingDataJsonPath}");
     }
 
     // Thêm phương thức này vào class ResourceSpawnPredictor
@@ -342,6 +341,6 @@ public class ResourceSpawnPredictor : MonoBehaviour
         testConsumedGold = consumed.gold;
         testConsumedMeat = consumed.meat;
 
-        Debug.Log("Updated resource prediction test data with real player data");
+        //Debug.Log("Updated resource prediction test data with real player data");
     }
 }

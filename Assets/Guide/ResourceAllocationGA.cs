@@ -217,11 +217,11 @@ public class ResourceAllocationGA : MonoBehaviour
                 objectTemplate.Add(new GameObjectAllocation(obj.id, resourceCost));
             }
 
-            Debug.Log($"Đã load {objectTemplate.Count} object templates từ JSON");
+            //Debug.Log($"Đã load {objectTemplate.Count} object templates từ JSON");
         }
         else
         {
-            Debug.LogError("Không thể load environment data từ JSON, sử dụng default template");
+            //Debug.LogError("Không thể load environment data từ JSON, sử dụng default template");
             // Fallback to default template nếu không load được từ JSON
             LoadDefaultTemplate();
         }
@@ -229,7 +229,7 @@ public class ResourceAllocationGA : MonoBehaviour
 
     void RunGeneticAlgorithm()
     {
-        Debug.Log("Starting Genetic Algorithm for Resource Allocation...");
+        //Debug.Log("Starting Genetic Algorithm for Resource Allocation...");
 
         // Initialize population
         InitializePopulation();
@@ -242,10 +242,10 @@ public class ResourceAllocationGA : MonoBehaviour
             // Sort by fitness
             population = population.OrderByDescending(ind => ind.fitness).ToList();
 
-            if (generation % 20 == 0)
-            {
-                Debug.Log($"Generation {generation}: Best Fitness = {population[0].fitness:F2}");
-            }
+            //if (generation % 20 == 0)
+            //{
+            //    //Debug.Log($"Generation {generation}: Best Fitness = {population[0].fitness:F2}");
+            //}
 
             // Create new generation
             var newPopulation = new List<Individual>();
@@ -705,19 +705,19 @@ public class ResourceAllocationGA : MonoBehaviour
 
     void DisplayResults()
     {
-        Debug.Log("=== RESOURCE ALLOCATION RESULTS ===");
+        ////Debug.Log("=== RESOURCE ALLOCATION RESULTS ===");
 
         var used = bestSolution.GetTotalUsedResources();
 
-        Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
-        Debug.Log($"Resource Usage:");
-        Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
-        Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
-        Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
-        Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
-        Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
+        ////Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
+        ////Debug.Log($"Resource Usage:");
+        ////Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
+        ////Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
+        ////Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
+        ////Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
+        ////Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
 
-        Debug.Log("\nObject Allocations:");
+        ////Debug.Log("\nObject Allocations:");
         var resultDict = new Dictionary<string, int>();
 
         foreach (var allocation in bestSolution.allocations)
@@ -725,7 +725,7 @@ public class ResourceAllocationGA : MonoBehaviour
             if (allocation.quantity > 0)
             {
                 var cost = allocation.GetTotalCost();
-                Debug.Log($"  {allocation.objectName}: {allocation.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
+                ////Debug.Log($"  {allocation.objectName}: {allocation.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
             }
 
             // Thêm vào dictionary để lưu (bao gồm cả quantity = 0)

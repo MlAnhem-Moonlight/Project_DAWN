@@ -96,7 +96,7 @@ public class Ingredient : MonoBehaviour
                         environmentData = new EnvironmentData();
                         environmentData.objects = data.objects;
 
-                        Debug.Log($"Đã load thành công {data.objects.Length} objects từ env.json");
+                        //Debug.Log($"Đã load thành công {data.objects.Length} objects từ env.json");
                     }
                     else
                     {
@@ -215,7 +215,7 @@ public class Ingredient : MonoBehaviour
                         fs.Flush(true); // ép xuống ổ đĩa
                     }
 
-                    Debug.Log("Đã lưu kết quả GA vào env.json");
+                    //Debug.Log("Đã lưu kết quả GA vào env.json");
                     onGAResultSaved?.Invoke();
                 }
             }

@@ -183,7 +183,7 @@ public class ResourceAllocationDE : MonoBehaviour
     // Main DE algorithm
     void RunDifferentialEvolution()
     {
-        Debug.Log("Starting Differential Evolution for Resource Allocation...");
+        //Debug.Log("Starting Differential Evolution for Resource Allocation...");
 
         InitializePopulation();
 
@@ -207,11 +207,11 @@ public class ResourceAllocationDE : MonoBehaviour
 
             population = newPopulation;
 
-            if (generation % 20 == 0)
-            {
-                var best = population.OrderByDescending(ind => ind.fitness).First();
-                Debug.Log($"Generation {generation}: Best Fitness = {best.fitness:F2}");
-            }
+            //if (generation % 20 == 0)
+            //{
+            //    var best = population.OrderByDescending(ind => ind.fitness).First();
+            //    //Debug.Log($"Generation {generation}: Best Fitness = {best.fitness:F2}");
+            //}
         }
 
         bestSolution = population.OrderByDescending(ind => ind.fitness).First();
@@ -607,18 +607,18 @@ public class ResourceAllocationDE : MonoBehaviour
 
     void DisplayResults()
     {
-        Debug.Log("=== DIFFERENTIAL EVOLUTION RESULTS ===");
+        ////Debug.Log("=== DIFFERENTIAL EVOLUTION RESULTS ===");
         var used = GetTotalUsedResources(bestSolution);
 
-        Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
-        Debug.Log($"Resource Usage:");
-        Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
-        Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
-        Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
-        Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
-        Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
+        ////Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
+        ////Debug.Log($"Resource Usage:");
+        ////Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
+        ////Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
+        ////Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
+        ////Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
+        ////Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
 
-        Debug.Log("\nObject Allocations:");
+        ////Debug.Log("\nObject Allocations:");
         var resultDict = new Dictionary<string, int>();
 
         foreach (var allocation in bestSolution.allocations)
@@ -626,7 +626,7 @@ public class ResourceAllocationDE : MonoBehaviour
             if (allocation.quantity > 0)
             {
                 var cost = allocation.GetTotalCost();
-                Debug.Log($"  {allocation.objectName}: {allocation.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
+                ////Debug.Log($"  {allocation.objectName}: {allocation.quantity} units (Wood:{cost.wood}, Stone:{cost.stone}, Iron:{cost.iron}, Gold:{cost.gold}, Meat:{cost.meat})");
             }
             resultDict[allocation.objectName] = allocation.quantity;
         }

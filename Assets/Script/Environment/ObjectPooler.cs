@@ -120,4 +120,30 @@ public class ObjectPooler : MonoBehaviour
     {
         obj.SetActive(false);
     }
+
+    // New helpers to enable/disable all pooled objects (used for performance testing)
+    public void SetAllPooledActive(bool active)
+    {
+        if (pooledObjects == null) return;
+        foreach (var kvp in pooledObjects)
+        {
+            var list = kvp.Value;
+            for (int i = 0; i < list.Count; i++)
+            {
+                var obj = list[i];
+                if (obj != null)
+                {
+                    obj.SetActive(active);
+                }
+            }
+        }
+    }
+
+    public int GetTotalPooledCount()
+    {
+        if (pooledObjects == null) return 0;
+        int c = 0;
+        foreach (var kvp in pooledObjects) c += kvp.Value?.Count ?? 0;
+        return c;
+    }
 }
