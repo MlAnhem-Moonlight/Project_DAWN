@@ -46,6 +46,7 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 		! Thêm attack box cho knight(V) và spear
 		+ Cần script chỉ định vị trí (tạo checkpoint) cho unit khi di chuyển trong lúc phòng thủ (V))
 		+ Archer chỉ đứng tại checkpoint:
+			* movement : di chuyển tới checkpoint
 			* Arg: tấn công enemy xa nhất trong tầm bắn 
 			* Def: tấn công enemy gần nhất trong tầm bắn
 			* Neu: di chuyển xung quanh checkpoint

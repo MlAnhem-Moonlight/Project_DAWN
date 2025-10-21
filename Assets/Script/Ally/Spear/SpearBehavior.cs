@@ -20,7 +20,6 @@ public class SpearBehavior : BhTree
     [Header("Settings")]
     public AllyState spearState = AllyState.Neutral;
     public AnimatorState currentState = AnimatorState.Idle;
-    public float speed = 10f;
     public float defensiveOffset = 1.5f;
     public float patrolRadius = 5f;
     public float mainBaseRadius = 3f;
@@ -34,6 +33,7 @@ public class SpearBehavior : BhTree
     public float attackSpeed = 1f;
     public float skillCD = 2.9f;
     public float atkRange = 3f;
+    public float speed = 10f;
 
     private AggressiveMovement _aggressiveMovement;
     private DefensiveMovement _defensiveMovement;
@@ -56,6 +56,11 @@ public class SpearBehavior : BhTree
         startPos = GameObject.Find("PatrolStartPos").transform;
         endPos = GameObject.Find("PatrolEndPos").transform;
         waypoints = GameObject.Find("Waypoint").transform;
+
+        speed = GetComponent<Stats>() ? GetComponent<Stats>().currentSPD : 10f;
+        skillCD = GetComponent<Stats>() ? GetComponent<Stats>().currentSkillCD : 5f;
+        attackSpeed = GetComponent<Stats>() ? GetComponent<Stats>().currentAtkSpd : 1f;
+
         animator = GetComponent<Animator>();
         //Only work for Spear and Knight
         if (isSpear)

@@ -22,7 +22,7 @@ namespace Spear.Movement
         private Transform _endPos;
 
         private Animator _animator;
-        private int _currentState = 4; // 4 = walk, 5 = idle
+        private AnimationController _controller;
 
         public NeutralMovement(Transform transform, Transform waypoint, float speed,
                                Transform startPos, Transform endPos, Animator animator)
@@ -33,6 +33,7 @@ namespace Spear.Movement
             _startPos = startPos;
             _endPos = endPos;
             _animator = animator;
+            _controller = _transform.GetComponent<AnimationController>();
         }
 
         public override NodeState Evaluate()
@@ -64,13 +65,13 @@ namespace Spear.Movement
 
                     // Random Idle hoặc Walk
                     ChooseNextState();
-                    float targetPosition = _waypoint.position.x,
-                    dir = _transform.position.x - targetPosition > 0 ? -1f : 1f;
-                    _animator?.SetFloat("Direct", dir);
+
+
                 }
                 else
                 {
-                    if (_currentState == 4) // Walk
+                    if (_transform.GetComponent<SpearBehavior>().currentState == AnimatorState.Running
+                        || _transform.GetComponent<SpearBehavior>().currentState == AnimatorState.Walk ) // Walk
                     {
                         _transform.position = Vector3.MoveTowards(
                             _transform.position,
@@ -78,7 +79,7 @@ namespace Spear.Movement
                             _speed * Time.deltaTime
                         );
                     }
-                    // Nếu Idle thì đứng yên
+
                 }
             }
             return state = NodeState.RUNNING;
@@ -96,32 +97,32 @@ namespace Spear.Movement
             );
 
             _waypoint.position = newPosition;
-            Debug.Log($"New waypoint position: {_waypoint.position}");
+
         }
 
-        private void ChooseNextState()
+        private void ChooseNextState(int choice = -1)
         {
-            int choice = Random.Range(0, 2); // 0 = Idle, 1 = Walk
+             if(choice == -1)
+                choice = Random.Range(0, 2);// 0 = Idle, 1 = Walk
 
             if (choice == 0) // Idle
             {
-                _currentState = 5;
-                _animator?.SetInteger("State", 5);
-                
-
+                CheckMovement(_waypoint.position, "Idle 1", "Idle 0", 0.2f);
                 _waitTime = Random.Range(5f, 6f); // Idle lâu
             }
             else // Walk
-            {
-                _currentState = 4;
-                _animator?.SetInteger("State", 4);
-
-
+            { 
+                CheckMovement(_waypoint.position, "Run2 1", "Run2");
                 _waitTime = 1f;
-
                 // Ngay khi chọn Walk thì random vị trí waypoint mới
                 MoveWaypointToNewPosition();
             }
+        }
+
+        private void CheckMovement(Vector3 targetPos, string state1, string state2, float crossFade = 0.1f)
+        {
+            if (_transform.position.x - targetPos.x > 0) _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state1, crossFade);
+            else _controller.ChangeAnimation(_transform.GetComponent<Animator>(), state2, crossFade);
         }
     }
 }

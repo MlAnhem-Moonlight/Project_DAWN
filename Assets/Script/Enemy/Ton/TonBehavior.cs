@@ -25,9 +25,9 @@ public class TonBehavior : BhTree
 
     protected override Nodes SetupTree()
     {
-        speed = GetComponent<TankStats>() ? GetComponent<TankStats>().currentSPD : 10f;
-        skillCD = GetComponent<TankStats>() ? GetComponent<TankStats>().currentSkillCD : 5f;
-        attackSpeed = GetComponent<TankStats>() ? GetComponent<TankStats>().currentAtkSpd : 1f;
+        speed = GetComponent<Stats>() ? GetComponent<Stats>().currentSPD : 10f;
+        skillCD = GetComponent<Stats>() ? GetComponent<Stats>().currentSkillCD : 5f;
+        attackSpeed = GetComponent<Stats>() ? GetComponent<Stats>().currentAtkSpd : 1f;
         //animator.SetFloat("AttackSpd", attackSpeed);
         SetupAttackSpeed(animator, attackSpeed);
 
