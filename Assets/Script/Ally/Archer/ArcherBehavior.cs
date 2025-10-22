@@ -63,4 +63,13 @@ public class ArcherBehavior : BhTree
     {
         spearState = newState;
     }
+    public void SetCheckpoint(Vector3 pos)
+    {
+        if (checkpoint == null)
+        {
+            GameObject obj = new GameObject($"{name}_Checkpoint");
+            checkpoint = obj.transform;
+        }
+        checkpoint.position = pos;
+    }
 }

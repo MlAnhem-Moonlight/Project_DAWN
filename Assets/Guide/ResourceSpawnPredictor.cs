@@ -77,7 +77,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
 
         if (!File.Exists(trainingDataJsonPath))
         {
-            //Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
+            Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
             CreateSampleTrainingData();
             return;
         }
@@ -94,13 +94,13 @@ public class ResourceSpawnPredictor : MonoBehaviour
             }
             else
             {
-                //Debug.LogWarning("Invalid JSON format. Creating sample data.");
+                Debug.LogWarning("Invalid JSON format. Creating sample data.");
                 CreateSampleTrainingData();
             }
         }
         catch (Exception e)
         {
-            //Debug.LogError($"Error loading training data: {e.Message}");
+            Debug.LogError($"Error loading training data: {e.Message}");
             CreateSampleTrainingData();
         }
     }
@@ -202,7 +202,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         // Dự đoán chính dựa trên lượng còn dư và tiêu hao hiện tại, sử dụng mô hình LinearRegressionModel
         if (!model.IsTrained)
         {
-            //Debug.LogWarning("Model is not trained yet! Using fallback prediction.");
+            Debug.LogWarning("Model is not trained yet! Using fallback prediction.");
             return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
         }
 
@@ -229,7 +229,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         }
         catch (Exception e)
         {
-            //Debug.LogError($"Error during prediction: {e.Message}");
+            Debug.LogError($"Error during prediction: {e.Message}");
             return GetFallbackPrediction(currentLevel, remainingResources, consumedResources);
         }
     }
@@ -261,7 +261,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
         }
         else
         {
-            //Debug.LogWarning("No training data available for retraining!");
+            Debug.LogWarning("No training data available for retraining!");
         }
     }
 
