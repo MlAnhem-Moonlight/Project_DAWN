@@ -11,14 +11,16 @@ public class ArcherMovement : Nodes
     private readonly Transform _checkpoint;
     private readonly float _speed;
     private readonly float _stopDistance;
+    private readonly float _attackRange;
     private AnimationController _controller;
 
-    public ArcherMovement(Transform transform, Transform checkpoint, float speed, float stopDistance)
+    public ArcherMovement(Transform transform, Transform checkpoint, float speed, float stopDistance, float attackRange)
     {
         _transform = transform;
         _checkpoint = checkpoint;
         _speed = speed;
         _stopDistance = stopDistance;
+        _attackRange = attackRange;
         _controller = _transform.GetComponent<AnimationController>();
     }
 
@@ -26,20 +28,24 @@ public class ArcherMovement : Nodes
     {
         if (_transform.GetComponent<ArcherBehavior>().spearState == AllyState.Neutral)
         {
+            Debug.Log($"[{_transform.name}] ArcherMovement FAILURE due to state or has target");
             state = NodeState.FAILURE;
             return state;
         }
-        if (_checkpoint == null)
-            return state = NodeState.FAILURE;
+        if (_transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Attack
+            || _transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.UsingSkill)
+        {
+           
+            return NodeState.SUCCESS;
+        }
 
         // Tính vị trí di chuyển (chỉ theo trục X để không thay đổi độ cao)
         Vector3 targetPos = new Vector3(_checkpoint.position.x, _transform.position.y, _transform.position.z);
         float distance = Vector2.Distance(_transform.position, targetPos);
-
         // Nếu đã đến vị trí checkpoint
         if (distance <= _stopDistance)
         {
-            CheckMovement(targetPos, "Idle 1", "Idle 0", 0.2f);
+            
             return state = NodeState.SUCCESS;
         }
 
@@ -50,7 +56,6 @@ public class ArcherMovement : Nodes
             targetPos,
             _speed * Time.deltaTime
         );
-
         return state = NodeState.RUNNING;
     }
 

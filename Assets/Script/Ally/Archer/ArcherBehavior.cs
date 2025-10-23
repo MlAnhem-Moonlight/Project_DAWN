@@ -14,13 +14,12 @@ public class ArcherBehavior : BhTree
     [Header("References")]
     public float speed;
     public float stopDistance;
-    public float atkRangeMax,atkRangeMin;
+    //public float atkRangeMax,atkRangeMin;
     public float attackSpeed = 1f;
     public float skillCD = 2.9f;
     public float atkRange = 3f;
-
-    [Header("References")]
     public Animator animator;
+    public GameObject target;
 
     protected override Nodes SetupTree()
     {
@@ -40,20 +39,28 @@ public class ArcherBehavior : BhTree
             new Sequence(new List<Nodes>
             {
                 //Di chuyển bằng checkpoint
-                new ArcherMovement(transform,checkpoint,speed,stopDistance),
-                new Selector(new List<Nodes>
-                {
-                    //* Arg: tấn công enemy xa nhất trong tầm bắn
-                    new ArcherArg(),
-                    //*Def: tấn công enemy gần nhất trong tầm bắn
-                    new ArcherDef(),
-                })
+                new ArcherMovement(transform,checkpoint,speed,stopDistance,atkRange),
+
+                //* Arg: tấn công enemy xa nhất trong tầm bắn || Def : tấn công enemy gần nhất trong tầm bắn
+                new ArcherArg(transform,atkRange,skillCD),
+
             }),
             //*Neu: di chuyển xung quanh checkpoint
             new ArcherNeu(transform, waypoints, speed / 2, startPos, endPos, animator),
         });
         return root;
     }
+
+    public GameObject GetTarget()
+    {
+        return target;
+    }
+
+    public void SetTarget(GameObject _target)
+    {
+        target = _target;
+    }
+
 
     public void ChangeState(AnimatorState state)
     {
@@ -71,5 +78,12 @@ public class ArcherBehavior : BhTree
             checkpoint = obj.transform;
         }
         checkpoint.position = pos;
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Màu đỏ cho tầm tấn công
+        Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
+        Gizmos.DrawWireSphere(transform.position, atkRange);
     }
 }

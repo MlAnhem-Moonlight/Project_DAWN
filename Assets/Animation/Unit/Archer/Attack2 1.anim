@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Skill 0
+  m_Name: Attack2 1
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,29 +22,29 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -8072327670702827999, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.06666667
+    - time: 0.083333336
       value: {fileID: 2799398417395818706, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.13333334
+    - time: 0.18333334
       value: {fileID: -3832176607176172993, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.2
+    - time: 0.25
       value: {fileID: -9136034597168674738, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.26666668
-      value: {fileID: -4383391168061212739, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
     - time: 0.33333334
+      value: {fileID: -4383391168061212739, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
+    - time: 0.41666666
       value: {fileID: 2725539271137924934, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.4
+    - time: 0.51666665
       value: {fileID: -2226733406896817035, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.46666667
+    - time: 0.5833333
       value: {fileID: 7914136472622487277, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.53333336
+    - time: 0.5833333
+      value: {fileID: 5221268740178076151, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
+    - time: 0.6666667
       value: {fileID: 5221268740178076151, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
     - time: 0.75
-      value: {fileID: 5221268740178076151, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.8
       value: {fileID: 6732253136648669285, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.8666667
+    - time: 0.85
       value: {fileID: -4262287869368284783, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
-    - time: 0.93333334
+    - time: 0.9166667
       value: {fileID: -1968351310512239135, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
     - time: 1
       value: {fileID: -6219853254370184053, guid: 5fa3e99b8b5b0cd4c92aced0531d9137, type: 3}
@@ -114,7 +114,14 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 5
+    intParameter: 2
+    messageOptions: 0
+  - time: 0.75
+    functionName: TurnOnProjectiles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: ChangeState

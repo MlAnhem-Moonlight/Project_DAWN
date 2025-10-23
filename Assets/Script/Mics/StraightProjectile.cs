@@ -1,5 +1,4 @@
-﻿using Unity.VisualScripting.Antlr3.Runtime.Misc;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StraightProjectile : MonoBehaviour
 {
@@ -7,73 +6,85 @@ public class StraightProjectile : MonoBehaviour
     public float speed = 10f;              // Tốc độ bay
     public float lifeTime = 5f;            // Tự hủy nếu không va
     public float dmg = 10f;
+    public GameObject target;
 
     [Header("Vị trí và hướng ban đầu")]
     public Transform _startPosition; // Có thể set trong Inspector hoặc code
     public Quaternion _startRotation;
 
-
-    [Header("Hướng bay (-1 = Trái, 1 = Phải)")]
-    [Range(-1f, 1f)]
-    public int direction = 1;   // chỉ nên set -1 hoặc 1
-
+    [Header("Animator")]
     public Animator animator, fireAnimator;
-    public string animationClipName = "Attack";
 
     private bool hasHit = false;
+    private Vector2 moveDir;  // hướng bay thực tế (đã xác định 1 lần)
 
     private void OnEnable()
     {
-        dmg = GetComponentInParent<Stats>().currentDMG;
+        dmg = GetComponentInParent<Stats>()?.currentDMG ?? dmg;
+        target = GetComponentInParent<ArcherBehavior>()?.GetTarget();
+
         hasHit = false;
-        direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
-        // Khi bật lại, đưa về vị trí gốc và hướng gốc
-        transform.position = _startPosition.position;
-        transform.rotation = Quaternion.Euler(
-            _startRotation.eulerAngles.x,
-            _startRotation.eulerAngles.y,
-            _startRotation.eulerAngles.z * direction
-        );
-        Invoke(nameof(DisableProjectile), lifeTime);
 
-        // Có thể thêm direction = transform.forward nếu cần.
-    }
+        // Đặt lại vị trí ban đầu
+        if (_startPosition != null)
+            transform.position = _startPosition.position;
 
-    private void Start()
-    {
-        // Nếu sau lifeTime không trúng gì, tự ẩn
+        // --- Xác định hướng bay ---
+        if (target != null)
+        {
+            // Nếu có mục tiêu → hướng bay về target
+            moveDir = (target.transform.position - transform.position).normalized;
+        }
+        else
+        {
+            // Nếu không có target → bay thẳng theo hướng nhân vật (phải hoặc trái)
+            float dirX = Mathf.Sign(GetComponentInParent<Transform>().localScale.x);
+            moveDir = new Vector2(dirX, 0f);
+        }
+
+        // Cập nhật hướng quay để sprite hướng theo chiều bay
+        float angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        // Tự hủy sau thời gian lifeTime
         Invoke(nameof(DisableProjectile), lifeTime);
     }
 
     private void Update()
-    { 
-        // Bảo đảm direction luôn chỉ là -1 hoặc 1
-        //direction = animator.GetFloat(animationClipName) >= 0 ? 1 : -1;
-        int dir = direction >= 0 ? 1 : -1;
-        
-        // Di chuyển thẳng trên trục X
-        if (!hasHit) transform.position += Vector3.right * dir * speed * Time.deltaTime;
+    {
+        if (!hasHit)
+        {
+            transform.position += (Vector3)(moveDir * speed * Time.deltaTime);
+        }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Kiểm tra layer bằng tên
+        if (target == null)
+        {
+            // Kiểm tra layer bằng tên
             if (other.gameObject.layer == LayerMask.NameToLayer("Human") ||
             other.gameObject.layer == LayerMask.NameToLayer("Construction"))
             {
-                fireAnimator.SetTrigger("Hit");
+                if (fireAnimator != null) fireAnimator.SetTrigger("Hit");
                 hasHit = true;
                 other.gameObject.GetComponent<Stats>().TakeDamage(dmg); //Dealing damage
             }
+        }
+        else
+        {
+            if (other.gameObject == target)
+            {
+                hasHit = true;
+                other.gameObject.GetComponent<Stats>().TakeDamage(dmg); //Dealing damage
+                DisableProjectile();
+            }
+        }
     }
+
     public void DisableProjectile()
     {
-        // Hủy Invoke để không gọi lại
         CancelInvoke(nameof(DisableProjectile));
-
-        // Tắt GameObject (có thể dùng object pool)
         gameObject.SetActive(false);
-        // Reset vị trí khi bật lại sẽ được OnEnable xử lý
     }
 }

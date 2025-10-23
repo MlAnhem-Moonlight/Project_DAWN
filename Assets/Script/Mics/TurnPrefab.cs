@@ -14,13 +14,14 @@ public class TurnPrefab : MonoBehaviour
     public float duration = 2f; // Duration in seconds
     public Animator animator;
     public string clipName = "CastingSpell";
+    public bool isMage = false;
 
     private int index = 0;
 
     private void OnEnable()
     {
         duration = owner.GetComponent<Stats>().currentSkillDuration;
-        SetupAnimatorDuration(animator, duration, clipName);
+        if (isMage) SetupAnimatorDuration(animator, duration, clipName);
     }
 
     // Bật tất cả
