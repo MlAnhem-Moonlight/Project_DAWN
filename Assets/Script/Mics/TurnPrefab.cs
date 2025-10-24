@@ -31,6 +31,11 @@ public class TurnPrefab : MonoBehaviour
             if (obj) obj.SetActive(true);
     }
 
+    public void TurnOffSelf()
+    {
+        gameObject.SetActive(false);
+    }
+
     // Tắt tất cả
     public void TurnOffAll()
     {

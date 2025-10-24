@@ -87,6 +87,7 @@
     <Compile Include="Assets\Script\Ally\Spear\CheckEnemyInRangeAlly.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
+    <Compile Include="Assets\Script\Mics\ProjectileArrow.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Assets\Script\Environment\Wolf\WolfAttack.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherMovement.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridBehavior.cs" />
+    <Compile Include="Assets\Script\Mics\Mics.cs" />
     <Compile Include="Assets\Script\Mics\TurnPrefab.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />

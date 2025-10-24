@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: caf799c1ff787ae40b7566b7dd1db258
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5676374395568913967
+    second: Little purple fire_0
+  - first:
+      213: -3387299790189682325
+    second: Little purple fire_1
+  - first:
+      213: -8427504248170050145
+    second: Little purple fire_2
+  - first:
+      213: 8486854576613537618
+    second: Little purple fire_3
+  - first:
+      213: 7877225299670376020
+    second: Little purple fire_4
+  - first:
+      213: -303240673862417496
+    second: Little purple fire_5
+  - first:
+      213: 3053976556950454481
+    second: Little purple fire_6
+  - first:
+      213: 128138774322018420
+    second: Little purple fire_7
+  - first:
+      213: 6243905497732686063
+    second: Little purple fire_8
+  - first:
+      213: 8970309968415029026
+    second: Little purple fire_9
+  - first:
+      213: 4059507970270012110
+    second: Little purple fire_10
+  - first:
+      213: 1163800114962893676
+    second: Little purple fire_11
+  - first:
+      213: 2592038569999388614
+    second: Little purple fire_12
+  - first:
+      213: 4549558008017533191
+    second: Little purple fire_13
+  - first:
+      213: 4315821184972044680
+    second: Little purple fire_14
+  - first:
+      213: -5626549076716756131
+    second: Little purple fire_15
+  - first:
+      213: 236026655216486366
+    second: Little purple fire_16
+  - first:
+      213: -1845385800737739307
+    second: Little purple fire_17
+  - first:
+      213: 8360451091025621479
+    second: Little purple fire_18
+  - first:
+      213: -7468784243155162590
+    second: Little purple fire_19
+  - first:
+      213: -7493923197865951916
+    second: Little purple fire_20
+  - first:
+      213: 5073626228455659945
+    second: Little purple fire_21
+  - first:
+      213: 8963550618734547140
+    second: Little purple fire_22
+  - first:
+      213: 6916261380484254757
+    second: Little purple fire_23
+  - first:
+      213: -7769007220717533728
+    second: Little purple fire_24
+  - first:
+      213: 6653761661826047633
+    second: Little purple fire_25
+  - first:
+      213: -1043159390069954888
+    second: Little purple fire_26
+  - first:
+      213: 6868183603790684400
+    second: Little purple fire_27
+  - first:
+      213: 8761550830954853333
+    second: Little purple fire_28
+  - first:
+      213: -3211840670041047230
+    second: Little purple fire_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Little purple fire_0
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 5633
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d10efbdf877931b0800000000000000
+      internalID: -5676374395568913967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_1
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 5660
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b612df999c4edf0d0800000000000000
+      internalID: -3387299790189682325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_2
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 5624
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d8ab0898d7b0b80800000000000000
+      internalID: -8427504248170050145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_3
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 5552
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257b27ba54d57c570800000000000000
+      internalID: 8486854576613537618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_4
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 5588
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e929abca6815d60800000000000000
+      internalID: 7877225299670376020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_5
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 5138
+        width: 173
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a30bf8b63caacbf0800000000000000
+      internalID: -303240673862417496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_6
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 5579
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d007657f77e16a20800000000000000
+      internalID: 3053976556950454481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_7
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 5138
+        width: 173
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478fa6d498d37c100800000000000000
+      internalID: 128138774322018420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_8
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 5138
+        width: 173
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe02773f7fec6a650800000000000000
+      internalID: 6243905497732686063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_9
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 5138
+        width: 173
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227f588b361fc7c70800000000000000
+      internalID: 8970309968415029026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 3986
+        width: 155
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2afc2adf4465830800000000000000
+      internalID: 4059507970270012110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_11
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 3986
+        width: 146
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b0ce9d906a62010800000000000000
+      internalID: 1163800114962893676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_12
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 3995
+        width: 137
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfcce0a855c8f320800000000000000
+      internalID: 2592038569999388614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_13
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 3995
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7093be857e6432f30800000000000000
+      internalID: 4549558008017533191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_14
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2861
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8893d546080e4eb30800000000000000
+      internalID: 4315821184972044680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_15
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 2978
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53eefaec6b7ae1b0800000000000000
+      internalID: -5626549076716756131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_16
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 2870
+        width: 110
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7c3bd0ef8864300800000000000000
+      internalID: 236026655216486366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_17
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 2978
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd2a79346fd366e0800000000000000
+      internalID: -1845385800737739307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_18
+      rect:
+        serializedVersion: 2
+        x: 3959
+        y: 2870
+        width: 110
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1fb92c8f9460470800000000000000
+      internalID: 8360451091025621479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_19
+      rect:
+        serializedVersion: 2
+        x: 2825
+        y: 2870
+        width: 92
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22aa3ba5d4c895890800000000000000
+      internalID: -7468784243155162590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_20
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1709
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45df3295e8c300890800000000000000
+      internalID: -7493923197865951916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_21
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 1691
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9543e6c24296640800000000000000
+      internalID: 5073626228455659945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_22
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 1691
+        width: 137
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0d7ebfbcde46c70800000000000000
+      internalID: 8963550618734547140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_23
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 1682
+        width: 146
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c4485e41f7bff50800000000000000
+      internalID: 6916261380484254757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_24
+      rect:
+        serializedVersion: 2
+        x: 2807
+        y: 1025
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5cfaf3811fe2490800000000000000
+      internalID: -7769007220717533728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_25
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 980
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e11417af8e65c50800000000000000
+      internalID: 6653761661826047633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_26
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 971
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b664c6cf04f581f0800000000000000
+      internalID: -1043159390069954888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_27
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 530
+        width: 173
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f02b143990b05f50800000000000000
+      internalID: 6868183603790684400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_28
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 530
+        width: 155
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3b7906f08479970800000000000000
+      internalID: 8761550830954853333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little purple fire_29
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 530
+        width: 173
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ffc0b7def3d63d0800000000000000
+      internalID: -3211840670041047230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

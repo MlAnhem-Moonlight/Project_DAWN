@@ -60,6 +60,13 @@ public class DealingDmg : MonoBehaviour
         usingSkill = skill;
     }
 
+    public void UsingSkill(int skill)
+    {
+        usingSkill = skill;
+        pendingAttack = true;
+
+    }
+
     // Gọi từ Animation Event: đặt trong clip Attack/Skill
     // Ở thời điểm vung vũ khí chạm mục tiêu
     public void AttackHit()
@@ -135,7 +142,6 @@ public class DealingDmg : MonoBehaviour
             {
                 //Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
-
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
@@ -217,18 +223,18 @@ public class DealingDmg : MonoBehaviour
     }
 
 
-#if UNITY_EDITOR
-    // Vẽ vùng quét trong Scene view
-    void OnDrawGizmosSelected()
-    {
-        BoxCollider2D box = GetComponent<BoxCollider2D>();
-        Vector2 center = (Vector2)transform.position + box.offset;
-        Vector2 size = box.size;
-        if (box)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(center, size);
-        }
-    }
-#endif
+//#if UNITY_EDITOR
+//    // Vẽ vùng quét trong Scene view
+//    void OnDrawGizmosSelected()
+//    {
+//        BoxCollider2D box = GetComponent<BoxCollider2D>();
+//        Vector2 center = (Vector2)transform.position + box.offset;
+//        Vector2 size = box.size;
+//        if (box)
+//        {
+//            Gizmos.color = Color.red;
+//            Gizmos.DrawWireCube(center, size);
+//        }
+//    }
+//#endif
 }

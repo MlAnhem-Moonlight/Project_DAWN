@@ -20,7 +20,7 @@ public class ArcherStats : Stats
 
     private void Start()
     {
-        SetDmg();
+        SetDmg(currentSkillDmg);
     }
 
     public void ApplyGrowth()

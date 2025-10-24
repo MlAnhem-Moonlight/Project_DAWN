@@ -43,7 +43,7 @@ public class ArcherMovement : Nodes
         Vector3 targetPos = new Vector3(_checkpoint.position.x, _transform.position.y, _transform.position.z);
         float distance = Vector2.Distance(_transform.position, targetPos);
         // Nếu đã đến vị trí checkpoint
-        if (distance <= _stopDistance)
+        if (distance <= _stopDistance || _transform.GetComponent<ArcherBehavior>().target != null)
         {
             
             return state = NodeState.SUCCESS;

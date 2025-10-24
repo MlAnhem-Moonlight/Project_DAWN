@@ -44,7 +44,7 @@ public class Stats : MonoBehaviour
         float reducedDamage = damage * (1f - currentShield / 100f);
         currentHP -= reducedDamage;
 
-        Debug.Log($"{gameObject.name} nhận {reducedDamage} dmg (gốc {damage}) | HP còn lại: {currentHP}");
+        //Debug.Log($"{gameObject.name} nhận {reducedDamage} dmg (gốc {damage}) | HP còn lại: {currentHP}");
 
         if (currentHP <= 0)
         {
@@ -134,7 +134,7 @@ public class Stats : MonoBehaviour
     public void SetDmg(float skillDmg)
     {
         GetComponentInChildren<DealingDmg>()?.SetDamageAmount(currentDMG, skillDmg, currentAtkSpd);
-
+        GetComponentInChildren<DealingDmg>()?.gameObject.SetActive(false);
     }
 
     public void SetDmg(float skillDmg, float duration)

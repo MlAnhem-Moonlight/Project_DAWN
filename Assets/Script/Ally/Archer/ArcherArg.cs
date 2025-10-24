@@ -16,7 +16,7 @@ public class ArcherArg : Nodes
     {
         _transform = transform;
         _attackRange = attackRange;
-        _skillCooldown = 1;
+        _skillCooldown = skillCD;
         _enemyLayer = LayerMask.GetMask(layerName);
         _controller = _transform.GetComponent<AnimationController>();
     }
@@ -87,7 +87,7 @@ public class ArcherArg : Nodes
         {
             if (Time.time >= _lastSkillTime + _skillCooldown)
             {
-                Debug.Log($"[{_transform.name}] ArcherArg Use Skill on {target.name} at {Time.time:F2}");
+
                 CheckAnimation(target.position, "Skill 1", "Skill 0", 0f);
                 _lastSkillTime = Time.time;
                 //FireArrow(target);
@@ -95,7 +95,14 @@ public class ArcherArg : Nodes
             }
             else
             {
-                CheckAnimation(target.position, "Attack 1", "Attack 0", 0f);
+                if(target.position.y > _transform.position.y + 3f)
+                {
+                    CheckAnimation(target.position, "Attack2", "Attack2 1", 0f);
+                }
+                else
+                {
+                    CheckAnimation(target.position, "Attack 1", "Attack 0", 0f);
+                }
             }
             state = NodeState.RUNNING;
             return state;
