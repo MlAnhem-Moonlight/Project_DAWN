@@ -485,10 +485,6 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 192
       objectReference: {fileID: 0}
-    - target: {fileID: 7981574053055821497, guid: 8cd6a38bb79b5c1438227c7782065c13, type: 3}
-      propertyPath: dmgMultiplier
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8160069282259764945, guid: 8cd6a38bb79b5c1438227c7782065c13, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1338,10 +1334,6 @@ PrefabInstance:
     - target: {fileID: 2218499173624817928, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6447278737625200912, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
-      propertyPath: dmgLinear
-      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6925553500575183442, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3080,14 +3072,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 990429837741316815, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
-      propertyPath: dmgMultiplier
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 990429837741316815, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
-      propertyPath: atkSpdMultiplier
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1509663465344702900, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
       propertyPath: m_Name
       value: TheHand(Demo)
@@ -3338,42 +3322,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentHP
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentDMG
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentSPD
-      value: 6.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentAtkSpd
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentShield
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: dmgMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 745418574626960579, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
-      propertyPath: currentSkillCD
-      value: 17.28
-      objectReference: {fileID: 0}
     - target: {fileID: 994714012947197654, guid: 8605a1dbd1a88a840b2daea266fd9525, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3510,14 +3458,6 @@ PrefabInstance:
     - target: {fileID: 5838169449563986500, guid: 8bdf814fa0cb51d43a02cfdbd32c344d, type: 3}
       propertyPath: m_Layer
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8587823858614151746, guid: 8bdf814fa0cb51d43a02cfdbd32c344d, type: 3}
-      propertyPath: hpLinear
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8587823858614151746, guid: 8bdf814fa0cb51d43a02cfdbd32c344d, type: 3}
-      propertyPath: dmgMultiplier
-      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9165901883804115283, guid: 8bdf814fa0cb51d43a02cfdbd32c344d, type: 3}
       propertyPath: m_Layer
@@ -3669,38 +3609,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentHP
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: dmgLinear
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentDMG
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentSPD
-      value: 4.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentAtkSpd
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentShield
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843085584045812350, guid: 55fe87de7d766294ab03f3a995ec5f21, type: 3}
-      propertyPath: currentSkillCD
-      value: 11.52
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3720,8 +3628,8 @@ SceneRoots:
   - {fileID: 1801777699}
   - {fileID: 790839226}
   - {fileID: 669235679}
-  - {fileID: 466899802}
   - {fileID: 1962234161}
+  - {fileID: 466899802}
   - {fileID: 7155862941046798955}
   - {fileID: 1352382176546088273}
   - {fileID: 4233813768606315150}
