@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaf8f1ffb2e549489223102c082c456, type: 3}
   m_Name: TonStats
   m_EditorClassIdentifier: 
-  HP: 10
+  HP: 30
   DMG: 2
   SPD: 6
   SkillCD: 15
   Shield: 5
   AtkSpd: 0.5
+  atkRange: 1

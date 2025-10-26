@@ -41,7 +41,7 @@ public class ProjectileArrow : MonoBehaviour
         hasHit = false;
 
         target = GetComponentInParent<ArcherBehavior>()?.GetTarget();
-
+        Debug.Log(target.transform.position);
         if (startPoint != null)
             transform.position = startPoint.position;
 

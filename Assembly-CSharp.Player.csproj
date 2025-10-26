@@ -76,6 +76,7 @@
     <Compile Include="Assets\Script\Enemy\TheAllah\BomberStats.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TankStats.cs" />
+    <Compile Include="Assets\Script\Mics\BattleStateCollector.cs" />
     <Compile Include="Assets\Guide\ResourceAllocationCMAES.cs" />
     <Compile Include="Assets\Script\Ally\Spear\DefensiveAction.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Script\System\PlayerController.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageStats.cs" />
     <Compile Include="Assets\Script\Construction\BuildConstruction.cs" />
+    <Compile Include="Assets\Guide\QLearning.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridDive.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Tree.cs" />

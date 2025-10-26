@@ -102,7 +102,7 @@ public class DefensiveAction : Nodes
             }
             return state;
         }
-        Debug.Log($"{enemyInPatrolArea && enemyInMainBase}");
+        //Debug.Log($"{enemyInPatrolArea && enemyInMainBase}");
         // Nếu enemy nằm trong cùng patrolRadius và trong vùng quét (mainBaseRadius)
         if (enemyInPatrolArea && enemyInMainBase)
         {

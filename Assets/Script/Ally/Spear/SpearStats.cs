@@ -2,6 +2,7 @@
 
 public class SpearStats : Stats
 {
+    [Header("Growth Config")]
     public float hpLinear = 40f;
     public float dmgMultiplier = 1.08f;
     public float atkSpdMultiplier = 1.03f;

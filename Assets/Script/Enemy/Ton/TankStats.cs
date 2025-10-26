@@ -3,7 +3,7 @@
 public class TankStats : Stats
 {
     [Header("Growth Parameters")]
-    public float hpLinear = 100f;      // +200 HP mỗi level
+    public float hpLinear = 50f;      // +50 HP mỗi level
     public float hpMultiplier = 1.03f; // HP scale %
     public float dmgLinear = 2f;
     public float atkSpdMultiplier = 1.01f;
@@ -35,7 +35,7 @@ public class TankStats : Stats
         if (baseStats == null) return;
 
         // HP
-        currentHP = Mathf.RoundToInt((baseStats.HP + hpLinear * (level - 1)) * Mathf.Pow(hpMultiplier, level - 1));
+        currentHP = Mathf.RoundToInt((baseStats.HP + hpLinear * (level - 1)));// * Mathf.Pow(hpMultiplier, level - 1));  
 
         // DMG
         currentDMG = Mathf.RoundToInt(baseStats.DMG + dmgLinear * (level - 1));

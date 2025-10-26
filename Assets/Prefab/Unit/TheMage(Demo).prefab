@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7230231854398016982
 Transform:
   m_ObjectHideFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   duration: 4
   animator: {fileID: 7775841118204165973}
   clipName: CastingSpellEffect
+  isMage: 0
 --- !u!114 &7173478134349462717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2007904176929595276
 Transform:
   m_ObjectHideFlags: 0
@@ -380,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  attackRange: 5
+  attackRange: 8
   attackSpeed: 1
   spellRange: 12
   spellCooldown: 5
@@ -409,6 +410,7 @@ MonoBehaviour:
   duration: 4
   animator: {fileID: 581198636875506792}
   clipName: CastingSpell
+  isMage: 1
 --- !u!114 &8147435167210863253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +434,7 @@ MonoBehaviour:
   currentAtkSpd: 0
   currentSkillDmg: 0
   currentSkillDuration: 0
+  currentAtkRange: 0
   hpLinear: 30
   dmgMultiplier: 1.2
   atkSpdMultiplier: 1.03

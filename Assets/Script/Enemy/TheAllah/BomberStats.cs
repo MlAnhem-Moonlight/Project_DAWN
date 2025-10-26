@@ -5,7 +5,7 @@ public class BomberStats : Stats
 
 
     [Header("Growth Config")]
-    public float hpLinear = 80f;
+    public float hpLinear = 30f;
 
     public float dmgMultiplier = 2.5f;
 

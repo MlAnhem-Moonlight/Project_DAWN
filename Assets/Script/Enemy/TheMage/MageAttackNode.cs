@@ -37,6 +37,12 @@ public class MageAttackNode : Nodes
 
     public override NodeState Evaluate()
     {
+        Transform target = (Transform)parent.GetData("target");
+        if(target.gameObject.activeInHierarchy == false)
+        {
+            state = NodeState.FAILURE;
+            return state;
+        }
         if (_isAttacking)
         {
             // Nếu đang trong quá trình attack
@@ -55,7 +61,7 @@ public class MageAttackNode : Nodes
             // Bắt đầu attack
             //Debug.Log("Start Attack");
             _animator.SetInteger("Anim", -1); // trigger attack anim
-            Transform target = (Transform)parent.GetData("target");
+            
             _animator.SetFloat("Attack", _transform.position.x - target.position.x > 0 ? -1f : 1f);
 
             _attackStartTime = Time.time;

@@ -239,8 +239,9 @@ MonoBehaviour:
   currentAtkSpd: 0
   currentSkillDmg: 0
   currentSkillDuration: 0
-  hpLinear: 80
-  dmgMultiplier: 2.5
+  currentAtkRange: 0
+  hpLinear: 30
+  dmgMultiplier: 5
   atkSpdMultiplier: 1.02
   atkSpdCap: 1.5
   spdLinear: 0.08

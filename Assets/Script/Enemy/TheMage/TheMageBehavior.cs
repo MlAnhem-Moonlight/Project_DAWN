@@ -12,9 +12,20 @@ public class TheMageBehavior : BhTree
     public float spellCooldown = 5f;
 
     public UnityEngine.Transform defaultTarget;
+    public UnityEngine.GameObject target;
     public UnityEngine.Animator animator;
 
     private TheMageMovement _theMageMovement;
+
+    public void SetTarget(GameObject _target)
+    {
+        target = _target;
+    }    
+
+    public GameObject GetTarget()
+    {
+        return target;
+    }
 
     protected override Nodes SetupTree()
     {
@@ -49,12 +60,12 @@ public class TheMageBehavior : BhTree
 
         return root;
     }
-//#if UNITY_EDITOR
-//    // Vẽ vùng tròn quét trong Scene view để dễ chỉnh sửa
-//    private void OnDrawGizmosSelected()
-//    {
-//        Gizmos.color = Color.yellow;
-//        Gizmos.DrawWireSphere(transform.position, spellRange);
-//    }
-//#endif
+#if UNITY_EDITOR
+    // Vẽ vùng tròn quét trong Scene view để dễ chỉnh sửa
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+#endif
 }

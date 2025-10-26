@@ -6,19 +6,24 @@ using UnityEngine;
 public class DealingDmg : MonoBehaviour
 {
     [Header("Damage Settings")]
-    public float knockbackForce = 5f;          // Lực đẩy
-    public float damageAmount = 5f;            // Damage thường
-    public float skillDamageAmount = 10f;      // Damage skill
-    public float _atkSpd = 1f;                     // Tốc độ đánh
-    public float _rageDuration = 5f;             // Thời gian tăng tốc độ đánh khi dùng skill
+    public float knockbackForce = 5f;
+    public float damageAmount = 5f;
+    public float skillDamageAmount = 10f;
+    public float _atkSpd = 1f;
+    public float _rageDuration = 5f;
 
     [Header("References")]
-    public Animator attackerAnimator;          // Animator của nhân vật
-    public LayerMask targetLayers;             // Layer mục tiêu (VD: Human)
+    public Animator attackerAnimator;
+    public LayerMask targetLayers;
 
     [Header("Skill state")]
     public int usingSkill = 0;
-    private bool pendingAttack = false;        // Đang chờ thực thi hit (được Animator báo)
+    private bool pendingAttack = false;
+
+    // Skill 3 variables
+    private bool _isSkill3Active = false;          // skill3 bật/tắt
+    public float skill3TickInterval = 0.5f;        // khoảng thời gian mỗi tick damage
+    private Coroutine _skill3Coroutine;            // coroutine đang chạy
 
     void Awake()
     {
@@ -31,18 +36,12 @@ public class DealingDmg : MonoBehaviour
         damageAmount = basic;
         skillDamageAmount = skill;
         _atkSpd = atkSpd;
-
-        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
-        // gameObject.SetActive(false);
     }
 
-    public void SetDamageAmount(float basic,float atkSpd)
+    public void SetDamageAmount(float basic, float atkSpd)
     {
         damageAmount = basic;
         _atkSpd = atkSpd;
-
-        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
-        // gameObject.SetActive(false);
     }
 
     public void SetDamageAmount(float basic, float skill, float atkSpd, float rageDuration)
@@ -51,8 +50,6 @@ public class DealingDmg : MonoBehaviour
         skillDamageAmount = skill;
         _atkSpd = atkSpd;
         _rageDuration = rageDuration;
-        // Có thể tắt object nếu muốn ẩn hitbox sau khi thiết lập
-        // gameObject.SetActive(false);
     }
 
     public void SetUsingSkill(int skill)
@@ -64,111 +61,104 @@ public class DealingDmg : MonoBehaviour
     {
         usingSkill = skill;
         pendingAttack = true;
-
     }
 
-    // Gọi từ Animation Event: đặt trong clip Attack/Skill
-    // Ở thời điểm vung vũ khí chạm mục tiêu
+    // Gọi từ Animation Event
     public void AttackHit()
     {
         pendingAttack = true;
     }
 
-    void Update()
+    // === HÀM MỚI: BẬT/TẮT SKILL 3 ===
+    public void SetSkill3Active(bool state)
     {
-        //// Nếu animator đã gửi tín hiệu đánh
-        //if (pendingAttack)
-        //{
-        //    pendingAttack = false; // reset
+        _isSkill3Active = state;
 
-        //    var box = GetComponent<BoxCollider2D>();
-        //    Vector2 center = (Vector2)transform.position + box.offset;
-        //    Vector2 size = box.size;
-        //    Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, targetLayers);
-        //    //// Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
-        //    //Collider2D[] hits = Physics2D.OverlapBoxAll(
-        //    //    transform.position,
-        //    //    GetComponent<BoxCollider2D>().size,
-        //    //    0f,
-        //    //    targetLayers);
-        //    //Debug.Log($"Detected {hits.Length} hits");
-        //    foreach (var hit in hits)
-        //    {
-        //        Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
-        //        if (hit.gameObject == gameObject) continue;
-                
-        //        Stats stats = hit.GetComponent<Stats>();
-        //        if (stats)
-        //        {
-        //            float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-        //            stats.TakeDamage(dmg); //Dealing damage
-        //            switch (usingSkill)
-        //            {
-        //                case 1:
-        //                    ApplyKnockback(hit.gameObject);
-        //                    break;
-        //                case 2:
-        //                    RageSkill(_rageDuration);
-        //                    break;
-        //                default:
+        if (state)
+        {
+            if (_skill3Coroutine == null)
+                _skill3Coroutine = StartCoroutine(Skill3DamageLoop());
+        }
+        else
+        {
+            if (_skill3Coroutine != null)
+            {
+                StopCoroutine(_skill3Coroutine);
+                _skill3Coroutine = null;
+            }
+        }
+    }
 
-        //                    break;
-        //            }
-        //            //Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
-        //        }
-        //    }
-        //}
+    IEnumerator Skill3DamageLoop()
+    {
+        while (_isSkill3Active)
+        {
+            ApplySkill3Damage();
+            yield return new WaitForSeconds(skill3TickInterval);
+        }
+    }
+
+    void ApplySkill3Damage()
+    {
+        var box = GetComponent<BoxCollider2D>();
+        Vector2 center = (Vector2)transform.position + box.offset;
+        Vector2 size = box.size;
+        Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, targetLayers);
+
+        foreach (var hit in hits)
+        {
+            if (hit.gameObject == gameObject) continue;
+            Stats stats = hit.GetComponent<Stats>();
+            if (stats)
+            {
+                stats.TakeDamage(skillDamageAmount);
+            }
+        }
     }
 
     void LateUpdate()
     {
-        // Nếu animator đã gửi tín hiệu đánh
         if (pendingAttack)
         {
-            pendingAttack = false; // reset
-
+            pendingAttack = false;
             var box = GetComponent<BoxCollider2D>();
             Vector2 center = (Vector2)transform.position + box.offset;
             Vector2 size = box.size;
             Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, targetLayers);
-            //// Quét collider trong phạm vi của hitbox (ví dụ BoxCollider2D của object này)
-            //Collider2D[] hits = Physics2D.OverlapBoxAll(
-            //    transform.position,
-            //    GetComponent<BoxCollider2D>().size,
-            //    0f,
-            //    targetLayers);
-            //Debug.Log($"Detected {hits.Length} hits");
+
             foreach (var hit in hits)
             {
-                //Debug.Log($"Hit: {hit.name} on layer {LayerMask.LayerToName(hit.gameObject.layer)}");
                 if (hit.gameObject == gameObject) continue;
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
                     float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-                    stats.TakeDamage(dmg); //Dealing damage
+
                     switch (usingSkill)
                     {
                         case 1:
+                            stats.TakeDamage(dmg);
                             ApplyKnockback(hit.gameObject);
                             break;
                         case 2:
                             RageSkill(_rageDuration);
+                            stats.TakeDamage(dmg);
+                            break;
+                        case 3:
+                            // Skill 3 bắt đầu được animation bật bằng SetSkill3Active(true)
+                            // Không gây damage tức thời ở đây
                             break;
                         default:
-
+                            //stats.TakeDamage(dmg);
                             break;
                     }
-                    //Debug.Log((usingSkill != 0 ? "Skill hit " : "Attack hit") + hit.name);
                 }
             }
         }
     }
 
-
     void RageSkill(float duration)
     {
-        //Debug.Log("Rage skill");
         Rage(_atkSpd * 1.5f);
         StartCoroutine(RageDuration(duration));
     }
@@ -178,7 +168,6 @@ public class DealingDmg : MonoBehaviour
         yield return new WaitForSeconds(duration);
         Rage(_atkSpd);
         usingSkill = 0;
-        //Debug.Log("End Rage");
     }
 
     void ApplyKnockback(GameObject target)
@@ -194,47 +183,28 @@ public class DealingDmg : MonoBehaviour
         float scalingFactor = 0.5f;
         float finalForce = knockbackForce * massFactor * scalingFactor;
         float knockbackDistance = finalForce * 0.7f;
-        //Debug.Log($"Knockback {target.name}: Force={finalForce}, Distance={knockbackDistance}");
+
         targetRb.MovePosition(targetRb.position + knockbackDirection * knockbackDistance);
-        usingSkill = 0; // reset sau khi dùng skill
+        usingSkill = 0;
     }
 
     void Rage(float atkSpdBonus)
     {
         GetComponentInParent<Stats>()?.GetComponentInParent<Stats>().Rage(atkSpdBonus);
         float attackInterval = 1f / atkSpdBonus;
-        // Lấy độ dài clip gốc
         float clipLength = 1f;
+
         foreach (var clip in attackerAnimator.runtimeAnimatorController.animationClips)
         {
-            if (clip.name == "Attack") // đúng tên clip
+            if (clip.name == "Attack")
             {
                 clipLength = clip.length;
                 break;
             }
         }
-        // Công thức: cần tốc độ gấp clipLength/attackInterval
+
         float attackSpeedMultiplier = clipLength / attackInterval;
-
-        // Gán vào parameter thay vì animator.speed
         attackerAnimator.SetFloat("AttackSpd", attackSpeedMultiplier);
-
-        usingSkill = 0; // reset sau khi dùng skill
+        usingSkill = 0;
     }
-
-
-//#if UNITY_EDITOR
-//    // Vẽ vùng quét trong Scene view
-//    void OnDrawGizmosSelected()
-//    {
-//        BoxCollider2D box = GetComponent<BoxCollider2D>();
-//        Vector2 center = (Vector2)transform.position + box.offset;
-//        Vector2 size = box.size;
-//        if (box)
-//        {
-//            Gizmos.color = Color.red;
-//            Gizmos.DrawWireCube(center, size);
-//        }
-//    }
-//#endif
 }

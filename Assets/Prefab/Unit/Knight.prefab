@@ -101,6 +101,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   usingSkill: 0
+  skill3TickInterval: 0.5
 --- !u!1 &5443502418213667006
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,24 +294,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7ffb0ac8a9fad42815239f39dfad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 4
+  level: 2
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: 74e56c82fc59d1840a05dade4fa6634e, type: 2}
-  currentHP: 0
-  currentDMG: 0
-  currentSPD: 0
-  currentSkillCD: 0
-  currentShield: 0
-  currentAtkSpd: 0
+  currentHP: 65
+  currentDMG: 4
+  currentSPD: 4.04
+  currentSkillCD: 11.52
+  currentShield: 16
+  currentAtkSpd: 0.5
   currentSkillDmg: 0
   currentSkillDuration: 0
-  hpLinear: 60
+  currentAtkRange: 0
+  hpLinear: 45
   hpMultiplier: 1.03
-  dmgLinear: 3
+  dmgLinear: 5
   atkSpdMultiplier: 1.01
   atkSpdCap: 1
   spdLinear: 0.04
-  shieldLinear: 6
+  shieldLinear: 10
   shieldCap: 75
   skillCDMultiplier: 0.96
   skillCDMinFactor: 0.65
@@ -333,7 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spearState: 1
   currentState: 0
-  speed: 10
   defensiveOffset: 1.5
   patrolRadius: 5
   mainBaseRadius: 3
@@ -346,6 +347,7 @@ MonoBehaviour:
   attackSpeed: 1
   skillCD: 2.9
   atkRange: 3
+  speed: 10
 --- !u!114 &8007113948338710129
 MonoBehaviour:
   m_ObjectHideFlags: 0

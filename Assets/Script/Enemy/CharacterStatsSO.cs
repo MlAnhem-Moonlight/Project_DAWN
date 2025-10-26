@@ -10,4 +10,5 @@ public class CharacterStatsSO : ScriptableObject
     public float SkillCD = 3f;
     [Range(0, 100)] public float Shield = 0f;   // % giảm dmg (0–100)
     public float AtkSpd = 1f;
+    public float atkRange = 1f;
 }

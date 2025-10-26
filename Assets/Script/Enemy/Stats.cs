@@ -20,6 +20,7 @@ public class Stats : MonoBehaviour
     public float currentAtkSpd;
     public float currentSkillDmg;
     public float currentSkillDuration;
+    public float currentAtkRange;
 
     public void Awake()
     {
@@ -33,6 +34,7 @@ public class Stats : MonoBehaviour
             currentShield = baseStats.Shield;
             currentAtkSpd = baseStats.AtkSpd;
             currentSkillDmg = baseStats.DMG * 1.5f;
+            currentAtkRange = baseStats.atkRange;
         }
     }
 
@@ -168,5 +170,11 @@ public class Stats : MonoBehaviour
         GetComponentInChildren<DealingDmg>()?.AttackHit();
 
     }
+
+    public void Useskill2(int active)
+    {
+        GetComponentInChildren<DealingDmg>()?.AttackHit();
+        GetComponentInChildren<DealingDmg>()?.SetSkill3Active(active == 1);
+    }    
 
 }

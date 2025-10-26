@@ -18,9 +18,14 @@ public class Mics : MonoBehaviour
         switch(type)
         {
             case Type.SetPositionArchery:
-                transform.position = GetComponentInParent<ArcherBehavior>().target 
-                    ? GetComponentInParent<ArcherBehavior>().target.gameObject.transform.position 
-                    : Vector3.zero;
+                transform.position = new Vector3(
+                    GetComponentInParent<ArcherBehavior>().target
+                        ? GetComponentInParent<ArcherBehavior>().target.transform.position.x
+                        : 0f,
+                    transform.position.y,
+                    transform.position.z
+                );
+
                 break;
         }
     }

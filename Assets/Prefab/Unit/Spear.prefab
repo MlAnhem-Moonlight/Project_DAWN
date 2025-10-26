@@ -1,5 +1,107 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2571268441029486900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170956826950692877}
+  - component: {fileID: 788627030489332491}
+  - component: {fileID: 4318229822779663284}
+  m_Layer: 6
+  m_Name: AttackBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170956826950692877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571268441029486900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.724, y: 1.019, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1048870483968596296}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &788627030489332491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571268441029486900}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.30628362, y: -0.2641781}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.9646575, y: 1.4960068}
+  m_EdgeRadius: 0
+--- !u!114 &4318229822779663284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571268441029486900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc654db0cce294998fc23ca92c24c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 5
+  damageAmount: 5
+  skillDamageAmount: 10
+  _atkSpd: 1
+  _rageDuration: 5
+  attackerAnimator: {fileID: 7632967097304233221}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  usingSkill: -1
+  skill3TickInterval: 0.5
 --- !u!1 &8782325935010371254
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,9 +135,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.215, y: -1.742, z: 0}
-  m_LocalScale: {x: 0.419, y: 0.4577566, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 170956826950692877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1580769503073053330
@@ -154,8 +257,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.12275143, y: 1.1250001}
-  m_Size: {x: 0.92938066, y: 2.3803751}
+  m_Offset: {x: -0.10113716, y: 0.72359455}
+  m_Size: {x: 0.37976456, y: 1.577564}
   m_Direction: 0
 --- !u!95 &7632967097304233221
 Animator:
@@ -193,7 +296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spearState: 1
   currentState: 0
-  speed: 2
   defensiveOffset: 1.5
   patrolRadius: 5
   mainBaseRadius: 4
@@ -205,7 +307,8 @@ MonoBehaviour:
   animator: {fileID: 7632967097304233221}
   attackSpeed: 1
   skillCD: 2.9
-  atkRange: 0.99
+  atkRange: 1.4
+  speed: 2
 --- !u!114 &745418574626960579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,16 +324,17 @@ MonoBehaviour:
   level: 1
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: fb7acc5c5eaa48446912e350f4e3de1b, type: 2}
-  currentHP: 0
-  currentDMG: 0
-  currentSPD: 0
-  currentSkillCD: 0
-  currentShield: 0
-  currentAtkSpd: 0
+  currentHP: 60
+  currentDMG: 3
+  currentSPD: 6.08
+  currentSkillCD: 17.28
+  currentShield: 11
+  currentAtkSpd: 2.2
   currentSkillDmg: 0
   currentSkillDuration: 0
+  currentAtkRange: 0
   hpLinear: 40
-  dmgMultiplier: 1.08
+  dmgMultiplier: 2.5
   atkSpdMultiplier: 1.03
   atkSpdCap: 2.2
   spdLinear: 0.08

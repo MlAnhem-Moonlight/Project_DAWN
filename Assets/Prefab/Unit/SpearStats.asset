@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SpearStats
   m_EditorClassIdentifier: 
   HP: 20
-  DMG: 4
+  DMG: 3
   SPD: 6
   SkillCD: 18
   Shield: 10
   AtkSpd: 5
+  atkRange: 1.4

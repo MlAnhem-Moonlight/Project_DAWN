@@ -328,8 +328,9 @@ MonoBehaviour:
   currentAtkSpd: 0
   currentSkillDmg: 0
   currentSkillDuration: 0
-  hpLinear: 20
-  dmgMultiplier: 1.09
+  currentAtkRange: 0
+  hpLinear: 25
+  dmgMultiplier: 2.5
   atkSpdMultiplier: 1.06
   atkSpdCap: 3.5
   spdLinear: 0.12
@@ -528,6 +529,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   usingSkill: -1
+  skill3TickInterval: 0.5
 --- !u!114 &2736836867232941467
 MonoBehaviour:
   m_ObjectHideFlags: 0

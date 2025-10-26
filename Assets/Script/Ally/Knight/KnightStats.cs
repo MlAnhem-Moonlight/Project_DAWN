@@ -6,7 +6,7 @@ public class KnightStats : Stats
 {
     [Header("Growth Config")]
     // Linear + exponential HP growth (suitable for Tank)
-    public float hpLinear = 200f;          // +hp per level (linear)
+    public float hpLinear = 45f;          // +hp per level (linear)
     public float hpMultiplier = 1.03f;     // multiplicative factor per level (e.g. 1.03)
 
     // Optional dmg growth (linear)
@@ -104,9 +104,9 @@ public class KnightStats : Stats
         int lv = Mathf.Clamp(level, 1, maxLevel);
 
         // HP: (baseHP + linear*(lv-1)) * (hpMultiplier^(lv-1))
-        float linearPart = baseStats.HP + hpLinear * (lv - 1);
-        float multPart = Mathf.Pow(hpMultiplier, (lv - 1));
-        currentHP = Mathf.RoundToInt(linearPart * multPart);
+        //float linearPart = baseStats.HP + hpLinear * (lv - 1);
+        //float multPart = Mathf.Pow(hpMultiplier, (lv - 1));
+        currentHP = Mathf.RoundToInt(baseStats.HP + hpLinear * (lv - 1));
 
         // DMG: linear growth for Knight (tweakable)
         currentDMG = Mathf.RoundToInt(baseStats.DMG + dmgLinear * (lv - 1));
@@ -140,9 +140,4 @@ public class KnightStats : Stats
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, synergyRadius);
-    }
 }

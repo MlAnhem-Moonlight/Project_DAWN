@@ -1,6 +1,6 @@
 ﻿using System;
 
-class QLearning
+class QLearningTest
 {
     static Random random = new Random();
     static int stateCount = 3; // Số trạng thái

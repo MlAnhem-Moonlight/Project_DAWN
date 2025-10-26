@@ -31,11 +31,13 @@ public class MageCheckEnemyInRange : Nodes
 
             parent.SetData("target", closestTarget);
             //Debug.Log($"Target found: {parent.GetData("target")}");
+            _transform.GetComponent<TheMageBehavior>().SetTarget(closestTarget.gameObject);
             state = NodeState.SUCCESS;
         }
         else
         {
             parent.SetData("target", _defaultTarget);
+            _transform.GetComponent<TheMageBehavior>().SetTarget(null);
             state = NodeState.FAILURE;
         }
 

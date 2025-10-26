@@ -42,7 +42,6 @@ public class TonMovement : Nodes
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
         _animator.SetInteger("State", 0);
         _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
-        Debug.Log($"Distance: {Vector3.Distance(_transform.position, targetPosition)}");
         if (Vector3.Distance(_transform.position, targetPosition) <= _range)
         {
             Debug.Log("Reached Target");

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Archer
   m_EditorClassIdentifier: 
   HP: 10
-  DMG: 6
+  DMG: 2
   SPD: 12
   SkillCD: 16
   Shield: 2
   AtkSpd: 2
+  atkRange: 12

@@ -2,7 +2,8 @@
 
 public class ArcherStats : Stats
 {
-    public float hpLinear = 20f;
+    [Header("Growth Config")]
+    public float hpLinear = 25f;
     public float dmgMultiplier = 1.09f;
     public float atkSpdMultiplier = 1.06f;
     public float atkSpdCap = 3.5f;
