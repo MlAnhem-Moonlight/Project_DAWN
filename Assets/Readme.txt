@@ -50,3 +50,5 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 			* Arg: tấn công enemy xa nhất trong tầm bắn 
 			* Def: tấn công enemy gần nhất trong tầm bắn
 			* Neu: di chuyển xung quanh checkpoint
+
+Đang bắt đầu làm Pooler, Q-Learning: 

@@ -227,6 +227,8 @@ GameObject:
   m_Component:
   - component: {fileID: 298836407}
   - component: {fileID: 298836408}
+  - component: {fileID: 298836410}
+  - component: {fileID: 298836409}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -263,6 +265,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCanvas: {fileID: 1934813106}
   unitUIPrefab: {fileID: 5390069008020441256, guid: 892f8ae0d254a624a99f1e428a1aad89, type: 3}
+--- !u!114 &298836409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298836406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37a2a9828bb7dd41923a5e69d28c15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  learningRate: 0.1
+  discountFactor: 0.9
+  explorationRate: 0.2
+  maxActions: 4
+--- !u!114 &298836410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298836406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17398ce789b4c1c4bb55fa85adaf228b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+  activeAllies: []
 --- !u!1 &381476425
 GameObject:
   m_ObjectHideFlags: 0

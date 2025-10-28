@@ -3,19 +3,16 @@ using System.Linq;
 using UnityEngine;
 
 /// <summary>
-/// Gom thông tin từ tất cả unit ally đang tồn tại trên sân
+/// Gom thông tin từ toàn bộ ally đang tồn tại trên sân
 /// để tạo state cho Q-Learning.
 /// </summary>
 public class BattleStateCollector : MonoBehaviour
 {
-    [Header("Q-Learning Reference")]
-    public QLearning qLearning;
-
     [Header("Runtime")]
-    [Tooltip("State hiện tại dưới dạng chuỗi, ví dụ: A3_HP80_SPD5|M2_HP100_SPD3")]
+    [Tooltip("Chuỗi mô tả đội ally hiện tại, ví dụ: Archer-Lv3-HP80-DMG15|Mage-Lv2-HP60-DMG25")]
     public string currentState = "";
 
-    [Tooltip("Danh sách ally đang tồn tại")]
+    [Tooltip("Danh sách ally hiện đang tồn tại trên sân")]
     public List<Stats> activeAllies = new List<Stats>();
 
     void Update()
@@ -30,7 +27,6 @@ public class BattleStateCollector : MonoBehaviour
     void RefreshActiveAllies()
     {
         GameObject[] allyObjects = GameObject.FindGameObjectsWithTag("Ally");
-
         activeAllies = allyObjects
             .Select(o => o.GetComponent<Stats>())
             .Where(s => s != null && s.gameObject.activeInHierarchy)
@@ -38,49 +34,21 @@ public class BattleStateCollector : MonoBehaviour
     }
 
     /// <summary>
-    /// Xây dựng chuỗi state từ thông tin của các ally.
+    /// Tạo chuỗi state từ các chỉ số cơ bản của ally (Level, HP, Damage).
     /// </summary>
     string BuildStateString()
     {
-        List<string> allySummaries = new List<string>();
+        List<string> summaries = new List<string>();
 
         foreach (var stats in activeAllies)
         {
             string type = stats.baseStats != null ? stats.baseStats.name : stats.name;
-            string info = $"{type}-Lv{stats.level}-HP{Mathf.RoundToInt(stats.currentHP)}-DMG{Mathf.RoundToInt(stats.currentDMG)}";
-            allySummaries.Add(info);
+            int hp = Mathf.RoundToInt(stats.currentHP);
+            int dmg = Mathf.RoundToInt(stats.currentDMG);
+            summaries.Add($"{type}-Lv{stats.level}-HP{hp}-DMG{dmg}");
         }
 
-        allySummaries.Sort(); // sắp xếp cho ổn định state
-        return string.Join("|", allySummaries);
-    }
-
-    /// <summary>
-    /// Gọi Q-learning để chọn hành động dựa trên state hiện tại.
-    /// </summary>
-    public int ChooseAction()
-    {
-        if (qLearning == null)
-        {
-            Debug.LogWarning("QLearning reference missing!");
-            return 0;
-        }
-
-        return qLearning.ChooseAction(currentState);
-    }
-
-    /// <summary>
-    /// Cập nhật phần thưởng cho Q-learning (ví dụ sau khi thắng / thua).
-    /// </summary>
-    public void GiveReward(float reward, string nextState)
-    {
-        if (qLearning == null)
-        {
-            Debug.LogWarning("QLearning reference missing!");
-            return;
-        }
-
-        int lastAction = ChooseAction();
-        qLearning.UpdateQ(currentState, lastAction, reward, nextState);
+        summaries.Sort(); // đảm bảo thứ tự ổn định
+        return string.Join("|", summaries);
     }
 }
