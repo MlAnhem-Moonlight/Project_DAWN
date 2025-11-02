@@ -145,58 +145,26 @@ public class MaterialSpawner : MonoBehaviour
         }
     }
 
-    //// Backup method để parse JSON trực tiếp nếu JsonUtility fail
-    //private void TryParseDirectly()
-    //{
-    //    try
-    //    {
-    //        string jsonString = jsonFile.text;
+    // Ẩn toàn bộ object đang active trong pool hiện tại
+    private void HideAllActiveObjectsInPool()
+    {
+        if (parentObject == null) return;
 
-    //        // Tìm phần GA_Result trong JSON
-    //        int gaResultStart = jsonString.IndexOf("\"GA_Result\"");
-    //        if (gaResultStart == -1)
-    //        {
-    //            Debug.LogError("Không tìm thấy GA_Result trong JSON!");
-    //            return;
-    //        }
+        int hiddenCount = 0;
+        for (int i = parentObject.transform.childCount - 1; i >= 0; i--)
+        {
+            GameObject child = parentObject.transform.GetChild(i).gameObject;
 
-    //        // Tìm phần dictionary đầu tiên trong GA_Result
-    //        int firstDictStart = jsonString.IndexOf("{", gaResultStart);
-    //        int firstDictEnd = jsonString.IndexOf("}", firstDictStart);
+            // Chỉ ẩn những object đang active
+            if (child.activeSelf)
+            {
+                child.SetActive(false);
+                hiddenCount++;
+            }
+        }
 
-    //        if (firstDictStart == -1 || firstDictEnd == -1)
-    //        {
-    //            Debug.LogError("Không thể parse GA_Result dictionary!");
-    //            return;
-    //        }
-
-    //        string dictContent = jsonString.Substring(firstDictStart + 1, firstDictEnd - firstDictStart - 1);
-
-    //        // Parse các key-value pairs
-    //        string[] pairs = dictContent.Split(',');
-    //        allPoolCounts.Clear();
-
-    //        foreach (string pair in pairs)
-    //        {
-    //            string[] keyValue = pair.Split(':');
-    //            if (keyValue.Length == 2)
-    //            {
-    //                string key = keyValue[0].Trim().Replace("\"", "");
-    //                if (int.TryParse(keyValue[1].Trim(), out int value))
-    //                {
-    //                    allPoolCounts[key] = value;
-    //                    Debug.Log($"Backup parse - Loaded pool '{key}': {value}");
-    //                }
-    //            }
-    //        }
-
-    //        Debug.Log("Parse JSON thành công bằng method backup!");
-    //    }
-    //    catch (System.Exception e)
-    //    {
-    //        Debug.LogError("Lỗi khi parse JSON backup: " + e.Message);
-    //    }
-    //}
+        //Debug.Log($"Đã ẩn {hiddenCount} objects trong pool '{poolName}'");
+    }
 
     public void SpawnMaterials()
     {
@@ -205,6 +173,9 @@ public class MaterialSpawner : MonoBehaviour
             Debug.LogWarning("Chưa gán điểm spawn!");
             return;
         }
+
+        // Ẩn toàn bộ object cũ trước khi spawn mới
+        HideAllActiveObjectsInPool();
 
         // Xác định số lượng spawn từ JSON data
         int totalSpawnCount = GetSpawnCountForPool();

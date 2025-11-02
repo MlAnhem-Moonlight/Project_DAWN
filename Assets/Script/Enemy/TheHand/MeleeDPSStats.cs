@@ -5,7 +5,7 @@ public class MeleeDPSStats : Stats
     [Header("Growth Config")]
     public float hpLinear = 25f;
 
-    public float dmgMultiplier = 1.10f;
+    public float dmgMultiplier = 1.02f;
 
     public float atkSpdMultiplier = 1.04f;
     public float atkSpdCap = 3.0f;

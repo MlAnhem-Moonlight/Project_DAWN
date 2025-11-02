@@ -25,9 +25,10 @@ public class CheckEnemyInRange : Nodes
             && Vector3.Distance(_transform.position, closestTarget.position) <= _range 
             && closestTarget.gameObject.tag != "AttackBox")
         {
+
             parent.SetData("target", closestTarget);
             state = NodeState.SUCCESS;
-            Debug.Log("Enemy in range: " + closestTarget.name + _range);
+
         }
         else
         {

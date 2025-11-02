@@ -66,7 +66,7 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         qLearning.LoadQTable();
-        StartCoroutine(WaitForAllyAndStartCombatSession());
+        //StartCoroutine(WaitForAllyAndStartCombatSession());
     }
 
     IEnumerator WaitForAllyAndStartCombatSession()

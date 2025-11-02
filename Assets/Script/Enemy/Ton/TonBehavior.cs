@@ -28,6 +28,7 @@ public class TonBehavior : BhTree
         speed = GetComponent<Stats>() ? GetComponent<Stats>().currentSPD : 10f;
         skillCD = GetComponent<Stats>() ? GetComponent<Stats>().currentSkillCD : 5f;
         attackSpeed = GetComponent<Stats>() ? GetComponent<Stats>().currentAtkSpd : 1f;
+        defaultTarget = GameObject.Find("Gate").transform;
         //animator.SetFloat("AttackSpd", attackSpeed);
         SetupAttackSpeed(animator, attackSpeed);
 

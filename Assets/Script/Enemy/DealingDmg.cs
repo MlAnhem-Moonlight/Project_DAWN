@@ -128,12 +128,13 @@ public class DealingDmg : MonoBehaviour
 
             foreach (var hit in hits)
             {
+                Debug.Log(hit.name);
                 if (hit.gameObject == gameObject) continue;
                 Stats stats = hit.GetComponent<Stats>();
                 if (stats)
                 {
                     float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-                    Debug.Log(hit.name);
+                   
                     switch (usingSkill)
                     {
                         case 1:
@@ -172,6 +173,7 @@ public class DealingDmg : MonoBehaviour
 
     void ApplyKnockback(GameObject target)
     {
+        if(target.layer == LayerMask.NameToLayer("Construction")) return;
         Rigidbody2D targetRb = target.GetComponent<Rigidbody2D>();
         if (targetRb == null) return;
 

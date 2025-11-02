@@ -27,7 +27,7 @@ public class TonAttackNode : Nodes
 
     public override NodeState Evaluate()
     {
-        
+
         Transform target = (Transform)GetData("target");
         if (target == null)
             return state = NodeState.FAILURE;

@@ -37,6 +37,7 @@ public class BridCollisionHandler : MonoBehaviour
             Stats health = hit.GetComponent<Stats>();
             if (health != null)
             {
+                Debug.Log(hit.name);
                 health.TakeDamage(damage);
             }
         }

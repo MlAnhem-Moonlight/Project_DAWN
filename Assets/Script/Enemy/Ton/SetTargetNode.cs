@@ -18,7 +18,7 @@ public class TonSetTargetNode : Nodes
         Transform target = (Transform)GetData("target");
         if (target != null)
         {
-            _tonMovement.SetTarget(target);
+            if (_tonMovement.getTarget() != target) _tonMovement.SetTarget(target);
             state = NodeState.SUCCESS;
         }
         else

@@ -132,6 +132,7 @@
     <Compile Include="Assets\Script\Enemy\TheMage\MageStats.cs" />
     <Compile Include="Assets\Script\Construction\BuildConstruction.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Script\Mics\SpawnPrediction.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridDive.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Tree.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTBaseNode.cs" />

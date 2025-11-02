@@ -298,10 +298,10 @@ MonoBehaviour:
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: 74e56c82fc59d1840a05dade4fa6634e, type: 2}
   currentHP: 65
-  currentDMG: 4
+  currentDMG: 6
   currentSPD: 4.04
   currentSkillCD: 11.52
-  currentShield: 16
+  currentShield: 20
   currentAtkSpd: 0.5
   currentSkillDmg: 0
   currentSkillDuration: 0

@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4660112662477822211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5931450178281176191}
+  - component: {fileID: 8048685072675926746}
+  - component: {fileID: 6783962333240260083}
+  - component: {fileID: 7548431051601450348}
+  - component: {fileID: 2856810480194896148}
+  - component: {fileID: 419897746326922213}
+  m_Layer: 0
+  m_Name: Q-LearningController
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5931450178281176191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -93.3, y: 1.5, z: -0.0064031705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8048685072675926746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdabc2d4f44c56e44888239d371696b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCanvas: {fileID: 0}
+  unitUIPrefab: {fileID: 5390069008020441256, guid: 892f8ae0d254a624a99f1e428a1aad89, type: 3}
+--- !u!114 &6783962333240260083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17398ce789b4c1c4bb55fa85adaf228b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+  activeAllies: []
+  hpBracketSize: 50
+  dmgBracketSize: 10
+--- !u!114 &7548431051601450348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e96702fb9af26439c36db92ff08bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionCount: 4
+  learningRate: 0.1
+  discountFactor: 0.9
+  explorationRate: 0.2
+  enableAdaptiveDifficulty: 1
+  verboseLogging: 1
+--- !u!114 &2856810480194896148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf47799e6532524faebaee49950bd36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCollector: {fileID: 6783962333240260083}
+  qLearning: {fileID: 7548431051601450348}
+  spawnType: 3
+  minCombatDuration: 90
+  maxCombatDuration: 180
+  waveDelay: 2
+  aliveEnemyCount: 0
+  aliveAllyCount: 0
+  idealWaveDuration: 25
+  durationTolerance: 10
+--- !u!114 &419897746326922213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660112662477822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625d61e44aa6d7d47be77788b8fc0cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPools:
+  - name: Brid
+    prefab: {fileID: 2112638258130519293, guid: 8cd6a38bb79b5c1438227c7782065c13, type: 3}
+    poolSize: 20
+    pool: []
+  - name: The Hand
+    prefab: {fileID: 1509663465344702900, guid: 73fb2d8b695151c46b020c536a2b0cdc, type: 3}
+    poolSize: 30
+    pool: []
+  - name: The Mage
+    prefab: {fileID: 6768994202510114446, guid: 80679cb543cc31b49bc3e6be2d6a0afd, type: 3}
+    poolSize: 30
+    pool: []
+  - name: Ton
+    prefab: {fileID: 2218499173624817928, guid: 732d34115fd6d9e4d843917d02ce1bef, type: 3}
+    poolSize: 30
+    pool: []
+  spawnPoint: {fileID: 5931450178281176191}

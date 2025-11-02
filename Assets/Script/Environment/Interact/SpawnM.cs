@@ -16,13 +16,18 @@ public class SpawnM : MonoBehaviour
     public GameObject areaStart, areaEnd;
     public float yOffset = 0f; // Offset for the y position
 
+    [Header("Clear Settings")]
+    public bool destroyOldObjects = false; // true = Destroy, false = SetActive(false)
+
     // Lưu trữ data từ JSON - Dictionary chứa tất cả pool counts
     private Dictionary<string, int> allPoolCounts = new Dictionary<string, int>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //StartCoroutine(WaitForGAResultAndSpawn());
     }
+
     private void OnEnable()
     {
         Ingredient.onGAResultSaved += OnGAResultSaved;
@@ -38,27 +43,46 @@ public class SpawnM : MonoBehaviour
         LoadJsonData();
         SpawnObjects();
     }
-    //private IEnumerator WaitForGAResultAndSpawn()
-    //{
-    //    string gaResultPath = System.IO.Path.Combine(Application.dataPath, "Script/Environment/env.json");
-    //    float timeout = 5f;
-    //    float timer = 0f;
 
-    //    while (!System.IO.File.Exists(gaResultPath) && timer < timeout)
-    //    {
-    //        yield return new WaitForSeconds(0.2f);
-    //        timer += 0.2f;
-    //    }
+    // Xóa hoặc ẩn toàn bộ object cũ trong PObject
+    private void ClearOldObjects()
+    {
+        if (PObject == null) return;
 
-    //    yield return new WaitForSeconds(0.2f);
+        int clearedCount = 0;
 
-    //    LoadJsonData();
-    //    SpawnObjects();
-    //}
+        if (destroyOldObjects)
+        {
+            // Destroy tất cả children
+            for (int i = PObject.transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(PObject.transform.GetChild(i).gameObject);
+                clearedCount++;
+            }
+        }
+        else
+        {
+            // Chỉ ẩn (SetActive false)
+            for (int i = PObject.transform.childCount - 1; i >= 0; i--)
+            {
+                GameObject child = PObject.transform.GetChild(i).gameObject;
+                if (child.activeSelf)
+                {
+                    child.SetActive(false);
+                    clearedCount++;
+                }
+            }
+        }
+
+        //Debug.Log($"Đã clear {clearedCount} objects cũ từ '{poolName}' (Destroy: {destroyOldObjects})");
+    }
 
     [ContextMenu("Spawn Now")]
     public void SpawnObjects()
     {
+        // Clear toàn bộ object cũ trước
+        ClearOldObjects();
+
         spawnCount = GetSpawnCountForSpecificPool(poolName);
         if (objectPrefab == null) return;
 
@@ -70,12 +94,12 @@ public class SpawnM : MonoBehaviour
 
             Instantiate(objectPrefab, spawnPos, objectPrefab.transform.rotation, PObject.transform);
         }
+
+        //Debug.Log($"Đã spawn {spawnCount} objects mới cho '{poolName}'");
     }
 
     private void LoadJsonData()
     {
-
-
         string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
         if (!File.Exists(filePath))
         {
@@ -129,6 +153,35 @@ public class SpawnM : MonoBehaviour
     public Dictionary<string, int> GetAllPoolCounts()
     {
         return new Dictionary<string, int>(allPoolCounts);
+    }
+
+    // Context menu để test clear
+    [ContextMenu("Clear All Objects")]
+    public void ClearAllObjects()
+    {
+        ClearOldObjects();
+    }
+
+    // Context menu để đếm số objects hiện có
+    [ContextMenu("Count Current Objects")]
+    public void CountCurrentObjects()
+    {
+        if (PObject == null)
+        {
+            Debug.Log("PObject chưa được gán!");
+            return;
+        }
+
+        int totalCount = PObject.transform.childCount;
+        int activeCount = 0;
+
+        for (int i = 0; i < PObject.transform.childCount; i++)
+        {
+            if (PObject.transform.GetChild(i).gameObject.activeSelf)
+                activeCount++;
+        }
+
+        Debug.Log($"Pool '{poolName}': {activeCount}/{totalCount} objects đang active");
     }
 
     // Update is called once per frame

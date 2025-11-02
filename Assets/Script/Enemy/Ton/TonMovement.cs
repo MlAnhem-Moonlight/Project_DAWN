@@ -24,7 +24,7 @@ public class TonMovement : Nodes
     public void SetTarget(Transform target)
     {
         _target = target;
-        Debug.Log($"{_transform.name} target {target}");
+        //Debug.Log($"{_transform.name} target {target}");
     }
 
     public Transform getTarget()
@@ -41,7 +41,7 @@ public class TonMovement : Nodes
 
         float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-        _animator.SetInteger("State", 0);
+        
         _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
         if (Vector3.Distance(_transform.position, targetPosition) <= _range)
         {
@@ -51,9 +51,10 @@ public class TonMovement : Nodes
         else
         {
             state = NodeState.RUNNING;
+            _animator.SetInteger("State", 0);
             _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
         }
-        //Debug.Log(Vector3.Distance(_transform.position, targetPosition) < _range - 0.1f);
+        
         return state;
     }
 }

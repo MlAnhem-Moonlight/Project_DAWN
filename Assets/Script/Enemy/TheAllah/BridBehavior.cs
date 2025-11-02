@@ -11,14 +11,18 @@ public class BridBehavior : BhTree
     public UnityEngine.Animator animator;
     public UnityEngine.Transform target;
     private UnityEngine.Rigidbody2D rb;
-    private BridMovement bridMovement;
-    private BridCheckDistance bridCheckDistance;
-    private BridDive bridDive;
+    //private BridMovement bridMovement;
+    //private BridCheckDistance bridCheckDistance;
+    //private BridDive bridDive;
 
     private void FindTarget()
     {
         // Tìm tất cả các GameObject trong scene
-        UnityEngine.GameObject[] allObjects = UnityEngine.GameObject.FindObjectsByType<UnityEngine.GameObject>(UnityEngine.FindObjectsInactive.Exclude, UnityEngine.FindObjectsSortMode.None);
+        UnityEngine.GameObject[] allObjects = UnityEngine.
+                                                GameObject.
+                                                FindObjectsByType<UnityEngine.GameObject>
+                                                (UnityEngine.FindObjectsInactive.Exclude, 
+                                                UnityEngine.FindObjectsSortMode.None);
 
         // Lọc đối tượng theo layer "Human" hoặc "Construction"
         var filteredObjects = new List<UnityEngine.GameObject>();
