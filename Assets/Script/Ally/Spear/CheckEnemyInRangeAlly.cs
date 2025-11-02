@@ -35,7 +35,7 @@ public class CheckEnemyInRangeAlly : Nodes
 
         parent.ClearData("target");
         parent?.parent ?.ClearData("target");
-        _self.GetComponent<SpearBehavior>().currentState = AnimatorState.Idle;
+        //_self.GetComponent<SpearBehavior>().currentState = AnimatorState.Idle;
         state = NodeState.FAILURE;
         return state;
     }

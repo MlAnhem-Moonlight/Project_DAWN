@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
         // Chọn unit bằng click chuột trái
         if (Input.GetMouseButtonDown(0))
         {
-
             SelectUnit();
         }
 
@@ -46,18 +45,17 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Vector3 mouseScreen = Input.mousePosition;
-        mouseScreen.z = -cam.transform.position.z;
-        Vector2 mousePos = cam.ScreenToWorldPoint(mouseScreen);
-        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        Vector3 worldPoint = ScreenToWorldPointOnPlane(Input.mousePosition, cam, 0f); // planeZ = 0 (ground)
+        // Dùng OverlapPoint cho 2D, chính xác hơn khi click vào collider 2D
+        Collider2D hitCollider = Physics2D.OverlapPoint(worldPoint);
 
-        if (hit.collider != null)
+        if (hitCollider != null)
         {
-            ArcherBehavior unit = hit.collider.GetComponent<ArcherBehavior>();
+            ArcherBehavior unit = hitCollider.GetComponent<ArcherBehavior>();
             if (unit != null)
             {
                 selectedUnit = unit;
-                Debug.Log($"✅ Selected: {unit.name}");
+                //Debug.Log($"✅ Selected: {unit.name}");
                 ShowUnitUI(unit); // Hiển thị biểu tượng UI khi chọn
             }
         }
@@ -74,20 +72,22 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Vector3 mouseScreen = Input.mousePosition;
-        mouseScreen.z = -cam.transform.position.z;
-        Vector2 mousePos = cam.ScreenToWorldPoint(mouseScreen);
-        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        // Lấy world point trên cùng plane z với unit để tránh chênh z
+        float planeZ = selectedUnit.transform.position.z; // giữ z của unit
+        Vector3 worldPoint = ScreenToWorldPointOnPlane(Input.mousePosition, cam, planeZ);
 
-        if (hit.collider != null)
+        // Tìm collider tại điểm đó (nếu có)
+        Collider2D hitCollider = Physics2D.OverlapPoint(worldPoint);
+
+        if (hitCollider != null)
         {
-            selectedUnit.SetCheckpoint(hit.point);
-            Debug.Log($"{selectedUnit.name} moving to {hit.point}");
+            selectedUnit.SetCheckpoint((Vector2)worldPoint);
+            //Debug.Log($"{selectedUnit.name} moving to {worldPoint} (hit collider: {hitCollider.name})");
         }
         else
         {
-            selectedUnit.SetCheckpoint(mousePos);
-            Debug.Log($"{selectedUnit.name} moving to {mousePos} (no collider hit)");
+            selectedUnit.SetCheckpoint((Vector2)worldPoint);
+            //Debug.Log($"{selectedUnit.name} moving to {worldPoint} (no collider hit)");
         }
 
         // Hủy chọn sau khi ra lệnh
@@ -114,5 +114,26 @@ public class PlayerController : MonoBehaviour
             Destroy(unitUIInstance);
             unitUIInstance = null;
         }
+    }
+
+    /// <summary>
+    /// Convert screen point -> world point nằm trên plane z = planeZ (hỗ trợ cả orthographic & perspective)
+    /// </summary>
+    private Vector3 ScreenToWorldPointOnPlane(Vector3 screenPos, Camera cam, float planeZ)
+    {
+        // Nếu camera orthographic thì z không ảnh hưởng, dùng ScreenToWorldPoint mặc định
+        if (cam.orthographic)
+        {
+            Vector3 wp = cam.ScreenToWorldPoint(screenPos);
+            wp.z = planeZ;
+            return wp;
+        }
+
+        // Với perspective camera: cần truyền distance từ camera tới planeZ
+        float distance = Mathf.Abs(cam.transform.position.z - planeZ);
+        Vector3 sp = new Vector3(screenPos.x, screenPos.y, distance);
+        Vector3 worldPoint = cam.ScreenToWorldPoint(sp);
+        worldPoint.z = planeZ;
+        return worldPoint;
     }
 }

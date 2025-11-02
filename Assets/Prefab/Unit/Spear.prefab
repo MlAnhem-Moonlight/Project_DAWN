@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 9208890349712012610}
   m_Layer: 6
   m_Name: Spear
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5025604b7fda1bc4ab3bdc2912cb117b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spearState: 1
+  spearState: 0
   currentState: 0
   defensiveOffset: 1.5
   patrolRadius: 5
@@ -307,7 +307,7 @@ MonoBehaviour:
   animator: {fileID: 7632967097304233221}
   attackSpeed: 1
   skillCD: 2.9
-  atkRange: 1.4
+  atkRange: 1.3
   speed: 2
 --- !u!114 &745418574626960579
 MonoBehaviour:
@@ -324,7 +324,7 @@ MonoBehaviour:
   level: 1
   maxLevel: 8
   baseStats: {fileID: 11400000, guid: fb7acc5c5eaa48446912e350f4e3de1b, type: 2}
-  currentHP: 60
+  currentHP: 20
   currentDMG: 3
   currentSPD: 6.08
   currentSkillCD: 17.28

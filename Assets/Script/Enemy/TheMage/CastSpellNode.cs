@@ -31,7 +31,7 @@ public class CastSpellNode : Nodes
             {
                 _castDuration = clip.length / _animator.GetFloat("CastingSpellSpd");
 
-                Debug.Log($"Casting spell animation duration set to {_castDuration} seconds.");
+                //Debug.Log($"Casting spell animation duration set to {_castDuration} seconds.");
                 break;
             }
         }
@@ -45,7 +45,7 @@ public class CastSpellNode : Nodes
             if (Time.time - _castStartTime >= _castDuration)
             {
                 // Kết thúc cast
-                Debug.Log("Spell Casted!");
+                //Debug.Log("Spell Casted!");
                 _lastCastTime = Time.time; // bắt đầu tính cooldown
                 _isCasting = false;
                 _theMageMovement.isAttack = false;
@@ -61,7 +61,7 @@ public class CastSpellNode : Nodes
         // Nếu không casting và cooldown đã xong -> bắt đầu cast mới
         else if (Time.time - _lastCastTime >= _cooldown)
         {
-            Debug.Log("Start Casting Spell");
+            //Debug.Log("Start Casting Spell");
             _castStartTime = Time.time;
             _theMageMovement.isAttack = true;   // block di chuyển + attack
             _isCasting = true;

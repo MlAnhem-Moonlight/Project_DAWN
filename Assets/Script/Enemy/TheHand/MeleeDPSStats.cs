@@ -28,7 +28,7 @@ public class MeleeDPSStats : Stats
     //}
 
 
-    public void ApplyGrowth()
+    public override void ApplyGrowth()
     {
         
         if (baseStats == null) return;
@@ -52,7 +52,7 @@ public class MeleeDPSStats : Stats
         float minSkillCD = baseStats.SkillCD * skillCDMinFactor;
         currentSkillCD = Mathf.Round(Mathf.Max(baseStats.SkillCD * Mathf.Pow(skillCDMultiplier, level - 1), minSkillCD) * 100f) / 100f;
         SetDmgDur(2 + 0.5f * (level - 1));
-        Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
+        //Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
     }
 
     /// <summary>

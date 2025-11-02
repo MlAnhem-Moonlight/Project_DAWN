@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaf8f1ffb2e549489223102c082c456, type: 3}
   m_Name: TheMageStats
   m_EditorClassIdentifier: 
-  HP: 6
+  HP: 15
   DMG: 3
   SPD: 8
   SkillCD: 20

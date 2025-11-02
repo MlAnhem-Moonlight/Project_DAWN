@@ -26,7 +26,7 @@ public class MageAttackNode : Nodes
                 if (clip.name == attackClipName)
                 {
                     _attackDuration = clip.length;
-                    Debug.Log($"Attack animation duration set to {_attackDuration} seconds.");
+                    //Debug.Log($"Attack animation duration set to {_attackDuration} seconds.");
                     break;
                 }
             }

@@ -43,6 +43,7 @@ namespace Spear.Movement
                 state = NodeState.FAILURE;
                 return state;
             }
+            Debug.Log(_waiting);
             if (_waiting)
             {
                 _waitCounter += Time.deltaTime;
@@ -79,6 +80,8 @@ namespace Spear.Movement
                             _speed * Time.deltaTime
                         );
                     }
+                    if (_transform.GetComponent<SpearBehavior>().currentState == AnimatorState.Idle) 
+                        CheckMovement(_waypoint.position, "Run2 1", "Run2", 0.2f);
 
                 }
             }

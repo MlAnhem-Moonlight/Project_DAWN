@@ -62,7 +62,7 @@ namespace Spear.Movement
             //parent.SetData("target", nearestEnemy);
         
             float distance = Mathf.Sqrt(_transform.position.x - nearestEnemy.position.x);
-
+            //Debug.Log(nearestEnemy.name + " Distance: " + distance);
             // --- Nếu trong tầm tấn công ---
             if (distance <= _attackRange)
             {
@@ -106,7 +106,7 @@ namespace Spear.Movement
             }
 
             // Thêm logic gây damage hoặc spawn skill object
-            Debug.Log($"[{_transform.name}] Dùng skill vào {target.name} lúc {Time.time:F2}");
+            //Debug.Log($"[{_transform.name}] Dùng skill vào {target.name} lúc {Time.time:F2}");
         }
 
 

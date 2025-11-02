@@ -60,7 +60,7 @@ public class KnightStats : Stats
         // Tăng cho chính Knight (dùng phần trăm của giá trị hiện tại)
         int selfShieldBonus = Mathf.RoundToInt(originalShield * selfBuff);
         currentShield = Mathf.Min(originalShield + selfShieldBonus, (int)shieldCap);
-        Debug.Log($"{name} dùng kỹ năng! +{selfShieldBonus}% Shield (tổng {currentShield}%) trong {skillDuration}s");
+        //Debug.Log($"{name} dùng kỹ năng! +{selfShieldBonus}% Shield (tổng {currentShield}%) trong {skillDuration}s");
 
         // Tăng cho đồng minh xung quanh
         Collider2D[] allies = Physics2D.OverlapCircleAll(transform.position, synergyRadius, allyLayer);
@@ -94,10 +94,10 @@ public class KnightStats : Stats
             }
         }
 
-        Debug.Log($"{name} synergy skill kết thúc, Shield trở lại bình thường.");
+        //Debug.Log($"{name} synergy skill kết thúc, Shield trở lại bình thường.");
     }
 
-    public void ApplyGrowth()
+    public override void ApplyGrowth()
     {
         if (baseStats == null) return;
 
@@ -127,7 +127,7 @@ public class KnightStats : Stats
         currentSkillCD = Mathf.Max(cd, minCD);
         currentSkillCD = Mathf.Round(currentSkillCD * 100f) / 100f;
 
-        Debug.Log($"{gameObject.name} (Knight) | L{lv} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
+        //Debug.Log($"{gameObject.name} (Knight) | L{lv} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
     }
 
     [ContextMenu("Level Up")]

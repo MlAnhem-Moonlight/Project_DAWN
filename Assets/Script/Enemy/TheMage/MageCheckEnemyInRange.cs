@@ -23,7 +23,7 @@ public class MageCheckEnemyInRange : Nodes
     public override NodeState Evaluate()
     {
         Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction, _defaultTarget);
-        
+        //Debug.Log(closestTarget);
         // Check if the closest target is within range
         if (closestTarget != null 
             && Mathf.Abs(_transform.position.x - closestTarget.position.x) <= _range)

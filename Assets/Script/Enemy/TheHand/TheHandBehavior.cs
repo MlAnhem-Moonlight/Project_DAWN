@@ -19,7 +19,7 @@ public class TheHandBehavior : BhTree
 
     public void resetAttacking()
     {
-        theHandAttack.resetAttacking();
+        if (theHandAttack != null) theHandAttack.resetAttacking();
     }
 
     protected override Nodes SetupTree()

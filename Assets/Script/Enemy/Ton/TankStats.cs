@@ -30,7 +30,7 @@ public class TankStats : Stats
     /// <summary>
     /// Cập nhật chỉ số theo level hiện tại
     /// </summary>
-    public void ApplyGrowth()
+    public override void ApplyGrowth()
     {
         if (baseStats == null) return;
 
@@ -57,7 +57,7 @@ public class TankStats : Stats
         currentSkillDmg = currentDMG * 1.5f;
 
         //SetDmg(currentDMG*1.5f);
-        Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s | SkillDMG {currentSkillDmg:F2}");
+        //Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s | SkillDMG {currentSkillDmg:F2}");
     }
 
     /// <summary>

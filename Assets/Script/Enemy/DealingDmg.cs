@@ -133,7 +133,7 @@ public class DealingDmg : MonoBehaviour
                 if (stats)
                 {
                     float dmg = usingSkill != 0 ? skillDamageAmount : damageAmount;
-
+                    Debug.Log(hit.name);
                     switch (usingSkill)
                     {
                         case 1:
@@ -149,7 +149,7 @@ public class DealingDmg : MonoBehaviour
                             // Không gây damage tức thời ở đây
                             break;
                         default:
-                            //stats.TakeDamage(dmg);
+                            stats.TakeDamage(dmg);
                             break;
                     }
                 }

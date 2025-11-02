@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 990429837741316815}
   m_Layer: 7
   m_Name: TheHand(Demo)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,8 +127,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.056288898, y: 0.38777506}
-  m_Size: {x: 0.5634912, y: 1.0661123}
+  m_Offset: {x: -0.030067444, y: -0.058385134}
+  m_Size: {x: 0.47714233, y: 1.2100351}
   m_Direction: 0
 --- !u!50 &3703301254352919098
 Rigidbody2D:
@@ -240,10 +240,10 @@ GameObject:
   - component: {fileID: 8579773715081558179}
   - component: {fileID: 2154923747338101727}
   - component: {fileID: 6362623516715296329}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AttackBox
   m_TagString: AttackBox
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -256,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 7820319488651036133}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.402, y: 0.304, z: 0}
+  m_LocalPosition: {x: 0.567, y: -0.171, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -296,7 +296,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03263092, y: 0.11927402}
+  m_Offset: {x: 0.06501007, y: 0.11927402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -306,7 +306,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.40301514, y: 1.0961311}
+  m_Size: {x: 0.46777344, y: 1.0961311}
   m_EdgeRadius: 0
 --- !u!114 &6362623516715296329
 MonoBehaviour:

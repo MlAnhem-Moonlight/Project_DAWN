@@ -419,7 +419,7 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 4}
   - name: Frame_14
     originalName: 
-    pivot: {x: 0.68, y: 0}
+    pivot: {x: 0.68, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -552,7 +552,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 232
+      y: 233
       width: 135
       height: 107
     spriteID: b439f8057bdee9c4db46e4ed8f6aaf56
@@ -713,8 +713,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 4}
   - name: Frame_28
     originalName: 
-    pivot: {x: 0.30769235, y: -0.78666663}
-    alignment: 9
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:

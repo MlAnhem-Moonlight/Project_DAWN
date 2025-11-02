@@ -22,7 +22,7 @@ public class BomberStats : Stats
         ApplyGrowth();
     }
 
-    public void ApplyGrowth()
+    public override void ApplyGrowth()
     {
         if (baseStats == null) return;
 
@@ -44,7 +44,7 @@ public class BomberStats : Stats
         // SkillCD (không thay đổi)
         currentSkillCD = baseStats.SkillCD;
 
-        Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
+        //Debug.Log($"{gameObject.name} | Level {level} | HP {currentHP} | DMG {currentDMG} | AtkSpd {currentAtkSpd:F2} | SPD {currentSPD:F2} | Shield {currentShield}% | SkillCD {currentSkillCD:F2}s");
     }
 
     /// <summary>

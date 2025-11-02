@@ -75,8 +75,8 @@ public class TurnPrefab : MonoBehaviour
     {
 
         projectiles[index].SetActive(true);
-        //index = index == projectiles.Count ? 0 : index++;
-        index = (index + 1) % projectiles.Count;
+        index = index == projectiles.Count ? 0 : (index + 1) % projectiles.Count;
+
 
     }
     public void TurnOffAllProjectiles()
@@ -100,7 +100,7 @@ public class TurnPrefab : MonoBehaviour
             if (clip.name == clipName) // đúng tên clip
             {
                 clipLength = clip.length;
-                Debug.Log($"Found {clipName} clip length: {clipLength}s");
+                //Debug.Log($"Found {clipName} clip length: {clipLength}s");
                 break;
             }
         }

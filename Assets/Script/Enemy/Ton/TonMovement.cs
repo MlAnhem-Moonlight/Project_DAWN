@@ -24,6 +24,7 @@ public class TonMovement : Nodes
     public void SetTarget(Transform target)
     {
         _target = target;
+        Debug.Log($"{_transform.name} target {target}");
     }
 
     public Transform getTarget()

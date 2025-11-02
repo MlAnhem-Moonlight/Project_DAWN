@@ -38,6 +38,16 @@ public class Stats : MonoBehaviour
         }
     }
 
+    public void SetLevel(int lv)
+    {
+        level = lv;
+    }
+
+    public virtual void ApplyGrowth()
+    {
+
+    }    
+
     /// <summary>
     /// Nhận damage, shield sẽ giảm % dmg
     /// </summary>
@@ -154,7 +164,7 @@ public class Stats : MonoBehaviour
     public void Attack()
     {
         GetComponentInChildren<DealingDmg>()?.AttackHit();
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
     }
 
     public void UseSkill()

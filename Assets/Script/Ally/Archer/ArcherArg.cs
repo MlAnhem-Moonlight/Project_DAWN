@@ -42,7 +42,9 @@ public class ArcherArg : Nodes
         {
             // No enemies -> go to idle animation/state
             archer.SetTarget(null);
-            archer.ChangeState(AnimatorState.Idle);
+            if(archer.currentState == AnimatorState.Attack 
+                || archer.currentState == AnimatorState.UsingSkill) 
+                archer.ChangeState(AnimatorState.Idle);
             var anim = _transform.GetComponent<Animator>();
             if (_controller != null && anim != null)
             {

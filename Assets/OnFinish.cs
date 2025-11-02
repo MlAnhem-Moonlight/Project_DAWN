@@ -20,13 +20,12 @@ public class OnFinish : StateMachineBehaviour
     {
         
         var spear = animator.GetComponent<SpearBehavior>();
-        Debug.Log($"[{spear.name}].");
+        //Debug.Log($"[{spear.name}].");
         if (spear == null) return;
 
         // Nếu đang không trong Skill hoặc animation override thì mới cho về Idle
         if (spear.currentState == AnimatorState.Attack || spear.currentState == AnimatorState.UsingSkill)
         {
-            Debug.Log($"[{spear.name}] tại {stateInfo.fullPathHash} OnFinish: Hoàn thành {spear.currentState}, chuyển về Idle.");
             // chỉ chuyển về Idle nếu ko bị đổi state khác trong lúc OnStateExit
             spear.ChangeState(AnimatorState.Idle);
         }

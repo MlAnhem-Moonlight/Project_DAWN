@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6925553500575183442}
   - component: {fileID: 5604100334853847343}
   - component: {fileID: 4981770821114925485}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: AttackBox
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1949955592855148858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.478, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119,11 +119,11 @@ GameObject:
   - component: {fileID: 6447278737625200912}
   m_Layer: 7
   m_Name: Ton(Demo)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &929393111439331100
 Transform:
   m_ObjectHideFlags: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  attackRange: 0.85
+  attackRange: 1
   skillCD: 5
   attackSpeed: 1
   defaultTarget: {fileID: 0}

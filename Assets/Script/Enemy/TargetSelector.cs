@@ -23,6 +23,7 @@ public static class TargetSelector
             if (hitCollider.gameObject.layer == LayerMask.NameToLayer(layerHuman) ||
                 hitCollider.gameObject.layer == LayerMask.NameToLayer(layerConstruction) ||
                 hitCollider.transform == defaultTarget)
+            if(hitCollider.gameObject.GetComponent<Stats>() != null)
             {
                 float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
                 if (hitCollider.transform == defaultTarget)
@@ -51,6 +52,7 @@ public static class TargetSelector
         {
             if (hitCollider.gameObject.layer == LayerMask.NameToLayer(layerHuman) ||
                 hitCollider.gameObject.layer == LayerMask.NameToLayer(layerConstruction))
+            if(hitCollider.gameObject.GetComponent<Stats>() != null)
             {
                 float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
 

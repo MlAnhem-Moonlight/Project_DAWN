@@ -20,7 +20,7 @@ public class TonBehavior : BhTree
 
     public void resetAttacking()
     {
-        tonAttackNode.resetAttacking();
+        if(tonAttackNode != null)tonAttackNode.resetAttacking();
     }
 
     protected override Nodes SetupTree()
@@ -31,7 +31,7 @@ public class TonBehavior : BhTree
         //animator.SetFloat("AttackSpd", attackSpeed);
         SetupAttackSpeed(animator, attackSpeed);
 
-        defaultTarget = UnityEngine.GameObject.FindGameObjectWithTag("DefaultTarget").transform;
+        defaultTarget = GameObject.FindGameObjectWithTag("DefaultTarget").transform;
         tonMovement = new TonMovement(transform, speed, attackRange, animator, defaultTarget);
         tonAttackNode = new TonAttackNode(transform, animator, isAttacking, skillCD);
 

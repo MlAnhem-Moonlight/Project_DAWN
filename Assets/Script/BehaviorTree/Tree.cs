@@ -30,7 +30,7 @@ namespace BehaviorTree
                 if (clip.name == "Attack") // đúng tên clip
                 {
                     clipLength = clip.length;
-                    Debug.Log($"Found Attack clip length: {clipLength}s");
+                    //Debug.Log($"Found Attack clip length: {clipLength}s");
                     break;
                 }
             }

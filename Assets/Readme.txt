@@ -52,3 +52,7 @@ Thêm duration cho skill của Mage(V), còn thiếu 3 unit ally, 1 enemy:
 			* Neu: di chuyển xung quanh checkpoint
 
 Đang bắt đầu làm Pooler, Q-Learning: 
+	- Lỗi lưu Qtable(X)
+	- combat giữa các unit đang bị lỗi range(~)
+	- Q-table sau 1 lần enemy thua tăng trưởng enemy quá mạnh
+	- Phần di chuyển của archer gặp vấn đề, không update checkpoint mới
