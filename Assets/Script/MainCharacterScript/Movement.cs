@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     private float currentSpeed = 0f; 
     private Vector3 movement;
-    private float previousDirection = 0f;
+    private float previousDirection = 0f, dir = 1;
     private AnimationController _controller;
 
     private void Start()
@@ -23,15 +23,15 @@ public class Movement : MonoBehaviour
     {
         
         movement.x = Input.GetAxis("Horizontal");
+        dir = Input.GetAxis("Horizontal") != dir && Input.GetAxis("Horizontal") != 0f ? Input.GetAxis("Horizontal") : dir;
 
-        
         if (movement.x < 0 && previousDirection >= 0 || movement.x > 0 && previousDirection <= 0)
         {
             currentSpeed = currentSpeed / 2f; 
         }
         if(Input.GetAxis("Horizontal") == 0)
         {
-            float dir = Random.Range(-1, 1);
+            
             CheckMovement(dir, "Idle 1", "Idle", 0f);
         }
         else CheckMovement(Input.GetAxis("Horizontal"), "Walk 1", "Walk", 0f);
