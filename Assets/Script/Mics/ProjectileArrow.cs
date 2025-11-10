@@ -40,7 +40,8 @@ public class ProjectileArrow : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         hasHit = false;
 
-        target = GetComponentInParent<ArcherBehavior>()?.GetTarget();
+        target = GetComponentInParent<ArcherBehavior>() ? GetComponentInParent<ArcherBehavior>()?.GetTarget() : null;
+        if (target == null) target = GetComponentInParent<SpawnProjectile>() ? GetComponentInParent<SpawnProjectile>()?.GetTarget() : null;
         Debug.Log(target.name);
         if (startPoint != null)
             transform.position = startPoint.position;

@@ -1,0 +1,1217 @@
+fileFormatVersion: 2
+guid: fe07d7e53e175ed449591f5f87bf1401
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8526024072198370066
+    second: Golden Axe_0
+  - first:
+      213: -8745820617512976869
+    second: Golden Axe_1
+  - first:
+      213: 1342821326249892295
+    second: Golden Axe_2
+  - first:
+      213: 7656263571179703689
+    second: Golden Axe_3
+  - first:
+      213: 3187298154470003087
+    second: Golden Axe_4
+  - first:
+      213: -3546317959424791554
+    second: Golden Axe_5
+  - first:
+      213: -8953818920538096541
+    second: Golden Axe_6
+  - first:
+      213: -604137376335734777
+    second: Golden Axe_7
+  - first:
+      213: 8046555921287206321
+    second: Golden Axe_8
+  - first:
+      213: -2077257405774384591
+    second: Golden Axe_9
+  - first:
+      213: 4382780620775027008
+    second: Golden Axe_10
+  - first:
+      213: 7606754822695098610
+    second: Golden Axe_11
+  - first:
+      213: 275676086295316468
+    second: Golden Axe_12
+  - first:
+      213: -2571319001100475664
+    second: Golden Axe_13
+  - first:
+      213: 1319279523266925525
+    second: Golden Axe_14
+  - first:
+      213: -5649384577206089238
+    second: Golden Axe_15
+  - first:
+      213: 1794672360008155913
+    second: Golden Axe_16
+  - first:
+      213: 7715994818987667685
+    second: Golden Axe_17
+  - first:
+      213: 8168473968478157001
+    second: Golden Axe_18
+  - first:
+      213: 5068055929290397250
+    second: Golden Axe_19
+  - first:
+      213: 8690334549209167377
+    second: Golden Axe_20
+  - first:
+      213: -138189799640398948
+    second: Golden Axe_21
+  - first:
+      213: 5772007876582853522
+    second: Golden Axe_22
+  - first:
+      213: -4593606927542431216
+    second: Golden Axe_23
+  - first:
+      213: -2655662215148218770
+    second: Golden Axe_24
+  - first:
+      213: 4239359491988062700
+    second: Golden Axe_25
+  - first:
+      213: 8476141795654995650
+    second: Golden Axe_26
+  - first:
+      213: 5576847836366842626
+    second: Golden Axe_27
+  - first:
+      213: 3899786688195194682
+    second: Golden Axe_28
+  - first:
+      213: 8837301441811016779
+    second: Golden Axe_29
+  - first:
+      213: -2510298170586947070
+    second: Golden Axe_30
+  - first:
+      213: 8903199788863464250
+    second: Golden Axe_31
+  - first:
+      213: 8562900071604680209
+    second: Golden Axe_32
+  - first:
+      213: 1818672671170673021
+    second: Golden Axe_33
+  - first:
+      213: -2030487270016839490
+    second: Golden Axe_34
+  - first:
+      213: 5363740894433032351
+    second: Golden Axe_35
+  - first:
+      213: 1061508046574155138
+    second: Golden Axe_36
+  - first:
+      213: 4137367947194275160
+    second: Golden Axe_37
+  - first:
+      213: 7385792998387852651
+    second: Golden Axe_38
+  - first:
+      213: -5539955381429838983
+    second: Golden Axe_39
+  - first:
+      213: 690007006548411591
+    second: Golden Axe_40
+  - first:
+      213: 7201016689265045123
+    second: Golden Axe_41
+  - first:
+      213: -2624817518444368511
+    second: Golden Axe_42
+  - first:
+      213: 5431612104947249951
+    second: Golden Axe_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Golden Axe_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 384
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21330d988b5825670800000000000000
+      internalID: 8526024072198370066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 385
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ef9d75c7a90a680800000000000000
+      internalID: -8745820617512976869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 386
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c991f3b1e8a2a210800000000000000
+      internalID: 1342821326249892295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 385
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d0ee24723804a60800000000000000
+      internalID: 7656263571179703689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_4
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 385
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f815172d8ce8b3c20800000000000000
+      internalID: 3187298154470003087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 333
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efba5e7ea92f8cec0800000000000000
+      internalID: -3546317959424791554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 333
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36cb7229125adb380800000000000000
+      internalID: -8953818920538096541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_7
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 333
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708d8ffc14cad97f0800000000000000
+      internalID: -604137376335734777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 334
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5d3a95afb1baf60800000000000000
+      internalID: 8046555921287206321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 334
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132b4cd25691c23e0800000000000000
+      internalID: -2077257405774384591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 334
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041f2cde0c3c2dc30800000000000000
+      internalID: 4382780620775027008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_11
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 337
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f81b3c753f909960800000000000000
+      internalID: 7606754822695098610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_12
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 336
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7c3bc90f563d300800000000000000
+      internalID: 275676086295316468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_13
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 273
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2a13fedf6d05cd0800000000000000
+      internalID: -2571319001100475664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_14
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 270
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d395cf8cb50f4210800000000000000
+      internalID: 1319279523266925525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_15
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 269
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae98f04a8aa5991b0800000000000000
+      internalID: -5649384577206089238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 270
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9038f7ab005f7e810800000000000000
+      internalID: 1794672360008155913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_17
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 272
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0b3822868b41b60800000000000000
+      internalID: 7715994818987667685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_18
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 271
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c87a20cbcf3c5170800000000000000
+      internalID: 8168473968478157001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_19
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 272
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2469a27140a555640800000000000000
+      internalID: 5068055929290397250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_20
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 272
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116bae8aa354a9870800000000000000
+      internalID: 8690334549209167377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 200
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c930ad00c1d051ef0800000000000000
+      internalID: -138189799640398948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 200
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b4a74159a4a1050800000000000000
+      internalID: 5772007876582853522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 200
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0125f0e56da3040c0800000000000000
+      internalID: -4593606927542431216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 200
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66d9ae1941352bd0800000000000000
+      internalID: -2655662215148218770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 171
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce101233ffa35da30800000000000000
+      internalID: 4239359491988062700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_26
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 171
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce8bdbfd0e41a570800000000000000
+      internalID: 8476141795654995650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 171
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b2d0d4f81f46d40800000000000000
+      internalID: 5576847836366842626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_28
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 171
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3feba9b453de1630800000000000000
+      internalID: 3899786688195194682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 105
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c613cd6d664aa70800000000000000
+      internalID: 8837301441811016779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 104
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2022add2d11a92dd0800000000000000
+      internalID: -2510298170586947070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_31
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 104
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a332a8b69058e8b70800000000000000
+      internalID: 8903199788863464250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_32
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 82
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116f9273f3885d670800000000000000
+      internalID: 8562900071604680209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 89
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79b6df98293d3910800000000000000
+      internalID: 1818672671170673021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 64
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb091bdf59242d3e0800000000000000
+      internalID: -2030487270016839490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 72
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98bae7dce5df6a40800000000000000
+      internalID: 5363740894433032351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_36
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 285754ab1fb3bbe00800000000000000
+      internalID: 1061508046574155138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_37
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 6
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8551a9d2a32ea6930800000000000000
+      internalID: 4137367947194275160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_38
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65a975b99b9f7660800000000000000
+      internalID: 7385792998387852651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_39
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b5c5abeef1e13b0800000000000000
+      internalID: -5539955381429838983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_40
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c449d577b5639900800000000000000
+      internalID: 690007006548411591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e6d49b6862fe360800000000000000
+      internalID: 7201016689265045123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_42
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 0
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18da6e4bf56c29bd0800000000000000
+      internalID: -2624817518444368511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Axe_43
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 187
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13b7197e66f06b40800000000000000
+      internalID: 5431612104947249951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

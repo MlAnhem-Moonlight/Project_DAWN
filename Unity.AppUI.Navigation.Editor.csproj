@@ -59,17 +59,18 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\NavOptionsDrawerUIE.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\NavigationCodeGenerator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\NavigationGraphView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\NavigationGraphWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\DefaultDestinationTemplateDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\NavOptionsDrawerUIE.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\NavigationCodeGenerator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\NavigationGraphView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\NavigationGraphWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\Unity.AppUI.Navigation.Editor.asmdef" />
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Navigation\NavigationGraphWindow.uss" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\Unity.AppUI.Navigation.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Navigation\NavigationGraphWindow.uss" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -553,7 +554,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -589,7 +590,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.YamlDotNet">
@@ -597,7 +598,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.Newtonsoft.Json">
@@ -617,7 +618,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
@@ -1145,6 +1146,10 @@
     <ProjectReference Include="Unity.AppUI.Navigation.csproj">
       <Project>{CFB5249B-E11F-7A34-2970-B8D37A7BF9C5}</Project>
       <Name>Unity.AppUI.Navigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.InternalAPIBridge.csproj">
+      <Project>{B7EE85BB-BC02-D905-9FE5-B5F5EB75320D}</Project>
+      <Name>Unity.AppUI.InternalAPIBridge</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>

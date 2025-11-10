@@ -59,28 +59,31 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavigationArgs.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavGraphViewHierarchicalNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavigationScreen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavController.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavHost.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavBackStackEntry.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavDestination.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\VisualElementExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavGraphViewAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavGraphViewNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\INavVisualController.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavOptions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\NavArgument.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavigationArgs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavGraphViewHierarchicalNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavigationScreen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavHost.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavBackStackEntry.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavDestination.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\DefaultDestinationTemplate.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\VisualElementExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavGraphViewAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavGraphViewNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\INavVisualController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\INavigationScreen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavOptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavDestinationTemplate.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\NavArgument.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Navigation\Unity.AppUI.Navigation.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Navigation\Unity.AppUI.Navigation.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -556,7 +559,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1060,6 +1063,10 @@
     <ProjectReference Include="Unity.AppUI.csproj">
       <Project>{776D4898-0896-BD6A-627B-B7D2BA801553}</Project>
       <Name>Unity.AppUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.InternalAPIBridge.csproj">
+      <Project>{B7EE85BB-BC02-D905-9FE5-B5F5EB75320D}</Project>
+      <Name>Unity.AppUI.InternalAPIBridge</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>

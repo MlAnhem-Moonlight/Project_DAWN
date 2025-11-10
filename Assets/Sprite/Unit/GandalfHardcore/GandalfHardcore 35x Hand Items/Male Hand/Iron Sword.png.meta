@@ -1,0 +1,1217 @@
+fileFormatVersion: 2
+guid: 6710ed598221ca24caa353307e86602e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6380105564640697137
+    second: Iron Sword_0
+  - first:
+      213: -2539484130121364258
+    second: Iron Sword_1
+  - first:
+      213: 5619444073149374802
+    second: Iron Sword_2
+  - first:
+      213: -6338601757296072672
+    second: Iron Sword_3
+  - first:
+      213: 1848700083782583887
+    second: Iron Sword_4
+  - first:
+      213: 2493477088316371544
+    second: Iron Sword_5
+  - first:
+      213: -6463602727217170341
+    second: Iron Sword_6
+  - first:
+      213: -5562923501495136808
+    second: Iron Sword_7
+  - first:
+      213: -4735717671990689101
+    second: Iron Sword_8
+  - first:
+      213: -8988318546638093535
+    second: Iron Sword_9
+  - first:
+      213: -7386529293841083561
+    second: Iron Sword_10
+  - first:
+      213: 1307139154408067902
+    second: Iron Sword_11
+  - first:
+      213: -4716615123289343473
+    second: Iron Sword_12
+  - first:
+      213: -274056609378271576
+    second: Iron Sword_13
+  - first:
+      213: -3472303369333895256
+    second: Iron Sword_14
+  - first:
+      213: 2451452746068708402
+    second: Iron Sword_15
+  - first:
+      213: 7826904741054120589
+    second: Iron Sword_16
+  - first:
+      213: 739383328040226379
+    second: Iron Sword_17
+  - first:
+      213: 8900355316936661646
+    second: Iron Sword_18
+  - first:
+      213: 3853706475944822705
+    second: Iron Sword_19
+  - first:
+      213: 6971150704079155000
+    second: Iron Sword_20
+  - first:
+      213: 3105231881494782933
+    second: Iron Sword_21
+  - first:
+      213: -7425629857849470013
+    second: Iron Sword_22
+  - first:
+      213: 2016904460868357465
+    second: Iron Sword_23
+  - first:
+      213: -1614062454270392452
+    second: Iron Sword_24
+  - first:
+      213: -7658974494394915246
+    second: Iron Sword_25
+  - first:
+      213: -2905354714984902165
+    second: Iron Sword_26
+  - first:
+      213: -2903821369940723705
+    second: Iron Sword_27
+  - first:
+      213: 179861021102714027
+    second: Iron Sword_28
+  - first:
+      213: -8991104010716024784
+    second: Iron Sword_29
+  - first:
+      213: 7173351788034569539
+    second: Iron Sword_30
+  - first:
+      213: -3027126639329372900
+    second: Iron Sword_31
+  - first:
+      213: -5151709766975699158
+    second: Iron Sword_32
+  - first:
+      213: -7350334255434532691
+    second: Iron Sword_33
+  - first:
+      213: 1577605739036232299
+    second: Iron Sword_34
+  - first:
+      213: -9057746121601234232
+    second: Iron Sword_35
+  - first:
+      213: -253476887729817883
+    second: Iron Sword_36
+  - first:
+      213: -7883508040085596021
+    second: Iron Sword_37
+  - first:
+      213: -3149812414429839481
+    second: Iron Sword_38
+  - first:
+      213: 9215110176669673652
+    second: Iron Sword_39
+  - first:
+      213: -7544976281639279336
+    second: Iron Sword_40
+  - first:
+      213: 9004064352041183858
+    second: Iron Sword_41
+  - first:
+      213: -2281621208230332896
+    second: Iron Sword_42
+  - first:
+      213: -1745156057473275482
+    second: Iron Sword_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Iron Sword_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 389
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bd6e13530ba8850800000000000000
+      internalID: 6380105564640697137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edccf5f63a0f1ccd0800000000000000
+      internalID: -2539484130121364258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 391
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2512e378c964cfd40800000000000000
+      internalID: 5619444073149374802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02863bbf843c808a0800000000000000
+      internalID: -6338601757296072672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46881e6ee6e7a910800000000000000
+      internalID: 1848700083782583887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 331
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8523ca8633c9a9220800000000000000
+      internalID: 2493477088316371544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 332
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5879f2b09bac46a0800000000000000
+      internalID: -6463602727217170341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_7
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 332
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddc5bc8c868cc2b0800000000000000
+      internalID: -5562923501495136808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_8
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 333
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b284744ed9574eb0800000000000000
+      internalID: -4735717671990689101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 331
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123c49b67e3134380800000000000000
+      internalID: -8988318546638093535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 331
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753d5952eb6cd7990800000000000000
+      internalID: -7386529293841083561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_11
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 333
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e335f7aa224e32210800000000000000
+      internalID: 1307139154408067902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_12
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 333
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a7a1af8873b8eb0800000000000000
+      internalID: -4716615123289343473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 272
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aef8ad37fa523cf0800000000000000
+      internalID: -274056609378271576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 269
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af067e8b76efcfc0800000000000000
+      internalID: -3472303369333895256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_15
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 268
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cc411c84f450220800000000000000
+      internalID: 2451452746068708402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 269
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d820a5da460ce9c60800000000000000
+      internalID: 7826904741054120589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_17
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 269
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e0fac2831d24a00800000000000000
+      internalID: 739383328040226379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_18
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 268
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ad4c0310a648b70800000000000000
+      internalID: 8900355316936661646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_19
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 269
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7405f3f9d1b7530800000000000000
+      internalID: 3853706475944822705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_20
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 271
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f2a5071a08eb060800000000000000
+      internalID: 6971150704079155000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 202
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3e6b9a1fff71b20800000000000000
+      internalID: 3105231881494782933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_22
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 202
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c31959acfcd2f890800000000000000
+      internalID: -7425629857849470013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_23
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 202
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d85ffcbeb7dfb10800000000000000
+      internalID: 2016904460868357465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_24
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 202
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c770befdfb2b999e0800000000000000
+      internalID: -1614062454270392452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 172
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25660ddb64bd5b590800000000000000
+      internalID: -7658974494394915246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_26
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 172
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be191daa74b1ea7d0800000000000000
+      internalID: -2905354714984902165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 172
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708be7169dd83b7d0800000000000000
+      internalID: -2903821369940723705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_28
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 172
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac24cf45aefe7200800000000000000
+      internalID: 179861021102714027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 104
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0307ea60a8e293380800000000000000
+      internalID: -8991104010716024784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 102
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345b6b6f17ddc8360800000000000000
+      internalID: 7173351788034569539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_31
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 102
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1596a42c5c7df5d0800000000000000
+      internalID: -3027126639329372900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_32
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 81
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27c08903437188b0800000000000000
+      internalID: -5151709766975699158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 89
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8707c30fd5ef990800000000000000
+      internalID: -7350334255434532691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_34
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 69
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a4fd6af08c4e510800000000000000
+      internalID: 1577605739036232299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 72
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca494474eb6c4280800000000000000
+      internalID: -9057746121601234232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_36
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6b7141d187b7cf0800000000000000
+      internalID: -253476887729817883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_37
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8813c6c437289290800000000000000
+      internalID: -7883508040085596021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_38
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f3bc82c4e9944d0800000000000000
+      internalID: -3149812414429839481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8ab76c1e5a2ef70800000000000000
+      internalID: 9215110176669673652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_40
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815a42efb0cda4790800000000000000
+      internalID: -7544976281639279336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a2c2692dcd4fc70800000000000000
+      internalID: 9004064352041183858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_42
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026fe63899d0650e0800000000000000
+      internalID: -2281621208230332896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Sword_43
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 187
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a92facdfc5f7c7e0800000000000000
+      internalID: -1745156057473275482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

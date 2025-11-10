@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: caaf1384ac8bfe54bbb85856fb280c9f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 276136980265172008
+    second: Female Ghost skin_0
+  - first:
+      213: 3376769275816259096
+    second: Female Ghost skin_1
+  - first:
+      213: -8627465894028358620
+    second: Female Ghost skin_2
+  - first:
+      213: 39115413401169268
+    second: Female Ghost skin_3
+  - first:
+      213: 1040789316164976562
+    second: Female Ghost skin_4
+  - first:
+      213: -3901839066082527268
+    second: Female Ghost skin_5
+  - first:
+      213: -1581551135281316757
+    second: Female Ghost skin_6
+  - first:
+      213: 4738017875822580523
+    second: Female Ghost skin_7
+  - first:
+      213: -9124342185475576691
+    second: Female Ghost skin_8
+  - first:
+      213: 6894720723552789319
+    second: Female Ghost skin_9
+  - first:
+      213: -1076317183794768992
+    second: Female Ghost skin_10
+  - first:
+      213: 3383300032560817068
+    second: Female Ghost skin_11
+  - first:
+      213: -1699692609749896889
+    second: Female Ghost skin_12
+  - first:
+      213: 5852745753704160817
+    second: Female Ghost skin_13
+  - first:
+      213: -8668555053902394730
+    second: Female Ghost skin_14
+  - first:
+      213: -3809448875950032216
+    second: Female Ghost skin_15
+  - first:
+      213: -8774687016165757566
+    second: Female Ghost skin_16
+  - first:
+      213: -2425912146234759872
+    second: Female Ghost skin_17
+  - first:
+      213: -557012316964398463
+    second: Female Ghost skin_18
+  - first:
+      213: 7836310110558083267
+    second: Female Ghost skin_19
+  - first:
+      213: -3772002821637689694
+    second: Female Ghost skin_20
+  - first:
+      213: 3549595915854717080
+    second: Female Ghost skin_21
+  - first:
+      213: -2278804276792761078
+    second: Female Ghost skin_22
+  - first:
+      213: 1277875732455832758
+    second: Female Ghost skin_23
+  - first:
+      213: 2645347755329959705
+    second: Female Ghost skin_24
+  - first:
+      213: 1808157896658590253
+    second: Female Ghost skin_25
+  - first:
+      213: 1578628868675941222
+    second: Female Ghost skin_26
+  - first:
+      213: -6784018037740820015
+    second: Female Ghost skin_27
+  - first:
+      213: -1565247492076544313
+    second: Female Ghost skin_28
+  - first:
+      213: 322464973962844457
+    second: Female Ghost skin_29
+  - first:
+      213: 3946754935649746026
+    second: Female Ghost skin_30
+  - first:
+      213: 2385475079528298410
+    second: Female Ghost skin_31
+  - first:
+      213: -7615415663661765798
+    second: Female Ghost skin_32
+  - first:
+      213: 4199023168063242319
+    second: Female Ghost skin_33
+  - first:
+      213: -8375465252713929343
+    second: Female Ghost skin_34
+  - first:
+      213: -8269435792042881809
+    second: Female Ghost skin_35
+  - first:
+      213: 8426965426901223412
+    second: Female Ghost skin_36
+  - first:
+      213: -1106657891903652018
+    second: Female Ghost skin_37
+  - first:
+      213: -5220730037085462064
+    second: Female Ghost skin_38
+  - first:
+      213: 3244893983986255069
+    second: Female Ghost skin_39
+  - first:
+      213: -2535711951206154586
+    second: Female Ghost skin_40
+  - first:
+      213: -1799440414997594815
+    second: Female Ghost skin_41
+  - first:
+      213: 5812844177564622073
+    second: Female Ghost skin_42
+  - first:
+      213: -2443139482531181672
+    second: Female Ghost skin_43
+  - first:
+      213: -168577364404941939
+    second: Female Ghost skin_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Female Ghost skin_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 383
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82cfd0ade1905d300800000000000000
+      internalID: 276136980265172008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 383
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e2b75f3c1bcde20800000000000000
+      internalID: 3376769275816259096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 383
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c44aaca75154880800000000000000
+      internalID: -8627465894028358620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47de401e247fa8000800000000000000
+      internalID: 39115413401169268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 383
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bff8046e50a17e00800000000000000
+      internalID: 1040789316164976562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 319
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7b86fca02e9d9c0800000000000000
+      internalID: -3901839066082527268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_6
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 319
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6cf0733f933d0ae0800000000000000
+      internalID: -1581551135281316757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 319
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b231bdba722d0c140800000000000000
+      internalID: 4738017875822580523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 319
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ced990023df5180800000000000000
+      internalID: -9124342185475576691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 319
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74363e0e7f7feaf50800000000000000
+      internalID: 6894720723552789319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 319
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3934259372011f0800000000000000
+      internalID: -1076317183794768992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 319
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3ea514475e3fe20800000000000000
+      internalID: 3383300032560817068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 319
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7413088a39a7968e0800000000000000
+      internalID: -1699692609749896889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 255
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e563af041293150800000000000000
+      internalID: 5852745753704160817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_14
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 255
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a0b304b1b13b780800000000000000
+      internalID: -8668555053902394730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 255
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aabcfe3e6e122bc0800000000000000
+      internalID: -3809448875950032216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_16
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 255
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d253a26ac0a3680800000000000000
+      internalID: -8774687016165757566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 255
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0452f5b81cd655ed0800000000000000
+      internalID: -2425912146234759872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_18
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 255
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ad1d7bf381548f0800000000000000
+      internalID: -557012316964398463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_19
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 255
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8dd99e68a20cc60800000000000000
+      internalID: 7836310110558083267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_20
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 255
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aea38c2b6727abc0800000000000000
+      internalID: -3772002821637689694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_21
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 195
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890a2bccda2b24130800000000000000
+      internalID: 3549595915854717080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_22
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 195
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a056029759f0060e0800000000000000
+      internalID: -2278804276792761078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_23
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 195
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc3f1c453debb110800000000000000
+      internalID: 1277875732455832758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_24
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 195
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917b1df84c926b420800000000000000
+      internalID: 2645347755329959705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 128
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a1728e60ed71910800000000000000
+      internalID: 1808157896658590253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_26
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 128
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6633b95979a68e510800000000000000
+      internalID: 1578628868675941222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_27
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 128
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9ad96b9835ad1a0800000000000000
+      internalID: -6784018037740820015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_28
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 128
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ced431f2bf174ae0800000000000000
+      internalID: -1565247492076544313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9299f817f20a97400800000000000000
+      internalID: 322464973962844457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_30
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 63
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c3ce204b0b5c630800000000000000
+      internalID: 3946754935649746026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 63
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7b4df22f8ea1120800000000000000
+      internalID: 2385475079528298410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_32
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bae765dcb905690800000000000000
+      internalID: -7615415663661765798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_33
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 63
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f408b00f25de54a30800000000000000
+      internalID: 4199023168063242319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_34
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 63
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 185eb5f4abe54cb80800000000000000
+      internalID: -8375465252713929343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec0262e5ff0d3d80800000000000000
+      internalID: -8269435792042881809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_36
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 19
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f702f4686892f470800000000000000
+      internalID: 8426965426901223412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_37
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f3339b28c54a0f0800000000000000
+      internalID: -1106657891903652018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_38
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d12f4f11bd3c87b0800000000000000
+      internalID: -5220730037085462064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_39
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 0
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd48d41e2ed280d20800000000000000
+      internalID: 3244893983986255069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_40
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aef4a74a675fccd0800000000000000
+      internalID: -2535711951206154586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_41
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d3695f97a1707e0800000000000000
+      internalID: -1799440414997594815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_42
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcdf625bfe5ba050800000000000000
+      internalID: 5812844177564622073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_43
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 0
+        width: 46
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b4ffeb599381ed0800000000000000
+      internalID: -2443139482531181672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Ghost skin_44
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 0
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bc87db7c719adf0800000000000000
+      internalID: -168577364404941939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

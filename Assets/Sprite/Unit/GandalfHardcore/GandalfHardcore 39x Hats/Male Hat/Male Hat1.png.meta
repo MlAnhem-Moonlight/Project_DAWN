@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: a1c832d73fbc2e241b13ca5733d674db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 851964790585613246
+    second: Male Hat1_0
+  - first:
+      213: -2975889573979184264
+    second: Male Hat1_1
+  - first:
+      213: -3901837221057273717
+    second: Male Hat1_2
+  - first:
+      213: 6340363356749853502
+    second: Male Hat1_3
+  - first:
+      213: 5959416533484773201
+    second: Male Hat1_4
+  - first:
+      213: 8056392076888037836
+    second: Male Hat1_5
+  - first:
+      213: 4036916605196543776
+    second: Male Hat1_6
+  - first:
+      213: 8662783130504795822
+    second: Male Hat1_7
+  - first:
+      213: 2972767458177179637
+    second: Male Hat1_8
+  - first:
+      213: 85576794820223401
+    second: Male Hat1_9
+  - first:
+      213: 181805343373607449
+    second: Male Hat1_10
+  - first:
+      213: -7356129827174990039
+    second: Male Hat1_11
+  - first:
+      213: -1447356898751358523
+    second: Male Hat1_12
+  - first:
+      213: -4657091344454423979
+    second: Male Hat1_13
+  - first:
+      213: -1635498479840838212
+    second: Male Hat1_14
+  - first:
+      213: -2277233025898683427
+    second: Male Hat1_15
+  - first:
+      213: -4354247998841516775
+    second: Male Hat1_16
+  - first:
+      213: -8288031091648197532
+    second: Male Hat1_17
+  - first:
+      213: -4697217143731675981
+    second: Male Hat1_18
+  - first:
+      213: 3898608444303352573
+    second: Male Hat1_19
+  - first:
+      213: 5195419218248621315
+    second: Male Hat1_20
+  - first:
+      213: -1609824614097228880
+    second: Male Hat1_21
+  - first:
+      213: -8702102080665487029
+    second: Male Hat1_22
+  - first:
+      213: 1180565436284580646
+    second: Male Hat1_23
+  - first:
+      213: -2809194165504886031
+    second: Male Hat1_24
+  - first:
+      213: 3731000739377361284
+    second: Male Hat1_25
+  - first:
+      213: 4677600242050154493
+    second: Male Hat1_26
+  - first:
+      213: 4384080403650807755
+    second: Male Hat1_27
+  - first:
+      213: -2376789097981705150
+    second: Male Hat1_28
+  - first:
+      213: -4052097110652367939
+    second: Male Hat1_29
+  - first:
+      213: 8227040546601997835
+    second: Male Hat1_30
+  - first:
+      213: -7633145880868153812
+    second: Male Hat1_31
+  - first:
+      213: -4627579191719350527
+    second: Male Hat1_32
+  - first:
+      213: -4840243901535521630
+    second: Male Hat1_33
+  - first:
+      213: 7120429289348129162
+    second: Male Hat1_34
+  - first:
+      213: -1767718471367054657
+    second: Male Hat1_35
+  - first:
+      213: -3334474060346207512
+    second: Male Hat1_36
+  - first:
+      213: 1803083044841987646
+    second: Male Hat1_37
+  - first:
+      213: -144104089724382619
+    second: Male Hat1_38
+  - first:
+      213: 2866356951040979062
+    second: Male Hat1_39
+  - first:
+      213: 675294675708343470
+    second: Male Hat1_40
+  - first:
+      213: 7862042990105821160
+    second: Male Hat1_41
+  - first:
+      213: 6093127469144140124
+    second: Male Hat1_42
+  - first:
+      213: 5502230115112085174
+    second: Male Hat1_43
+  - first:
+      213: 1845601579149467775
+    second: Male Hat1_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Hat1_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 422
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbdeff8679c2db00800000000000000
+      internalID: 851964790585613246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 422
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873ae2c033483b6d0800000000000000
+      internalID: -2975889573979184264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 423
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80eb7368b3e9d9c0800000000000000
+      internalID: -3901837221057273717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 423
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e337af951ee7df750800000000000000
+      internalID: 6340363356749853502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 423
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f13fa43c914b250800000000000000
+      internalID: 5959416533484773201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 358
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9de2ac8ed0ecf60800000000000000
+      internalID: 8056392076888037836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 358
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027ad909342060830800000000000000
+      internalID: 4036916605196543776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 359
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea61cfb1c53683870800000000000000
+      internalID: 8662783130504795822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 359
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ffdd78b044614920800000000000000
+      internalID: 2972767458177179637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 358
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1a64834a7003100800000000000000
+      internalID: 85576794820223401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 358
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9124d0e1ff6e58200800000000000000
+      internalID: 181805343373607449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_11
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 359
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f349985e6c9e990800000000000000
+      internalID: -7356129827174990039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 359
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9d6baa194f9ebe0800000000000000
+      internalID: -1447356898751358523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a6f37b810be5fb0800000000000000
+      internalID: -4657091344454423979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_14
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 294
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd356e3cca8d49e0800000000000000
+      internalID: -1635498479840838212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_15
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd36584d0a4a560e0800000000000000
+      internalID: -2277233025898683427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_16
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d881dc38a9293c0800000000000000
+      internalID: -4354247998841516775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c8aee42affafc80800000000000000
+      internalID: -8288031091648197532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_18
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 294
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc9ffa05e120deb0800000000000000
+      internalID: -4697217143731675981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_19
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df22a0179b3aa1630800000000000000
+      internalID: 3898608444303352573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_20
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 295
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d52f2a046d91840800000000000000
+      internalID: 5195419218248621315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 234
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbed0eea01c8a9e0800000000000000
+      internalID: -1609824614097228880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_22
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 234
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49feba634ceb3780800000000000000
+      internalID: -8702102080665487029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_23
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 234
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623b8d76206326010800000000000000
+      internalID: 1180565436284580646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 234
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa3bfb4accb309d0800000000000000
+      internalID: -2809194165504886031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_25
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 168
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481be4f976d27c330800000000000000
+      internalID: 3731000739377361284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 168
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff3eac13ac2ae040800000000000000
+      internalID: 4677600242050154493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_27
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 168
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc78b5636e167dc30800000000000000
+      internalID: 4384080403650807755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 168
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24487cc78e2f30fd0800000000000000
+      internalID: -2376789097981705150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_29
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 102
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbcd24952f04c7c0800000000000000
+      internalID: -4052097110652367939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 102
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0692f4d9c15c2270800000000000000
+      internalID: 8227040546601997835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_31
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 103
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c261e14734e911690800000000000000
+      internalID: -7633145880868153812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 103
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f249b3e3987cfb0800000000000000
+      internalID: -4627579191719350527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_33
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 100
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a479b6f0dff3dcb0800000000000000
+      internalID: -4840243901535521630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_34
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 102
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81e1e786b8d0d260800000000000000
+      internalID: 7120429289348129162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_35
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 38
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba25438a6dc777e0800000000000000
+      internalID: -1767718471367054657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_36
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 36
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e25f48428199b1d0800000000000000
+      internalID: -3334474060346207512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_37
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 31
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e1654e976d50910800000000000000
+      internalID: 1803083044841987646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 30
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5621c49081a000ef0800000000000000
+      internalID: -144104089724382619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_39
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 31
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670f44ad57857c720800000000000000
+      internalID: 2866356951040979062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_40
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 30
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4fe400ee02f5900800000000000000
+      internalID: 675294675708343470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_41
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 30
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef7b12d1769b1d60800000000000000
+      internalID: 7862042990105821160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_42
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59e28186232f8450800000000000000
+      internalID: 6093127469144140124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_43
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 0
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b666bb3329db5c40800000000000000
+      internalID: 5502230115112085174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Hat1_44
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70aa1a9bd4ec9910800000000000000
+      internalID: 1845601579149467775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

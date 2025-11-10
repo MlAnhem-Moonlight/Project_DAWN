@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: ae33b7d340412b2489cdd3b71e59866f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3060830897222178514
+    second: Male Mask_0
+  - first:
+      213: -5584799588710210096
+    second: Male Mask_1
+  - first:
+      213: 6845983607722169532
+    second: Male Mask_2
+  - first:
+      213: -838647839738458755
+    second: Male Mask_3
+  - first:
+      213: -5401991340258830732
+    second: Male Mask_4
+  - first:
+      213: -4649264502041136550
+    second: Male Mask_5
+  - first:
+      213: 676706238749677592
+    second: Male Mask_6
+  - first:
+      213: 9051363614108539138
+    second: Male Mask_7
+  - first:
+      213: -3916503984032004267
+    second: Male Mask_8
+  - first:
+      213: -2936268438899604852
+    second: Male Mask_9
+  - first:
+      213: 4982995409395906292
+    second: Male Mask_10
+  - first:
+      213: 1025401325016532656
+    second: Male Mask_11
+  - first:
+      213: 2897571504415872851
+    second: Male Mask_12
+  - first:
+      213: 9069122182683842210
+    second: Male Mask_13
+  - first:
+      213: -5775310654764635585
+    second: Male Mask_14
+  - first:
+      213: 3376656399769077907
+    second: Male Mask_15
+  - first:
+      213: 2551393064267375790
+    second: Male Mask_16
+  - first:
+      213: -8450704829081363355
+    second: Male Mask_17
+  - first:
+      213: 1065255133341219563
+    second: Male Mask_18
+  - first:
+      213: -8687853932951822201
+    second: Male Mask_19
+  - first:
+      213: -8160822704103960420
+    second: Male Mask_20
+  - first:
+      213: -1728292723022333910
+    second: Male Mask_21
+  - first:
+      213: 3804976087918029055
+    second: Male Mask_22
+  - first:
+      213: 5586843114110570603
+    second: Male Mask_23
+  - first:
+      213: -156319599210734467
+    second: Male Mask_24
+  - first:
+      213: -1732976492969759063
+    second: Male Mask_25
+  - first:
+      213: 4618788671430063064
+    second: Male Mask_26
+  - first:
+      213: -3700191425144231012
+    second: Male Mask_27
+  - first:
+      213: -1687419713293715419
+    second: Male Mask_28
+  - first:
+      213: 5693960299667198970
+    second: Male Mask_29
+  - first:
+      213: 8678362464079258332
+    second: Male Mask_30
+  - first:
+      213: 6092875802037350881
+    second: Male Mask_31
+  - first:
+      213: 2500623983444834922
+    second: Male Mask_32
+  - first:
+      213: -6000684023402379641
+    second: Male Mask_33
+  - first:
+      213: -1867208134125745375
+    second: Male Mask_34
+  - first:
+      213: 1772454508618850455
+    second: Male Mask_35
+  - first:
+      213: 2571069805862132709
+    second: Male Mask_36
+  - first:
+      213: -3344905716991608972
+    second: Male Mask_37
+  - first:
+      213: 6563086682997016560
+    second: Male Mask_38
+  - first:
+      213: 3469034985232924057
+    second: Male Mask_39
+  - first:
+      213: -6361123002981156116
+    second: Male Mask_40
+  - first:
+      213: 4167638126294501647
+    second: Male Mask_41
+  - first:
+      213: 2933362515931172845
+    second: Male Mask_42
+  - first:
+      213: -4759565091974997898
+    second: Male Mask_43
+  - first:
+      213: 1058755193171091040
+    second: Male Mask_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Mask_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 414
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6d77aeb714a7a20800000000000000
+      internalID: 3060830897222178514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 414
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d52e251d5ece72b0800000000000000
+      internalID: -5584799588710210096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 415
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb45d64d1d1d10f50800000000000000
+      internalID: 6845983607722169532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 415
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d8dbcab368c54f0800000000000000
+      internalID: -838647839738458755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 415
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476d22c3f754805b0800000000000000
+      internalID: -5401991340258830732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 350
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a523109719e7a7fb0800000000000000
+      internalID: -4649264502041136550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 350
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81817f12db4246900800000000000000
+      internalID: 676706238749677592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 351
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209d5d73047ec9d70800000000000000
+      internalID: 9051363614108539138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 351
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557ce568068c5a9c0800000000000000
+      internalID: -3916503984032004267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 350
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82c23e69674047d0800000000000000
+      internalID: -2936268438899604852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 350
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6f17e7ce7272540800000000000000
+      internalID: 4982995409395906292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 351
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b643d18215fa3e00800000000000000
+      internalID: 1025401325016532656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 351
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35790086eed363820800000000000000
+      internalID: 2897571504415872851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a65c7b239efbdd70800000000000000
+      internalID: 9069122182683842210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 286
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3aa933fe89f9dfa0800000000000000
+      internalID: -5775310654764635585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39809c4fa1b4cde20800000000000000
+      internalID: 3376656399769077907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea46d0e597e586320800000000000000
+      internalID: 2551393064267375790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c5de05bb019ba80800000000000000
+      internalID: -8450704829081363355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 286
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beaf6f956eb88ce00800000000000000
+      internalID: 1065255133341219563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_19
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7802de1d0ea8e6780800000000000000
+      internalID: -8687853932951822201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 287
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90d0fe0dfeeebe80800000000000000
+      internalID: -8160822704103960420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 226
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a287c50eceed308e0800000000000000
+      internalID: -1728292723022333910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 226
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8a533a79dfdc430800000000000000
+      internalID: 3804976087918029055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 226
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60d5604634788d40800000000000000
+      internalID: 5586843114110570603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 226
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cdc991724a4ddf0800000000000000
+      internalID: -156319599210734467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 161
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae6f64bf0b33f7e0800000000000000
+      internalID: -1732976492969759063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 161
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3ff2543db391040800000000000000
+      internalID: 4618788671430063064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_27
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 161
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9be457d08746acc0800000000000000
+      internalID: -3700191425144231012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_28
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 161
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528f22a06b41598e0800000000000000
+      internalID: -1687419713293715419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 94
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af317d289b2050f40800000000000000
+      internalID: 5693960299667198970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_30
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 94
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2278f5eacbf6870800000000000000
+      internalID: 8678362464079258332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_31
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 95
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e17201b24e3e8450800000000000000
+      internalID: 6092875802037350881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_32
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 95
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a3d0a934004b220800000000000000
+      internalID: 2500623983444834922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_33
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 93
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7864db77ca949bca0800000000000000
+      internalID: -6000684023402379641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_34
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 94
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b07bb48185616e0800000000000000
+      internalID: -1867208134125745375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 30
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79024c61cf5099810800000000000000
+      internalID: 1772454508618850455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_36
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 28
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb1527cd564ea320800000000000000
+      internalID: 2571069805862132709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_37
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 23
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477ba83f8f18491d0800000000000000
+      internalID: -3344905716991608972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 22
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f74222c094c41b50800000000000000
+      internalID: 6563086682997016560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 23
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99df53870fc742030800000000000000
+      internalID: 3469034985232924057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_40
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 22
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceafdbad450c8b7a0800000000000000
+      internalID: -6361123002981156116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_41
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 22
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0988267bcc66d930800000000000000
+      internalID: 4167638126294501647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_42
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 0
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def0687aaa565b820800000000000000
+      internalID: 2933362515931172845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_43
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 0
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6781b7f14c0a2fdb0800000000000000
+      internalID: -4759565091974997898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Mask_44
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 0
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e10191d3471be00800000000000000
+      internalID: 1058755193171091040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

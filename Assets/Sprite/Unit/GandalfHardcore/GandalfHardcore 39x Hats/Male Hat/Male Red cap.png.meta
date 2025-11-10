@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 3c8a58a17f575694ea88d2dc3ef79209
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6915514483264044431
+    second: Male Red cap_0
+  - first:
+      213: 3960213706048916977
+    second: Male Red cap_1
+  - first:
+      213: 4553932641958689760
+    second: Male Red cap_2
+  - first:
+      213: 6785322981877765348
+    second: Male Red cap_3
+  - first:
+      213: 7377790348751232899
+    second: Male Red cap_4
+  - first:
+      213: -3852020942647119238
+    second: Male Red cap_5
+  - first:
+      213: -1228839663839649334
+    second: Male Red cap_6
+  - first:
+      213: -8034169396592130954
+    second: Male Red cap_7
+  - first:
+      213: -580172104173422134
+    second: Male Red cap_8
+  - first:
+      213: 4331988576748877469
+    second: Male Red cap_9
+  - first:
+      213: 1907961143336232263
+    second: Male Red cap_10
+  - first:
+      213: -1964304668309228651
+    second: Male Red cap_11
+  - first:
+      213: -8580445666937107494
+    second: Male Red cap_12
+  - first:
+      213: -7275378299675042776
+    second: Male Red cap_13
+  - first:
+      213: -2878118387161472750
+    second: Male Red cap_14
+  - first:
+      213: -4064502093844790026
+    second: Male Red cap_15
+  - first:
+      213: -6905673573055775464
+    second: Male Red cap_16
+  - first:
+      213: -853532198799288013
+    second: Male Red cap_17
+  - first:
+      213: -1122397893642631898
+    second: Male Red cap_18
+  - first:
+      213: 9032317798423601531
+    second: Male Red cap_19
+  - first:
+      213: -8232804491653827121
+    second: Male Red cap_20
+  - first:
+      213: -3968596639889447849
+    second: Male Red cap_21
+  - first:
+      213: -1343411101140262254
+    second: Male Red cap_22
+  - first:
+      213: -3071758094430252754
+    second: Male Red cap_23
+  - first:
+      213: 8022144512395668475
+    second: Male Red cap_24
+  - first:
+      213: 8842876707706505678
+    second: Male Red cap_25
+  - first:
+      213: -3635592690397226098
+    second: Male Red cap_26
+  - first:
+      213: 3457529095380049488
+    second: Male Red cap_27
+  - first:
+      213: 2379564968031098800
+    second: Male Red cap_28
+  - first:
+      213: -5824022734497493907
+    second: Male Red cap_29
+  - first:
+      213: 5113154861603083092
+    second: Male Red cap_30
+  - first:
+      213: 8450064926142532030
+    second: Male Red cap_31
+  - first:
+      213: 8082459737955411140
+    second: Male Red cap_32
+  - first:
+      213: 7720008213192952908
+    second: Male Red cap_33
+  - first:
+      213: -8839557988738444157
+    second: Male Red cap_34
+  - first:
+      213: -176447146635731037
+    second: Male Red cap_35
+  - first:
+      213: 6945266413548283652
+    second: Male Red cap_36
+  - first:
+      213: 266231415514028233
+    second: Male Red cap_37
+  - first:
+      213: 5928347438591894368
+    second: Male Red cap_38
+  - first:
+      213: -6019097530460884058
+    second: Male Red cap_39
+  - first:
+      213: 2246758798370890995
+    second: Male Red cap_40
+  - first:
+      213: 7759664307746164740
+    second: Male Red cap_41
+  - first:
+      213: 8090676185402000269
+    second: Male Red cap_42
+  - first:
+      213: -3670597218990959841
+    second: Male Red cap_43
+  - first:
+      213: -131123788875028075
+    second: Male Red cap_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Red cap_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1724af9a7382700a0800000000000000
+      internalID: -6915514483264044431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdcdaf226185f630800000000000000
+      internalID: 3960213706048916977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebf00f2c91d23f30800000000000000
+      internalID: 4553932641958689760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e45e154d4f4a2e50800000000000000
+      internalID: 6785322981877765348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f5f94ab3d236660800000000000000
+      internalID: 7377790348751232899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72372e8c5fda8ac0800000000000000
+      internalID: -3852020942647119238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac16dee16d842fee0800000000000000
+      internalID: -1228839663839649334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674cfca2085e08090800000000000000
+      internalID: -8034169396592130954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9f62e8b80d2f7f0800000000000000
+      internalID: -580172104173422134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96ba20a8a05e1c30800000000000000
+      internalID: 4331988576748877469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745edc11d807a7a10800000000000000
+      internalID: 1907961143336232263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59379cebf436db4e0800000000000000
+      internalID: -1964304668309228651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb8ca780222ce880800000000000000
+      internalID: -8580445666937107494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c9849abf9a80b90800000000000000
+      internalID: -7275378299675042776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21168b7639ede08d0800000000000000
+      internalID: -2878118387161472750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4cc8b51ecf797c0800000000000000
+      internalID: -4064502093844790026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d353f197e1a20a0800000000000000
+      internalID: -6905673573055775464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339d536ccf4a724f0800000000000000
+      internalID: -853532198799288013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625c8ccff017c60f0800000000000000
+      internalID: -1122397893642631898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_19
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b712a71be2d395d70800000000000000
+      internalID: 9032317798423601531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5bbb12fe33fbd80800000000000000
+      internalID: -8232804491653827121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754a49ee166bce8c0800000000000000
+      internalID: -3968596639889447849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292e731a8be3b5de0800000000000000
+      internalID: -1343411101140262254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21dd89b94cee55d0800000000000000
+      internalID: -3071758094430252754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb613e4ee1645f60800000000000000
+      internalID: 8022144512395668475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec90c6b938538ba70800000000000000
+      internalID: 8842876707706505678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bddd4d5b7cb8dc0800000000000000
+      internalID: -3635592690397226098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_27
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e94bab46c9bff20800000000000000
+      internalID: 3457529095380049488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_28
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7157f1bb9e50120800000000000000
+      internalID: 2379564968031098800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c4a721e2aec2fa0800000000000000
+      internalID: -5824022734497493907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_30
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453d967814395f640800000000000000
+      internalID: 5113154861603083092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_31
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb986bba749a44570800000000000000
+      internalID: 8450064926142532030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_32
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4aa381f4aaa2070800000000000000
+      internalID: 8082459737955411140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_33
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 99
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cc67a419af22b60800000000000000
+      internalID: 7720008213192952908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_34
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38457cdd7d4935580800000000000000
+      internalID: -8839557988738444157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 37
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af552741422d8df0800000000000000
+      internalID: -176447146635731037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_36
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 35
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4072ff9610b826060800000000000000
+      internalID: 6945266413548283652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_37
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c853c5df08d1b300800000000000000
+      internalID: 266231415514028233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063ed5ee598b54250800000000000000
+      internalID: 5928347438591894368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3b274cfaed77ca0800000000000000
+      internalID: -6019097530460884058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_40
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f461e829371e2f10800000000000000
+      internalID: 2246758798370890995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_41
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400dc7f439ddfab60800000000000000
+      internalID: 7759664307746164740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d834997df1bd74070800000000000000
+      internalID: 8090676185402000269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_43
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13d188e64b6f0dc0800000000000000
+      internalID: -3670597218990959841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Red cap_44
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5992086db972e2ef0800000000000000
+      internalID: -131123788875028075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

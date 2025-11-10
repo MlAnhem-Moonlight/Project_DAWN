@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: 4201329fed87d244ebdffb7954f27b45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1609345591337627979
+    second: Cape purple_0
+  - first:
+      213: -4814237085474059724
+    second: Cape purple_1
+  - first:
+      213: -5426899400226264767
+    second: Cape purple_2
+  - first:
+      213: -5766537794011694516
+    second: Cape purple_3
+  - first:
+      213: 773224887864086563
+    second: Cape purple_4
+  - first:
+      213: 3224960238440270760
+    second: Cape purple_5
+  - first:
+      213: 4029568029960423777
+    second: Cape purple_6
+  - first:
+      213: -7222799376408919439
+    second: Cape purple_7
+  - first:
+      213: 8554839887301270216
+    second: Cape purple_8
+  - first:
+      213: 2444995410184691752
+    second: Cape purple_9
+  - first:
+      213: 7318357705728350646
+    second: Cape purple_10
+  - first:
+      213: -6813881852056496016
+    second: Cape purple_11
+  - first:
+      213: 5379952353183362340
+    second: Cape purple_12
+  - first:
+      213: 4363626407239028531
+    second: Cape purple_13
+  - first:
+      213: 5512818478185606606
+    second: Cape purple_14
+  - first:
+      213: -1376116170240755191
+    second: Cape purple_15
+  - first:
+      213: 2142381290122421754
+    second: Cape purple_16
+  - first:
+      213: 8245368948895318159
+    second: Cape purple_17
+  - first:
+      213: 7862998726431294682
+    second: Cape purple_18
+  - first:
+      213: -7403387786424124286
+    second: Cape purple_19
+  - first:
+      213: 7272042626403339369
+    second: Cape purple_20
+  - first:
+      213: -3780711025587540384
+    second: Cape purple_21
+  - first:
+      213: 2646606393880786936
+    second: Cape purple_22
+  - first:
+      213: 1893915622916251929
+    second: Cape purple_23
+  - first:
+      213: -6695634008973397064
+    second: Cape purple_24
+  - first:
+      213: -1653448733101502178
+    second: Cape purple_25
+  - first:
+      213: -3290016455563365446
+    second: Cape purple_26
+  - first:
+      213: 7136218895961264878
+    second: Cape purple_27
+  - first:
+      213: 1613094520378644900
+    second: Cape purple_28
+  - first:
+      213: 7714901245944876398
+    second: Cape purple_29
+  - first:
+      213: -5399651321528447279
+    second: Cape purple_30
+  - first:
+      213: -6908158918523492027
+    second: Cape purple_31
+  - first:
+      213: -6695968895337779859
+    second: Cape purple_32
+  - first:
+      213: -3102062738239648902
+    second: Cape purple_33
+  - first:
+      213: -6643787375265157999
+    second: Cape purple_34
+  - first:
+      213: 4922090518217756075
+    second: Cape purple_35
+  - first:
+      213: -4291327550997811287
+    second: Cape purple_36
+  - first:
+      213: -551339159563981808
+    second: Cape purple_37
+  - first:
+      213: 734861363122826994
+    second: Cape purple_38
+  - first:
+      213: -8601384341026070758
+    second: Cape purple_39
+  - first:
+      213: 2638306083821780353
+    second: Cape purple_40
+  - first:
+      213: 8649273357722604633
+    second: Cape purple_41
+  - first:
+      213: -2449614387897004400
+    second: Cape purple_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cape purple_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 388
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b413584e94b855610800000000000000
+      internalID: 1609345591337627979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 388
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a8ecfa0e4603db0800000000000000
+      internalID: -4814237085474059724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 389
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149abb99fb7cfa4b0800000000000000
+      internalID: -5426899400226264767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_3
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 389
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a7114cd6429ffa0800000000000000
+      internalID: -5766537794011694516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_4
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 389
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32051a450fb0bba00800000000000000
+      internalID: 773224887864086563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 327
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8abcdf2104c51cc20800000000000000
+      internalID: 3224960238440270760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 325
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169cf0016c6ebe730800000000000000
+      internalID: 4029568029960423777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 327
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172cb353c3673cb90800000000000000
+      internalID: -7222799376408919439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_8
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 328
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca5fe05d85e8b670800000000000000
+      internalID: 8554839887301270216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 326
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820e4851f5e5ee120800000000000000
+      internalID: 2444995410184691752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_10
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 326
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b95e2d1f87009560800000000000000
+      internalID: 7318357705728350646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_11
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 326
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07811ba9e8a3071a0800000000000000
+      internalID: -6813881852056496016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 327
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d6508392e69aa40800000000000000
+      internalID: 5379952353183362340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 264
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f0fff0917be8c30800000000000000
+      internalID: 4363626407239028531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_14
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 262
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd667f9237718c40800000000000000
+      internalID: 5512818478185606606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 264
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90af02752ad07ece0800000000000000
+      internalID: -1376116170240755191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_16
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 265
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5a03bbe644bbd10800000000000000
+      internalID: 2142381290122421754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_17
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 263
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8001f88f5f6d6270800000000000000
+      internalID: 8245368948895318159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_18
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 263
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad449468eabfe1d60800000000000000
+      internalID: 7862998726431294682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_19
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 263
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c79b77802e14990800000000000000
+      internalID: -7403387786424124286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_20
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 264
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c05426d3c7be460800000000000000
+      internalID: 7272042626403339369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 199
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ea3717a57388bc0800000000000000
+      internalID: -3780711025587540384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_22
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 199
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7ba8f2e72aab420800000000000000
+      internalID: 2646606393880786936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 199
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9116c72893a884a10800000000000000
+      internalID: 1893915622916251929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_24
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 200
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3bd1508545413a0800000000000000
+      internalID: -6695634008973397064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 152
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e115a293325cd09e0800000000000000
+      internalID: -1653448733101502178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 151
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3b4f407738752d0800000000000000
+      internalID: -3290016455563365446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_27
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 150
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2933dc641f80360800000000000000
+      internalID: 7136218895961264878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_28
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 151
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a95c447becd26610800000000000000
+      internalID: 1613094520378644900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_29
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 68
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d43c1dec5d01b60800000000000000
+      internalID: 7714901245944876398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_30
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 68
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de045d4bb59015b0800000000000000
+      internalID: -5399651321528447279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 68
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549e579801a4120a0800000000000000
+      internalID: -6908158918523492027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_32
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 68
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6da35634c32313a0800000000000000
+      internalID: -6695968895337779859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_33
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 69
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b0040006243f4d0800000000000000
+      internalID: -3102062738239648902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_34
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 68
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c681e15968cc3a0800000000000000
+      internalID: -6643787375265157999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_35
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 4
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad00ba7f37ce4440800000000000000
+      internalID: 4922090518217756075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_36
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 5
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afadeb24542274c0800000000000000
+      internalID: -4291327550997811287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_37
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c2d6b94ff3958f0800000000000000
+      internalID: -551339159563981808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_38
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe681c2480c23a00800000000000000
+      internalID: 734861363122826994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_39
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f9880938eb1a880800000000000000
+      internalID: -8601384341026070758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_40
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18df2f6a7652d9420800000000000000
+      internalID: 2638306083821780353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_41
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9545e440b44680870800000000000000
+      internalID: 8649273357722604633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape purple_42
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 4
+        width: 88
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e86bc51b8310ed0800000000000000
+      internalID: -2449614387897004400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

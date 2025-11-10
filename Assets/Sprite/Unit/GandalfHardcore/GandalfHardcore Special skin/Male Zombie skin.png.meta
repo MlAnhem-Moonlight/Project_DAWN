@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 99ebee087bc50684cbaa7677be46f1e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1652378053750895963
+    second: Male Zombie skin_0
+  - first:
+      213: 8407443407793843060
+    second: Male Zombie skin_1
+  - first:
+      213: 569117791604924109
+    second: Male Zombie skin_2
+  - first:
+      213: 481683803225633615
+    second: Male Zombie skin_3
+  - first:
+      213: -1126297872414511679
+    second: Male Zombie skin_4
+  - first:
+      213: -8806835876361147665
+    second: Male Zombie skin_5
+  - first:
+      213: -9048215738006397593
+    second: Male Zombie skin_6
+  - first:
+      213: 8977131201044350439
+    second: Male Zombie skin_7
+  - first:
+      213: 468873336010488109
+    second: Male Zombie skin_8
+  - first:
+      213: -7076116430608908561
+    second: Male Zombie skin_9
+  - first:
+      213: -2648944982844011419
+    second: Male Zombie skin_10
+  - first:
+      213: 4833440586642278266
+    second: Male Zombie skin_11
+  - first:
+      213: -2403129285779259558
+    second: Male Zombie skin_12
+  - first:
+      213: 2613465598035634036
+    second: Male Zombie skin_13
+  - first:
+      213: 3740032193837244082
+    second: Male Zombie skin_14
+  - first:
+      213: 7233742608757856702
+    second: Male Zombie skin_15
+  - first:
+      213: -2500561861952598113
+    second: Male Zombie skin_16
+  - first:
+      213: 1418818080839572819
+    second: Male Zombie skin_17
+  - first:
+      213: -9150833664971444660
+    second: Male Zombie skin_18
+  - first:
+      213: -2347813331325968878
+    second: Male Zombie skin_19
+  - first:
+      213: 8056909201437639792
+    second: Male Zombie skin_20
+  - first:
+      213: 6166567282282146614
+    second: Male Zombie skin_21
+  - first:
+      213: 6188242814725286397
+    second: Male Zombie skin_22
+  - first:
+      213: -4512803120421332447
+    second: Male Zombie skin_23
+  - first:
+      213: 2838253965280312081
+    second: Male Zombie skin_24
+  - first:
+      213: -2731746906690751182
+    second: Male Zombie skin_25
+  - first:
+      213: 4158666197986741373
+    second: Male Zombie skin_26
+  - first:
+      213: 6435151013185764955
+    second: Male Zombie skin_27
+  - first:
+      213: 4901943481211585691
+    second: Male Zombie skin_28
+  - first:
+      213: -3243917367727985371
+    second: Male Zombie skin_29
+  - first:
+      213: -8793272818516120425
+    second: Male Zombie skin_30
+  - first:
+      213: 7217450811215399436
+    second: Male Zombie skin_31
+  - first:
+      213: 3024475465675548095
+    second: Male Zombie skin_32
+  - first:
+      213: -2883908065299050405
+    second: Male Zombie skin_33
+  - first:
+      213: 2005366577643277248
+    second: Male Zombie skin_34
+  - first:
+      213: 2111553159515261179
+    second: Male Zombie skin_35
+  - first:
+      213: -4142700761094181416
+    second: Male Zombie skin_36
+  - first:
+      213: 1172164999951368086
+    second: Male Zombie skin_37
+  - first:
+      213: -2738028275369045153
+    second: Male Zombie skin_38
+  - first:
+      213: -2759020239128285315
+    second: Male Zombie skin_39
+  - first:
+      213: -4294829616185261863
+    second: Male Zombie skin_40
+  - first:
+      213: 7051265101996467233
+    second: Male Zombie skin_41
+  - first:
+      213: 136809781857166818
+    second: Male Zombie skin_42
+  - first:
+      213: -8164697072807866711
+    second: Male Zombie skin_43
+  - first:
+      213: -6770521046603870716
+    second: Male Zombie skin_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Zombie skin_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 383
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aac68f2ae29119e0800000000000000
+      internalID: -1652378053750895963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 383
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b60ce1c3d3da470800000000000000
+      internalID: 8407443407793843060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 383
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce57fbbd99e5e700800000000000000
+      internalID: 569117791604924109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 383
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43b251fdd84fa600800000000000000
+      internalID: 481683803225633615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 383
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd647b6d069e50f0800000000000000
+      internalID: -1126297872414511679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 319
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feae35a5e65d7c580800000000000000
+      internalID: -8806835876361147665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 319
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d970dc9b74e6280800000000000000
+      internalID: -9048215738006397593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 319
+        width: 17
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e50354b34d259c70800000000000000
+      internalID: 8977131201044350439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 319
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29be8d90d5c18600800000000000000
+      internalID: 468873336010488109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 319
+        width: 20
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee3044e8959ccd90800000000000000
+      internalID: -7076116430608908561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 319
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c8704a29e0d3bd0800000000000000
+      internalID: -2648944982844011419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_11
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 319
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77c4c9da94d31340800000000000000
+      internalID: 4833440586642278266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 319
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ff9cb95ae56aed0800000000000000
+      internalID: -2403129285779259558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_13
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 255
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4772e9b5d15e44420800000000000000
+      internalID: 2613465598035634036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 255
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be913af67347e330800000000000000
+      internalID: 3740032193837244082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 255
+        width: 17
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb99e9f939a636460800000000000000
+      internalID: 7233742608757856702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 255
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f0d6f2c383c4dd0800000000000000
+      internalID: -2500561861952598113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 255
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d185df687a0b310800000000000000
+      internalID: 1418818080839572819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_18
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 255
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ee0b0d345b10180800000000000000
+      internalID: -9150833664971444660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_19
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 255
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e9363e634ea6fd0800000000000000
+      internalID: -2347813331325968878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_20
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 256
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074444b3b34efcf60800000000000000
+      internalID: 8056909201437639792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 192
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b29f7754c049550800000000000000
+      internalID: 6166567282282146614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_22
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 192
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df96093ad0e01e550800000000000000
+      internalID: 6188242814725286397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_23
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 192
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a130ac87d4f51c0800000000000000
+      internalID: -4512803120421332447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 192
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b70e691f0836720800000000000000
+      internalID: 2838253965280312081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_25
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 128
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235fc6a69a2e61ad0800000000000000
+      internalID: -2731746906690751182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 128
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c8c6e9fdc86b930800000000000000
+      internalID: 4158666197986741373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_27
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 128
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ebee860cf3e4950800000000000000
+      internalID: 6435151013185764955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_28
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 128
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9488a2ef93370440800000000000000
+      internalID: 4901943481211585691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_29
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 63
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d6adf475a4bf2d0800000000000000
+      internalID: -3243917367727985371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_30
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 63
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79caf37d5f408f580800000000000000
+      internalID: -8793272818516120425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_31
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 63
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a495ae549892460800000000000000
+      internalID: 7217450811215399436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_32
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 63
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5a973696819f920800000000000000
+      internalID: 3024475465675548095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_33
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 63
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5057fae4ec4af7d0800000000000000
+      internalID: -2883908065299050405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_34
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 63
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb4ed8074e74db10800000000000000
+      internalID: 2005366577643277248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_35
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8c24d396ebd4d10800000000000000
+      internalID: 2111553159515261179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_36
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 20
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddad345b9b2286c0800000000000000
+      internalID: -4142700761094181416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_37
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f3f386bdd544010800000000000000
+      internalID: 1172164999951368086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5317ad4ac1900ad0800000000000000
+      internalID: -2738028275369045153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_39
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f25aed5bdf5b9d0800000000000000
+      internalID: -2759020239128285315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_40
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d043741833b564c0800000000000000
+      internalID: -4294829616185261863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_41
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124ab9540402bd160800000000000000
+      internalID: 7051265101996467233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_42
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5256195cb06e100800000000000000
+      internalID: 136809781857166818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_43
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae8d9c454b21be80800000000000000
+      internalID: -8164697072807866711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Zombie skin_44
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40eced8daf64a02a0800000000000000
+      internalID: -6770521046603870716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

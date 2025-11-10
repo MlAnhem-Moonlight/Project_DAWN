@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class IngridientManager : MonoBehaviour
 {
@@ -11,12 +12,21 @@ public class IngridientManager : MonoBehaviour
 
     [Header("Level")]
     public int currentLevel = 0;
+
     [Header("Save Index")]
     public int saveIndex = 0;
+
+    [Header("Text hiển thị số lượng tài nguyên")]
+    public TextMeshProUGUI woodText;
+    public TextMeshProUGUI stoneText;
+    public TextMeshProUGUI ironText;
+    public TextMeshProUGUI goldText;
+    public TextMeshProUGUI meatText;
 
     private void Start()
     {
         ResetConsumedResources();
+        DisplayResources();
     }
 
     // Reset tài nguyên tiêu hao về 0
@@ -29,14 +39,13 @@ public class IngridientManager : MonoBehaviour
         consumedResources.Add(new Ingredient.IngredientEntry { type = "gold", quantity = 0 });
         consumedResources.Add(new Ingredient.IngredientEntry { type = "meat", quantity = 0 });
     }
-    
+
     public void SetLevel(int level)
     {
         currentLevel = level;
     }
 
-
-    // Lấy dữ liệu từ save, nếu là level 0 thì lấy ở file DefaultLevel.json còn không lấy ở Save.json
+    // Lấy dữ liệu từ save
     public void getDataFromSave()
     {
         if (currentLevel == 0)
@@ -47,13 +56,14 @@ public class IngridientManager : MonoBehaviour
         }
         else
         {
-            var saveData = SaveSystem.LoadPlayerData(saveIndex); // 👉 bạn cần viết hàm này trong SaveSystem
+            var saveData = SaveSystem.LoadPlayerData(saveIndex);
             if (saveData != null)
             {
                 playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
                 consumedResources = new List<Ingredient.IngredientEntry>(saveData.consumedResources);
             }
         }
+        DisplayResources();
     }
 
     // Thêm tài nguyên mới hoặc tăng số lượng
@@ -66,13 +76,15 @@ public class IngridientManager : MonoBehaviour
                 var entry = playerIngredients[i];
                 entry.quantity += amount;
                 playerIngredients[i] = entry;
+                DisplayResources();
                 return;
             }
         }
         playerIngredients.Add(new Ingredient.IngredientEntry { type = typePlus, quantity = amount });
+        DisplayResources();
     }
 
-    // Giảm số lượng tài nguyên và cập nhật tài nguyên tiêu hao
+    // Giảm tài nguyên và cập nhật tiêu hao
     public bool RemoveIngredient(string typePlus, int amount)
     {
         for (int i = 0; i < playerIngredients.Count; i++)
@@ -85,7 +97,6 @@ public class IngridientManager : MonoBehaviour
                     entry.quantity -= amount;
                     playerIngredients[i] = entry;
 
-                    // Cập nhật tài nguyên tiêu hao
                     for (int j = 0; j < consumedResources.Count; j++)
                     {
                         if (consumedResources[j].type.ToLower() == typePlus.ToLower())
@@ -97,6 +108,7 @@ public class IngridientManager : MonoBehaviour
                         }
                     }
 
+                    DisplayResources();
                     return true;
                 }
                 return false;
@@ -157,5 +169,15 @@ public class IngridientManager : MonoBehaviour
                 GetConsumedResourceData()
             );
         }
+    }
+
+    // 🟩 Hàm hiển thị tài nguyên lên UI
+    public void DisplayResources()
+    {
+        if (woodText != null) woodText.text = GetIngredientAmount("wood").ToString();
+        if (stoneText != null) stoneText.text = GetIngredientAmount("stone").ToString();
+        if (ironText != null) ironText.text = GetIngredientAmount("iron").ToString();
+        if (goldText != null) goldText.text = GetIngredientAmount("gold").ToString();
+        if (meatText != null) meatText.text = GetIngredientAmount("meat").ToString();
     }
 }

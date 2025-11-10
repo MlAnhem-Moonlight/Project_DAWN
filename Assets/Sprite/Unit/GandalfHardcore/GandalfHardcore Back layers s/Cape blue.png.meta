@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: 1f5845fdbe0db4f44abf14609769d0a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4583069704145659327
+    second: Cape blue_0
+  - first:
+      213: -4553020135417328750
+    second: Cape blue_1
+  - first:
+      213: -9167974735435728158
+    second: Cape blue_2
+  - first:
+      213: 5327090257606764429
+    second: Cape blue_3
+  - first:
+      213: -2620404097083160460
+    second: Cape blue_4
+  - first:
+      213: -6583263928269176628
+    second: Cape blue_5
+  - first:
+      213: 6764365413709609166
+    second: Cape blue_6
+  - first:
+      213: -4980606025379057408
+    second: Cape blue_7
+  - first:
+      213: -3876857379689853674
+    second: Cape blue_8
+  - first:
+      213: -7292268492242271433
+    second: Cape blue_9
+  - first:
+      213: 2545962711974689934
+    second: Cape blue_10
+  - first:
+      213: 1450751550521326653
+    second: Cape blue_11
+  - first:
+      213: 1284612033609778370
+    second: Cape blue_12
+  - first:
+      213: 1276205624254141298
+    second: Cape blue_13
+  - first:
+      213: -1832287619880751038
+    second: Cape blue_14
+  - first:
+      213: 4485994831168507906
+    second: Cape blue_15
+  - first:
+      213: 5206016604094053845
+    second: Cape blue_16
+  - first:
+      213: -5457724667131830326
+    second: Cape blue_17
+  - first:
+      213: 7663110663897970119
+    second: Cape blue_18
+  - first:
+      213: 4160664746759505961
+    second: Cape blue_19
+  - first:
+      213: -2473657831919527271
+    second: Cape blue_20
+  - first:
+      213: -2535138896847028851
+    second: Cape blue_21
+  - first:
+      213: 7955744068024019704
+    second: Cape blue_22
+  - first:
+      213: -6897017584460928051
+    second: Cape blue_23
+  - first:
+      213: -5438992748867529632
+    second: Cape blue_24
+  - first:
+      213: -2114459525290090061
+    second: Cape blue_25
+  - first:
+      213: 382347660613271346
+    second: Cape blue_26
+  - first:
+      213: -6657803654572719163
+    second: Cape blue_27
+  - first:
+      213: 3892780984343651231
+    second: Cape blue_28
+  - first:
+      213: 7540419594460115459
+    second: Cape blue_29
+  - first:
+      213: 8263018693999152390
+    second: Cape blue_30
+  - first:
+      213: 3715516197060225185
+    second: Cape blue_31
+  - first:
+      213: -4423785386321078055
+    second: Cape blue_32
+  - first:
+      213: -2735528875576298000
+    second: Cape blue_33
+  - first:
+      213: 7072800473013579159
+    second: Cape blue_34
+  - first:
+      213: -1757564889956045301
+    second: Cape blue_35
+  - first:
+      213: 2853009807543804027
+    second: Cape blue_36
+  - first:
+      213: 5410438052650745091
+    second: Cape blue_37
+  - first:
+      213: -901203788392109377
+    second: Cape blue_38
+  - first:
+      213: 8600999834843132304
+    second: Cape blue_39
+  - first:
+      213: 2218748223397841403
+    second: Cape blue_40
+  - first:
+      213: 925870409519579599
+    second: Cape blue_41
+  - first:
+      213: 3425010170415654352
+    second: Cape blue_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cape blue_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 388
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5e4702d955a9f30800000000000000
+      internalID: 4583069704145659327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 388
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29bcf3d4f4c60d0c0800000000000000
+      internalID: -4553020135417328750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 389
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaf8985d8fc4c080800000000000000
+      internalID: -9167974735435728158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_3
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 389
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87681b7d50ade940800000000000000
+      internalID: 5327090257606764429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_4
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 389
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47841617b5472abd0800000000000000
+      internalID: -2620404097083160460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 327
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc08fdc365c83a4a0800000000000000
+      internalID: -6583263928269176628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 325
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8791f218adfdd50800000000000000
+      internalID: 6764365413709609166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 327
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0017c13553551eab0800000000000000
+      internalID: -4980606025379057408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_8
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 328
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d0cbee0c2a23ac0800000000000000
+      internalID: -3876857379689853674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 326
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73340214178acca90800000000000000
+      internalID: -7292268492242271433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_10
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 326
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c34a2f893155320800000000000000
+      internalID: 2545962711974689934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_11
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 326
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cbb2a49da122410800000000000000
+      internalID: 1450751550521326653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 327
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4c081a6dbd3d110800000000000000
+      internalID: 1284612033609778370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 264
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273160ee04ef5b110800000000000000
+      internalID: 1276205624254141298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_14
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 262
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24079aa1e186296e0800000000000000
+      internalID: -1832287619880751038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 264
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2009908f784714e30800000000000000
+      internalID: 4485994831168507906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_16
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 265
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ddbfcdc48c7f3840800000000000000
+      internalID: 5206016604094053845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_17
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 263
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf58bdd4544244b0800000000000000
+      internalID: -5457724667131830326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_18
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 263
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c575244c86d85a60800000000000000
+      internalID: 7663110663897970119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_19
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 263
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92847140b86adb930800000000000000
+      internalID: 4160664746759505961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_20
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 264
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ad290de4dcbadd0800000000000000
+      internalID: -2473657831919527271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 199
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d3825ea9061dcd0800000000000000
+      internalID: -2535138896847028851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_22
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 199
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa2e7a141b786e60800000000000000
+      internalID: 7955744068024019704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 199
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb65948c0fd840a0800000000000000
+      internalID: -6897017584460928051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_24
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 200
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06453d379e0d484b0800000000000000
+      internalID: -5438992748867529632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 152
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1a42fb34ee7a2e0800000000000000
+      internalID: -2114459525290090061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 151
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f3e8beb2f5e4500800000000000000
+      internalID: 382347660613271346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_27
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 150
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c345e8c9daba93a0800000000000000
+      internalID: -6657803654572719163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_28
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 151
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93e2303eafe50630800000000000000
+      internalID: 3892780984343651231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_29
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 68
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302b0399ba3f4a860800000000000000
+      internalID: 7540419594460115459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_30
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 68
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d4b3c09b32ca270800000000000000
+      internalID: 8263018693999152390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 68
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a82cfaab4a209330800000000000000
+      internalID: 3715516197060225185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_32
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 68
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d894cd11ae8b92c0800000000000000
+      internalID: -4423785386321078055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_33
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 69
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5737a2bf2790ad0800000000000000
+      internalID: -2735528875576298000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_34
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 68
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d60319e82a72260800000000000000
+      internalID: 7072800473013579159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_35
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 4
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ea8786b00eb97e0800000000000000
+      internalID: -1757564889956045301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_36
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 5
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70aa57dd4de79720800000000000000
+      internalID: 2853009807543804027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_37
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30df08f3ebcb51b40800000000000000
+      internalID: 5410438052650745091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_38
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbae6a2ede74e73f0800000000000000
+      internalID: -901203788392109377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_39
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091b40d97c3ec5770800000000000000
+      internalID: 8600999834843132304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_40
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf948a5f0c39ace10800000000000000
+      internalID: 2218748223397841403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_41
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1c5736b3a59dc00800000000000000
+      internalID: 925870409519579599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cape blue_42
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 4
+        width: 88
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5a9bf7a94188f20800000000000000
+      internalID: 3425010170415654352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: cdf5744fd73227c479885bdc295d661d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5268829756501149784
+    second: Male Blue cap_0
+  - first:
+      213: 6551231775305708641
+    second: Male Blue cap_1
+  - first:
+      213: -6651931119340253444
+    second: Male Blue cap_2
+  - first:
+      213: -5317834159864225769
+    second: Male Blue cap_3
+  - first:
+      213: 3809061504516670333
+    second: Male Blue cap_4
+  - first:
+      213: 4761318433397957473
+    second: Male Blue cap_5
+  - first:
+      213: -4506368758414196965
+    second: Male Blue cap_6
+  - first:
+      213: 1189566752934955744
+    second: Male Blue cap_7
+  - first:
+      213: 4304918360706652076
+    second: Male Blue cap_8
+  - first:
+      213: 2119746771053986317
+    second: Male Blue cap_9
+  - first:
+      213: 4350824813623156311
+    second: Male Blue cap_10
+  - first:
+      213: -1265258967053796269
+    second: Male Blue cap_11
+  - first:
+      213: 3507682651578931042
+    second: Male Blue cap_12
+  - first:
+      213: 5733119714434908111
+    second: Male Blue cap_13
+  - first:
+      213: 7084711616985143881
+    second: Male Blue cap_14
+  - first:
+      213: 5421144662002396870
+    second: Male Blue cap_15
+  - first:
+      213: -2560188607639139516
+    second: Male Blue cap_16
+  - first:
+      213: -1316830702534008545
+    second: Male Blue cap_17
+  - first:
+      213: 3290400179342615846
+    second: Male Blue cap_18
+  - first:
+      213: 5793949496524510815
+    second: Male Blue cap_19
+  - first:
+      213: 1531999569173479626
+    second: Male Blue cap_20
+  - first:
+      213: 1864818901603927205
+    second: Male Blue cap_21
+  - first:
+      213: 1461954592259569701
+    second: Male Blue cap_22
+  - first:
+      213: 2355147171586897665
+    second: Male Blue cap_23
+  - first:
+      213: -4208253811793465759
+    second: Male Blue cap_24
+  - first:
+      213: 6427310478850133542
+    second: Male Blue cap_25
+  - first:
+      213: 9033621585422265620
+    second: Male Blue cap_26
+  - first:
+      213: 875722044362655306
+    second: Male Blue cap_27
+  - first:
+      213: 2770780593182453031
+    second: Male Blue cap_28
+  - first:
+      213: -1831548557295493204
+    second: Male Blue cap_29
+  - first:
+      213: -2992719588114447549
+    second: Male Blue cap_30
+  - first:
+      213: -6827137647227650798
+    second: Male Blue cap_31
+  - first:
+      213: 1259506303914045083
+    second: Male Blue cap_32
+  - first:
+      213: -6453888287851588712
+    second: Male Blue cap_33
+  - first:
+      213: -6425960235974839695
+    second: Male Blue cap_34
+  - first:
+      213: -8671036973274888402
+    second: Male Blue cap_35
+  - first:
+      213: 8016007540430819077
+    second: Male Blue cap_36
+  - first:
+      213: -1609788300463167937
+    second: Male Blue cap_37
+  - first:
+      213: -58246055247295269
+    second: Male Blue cap_38
+  - first:
+      213: 2670003558350362280
+    second: Male Blue cap_39
+  - first:
+      213: -2113718623720487383
+    second: Male Blue cap_40
+  - first:
+      213: 949017396080860069
+    second: Male Blue cap_41
+  - first:
+      213: -8563597933216457792
+    second: Male Blue cap_42
+  - first:
+      213: -1870529534424440399
+    second: Male Blue cap_43
+  - first:
+      213: -1910326076436586072
+    second: Male Blue cap_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Blue cap_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7bdbd704b51e6b0800000000000000
+      internalID: -5268829756501149784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1643958f696aaea50800000000000000
+      internalID: 6551231775305708641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe8b51f3e79fa3a0800000000000000
+      internalID: -6651931119340253444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710ead6b1024336b0800000000000000
+      internalID: -5317834159864225769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73c450d1418cd430800000000000000
+      internalID: 3809061504516670333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163643d73e9931240800000000000000
+      internalID: 4761318433397957473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fbdcf6d792671c0800000000000000
+      internalID: -4506368758414196965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea8d41c8a0328010800000000000000
+      internalID: 1189566752934955744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca71afcc0742ebb30800000000000000
+      internalID: 4304918360706652076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d024476157ada6d10800000000000000
+      internalID: 2119746771053986317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e96f7cd1c316c30800000000000000
+      internalID: 4350824813623156311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c71ef4ca5e07ee0800000000000000
+      internalID: -1265258967053796269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267992089cacda030800000000000000
+      internalID: 3507682651578931042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf7ea14102209f40800000000000000
+      internalID: 5733119714434908111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a9b72eda3f15260800000000000000
+      internalID: 7084711616985143881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce68aef856cb3b40800000000000000
+      internalID: 5421144662002396870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bcaab9602687cd0800000000000000
+      internalID: -2560188607639139516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11e122f37da9bde0800000000000000
+      internalID: -1316830702534008545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6252992a789d9ad20800000000000000
+      internalID: 3290400179342615846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_19
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5695e29e5e386050800000000000000
+      internalID: 5793949496524510815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac003a4cd71c24510800000000000000
+      internalID: 1531999569173479626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4498829ea21e910800000000000000
+      internalID: 1864818901603927205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528f165b4f7e94410800000000000000
+      internalID: 1461954592259569701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107f33cdfd92fa020800000000000000
+      internalID: 2355147171586897665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16eed5754774995c0800000000000000
+      internalID: -4208253811793465759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e0201c3d4623950800000000000000
+      internalID: 6427310478850133542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d256248fedd5d70800000000000000
+      internalID: 9033621585422265620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_27
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4607304f80372c00800000000000000
+      internalID: 875722044362655306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_28
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72daf2fe44ac37620800000000000000
+      internalID: 2770780593182453031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafd5858a480596e0800000000000000
+      internalID: -1831548557295493204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_30
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343c5160469b776d0800000000000000
+      internalID: -2992719588114447549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_31
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21dbc484b722141a0800000000000000
+      internalID: -6827137647227650798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_32
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e692d6f4aaa7110800000000000000
+      internalID: 1259506303914045083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_33
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 99
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8935d8edbce2f66a0800000000000000
+      internalID: -6453888287851588712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_34
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1723fe9263762d6a0800000000000000
+      internalID: -6425960235974839695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 37
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e270cad50d94aa780800000000000000
+      internalID: -8671036973274888402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_36
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 35
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f4b3c23649e3f60800000000000000
+      internalID: 8016007540430819077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_37
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36205bd112e8a9e0800000000000000
+      internalID: -1609788300463167937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcca677581113ff0800000000000000
+      internalID: -58246055247295269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6908c0712cd0520800000000000000
+      internalID: 2670003558350362280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_40
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92643065c109aa2e0800000000000000
+      internalID: -2113718623720487383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_41
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abd01b2b469b2d00800000000000000
+      internalID: 949017396080860069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb1d573d0df72980800000000000000
+      internalID: -8563597933216457792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_43
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b121c68c4b8a06e0800000000000000
+      internalID: -1870529534424440399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Blue cap_44
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1e4d80e882d75e0800000000000000
+      internalID: -1910326076436586072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

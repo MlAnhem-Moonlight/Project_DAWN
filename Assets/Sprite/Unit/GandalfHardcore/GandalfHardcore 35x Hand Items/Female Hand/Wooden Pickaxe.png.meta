@@ -1,0 +1,1217 @@
+fileFormatVersion: 2
+guid: 82605687fb3a47f41a1709c1cdde2ae1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1249979982045014483
+    second: Wooden Pickaxe_0
+  - first:
+      213: 4548087775522254101
+    second: Wooden Pickaxe_1
+  - first:
+      213: 2255991592941915946
+    second: Wooden Pickaxe_2
+  - first:
+      213: 8784872484386147335
+    second: Wooden Pickaxe_3
+  - first:
+      213: 8518180717070437867
+    second: Wooden Pickaxe_4
+  - first:
+      213: -8786448418899513431
+    second: Wooden Pickaxe_5
+  - first:
+      213: 6906038890324645218
+    second: Wooden Pickaxe_6
+  - first:
+      213: 912600115986752325
+    second: Wooden Pickaxe_7
+  - first:
+      213: 8797296874211865168
+    second: Wooden Pickaxe_8
+  - first:
+      213: 1294884383447265214
+    second: Wooden Pickaxe_9
+  - first:
+      213: 5192624067722520820
+    second: Wooden Pickaxe_10
+  - first:
+      213: 2620273434843830817
+    second: Wooden Pickaxe_11
+  - first:
+      213: 2580622441531578995
+    second: Wooden Pickaxe_12
+  - first:
+      213: 640287007233307290
+    second: Wooden Pickaxe_13
+  - first:
+      213: -8013648018698551925
+    second: Wooden Pickaxe_14
+  - first:
+      213: 7366920024743500338
+    second: Wooden Pickaxe_15
+  - first:
+      213: 4147068240962682563
+    second: Wooden Pickaxe_16
+  - first:
+      213: 8433289589993235063
+    second: Wooden Pickaxe_17
+  - first:
+      213: -307860878515152220
+    second: Wooden Pickaxe_18
+  - first:
+      213: -9043597183309774057
+    second: Wooden Pickaxe_19
+  - first:
+      213: -7105386807675210926
+    second: Wooden Pickaxe_20
+  - first:
+      213: 5597065895290659185
+    second: Wooden Pickaxe_21
+  - first:
+      213: -3226026974076827689
+    second: Wooden Pickaxe_22
+  - first:
+      213: 3512783520329315076
+    second: Wooden Pickaxe_23
+  - first:
+      213: 8608002609317988815
+    second: Wooden Pickaxe_24
+  - first:
+      213: -6572858395518565498
+    second: Wooden Pickaxe_25
+  - first:
+      213: -1189915323069008527
+    second: Wooden Pickaxe_26
+  - first:
+      213: -1013037492859371713
+    second: Wooden Pickaxe_27
+  - first:
+      213: 4831623565845281614
+    second: Wooden Pickaxe_28
+  - first:
+      213: 7977505000772899987
+    second: Wooden Pickaxe_29
+  - first:
+      213: -8388447412638369577
+    second: Wooden Pickaxe_30
+  - first:
+      213: -4893948702076869383
+    second: Wooden Pickaxe_31
+  - first:
+      213: -8388610398109134401
+    second: Wooden Pickaxe_32
+  - first:
+      213: 5579981843128418615
+    second: Wooden Pickaxe_33
+  - first:
+      213: 1087868254790645562
+    second: Wooden Pickaxe_34
+  - first:
+      213: 4717797396127342331
+    second: Wooden Pickaxe_35
+  - first:
+      213: 3307876389244510535
+    second: Wooden Pickaxe_36
+  - first:
+      213: -6344419796194024316
+    second: Wooden Pickaxe_37
+  - first:
+      213: 1247840718816465022
+    second: Wooden Pickaxe_38
+  - first:
+      213: -2967465327158184552
+    second: Wooden Pickaxe_39
+  - first:
+      213: -1823658561648639913
+    second: Wooden Pickaxe_40
+  - first:
+      213: -4757380077166584312
+    second: Wooden Pickaxe_41
+  - first:
+      213: -1623433170365900231
+    second: Wooden Pickaxe_42
+  - first:
+      213: -3094771861689082258
+    second: Wooden Pickaxe_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wooden Pickaxe_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 383
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d96426cb22d85110800000000000000
+      internalID: 1249979982045014483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 384
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dec4b2cbd0e1f30800000000000000
+      internalID: 4548087775522254101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 385
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f0299a664ee4f10800000000000000
+      internalID: 2255991592941915946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 384
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c80f4faf22ae970800000000000000
+      internalID: 8784872484386147335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 384
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bedc09d1b38a63670800000000000000
+      internalID: 8518180717070437867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 332
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afa33237b3401680800000000000000
+      internalID: -8786448418899513431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 330
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26555dee7cd27df50800000000000000
+      internalID: 6906038890324645218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 330
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543ee5768f43aac00800000000000000
+      internalID: 912600115986752325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 331
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0527d03a5e6461a70800000000000000
+      internalID: 8797296874211865168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_9
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 332
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf23947c7a58f110800000000000000
+      internalID: 1294884383447265214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_10
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 332
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8aeb0f318ef0840800000000000000
+      internalID: 5192624067722520820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_11
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 335
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a52426ec41d5420800000000000000
+      internalID: 2620273434843830817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_12
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 334
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a14e6107630d320800000000000000
+      internalID: 2580622441531578995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 271
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92707404a1c2e800800000000000000
+      internalID: 640287007233307290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 267
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8db57ac59dc9c090800000000000000
+      internalID: -8013648018698551925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_15
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 266
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a5c8b1bbe8c3660800000000000000
+      internalID: 7366920024743500338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 267
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce72e1d7985d8930800000000000000
+      internalID: 4147068240962682563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 270
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772eb8b5330190570800000000000000
+      internalID: 8433289589993235063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_18
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 269
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa5ddf79224abbf0800000000000000
+      internalID: -307860878515152220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_19
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 271
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713091dd640be7280800000000000000
+      internalID: -9043597183309774057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_20
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 270
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253b5c82858946d90800000000000000
+      internalID: -7105386807675210926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 198
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171e049f6c5ccad40800000000000000
+      internalID: 5597065895290659185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 198
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7825e2f89da33d0800000000000000
+      internalID: -3226026974076827689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 198
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403331e000aefb030800000000000000
+      internalID: 3512783520329315076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 198
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9c80a14c4c57770800000000000000
+      internalID: 8608002609317988815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 171
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6830c202d1488c4a0800000000000000
+      internalID: -6572858395518565498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_26
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 171
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1757daf61529c7fe0800000000000000
+      internalID: -1189915323069008527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 171
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ff6fd74c7f0f1f0800000000000000
+      internalID: -1013037492859371713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_28
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 171
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b3d9ab8006d0340800000000000000
+      internalID: 4831623565845281614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 105
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39498f4188ac5be60800000000000000
+      internalID: 7977505000772899987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 104
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d835a8a58f369b80800000000000000
+      internalID: -8388447412638369577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_31
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 102
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f469bfa593351cb0800000000000000
+      internalID: -4893948702076869383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_32
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 76
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb19e85a94ba59b80800000000000000
+      internalID: -8388610398109134401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 89
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7318ccc1ce3107d40800000000000000
+      internalID: 5579981843128418615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_34
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 63
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a377839f962e81f00800000000000000
+      internalID: 1087868254790645562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 68
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfede6e5cbbf87140800000000000000
+      internalID: 4717797396127342331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_36
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74122d5dc00f7ed20800000000000000
+      internalID: 3307876389244510535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_37
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48426ed3fc714f7a0800000000000000
+      internalID: -6344419796194024316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_38
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70d25db588315110800000000000000
+      internalID: 1247840718816465022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895b27bd10271d6d0800000000000000
+      internalID: -2967465327158184552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_40
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 0
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7504559433011b6e0800000000000000
+      internalID: -1823658561648639913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e17f686046afdb0800000000000000
+      internalID: -4757380077166584312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_42
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a11c302286879e0800000000000000
+      internalID: -1623433170365900231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden Pickaxe_43
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 187
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ed52b73692d05d0800000000000000
+      internalID: -3094771861689082258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

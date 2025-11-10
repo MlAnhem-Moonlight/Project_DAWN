@@ -59,44 +59,44 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\States.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\PartitionedState.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\ThunkStatus.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\DevToolsService.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Thunk.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\DiffGenerator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\LiftReducerWith.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Delegates.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\States.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Subscription.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AsyncThunkActions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Builder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Interfaces.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AsyncThunkAPI.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Exceptions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Action.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\DevToolsUI.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\LiftedSubscription.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AsyncThunkOptions{T}.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\Actions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\InstrumentedStore.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Meta.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AsyncThunkActionCreator{T,U}.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Slice.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Actions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AsyncThunkOptions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\StoreFactory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\StoreExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Instrument\Enhancer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\DevTools\Contexts.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Store{TStoreState}.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\States.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\PartitionedState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\ThunkStatus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\DevToolsService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Thunk.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\DiffGenerator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\LiftReducerWith.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Delegates.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\States.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Subscription.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AsyncThunkActions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Builder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Interfaces.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AsyncThunkAPI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Exceptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Action.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\DevToolsUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\LiftedSubscription.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AsyncThunkOptions{T}.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\Actions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\InstrumentedStore.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Meta.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AsyncThunkActionCreator{T,U}.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Slice.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Actions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AsyncThunkOptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\StoreFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\StoreExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Instrument\Enhancer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\DevTools\Contexts.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Store{TStoreState}.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\Redux\Unity.AppUI.Redux.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\Redux\Unity.AppUI.Redux.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -572,7 +572,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1076,6 +1076,10 @@
     <ProjectReference Include="Unity.AppUI.csproj">
       <Project>{776D4898-0896-BD6A-627B-B7D2BA801553}</Project>
       <Name>Unity.AppUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.InternalAPIBridge.csproj">
+      <Project>{B7EE85BB-BC02-D905-9FE5-B5F5EB75320D}</Project>
+      <Name>Unity.AppUI.InternalAPIBridge</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>

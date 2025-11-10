@@ -59,40 +59,48 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\SourceGenerators\netstandard2.0\MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\App.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\UITK\UIToolkitAppBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Attributes\ServiceAtribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\UITK\IUIToolkitHost.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\IInitializableComponent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\ServiceDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\IHost.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\ServiceCollection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\IApp.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\ServiceLifetime.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\AppUIServiceCollection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Extensions\ServicesCollectionExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\IRelayCommand.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\AsyncRelayCommand.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\ServiceProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\AppBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\IServiceCollection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\RelayCommand.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\DependencyInjection\IDependencyInjectionListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\RelayCommand{T}.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\UITK\IUIToolkitApp.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\IAsyncRelayCommand.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Extensions\ServiceProviderExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\UITK\UIToolkitHost.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Input\AsyncRelayCommand{T}.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\App\IAppBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\ComponentModel\ObservableObject.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\App.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\UITK\UIToolkitAppBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Attributes\ServiceAtribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\UITK\IUIToolkitHost.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\IInitializableComponent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\ServiceDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\ServiceScope.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\IHost.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\ServiceCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\IApp.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\ServiceLifetime.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Attributes\ObservablePropertyAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\AppUIServiceCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Extensions\ServicesCollectionExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\IRelayCommand.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\AsyncRelayCommand.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\ServiceProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Attributes\ObservableObjectAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Attributes\ICommandAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\AppBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\IServiceCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\RelayCommand.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\IDependencyInjectionListener.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\RelayCommand{T}.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\UITK\IUIToolkitApp.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\DependencyInjection\IServiceScope.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\IAsyncRelayCommand.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Extensions\ServiceProviderExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\UITK\UIToolkitHost.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Attributes\INotifyPropertyChangedAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Input\AsyncRelayCommand{T}.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\App\IAppBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\ComponentModel\ObservableObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\MVVM\Unity.AppUI.MVVM.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\Unity.AppUI.MVVM.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\SourceGenerators\netstandard2.0\MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -568,7 +576,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1072,6 +1080,10 @@
     <ProjectReference Include="Unity.AppUI.csproj">
       <Project>{776D4898-0896-BD6A-627B-B7D2BA801553}</Project>
       <Name>Unity.AppUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.InternalAPIBridge.csproj">
+      <Project>{B7EE85BB-BC02-D905-9FE5-B5F5EB75320D}</Project>
+      <Name>Unity.AppUI.InternalAPIBridge</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>

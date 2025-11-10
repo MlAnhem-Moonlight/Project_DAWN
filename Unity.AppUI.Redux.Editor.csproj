@@ -59,15 +59,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Redux\DevToolsWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Redux\DevToolsView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Redux\DevToolsWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Redux\DevToolsView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Redux\Unity.AppUI.Redux.Editor.asmdef" />
-    <None Include="Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Editor\Redux\DevTools.uss" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Redux\Unity.AppUI.Redux.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Editor\Redux\DevTools.uss" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1071,6 +1071,10 @@
     <ProjectReference Include="Unity.AppUI.Redux.csproj">
       <Project>{C2AAF9F4-17BF-9EB6-CBD4-E52C687F8F14}</Project>
       <Name>Unity.AppUI.Redux</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.InternalAPIBridge.csproj">
+      <Project>{B7EE85BB-BC02-D905-9FE5-B5F5EB75320D}</Project>
+      <Name>Unity.AppUI.InternalAPIBridge</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>

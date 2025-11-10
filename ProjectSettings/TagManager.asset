@@ -20,7 +20,7 @@ TagManager:
   - Construction
   - Deer
   - Wolf
-  - 
+  - WaterInteract
   - 
   - 
   - 
@@ -42,11 +42,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1080404963
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: back
     uniqueID: 3253885827
+    locked: 0
+  - name: FrontBackGround
+    uniqueID: 3523740931
     locked: 0
   - name: mid
     uniqueID: 184057859

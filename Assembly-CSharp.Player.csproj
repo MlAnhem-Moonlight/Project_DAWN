@@ -59,7 +59,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\SourceGenerators\netstandard2.0\MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Guide\ResourceAllocationGA.cs" />
@@ -71,10 +72,12 @@
     <Compile Include="Assets\Script\Enemy\TheMage\CastSpellNode.cs" />
     <Compile Include="Assets\Script\Q-Learning\QLearningEnemyBalancer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxLayer.cs.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Script\Mics\EnemySpawner.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
+    <Compile Include="Assets\Script\Mics\Water\WaterTriggerHandler.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BomberStats.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TankStats.cs" />
@@ -96,6 +99,8 @@
     <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
+    <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxCamera.cs.cs" />
+    <Compile Include="Assets\Script\Mics\DestroyObject.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\Collision2D.cs" />
     <Compile Include="Assets\Script\Enemy\CharacterStatsSO.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -106,6 +111,7 @@
     <Compile Include="Assets\Script\Environment\MaterialSpawner.cs" />
     <Compile Include="Assets\Guide\ResourceManager.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
+    <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxBackground.cs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherArg.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />
@@ -127,10 +133,12 @@
     <Compile Include="Assets\Guide\TestScript.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherBehavior.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageMovement.cs" />
+    <Compile Include="Assets\Script\UI\UIPanelManager.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Selector.cs" />
     <Compile Include="Assets\Script\System\PlayerController.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageStats.cs" />
     <Compile Include="Assets\Script\Construction\BuildConstruction.cs" />
+    <Compile Include="Assets\Script\Mics\Water\InteractableWater.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Script\Mics\SpawnPrediction.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BridDive.cs" />
@@ -160,6 +168,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\DebuffSkill.cs" />
+    <Compile Include="Assets\Script\Construction\SpawnProjectile.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\FlyTowardsTarget.cs" />
     <Compile Include="Assets\Script\Enemy\SkillScaling.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Action.cs" />
@@ -209,43 +218,63 @@
     <Compile Include="Assets\Script\Enemy\DealingDmg.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Slime Enemy\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Special skin\Links.txt" />
+    <None Include="Assets\Sprite\karsiori\Sprites\Pixel Art Rock Pile Pack\Pixel Art Rock Pile Pack - Read Me.txt" />
     <None Include="Assets\Sprite\Environment\wolfpack_9.27.21\readme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Unity - OFL.txt" />
     <None Include="Assets\Guide\SpearBehaviorGuide.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Arm Layers\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Pet companion\Links.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - AFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Character Asset Pack\READ ME.txt" />
+    <None Include="Assets\Sprite\Background\Background_Free_Valley_pack\help file - LudicArts.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Sprite\Environment\Pet Cats Pack\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Hostage Layers\READ ME.txt" />
     <None Include="Assets\Sprite\Unit\Undead Sprite Pack\readme.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Hostage Layers\Links.txt" />
+    <None Include="Assets\Sprite\Unit\Little Mage\READ ME.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcFREE NPC\READ ME.txt" />
     <None Include="Assets\Sprite\Unit\Martial Hero 2\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore character effects\Links.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Emoji Icons\Links.txt" />
     <None Include="Assets\Sprite\Unit\Huntress\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 7x Male Clothing\Links.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Guide\GANew.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Sprite\Unit\Little Mage\CHANGELOG.txt" />
     <None Include="Assets\Sprite\Environment\wolfpack_9.27.21\update_tailwag\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Pet companion\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 43x Female Clothing\Links.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 35x Hand Items\Links.txt" />
     <None Include="Assets\Sprite\Unit\Medieval Warrior Pack 2\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Emoji Icons\READ ME.txt" />
     <None Include="Assets\Guide\ResourceAllocationGA_NewMutation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sprite\Unit\Martial Hero\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcFREE NPC\Links.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Readme.txt" />
     <None Include="Assets\Sprite\Environment\wolfpack_9.27.21\update_downpose\readme.txt" />
@@ -550,7 +579,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1051,9 +1080,17 @@
       <Project>{2B49C861-B158-B6AD-8D52-CC929A3ABC7C}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Behavior.SerializableGUID.Player.csproj">
+      <Project>{5D4FD5A5-32D7-81AC-B16B-439E2F5E0CAB}</Project>
+      <Name>Unity.Behavior.SerializableGUID.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.Player.csproj">
       <Project>{8195A17E-A522-706B-0C37-1533E0C92A26}</Project>
       <Name>Unity.InputSystem.ForUI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.MVVM.Player.csproj">
+      <Project>{055CE955-31D7-73FA-2975-033DD1BEC567}</Project>
+      <Name>Unity.AppUI.MVVM.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
       <Project>{59B23842-A431-DC9B-B502-F8ECAE456378}</Project>
@@ -1099,6 +1136,10 @@
       <Project>{26B8F59B-2D81-4232-8EDE-911845705698}</Project>
       <Name>Unity.Cinemachine.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.AppUI.Redux.Player.csproj">
+      <Project>{62A11B58-DEF9-1561-6463-96EA10FE6AEC}</Project>
+      <Name>Unity.AppUI.Redux.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Behavior.Serialization.Player.csproj">
       <Project>{B3B89B52-1EBC-5E15-D3E6-B1AA71E6C104}</Project>
       <Name>Unity.Behavior.Serialization.Player</Name>
@@ -1119,9 +1160,9 @@
       <Project>{D83CFF7F-2594-C9A2-79F8-128B119B439D}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Behavior.GraphFramework.Player.csproj">
-      <Project>{A61B02B7-8BAF-8D69-2845-74EAB9ADDD82}</Project>
-      <Name>Unity.Behavior.GraphFramework.Player</Name>
+    <ProjectReference Include="Unity.AppUI.Undo.Player.csproj">
+      <Project>{25EFD647-B8AC-EF69-37BF-3FABB0DF0029}</Project>
+      <Name>Unity.AppUI.Undo.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
       <Project>{CC11D1AE-C613-66D1-8B58-F9D4D8E57525}</Project>
@@ -1135,9 +1176,9 @@
       <Project>{AB6F7088-3D09-7C3C-856B-5CB0DF1325FF}</Project>
       <Name>Unity.AppUI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Behavior.Authoring.Player.csproj">
-      <Project>{7FB6592D-8519-C42E-A55B-EE37384F1FCC}</Project>
-      <Name>Unity.Behavior.Authoring.Player</Name>
+    <ProjectReference Include="Unity.AppUI.Navigation.Player.csproj">
+      <Project>{F6E9AFDD-49F9-C45A-2EF4-0AE5FEE55B3D}</Project>
+      <Name>Unity.AppUI.Navigation.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Multiplayer.Center.Common.Player.csproj">
       <Project>{9A654B56-4B55-6188-D660-3DFB9B11EFA5}</Project>
@@ -1150,10 +1191,6 @@
     <ProjectReference Include="Unity.Muse.Behavior.Player.csproj">
       <Project>{B1756D8D-A147-46E3-0947-BEFC56494AEB}</Project>
       <Name>Unity.Muse.Behavior.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="SerializableGUID.Player.csproj">
-      <Project>{180BD390-63DC-2B03-65B4-D7D45B155FE9}</Project>
-      <Name>SerializableGUID.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{A8E096BB-8D34-8822-8C23-FB8018E842A4}</Project>

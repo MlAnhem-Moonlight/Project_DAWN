@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 292656225ff3b104fa8611f5c032cadb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6523642896748503012
+    second: Male Orange cap_0
+  - first:
+      213: 1775181150079961368
+    second: Male Orange cap_1
+  - first:
+      213: 6723605080250653414
+    second: Male Orange cap_2
+  - first:
+      213: -3510263164211709906
+    second: Male Orange cap_3
+  - first:
+      213: -4480393911930256490
+    second: Male Orange cap_4
+  - first:
+      213: 1062696698159934195
+    second: Male Orange cap_5
+  - first:
+      213: -5233628736989822498
+    second: Male Orange cap_6
+  - first:
+      213: -2054644376625085076
+    second: Male Orange cap_7
+  - first:
+      213: -7211108387999261017
+    second: Male Orange cap_8
+  - first:
+      213: -8548479249191065572
+    second: Male Orange cap_9
+  - first:
+      213: -4194726528364680808
+    second: Male Orange cap_10
+  - first:
+      213: -2671852756696145397
+    second: Male Orange cap_11
+  - first:
+      213: -7132872500662084424
+    second: Male Orange cap_12
+  - first:
+      213: -4682705410807101777
+    second: Male Orange cap_13
+  - first:
+      213: 7716756356856516036
+    second: Male Orange cap_14
+  - first:
+      213: 6267691288327748853
+    second: Male Orange cap_15
+  - first:
+      213: 7954389279393450183
+    second: Male Orange cap_16
+  - first:
+      213: 8400936028537976517
+    second: Male Orange cap_17
+  - first:
+      213: 112712949599826658
+    second: Male Orange cap_18
+  - first:
+      213: 8693151762298961248
+    second: Male Orange cap_19
+  - first:
+      213: 5366812492810189230
+    second: Male Orange cap_20
+  - first:
+      213: 1416946248751876865
+    second: Male Orange cap_21
+  - first:
+      213: -2279964111227367539
+    second: Male Orange cap_22
+  - first:
+      213: 950510287348416830
+    second: Male Orange cap_23
+  - first:
+      213: -6383030808371093233
+    second: Male Orange cap_24
+  - first:
+      213: -7728723338513246323
+    second: Male Orange cap_25
+  - first:
+      213: 7505775066155991826
+    second: Male Orange cap_26
+  - first:
+      213: 5260699351273433588
+    second: Male Orange cap_27
+  - first:
+      213: -4587012110652624476
+    second: Male Orange cap_28
+  - first:
+      213: 6889466459304528024
+    second: Male Orange cap_29
+  - first:
+      213: 8385762504826154276
+    second: Male Orange cap_30
+  - first:
+      213: 3356270370339419105
+    second: Male Orange cap_31
+  - first:
+      213: -3110967171147192824
+    second: Male Orange cap_32
+  - first:
+      213: -7725084543353561883
+    second: Male Orange cap_33
+  - first:
+      213: 1493165836813508378
+    second: Male Orange cap_34
+  - first:
+      213: 4443888417751847802
+    second: Male Orange cap_35
+  - first:
+      213: 1932008424931354744
+    second: Male Orange cap_36
+  - first:
+      213: -1284573929176762056
+    second: Male Orange cap_37
+  - first:
+      213: 8094174642820849398
+    second: Male Orange cap_38
+  - first:
+      213: -6158379238260568446
+    second: Male Orange cap_39
+  - first:
+      213: -1038107693490360357
+    second: Male Orange cap_40
+  - first:
+      213: -3926486100066997378
+    second: Male Orange cap_41
+  - first:
+      213: 1572823798461951410
+    second: Male Orange cap_42
+  - first:
+      213: -1546935603479597077
+    second: Male Orange cap_43
+  - first:
+      213: -4555744917937571179
+    second: Male Orange cap_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Orange cap_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c102ec1695d5775a0800000000000000
+      internalID: -6523642896748503012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 421
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8194c76c9d5b2a810800000000000000
+      internalID: 1775181150079961368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea1a52823b0f4d50800000000000000
+      internalID: 6723605080250653414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28b505104a094fc0800000000000000
+      internalID: -3510263164211709906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 422
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6930399a97172d1c0800000000000000
+      internalID: -4480393911930256490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3faadcd34057fbe00800000000000000
+      internalID: 1062696698159934195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed10275846a6e57b0800000000000000
+      internalID: -5233628736989822498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65028f43df6c73e0800000000000000
+      internalID: -2054644376625085076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aed670902ffceb90800000000000000
+      internalID: -7211108387999261017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c182b262a63bd5980800000000000000
+      internalID: -8548479249191065572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 357
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8996ae2727659c5c0800000000000000
+      internalID: -4194726528364680808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b026af8e21cabead0800000000000000
+      internalID: -2671852756696145397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 358
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc52e19042f20d90800000000000000
+      internalID: -7132872500662084424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa60b092d30b30fb0800000000000000
+      internalID: -4682705410807101777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd8bac750d671b60800000000000000
+      internalID: 7716756356856516036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fcf592e4005bf650800000000000000
+      internalID: 6267691288327748853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c80c6bc7eaa36e60800000000000000
+      internalID: 7954389279393450183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c679c1dece169470800000000000000
+      internalID: 8400936028537976517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_18
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 293
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2fb7a94df609100800000000000000
+      internalID: 112712949599826658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_19
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06df362387744a870800000000000000
+      internalID: 8693151762298961248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 294
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea97412178fba7a40800000000000000
+      internalID: 5366812492810189230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b8dae1b110aa310800000000000000
+      internalID: 1416946248751876865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f47a978b0fb50e0800000000000000
+      internalID: -2279964111227367539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_23
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31c1c00214e03d00800000000000000
+      internalID: 950510287348416830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 233
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01aaac6c4bea67a0800000000000000
+      internalID: -6383030808371093233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8795a8721f0eb490800000000000000
+      internalID: -7728723338513246323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2134636c7aed92860800000000000000
+      internalID: 7505775066155991826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_27
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9e7c60032c10940800000000000000
+      internalID: 5260699351273433588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_28
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 167
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1b224d9c8a750c0800000000000000
+      internalID: -4587012110652624476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89880d62e3d4c9f50800000000000000
+      internalID: 6889466459304528024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_30
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42de3f68196306470800000000000000
+      internalID: 8385762504826154276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_31
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3ff3a9e1ed39e20800000000000000
+      internalID: 3356270370339419105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_32
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 102
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806aed727df93d4d0800000000000000
+      internalID: -3110967171147192824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_33
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 99
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecdc8d798cfac490800000000000000
+      internalID: -7725084543353561883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_34
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 101
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f940eda6ac8b410800000000000000
+      internalID: 1493165836813508378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 37
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a735291a8fcdbad30800000000000000
+      internalID: 4443888417751847802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_36
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 35
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878681f1d6fdfca10800000000000000
+      internalID: 1932008424931354744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_37
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839f0bf31d64c2ee0800000000000000
+      internalID: -1284573929176762056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe9f4fe3f8445070800000000000000
+      internalID: 8094174642820849398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e865716ba098aa0800000000000000
+      internalID: -6158379238260568446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_40
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf28ea8d86e791f0800000000000000
+      internalID: -1038107693490360357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_41
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 29
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b6ff502b15289c0800000000000000
+      internalID: -3926486100066997378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdea9959eac3d510800000000000000
+      internalID: 1572823798461951410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_43
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befa130c34e288ae0800000000000000
+      internalID: -1546935603479597077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Orange cap_44
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a3a0f622eb6c0c0800000000000000
+      internalID: -4555744917937571179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

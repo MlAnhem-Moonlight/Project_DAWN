@@ -59,25 +59,30 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
+    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\WindowUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorAssetPostProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Utilities\BehaviorGraphDropHandler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Tools\BehaviorGraphAssetUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\SceneProcessing\SceneProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BehaviorAssetDeletionProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Utilities\IL2CPPGenericTypesGenerator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Windows\BlackboardWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\RuntimeBehaviorGraphEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\BehaviorGraphAgentEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Inspectors\BehaviorAuthoringGraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Windows\BehaviorWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Windows\WindowUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\BehaviorBlackboardAuthoringAssetEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Processor\AssetValidationBuildPreprocessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Processor\BehaviorAssetPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\BehaviorAssetEditorUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Utilities\BehaviorGraphDropHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Tools\BehaviorGraphAssetUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Utilities\IL2CPPGenericTypesGenerator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Processor\BehaviorAssetModificationProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Windows\BlackboardWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\RuntimeBehaviorGraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Tools\MissingTypeData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\BehaviorGraphAgentEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Tools\TypeMigrationUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\BehaviorAuthoringGraphEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Editor\Unity.Behavior.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Inspectors\Assets\BehaviorEditorStyles.uss" />
+    <None Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Editor\Unity.Behavior.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -561,7 +566,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -597,7 +602,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.YamlDotNet">
@@ -605,7 +610,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.Newtonsoft.Json">
@@ -625,7 +630,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
@@ -1166,13 +1171,9 @@
       <Project>{776D4898-0896-BD6A-627B-B7D2BA801553}</Project>
       <Name>Unity.AppUI</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Muse.Behavior.csproj">
-      <Project>{B48A4D8C-5445-B499-9040-8B87F6DB39DD}</Project>
-      <Name>Unity.Muse.Behavior</Name>
-    </ProjectReference>
-    <ProjectReference Include="SerializableGUID.csproj">
-      <Project>{8BC34E46-42A3-A925-DC73-E6D9EFA7705E}</Project>
-      <Name>SerializableGUID</Name>
+    <ProjectReference Include="Unity.Behavior.SerializableGUID.csproj">
+      <Project>{729885E0-E69A-0063-217F-C8138A198D5B}</Project>
+      <Name>Unity.Behavior.SerializableGUID</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{8E421866-9BC9-9B4F-FA75-1751B21F3E50}</Project>

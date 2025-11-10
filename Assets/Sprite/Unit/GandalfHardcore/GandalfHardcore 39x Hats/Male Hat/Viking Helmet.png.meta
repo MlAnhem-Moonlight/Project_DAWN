@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 333ef6cbada729340bbfdb412c0efc41
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -740774060153496487
+    second: Viking Helmet_0
+  - first:
+      213: 8876029597060738157
+    second: Viking Helmet_1
+  - first:
+      213: -4354008405727206903
+    second: Viking Helmet_2
+  - first:
+      213: -4062322634432597708
+    second: Viking Helmet_3
+  - first:
+      213: 2765317628498451294
+    second: Viking Helmet_4
+  - first:
+      213: 5024553333732860545
+    second: Viking Helmet_5
+  - first:
+      213: -7794910534452740231
+    second: Viking Helmet_6
+  - first:
+      213: -7602865220732843948
+    second: Viking Helmet_7
+  - first:
+      213: -4932795415502631720
+    second: Viking Helmet_8
+  - first:
+      213: 4006950610885732782
+    second: Viking Helmet_9
+  - first:
+      213: -2905662015706501722
+    second: Viking Helmet_10
+  - first:
+      213: 5241991181988014911
+    second: Viking Helmet_11
+  - first:
+      213: -8725123262850826140
+    second: Viking Helmet_12
+  - first:
+      213: -4822273984109549629
+    second: Viking Helmet_13
+  - first:
+      213: 3660310076538158467
+    second: Viking Helmet_14
+  - first:
+      213: 1887774106978408523
+    second: Viking Helmet_15
+  - first:
+      213: -4326794868181675936
+    second: Viking Helmet_16
+  - first:
+      213: -1775504506531127149
+    second: Viking Helmet_17
+  - first:
+      213: 1442957494011339217
+    second: Viking Helmet_18
+  - first:
+      213: 7854406514954527732
+    second: Viking Helmet_19
+  - first:
+      213: 1224566935159836191
+    second: Viking Helmet_20
+  - first:
+      213: 3452088458427958211
+    second: Viking Helmet_21
+  - first:
+      213: 4655147382877144364
+    second: Viking Helmet_22
+  - first:
+      213: -5134192810728499082
+    second: Viking Helmet_23
+  - first:
+      213: 7061076226820123335
+    second: Viking Helmet_24
+  - first:
+      213: -1359388619640690938
+    second: Viking Helmet_25
+  - first:
+      213: -4136790125910300058
+    second: Viking Helmet_26
+  - first:
+      213: 8467390926361396683
+    second: Viking Helmet_27
+  - first:
+      213: -4775211020107146609
+    second: Viking Helmet_28
+  - first:
+      213: -1934990149821048106
+    second: Viking Helmet_29
+  - first:
+      213: -3205253955797206145
+    second: Viking Helmet_30
+  - first:
+      213: -6014253167617447811
+    second: Viking Helmet_31
+  - first:
+      213: 8532703756141729873
+    second: Viking Helmet_32
+  - first:
+      213: 7080238322772094132
+    second: Viking Helmet_33
+  - first:
+      213: 6600720954922155408
+    second: Viking Helmet_34
+  - first:
+      213: -8609166205322630036
+    second: Viking Helmet_35
+  - first:
+      213: -747187213943042552
+    second: Viking Helmet_36
+  - first:
+      213: 7226439756733443121
+    second: Viking Helmet_37
+  - first:
+      213: -7911807626730564674
+    second: Viking Helmet_38
+  - first:
+      213: 8585602244820727788
+    second: Viking Helmet_39
+  - first:
+      213: 7815128563850835243
+    second: Viking Helmet_40
+  - first:
+      213: 6719496434612531855
+    second: Viking Helmet_41
+  - first:
+      213: 8458001498195876226
+    second: Viking Helmet_42
+  - first:
+      213: -144169320601121054
+    second: Viking Helmet_43
+  - first:
+      213: 7728839944271146446
+    second: Viking Helmet_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Viking Helmet_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 417
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c1ab5caed38b5f0800000000000000
+      internalID: -740774060153496487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 417
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ca8ac24edfd2b70800000000000000
+      internalID: 8876029597060738157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 418
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902a09b6c647393c0800000000000000
+      internalID: -4354008405727206903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 418
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431bd9b461bbf97c0800000000000000
+      internalID: -4062322634432597708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_4
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 418
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b96c95bb1606620800000000000000
+      internalID: 2765317628498451294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 353
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182e624c2accab540800000000000000
+      internalID: 5024553333732860545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 353
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f7ef90b2ae2d390800000000000000
+      internalID: -7794910534452740231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 354
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4580c0b0d523d7690800000000000000
+      internalID: -7602865220732843948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 354
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc4a4564b03b8bb0800000000000000
+      internalID: -4932795415502631720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 353
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9e062d95c8b9730800000000000000
+      internalID: 4006950610885732782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_10
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 353
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ade774aac30da7d0800000000000000
+      internalID: -2905662015706501722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_11
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 354
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b202ee43b4fb840800000000000000
+      internalID: 5241991181988014911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_12
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 354
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4608740ce922ae680800000000000000
+      internalID: -8725123262850826140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7ea876c57d31db0800000000000000
+      internalID: -4822273984109549629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 289
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38df6d71f980cc230800000000000000
+      internalID: 3660310076538158467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48d0a66c88b23a10800000000000000
+      internalID: 1887774106978408523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_16
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0605c02edf224f3c0800000000000000
+      internalID: -4326794868181675936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_17
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3906b1fee042c57e0800000000000000
+      internalID: -1775504506531127149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_18
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 289
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1a888123a660410800000000000000
+      internalID: 1442957494011339217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_19
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3e0656c15700d60800000000000000
+      internalID: 7854406514954527732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_20
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 290
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e04e5b3298ef010800000000000000
+      internalID: 1224566935159836191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_21
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 229
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c303d9b92848ef20800000000000000
+      internalID: 3452088458427958211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 229
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c254b7571e76a9040800000000000000
+      internalID: 4655147382877144364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 229
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678d92c37deafb8b0800000000000000
+      internalID: -5134192810728499082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_24
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 229
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7caa197ca6bfdf160800000000000000
+      internalID: 7061076226820123335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 163
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607ab96b04b722de0800000000000000
+      internalID: -1359388619640690938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 163
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ae5c25c4b2796c0800000000000000
+      internalID: -4136790125910300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 163
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc503247f27328570800000000000000
+      internalID: 8467390926361396683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_28
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 163
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a9bfa90ea0bbdb0800000000000000
+      internalID: -4775211020107146609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_29
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 97
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da5904f5b88525e0800000000000000
+      internalID: -1934990149821048106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 97
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bbac56286a483d0800000000000000
+      internalID: -3205253955797206145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 98
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78e4e2eb94198ca0800000000000000
+      internalID: -6014253167617447811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 98
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1581876abd04a6670800000000000000
+      internalID: 8532703756141729873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_33
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 95
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc20f9ed3f024260800000000000000
+      internalID: 7080238322772094132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_34
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 97
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dbc938cb87a9b50800000000000000
+      internalID: 6600720954922155408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_35
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 33
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c627713f8168880800000000000000
+      internalID: -8609166205322630036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_36
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 31
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e063c003571a5f0800000000000000
+      internalID: -747187213943042552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_37
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 26
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c6bd2eba8794460800000000000000
+      internalID: 7226439756733443121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_38
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 25
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb39f7dc1ec933290800000000000000
+      internalID: -7911807626730564674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_39
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 26
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7f551d0cf262770800000000000000
+      internalID: 8585602244820727788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_40
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 25
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b257652c50ae47c60800000000000000
+      internalID: 7815128563850835243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_41
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 25
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f827596e762704d50800000000000000
+      internalID: 6719496434612531855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289dfa9dc8bd06570800000000000000
+      internalID: 8458001498195876226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_43
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee8f0a44cecffdf0800000000000000
+      internalID: -144169320601121054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Viking Helmet_44
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecda12ceafa524b60800000000000000
+      internalID: 7728839944271146446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

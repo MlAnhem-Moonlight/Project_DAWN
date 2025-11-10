@@ -1,0 +1,1217 @@
+fileFormatVersion: 2
+guid: fe49ffd09f1a527448c268e9a53b1cc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2895525234317004964
+    second: Diamond Sword_0
+  - first:
+      213: 4185164963574811573
+    second: Diamond Sword_1
+  - first:
+      213: 2856588697310684378
+    second: Diamond Sword_2
+  - first:
+      213: 264060090945831404
+    second: Diamond Sword_3
+  - first:
+      213: 2466733070050941942
+    second: Diamond Sword_4
+  - first:
+      213: -2687354306557981544
+    second: Diamond Sword_5
+  - first:
+      213: 2520547533750545684
+    second: Diamond Sword_6
+  - first:
+      213: -8255695324984799708
+    second: Diamond Sword_7
+  - first:
+      213: -2383322800580831829
+    second: Diamond Sword_8
+  - first:
+      213: 1170350623466135091
+    second: Diamond Sword_9
+  - first:
+      213: -4141127814779561518
+    second: Diamond Sword_10
+  - first:
+      213: 8959003419246328847
+    second: Diamond Sword_11
+  - first:
+      213: 865457406981129099
+    second: Diamond Sword_12
+  - first:
+      213: 8035928724097381592
+    second: Diamond Sword_13
+  - first:
+      213: -1558467409282329950
+    second: Diamond Sword_14
+  - first:
+      213: -3548213497559983597
+    second: Diamond Sword_15
+  - first:
+      213: -1024458708667985997
+    second: Diamond Sword_16
+  - first:
+      213: -4983535417669072117
+    second: Diamond Sword_17
+  - first:
+      213: 3689712986643425004
+    second: Diamond Sword_18
+  - first:
+      213: -1570010757730599015
+    second: Diamond Sword_19
+  - first:
+      213: -3209826386590644218
+    second: Diamond Sword_20
+  - first:
+      213: -4261985003549862735
+    second: Diamond Sword_21
+  - first:
+      213: -159404522986722052
+    second: Diamond Sword_22
+  - first:
+      213: -112487249229597107
+    second: Diamond Sword_23
+  - first:
+      213: -6489018379164293618
+    second: Diamond Sword_24
+  - first:
+      213: -6500207835503030105
+    second: Diamond Sword_25
+  - first:
+      213: 6252897334370355137
+    second: Diamond Sword_26
+  - first:
+      213: 6888448537907389277
+    second: Diamond Sword_27
+  - first:
+      213: -1394321760337304167
+    second: Diamond Sword_28
+  - first:
+      213: -5268809291656005852
+    second: Diamond Sword_29
+  - first:
+      213: -5649405955762542860
+    second: Diamond Sword_30
+  - first:
+      213: 2773430593152988404
+    second: Diamond Sword_31
+  - first:
+      213: 9032402813639453611
+    second: Diamond Sword_32
+  - first:
+      213: 7260935372871923560
+    second: Diamond Sword_33
+  - first:
+      213: -5918841611734334451
+    second: Diamond Sword_34
+  - first:
+      213: -1084994714980121585
+    second: Diamond Sword_35
+  - first:
+      213: -8107773549970339935
+    second: Diamond Sword_36
+  - first:
+      213: -2351953685864046789
+    second: Diamond Sword_37
+  - first:
+      213: -1842880578427121012
+    second: Diamond Sword_38
+  - first:
+      213: 7890612916828325595
+    second: Diamond Sword_39
+  - first:
+      213: -5445475071613817341
+    second: Diamond Sword_40
+  - first:
+      213: -3776714275119313274
+    second: Diamond Sword_41
+  - first:
+      213: 5847486335149324306
+    second: Diamond Sword_42
+  - first:
+      213: -316850116870296060
+    second: Diamond Sword_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Diamond Sword_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 389
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a015a50cd8fe2820800000000000000
+      internalID: 2895525234317004964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb89444c51b41a30800000000000000
+      internalID: 4185164963574811573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 391
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4699c0944a4a720800000000000000
+      internalID: 2856588697310684378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce10f20f0412aa300800000000000000
+      internalID: 264060090945831404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_4
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 390
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb581c68a89b3220800000000000000
+      internalID: 2466733070050941942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 331
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ccef31f7994bad0800000000000000
+      internalID: -2687354306557981544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 332
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d20b4a0a8caf220800000000000000
+      internalID: 2520547533750545684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 332
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e8d6ca7d0ed6d80800000000000000
+      internalID: -8255695324984799708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 333
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba55a4e4a8cbceed0800000000000000
+      internalID: -2383322800580831829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_9
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 331
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e1b56f0bbed3010800000000000000
+      internalID: 1170350623466135091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_10
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 331
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9139e6132c786c0800000000000000
+      internalID: -4141127814779561518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_11
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 333
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cffa99426c45c70800000000000000
+      internalID: 8959003419246328847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_12
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 333
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83475f1de8b20c00800000000000000
+      internalID: 865457406981129099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 270
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4be20399a558f60800000000000000
+      internalID: 8035928724097381592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 269
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a214bbf5263f5ae0800000000000000
+      internalID: -1558467409282329950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_15
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 268
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ad0ba8f9632cec0800000000000000
+      internalID: -3548213497559983597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 269
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf0ac67b3468c1f0800000000000000
+      internalID: -1024458708667985997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 269
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bc14801fce6dab0800000000000000
+      internalID: -4983535417669072117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_18
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 268
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6e604996e743330800000000000000
+      internalID: 3689712986643425004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_19
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 269
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ffcebb883363ae0800000000000000
+      internalID: -1570010757730599015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_20
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 269
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608c69468e76473d0800000000000000
+      internalID: -3209826386590644218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_21
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 204
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b45e5168336ad4c0800000000000000
+      internalID: -4261985003549862735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_22
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 204
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc29cf4e6ea9cdf0800000000000000
+      internalID: -159404522986722052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 204
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46b8eb517d507ef0800000000000000
+      internalID: -112487249229597107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_24
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 204
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e066ee81a2062f5a0800000000000000
+      internalID: -6489018379164293618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_25
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 170
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a091a6c96f9ac5a0800000000000000
+      internalID: -6500207835503030105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_26
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 170
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7c1201ff0c6c650800000000000000
+      internalID: 6252897334370355137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_27
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 170
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53678bd27fa89f50800000000000000
+      internalID: 6888448537907389277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_28
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 170
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9956f741fbf56ace0800000000000000
+      internalID: -1394321760337304167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 104
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427f0955ddd61e6b0800000000000000
+      internalID: -5268809291656005852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 102
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f62cce07374991b0800000000000000
+      internalID: -5649405955762542860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_31
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 102
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4b5122e643d7620800000000000000
+      internalID: 2773430593152988404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_32
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 81
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babe737d08a895d70800000000000000
+      internalID: 9032402813639453611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 89
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8677915604604c460800000000000000
+      internalID: 7260935372871923560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 69
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0446cad9ec0cdda0800000000000000
+      internalID: -5918841611734334451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 72
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f040f662e0351f0f0800000000000000
+      internalID: -1084994714980121585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_36
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 5
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7c5b2c9e66b7f80800000000000000
+      internalID: -8107773549970339935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_37
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f17e9759e2c5fd0800000000000000
+      internalID: -2351953685864046789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_38
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82926fb0e5cc66e0800000000000000
+      internalID: -1842880578427121012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd649af34a6118d60800000000000000
+      internalID: 7890612916828325595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_40
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ea6331649cd64b0800000000000000
+      internalID: -5445475071613817341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_41
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ecd5d606a669bc0800000000000000
+      internalID: -3776714275119313274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_42
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 218b68b27d1762150800000000000000
+      internalID: 5847486335149324306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamond Sword_43
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 187
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ea7e85f725a9bf0800000000000000
+      internalID: -316850116870296060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: e8aa5734eec0ba74a8a6965e31aa41f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6574468552104159997
+    second: Female Circle Shield_0
+  - first:
+      213: 4016157614242708768
+    second: Female Circle Shield_1
+  - first:
+      213: 4598410948700243833
+    second: Female Circle Shield_2
+  - first:
+      213: 4506034612455050196
+    second: Female Circle Shield_3
+  - first:
+      213: 7881218725399838010
+    second: Female Circle Shield_4
+  - first:
+      213: -1324024014888134081
+    second: Female Circle Shield_5
+  - first:
+      213: 8308228575501551224
+    second: Female Circle Shield_6
+  - first:
+      213: 4160680997105666128
+    second: Female Circle Shield_7
+  - first:
+      213: 1022849315717608874
+    second: Female Circle Shield_8
+  - first:
+      213: -5394168500293047492
+    second: Female Circle Shield_9
+  - first:
+      213: 5625809990999337655
+    second: Female Circle Shield_10
+  - first:
+      213: -9187338625475596664
+    second: Female Circle Shield_11
+  - first:
+      213: 7312251317280859809
+    second: Female Circle Shield_12
+  - first:
+      213: 3516738666564711820
+    second: Female Circle Shield_13
+  - first:
+      213: -1020278621939040682
+    second: Female Circle Shield_14
+  - first:
+      213: -4065779658341300049
+    second: Female Circle Shield_15
+  - first:
+      213: 2816152496141392701
+    second: Female Circle Shield_16
+  - first:
+      213: -1202490221561995764
+    second: Female Circle Shield_17
+  - first:
+      213: -599129118885854171
+    second: Female Circle Shield_18
+  - first:
+      213: 4574179613378212186
+    second: Female Circle Shield_19
+  - first:
+      213: -5490195186161227245
+    second: Female Circle Shield_20
+  - first:
+      213: -2182301572910205325
+    second: Female Circle Shield_21
+  - first:
+      213: 2901587493026577932
+    second: Female Circle Shield_22
+  - first:
+      213: -336528729936065226
+    second: Female Circle Shield_23
+  - first:
+      213: -2407670887657230738
+    second: Female Circle Shield_24
+  - first:
+      213: 5304364845592176504
+    second: Female Circle Shield_25
+  - first:
+      213: -6654135809979086764
+    second: Female Circle Shield_26
+  - first:
+      213: -5202827562407428940
+    second: Female Circle Shield_27
+  - first:
+      213: 8884570835567992715
+    second: Female Circle Shield_28
+  - first:
+      213: -1128296956098650798
+    second: Female Circle Shield_29
+  - first:
+      213: -5806825039922507748
+    second: Female Circle Shield_30
+  - first:
+      213: 2700413022761501023
+    second: Female Circle Shield_31
+  - first:
+      213: 2669098874198605619
+    second: Female Circle Shield_32
+  - first:
+      213: 1225213527241802323
+    second: Female Circle Shield_33
+  - first:
+      213: -9171031678762716471
+    second: Female Circle Shield_34
+  - first:
+      213: 371692500213094268
+    second: Female Circle Shield_35
+  - first:
+      213: 6065964647507592512
+    second: Female Circle Shield_36
+  - first:
+      213: 3146828197257547353
+    second: Female Circle Shield_37
+  - first:
+      213: -9100159579043423299
+    second: Female Circle Shield_38
+  - first:
+      213: -4322012332578034176
+    second: Female Circle Shield_39
+  - first:
+      213: -6559039494702554903
+    second: Female Circle Shield_40
+  - first:
+      213: -6729979893230599927
+    second: Female Circle Shield_41
+  - first:
+      213: -1847516445797540987
+    second: Female Circle Shield_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Female Circle Shield_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 392
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa252ba0543d3b50800000000000000
+      internalID: 6574468552104159997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 393
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dbae652124cb730800000000000000
+      internalID: 4016157614242708768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 394
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9778b88f466d0df30800000000000000
+      internalID: 4598410948700243833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 393
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db8ff42b96a88e30800000000000000
+      internalID: 4506034612455050196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_4
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 393
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d3d9c9ca6bf5d60800000000000000
+      internalID: 7881218725399838010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 329
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a91866c2f10ade0800000000000000
+      internalID: -1324024014888134081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 329
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876058bded1cc4370800000000000000
+      internalID: 8308228575501551224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_7
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 330
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05883389255bdb930800000000000000
+      internalID: 4160680997105666128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_8
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 330
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5791a8804e13e00800000000000000
+      internalID: 1022849315717608874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 328
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b6e6914501425b0800000000000000
+      internalID: -5394168500293047492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_10
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 328
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7baeb574164e21e40800000000000000
+      internalID: 5625809990999337655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_11
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 329
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e2d4d5234008080800000000000000
+      internalID: -9187338625475596664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_12
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 329
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a668e2c4d55a7560800000000000000
+      internalID: 7312251317280859809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 265
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85787c4f27fdc030800000000000000
+      internalID: 3516738666564711820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 265
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ef56fbffd37d1f0800000000000000
+      internalID: -1020278621939040682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_15
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 265
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8ce8131f27397c0800000000000000
+      internalID: -4065779658341300049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 266
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b56dd46cbf41720800000000000000
+      internalID: 2816152496141392701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_17
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 268
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e9ae9b385ef4fe0800000000000000
+      internalID: -1202490221561995764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_18
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 265
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524473e9d377fa7f0800000000000000
+      internalID: -599129118885854171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_19
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 266
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51fd329f10ca7f30800000000000000
+      internalID: 4574179613378212186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 266
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31aec450198eec3b0800000000000000
+      internalID: -5490195186161227245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37639e12848e6b1e0800000000000000
+      internalID: -2182301572910205325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 207
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0eb09e9372844820800000000000000
+      internalID: 2901587493026577932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_23
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 207
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d827337e8645bf0800000000000000
+      internalID: -336528729936065226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_24
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 207
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e2425851c369ed0800000000000000
+      internalID: -2407670887657230738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_25
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 158
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877679c29b3ec9940800000000000000
+      internalID: 5304364845592176504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_26
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 158
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4588df66cb2c7a3a0800000000000000
+      internalID: -6654135809979086764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_27
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 158
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcf713d5e7dbc7b0800000000000000
+      internalID: -5202827562407428940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 158
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f53db3a165c4b70800000000000000
+      internalID: 8884570835567992715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_29
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 72
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25dd59a75eb7750f0800000000000000
+      internalID: -1128296956098650798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_30
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 74
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10539e54630a6fa0800000000000000
+      internalID: -5806825039922507748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_31
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 75
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51c988365bc97520800000000000000
+      internalID: 2700413022761501023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_32
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 76
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fb00bd84b8a0520800000000000000
+      internalID: 2669098874198605619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_33
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 73
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35240492635d00110800000000000000
+      internalID: 1225213527241802323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_34
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 71
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c27e734743f9b080800000000000000
+      internalID: -9171031678762716471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_35
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 7
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77d0e01c54882500800000000000000
+      internalID: 371692500213094268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_36
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 6
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04584c245b2ae2450800000000000000
+      internalID: 6065964647507592512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_37
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e08b2a297cbab20800000000000000
+      internalID: 3146828197257547353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_38
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb9fbbd31db5b180800000000000000
+      internalID: -9100159579043423299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_39
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e24d9bea02504c0800000000000000
+      internalID: -4322012332578034176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_40
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e02f72b45c99f4a0800000000000000
+      internalID: -6559039494702554903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_41
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 0
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901087ea1fe4a92a0800000000000000
+      internalID: -6729979893230599927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Female Circle Shield_42
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b9b83c49d4c56e0800000000000000
+      internalID: -1847516445797540987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

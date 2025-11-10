@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 78196da2ec7c8f94ebd15155244bae3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8418551177661879735
+    second: Guard Helmet_0
+  - first:
+      213: 1513160323432531027
+    second: Guard Helmet_1
+  - first:
+      213: -5265194773967008477
+    second: Guard Helmet_2
+  - first:
+      213: -3154772396443901009
+    second: Guard Helmet_3
+  - first:
+      213: 5251707925002373733
+    second: Guard Helmet_4
+  - first:
+      213: -4055088897162262172
+    second: Guard Helmet_5
+  - first:
+      213: -4041012764268764058
+    second: Guard Helmet_6
+  - first:
+      213: 8199067455877332530
+    second: Guard Helmet_7
+  - first:
+      213: 1255886169864459454
+    second: Guard Helmet_8
+  - first:
+      213: -9127738966088891828
+    second: Guard Helmet_9
+  - first:
+      213: 7149629656040676036
+    second: Guard Helmet_10
+  - first:
+      213: -3147765308253431938
+    second: Guard Helmet_11
+  - first:
+      213: 4183487437145065772
+    second: Guard Helmet_12
+  - first:
+      213: -7666239960875453267
+    second: Guard Helmet_13
+  - first:
+      213: -2006028870664636740
+    second: Guard Helmet_14
+  - first:
+      213: 6368114154813214799
+    second: Guard Helmet_15
+  - first:
+      213: -2546199866341532870
+    second: Guard Helmet_16
+  - first:
+      213: -3267617623316956823
+    second: Guard Helmet_17
+  - first:
+      213: -3693857236641902345
+    second: Guard Helmet_18
+  - first:
+      213: -2169846017639301409
+    second: Guard Helmet_19
+  - first:
+      213: 2097220662847039292
+    second: Guard Helmet_20
+  - first:
+      213: -2937906845098220880
+    second: Guard Helmet_21
+  - first:
+      213: -8638264998939540521
+    second: Guard Helmet_22
+  - first:
+      213: 2231800712114643236
+    second: Guard Helmet_23
+  - first:
+      213: -886198602513409586
+    second: Guard Helmet_24
+  - first:
+      213: -9052962423710829494
+    second: Guard Helmet_25
+  - first:
+      213: -2277606057426069604
+    second: Guard Helmet_26
+  - first:
+      213: 6077454784941675971
+    second: Guard Helmet_27
+  - first:
+      213: 82667576112524883
+    second: Guard Helmet_28
+  - first:
+      213: 8741515614014082389
+    second: Guard Helmet_29
+  - first:
+      213: -3020366531367639523
+    second: Guard Helmet_30
+  - first:
+      213: -3612225000246773583
+    second: Guard Helmet_31
+  - first:
+      213: -743510869931762048
+    second: Guard Helmet_32
+  - first:
+      213: 754754069748245114
+    second: Guard Helmet_33
+  - first:
+      213: 6284385268443749507
+    second: Guard Helmet_34
+  - first:
+      213: -8685806538842570511
+    second: Guard Helmet_35
+  - first:
+      213: -4142294596073712959
+    second: Guard Helmet_36
+  - first:
+      213: -7698165889074070575
+    second: Guard Helmet_37
+  - first:
+      213: 8630873912446721099
+    second: Guard Helmet_38
+  - first:
+      213: -6222252529769325568
+    second: Guard Helmet_39
+  - first:
+      213: -3031204330184880457
+    second: Guard Helmet_40
+  - first:
+      213: 5928221897899476388
+    second: Guard Helmet_41
+  - first:
+      213: 7829258077039495326
+    second: Guard Helmet_42
+  - first:
+      213: 1115115791240318528
+    second: Guard Helmet_43
+  - first:
+      213: -4623071954738698520
+    second: Guard Helmet_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Guard Helmet_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 420
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a640cae4c4b2b80800000000000000
+      internalID: -8418551177661879735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 420
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354496e0c43dff410800000000000000
+      internalID: 1513160323432531027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 421
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d0470df354ee6b0800000000000000
+      internalID: -5265194773967008477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 421
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3e0ca583ff734d0800000000000000
+      internalID: -3154772396443901009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 421
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aced57880d1e840800000000000000
+      internalID: 5251707925002373733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 356
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4694300022e69b7c0800000000000000
+      internalID: -4055088897162262172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 356
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664e0f41d407be7c0800000000000000
+      internalID: -4041012764268764058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 357
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23eb80d1960f8c170800000000000000
+      internalID: 8199067455877332530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 357
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4d81941ddcd6110800000000000000
+      internalID: 1255886169864459454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 356
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c7cb65c1c35180800000000000000
+      internalID: -9127738966088891828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 356
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca17e3ba46983360800000000000000
+      internalID: 7149629656040676036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_11
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 357
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7791453124e054d0800000000000000
+      internalID: -3147765308253431938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 357
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c294755b8abbe0a30800000000000000
+      internalID: 4183487437145065772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da43d118f5b0c9590800000000000000
+      internalID: -7666239960875453267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_14
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 292
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb63bdade572924e0800000000000000
+      internalID: -2006028870664636740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_15
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4057c68516106850800000000000000
+      internalID: 6368114154813214799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_16
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bd09f36b41aacd0800000000000000
+      internalID: -2546199866341532870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969f26c851717a2d0800000000000000
+      internalID: -3267617623316956823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_18
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 292
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f014f60a68ccbcc0800000000000000
+      internalID: -3693857236641902345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_19
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde30551b8823e1e0800000000000000
+      internalID: -2169846017639301409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_20
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 293
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c376b90d413da1d10800000000000000
+      internalID: 2097220662847039292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 232
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b26bb24a457a37d0800000000000000
+      internalID: -2937906845098220880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_22
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 232
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3c48e30c7be1880800000000000000
+      internalID: -8638264998939540521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_23
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 232
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421ae0f4ce2f8fe10800000000000000
+      internalID: 2231800712114643236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 232
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec99db8f01793b3f0800000000000000
+      internalID: -886198602513409586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_25
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 166
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44b1c9e3aa6d5280800000000000000
+      internalID: -9052962423710829494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 166
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9757d8ab515460e0800000000000000
+      internalID: -2277606057426069604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_27
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 166
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c552fa5de4775450800000000000000
+      internalID: 6077454784941675971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 166
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e21a4f8b1b52100800000000000000
+      internalID: 82667576112524883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_29
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 100
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d07dbe22a105970800000000000000
+      internalID: 8741515614014082389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 100
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d166a5e64a08516d0800000000000000
+      internalID: -3020366531367639523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_31
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 101
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8718b208cceddc0800000000000000
+      internalID: -3612225000246773583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 101
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e53179dc48ea5f0800000000000000
+      internalID: -743510869931762048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_33
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 98
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72ef1cd3dc697a00800000000000000
+      internalID: 754754069748245114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_34
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 100
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c99450b1f963750800000000000000
+      internalID: 6284385268443749507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_35
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 36
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f00688e8f0d57780800000000000000
+      internalID: -8685806538842570511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_36
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 34
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2910ef20d9386c0800000000000000
+      internalID: -4142294596073712959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_37
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 29
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbf5b719ee9a2590800000000000000
+      internalID: -7698165889074070575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 28
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c9294581607c770800000000000000
+      internalID: 8630873912446721099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_39
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 29
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cd2548a4e16a9a0800000000000000
+      internalID: -6222252529769325568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_40
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 28
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be44b1c8bffee5d0800000000000000
+      internalID: -3031204330184880457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_41
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 28
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a58df53866454250800000000000000
+      internalID: 5928221897899476388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_42
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e980cc86dbc17ac60800000000000000
+      internalID: 7829258077039495326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_43
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ece4c67efa97f00800000000000000
+      internalID: 1115115791240318528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Helmet_44
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 0
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6aabe1d8c87dfb0800000000000000
+      internalID: -4623071954738698520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

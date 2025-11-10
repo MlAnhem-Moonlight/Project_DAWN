@@ -1,0 +1,917 @@
+fileFormatVersion: 2
+guid: 4aadb968bb0ad644eb54ea7f365a8bee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5167572959589887749
+    second: Opera Gloves red_0
+  - first:
+      213: -9147607566662333714
+    second: Opera Gloves red_1
+  - first:
+      213: 233411097565298394
+    second: Opera Gloves red_2
+  - first:
+      213: -5985949379357847744
+    second: Opera Gloves red_3
+  - first:
+      213: 160049938063429750
+    second: Opera Gloves red_4
+  - first:
+      213: 780521262930258733
+    second: Opera Gloves red_5
+  - first:
+      213: 1726241783081741260
+    second: Opera Gloves red_6
+  - first:
+      213: 5185294748354033552
+    second: Opera Gloves red_7
+  - first:
+      213: 4337438475706970134
+    second: Opera Gloves red_8
+  - first:
+      213: -6389540684027947301
+    second: Opera Gloves red_9
+  - first:
+      213: 5091662294364762721
+    second: Opera Gloves red_10
+  - first:
+      213: 734708248268707780
+    second: Opera Gloves red_11
+  - first:
+      213: 2048389623871307470
+    second: Opera Gloves red_12
+  - first:
+      213: 7341194136052339663
+    second: Opera Gloves red_13
+  - first:
+      213: -3679936940801765194
+    second: Opera Gloves red_14
+  - first:
+      213: 3901017970323574738
+    second: Opera Gloves red_15
+  - first:
+      213: 3042713156390092380
+    second: Opera Gloves red_16
+  - first:
+      213: 3072184265459720410
+    second: Opera Gloves red_17
+  - first:
+      213: -1577520798500745912
+    second: Opera Gloves red_18
+  - first:
+      213: 819836499944954977
+    second: Opera Gloves red_19
+  - first:
+      213: -459170738518116173
+    second: Opera Gloves red_20
+  - first:
+      213: -2100745577723381495
+    second: Opera Gloves red_21
+  - first:
+      213: -2019754474543178497
+    second: Opera Gloves red_22
+  - first:
+      213: -7450789043015808576
+    second: Opera Gloves red_23
+  - first:
+      213: -6407527687231002142
+    second: Opera Gloves red_24
+  - first:
+      213: 6146557882396296350
+    second: Opera Gloves red_25
+  - first:
+      213: 3094060602782686663
+    second: Opera Gloves red_26
+  - first:
+      213: -3539352570957846622
+    second: Opera Gloves red_27
+  - first:
+      213: -5410496039444264420
+    second: Opera Gloves red_28
+  - first:
+      213: -9055208596395722817
+    second: Opera Gloves red_29
+  - first:
+      213: 2845400744514123418
+    second: Opera Gloves red_30
+  - first:
+      213: -4589151235387132615
+    second: Opera Gloves red_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Opera Gloves red_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 334
+        width: 15
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fe44f4a38e6b740800000000000000
+      internalID: 5167572959589887749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 271
+        width: 95
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea8a6c526b2d0180800000000000000
+      internalID: -9147607566662333714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 271
+        width: 96
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade7305182e3d3300800000000000000
+      internalID: 233411097565298394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 270
+        width: 95
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fc7ef11c2adeca0800000000000000
+      internalID: -5985949379357847744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_4
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 271
+        width: 10
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6701898129c983200800000000000000
+      internalID: 160049938063429750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 274
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2be89804f7f4da00800000000000000
+      internalID: 780521262930258733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 271
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb260571c7d4f710800000000000000
+      internalID: 1726241783081741260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_7
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 213
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097375bc91ed5f740800000000000000
+      internalID: 5185294748354033552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 213
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61030ab105da13c30800000000000000
+      internalID: 4337438475706970134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_9
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 213
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd69b92e99ac357a0800000000000000
+      internalID: -6389540684027947301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 213
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162bcd341e739a640800000000000000
+      internalID: 5091662294364762721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 213
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c71b975245323a00800000000000000
+      internalID: 734708248268707780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_12
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 213
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecef17492875d6c10800000000000000
+      internalID: 2048389623871307470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_13
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 213
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc39492eb2921e560800000000000000
+      internalID: 7341194136052339663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_14
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 213
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b05ca779dc3eecc0800000000000000
+      internalID: -3679936940801765194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_15
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 162
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df4d8fec23332630800000000000000
+      internalID: 3901017970323574738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_16
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 160
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ef908ae73e93a20800000000000000
+      internalID: 3042713156390092380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_17
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 162
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad06543ff4792aa20800000000000000
+      internalID: 3072184265459720410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_18
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 160
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d829b11358b1ae0800000000000000
+      internalID: -1577520798500745912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 162
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c5e19f3f4a06b00800000000000000
+      internalID: 819836499944954977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_20
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 160
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8bf5765a2b0a9f0800000000000000
+      internalID: -459170738518116173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_21
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 162
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909335cf607a8d2e0800000000000000
+      internalID: -2100745577723381495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_22
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 160
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc195ba10468f3e0800000000000000
+      internalID: -2019754474543178497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_23
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 12
+        width: 99
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c98ba267da799890800000000000000
+      internalID: -7450789043015808576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_24
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 5
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9ad1a5483e317a0800000000000000
+      internalID: -6407527687231002142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_25
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 83
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94cb9304d5fc4550800000000000000
+      internalID: 6146557882396296350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_26
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 6
+        width: 16
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd9466a9bf40fa20800000000000000
+      internalID: 3094060602782686663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_27
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 5
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a72139c691b1eec0800000000000000
+      internalID: -3539352570957846622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_28
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 79
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a4446a48e0ae4b0800000000000000
+      internalID: -5410496039444264420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_29
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 5
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7f4c412cf655280800000000000000
+      internalID: -9055208596395722817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_30
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 0
+        width: 104
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96756cc6e4ec7720800000000000000
+      internalID: 2845400744514123418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Opera Gloves red_31
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935743a044f0050c0800000000000000
+      internalID: -4589151235387132615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

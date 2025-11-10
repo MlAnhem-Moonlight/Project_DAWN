@@ -59,120 +59,119 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@166eda91cea7\Runtime\SourceGenerators\netstandard2.0\EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\SetObjectListActiveAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\RunSubgraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\TimeoutModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\RuntimeBlackboardAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Navigation\NavigateToLocationAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Navigation\PatrolAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Events\EventAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Blackboard\SetVariableValueAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\SucceederModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Attributes\EventChannelDescriptionAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\AddTorqueAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Attributes\BlackboardEnumAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Components\BehaviorGraphCollisionEvents.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\CooldownModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Resource\PlayAudioAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Modifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\WaitFramesAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\StartOnEvent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorTriggerAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\ScaleAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\RepeaterModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Resource\PlayParticleSystemAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\CheckCollisionsInRadiusAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\BehaviorGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\SelectorComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\RandomComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Conditional\ConditionalGuardAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Utilities\GameObjectExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\RepeatWhileCondition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Joins\ParallelWaitComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Scene\UnloadSceneAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\CheckDistanceCondition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForTriggerAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Delay\WaitAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\InstantiateObjectAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\TranslateAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Utilities\RuntimeSerializationUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\ParallelAllComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorIntAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\SwitchComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\ParallelAnyComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForTrigger2DAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\SharedBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Attributes\ConditionAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Attributes\ComparisonAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\SetRotationAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\RotateAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\ComponentToComponentBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Events\EventChannel.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\SetPositionAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Attributes\NodeDescriptionAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\SetObjectActiveAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForCollision2DAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\ConditionUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\Condition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\BehaviorGraphModule.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\SetPositionToTargetAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForCollisionAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Join.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\LookAtAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\UnityObjectToUnityObjectBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\SetVelocityAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\DestroyObjectAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\GameObjectToComponentBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\IConditionSerializationCallbackReceiver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\VariableValueChangedCondition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\MathTypesCastBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Delay\WaitRange.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\RunSubgraphDynamic.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\WaitForPhysicsMessageAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Navigation\NavigateToTargetAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Utilities\NavigationUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\IRepeater.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Node.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\IParent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\AttachObjectAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorFloatAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\BlackboardVariableCaster.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\ComponentToGameObjectBlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\BlackboardVariable.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\Start.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\VariableComparisonCondition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\Inverter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\IConditional.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Scene\LoadSceneAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\ConditionOperator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Find\FindClosestWithTagAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\SequenceComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\AddForceAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Components\BehaviorGraphAgent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Conditions\ComparisonType.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Composites\BranchingConditionComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\BlackboardReference.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorBoolAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\GameObject\DontDestroyOnLoadAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Action.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\DebugNodes.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Utilities\StringExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\Aborts\RestartModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\RepeatUntilModifierModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Decorators\Aborts\AbortModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Find\FindObjectWithTagAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Physics\AddExplosiveForceAction.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Blackboard\Blackboard.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\BehaviorGraphDebugInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Execution\Nodes\Actions\Transform\SetScaleAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\SetObjectListActiveAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\RunSubgraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\TimeoutModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\RuntimeBlackboardAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Navigation\NavigateToLocationAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Navigation\PatrolAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Events\EventAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Blackboard\SetVariableValueAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\SucceederModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Attributes\EventChannelDescriptionAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\AddTorqueAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Attributes\BlackboardEnumAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Components\BehaviorGraphCollisionEvents.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\CooldownModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Resource\PlayAudioAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Modifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\WaitFramesAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\StartOnEvent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorTriggerAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\ScaleAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\RepeaterModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Resource\PlayParticleSystemAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\CheckCollisionsInRadiusAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\BehaviorGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\SelectorComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\RandomComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Conditional\ConditionalGuardAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Utilities\GameObjectExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\RepeatWhileCondition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Joins\ParallelWaitComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Scene\UnloadSceneAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\CheckDistanceCondition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\WaitForTriggerAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Delay\WaitAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\InstantiateObjectAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\TranslateAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Utilities\RuntimeSerializationUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\ParallelAllComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorIntAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\SwitchComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\ParallelAnyComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\WaitForTrigger2DAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\SharedBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Attributes\ConditionAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Attributes\ComparisonAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\SetRotationAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\RotateAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\ComponentToComponentBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Events\EventChannel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\SetPositionAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Attributes\NodeDescriptionAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\SetObjectActiveAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\WaitForCollision2DAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\ConditionUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\Condition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\BehaviorGraphModule.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\SetPositionToTargetAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\WaitForCollisionAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Join.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\LookAtAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\UnityObjectToUnityObjectBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\SetVelocityAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\DestroyObjectAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\GameObjectToComponentBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\IConditionSerializationCallbackReceiver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\VariableValueChangedCondition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\MathTypesCastBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Delay\WaitRange.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\RunSubgraphDynamic.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\WaitForPhysicsMessageAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Navigation\NavigateToTargetAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Utilities\NavigationUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\IRepeater.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Node.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\IParent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\AttachObjectAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorFloatAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\BlackboardVariableCaster.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\ComponentToGameObjectBlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\BlackboardVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\Start.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\VariableComparisonCondition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\Inverter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\IConditional.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Scene\LoadSceneAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\ConditionOperator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Find\FindClosestWithTagAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\SequenceComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\AddForceAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Components\BehaviorGraphAgent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Conditions\ComparisonType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Composites\BranchingConditionComposite.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\BlackboardReference.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Animation\SetAnimatorBoolAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\GameObject\DontDestroyOnLoadAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Action.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\DebugNodes.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Utilities\StringExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\Aborts\RestartModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\RepeatUntilModifierModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Decorators\Aborts\AbortModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Find\FindObjectWithTagAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Physics\AddExplosiveForceAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Blackboard\Blackboard.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\BehaviorGraphDebugInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Execution\Nodes\Actions\Transform\SetScaleAction.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.behavior@3aef49b1615b\Runtime\Unity.Behavior.asmdef" />
+    <None Include="Library\PackageCache\com.unity.behavior@e4cb49353899\Runtime\Unity.Behavior.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -648,7 +647,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -684,7 +683,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.YamlDotNet">
@@ -692,7 +691,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Meryel.UnityCodeAssist.Newtonsoft.Json">
@@ -712,7 +711,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@b4d700247d4b\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
@@ -1221,13 +1220,9 @@
       <Project>{4113630D-CDAA-1616-34A1-C9435DD3E020}</Project>
       <Name>Unity.Behavior.Serialization</Name>
     </ProjectReference>
-    <ProjectReference Include="SerializableGUID.csproj">
-      <Project>{8BC34E46-42A3-A925-DC73-E6D9EFA7705E}</Project>
-      <Name>SerializableGUID</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Behavior.GraphFramework.csproj">
-      <Project>{4AAFBCB7-3897-ACF6-E4C4-0274F8F47030}</Project>
-      <Name>Unity.Behavior.GraphFramework</Name>
+    <ProjectReference Include="Unity.Behavior.SerializableGUID.csproj">
+      <Project>{729885E0-E69A-0063-217F-C8138A198D5B}</Project>
+      <Name>Unity.Behavior.SerializableGUID</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{3CFCCED8-E937-1DB4-1F72-B4BD66DBF618}</Project>
