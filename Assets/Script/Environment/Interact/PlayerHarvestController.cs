@@ -4,59 +4,54 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Cinemachine;
 
-[RequireComponent(typeof(Collider2D))] // make sure player has trigger collider
+[RequireComponent(typeof(Collider2D))]
 public class PlayerHarvestController : MonoBehaviour
 {
     [Header("Interaction")]
     public float holdSeconds;
-    public GameObject uiObject; // Reference to existing UI object on canvas (not prefab)
-    public float interactionRadius = 1.5f; // optional if using Physics2D.OverlapCircle fallback
+    public GameObject uiObject;
+    public float interactionRadius = 1.5f;
 
     [Header("Selection Visual")]
-    public GameObject selectionIndicatorPrefab; // Visual indicator for selected target
+    public GameObject selectionIndicatorPrefab;
+    public GameObject actionPrefab; // ⚡ Prefab hiển thị action (vd: icon phím E, nút hành động)
+    private GameObject actionInstance; // instance đang hiển thị
+    public Vector3 actionOffset = new Vector3(0, 1f, 0); // khoảng cách hiển thị trên đầu target
 
     [Header("Material Highlighting")]
-    public Material highlightMaterial; // Material để highlight target
-    public Color targetColor = Color.yellow; // Màu cho object được target
-    public string colorPropertyName = "_Color"; // Tên property color trong material (thường là "_Color" hoặc "_BaseColor")
+    public Material highlightMaterial;
+    public Color targetColor = Color.yellow;
+    public string colorPropertyName = "_Color";
 
     private List<Harvestable> nearby = new List<Harvestable>();
     private Harvestable currentTarget;
-    private int currentTargetIndex = -1; // Index of currently selected target
+    private int currentTargetIndex = -1;
 
     private GameObject selectionIndicator;
     private Image fillImage;
     private float holdTimer = 0f;
     private bool isHarvesting = false;
 
-    // Để lưu trữ material gốc
     private Dictionary<Harvestable, Material> originalMaterials = new Dictionary<Harvestable, Material>();
     private Dictionary<Harvestable, Color> originalColors = new Dictionary<Harvestable, Color>();
 
     private void Awake()
     {
-        // Get the fill image from the existing UI object
         if (uiObject != null)
         {
             fillImage = uiObject.GetComponentInChildren<Image>();
-            uiObject.SetActive(false); // Hide initially
+            uiObject.SetActive(false);
         }
     }
 
-    //If you use player trigger(recommended) :
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log($"Trigger entered: {other.name}");
         var h = other.GetComponent<Harvestable>();
         if (h != null && !nearby.Contains(h) && !h.isHarvested)
         {
-            //Debug.Log($"Harvestable entered: {h.name}");
             nearby.Add(h);
-
-            // Lưu material gốc
             SaveOriginalMaterial(h);
 
-            // Nếu chưa có target nào được chọn, tự động chọn cái đầu tiên
             if (currentTarget == null)
             {
                 SelectTarget(0);
@@ -70,17 +65,12 @@ public class PlayerHarvestController : MonoBehaviour
         if (h != null && nearby.Contains(h))
         {
             int removedIndex = nearby.IndexOf(h);
-
-            // Khôi phục material gốc trước khi remove
             RestoreOriginalMaterial(h);
-
             nearby.Remove(h);
 
-            // Nếu target bị remove là target hiện tại
             if (currentTarget == h)
             {
                 ClearTarget();
-                // Tự động chọn target khác nếu còn
                 if (nearby.Count > 0)
                 {
                     int newIndex = Mathf.Min(removedIndex, nearby.Count - 1);
@@ -89,7 +79,6 @@ public class PlayerHarvestController : MonoBehaviour
             }
             else if (removedIndex < currentTargetIndex)
             {
-                // Điều chỉnh index nếu item bị remove ở trước current target
                 currentTargetIndex--;
             }
         }
@@ -97,33 +86,24 @@ public class PlayerHarvestController : MonoBehaviour
 
     private void Update()
     {
-        // Nếu bạn không dùng trigger collider trên player, bạn có thể uncomment kiểm tra bằng OverlapCircle:
-        //UpdateNearbyWithOverlap();
-
-        // Làm sạch danh sách nearby (loại bỏ null hoặc đã harvest)
         CleanupNearbyList();
-
-        // Xử lý input để chuyển đổi target
         HandleTargetSelection();
 
         UpdateUIPosition();
         UpdateSelectionIndicator();
+        UpdateActionPrefab(); // ⚡ update vị trí & trạng thái prefab hành động
 
-        // Thu hoạch với phím E
         if (currentTarget != null && !isHarvesting)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                holdSeconds = currentTarget.harvestTime; // lấy thời gian thu hoạch từ target
-                //Debug.Log($"Starting harvest on: {currentTarget.name} for {holdSeconds} seconds");
-
+                holdSeconds = currentTarget.harvestTime;
                 if (holdSeconds > 0)
                 {
                     StartCoroutine(HarvestRoutine());
                 }
                 else
                 {
-                    // Thu hoạch tức thì
                     currentTarget.CompleteHarvest();
                     CleanupNearbyList();
                 }
@@ -137,18 +117,12 @@ public class PlayerHarvestController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            // Lưu target hiện tại để khôi phục
             var oldTarget = currentTarget;
-            
-            // Chuyển đến target tiếp theo
             int nextIndex = (currentTargetIndex + 1) % nearby.Count;
-            
-            // Khôi phục material của target cũ trước khi chọn target mới
             if (oldTarget != null)
             {
                 RestoreOriginalMaterial(oldTarget);
             }
-
             SelectTarget(nextIndex);
         }
     }
@@ -157,17 +131,95 @@ public class PlayerHarvestController : MonoBehaviour
     {
         if (index < 0 || index >= nearby.Count) return;
 
-        // Gán target mới
         currentTargetIndex = index;
         currentTarget = nearby[index];
 
-        // Áp dụng highlight cho target mới
-        if (currentTarget != null)
+        SaveOriginalMaterial(currentTarget);
+        ApplyHighlightMaterial(currentTarget);
+
+        ShowActionPrefab(currentTarget); // ⚡ tạo prefab hành động
+    }
+
+    private void ShowActionPrefab(Harvestable target)
+    {
+        if (actionPrefab == null) return;
+
+        // Xóa instance cũ nếu có
+        if (actionInstance != null)
+            Destroy(actionInstance);
+
+        // Tìm Canvas
+        Canvas canvas = FindAnyObjectByType<Canvas>();
+        if (canvas == null)
         {
-            // Lưu material gốc nếu chưa có
-            SaveOriginalMaterial(currentTarget);
-            // Áp dụng highlight
-            ApplyHighlightMaterial(currentTarget);
+            Debug.LogWarning("⚠️ Không tìm thấy Canvas để hiển thị action prefab!");
+            return;
+        }
+
+        // Tạo instance
+        actionInstance = Instantiate(actionPrefab, canvas.transform);
+        RectTransform rect = actionInstance.GetComponent<RectTransform>();
+
+        if (rect == null)
+        {
+            Debug.LogWarning("⚠️ Action prefab không có RectTransform (không phải UI prefab?)");
+            return;
+        }
+
+        UpdateActionPrefabPosition(target, rect, canvas);
+    }
+
+    private void UpdateActionPrefab()
+    {
+        if (actionInstance == null || currentTarget == null || transform == null) return;
+
+        Canvas canvas = actionInstance.GetComponentInParent<Canvas>();
+        if (canvas == null) return;
+
+        RectTransform rect = actionInstance.GetComponent<RectTransform>();
+        UpdateActionPrefabPosition(currentTarget, rect, canvas);
+    }
+
+    private void UpdateActionPrefabPosition(Harvestable target, RectTransform rect, Canvas canvas)
+    {
+        Camera cam = GetActiveCamera();
+        if (cam == null) return;
+
+        // ✅ Tính vị trí trung gian giữa Player và Target
+        Vector3 targetPos = target.transform.position + actionOffset;
+        Vector3 playerPos = transform.position;
+        Vector3 midPos = Vector3.Lerp(targetPos, playerPos, 0.3f); // 0.3f: nghiêng 30% về phía Player
+
+        // Convert sang toạ độ màn hình
+        Vector3 screenPos = cam.WorldToScreenPoint(midPos);
+
+        // Ẩn nếu phía sau camera
+        if (screenPos.z < 0)
+        {
+            actionInstance.SetActive(false);
+            return;
+        }
+
+        RectTransform canvasRect = canvas.GetComponent<RectTransform>();
+        Vector2 canvasPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRect,
+            screenPos,
+            canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : cam,
+            out canvasPos
+        );
+
+        rect.anchoredPosition = canvasPos;
+        actionInstance.SetActive(true);
+    }
+
+
+    private void HideActionPrefab()
+    {
+        if (actionInstance != null)
+        {
+            Destroy(actionInstance);
+            actionInstance = null;
         }
     }
 
@@ -176,41 +228,26 @@ public class PlayerHarvestController : MonoBehaviour
         var renderer = harvestable.GetComponent<Renderer>();
         if (renderer != null && renderer.material != null)
         {
-            // Chỉ lưu material gốc nếu chưa có trong dictionary
             if (!originalMaterials.ContainsKey(harvestable))
-            {
                 originalMaterials[harvestable] = renderer.material;
-            }
             if (renderer.material.HasProperty(colorPropertyName) && !originalColors.ContainsKey(harvestable))
-            {
                 originalColors[harvestable] = renderer.material.GetColor(colorPropertyName);
-            }
         }
     }
 
     private void ApplyHighlightMaterial(Harvestable harvestable)
     {
-        //targetColor = harvestable.GetComponent<SpriteRenderer>().color;
         var renderer = harvestable.GetComponent<Renderer>();
         if (renderer != null)
         {
             if (highlightMaterial != null)
             {
-                // Sử dụng highlight material và set màu
                 renderer.material = highlightMaterial;
                 if (renderer.material.HasProperty(colorPropertyName))
-                {
                     renderer.material.SetColor(colorPropertyName, targetColor);
-                }
             }
-            else
-            {
-                // Chỉ thay đổi màu của material hiện tại
-                if (renderer.material.HasProperty(colorPropertyName))
-                {
-                    renderer.material.SetColor(colorPropertyName, targetColor);
-                }
-            }
+            else if (renderer.material.HasProperty(colorPropertyName))
+                renderer.material.SetColor(colorPropertyName, targetColor);
         }
     }
 
@@ -219,37 +256,28 @@ public class PlayerHarvestController : MonoBehaviour
         var renderer = harvestable.GetComponent<Renderer>();
         if (renderer != null)
         {
-            // Khôi phục material gốc
             if (originalMaterials.ContainsKey(harvestable))
             {
                 renderer.material = originalMaterials[harvestable];
                 originalMaterials.Remove(harvestable);
             }
-            // Hoặc khôi phục màu gốc
             else if (originalColors.ContainsKey(harvestable))
             {
                 if (renderer.material.HasProperty(colorPropertyName))
-                {
                     renderer.material.SetColor(colorPropertyName, originalColors[harvestable]);
-                }
             }
 
-            // Xóa khỏi dictionary
             if (originalColors.ContainsKey(harvestable))
-            {
                 originalColors.Remove(harvestable);
-            }
         }
     }
 
     private void CleanupNearbyList()
     {
-        // Loại bỏ các object null hoặc đã được harvest
         for (int i = nearby.Count - 1; i >= 0; i--)
         {
             if (nearby[i] == null || nearby[i].isHarvested)
             {
-                // Khôi phục material trước khi remove
                 RestoreOriginalMaterial(nearby[i]);
 
                 if (i == currentTargetIndex)
@@ -264,49 +292,13 @@ public class PlayerHarvestController : MonoBehaviour
             }
         }
 
-        // Nếu không còn target nào, clear selection
         if (nearby.Count == 0)
         {
             ClearTarget();
         }
-        // Nếu current index vượt quá giới hạn, điều chỉnh
         else if (currentTargetIndex >= nearby.Count)
         {
             SelectTarget(0);
-        }
-    }
-
-    private void UpdateNearbyWithOverlap()
-    {
-        // Clear highlight cho tất cả nearby objects cũ
-        foreach (var harvestable in nearby)
-        {
-            if (harvestable != null)
-            {
-                RestoreOriginalMaterial(harvestable);
-            }
-        }
-
-        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
-        nearby.Clear();
-        foreach (var c in cols)
-        {
-            var h = c.GetComponent<Harvestable>();
-            if (h != null && !h.isHarvested)
-            {
-                nearby.Add(h);
-                SaveOriginalMaterial(h);
-            }
-        }
-
-        // Reset target selection khi update bằng overlap
-        if (nearby.Count > 0)
-        {
-            SelectTarget(0);
-        }
-        else
-        {
-            ClearTarget();
         }
     }
 
@@ -318,26 +310,19 @@ public class PlayerHarvestController : MonoBehaviour
             return;
         }
 
-        // Sử dụng UI object có sẵn thay vì tạo mới
         if (uiObject != null && currentTarget != null)
         {
             Canvas canvas = uiObject.GetComponentInParent<Canvas>();
             if (canvas == null)
-            {
                 canvas = UnityEngine.Object.FindFirstObjectByType<Canvas>();
-            }
 
             RectTransform canvasRect = canvas.GetComponent<RectTransform>();
             RectTransform uiRect = uiObject.GetComponent<RectTransform>();
-
-            // Get active camera (works with Cinemachine)
             Camera activeCamera = GetActiveCamera();
 
-            // Convert world position to screen position
             Vector3 worldPos = currentTarget.GetUIWorldPosition() + Vector3.up * 0.1f;
             Vector3 screenPos = activeCamera.WorldToScreenPoint(worldPos);
 
-            // Check if target is behind camera or outside screen
             if (screenPos.z < 0 || screenPos.x < 0 || screenPos.x > Screen.width ||
                 screenPos.y < 0 || screenPos.y > Screen.height)
             {
@@ -345,7 +330,6 @@ public class PlayerHarvestController : MonoBehaviour
                 return;
             }
 
-            // Convert screen position to canvas position
             Vector2 canvasPos;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvasRect,
@@ -354,49 +338,27 @@ public class PlayerHarvestController : MonoBehaviour
                 out canvasPos
             );
 
-            // Set the anchored position
             uiRect.anchoredPosition = canvasPos;
-
-            // Show UI
             uiObject.SetActive(true);
         }
     }
 
     private Camera GetActiveCamera()
     {
-        // Try to get Cinemachine Brain camera first
         var cinemachineBrain = UnityEngine.Object.FindFirstObjectByType<Unity.Cinemachine.CinemachineBrain>();
         if (cinemachineBrain != null && cinemachineBrain.OutputCamera != null)
-        {
             return cinemachineBrain.OutputCamera;
-        }
 
-        // Fallback to Camera.main
         if (Camera.main != null)
-        {
             return Camera.main;
-        }
 
-        // Last resort: find any active camera
-        Camera mainCam = null;
         Camera[] cameras = UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None);
         foreach (var cam in cameras)
         {
-            if (cam.CompareTag("MainCamera"))
-            {
-                mainCam = cam;
-                break;
-            }
-        }
-        foreach (Camera cam in cameras)
-        {
             if (cam.isActiveAndEnabled)
-            {
                 return cam;
-            }
         }
 
-        // If no camera found, return null (should not happen in normal cases)
         Debug.LogWarning("No active camera found for UI positioning!");
         return null;
     }
@@ -410,9 +372,7 @@ public class PlayerHarvestController : MonoBehaviour
         }
 
         if (selectionIndicator == null && selectionIndicatorPrefab != null)
-        {
             selectionIndicator = Instantiate(selectionIndicatorPrefab);
-        }
 
         if (selectionIndicator != null && currentTarget != null)
         {
@@ -424,35 +384,28 @@ public class PlayerHarvestController : MonoBehaviour
     private void HideUI()
     {
         if (uiObject != null)
-        {
             uiObject.SetActive(false);
-        }
-
-        // Reset fill amount
         ResetProgress();
     }
 
     private void HideSelectionIndicator()
     {
         if (selectionIndicator != null)
-        {
             selectionIndicator.SetActive(false);
-        }
     }
 
     private void ClearTarget()
     {
-        // Khôi phục material của target hiện tại
         if (currentTarget != null)
-        {
             RestoreOriginalMaterial(currentTarget);
-        }
 
         currentTarget = null;
         currentTargetIndex = -1;
-        ResetProgress();
+
         HideUI();
         HideSelectionIndicator();
+        HideActionPrefab(); // ⚡ ẩn prefab hành động
+        ResetProgress();
     }
 
     private IEnumerator HarvestRoutine()
@@ -460,15 +413,11 @@ public class PlayerHarvestController : MonoBehaviour
         if (currentTarget == null || currentTarget.isHarvested || isHarvesting) yield break;
 
         isHarvesting = true;
-        // KHÔNG set isHarvested = true ở đây, chỉ đánh dấu đang harvest
-
         holdTimer = 0f;
+
         while (holdTimer < holdSeconds)
         {
-            // nếu target bị null hoặc disabled thì abort
             if (currentTarget == null) break;
-
-            // nếu nhả phím E thì reset và abort
             if (!Input.GetKey(KeyCode.E))
             {
                 isHarvesting = false;
@@ -478,25 +427,16 @@ public class PlayerHarvestController : MonoBehaviour
 
             holdTimer += Time.deltaTime;
             if (fillImage != null)
-            {
                 fillImage.fillAmount = Mathf.Clamp01(holdTimer / holdSeconds);
-            }
-
             yield return null;
         }
 
-        // Hoàn thành harvest
         if (currentTarget != null)
-        {
-            currentTarget.CompleteHarvest(); // Chỉ set isHarvested = true ở đây
-        }
+            currentTarget.CompleteHarvest();
 
-        // cleanup
         holdTimer = 0f;
         isHarvesting = false;
         ResetProgress();
-
-        // remove from nearby list if it's deactivated/harvested
         CleanupNearbyList();
     }
 
@@ -504,50 +444,37 @@ public class PlayerHarvestController : MonoBehaviour
     {
         holdTimer = 0f;
         if (fillImage != null)
-        {
             fillImage.fillAmount = 0f;
-        }
     }
 
     private void OnDisable()
     {
-        // Khôi phục tất cả materials trước khi disable
-        foreach (var harvestable in nearby)
+        foreach (var h in nearby)
         {
-            if (harvestable != null)
-            {
-                RestoreOriginalMaterial(harvestable);
-            }
+            if (h != null) RestoreOriginalMaterial(h);
         }
 
         HideUI();
         HideSelectionIndicator();
+        HideActionPrefab();
     }
 
     private void OnDestroy()
     {
-        // Khôi phục tất cả materials trước khi destroy
-        foreach (var harvestable in nearby)
+        foreach (var h in nearby)
         {
-            if (harvestable != null)
-            {
-                RestoreOriginalMaterial(harvestable);
-            }
+            if (h != null) RestoreOriginalMaterial(h);
         }
 
         if (selectionIndicator != null)
-        {
             Destroy(selectionIndicator);
-        }
+        HideActionPrefab();
     }
 
-    // Gizmo để debug radius nếu dùng OverlapCircle
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);
-
-        // Vẽ line tới current target
         if (currentTarget != null)
         {
             Gizmos.color = Color.green;

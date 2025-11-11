@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 767f9387e3f7a9440adefad0612868c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7074247584559481189
+    second: 32x32_Steampunk_Cogs_0
+  - first:
+      213: 157369195161461142
+    second: 32x32_Steampunk_Cogs_1
+  - first:
+      213: -3963652078615924786
+    second: 32x32_Steampunk_Cogs_2
+  - first:
+      213: 7491351480687844398
+    second: 32x32_Steampunk_Cogs_3
+  - first:
+      213: 6135741626578394624
+    second: 32x32_Steampunk_Cogs_4
+  - first:
+      213: -3736388263283727995
+    second: 32x32_Steampunk_Cogs_5
+  - first:
+      213: -5518138105322249157
+    second: 32x32_Steampunk_Cogs_6
+  - first:
+      213: 334191394923038385
+    second: 32x32_Steampunk_Cogs_7
+  - first:
+      213: -4702375057093350668
+    second: 32x32_Steampunk_Cogs_8
+  - first:
+      213: 3481102372331012864
+    second: 32x32_Steampunk_Cogs_9
+  - first:
+      213: 7466949566411578339
+    second: 32x32_Steampunk_Cogs_10
+  - first:
+      213: 5275754051178828122
+    second: 32x32_Steampunk_Cogs_11
+  - first:
+      213: -540380281731675599
+    second: 32x32_Steampunk_Cogs_12
+  - first:
+      213: 9001648903020324087
+    second: 32x32_Steampunk_Cogs_13
+  - first:
+      213: -2753955618310876395
+    second: 32x32_Steampunk_Cogs_14
+  - first:
+      213: 7876234160031434146
+    second: 32x32_Steampunk_Cogs_15
+  - first:
+      213: 8587814475061760311
+    second: 32x32_Steampunk_Cogs_16
+  - first:
+      213: 3570613345934279338
+    second: 32x32_Steampunk_Cogs_17
+  - first:
+      213: -5909246826242115735
+    second: 32x32_Steampunk_Cogs_18
+  - first:
+      213: -66357668264974771
+    second: 32x32_Steampunk_Cogs_19
+  - first:
+      213: -4955629406606742756
+    second: 32x32_Steampunk_Cogs_20
+  - first:
+      213: 4277013991355166245
+    second: 32x32_Steampunk_Cogs_21
+  - first:
+      213: -6790791274439167913
+    second: 32x32_Steampunk_Cogs_22
+  - first:
+      213: -3925696809107783215
+    second: 32x32_Steampunk_Cogs_23
+  - first:
+      213: 1327172228626874767
+    second: 32x32_Steampunk_Cogs_24
+  - first:
+      213: -2175158303710004701
+    second: 32x32_Steampunk_Cogs_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 112
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9eba258d4933dd90800000000000000
+      internalID: -7074247584559481189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 102
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691203003761f2200800000000000000
+      internalID: 157369195161461142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 112
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfebd05f674ef8c0800000000000000
+      internalID: -3963652078615924786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 102
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cdef51b70a6f760800000000000000
+      internalID: 7491351480687844398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 111
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e58c53088862550800000000000000
+      internalID: 6135741626578394624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 101
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581e808bbaea52cc0800000000000000
+      internalID: -3736388263283727995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 111
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3468ba21a2ab63b0800000000000000
+      internalID: -5518138105322249157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 101
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b641659d4943a400800000000000000
+      internalID: 334191394923038385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa2b41cccecdbeb0800000000000000
+      internalID: -4702375057093350668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 70
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0034f89f92c5f4030800000000000000
+      internalID: 3481102372331012864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 68
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb18bda11fef9760800000000000000
+      internalID: 7466949566411578339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 73
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5197de7b5e373940800000000000000
+      internalID: 5275754051178828122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a02cf2ffe2088f0800000000000000
+      internalID: -540380281731675599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_13
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 67
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4af490cf74cec70800000000000000
+      internalID: 9001648903020324087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 39
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513936bc4fbf7c9d0800000000000000
+      internalID: -2753955618310876395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 34
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5887c0d310e4d60800000000000000
+      internalID: 7876234160031434146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 35
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731930fc3cb0e2770800000000000000
+      internalID: 8587814475061760311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Config
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 35
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa28ea29bed5d8130800000000000000
+      internalID: 3570613345934279338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 34
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967fbbfe1532efda0800000000000000
+      internalID: -5909246826242115735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_19
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4661f26d00441ff0800000000000000
+      internalID: -66357668264974771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ba9bc8f411a3bb0800000000000000
+      internalID: -4955629406606742756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ea91680910b5b30800000000000000
+      internalID: 4277013991355166245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_22
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 13
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7503b37a05342c1a0800000000000000
+      internalID: -6790791274439167913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_23
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 3
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d10f352d8f1589c0800000000000000
+      internalID: -3925696809107783215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_24
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 12
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81811b3c101b6210800000000000000
+      internalID: 1327172228626874767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_Steampunk_Cogs_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32abf191c0940d1e0800000000000000
+      internalID: -2175158303710004701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fac36ed529767084b8548e116827850d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      32x32_Steampunk_Cogs_0: -7074247584559481189
+      32x32_Steampunk_Cogs_1: 157369195161461142
+      32x32_Steampunk_Cogs_10: 7466949566411578339
+      32x32_Steampunk_Cogs_11: 5275754051178828122
+      32x32_Steampunk_Cogs_12: -540380281731675599
+      32x32_Steampunk_Cogs_13: 9001648903020324087
+      32x32_Steampunk_Cogs_14: -2753955618310876395
+      32x32_Steampunk_Cogs_15: 7876234160031434146
+      32x32_Steampunk_Cogs_16: 8587814475061760311
+      32x32_Steampunk_Cogs_18: -5909246826242115735
+      32x32_Steampunk_Cogs_19: -66357668264974771
+      32x32_Steampunk_Cogs_2: -3963652078615924786
+      32x32_Steampunk_Cogs_20: -4955629406606742756
+      32x32_Steampunk_Cogs_21: 4277013991355166245
+      32x32_Steampunk_Cogs_22: -6790791274439167913
+      32x32_Steampunk_Cogs_23: -3925696809107783215
+      32x32_Steampunk_Cogs_24: 1327172228626874767
+      32x32_Steampunk_Cogs_25: -2175158303710004701
+      32x32_Steampunk_Cogs_3: 7491351480687844398
+      32x32_Steampunk_Cogs_4: 6135741626578394624
+      32x32_Steampunk_Cogs_5: -3736388263283727995
+      32x32_Steampunk_Cogs_6: -5518138105322249157
+      32x32_Steampunk_Cogs_7: 334191394923038385
+      32x32_Steampunk_Cogs_8: -4702375057093350668
+      32x32_Steampunk_Cogs_9: 3481102372331012864
+      Config: 3570613345934279338
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

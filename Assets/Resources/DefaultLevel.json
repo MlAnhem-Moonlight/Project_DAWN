@@ -1,7 +1,7 @@
 {
   "DefaultLevel": [
     {
-      "Mode": 1,
+      "Mode": "easy",
       "Inventory": {
         "Wood": 300,
         "Stone": 300,
@@ -12,7 +12,7 @@
 
     },
     {
-      "Mode": 2,
+      "Mode": "normal",
       "Inventory": {
         "Wood": 300,
         "Stone": 300,
@@ -23,7 +23,7 @@
 
     },
     {
-      "Mode": 3,
+      "Mode": "hard",
       "Inventory": {
         "Wood": 200,
         "Stone": 200,
