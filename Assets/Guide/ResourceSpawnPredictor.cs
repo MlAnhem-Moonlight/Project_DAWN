@@ -60,7 +60,7 @@ public class ResourceSpawnPredictor : MonoBehaviour
             }
             else
             {
-                //Debug.LogWarning("No training data found! Model will use default predictions.");
+                Debug.LogWarning("No training data found! Model will use default predictions.");
             }
         }
     }

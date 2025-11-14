@@ -157,7 +157,7 @@ public class ResourceAllocationGA : MonoBehaviour
         // Wait until predictor is ready and has run its initialization
         //StartCoroutine(WaitForPredictionAndStart());
     }
-    [ContextMenu("Run Genetic Algorithm")]
+    [ContextMenu("Run Predict and Genetic Algorithm")]
     public void RunGA()
     {
         StartCoroutine(WaitForPredictionAndStart());
@@ -226,7 +226,7 @@ public class ResourceAllocationGA : MonoBehaviour
             LoadDefaultTemplate();
         }
     }
-
+    [ContextMenu("Run Genetic Algorithm")]
     void RunGeneticAlgorithm()
     {
         //Debug.Log("Starting Genetic Algorithm for Resource Allocation...");
@@ -705,19 +705,19 @@ public class ResourceAllocationGA : MonoBehaviour
 
     void DisplayResults()
     {
-        ////Debug.Log("=== RESOURCE ALLOCATION RESULTS ===");
+        Debug.Log("=== RESOURCE ALLOCATION RESULTS ===");
 
         var used = bestSolution.GetTotalUsedResources();
 
-        ////Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
-        ////Debug.Log($"Resource Usage:");
-        ////Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
-        ////Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
-        ////Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
-        ////Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
-        ////Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
+        Debug.Log($"Fitness Score: {bestSolution.fitness:F2}");
+        Debug.Log($"Resource Usage:");
+        Debug.Log($"  Wood: {used.wood}/{availableResources.wood} ({(float)used.wood / availableResources.wood * 100:F1}%)");
+        Debug.Log($"  Stone: {used.stone}/{availableResources.stone} ({(float)used.stone / availableResources.stone * 100:F1}%)");
+        Debug.Log($"  Iron: {used.iron}/{availableResources.iron} ({(float)used.iron / availableResources.iron * 100:F1}%)");
+        Debug.Log($"  Gold: {used.gold}/{availableResources.gold} ({(float)used.gold / availableResources.gold * 100:F1}%)");
+        Debug.Log($"  Meat: {used.meat}/{availableResources.meat} ({(float)used.meat / availableResources.meat * 100:F1}%)");
 
-        ////Debug.Log("\nObject Allocations:");
+        Debug.Log("\nObject Allocations:");
         var resultDict = new Dictionary<string, int>();
 
         foreach (var allocation in bestSolution.allocations)

@@ -23,7 +23,7 @@ public class BridMovement : Nodes
 
     public override NodeState Evaluate()
     {
-        Debug.Log("BridMovement: Đang di chuyển về phía mục tiêu: " + _target.name);
+        //Debug.Log("BridMovement: Đang di chuyển về phía mục tiêu: " + _target.name);
         if (_target == null)
         {
             state = NodeState.FAILURE;

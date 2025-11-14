@@ -191,11 +191,11 @@ public class LinearRegressionModel
             // Log progress
             if (epoch % 200 == 0 || epoch == epochs - 1)
             {
-                Debug.Log($"Training Epoch {epoch}/{epochs}: Loss = {totalLoss:F6}");
+                //Debug.Log($"Training Epoch {epoch}/{epochs}: Loss = {totalLoss:F6}");
             }
         }
 
         isTrained = true;
-        Debug.Log($"Training completed! Best loss: {bestLoss:F6}");
+        //Debug.Log($"Training completed! Best loss: {bestLoss:F6}");
     }
 }

@@ -20,6 +20,13 @@ public class EnemySpawner : MonoBehaviour
     [Header("Điểm spawn (nếu null sẽ random)")]
     public Transform spawnPoint;
 
+    [Header("Level Constraints")]
+    [Tooltip("Level tối thiểu của enemy")]
+    public int minEnemyLevel = 1;
+
+    [Tooltip("Level tối đa của enemy")]
+    public int maxEnemyLevel = 20;
+
     private static EnemySpawner instance;
 
     private void Awake()
@@ -44,52 +51,69 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public static void SpawnEnemy(int type, int difficultyLevel = 1)
+    /// <summary>
+    /// Spawn enemy với level cụ thể
+    /// type: loại spawn (1=single, 2=group, 3=mixed)
+    /// difficultyLevel: số lượng/composition
+    /// enemyLevel: level của enemy (1-20)
+    /// </summary>
+    public static void SpawnEnemy(int type, int difficultyLevel, int enemyLevel)
     {
-        switch(type)
+        switch (type)
         {
             case 1:
-                SpawnType1(difficultyLevel); 
+                SpawnType1(difficultyLevel, enemyLevel);
                 break;
             case 2:
-                SpawnType2(difficultyLevel);
+                SpawnType2(difficultyLevel, enemyLevel);
                 break;
             case 3:
-                SpawnType3(difficultyLevel);
+                SpawnType3(difficultyLevel, enemyLevel);
                 break;
             default:
+                Debug.LogWarning($"⚠️ Unknown spawn type: {type}");
                 break;
-
         }
     }
 
     // ===============================
-    // 🔥 3 kiểu spawn khác nhau
+    // 🔥 3 kiểu spawn với level system
     // ===============================
 
     /// <summary>
-    /// 🧩 Kiểu 1: Spawn 1 enemy duy nhất theo độ khó
+    /// 🧩 Kiểu 1: Spawn 1 enemy duy nhất
+    /// difficultyLevel ảnh hưởng đến variance của level
     /// </summary>
     [ContextMenu("Spawn Type 1 (Single Enemy)")]
-    public static void SpawnType1(int difficultyLevel = 1)
+    public static void SpawnType1(int difficultyLevel = 1, int enemyLevel = 1)
     {
         if (!EnsureInstance()) return;
 
         var pool = instance.enemyPools[Random.Range(0, instance.enemyPools.Count)];
-        SpawnEnemyFromPool(pool, difficultyLevel);
-        Debug.Log($"⚔️ SpawnType1: 1 enemy từ {pool.name} với độ khó {difficultyLevel}");
+
+        // Thêm variance dựa trên difficulty
+        int variance = Mathf.Clamp(difficultyLevel - 1, 0, 3);
+        int finalLevel = Mathf.Clamp(enemyLevel + Random.Range(-variance, variance + 1),
+                                     instance.minEnemyLevel, instance.maxEnemyLevel);
+
+        SpawnEnemyFromPool(pool, finalLevel);
+        Debug.Log($"⚔️ SpawnType1: 1 enemy ({pool.name}) level {finalLevel} (base: {enemyLevel}, difficulty: {difficultyLevel})");
     }
 
     /// <summary>
-    /// 🧟 Kiểu 2: Spawn nhiều enemy cùng loại, số lượng tỉ lệ với độ khó
+    /// 🧟 Kiểu 2: Spawn nhiều enemy cùng loại
+    /// difficultyLevel quyết định số lượng
+    /// enemyLevel quyết định sức mạnh
     /// </summary>
     [ContextMenu("Spawn Type 2 (Scaled Group)")]
-    public static void SpawnType2(int difficultyLevel = 1)
+    public static void SpawnType2(int difficultyLevel = 1, int enemyLevel = 1)
     {
         if (!EnsureInstance()) return;
 
         var pool = instance.enemyPools[Random.Range(0, instance.enemyPools.Count)];
-        int count = Mathf.Clamp(difficultyLevel * 2, 2, pool.poolSize); // càng khó càng nhiều
+
+        // Số lượng tỉ lệ với difficulty
+        int count = Mathf.Clamp(difficultyLevel * 2, 2, pool.poolSize);
 
         int spawned = 0;
         foreach (var enemy in pool.pool)
@@ -103,7 +127,10 @@ public class EnemySpawner : MonoBehaviour
                 var stats = enemy.GetComponent<Stats>();
                 if (stats != null)
                 {
-                    stats.level = Mathf.Clamp(difficultyLevel, 1, stats.maxLevel);
+                    // Variance nhỏ cho level của từng con
+                    int finalLevel = Mathf.Clamp(enemyLevel + Random.Range(-1, 2),
+                                                 instance.minEnemyLevel, instance.maxEnemyLevel);
+                    stats.level = finalLevel;
                     stats.ApplyGrowth();
                 }
 
@@ -112,17 +139,20 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        Debug.Log($"⚔️ SpawnType2: {spawned} enemy từ {pool.name} (difficulty {difficultyLevel})");
+        Debug.Log($"⚔️ SpawnType2: {spawned} enemies ({pool.name}) level ~{enemyLevel} (difficulty: {difficultyLevel})");
     }
 
     /// <summary>
-    /// 🧨 Kiểu 3: Spawn đội hình hỗn hợp — random từ nhiều loại quái
+    /// 🧨 Kiểu 3: Spawn đội hình hỗn hợp
+    /// difficultyLevel quyết định số lượng và đa dạng
+    /// enemyLevel quyết định sức mạnh trung bình
     /// </summary>
     [ContextMenu("Spawn Type 3 (Mixed Group)")]
-    public static void SpawnType3(int difficultyLevel = 1)
+    public static void SpawnType3(int difficultyLevel = 1, int enemyLevel = 1)
     {
         if (!EnsureInstance()) return;
 
+        // Số lượng tăng theo difficulty
         int count = Mathf.Clamp(2 + difficultyLevel, 2, 8);
         int spawned = 0;
 
@@ -141,9 +171,11 @@ public class EnemySpawner : MonoBehaviour
                     var stats = enemy.GetComponent<Stats>();
                     if (stats != null)
                     {
-                        // enemy mạnh hơn nếu độ khó cao, yếu hơn nếu random thấp
-                        int scaledLevel = Mathf.Clamp(difficultyLevel + Random.Range(-1, 2), 1, stats.maxLevel);
-                        stats.level = scaledLevel;
+                        // Tạo variance để có enemy mạnh/yếu khác nhau trong đội
+                        int levelVariance = Random.Range(-2, 3);
+                        int finalLevel = Mathf.Clamp(enemyLevel + levelVariance,
+                                                     instance.minEnemyLevel, instance.maxEnemyLevel);
+                        stats.level = finalLevel;
                         stats.ApplyGrowth();
                     }
 
@@ -153,7 +185,7 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        Debug.Log($"⚔️ SpawnType3: {spawned} enemy hỗn hợp với độ khó {difficultyLevel}");
+        Debug.Log($"⚔️ SpawnType3: {spawned} mixed enemies level ~{enemyLevel} (difficulty: {difficultyLevel})");
     }
 
     // ===============================
@@ -177,7 +209,7 @@ public class EnemySpawner : MonoBehaviour
         return true;
     }
 
-    private static void SpawnEnemyFromPool(EnemyPool pool, int difficultyLevel)
+    private static void SpawnEnemyFromPool(EnemyPool pool, int level)
     {
         foreach (var enemy in pool.pool)
         {
@@ -190,7 +222,7 @@ public class EnemySpawner : MonoBehaviour
                 var stats = enemy.GetComponent<Stats>();
                 if (stats != null)
                 {
-                    stats.level = Mathf.Clamp(difficultyLevel, 1, stats.maxLevel);
+                    stats.level = Mathf.Clamp(level, instance.minEnemyLevel, instance.maxEnemyLevel);
                     stats.ApplyGrowth();
                 }
                 return;
@@ -201,5 +233,33 @@ public class EnemySpawner : MonoBehaviour
     private static Vector3 GetRandomSpawn()
     {
         return new Vector3(Random.Range(-5f, 5f), 0f, Random.Range(-5f, 5f));
+    }
+
+    // ===============================
+    // 🧪 Debug & Testing
+    // ===============================
+
+    [ContextMenu("Test Spawn - Early Game (Lv3)")]
+    public void TestSpawnEarlyGame()
+    {
+        SpawnEnemy(3, 1, 3); // Mixed, difficulty 1, level 3
+    }
+
+    [ContextMenu("Test Spawn - Mid Game (Lv10)")]
+    public void TestSpawnMidGame()
+    {
+        SpawnEnemy(2, 2, 10); // Group, difficulty 2, level 10
+    }
+
+    [ContextMenu("Test Spawn - Late Game (Lv17)")]
+    public void TestSpawnLateGame()
+    {
+        SpawnEnemy(3, 3, 17); // Mixed, difficulty 3, level 17
+    }
+
+    [ContextMenu("Test Spawn - End Game (Lv20)")]
+    public void TestSpawnEndGame()
+    {
+        SpawnEnemy(2, 4, 20); // Group, difficulty 4, level 20
     }
 }

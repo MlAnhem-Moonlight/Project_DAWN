@@ -5,20 +5,18 @@ public class MageAttackNode : Nodes
 {
     private Animator _animator;
 
-    private float _attackDuration = 1f; // mặc định, sẽ lấy từ clip
+    private float _attackDuration = 1f;
     private float _attackStartTime;
     private bool _isAttacking;
     private Transform _transform;
 
-
-    private string attackClipName = "Attack"; // tên clip animation attack
+    private string attackClipName = "Attack";
 
     public MageAttackNode(Transform transform, Animator animator)
     {
         _transform = transform;
         _animator = animator;
 
-        // Tìm clip Attack để lấy độ dài
         if (_animator != null && _animator.runtimeAnimatorController != null)
         {
             foreach (AnimationClip clip in _animator.runtimeAnimatorController.animationClips)
@@ -26,7 +24,6 @@ public class MageAttackNode : Nodes
                 if (clip.name == attackClipName)
                 {
                     _attackDuration = clip.length;
-                    //Debug.Log($"Attack animation duration set to {_attackDuration} seconds.");
                     break;
                 }
             }
@@ -38,30 +35,40 @@ public class MageAttackNode : Nodes
     public override NodeState Evaluate()
     {
         Transform target = (Transform)parent.GetData("target");
-        if(target.gameObject.activeInHierarchy == false)
+
+        // Kiểm tra target còn hợp lệ hay không
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
             state = NodeState.FAILURE;
+            _isAttacking = false;
             return state;
         }
+
+        Stats stats = target.GetComponent<Stats>();
+        if (stats == null || stats.currentHP <= 0)
+        {
+            state = NodeState.FAILURE;
+            _isAttacking = false;
+            return state;
+        }
+
         if (_isAttacking)
         {
             // Nếu đang trong quá trình attack
             if (Time.time - _attackStartTime >= _attackDuration)
             {
                 _isAttacking = false;
-                state = NodeState.SUCCESS; // kết thúc attack
+                state = NodeState.SUCCESS;
             }
             else
             {
-                state = NodeState.RUNNING; // anim chưa xong
+                state = NodeState.RUNNING;
             }
         }
         else
         {
             // Bắt đầu attack
-            //Debug.Log("Start Attack");
-            _animator.SetInteger("Anim", -1); // trigger attack anim
-            
+            _animator.SetInteger("Anim", -1);
             _animator.SetFloat("Attack", _transform.position.x - target.position.x > 0 ? -1f : 1f);
 
             _attackStartTime = Time.time;

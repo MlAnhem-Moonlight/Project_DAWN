@@ -109,7 +109,7 @@ public class TurnPrefab : MonoBehaviour
         float attackSpeedMultiplier = clipLength / speed;
 
         // Gán vào parameter thay vì animator.speed
-        animator.SetFloat(clipName + "Spd", attackSpeedMultiplier);
+        animator.SetFloat(clipName + "Spd", attackSpeedMultiplier); 
 
         //Debug.Log($"ClipLength={clipLength:F2}s, AttackInterval={attackInterval:F2}s, " +
         //          $"AttackSpeedMul={attackSpeedMultiplier:F2}");

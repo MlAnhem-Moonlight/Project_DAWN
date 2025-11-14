@@ -34,6 +34,7 @@ public class BattleManager : MonoBehaviour
 
     private string currentWaveState;
     private int currentWaveDifficulty;
+    private int currentWaveEnemyLevel;
     private float currentWaveStartTime;
 
     [Header("Wave Tracking")]
@@ -56,6 +57,7 @@ public class BattleManager : MonoBehaviour
         public int waveNumber;
         public string allyState;
         public int difficulty;
+        public int enemyLevel;
         public float duration;
         public bool allyWon;
         public int aliveAllies;
@@ -66,7 +68,12 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         qLearning.LoadQTable();
-        //StartCoroutine(WaitForAllyAndStartCombatSession());
+
+        // Đảm bảo reference được set
+        if (qLearning.stateCollector == null)
+        {
+            qLearning.stateCollector = stateCollector;
+        }
     }
 
     IEnumerator WaitForAllyAndStartCombatSession()
@@ -113,8 +120,10 @@ public class BattleManager : MonoBehaviour
         waveHistory.Clear();
 
         Debug.Log($"🎮 === COMBAT SESSION BẮT ĐẦU ===\n" +
+                  $"  🎚️ Player Level: {stateCollector.playerLevel}\n" +
                   $"  ⏱️ Mục tiêu: {minCombatDuration}s - {maxCombatDuration}s\n" +
-                  $"  👥 Ally ban đầu: {stateCollector.activeAllies.Count}");
+                  $"  👥 Ally ban đầu: {stateCollector.activeAllies.Count}\n" +
+                  $"  📊 Power Ratio: {stateCollector.GetPowerToLevelRatio():F2}");
 
         StartNextWave();
     }
@@ -150,12 +159,20 @@ public class BattleManager : MonoBehaviour
 
         currentWave++;
         currentWaveState = stateCollector.GetSimpleState();
+
+        // Q-Learning chọn difficulty (số lượng/composition)
         currentWaveDifficulty = qLearning.ChooseEnemySetup(currentWaveState);
+
+        // Lấy enemy level từ Q-Learning (đã tính toán dựa trên player level + power ratio)
+        currentWaveEnemyLevel = qLearning.GetCurrentEnemyLevel();
+
         currentWaveStartTime = Time.time;
 
         Debug.Log($"\n🌊 === WAVE {currentWave} ===\n" +
+                  $"  🎚️ Player Level: {stateCollector.playerLevel}\n" +
                   $"  📊 Ally State: {currentWaveState}\n" +
-                  $"  🎯 Difficulty: {currentWaveDifficulty}\n" +
+                  $"  🎯 Difficulty: {currentWaveDifficulty} (số lượng/composition)\n" +
+                  $"  ⚡ Enemy Level: {currentWaveEnemyLevel}\n" +
                   $"  👥 Ally còn lại: {aliveAllyCount}\n" +
                   $"  ⏱️ Tổng thời gian combat: {totalCombatTime:F1}s / {minCombatDuration}s");
 
@@ -165,7 +182,9 @@ public class BattleManager : MonoBehaviour
     IEnumerator SpawnAndWaitForEnemies()
     {
         enemiesSpawned = true;
-        EnemySpawner.SpawnEnemy(spawnType, currentWaveDifficulty);
+
+        // Spawn với level cụ thể
+        EnemySpawner.SpawnEnemy(spawnType, currentWaveDifficulty, currentWaveEnemyLevel);
 
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(0.2f);
@@ -182,7 +201,7 @@ public class BattleManager : MonoBehaviour
         enemiesFullyActivated = true;
         battleStarted = true;
 
-        Debug.Log($"✅ Wave {currentWave} đã spawn xong! Enemy: {aliveEnemyCount}");
+        Debug.Log($"✅ Wave {currentWave} đã spawn xong! Enemy: {aliveEnemyCount} (Level {currentWaveEnemyLevel})");
     }
 
     void OnWaveEnd(bool allyWon)
@@ -202,6 +221,7 @@ public class BattleManager : MonoBehaviour
             waveNumber = currentWave,
             allyState = currentWaveState,
             difficulty = currentWaveDifficulty,
+            enemyLevel = currentWaveEnemyLevel,
             duration = waveDuration,
             allyWon = allyWon,
             aliveAllies = aliveAllyCount,
@@ -215,7 +235,8 @@ public class BattleManager : MonoBehaviour
                   $"  ⏱️ Thời gian wave: {waveDuration:F1}s\n" +
                   $"  ⏱️ Tổng combat: {totalCombatTime:F1}s / {minCombatDuration}s\n" +
                   $"  💰 Reward: {reward:F2}\n" +
-                  $"  👥 Còn lại - Ally: {aliveAllyCount}, Enemy: {aliveEnemyCount}");
+                  $"  👥 Còn lại - Ally: {aliveAllyCount}, Enemy: {aliveEnemyCount}\n" +
+                  $"  ⚡ Enemy Level: {currentWaveEnemyLevel}");
 
         // Update Q-Learning
         string nextState = allyWon ? stateCollector.GetSimpleState() : "Defeated";
@@ -266,7 +287,7 @@ public class BattleManager : MonoBehaviour
 
         foreach (var wave in waveHistory)
         {
-            Debug.Log($"    Wave {wave.waveNumber}: {wave.duration:F1}s | " +
+            Debug.Log($"    Wave {wave.waveNumber}: Lv{wave.enemyLevel} | {wave.duration:F1}s | " +
                      $"{(wave.allyWon ? "WIN" : "LOSE")} | " +
                      $"Reward: {wave.reward:F2} | " +
                      $"Difficulty: {wave.difficulty}");
@@ -335,6 +356,14 @@ public class BattleManager : MonoBehaviour
             Debug.Log($"🎭 Trận đấu căng thẳng (health ratio: {finalHealthRatio:F2}) → +5");
         }
 
+        // 4️⃣ Bonus cho level progression phù hợp
+        int levelDiff = Mathf.Abs(currentWaveEnemyLevel - stateCollector.playerLevel);
+        if (levelDiff <= 2)
+        {
+            reward += 5f;
+            Debug.Log($"🎚️ Enemy level phù hợp (diff: {levelDiff}) → +5");
+        }
+
         return reward;
     }
 
@@ -395,9 +424,17 @@ public class BattleManager : MonoBehaviour
     {
         Debug.Log($"=== COMBAT SESSION STATS ===\n" +
                   $"Active: {combatSessionActive}\n" +
+                  $"Player Level: {stateCollector.playerLevel}\n" +
                   $"Current Wave: {currentWave}\n" +
                   $"Total Combat Time: {totalCombatTime:F1}s\n" +
                   $"Target: {minCombatDuration}s - {maxCombatDuration}s\n" +
                   $"Waves Completed: {waveHistory.Count}");
+    }
+
+    [ContextMenu("🎚️ Set Player Level")]
+    public void SetPlayerLevel()
+    {
+        // Gọi menu này để test với level khác nhau
+        // Hoặc tạo method riêng để set level từ progression system
     }
 }

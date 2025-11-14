@@ -23,16 +23,26 @@ public class MageCheckEnemyInRange : Nodes
     public override NodeState Evaluate()
     {
         Transform closestTarget = TargetSelector.GetClosestTarget(_transform, _range, _layerHuman, _layerConstruction, _defaultTarget);
-        //Debug.Log(closestTarget);
-        // Check if the closest target is within range
-        if (closestTarget != null 
+
+        // Check if the closest target is within range and still valid
+        if (closestTarget != null
+            && closestTarget.gameObject.activeInHierarchy
             && Mathf.Abs(_transform.position.x - closestTarget.position.x) <= _range)
         {
-
-            parent.SetData("target", closestTarget);
-            //Debug.Log($"Target found: {parent.GetData("target")}");
-            _transform.GetComponent<TheMageBehavior>().SetTarget(closestTarget.gameObject);
-            state = NodeState.SUCCESS;
+            // Thêm kiểm tra Stats
+            Stats stats = closestTarget.GetComponent<Stats>();
+            if (stats != null && stats.currentHP > 0)
+            {
+                parent.SetData("target", closestTarget);
+                _transform.GetComponent<TheMageBehavior>().SetTarget(closestTarget.gameObject);
+                state = NodeState.SUCCESS;
+            }
+            else
+            {
+                parent.SetData("target", _defaultTarget);
+                _transform.GetComponent<TheMageBehavior>().SetTarget(null);
+                state = NodeState.FAILURE;
+            }
         }
         else
         {

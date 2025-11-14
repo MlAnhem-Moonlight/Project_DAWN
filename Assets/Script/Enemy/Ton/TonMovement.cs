@@ -24,29 +24,29 @@ public class TonMovement : Nodes
     public void SetTarget(Transform target)
     {
         _target = target;
-        //Debug.Log($"{_transform.name} target {target}");
     }
 
     public Transform getTarget()
     {
         return _target;
     }
+
     public override NodeState Evaluate()
     {
-        
-        if (_target != _defaultTarget && Vector3.Distance(_transform.position, _target.position) > _range+6f)
+        // Kiểm tra xem target hiện tại còn hợp lệ hay không
+        if (_target != _defaultTarget && (!_target.gameObject.activeInHierarchy || _target.GetComponent<Stats>().currentHP <= 0))
         {
+            // Target hiện tại không hợp lệ, quay lại default target
             _target = _defaultTarget;
         }
 
         float step = _speed * Time.deltaTime;
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
-        
+
         _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
-        if (Vector3.Distance(_transform.position, targetPosition) <= _range)
+        if (Vector3.Distance(_transform.position, targetPosition) <= _range && _target != null)
         {
-            Debug.Log("Reached Target");
-            return state = NodeState.SUCCESS;
+            return state = NodeState.FAILURE;
         }
         else
         {
@@ -54,7 +54,7 @@ public class TonMovement : Nodes
             _animator.SetInteger("State", 0);
             _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
         }
-        
+
         return state;
     }
 }

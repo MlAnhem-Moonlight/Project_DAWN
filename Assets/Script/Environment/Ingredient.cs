@@ -7,7 +7,7 @@ using UnityEngine;
 public class Ingredient : MonoBehaviour
 {
     public string objectId; // set trong Inspector
-
+    public float harvestTime;
     [Serializable]
     public struct IngredientEntry
     {

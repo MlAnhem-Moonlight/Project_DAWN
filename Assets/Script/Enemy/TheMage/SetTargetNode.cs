@@ -1,4 +1,4 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using UnityEngine;
 
 public class MageSetTargetNode : Nodes
@@ -13,13 +13,27 @@ public class MageSetTargetNode : Nodes
     public override NodeState Evaluate()
     {
         Transform target = (Transform)parent.GetData("target");
-        if (target != null && !_theMageMovement.isAttack)
+
+        // Kiểm tra target còn hợp lệ hay không
+        if (target != null
+            && target.gameObject.activeInHierarchy
+            && !_theMageMovement.isAttack)
         {
-            _theMageMovement.SetTarget(target);
-            state = NodeState.SUCCESS;
+            Stats stats = target.GetComponent<Stats>();
+            if (stats != null && stats.currentHP > 0)
+            {
+                _theMageMovement.SetTarget(target);
+                state = NodeState.SUCCESS;
+            }
+            else
+            {
+                // Target đã chết
+                state = NodeState.FAILURE;
+            }
         }
         else
         {
+            // Target không tồn tại hoặc bị ẩn
             state = NodeState.FAILURE;
         }
 

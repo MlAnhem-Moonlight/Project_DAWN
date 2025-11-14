@@ -211,8 +211,11 @@ public class IngridientManager : MonoBehaviour
     // Thêm tài nguyên mới hoặc tăng số lượng
     public void AddIngredient(string typePlus, int amount)
     {
+        Debug.Log(typePlus+"aaa");
         for (int i = 0; i < playerIngredients.Count; i++)
-        {
+        {                
+            Debug.Log(playerIngredients[i].type);
+
             if (playerIngredients[i].type == typePlus)
             {
                 var entry = playerIngredients[i];

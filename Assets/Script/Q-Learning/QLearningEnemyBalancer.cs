@@ -44,6 +44,10 @@ public class QLearningEnemyBalancer : MonoBehaviour
     private int consecutiveAllyWins = 0;
     private int consecutiveEnemyWins = 0;
 
+    [Header("Level-Based Spawning")]
+    [Tooltip("Reference đến StateCollector để lấy player level")]
+    public BattleStateCollector stateCollector;
+
     [Header("Debug")]
     [Tooltip("Bật để xem chi tiết save/load")]
     public bool verboseLogging = true;
@@ -55,6 +59,9 @@ public class QLearningEnemyBalancer : MonoBehaviour
     private int lastAction;
     private bool hasUnsavedChanges = false;
 
+    // Lưu enemy level cho wave hiện tại
+    private int currentEnemyLevel = 1;
+
     void OnApplicationQuit()
     {
         if (hasUnsavedChanges)
@@ -64,6 +71,10 @@ public class QLearningEnemyBalancer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Chọn setup enemy: trả về difficulty (số lượng/composition)
+    /// Level của enemy sẽ được xác định riêng bởi player level
+    /// </summary>
     public int ChooseEnemySetup(string state)
     {
         // Khởi tạo state mới nếu chưa tồn tại
@@ -101,33 +112,70 @@ public class QLearningEnemyBalancer : MonoBehaviour
         lastState = state;
         lastAction = action;
 
+        // Xác định enemy level dựa trên player level
+        if (stateCollector != null)
+        {
+            currentEnemyLevel = stateCollector.GetRecommendedEnemyLevel();
+
+            // Điều chỉnh dựa trên power ratio
+            float powerRatio = stateCollector.GetPowerToLevelRatio();
+
+            if (powerRatio < 0.7f)
+            {
+                // Player yếu so với level → giảm enemy level xuống 1-2 level
+                currentEnemyLevel = Mathf.Max(1, currentEnemyLevel - Random.Range(1, 3));
+                Debug.Log($"📉 Player yếu (ratio={powerRatio:F2}) → Enemy level: {currentEnemyLevel}");
+            }
+            else if (powerRatio > 1.3f)
+            {
+                // Player mạnh so với level → tăng enemy level lên 1-2 level
+                currentEnemyLevel = Mathf.Min(20, currentEnemyLevel + Random.Range(1, 3));
+                Debug.Log($"📈 Player mạnh (ratio={powerRatio:F2}) → Enemy level: {currentEnemyLevel}");
+            }
+            else
+            {
+                Debug.Log($"⚖️ Player cân bằng (ratio={powerRatio:F2}) → Enemy level: {currentEnemyLevel}");
+            }
+        }
+
         return action;
+    }
+
+    /// <summary>
+    /// Trả về level của enemy cho wave hiện tại
+    /// </summary>
+    public int GetCurrentEnemyLevel()
+    {
+        return currentEnemyLevel;
     }
 
     private int ApplyAdaptiveAdjustment(int baseAction)
     {
         int adjustedAction = baseAction;
 
+        // Điều chỉnh số lượng enemy (action), KHÔNG điều chỉnh level
         if (consecutiveAllyWins >= 2)
         {
-            adjustedAction = Mathf.Max(0, baseAction - 1);
-            Debug.Log($"📉 Giảm độ khó: {baseAction} → {adjustedAction} (Ally thắng {consecutiveAllyWins} trận liên tiếp)");
+            // Tăng số lượng enemy
+            adjustedAction = Mathf.Min(actionCount - 1, baseAction + 1);
+            Debug.Log($"📈 Tăng số lượng enemy: {baseAction} → {adjustedAction} (Ally thắng {consecutiveAllyWins} trận liên tiếp)");
         }
         else if (consecutiveAllyWins >= 1)
         {
             if (Random.value < 0.5f)
-                adjustedAction = Mathf.Max(0, baseAction - 1);
+                adjustedAction = Mathf.Min(actionCount - 1, baseAction + 1);
         }
 
         if (consecutiveEnemyWins >= 2)
         {
-            adjustedAction = Mathf.Min(actionCount - 1, baseAction + 1);
-            Debug.Log($"📈 Tăng độ khó: {baseAction} → {adjustedAction} (Enemy thắng {consecutiveEnemyWins} trận liên tiếp)");
+            // Giảm số lượng enemy
+            adjustedAction = Mathf.Max(0, baseAction - 1);
+            Debug.Log($"📉 Giảm số lượng enemy: {baseAction} → {adjustedAction} (Enemy thắng {consecutiveEnemyWins} trận liên tiếp)");
         }
         else if (consecutiveEnemyWins >= 1)
         {
             if (Random.value < 0.5f)
-                adjustedAction = Mathf.Min(actionCount - 1, baseAction + 1);
+                adjustedAction = Mathf.Max(0, baseAction - 1);
         }
 
         return adjustedAction;
@@ -170,12 +218,11 @@ public class QLearningEnemyBalancer : MonoBehaviour
                 qTable[nextState][i] = 0f;
         }
 
-        // ⭐ FIX: Lấy reference và update trực tiếp
+        // Q-Learning update
         float oldValue = qTable[lastState][lastAction];
         float maxNextQ = qTable[nextState].Max();
         float newValue = oldValue + learningRate * (reward + discountFactor * maxNextQ - oldValue);
 
-        // ⭐ CRITICAL: Update trực tiếp vào dictionary
         qTable[lastState][lastAction] = newValue;
 
         hasUnsavedChanges = true;
@@ -185,6 +232,7 @@ public class QLearningEnemyBalancer : MonoBehaviour
             Debug.Log($"✅ Q-Update:\n" +
                      $"  State: {lastState}\n" +
                      $"  Action: {lastAction}\n" +
+                     $"  Enemy Level: {currentEnemyLevel}\n" +
                      $"  Old: {oldValue:F3} → New: {newValue:F3}\n" +
                      $"  Reward: {reward:F2}, MaxNextQ: {maxNextQ:F2}\n" +
                      $"  Q-Array: [{string.Join(", ", qTable[lastState].Select(v => v.ToString("F2")))}]");
@@ -226,7 +274,7 @@ public class QLearningEnemyBalancer : MonoBehaviour
                 return;
             }
 
-            // ⭐ Verify integrity trước khi save
+            // Verify integrity trước khi save
             foreach (var kvp in qTable)
             {
                 if (kvp.Value == null || kvp.Value.Length != actionCount)
@@ -246,7 +294,6 @@ public class QLearningEnemyBalancer : MonoBehaviour
 
             string json = JsonUtility.ToJson(s, true);
 
-            // ⭐ Verify JSON không rỗng
             if (string.IsNullOrEmpty(json) || json.Length < 10)
             {
                 Debug.LogError($"❌ Generated JSON is invalid: length={json?.Length}");
@@ -296,7 +343,6 @@ public class QLearningEnemyBalancer : MonoBehaviour
 
             SerializableQTable s = JsonUtility.FromJson<SerializableQTable>(json);
 
-            // Validation
             if (s == null || s.keys == null || s.values == null)
             {
                 Debug.LogError("❌ Failed to deserialize. Resetting.");
@@ -313,7 +359,6 @@ public class QLearningEnemyBalancer : MonoBehaviour
                 return;
             }
 
-            // Verify arrays
             for (int i = 0; i < s.values.Count; i++)
             {
                 if (s.values[i] == null || s.values[i].Length != actionCount)
@@ -404,7 +449,6 @@ public class QLearningEnemyBalancer : MonoBehaviour
             }
             else
             {
-                // Check for NaN or Infinity
                 for (int i = 0; i < kvp.Value.Length; i++)
                 {
                     if (float.IsNaN(kvp.Value[i]) || float.IsInfinity(kvp.Value[i]))
@@ -425,26 +469,6 @@ public class QLearningEnemyBalancer : MonoBehaviour
         else
         {
             Debug.LogError($"❌ Q-Table has {invalidCount} invalid entries!");
-        }
-    }
-
-    [ContextMenu("Force Save Test Entry")]
-    public void ForceSaveTestEntry()
-    {
-        qTable["TestState_Medium"] = new float[] { 1.5f, 2.0f, -0.5f, 0.0f };
-        hasUnsavedChanges = true;
-        SaveQTable();
-        Debug.Log("💾 Saved test entry");
-
-        // Verify bằng cách load lại
-        LoadQTable();
-        if (qTable.ContainsKey("TestState_Medium"))
-        {
-            Debug.Log($"✅ Test entry verified: [{string.Join(", ", qTable["TestState_Medium"])}]");
-        }
-        else
-        {
-            Debug.LogError("❌ Test entry not found after load!");
         }
     }
 

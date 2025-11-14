@@ -12,26 +12,22 @@ public class CastSpellNode : Nodes
     private Transform _transform;
     private Animator _animator;
     private string animationClipName = "CastingSpell";
-    
 
-    public CastSpellNode(TheMageMovement theMageMovement,Transform transform, float cooldown, Animator animator, float spellRange)
+    public CastSpellNode(TheMageMovement theMageMovement, Transform transform, float cooldown, Animator animator, float spellRange)
     {
         _theMageMovement = theMageMovement;
         _transform = transform;
         _cooldown = cooldown;
-        _lastCastTime = -cooldown; // cho cast ngay từ đầu
+        _lastCastTime = -cooldown;
         _isCasting = false;
         _animator = animator;
-        // Lấy duration từ clip
-        //_castDuration = 1.5f;
+
         RuntimeAnimatorController controller = animator.runtimeAnimatorController;
         foreach (AnimationClip clip in controller.animationClips)
         {
             if (clip.name == animationClipName)
             {
                 _castDuration = clip.length / _animator.GetFloat("CastingSpellSpd");
-
-                //Debug.Log($"Casting spell animation duration set to {_castDuration} seconds.");
                 break;
             }
         }
@@ -39,36 +35,49 @@ public class CastSpellNode : Nodes
 
     public override NodeState Evaluate()
     {
+        Transform target = (Transform)parent.GetData("target");
+
+        // Kiểm tra target còn hợp lệ hay không
+        if (target == null || !target.gameObject.activeInHierarchy)
+        {
+            _isCasting = false;
+            _theMageMovement.isAttack = false;
+            state = NodeState.FAILURE;
+            return state;
+        }
+
+        Stats stats = target.GetComponent<Stats>();
+        if (stats == null || stats.currentHP <= 0)
+        {
+            _isCasting = false;
+            _theMageMovement.isAttack = false;
+            state = NodeState.FAILURE;
+            return state;
+        }
+
         // Nếu đang casting -> check thời gian
         if (_isCasting)
         {
             if (Time.time - _castStartTime >= _castDuration)
             {
-                // Kết thúc cast
-                //Debug.Log("Spell Casted!");
-                _lastCastTime = Time.time; // bắt đầu tính cooldown
+                _lastCastTime = Time.time;
                 _isCasting = false;
                 _theMageMovement.isAttack = false;
-
                 state = NodeState.SUCCESS;
             }
             else
             {
-                // Đang cast
                 state = NodeState.RUNNING;
             }
         }
         // Nếu không casting và cooldown đã xong -> bắt đầu cast mới
         else if (Time.time - _lastCastTime >= _cooldown)
         {
-            //Debug.Log("Start Casting Spell");
             _castStartTime = Time.time;
-            _theMageMovement.isAttack = true;   // block di chuyển + attack
+            _theMageMovement.isAttack = true;
             _isCasting = true;
             _animator.SetInteger("Anim", 1);
 
-
-            Transform target = (Transform)parent.GetData("target");
             _animator.SetFloat("Spell", _transform.position.x - target.position.x > 0 ? -1f : 1f);
 
             state = NodeState.RUNNING;
@@ -81,6 +90,4 @@ public class CastSpellNode : Nodes
 
         return state;
     }
-
-
 }

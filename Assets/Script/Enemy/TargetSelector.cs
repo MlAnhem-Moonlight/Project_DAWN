@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public static class TargetSelector
@@ -20,21 +20,30 @@ public static class TargetSelector
 
         foreach (var hitCollider in hitColliders)
         {
+            // Kiểm tra object có active không
+            if (!hitCollider.gameObject.activeInHierarchy)
+                continue;
+
             if (hitCollider.gameObject.layer == LayerMask.NameToLayer(layerHuman) ||
                 hitCollider.gameObject.layer == LayerMask.NameToLayer(layerConstruction) ||
                 hitCollider.transform == defaultTarget)
-            if(hitCollider.gameObject.GetComponent<Stats>() != null)
             {
-                float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
-                if (hitCollider.transform == defaultTarget)
+                Stats stats = hitCollider.gameObject.GetComponent<Stats>();
+
+                // Kiểm tra Stats có tồn tại và HP > 0 không
+                if (stats != null && stats.currentHP > 0)
                 {
-                    closestTarget = defaultTarget;
-                    break;
-                }
-                else if (distance < closestDistance)
-                {
-                    closestTarget = hitCollider.transform;
-                    closestDistance = distance;
+                    float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
+                    if (hitCollider.transform == defaultTarget)
+                    {
+                        closestTarget = defaultTarget;
+                        break;
+                    }
+                    else if (distance < closestDistance)
+                    {
+                        closestTarget = hitCollider.transform;
+                        closestDistance = distance;
+                    }
                 }
             }
         }
@@ -50,16 +59,25 @@ public static class TargetSelector
 
         foreach (var hitCollider in hitColliders)
         {
+            // Kiểm tra object có active không
+            if (!hitCollider.gameObject.activeInHierarchy)
+                continue;
+
             if (hitCollider.gameObject.layer == LayerMask.NameToLayer(layerHuman) ||
                 hitCollider.gameObject.layer == LayerMask.NameToLayer(layerConstruction))
-            if(hitCollider.gameObject.GetComponent<Stats>() != null)
             {
-                float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
+                Stats stats = hitCollider.gameObject.GetComponent<Stats>();
 
-                if (distance < closestDistance)
+                // Kiểm tra Stats có tồn tại và HP > 0 không
+                if (stats != null && stats.currentHP > 0)
                 {
-                    closestTarget = hitCollider.transform;
-                    closestDistance = distance;
+                    float distance = Vector3.Distance(origin.position, hitCollider.transform.position);
+
+                    if (distance < closestDistance)
+                    {
+                        closestTarget = hitCollider.transform;
+                        closestDistance = distance;
+                    }
                 }
             }
         }

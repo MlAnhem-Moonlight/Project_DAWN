@@ -1,328 +1,112 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 [RequireComponent(typeof(Collider2D))]
 public class PlayerHarvestController : MonoBehaviour
 {
-    [Header("Interaction")]
-    public float holdSeconds;
-    public GameObject uiObject; // thanh progress
+    [Header("Selection")]
     public float interactionRadius = 1.5f;
 
-    [Header("Ingredient Canvas (sẵn trong Canvas)")]
-    [Tooltip("Drag sẵn GameObject IngredientCanvas trong Canvas vào đây (ban đầu ẩn đi).")]
-    public GameObject ingredientCanvasInstance;
-    public Vector3 canvasOffset = new Vector3(-1.5f, 3.5f, 0f);
-    private TextMeshProUGUI ingredientText;
+    [Header("Highlight Settings")]
+    public Material highlightMaterial;
 
-    private List<Harvestable> nearby = new List<Harvestable>();
-    private Harvestable currentTarget;
-    private int currentTargetIndex = -1;
+    [Header("References")]
+    public IngredientUI ingredientUI;
 
-    private Image fillImage;
-    private float holdTimer = 0f;
-    private bool isHarvesting = false;
+    private List<GameObject> nearbyTargets = new List<GameObject>();
+    private int currentIndex = -1;
 
-    // Canvas references
-    private Canvas parentCanvas;
-    private RectTransform canvasRectTransform;
-    private RectTransform ingredientRectTransform;
+    private GameObject currentTarget;
+    private Material originalMaterial;
+    private SpriteRenderer targetRenderer;
 
-    // Static đảm bảo chỉ 1 canvas hiển thị
-    private static PlayerHarvestController activeController = null;
-
-    private void Awake()
+    void Update()
     {
-        if (uiObject != null)
-        {
-            fillImage = uiObject.GetComponentInChildren<Image>();
-            uiObject.SetActive(false);
-        }
-
-        if (ingredientCanvasInstance != null)
-        {
-            ingredientText = ingredientCanvasInstance.GetComponentInChildren<TextMeshProUGUI>();
-            ingredientCanvasInstance.SetActive(false);
-
-            parentCanvas = ingredientCanvasInstance.GetComponentInParent<Canvas>();
-            if (parentCanvas != null)
-                canvasRectTransform = parentCanvas.GetComponent<RectTransform>();
-
-            ingredientRectTransform = ingredientCanvasInstance.GetComponent<RectTransform>();
-        }
+        UpdateNearbyTargets();
+        HandleTargetSwitch();
     }
 
-    private void Update()
+    void UpdateNearbyTargets()
     {
-        CleanupNearbyList();
-        HandleTargetSelection();
-        UpdateUIPosition();
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
+        nearbyTargets.Clear();
 
-        // Chỉ controller đang active mới cập nhật IngredientCanvas
-        if (activeController == this)
-            UpdateIngredientCanvasPosition();
-
-        if (currentTarget != null && !isHarvesting)
+        foreach (var hit in hits)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                holdSeconds = currentTarget.harvestTime;
-                if (holdSeconds > 0)
-                    StartCoroutine(HarvestRoutine());
-                else
-                    currentTarget.CompleteHarvest();
-            }
+            int layer = hit.gameObject.layer;
+            if (layer == LayerMask.NameToLayer("Deer") ||
+                layer == LayerMask.NameToLayer("Wolf"))
+                continue;
+
+            if (hit.GetComponent<Ingredient>() != null)
+                nearbyTargets.Add(hit.gameObject);
         }
+
+        if (currentTarget != null && !nearbyTargets.Contains(currentTarget))
+            ClearSelection();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void HandleTargetSwitch()
     {
-        var h = other.GetComponent<Harvestable>();
-        if (h != null && !nearby.Contains(h) && !h.isHarvested)
-        {
-            nearby.Add(h);
-            if (currentTarget == null)
-                SelectTarget(0);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        var h = other.GetComponent<Harvestable>();
-        if (h != null && nearby.Contains(h))
-        {
-            int removedIndex = nearby.IndexOf(h);
-            nearby.Remove(h);
-
-            if (currentTarget == h)
-            {
-                ClearTarget();
-                if (nearby.Count > 0)
-                {
-                    int newIndex = Mathf.Min(removedIndex, nearby.Count - 1);
-                    SelectTarget(newIndex);
-                }
-            }
-            else if (removedIndex < currentTargetIndex)
-                currentTargetIndex--;
-        }
-    }
-
-    private void HandleTargetSelection()
-    {
-        if (nearby.Count <= 1) return;
+        if (nearbyTargets.Count == 0) return;
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            int nextIndex = (currentTargetIndex + 1) % nearby.Count;
-            SelectTarget(nextIndex);
+            currentIndex = (currentIndex + 1) % nearbyTargets.Count;
+            SelectTarget(nearbyTargets[currentIndex]);
+        }
+        else if (currentTarget == null && nearbyTargets.Count > 0)
+        {
+            currentIndex = 0;
+            SelectTarget(nearbyTargets[currentIndex]);
         }
     }
 
-    private IEnumerator HarvestRoutine()
+    void SelectTarget(GameObject newTarget)
     {
-        if (currentTarget == null || currentTarget.isHarvested || isHarvesting) yield break;
-
-        isHarvesting = true;
-        holdTimer = 0f;
-
-        while (holdTimer < holdSeconds)
-        {
-            if (currentTarget == null) break;
-            if (!Input.GetKey(KeyCode.E))
-            {
-                isHarvesting = false;
-                ResetProgress();
-                yield break;
-            }
-
-            holdTimer += Time.deltaTime;
-            if (fillImage != null)
-                fillImage.fillAmount = Mathf.Clamp01(holdTimer / holdSeconds);
-            yield return null;
-        }
-
         if (currentTarget != null)
-            currentTarget.CompleteHarvest();
+            ResetHighlight(currentTarget);
 
-        holdTimer = 0f;
-        isHarvesting = false;
-        ResetProgress();
-        CleanupNearbyList();
+        currentTarget = newTarget;
+        ApplyHighlight(currentTarget);
+
+        if (ingredientUI != null)
+            ingredientUI.ShowIngredients(currentTarget);
     }
 
-    private void ResetProgress()
+    void ClearSelection()
     {
-        holdTimer = 0f;
-        if (fillImage != null)
-            fillImage.fillAmount = 0f;
-    }
-
-    private void SelectTarget(int index)
-    {
-        if (index < 0 || index >= nearby.Count) return;
-
-        currentTargetIndex = index;
-        currentTarget = nearby[index];
-        ShowIngredientCanvas();
-    }
-
-    private void ShowIngredientCanvas()
-    {
-        if (ingredientCanvasInstance == null) return;
-
-        // Ẩn canvas cũ nếu controller khác đang hiển thị
-        if (activeController != null && activeController != this)
-            activeController.HideIngredientCanvas();
-
-        activeController = this;
-
-        ingredientCanvasInstance.SetActive(true);
-        UpdateIngredientCanvasPosition();
-
-        var ingredientScript = currentTarget.GetComponent<Ingredient>();
-        if (ingredientText != null && ingredientScript != null && ingredientScript.ingredients != null)
+        if (currentTarget != null)
         {
-            string text = "";
-            foreach (var entry in ingredientScript.ingredients)
-                text += $"<sprite name={entry.type}>  ";
-            ingredientText.text = text;
-        }
-        else if (ingredientText != null)
-            ingredientText.text = "Không có nguyên liệu.";
-    }
-
-    private void UpdateIngredientCanvasPosition()
-    {
-        if (ingredientCanvasInstance == null || !ingredientCanvasInstance.activeSelf) return;
-        if (parentCanvas == null || ingredientRectTransform == null) return;
-
-        Camera cam = GetActiveCamera();
-        Vector3 worldPos = transform.position + canvasOffset;
-        Vector3 screenPos = cam.WorldToScreenPoint(worldPos);
-
-        if (screenPos.z < 0)
-        {
-            ingredientCanvasInstance.SetActive(false);
-            if (activeController == this)
-                activeController = null;
-            return;
+            ResetHighlight(currentTarget);
+            currentTarget = null;
+            currentIndex = -1;
         }
 
-        Vector2 canvasPos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvasRectTransform,
-            screenPos,
-            parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : cam,
-            out canvasPos
-        );
-
-        ingredientRectTransform.anchoredPosition = canvasPos;
+        if (ingredientUI != null)
+            ingredientUI.Clear();
     }
 
-    private void HideIngredientCanvas()
+    void ApplyHighlight(GameObject target)
     {
-        if (ingredientCanvasInstance != null)
-            ingredientCanvasInstance.SetActive(false);
-
-        if (activeController == this)
-            activeController = null;
-    }
-
-    private void UpdateUIPosition()
-    {
-        if (currentTarget == null)
+        targetRenderer = target.GetComponent<SpriteRenderer>();
+        if (targetRenderer != null && highlightMaterial != null)
         {
-            HideUI();
-            return;
-        }
-
-        if (uiObject != null)
-        {
-            Camera cam = GetActiveCamera();
-            RectTransform canvasRect = uiObject.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
-            RectTransform uiRect = uiObject.GetComponent<RectTransform>();
-
-            Vector3 worldPos = currentTarget.transform.position + Vector3.up * 0.1f;
-            Vector3 screenPos = cam.WorldToScreenPoint(worldPos);
-
-            if (screenPos.z < 0)
-            {
-                uiObject.SetActive(false);
-                return;
-            }
-
-            Vector2 canvasPos;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect,
-                screenPos,
-                canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : cam,
-                out canvasPos
-            );
-
-            uiRect.anchoredPosition = canvasPos;
-            uiObject.SetActive(true);
+            originalMaterial = targetRenderer.material;
+            targetRenderer.material = highlightMaterial;
         }
     }
 
-    private void HideUI()
+    void ResetHighlight(GameObject target)
     {
-        if (uiObject != null)
-            uiObject.SetActive(false);
-        ResetProgress();
+        var renderer = target.GetComponent<SpriteRenderer>();
+        if (renderer != null && originalMaterial != null)
+            renderer.material = originalMaterial;
     }
 
-    private void CleanupNearbyList()
+    private void OnDrawGizmosSelected()
     {
-        for (int i = nearby.Count - 1; i >= 0; i--)
-        {
-            if (nearby[i] == null || nearby[i].isHarvested)
-            {
-                if (i == currentTargetIndex)
-                    ClearTarget();
-                else if (i < currentTargetIndex)
-                    currentTargetIndex--;
-                nearby.RemoveAt(i);
-            }
-        }
-
-        if (nearby.Count == 0)
-            ClearTarget();
-        else if (currentTargetIndex >= nearby.Count)
-            SelectTarget(0);
-    }
-
-    private void ClearTarget()
-    {
-        currentTarget = null;
-        currentTargetIndex = -1;
-        HideUI();
-        HideIngredientCanvas();
-        ResetProgress();
-    }
-
-    private void OnDisable()
-    {
-        if (activeController == this)
-            HideIngredientCanvas();
-    }
-
-    private void OnDestroy()
-    {
-        if (activeController == this)
-            activeController = null;
-    }
-
-    private Camera GetActiveCamera()
-    {
-        if (Camera.main != null)
-            return Camera.main;
-        Camera[] cameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
-        foreach (var cam in cameras)
-            if (cam.isActiveAndEnabled) return cam;
-        return null;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, interactionRadius);
     }
 }

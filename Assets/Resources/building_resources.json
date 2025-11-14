@@ -1,0 +1,47 @@
+{
+  "Fortress": {
+    "T1_Total": { "stone": 265, "iron": 75, "wood": 276, "gold": 168, "meat": 38 },
+    "Upgrade": {
+      "T1_T2": { "stone": 219, "iron": 285, "wood": 46, "gold": 161, "meat": 23 },
+      "T2_T3": { "stone": 328, "iron": 428, "wood": 68, "gold": 241, "meat": 34 }
+    }
+  },
+
+  "Watchtown": {
+    "T1_Total": { "stone": 182, "wood": 91, "iron": 38, "gold": 54, "meat": 15 },
+    "Upgrade": {
+      "T1_T2": { "stone": 109, "wood": 55, "iron": 23, "gold": 32, "meat": 9 },
+      "T2_T3": { "stone": 164, "wood": 82, "iron": 34, "gold": 49, "meat": 14 }
+    }
+  },
+
+  "Barrack": {
+    "T1_Total": { "wood": 160, "stone": 137, "meat": 114, "iron": 114, "gold": 40 },
+    "Upgrade": {
+      "T1_T2": { "wood": 96, "stone": 82, "meat": 57, "iron": 68, "gold": 20 },
+      "T2_T3": { "wood": 144, "stone": 123, "meat": 86, "iron": 114, "gold": 40 }
+    }
+  },
+
+  "VillagerHouse": {
+    "T1_Total": { "wood": 137, "stone": 82, "meat": 50, "iron": 17, "gold": 8 },
+    "Upgrade": {
+      "T1_T2": { "wood": 82, "stone": 49, "meat": 10, "iron": 10, "gold": 5 },
+      "T2_T3": { "wood": 123, "stone": 74, "meat": 17, "iron": 15, "gold": 7 }
+    }
+  },
+
+  "Tavern": {
+    "T1_Total": {
+      "wood": 200,
+      "stone": 150,
+      "iron": 30,
+      "gold": 120,
+      "meat": 60
+    },
+    "Upgrade": {
+      "T1_T2": { "wood": 0, "stone": 0, "iron": 0, "gold": 0, "meat": 0 },
+      "T2_T3": { "wood": 0, "stone": 0, "iron": 0, "gold": 0, "meat": 0 }
+    }
+  }
+}

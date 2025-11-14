@@ -1,4 +1,4 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,18 +14,31 @@ public class TonSetTargetNode : Nodes
 
     public override NodeState Evaluate()
     {
-        
         Transform target = (Transform)GetData("target");
-        if (target != null)
+
+        // Kiểm tra target còn hợp lệ hay không
+        if (target != null
+            && target.gameObject.activeInHierarchy)
         {
-            if (_tonMovement.getTarget() != target) _tonMovement.SetTarget(target);
-            state = NodeState.SUCCESS;
+            Stats stats = target.GetComponent<Stats>();
+            if (stats != null && stats.currentHP > 0)
+            {
+                if (_tonMovement.getTarget() != target)
+                    _tonMovement.SetTarget(target);
+                state = NodeState.SUCCESS;
+            }
+            else
+            {
+                // Target đã chết
+                state = NodeState.FAILURE;
+            }
         }
         else
         {
+            // Target không tồn tại hoặc bị ẩn
             state = NodeState.FAILURE;
         }
-        
+
         return state;
     }
 }

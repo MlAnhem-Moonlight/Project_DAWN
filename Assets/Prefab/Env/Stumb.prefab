@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectId: Tree
+  harvestTime: 2
   ingredients:
   - type: 0
     quantity: 20

@@ -1,4 +1,4 @@
-using BehaviorTree;
+﻿using BehaviorTree;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +14,7 @@ public class TheMageMovement : Nodes
     public bool isAttack { get; set; }
     public Vector3 _targetPosition;
 
-    public TheMageMovement(Transform transform, float speed, float range,Animator animator, Transform defaultTarget = null, Transform target = null)
+    public TheMageMovement(Transform transform, float speed, float range, Animator animator, Transform defaultTarget = null, Transform target = null)
     {
         _transform = transform;
         _speed = speed;
@@ -24,7 +24,6 @@ public class TheMageMovement : Nodes
         _animator = animator;
 
         isAttack = false;
-
     }
 
     public void SetTarget(Transform target)
@@ -35,26 +34,28 @@ public class TheMageMovement : Nodes
     public override NodeState Evaluate()
     {
         _animator.SetInteger("Anim", 0);
-        //if (_target == null)
-        //{
-        //    state = NodeState.FAILURE;
-        //    direction = 0;
-        //    return state;
-        //}
+
+        // Kiểm tra xem target hiện tại còn hợp lệ hay không
+        if (_target != _defaultTarget && (_target == null || !_target.gameObject.activeInHierarchy || _target.GetComponent<Stats>().currentHP <= 0))
+        {
+            // Target hiện tại không hợp lệ, quay lại default target
+            _target = _defaultTarget;
+        }
 
         if (_target == null)
         {
             _target = _defaultTarget;
         }
+
         Vector3 targetPosition = new Vector3(_target.position.x, _transform.position.y, _transform.position.z);
         _targetPosition = targetPosition;
         float step = _speed * Time.deltaTime;
-        
 
         _animator.SetFloat("Movement", _transform.position.x - targetPosition.x > 0 ? -1f : 1f);
+
         if (!isAttack)
-        {    
-            if (Vector3.Distance(_transform.position, targetPosition) < _range - 0.5f )
+        {
+            if (Vector3.Distance(_transform.position, targetPosition) < _range - 0.5f)
             {
                 state = NodeState.SUCCESS;
             }
@@ -62,9 +63,12 @@ public class TheMageMovement : Nodes
             {
                 _transform.position = Vector3.MoveTowards(_transform.position, targetPosition, step);
                 state = NodeState.RUNNING;
-
             }
-        } else state = NodeState.SUCCESS;
+        }
+        else
+        {
+            state = NodeState.SUCCESS;
+        }
 
         return state;
     }
