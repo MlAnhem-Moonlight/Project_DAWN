@@ -3,6 +3,7 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject prefab;
     void Start()
     {
         
@@ -17,5 +18,15 @@ public class DestroyObject : MonoBehaviour
     public void DestroyParent()
     {
         Destroy(transform.parent.gameObject);
+    }
+
+    public void DisableThis()
+    {
+        gameObject.SetActive(false);
+    }    
+
+    public void TurnOnPrefab()
+    {
+        prefab.SetActive(true);
     }
 }

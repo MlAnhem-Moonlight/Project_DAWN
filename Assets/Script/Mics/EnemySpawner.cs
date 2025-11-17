@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public enum UnitFaction { Enemy, Ally }
+
 public class EnemySpawner : MonoBehaviour
 {
     [System.Serializable]
@@ -9,11 +11,12 @@ public class EnemySpawner : MonoBehaviour
         public string name;
         public GameObject prefab;
         public int poolSize = 10;
+        public UnitFaction faction = UnitFaction.Enemy; // Enemy or Ally
 
         [HideInInspector]
         public List<GameObject> pool = new List<GameObject>();
     }
-
+    
     [Header("Danh sách các loại Enemy")]
     public List<EnemyPool> enemyPools = new List<EnemyPool>();
 
@@ -75,6 +78,49 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
     }
+
+
+    //ally
+    //Gọi hàm này để spawn ally từ pool
+    public static void SpawnAlly(string allyName, Vector3 spawnPosition, int allyLevel)
+    {
+        if (!EnsureInstance()) return;
+
+        var pool = instance.enemyPools.Find(p => p.name == allyName && p.faction == UnitFaction.Ally);
+        if (pool == null)
+        {
+            Debug.LogWarning($"⚠️ Không tìm thấy Ally '{allyName}' trong pool!");
+            return;
+        }
+
+        SpawnUnitFromPool(pool, spawnPosition, allyLevel);
+    }
+
+    private static void SpawnUnitFromPool(EnemyPool pool, Vector3 spawnPos, int level)
+    {
+        foreach (var unit in pool.pool)
+        {
+            if (!unit.activeInHierarchy)
+            {
+                unit.transform.position = spawnPos;
+                unit.SetActive(true);
+
+                var stats = unit.GetComponent<Stats>();
+                if (stats != null)
+                {
+                    stats.level = level;
+                    stats.ApplyGrowth();
+                }
+
+                // Nếu là Ally, bật AI thân thiện hoặc đánh theo lệnh
+                // Nếu là Enemy, AI vẫn như cũ
+                return;
+            }
+        }
+
+        Debug.LogWarning($"⚠️ Hết unit trong pool '{pool.name}'");
+    }
+
 
     // ===============================
     // 🔥 3 kiểu spawn với level system

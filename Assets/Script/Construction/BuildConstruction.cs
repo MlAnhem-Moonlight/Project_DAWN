@@ -25,6 +25,7 @@ public class BuildConstruction : MonoBehaviour
     [Header("UX Prefab")]
     public GameObject buildAvailableUI;
     public GameObject buildingActionUI;
+    public GameObject smokeUI;
     public Vector3 uiOffset = new Vector3(0, 1f, 0);
 
     private BuildingResourceFileField allResources;
@@ -38,30 +39,36 @@ public class BuildConstruction : MonoBehaviour
 
         if (buildAvailableUI != null) buildAvailableUI.SetActive(false);
         if (buildingActionUI != null) buildingActionUI.SetActive(false);
+        if (smokeUI != null) smokeUI.SetActive(false);
     }
 
     void Update()
     {
-
-        // Cập nhật UI có thể xây
-        if (isBuilt == false)
+        if (!isBuilt)
+        {
+            // 🟩 Kiểm tra UI "có thể xây" khi chưa xây
             UpdateBuildAvailabilityUI();
+        }
         else
         {
-            if (buildAvailableUI != null) buildAvailableUI.SetActive(false);
-            if (buildingActionUI != null) buildingActionUI.SetActive(false);
+            // 🟩 Khi đã xây, ẩn UI "Có thể xây"
+            if (buildAvailableUI != null)
+                buildAvailableUI.SetActive(false);
         }
 
-        // 🟩 BẤM E KHI ĐỨNG TRONG VÙNG
+        // 🟩 BẤM E KHI ĐỨNG TRONG VÙNG VÀ CHƯA XÂY
         if (isPlayerInRange && !isBuilt && Input.GetKeyDown(KeyCode.E))
         {
             TryBuild();
         }
 
-        if (isBuilt == true && constructionHP <= 0)
+        // 🟩 Khi công trình bị phá hủy
+        if (isBuilt && constructionHP <= 0)
         {
             if (construction != null)
                 construction.SetActive(false);
+            if (smokeUI != null && !smokeUI.activeSelf)
+                smokeUI.SetActive(true);
 
             GetComponent<SpriteRenderer>().enabled = true;
             isBuilt = false;
@@ -77,7 +84,9 @@ public class BuildConstruction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (buildingActionUI != null)
+
+            // 🟩 Chỉ bật Action UI khi chưa xây công trình
+            if (!isBuilt && buildingActionUI != null)
             {
                 UpdateUIPosition();
                 buildingActionUI.SetActive(true);
@@ -97,6 +106,7 @@ public class BuildConstruction : MonoBehaviour
         }
     }
 
+    // 🟩 Load dữ liệu Resource theo loại công trình
     void LoadBuildingResource()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("building_resources");
@@ -107,7 +117,6 @@ public class BuildConstruction : MonoBehaviour
         }
 
         allResources = JsonUtility.FromJson<BuildingResourceFileField>(jsonFile.text);
-
         BuildingDataField selected = buildingType switch
         {
             BuildingType.Fortress => allResources.Fortress,
@@ -137,14 +146,15 @@ public class BuildConstruction : MonoBehaviour
         buildAvailableUI.SetActive(canBuild);
     }
 
+    // 🟩 Cập nhật vị trí UI
     void UpdateUIPosition()
     {
-
         if (buildingActionUI != null)
         {
             Vector3 worldPos = transform.position + uiOffset;
             buildingActionUI.transform.position = worldPos;
 
+            // Quay UI về phía camera
             buildingActionUI.transform.LookAt(Camera.main.transform);
             buildingActionUI.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
         }
@@ -169,9 +179,14 @@ public class BuildConstruction : MonoBehaviour
                 construction.SetActive(true);
 
             GetComponent<SpriteRenderer>().enabled = false;
+            if (smokeUI != null) smokeUI.SetActive(false);
 
             if (buildAvailableUI != null)
                 buildAvailableUI.SetActive(false);
+
+            // 🟩 Tắt Action UI sau khi xây thành công
+            if (buildingActionUI != null)
+                buildingActionUI.SetActive(false);
         }
         else
             Debug.Log("Không đủ tài nguyên!");
