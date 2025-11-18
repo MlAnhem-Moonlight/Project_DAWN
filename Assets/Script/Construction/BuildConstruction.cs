@@ -39,7 +39,7 @@ public class BuildConstruction : MonoBehaviour
 
         if (buildAvailableUI != null) buildAvailableUI.SetActive(false);
         if (buildingActionUI != null) buildingActionUI.SetActive(false);
-        if (smokeUI != null) smokeUI.SetActive(false);
+        if (smokeUI != null && isBuilt==true) smokeUI.SetActive(false);
     }
 
     void Update()
