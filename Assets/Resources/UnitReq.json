@@ -1,0 +1,42 @@
+{
+  "Units": [
+    {
+      "name": "Archer",
+      "MeatPerRound": 5,
+      "Lv1": { "wood": 70, "stone": 56, "iron": 18, "gold": 12 },
+      "Lv2": { "wood": 88, "stone": 70, "iron": 22, "gold": 15 },
+      "Lv3": { "wood": 110, "stone": 88, "iron": 28, "gold": 18 },
+      "Lv4": { "wood": 137, "stone": 110, "iron": 35, "gold": 23 },
+      "Lv5": { "wood": 172, "stone": 138, "iron": 43, "gold": 28 },
+      "Lv6": { "wood": 215, "stone": 172, "iron": 54, "gold": 35 },
+      "Lv7": { "wood": 269, "stone": 215, "iron": 67, "gold": 43 },
+      "Lv8": { "wood": 336, "stone": 269, "iron": 84, "gold": 54 }
+    },
+
+    {
+      "name": "Knight",
+      "MeatPerRound": 10,
+      "Lv1": { "wood": 50, "stone": 0, "iron": 36, "gold": 12 },
+      "Lv2": { "wood": 63, "stone": 0, "iron": 45, "gold": 15 },
+      "Lv3": { "wood": 78, "stone": 0, "iron": 56, "gold": 19 },
+      "Lv4": { "wood": 98, "stone": 0, "iron": 70, "gold": 24 },
+      "Lv5": { "wood": 122, "stone": 0, "iron": 88, "gold": 30 },
+      "Lv6": { "wood": 152, "stone": 0, "iron": 110, "gold": 37 },
+      "Lv7": { "wood": 190, "stone": 0, "iron": 138, "gold": 46 },
+      "Lv8": { "wood": 237, "stone": 0, "iron": 172, "gold": 57 }
+    },
+
+    {
+      "name": "Spear",
+      "MeatPerRound": 5,
+      "Lv1": { "wood": 50, "stone": 24, "iron": 30, "gold": 20 },
+      "Lv2": { "wood": 63, "stone": 30, "iron": 38, "gold": 25 },
+      "Lv3": { "wood": 78, "stone": 38, "iron": 48, "gold": 31 },
+      "Lv4": { "wood": 98, "stone": 47, "iron": 60, "gold": 38 },
+      "Lv5": { "wood": 122, "stone": 59, "iron": 75, "gold": 48 },
+      "Lv6": { "wood": 152, "stone": 74, "iron": 94, "gold": 60 },
+      "Lv7": { "wood": 190, "stone": 92, "iron": 118, "gold": 75 },
+      "Lv8": { "wood": 237, "stone": 115, "iron": 147, "gold": 93 }
+    }
+  ]
+}

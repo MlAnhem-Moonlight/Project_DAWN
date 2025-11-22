@@ -221,6 +221,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: IconIngame_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 725
+        width: 266
+        height: 296
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7378e261b2d0a40a4df68b12c59ab4
+      internalID: -711559880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_6
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 725
+        width: 265
+        height: 296
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cba87b601edd549afcdb5206449548
+      internalID: 692940185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_7
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 830
+        width: 165
+        height: 192
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dac0f3f4ef5f9498745f96ed198ec1
+      internalID: -382641973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_8
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 833
+        width: 174
+        height: 189
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047e6f9d055ae794188eb3cae1c223e6
+      internalID: 1976654979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_9
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 832
+        width: 169
+        height: 192
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e71a162ddc91a40be1fe9029012160
+      internalID: -1046449036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_10
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 832
+        width: 170
+        height: 192
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68160c25456d3c4784bd71a1a1d41d7
+      internalID: 1284294836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_11
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 645
+        width: 174
+        height: 186
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ba4133d4768c345b505569cd08f242
+      internalID: -1385072973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconIngame_12
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 646
+        width: 168
+        height: 185
+      alignment: 9
+      pivot: {x: 0, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87cb175a3b92de74cbb3b86da1ba24f5
+      internalID: -1942215187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -237,9 +413,17 @@ TextureImporter:
     nameFileIdTable:
       IconIngame_0: -493320429658682351
       IconIngame_1: 2679537763250385949
+      IconIngame_10: 1284294836
+      IconIngame_11: -1385072973
+      IconIngame_12: -1942215187
       IconIngame_2: -4065812393464717310
       IconIngame_3: 1029112221749085322
       IconIngame_4: -7266288110342086811
+      IconIngame_5: -711559880
+      IconIngame_6: 692940185
+      IconIngame_7: -382641973
+      IconIngame_8: 1976654979
+      IconIngame_9: -1046449036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

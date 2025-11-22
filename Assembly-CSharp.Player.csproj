@@ -79,6 +79,7 @@
     <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
     <Compile Include="Assets\Script\Mics\Water\WaterTriggerHandler.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\BomberStats.cs" />
+    <Compile Include="Assets\Script\UI\ReplaceWithRandomPrefab.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TankStats.cs" />
     <Compile Include="Assets\Script\Mics\BattleStateCollector.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />
     <Compile Include="Assets\Script\Q-Learning\QLearning.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
+    <Compile Include="Assets\Script\UI\IngridentUIPrase.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxCamera.cs.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Assets\Script\Enemy\TheMage\MageCheckEnemyInRange.cs" />
     <Compile Include="Assets\Script\Environment\MaterialSpawner.cs" />
     <Compile Include="Assets\Guide\ResourceManager.cs" />
+    <Compile Include="Assets\Script\UI\ShowStatsUI.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxBackground.cs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -228,15 +231,18 @@
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Special skin\Links.txt" />
     <None Include="Assets\Sprite\karsiori\Sprites\Pixel Art Rock Pile Pack\Pixel Art Rock Pile Pack - Read Me.txt" />
     <None Include="Assets\Sprite\Environment\wolfpack_9.27.21\readme.txt" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\Fonts\Environment Maps\cc0.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Unity - OFL.txt" />
     <None Include="Assets\Guide\SpearBehaviorGuide.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Arm Layers\READ ME.txt" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\ThirdPartyLicenses\RobotoSlab Font License.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Pet companion\Links.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Roboto-Bold - AFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\ThirdPartyLicenses\Arvo Font License.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Character Asset Pack\READ ME.txt" />
     <None Include="Assets\Sprite\Background\Background_Free_Valley_pack\help file - LudicArts.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -248,6 +254,7 @@
     <None Include="Assets\Sprite\Unit\Little Mage\READ ME.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcFREE NPC\READ ME.txt" />
     <None Include="Assets\Sprite\Unit\Martial Hero 2\License.txt" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\Fonts\BebasNeue\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore character effects\Links.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Emoji Icons\Links.txt" />
@@ -260,17 +267,21 @@
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 7x Male Clothing\Links.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\Fonts\RobotoSlab\LICENSE.txt" />
     <None Include="Assets\Guide\GANew.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Sprite\Unit\Little Mage\CHANGELOG.txt" />
     <None Include="Assets\Sprite\Environment\wolfpack_9.27.21\update_tailwag\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\Fonts\Arvo\OFL.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Pet companion\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 43x Female Clothing\Links.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore 35x Hand Items\Links.txt" />
     <None Include="Assets\Sprite\Unit\Medieval Warrior Pack 2\License.txt" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\ThirdPartyLicenses\Environment Maps cc0.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\ThirdPartyLicenses\BebasNeue Font License.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Emoji Icons\READ ME.txt" />
     <None Include="Assets\Guide\ResourceAllocationGA_NewMutation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -1123,6 +1134,10 @@
       <Project>{7F372BA9-37AB-18AA-8B7C-F75E11A1B5EE}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Gentleland.SteampunkUI.DemoAndExample.Player.csproj">
+      <Project>{2670A6BF-14AE-9868-0905-8D692B1282FF}</Project>
+      <Name>Gentleland.SteampunkUI.DemoAndExample.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
       <Project>{0EDC361D-CEE7-386C-5E55-D597D2C1C9F1}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
@@ -1194,6 +1209,10 @@
     <ProjectReference Include="Unity.Muse.Behavior.Player.csproj">
       <Project>{B1756D8D-A147-46E3-0947-BEFC56494AEB}</Project>
       <Name>Unity.Muse.Behavior.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Gentleland.Utils.SteampunkUI.Player.csproj">
+      <Project>{801BE54E-F2A5-9B5E-36FE-C073374F502D}</Project>
+      <Name>Gentleland.Utils.SteampunkUI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{A8E096BB-8D34-8822-8C23-FB8018E842A4}</Project>

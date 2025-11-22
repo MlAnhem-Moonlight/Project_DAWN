@@ -82,7 +82,7 @@ public class EnemySpawner : MonoBehaviour
 
     //ally
     //Gọi hàm này để spawn ally từ pool
-    public static void SpawnAlly(string allyName, Vector3 spawnPosition, int allyLevel)
+    public void SpawnAlly(string allyName, int allyLevel)
     {
         if (!EnsureInstance()) return;
 
@@ -93,7 +93,7 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        SpawnUnitFromPool(pool, spawnPosition, allyLevel);
+        SpawnUnitFromPool(pool, spawnPoint.position, allyLevel);
     }
 
     private static void SpawnUnitFromPool(EnemyPool pool, Vector3 spawnPos, int level)

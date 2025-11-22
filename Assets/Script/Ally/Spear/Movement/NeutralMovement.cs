@@ -43,7 +43,6 @@ namespace Spear.Movement
                 state = NodeState.FAILURE;
                 return state;
             }
-            Debug.Log(_waiting);
             if (_waiting)
             {
                 _waitCounter += Time.deltaTime;
