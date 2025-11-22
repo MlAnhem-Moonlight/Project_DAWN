@@ -13,7 +13,7 @@ public class MultiUIRandomizer : MonoBehaviour
         [HideInInspector] public GameObject instance; // prefab đang dùng
     }
     [Range(0, 100)]
-    public int ReRollCount = 1;
+    public int ReRollCount = 2;
     public UIGroup[] groups;   // danh sách target + prefab list
     [Range(1, 3)]
     public int TowerLevel = 1;
@@ -25,28 +25,35 @@ public class MultiUIRandomizer : MonoBehaviour
 
     [Header("Spawned Object")]
     public GameObject selected;
+    public GameObject cardSelected;
+    public GameObject rpUI;
+
     public EnemySpawner allySpawner;
 
-    public void SetSelected(GameObject obj)
+    public void SetSelected(GameObject obj, GameObject obj1)
     {
         selected = obj;
-    }   
+        cardSelected = obj1;
+        rpUI = cardSelected.transform.Find("OutOfStock").gameObject;
+    }
 
     public void HireHero()
     {
         
-        if (selected == null)
+        if (selected == null || cardSelected == null)
         {
             Debug.LogWarning("No selected object to hire");
             return;
         }
-        Debug.Log($"Selected: {selected.name} Level: {selected.GetComponent<Stats>().level}");
+        
         if (allySpawner != null)
         {
             allySpawner.SpawnAlly(selected.name.Replace("(Clone)", "").Trim(), selected.GetComponent<Stats>().level);
         }
         else Debug.LogWarning("Ally Spawner is null");
-        //selected.GetComponentInParent<Button>().interactable = false;
+        cardSelected.GetComponentInParent<Button>().interactable = false;
+        rpUI.GetComponent<TextMeshProUGUI>().enabled = true;
+        selected = cardSelected = rpUI = null;
     }
 
     void Start()
@@ -66,14 +73,24 @@ public class MultiUIRandomizer : MonoBehaviour
         }
     }
 
-    [ContextMenu("Replace Prefab")]
-    public void RandomizeAll()
+    public void ClearText()
     {
         levelText.text = "";
         statText.text = "";
         unitname.text = "";
         reqDetail.text = "";
-        ReRollCount--;
+    }
+
+    [ContextMenu("Replace Prefab")]
+    public void RandomizeAll()
+    {
+        if (ReRollCount > 0) ReRollCount--;
+
+        levelText.text = "";
+        statText.text = "";
+        unitname.text = "";
+        reqDetail.text = "";
+        
         foreach (var group in groups)
         {
             ReplacePrefab(group);
@@ -86,7 +103,7 @@ public class MultiUIRandomizer : MonoBehaviour
                 GetComponent<UnityEngine.UI.Button>().interactable = false;
             }
         }
-
+        
     }
     public void ReplacePrefab(UIGroup group)
     {

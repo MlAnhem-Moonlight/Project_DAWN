@@ -63,7 +63,7 @@ public class ShowStatsUI : MonoBehaviour
         if (stats != null)
         {
             if (selectedHolder.GetComponent<MultiUIRandomizer>() != null)
-                selectedHolder.GetComponent<MultiUIRandomizer>().SetSelected(stats.gameObject);
+                selectedHolder.GetComponent<MultiUIRandomizer>().SetSelected(stats.gameObject, this.gameObject);
 
             ShowStats(stats.gameObject);
         }
