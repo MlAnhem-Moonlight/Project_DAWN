@@ -103,6 +103,11 @@ MonoBehaviour:
     m_GlyphIndex: 12
     m_Scale: 1
     m_Name: Skill_Dmg_Icon
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 13
+    m_Scale: 1
+    m_Name: Arrow_Right_Icon
   m_GlyphTable:
   - m_Index: 0
     m_Metrics:
@@ -312,6 +317,22 @@ MonoBehaviour:
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
     sprite: {fileID: -1942215187, guid: f1ab8ceb557769a4aaf54bb8cc9788df, type: 3}
+  - m_Index: 13
+    m_Metrics:
+      m_Width: 84
+      m_Height: 64
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 57
+      m_HorizontalAdvance: 84
+    m_GlyphRect:
+      m_X: 1408
+      m_Y: 960
+      m_Width: 91
+      m_Height: 64
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
+    sprite: {fileID: 1718096618, guid: f1ab8ceb557769a4aaf54bb8cc9788df, type: 3}
   spriteInfoList: []
   fallbackSpriteAssets: []
 --- !u!21 &5371763198071201174

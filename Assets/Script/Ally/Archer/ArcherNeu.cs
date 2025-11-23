@@ -53,7 +53,7 @@ public class ArcherNeu : Nodes
             {
                 // Đặt NPC tại waypoint (chặn rung)
                 //_transform.position = new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z);
-                Debug.Log($"{_transform.name} reached waypoint at {_waypoint.position}");
+                //Debug.Log($"{_transform.name} reached waypoint at {_waypoint.position}");
 
                 _waitCounter = 0f;
                 _waiting = true;
@@ -69,7 +69,7 @@ public class ArcherNeu : Nodes
                 if (_transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Running
                     || _transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Walk) 
                 {
-                    Debug.Log($"{_transform.name} is walking/running to waypoint.");
+                    //Debug.Log($"{_transform.name} is walking/running to waypoint.");
                     _transform.position = Vector3.MoveTowards(
                         _transform.position,
                         new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z),
@@ -78,7 +78,7 @@ public class ArcherNeu : Nodes
                     state = NodeState.FAILURE;
                     return state;
                 }
-                Debug.Log($"{_transform.name} moving towards waypoint at {_waypoint.position}");
+                //Debug.Log($"{_transform.name} moving towards waypoint at {_waypoint.position}");
                 // Nếu Idle thì đứng yên
             }
         }
@@ -97,7 +97,7 @@ public class ArcherNeu : Nodes
         );
 
         _waypoint.position = newPosition;
-        Debug.Log($"New waypoint position: {_waypoint.position}");
+        //Debug.Log($"New waypoint position: {_waypoint.position}");
     }
 
     private void ChooseNextState(int choice = -1)

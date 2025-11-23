@@ -22,6 +22,9 @@ public class Stats : MonoBehaviour
     public float currentSkillDuration;
     public float currentAtkRange;
 
+    [Header("Portrait")]
+    public Sprite portrait;
+
     public void Awake()
     {
         if (baseStats != null)

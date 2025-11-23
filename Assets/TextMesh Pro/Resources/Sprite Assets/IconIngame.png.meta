@@ -397,6 +397,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: IconIngame_13
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 960
+        width: 91
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab774cf3c6090d48afa7932a516631d
+      internalID: 1718096618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -416,6 +438,7 @@ TextureImporter:
       IconIngame_10: 1284294836
       IconIngame_11: -1385072973
       IconIngame_12: -1942215187
+      IconIngame_13: 1718096618
       IconIngame_2: -4065812393464717310
       IconIngame_3: 1029112221749085322
       IconIngame_4: -7266288110342086811

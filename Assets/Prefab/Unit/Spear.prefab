@@ -333,6 +333,7 @@ MonoBehaviour:
   currentSkillDmg: 0
   currentSkillDuration: 0
   currentAtkRange: 0
+  portrait: {fileID: 5696678859360970314, guid: 7e853a94146bf0544b5b91f7440a4140, type: 3}
   hpLinear: 40
   dmgMultiplier: 2.5
   atkSpdMultiplier: 1.03

@@ -85,6 +85,7 @@
     <Compile Include="Assets\Script\Mics\BattleStateCollector.cs" />
     <Compile Include="Assets\Guide\ResourceAllocationCMAES.cs" />
     <Compile Include="Assets\Script\Ally\Spear\DefensiveAction.cs" />
+    <Compile Include="Assets\Script\UI\ListAllyManage.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\CheckEnemyInRange.cs" />
     <Compile Include="Assets\Script\Environment\ObjectPooler.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Script\UI\IngridentUIPrase.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
+    <Compile Include="Assets\Script\UI\AllyCard.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxCamera.cs.cs" />
     <Compile Include="Assets\Script\Mics\DestroyObject.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\Collision2D.cs" />
