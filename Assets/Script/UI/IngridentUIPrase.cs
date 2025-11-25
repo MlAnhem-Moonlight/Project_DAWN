@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -49,4 +49,35 @@ public class UnitCostItemRaw
     public UnitCostLevel Lv6;
     public UnitCostLevel Lv7;
     public UnitCostLevel Lv8;
+}
+[Serializable]
+public class UnitUpgradeLevel
+{
+    public int wood;
+    public int stone;
+    public int iron;
+    public int gold;
+}
+
+[Serializable]
+public class UpgradeKeyValue
+{
+    public string key;               // ví dụ: "Lv1_2"
+    public int wood;
+    public int stone;
+    public int iron;
+    public int gold;
+}
+
+[Serializable]
+public class UnitUpgradeEntry
+{
+    public string name;
+    public List<UpgradeKeyValue> upgrade;
+}
+
+[Serializable]
+public class UnitUpgradeData
+{
+    public List<UnitUpgradeEntry> Units;
 }

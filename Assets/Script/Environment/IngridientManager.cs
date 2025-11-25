@@ -412,4 +412,22 @@ public class IngridientManager : MonoBehaviour
         if (goldText != null) goldText.text = GetIngredientAmount("gold").ToString();
         if (meatText != null) meatText.text = GetIngredientAmount("meat").ToString();
     }
+
+    // ========================================================
+    // KIỂM TRA ĐỦ TÀI NGUYÊN ĐỂ HIRE HERO
+    // ========================================================
+    public bool CheckEnough(UnitCostLevel cost, int meatCost)
+    {
+        if (cost == null) return false;
+
+        bool enough =
+            GetIngredientAmount("wood") >= cost.wood &&
+            GetIngredientAmount("stone") >= cost.stone &&
+            GetIngredientAmount("iron") >= cost.iron &&
+            GetIngredientAmount("gold") >= cost.gold &&
+            GetIngredientAmount("meat") >= meatCost;
+
+        return enough;
+    }
+
 }

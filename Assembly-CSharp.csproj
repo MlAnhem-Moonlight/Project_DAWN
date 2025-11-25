@@ -162,6 +162,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Sequence.cs" />
+    <Compile Include="Assets\Script\UI\UpgradeManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Script\Environment\Deer\DeerBehavior.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\Movement.cs" />

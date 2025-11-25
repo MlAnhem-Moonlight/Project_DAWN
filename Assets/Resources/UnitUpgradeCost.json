@@ -1,0 +1,42 @@
+{
+  "Units": [
+    {
+      "name": "Archer",
+      "upgrade": [
+        {"key": "Lv1_2", "wood": 18, "stone": 14, "iron": 4, "gold": 3 },
+        {"key": "Lv2_3", "wood": 22, "stone": 18, "iron": 6, "gold": 3 },
+        {"key": "Lv3_4", "wood": 27, "stone": 22, "iron": 7, "gold": 5 },
+        {"key": "Lv4_5", "wood": 35, "stone": 28, "iron": 8, "gold": 5 },
+        {"key": "Lv5_6", "wood": 43, "stone": 34, "iron": 11, "gold": 7 },
+        {"key": "Lv6_7", "wood": 54, "stone": 43, "iron": 13, "gold": 8 },
+        {"key": "Lv7_8", "wood": 67, "stone": 54, "iron": 17, "gold": 11 }
+      ]
+    },
+
+    {
+      "name": "Knight",
+      "upgrade": [
+        {"key": "Lv1_2", "wood": 13, "stone": 0, "iron": 9, "gold": 3 },
+        {"key": "Lv2_3", "wood": 15, "stone": 0, "iron": 11, "gold": 4 },
+        {"key": "Lv3_4", "wood": 20, "stone": 0, "iron": 14, "gold": 5 },
+        {"key": "Lv4_5", "wood": 24, "stone": 0, "iron": 18, "gold": 6 },
+        {"key": "Lv5_6", "wood": 30, "stone": 0, "iron": 22, "gold": 7 },
+        {"key": "Lv6_7", "wood": 38, "stone": 0, "iron": 28, "gold": 9 },
+        {"key": "Lv7_8", "wood": 47, "stone": 0, "iron": 34, "gold": 11 }
+      ]
+    },
+
+    {
+      "name": "Spear",
+      "upgrade": [
+        {"key": "Lv1_2", "wood": 13, "stone": 6, "iron": 8, "gold": 5 },
+        {"key": "Lv2_3", "wood": 15, "stone": 8, "iron": 10, "gold": 6 },
+        {"key": "Lv3_4", "wood": 20, "stone": 9, "iron": 12, "gold": 7 },
+        {"key": "Lv4_5", "wood": 24, "stone": 12, "iron": 15, "gold": 10 },
+        {"key": "Lv5_6", "wood": 30, "stone": 15, "iron": 19, "gold": 12 },
+        {"key": "Lv6_7", "wood": 38, "stone": 18, "iron": 24, "gold": 15 },
+        {"key": "Lv7_8", "wood": 47, "stone": 23, "iron": 29, "gold": 18 }
+      ]
+    }
+  ]
+}

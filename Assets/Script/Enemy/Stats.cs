@@ -67,6 +67,11 @@ public class Stats : MonoBehaviour
         }
     }
 
+    public Stats Clone()
+    {
+        return (Stats)this.MemberwiseClone();
+    }
+
     public void ApplyDebuff(float value, float castDuration, int type)
     {
         switch (type)

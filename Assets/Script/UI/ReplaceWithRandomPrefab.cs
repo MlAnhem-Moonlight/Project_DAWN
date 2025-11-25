@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MultiUIRandomizer : MonoBehaviour
 {
+
     [System.Serializable]
     public class UIGroup
     {
@@ -12,6 +13,7 @@ public class MultiUIRandomizer : MonoBehaviour
         public GameObject[] prefabs;        // danh sách prefab cho riêng target này
         [HideInInspector] public GameObject instance; // prefab đang dùng
     }
+    [Header("Random Setting")]
     [Range(0, 100)]
     public int ReRollCount = 2;
     public UIGroup[] groups;   // danh sách target + prefab list
@@ -29,6 +31,10 @@ public class MultiUIRandomizer : MonoBehaviour
     public GameObject rpUI;
 
     public EnemySpawner allySpawner;
+    [Header("Selected Card")]
+    public ShowStatsUI statsUI;   // để đọc costData từ ShowStatsUI
+    public IngridientManager ingredientManager; // để trừ tài nguyên
+
 
     public void SetSelected(GameObject obj, GameObject obj1)
     {
@@ -39,13 +45,59 @@ public class MultiUIRandomizer : MonoBehaviour
 
     public void HireHero()
     {
-        
+        if (cardSelected == null)
+        {
+            Debug.LogError("Chưa chọn card để Hire!");
+            return;
+        }
+        IngridientManager ing = FindFirstObjectByType<IngridientManager>();
+        ShowStatsUI statsUI = cardSelected.GetComponent<ShowStatsUI>();
+
+        if (ing == null || statsUI == null)
+        {
+            Debug.LogError("Thiếu IngridientManager hoặc ShowStatsUI");
+            return;
+        }
+
+        // Lấy cost theo level của hero đang chọn
+        var costInfo = statsUI.GetSelectedCost();
+        UnitCostLevel cost = costInfo.levelCost;
+        int meatCost = costInfo.meatCost;
+
+        if (cost == null)
+        {
+            Debug.LogError("Không tìm thấy dữ liệu cost");
+            return;
+        }
+
+        // Kiểm tra đủ tài nguyên chưa
+        if (!ing.CheckEnough(cost, meatCost))
+        {
+            Debug.Log("❌ Không đủ tài nguyên để Hire!");
+            return;
+        }
+
+        // Trừ tài nguyên
+        ing.RemoveIngredient("wood", cost.wood);
+        ing.RemoveIngredient("stone", cost.stone);
+        ing.RemoveIngredient("iron", cost.iron);
+        ing.RemoveIngredient("gold", cost.gold);
+        ing.RemoveIngredient("meat", meatCost);
+
+        // Spawn Hero hoặc thêm vào danh sách
+        AddHero();
+        Debug.Log("🟩 Thuê thành công hero!");
+    }
+
+    public void AddHero()
+    {
+
         if (selected == null || cardSelected == null)
         {
             Debug.LogWarning("No selected object to hire");
             return;
         }
-        
+
         if (allySpawner != null)
         {
             allySpawner.SpawnAlly(selected.name.Replace("(Clone)", "").Trim(), selected.GetComponent<Stats>().level);
@@ -90,7 +142,7 @@ public class MultiUIRandomizer : MonoBehaviour
         statText.text = "";
         unitname.text = "";
         reqDetail.text = "";
-        
+
         foreach (var group in groups)
         {
             ReplacePrefab(group);
@@ -103,7 +155,7 @@ public class MultiUIRandomizer : MonoBehaviour
                 GetComponent<UnityEngine.UI.Button>().interactable = false;
             }
         }
-        
+
     }
     public void ReplacePrefab(UIGroup group)
     {
@@ -130,7 +182,7 @@ public class MultiUIRandomizer : MonoBehaviour
         newRT.anchoredPosition = oldRT.anchoredPosition;
         newRT.localRotation = oldRT.localRotation;
         newRT.localScale = oldRT.localScale;
-        switch(TowerLevel)
+        switch (TowerLevel)
         {
             case 1:
                 RandomStats(prefab, 3);
@@ -142,7 +194,7 @@ public class MultiUIRandomizer : MonoBehaviour
                 RandomStats(prefab, 8);
                 break;
         }
-        
+
 
         group.targetImage.gameObject.SetActive(false); // ẩn target cũ
         group.targetImage = newRT; // cập nhật target mới
@@ -151,7 +203,7 @@ public class MultiUIRandomizer : MonoBehaviour
 
     private void RandomStats(GameObject prefab, int maxLevel)
     {
-        if(prefab.GetComponent<Stats>() != null)
+        if (prefab.GetComponent<Stats>() != null)
         {
             prefab.GetComponent<Stats>().level = Random.Range(1, maxLevel);
             prefab.GetComponent<Stats>().ApplyGrowth();

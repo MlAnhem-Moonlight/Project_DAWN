@@ -108,6 +108,26 @@ public class ShowStatsUI : MonoBehaviour
         }
     }
 
+    // ========================================================
+    // TRẢ RA COST DATA CHO HERO ĐƯỢC CHỌN
+    // ========================================================
+    public (UnitCostLevel levelCost, int meatCost) GetSelectedCost()
+    {
+        Stats stats = GetComponentInChildren<Stats>();
+        if (stats == null) return (null, 0);
+
+        string cleanName = stats.gameObject.name.Replace("(Clone)", "").Trim();
+
+        if (costData == null || !costData.Units.ContainsKey(cleanName))
+            return (null, 0);
+
+        UnitCostItem item = costData.Units[cleanName];
+        UnitCostLevel lvCost = GetCostByLevel(item, stats.level);
+
+        return (lvCost, item.MeatPerRound);
+    }
+
+
     private UnitCostLevel GetCostByLevel(UnitCostItem unit, int level)
     {
         switch (level)
