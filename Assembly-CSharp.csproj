@@ -101,6 +101,7 @@
     <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
     <Compile Include="Assets\Script\UI\IngridentUIPrase.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
+    <Compile Include="Assets\Script\MainCharacterScript\StateController.cs" />
     <Compile Include="Assets\Script\Mics\HideWhenTrigger.cs" />
     <Compile Include="Assets\Script\UI\AllyCard.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxCamera.cs.cs" />

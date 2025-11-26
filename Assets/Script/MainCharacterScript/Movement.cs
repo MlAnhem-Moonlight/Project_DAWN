@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
     public float sprintAcceleration = 4f; 
     public Animator animator;
 
+    public AnimatorState playerState = AnimatorState.Idle;
+
     private float currentSpeed = 0f; 
     private Vector3 movement;
     private float previousDirection = 0f, dir = 1;
@@ -21,39 +23,67 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        
+        PlayerMovement();
+        AttackCommand();
+
+    }
+
+    public void setState(AnimatorState State)
+    {
+        playerState = State;
+    }
+
+    public void PlayerMovement()
+    {
         movement.x = Input.GetAxis("Horizontal");
         dir = Input.GetAxis("Horizontal") != dir && Input.GetAxis("Horizontal") != 0f ? Input.GetAxis("Horizontal") : dir;
 
         if (movement.x < 0 && previousDirection >= 0 || movement.x > 0 && previousDirection <= 0)
         {
-            currentSpeed = currentSpeed / 2f; 
+            currentSpeed = currentSpeed / 2f;
         }
-        if(Input.GetAxis("Horizontal") == 0)
+        if (playerState == AnimatorState.Idle && Input.GetAxis("Horizontal") == 0)
         {
-            
+
             CheckMovement(dir, "Idle 1", "Idle", 0f);
         }
-        else CheckMovement(Input.GetAxis("Horizontal"), "Walk 1", "Walk", 0f);
+        else if (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill)
+        {
+            if(Input.GetAxis("Horizontal") != 0 )
+                CheckMovement(Input.GetAxis("Horizontal"), "Walk 1", "Walk", 0f);
+            else
+                playerState = AnimatorState.Idle;
+        }
+
+        if (playerState != AnimatorState.Walk) return;
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         float targetSpeed = isSprinting ? maxRunningSpeed : maxWalkingSpeed;
         float currentAcceleration = isSprinting ? sprintAcceleration : acceleration;
 
-        
+
         if (movement.x != 0)
         {
-            currentSpeed += currentAcceleration * Time.deltaTime; 
-            currentSpeed = Mathf.Min(currentSpeed, targetSpeed); 
+            currentSpeed += currentAcceleration * Time.deltaTime;
+            currentSpeed = Mathf.Min(currentSpeed, targetSpeed);
         }
         else
         {
             currentSpeed -= acceleration * Time.deltaTime;
-            currentSpeed = Mathf.Max(currentSpeed, 0f); 
+            currentSpeed = Mathf.Max(currentSpeed, 0f);
         }
 
         previousDirection = movement.x;
 
         transform.position += movement.normalized * currentSpeed * Time.deltaTime;
+    }
+
+    public void AttackCommand()
+    {
+        if(Input.GetKey(KeyCode.F) && (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill))
+        {
+            Debug.Log($"Attack Dirrect: {dir}");
+            CheckMovement(dir, "Attack 1", "Attack", 0f);
+        }
     }
 
     private void CheckMovement(float dir, string leftAnim, string rightAnim, float crossFade = 0.1f)

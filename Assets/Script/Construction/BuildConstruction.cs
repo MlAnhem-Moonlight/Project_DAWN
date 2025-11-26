@@ -152,7 +152,7 @@ public class BuildConstruction : MonoBehaviour
         if (buildingActionUI != null)
         {
             Vector3 worldPos = transform.position + uiOffset;
-            buildingActionUI.transform.position = worldPos;
+            buildingActionUI.GetComponent<RectTransform>().position = worldPos;
 
             // Quay UI về phía camera
             buildingActionUI.transform.LookAt(Camera.main.transform);
