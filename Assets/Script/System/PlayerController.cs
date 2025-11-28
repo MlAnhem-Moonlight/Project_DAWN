@@ -1,13 +1,30 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private ArcherBehavior selectedUnit;
+    private Stats unitAlly;
+
+
     [Header("Visual Settings")]
     public Canvas uiCanvas;              // Canvas chính (Screen Space - Overlay)
     public GameObject unitUIPrefab;      // Prefab UI hiển thị khi chọn unit (VD: Image)
     private GameObject unitUIInstance;   // Instance tạm thời của UI hiển thị
+
+    [Header("HUD")]
+    public GameObject UnitControllHUD;
+    public Image AllyPortrait;
+    public TextMeshProUGUI AllyName;
+    public TextMeshProUGUI AllyLevel;
+    public TextMeshProUGUI AllyHP;
+    public TextMeshProUGUI AllyDMG;
+    public TextMeshProUGUI AllyShield;
+    public TextMeshProUGUI AllySkillDMG;
+    public TextMeshProUGUI AllySkillCD;
+    public TextMeshProUGUI AllySPD;
+
 
     void Update()
     {
@@ -15,6 +32,25 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             SelectUnit();
+            if (selectedUnit != null)
+            {
+                AllyPortrait.sprite = unitAlly.portrait;
+                AllyName.text = unitAlly.name.Replace("(Clone)", "").Trim(); ;
+                AllyLevel.text = "Level: " + unitAlly.level;
+                AllyHP.text = "<sprite name=\"Hp_Icon\">" + unitAlly.currentHP;
+                AllyDMG.text = "<sprite name=\"Dmg_Icon\">" + unitAlly.currentDMG;
+                AllyShield.text = "<sprite name=\"Shield_Icon\">" + unitAlly.currentShield;
+                AllySkillDMG.text = "<sprite name=\"SkillDmg_Icon\">" + unitAlly.currentSkillDmg;
+                AllySkillCD.text = "<sprite name=\"SkillCD_Icon\">" + unitAlly.currentSkillCD;
+                AllySPD.text = "<sprite name=\"Spd_Icon\">" + unitAlly.currentSPD;
+            }
+            //else
+            //{
+            //    HideUnitUI();
+            //    if (UnitControllHUD.activeSelf)
+            //        UnitControllHUD.SetActive(false);
+            //}
+
         }
 
         // Khi đã chọn, cho phép UI theo chuột
@@ -27,13 +63,15 @@ public class PlayerController : MonoBehaviour
                 uiCanvas.worldCamera,
                 out mousePos);
             unitUIInstance.GetComponent<RectTransform>().anchoredPosition = mousePos;
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                CommandMove();
+            }
         }
 
         // Ra lệnh di chuyển bằng click chuột phải
-        if (Input.GetMouseButtonDown(1))
-        {
-            CommandMove();
-        }
+
     }
 
     private void SelectUnit()
@@ -45,26 +83,50 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Vector3 worldPoint = ScreenToWorldPointOnPlane(Input.mousePosition, cam, 0f); // planeZ = 0 (ground)
-        // Dùng OverlapPoint cho 2D, chính xác hơn khi click vào collider 2D
-        Collider2D hitCollider = Physics2D.OverlapPoint(worldPoint);
+        Vector3 worldPoint = ScreenToWorldPointOnPlane(Input.mousePosition, cam, 0f);
 
-        if (hitCollider != null)
+        // Lấy tất cả collider tại điểm click
+        Collider2D[] hits = Physics2D.OverlapPointAll(worldPoint);
+
+        if (hits.Length == 0)
+            return;
+
+        Stats chosenUnit = null;
+        ArcherBehavior chosenArcher = null;
+
+        // Lọc collider có Stats
+        foreach (var h in hits)
         {
-            ArcherBehavior unit = hitCollider.GetComponent<ArcherBehavior>();
-            if (unit != null)
+            Stats s = h.GetComponent<Stats>();
+            if (s != null)
             {
-                selectedUnit = unit;
-                //Debug.Log($"✅ Selected: {unit.name}");
-                ShowUnitUI(unit); // Hiển thị biểu tượng UI khi chọn
+                chosenUnit = s;
+
+                // Lấy ArcherBehavior nếu có (không bắt buộc)
+                chosenArcher = h.GetComponent<ArcherBehavior>();
+                break; // lấy đúng unit đầu tiên có Stats
             }
         }
+
+        if (chosenUnit != null)
+        {
+            unitAlly = chosenUnit;
+
+            if (!UnitControllHUD.activeSelf)
+                UnitControllHUD.SetActive(true);
+
+            // Gán archer nếu có
+            if (chosenArcher != null)
+                selectedUnit = chosenArcher;
+        }
+
+
     }
 
-    private void CommandMove()
+
+    public void CommandMove()
     {
         if (selectedUnit == null) return;
-
         Camera cam = Camera.main;
         if (cam == null)
         {
@@ -95,7 +157,7 @@ public class PlayerController : MonoBehaviour
         HideUnitUI();
     }
 
-    private void ShowUnitUI(ArcherBehavior unit)
+    public void ShowUnitUI()
     {
         if (unitUIPrefab == null || uiCanvas == null) return;
 
@@ -103,7 +165,7 @@ public class PlayerController : MonoBehaviour
             Destroy(unitUIInstance);
 
         unitUIInstance = Instantiate(unitUIPrefab, uiCanvas.transform);
-        unitUIInstance.name = $"{unit.name}_UI";
+        unitUIInstance.name = $"{selectedUnit.name}_UI";
         unitUIInstance.SetActive(true);
     }
 

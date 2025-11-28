@@ -17,6 +17,7 @@ public class DealingDmg : MonoBehaviour
     public LayerMask targetLayers;
 
     [Header("Skill state")]
+    [Tooltip("0: normal attack, 1: knockback, 2: rage, 3: damage over time")]
     public int usingSkill = 0;
     private bool pendingAttack = false;
 

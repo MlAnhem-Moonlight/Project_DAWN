@@ -81,7 +81,6 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.F) && (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill))
         {
-            Debug.Log($"Attack Dirrect: {dir}");
             CheckMovement(dir, "Attack 1", "Attack", 0f);
         }
     }

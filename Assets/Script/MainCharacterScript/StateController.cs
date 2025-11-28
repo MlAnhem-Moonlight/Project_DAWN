@@ -12,8 +12,12 @@ public class StateController : MonoBehaviour
 
     public void ChangeState(AnimatorState state)
     {
-        Debug.Log($"State changed to: {state}");
         playerMovement.setState(state);
+    }
+
+    public void Attack()
+    {
+        GetComponentInChildren<DealingDmg>().AttackHit();
     }
 
     // Update is called once per frame

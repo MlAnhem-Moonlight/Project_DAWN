@@ -15,11 +15,12 @@ namespace Spear.Movement
         private Transform _waypoint;   // chỉ dùng 1 waypoint
         private float _speed;
 
-        private float _waitTime = 1f, _waitCounter = 0f;
+        private float _waitTime = 12f, _waitCounter = 0f;
         private bool _waiting = false;
 
         private Transform _startPos;
         private Transform _endPos;
+        private Vector3 destination;
 
         private Animator _animator;
         private AnimationController _controller;
@@ -34,6 +35,7 @@ namespace Spear.Movement
             _endPos = endPos;
             _animator = animator;
             _controller = _transform.GetComponent<AnimationController>();
+            MoveWaypointToNewPosition();
         }
 
         public override NodeState Evaluate()
@@ -54,7 +56,7 @@ namespace Spear.Movement
             }
             else
             {
-                if (Mathf.Abs(_transform.position.x - _waypoint.position.x) < 0.5f)
+                if (Mathf.Abs(_transform.position.x - destination.x) < 0.5f)
                 {
                     // Đặt NPC tại waypoint (chặn rung)
                     //_transform.position = new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z);
@@ -75,12 +77,12 @@ namespace Spear.Movement
                     {
                         _transform.position = Vector3.MoveTowards(
                             _transform.position,
-                            new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z),
+                            new Vector3(destination.x, _transform.position.y, _transform.position.z),
                             _speed * Time.deltaTime
                         );
                     }
                     if (_transform.GetComponent<SpearBehavior>().currentState == AnimatorState.Idle) 
-                        CheckMovement(_waypoint.position, "Run2 1", "Run2", 0.2f);
+                        CheckMovement(destination, "Run2", "Run2 1", 0.2f);
 
                 }
             }
@@ -89,17 +91,17 @@ namespace Spear.Movement
 
         private void MoveWaypointToNewPosition()
         {
-            if (_startPos == null || _endPos == null) return;
+            if (_waypoint == null) return;
 
-            // Random vị trí mới trong khoảng start – end
-            Vector3 newPosition = new Vector3(
-                Random.Range(_startPos.position.x, _endPos.position.x),
-                _transform.position.y,
-                _transform.position.z
-            );
+            int childCount = _waypoint.childCount;
+            if (childCount == 0) return;
 
-            _waypoint.position = newPosition;
+            // Random 1 child trong waypoint
+            int randomIndex = Random.Range(0, childCount);
+            Transform randomChild = _waypoint.GetChild(randomIndex);
 
+            // Set vị trí của object đến child
+            destination = randomChild.position;
         }
 
         private void ChooseNextState(int choice = -1)
@@ -109,12 +111,12 @@ namespace Spear.Movement
 
             if (choice == 0) // Idle
             {
-                CheckMovement(_waypoint.position, "Idle 1", "Idle 0", 0.2f);
+                CheckMovement(_waypoint.position, "Idle 0", "Idle 1", 0.2f);
                 _waitTime = Random.Range(5f, 6f); // Idle lâu
             }
             else // Walk
             { 
-                CheckMovement(_waypoint.position, "Run2 1", "Run2");
+                CheckMovement(_waypoint.position, "Run2", "Run2 1");
                 _waitTime = 1f;
                 // Ngay khi chọn Walk thì random vị trí waypoint mới
                 MoveWaypointToNewPosition();

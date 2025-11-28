@@ -9,19 +9,33 @@ public class ArcherMovement : Nodes
 {
     private readonly Transform _transform;
     private Transform _checkpoint;
+
+    private Transform _waypoint;   // chỉ dùng 1 waypoint
+    private Transform _startPos;
+    private Transform _endPos;
+    private Vector3 destination;
+    private float _waitTime = 12f, _waitCounter = 0f;
+    private bool _waiting = true;
+    
+
     private readonly float _speed;
     private readonly float _stopDistance;
     private readonly float _attackRange;
     private AnimationController _controller;
 
-    public ArcherMovement(Transform transform, Transform checkpoint, float speed, float stopDistance, float attackRange)
+    public ArcherMovement(Transform transform, Transform checkpoint, Transform startPos, Transform endPos, Transform waypoint, 
+                            float speed, float stopDistance, float attackRange)
     {
         _transform = transform;
         _checkpoint = checkpoint;
         _speed = speed;
         _stopDistance = stopDistance;
         _attackRange = attackRange;
-        _controller = _transform.GetComponent<AnimationController>();
+        _startPos = startPos;
+        _endPos = endPos;
+        _waypoint = waypoint;
+        _controller = _transform.gameObject.GetComponent<AnimationController>();
+        MoveWaypointToNewPosition();
     }
 
     public void SetCheckPoint(Transform checkpoint)
@@ -32,9 +46,10 @@ public class ArcherMovement : Nodes
     public override NodeState Evaluate()
     {
         var archer = _transform.GetComponent<ArcherBehavior>();
-        // Nếu Archer đang ở trạng thái trung lập thì không di chuyển
+        // Nếu Archer đang ở trạng thái trung lập thì di ngẫu nhiên
         if (archer.spearState == AllyState.Neutral)
         {
+            RandomMovement();
             state = NodeState.FAILURE;
             return state;
         }
@@ -71,7 +86,7 @@ public class ArcherMovement : Nodes
         }
 
         // Nếu chưa đến checkpoint thì di chuyển
-        CheckMovement(targetPos, "Run2 1", "Run2",0f);
+        CheckMovement(targetPos, "Run2", "Run2 1", 0f);
         _transform.position = Vector3.MoveTowards(
             _transform.position,
             targetPos,
@@ -90,5 +105,86 @@ public class ArcherMovement : Nodes
             _controller.ChangeAnimation(_transform.GetComponent<Animator>(), leftAnim, crossFade);
         else
             _controller.ChangeAnimation(_transform.GetComponent<Animator>(), rightAnim, crossFade);
+    }
+
+    private void RandomMovement()
+    {
+        if (_waiting)
+        {
+            _waitCounter += Time.deltaTime;
+            if (_waitCounter >= _waitTime)
+            {
+                _waiting = false;
+
+            }
+        }
+        else
+        {
+            if (Mathf.Abs(_transform.position.x - destination.x) < 0.5f)
+            {
+                // Đặt NPC tại waypoint (chặn rung)
+                //_transform.position = new Vector3(_waypoint.position.x, _transform.position.y, _transform.position.z);
+
+
+                _waitCounter = 0f;
+                _waiting = true;
+
+                // Random Idle hoặc Walk
+                ChooseNextState();
+
+
+            }
+            else
+            {
+                if (_transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Running
+                    || _transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Walk) // Walk
+                {
+                    _transform.position = Vector3.MoveTowards(
+                        _transform.position,
+                        new Vector3(destination.x, _transform.position.y, _transform.position.z),
+                        _speed * Time.deltaTime
+                    );
+                }
+                if (_transform.GetComponent<ArcherBehavior>().currentState == AnimatorState.Idle)
+                    CheckMovement(destination, "Run2", "Run2 1", 0.2f);
+
+            }
+        }
+    }
+
+    private void MoveWaypointToNewPosition()
+    {
+        if (_waypoint == null) return;
+
+        int childCount = _waypoint.childCount;
+        if (childCount == 0) return;
+
+        // Random 1 child trong waypoint
+        int randomIndex = Random.Range(0, childCount);
+        Transform randomChild = _waypoint.GetChild(randomIndex);
+
+        // Set vị trí của object đến child
+        destination = randomChild.position;
+
+    }
+
+
+    private void ChooseNextState(int choice = -1)
+    {
+        if (choice == -1)
+            choice = Random.Range(0, 2);// 0 = Idle, 1 = Walk
+
+        if (choice == 0) // Idle
+        {
+            CheckMovement(_waypoint.position, "Idle 1", "Idle 0", 0.2f);
+            _waitTime = Random.Range(5f, 12f); // Idle lâu
+        }
+        else // Walk
+        {
+            CheckMovement(_waypoint.position, "Run2 1", "Run2");
+            _waitTime = 1f;
+            // Ngay khi chọn Walk thì random vị trí waypoint mới
+            MoveWaypointToNewPosition();
+        }
     }
 }

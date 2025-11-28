@@ -20,6 +20,7 @@ public class ArcherBehavior : BhTree
     public Animator animator;
     public GameObject target;
 
+
     private ArcherMovement archerMove;
 
     protected override Nodes SetupTree()
@@ -38,7 +39,7 @@ public class ArcherBehavior : BhTree
         }
 
         animator = GetComponent<Animator>();
-        archerMove = new ArcherMovement(transform, checkpoint, speed, stopDistance, atkRange);
+        archerMove = new ArcherMovement(transform, checkpoint, startPos, endPos, waypoints, speed, stopDistance, atkRange);
 
         Nodes root = new Selector(new List<Nodes>
         {

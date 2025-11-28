@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4821533925913273308}
   - component: {fileID: 293585939109532998}
   - component: {fileID: 6589927457406074338}
-  - component: {fileID: 5846478052632972347}
   - component: {fileID: 4785724574091414337}
   - component: {fileID: 7339939398605017983}
   - component: {fileID: 4399043562935961834}
+  - component: {fileID: 7607235102545497166}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -130,31 +130,6 @@ MonoBehaviour:
   sprintAcceleration: 4
   animator: {fileID: 0}
   playerState: 0
---- !u!114 &5846478052632972347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8032451606157004617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffea5b534a00a4d449c0239b0ca0fcd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 1
-  maxLevel: 8
-  baseStats: {fileID: 0}
-  currentHP: 100
-  currentDMG: 0
-  currentSPD: 0
-  currentSkillCD: 0
-  currentShield: 0
-  currentAtkSpd: 0
-  currentSkillDmg: 0
-  currentSkillDuration: 0
-  currentAtkRange: 0
-  portrait: {fileID: 0}
 --- !u!114 &4785724574091414337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +176,31 @@ MonoBehaviour:
   player: {fileID: 144396531606657900}
   offset: {x: -1.3, y: 2.5, z: 0}
   ingredientManager: {fileID: 0}
+--- !u!114 &7607235102545497166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032451606157004617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff7736677747b44d9e82c64eae54327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
+  baseStats: {fileID: 0}
+  currentHP: 100
+  currentDMG: 4
+  currentSPD: 0
+  currentSkillCD: 0
+  currentShield: 0
+  currentAtkSpd: 1
+  currentSkillDmg: 0
+  currentSkillDuration: 0
+  currentAtkRange: 0
+  portrait: {fileID: 0}
 --- !u!1001 &6262664805602004863
 PrefabInstance:
   m_ObjectHideFlags: 0
