@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("HUD")]
     public GameObject UnitControllHUD;
+    public GameObject ArcherMovementBtn;
     public Image AllyPortrait;
     public TextMeshProUGUI AllyName;
     public TextMeshProUGUI AllyLevel;
@@ -40,8 +41,8 @@ public class PlayerController : MonoBehaviour
                 AllyHP.text = "<sprite name=\"Hp_Icon\">" + unitAlly.currentHP;
                 AllyDMG.text = "<sprite name=\"Dmg_Icon\">" + unitAlly.currentDMG;
                 AllyShield.text = "<sprite name=\"Shield_Icon\">" + unitAlly.currentShield;
-                AllySkillDMG.text = "<sprite name=\"SkillDmg_Icon\">" + unitAlly.currentSkillDmg;
-                AllySkillCD.text = "<sprite name=\"SkillCD_Icon\">" + unitAlly.currentSkillCD;
+                AllySkillDMG.text = "<sprite name=\"Skill_Dmg_Icon\">" + unitAlly.currentSkillDmg;
+                AllySkillCD.text = "<sprite name=\"Skill_Dmg_Icon\">" + unitAlly.currentSkillCD;
                 AllySPD.text = "<sprite name=\"Spd_Icon\">" + unitAlly.currentSPD;
             }
             //else
@@ -152,8 +153,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log($"{selectedUnit.name} moving to {worldPoint} (no collider hit)");
         }
 
-        // Hủy chọn sau khi ra lệnh
-        selectedUnit = null;
+
         HideUnitUI();
     }
 
@@ -176,6 +176,30 @@ public class PlayerController : MonoBehaviour
             Destroy(unitUIInstance);
             unitUIInstance = null;
         }
+    }
+
+    public void UnitStateSetNeutral()
+    {
+        if (unitAlly == null) return;
+        if(unitAlly.GetComponent<ArcherBehavior>() != null) unitAlly.GetComponent<ArcherBehavior>().SetState(AllyState.Neutral);
+        else unitAlly.GetComponent<SpearBehavior>().SetState(AllyState.Neutral);
+    }
+    public void UnitStateSetAggresive()
+    {
+        if (unitAlly == null) return;
+        if (unitAlly.GetComponent<ArcherBehavior>() != null) 
+            unitAlly.GetComponent<ArcherBehavior>().SetState(AllyState.Aggressive);
+        else unitAlly.GetComponent<SpearBehavior>().SetState(AllyState.Aggressive);
+    }
+    public void UnitStateSetDeffensive()
+    {
+        if (unitAlly == null) return;
+        if(unitAlly.GetComponent<ArcherBehavior>() != null)
+        {
+            unitAlly.GetComponent<ArcherBehavior>().SetState(AllyState.Defensive);
+            ArcherMovementBtn.SetActive(true);
+        }
+        else unitAlly.GetComponent<SpearBehavior>().SetState(AllyState.Defensive);
     }
 
     /// <summary>
