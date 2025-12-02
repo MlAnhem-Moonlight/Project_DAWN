@@ -2,7 +2,7 @@
 - Project name: Project_DAWN
 - Unity version: Unity 6000.0.44f1
 - Active game object:
-  - Name: AllyUnitController
-  - Tag: Untagged
-  - Layer: Default
+  - Name: TheHand(Demo)
+  - Tag: Enemy
+  - Layer: Demon
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

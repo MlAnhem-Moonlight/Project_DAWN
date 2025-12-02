@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using System;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public enum gameMode
 {
@@ -13,42 +14,33 @@ public enum gameMode
 
 public class IngridientManager : MonoBehaviour
 {
-    [Serializable]
+    [System.Serializable]
     public class InventoryData
     {
-        public int Wood;
-        public int Stone;
-        public int Iron;
-        public int Gold;
-        public int Meat;
+        public int wood;
+        public int stone;
+        public int iron;
+        public int gold;
+        public int meat;
     }
 
-    [Serializable]
+    [System.Serializable]
     public class DefaultLevelEntry
     {
         public string Mode;
         public InventoryData Inventory;
     }
 
-    [Serializable]
+    [System.Serializable]
     public class DefaultLevelRoot
     {
         public DefaultLevelEntry[] DefaultLevel;
     }
 
-    [Serializable]
-    public class SaveFileData
-    {
-        public int Level;
-        public string Mode;
-        public InventoryData playerResources;
-        public InventoryData consumedResources;
-    }
-
-    [Header("Tài nguyên của người chơi")]
+    [Header("T�i nguy�n c?a ngu?i choi")]
     public List<Ingredient.IngredientEntry> playerIngredients = new List<Ingredient.IngredientEntry>();
 
-    [Header("Tài nguyên đã tiêu hao")]
+    [Header("T�i nguy�n d� ti�u hao")]
     public List<Ingredient.IngredientEntry> consumedResources = new List<Ingredient.IngredientEntry>();
 
     [Header("Level")]
@@ -58,120 +50,170 @@ public class IngridientManager : MonoBehaviour
     [Header("Save Index")]
     public int saveIndex = 0;
 
-    [Header("Text hiển thị số lượng tài nguyên")]
+    [Header("References")]
+    public PlayerStats playerStats;
+    public GameObject allyManager;
+    public GameObject buildingContainer;  // Parent ch?a t?t c? buildings
+
+    [Header("Text hi?n th? s? lu?ng t�i nguy�n")]
     public TextMeshProUGUI woodText;
     public TextMeshProUGUI stoneText;
     public TextMeshProUGUI ironText;
     public TextMeshProUGUI goldText;
     public TextMeshProUGUI meatText;
-    public TextMeshProUGUI saveFeedbackText; 
+    public TextMeshProUGUI saveFeedbackText;
 
     private void Start()
     {
+        if (playerStats == null)
+            playerStats = FindAnyObjectByType<PlayerStats>();
+
+        if (allyManager == null)
+            allyManager = GameObject.Find("AllyUnitController");
+
+        ResetConsumedResources();
+    }
+
+    public void LoadSave()
+    {
+
+        // Load t? SaveSystem m?i
+        GameObject btn = EventSystem.current.currentSelectedGameObject;
+        saveIndex = btn.name switch
+        {
+            "Save_1" => 1,
+            "Save_2" => 2,
+            "Save_3" => 3,
+            "Save_4" => 4,
+            "Save_5" => 5,
+            "Save_6" => 6,
+            _ => 0,
+        };
+        var loadedData = SaveSystem.LoadPlayerData(saveIndex);
+        if (loadedData == null)
+        {
+            Debug.LogWarning($"Save file not found. ");
+            return;
+        }
+
+        // C?p nh?t inventory
+        playerIngredients = InventoryDataToEntries(loadedData.inventoryData);
         ResetConsumedResources();
         DisplayResources();
-        LoadSave(currentLevel,mode);
+
+        // C?p nh?t player position v� stats
+        if (playerStats != null)
+        {
+            playerStats.transform.position = loadedData.playerData.position;
+            playerStats.level = loadedData.playerData.level;
+            playerStats.currentHP = loadedData.playerData.currentHP;
+            playerStats.currentDMG = loadedData.playerData.currentDMG;
+            playerStats.currentSPD = loadedData.playerData.currentSPD;
+            playerStats.currentAtkSpd = loadedData.playerData.currentAtkSpd;
+            playerStats.currentShield = loadedData.playerData.currentShield;
+            playerStats.currentSkillCD = loadedData.playerData.currentSkillCD;
+            playerStats.currentSkillDmg = loadedData.playerData.currentSkillDmg;
+            playerStats.updateHP();
+            Debug.Log("? Player data loaded and applied");
+        }
+
+        // Load buildings
+        ApplyBuildingsData(loadedData.buildingsData);
+
+        Debug.Log($"?? Loaded {loadedData.alliesData.Count} allies - Spawn logic TODO");
+
+        DisplayResources();
+
     }
 
-    public void LoadSave(int level, gameMode loadMode)
+    public void LoadDefaultInventory(gameMode loadMode)
     {
-        currentLevel = level;
-        mode = loadMode;
-
-        // Level 0 -> load default from Resources/DefaultLevel.json
-        if (level == 0)
+        TextAsset txt = Resources.Load<TextAsset>("DefaultLevel");
+        if (txt == null)
         {
-            // DefaultLevel.json must be placed in Assets/Resources/DefaultLevel.json
-            TextAsset txt = Resources.Load<TextAsset>("DefaultLevel");
-            if (txt == null)
-            {
-                Debug.LogError("DefaultLevel.json not found in Resources folder.");
-                return;
-            }
-
-            try
-            {
-                var root = JsonUtility.FromJson<DefaultLevelRoot>(txt.text);
-                if (root?.DefaultLevel == null || root.DefaultLevel.Length == 0)
-                {
-                    Debug.LogError("DefaultLevel.json has unexpected format.");
-                    return;
-                }
-
-                // find entry matching mode string (case-insensitive)
-                DefaultLevelEntry selected = null;
-                string modeStr = loadMode.ToString().ToLower();
-                foreach (var entry in root.DefaultLevel)
-                {
-                    if (entry.Mode != null && entry.Mode.ToLower() == modeStr)
-                    {
-                        selected = entry;
-                        break;
-                    }
-                }
-
-                if (selected == null)
-                {
-                    // fallback: pick first
-                    selected = root.DefaultLevel[0];
-                }
-
-                playerIngredients = InventoryDataToEntries(selected.Inventory);
-                ResetConsumedResources();
-                DisplayResources();
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError("Failed to parse DefaultLevel.json: " + ex.Message);
-            }
+            Debug.LogError("DefaultLevel.json not found in Resources folder.");
+            return;
         }
-        else
-        {
-            // Load Save_{saveIndex}.json from persistent path
-            string fileName = $"Save_{saveIndex}.json";
-            string path = Path.Combine(Application.persistentDataPath, fileName);
 
-            if (!File.Exists(path))
+        try
+        {
+            var root = JsonUtility.FromJson<DefaultLevelRoot>(txt.text);
+            if (root?.DefaultLevel == null || root.DefaultLevel.Length == 0)
             {
-                Debug.LogWarning($"Save file not found at {path}. Falling back to default for current mode.");
-                // fallback to default if available
-                LoadSave(0, loadMode);
+                Debug.LogError("DefaultLevel.json has unexpected format.");
                 return;
             }
 
-            try
+            DefaultLevelEntry selected = null;
+            string modeStr = loadMode.ToString().ToLower();
+            foreach (var entry in root.DefaultLevel)
             {
-                string json = File.ReadAllText(path);
-                var saveData = JsonUtility.FromJson<SaveFileData>(json);
-                if (saveData == null)
+                if (entry.Mode != null && entry.Mode.ToLower() == modeStr)
                 {
-                    Debug.LogError("Failed to deserialize save file: " + path);
-                    return;
+                    selected = entry;
+                    break;
                 }
-
-                // Update fields
-                currentLevel = saveData.Level;
-                // Try parse mode
-                if (!string.IsNullOrEmpty(saveData.Mode))
-                {
-                    if (Enum.TryParse<gameMode>(saveData.Mode, true, out var parsedMode))
-                        mode = parsedMode;
-                }
-
-                playerIngredients = InventoryDataToEntries(saveData.playerResources);
-                consumedResources = InventoryDataToEntries(saveData.consumedResources);
-
-                DisplayResources();
             }
-            catch (Exception ex)
+
+            if (selected == null)
             {
-                Debug.LogError("Error reading save file: " + ex.Message);
+                selected = root.DefaultLevel[0];
+            }
+
+            playerIngredients = InventoryDataToEntries(selected.Inventory);
+            ResetConsumedResources();
+            DisplayResources();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Failed to parse DefaultLevel.json: " + ex.Message);
+        }
+    }
+
+    /// <summary>
+    /// Apply buildings data t? save
+    /// </summary>
+    private void ApplyBuildingsData(List<SaveSystem.BuildingData> buildingsData)
+    {
+        if (buildingContainer == null)
+        {
+            Debug.LogWarning("?? buildingContainer not assigned! Cannot apply building data.");
+            return;
+        }
+
+        BuildConstruction[] allBuildings = buildingContainer.GetComponentsInChildren<BuildConstruction>();
+        
+        foreach (var buildingData in buildingsData)
+        {
+            // T�m building c� c�ng lo?i
+            foreach (var building in allBuildings)
+            {
+                if (building.buildingType.ToString() == buildingData.buildingType)
+                {
+                    building.isBuilt = buildingData.isBuilt;
+                    building.constructionHP = buildingData.constructionHP;
+                    
+                    // �p d?ng tr?ng th�i visual
+                    if (buildingData.isBuilt)
+                    {
+                        if (building.construction != null)
+                            building.construction.SetActive(true);
+                        building.GetComponent<SpriteRenderer>().enabled = false;
+                    }
+                    else
+                    {
+                        if (building.construction != null)
+                            building.construction.SetActive(false);
+                        building.GetComponent<SpriteRenderer>().enabled = true;
+                    }
+
+                    Debug.Log($"? Loaded building {buildingData.buildingType} - Built: {buildingData.isBuilt}, HP: {buildingData.constructionHP}");
+                    break;
+                }
             }
         }
     }
 
-
-    // Reset tài nguyên tiêu hao về 0
     public void ResetConsumedResources()
     {
         consumedResources.Clear();
@@ -187,35 +229,10 @@ public class IngridientManager : MonoBehaviour
         currentLevel = level;
     }
 
-    // Lấy dữ liệu từ save
-    public void getDataFromSave()
-    {
-        if (currentLevel == 0)
-        {
-            ResetConsumedResources();
-            var saveData = SaveSystem.LoadDefaultData();
-            playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
-        }
-        else
-        {
-            var saveData = SaveSystem.LoadPlayerData(saveIndex);
-            if (saveData != null)
-            {
-                playerIngredients = new List<Ingredient.IngredientEntry>(saveData.playerResources);
-                consumedResources = new List<Ingredient.IngredientEntry>(saveData.consumedResources);
-            }
-        }
-        DisplayResources();
-    }
-
-    // Thêm tài nguyên mới hoặc tăng số lượng
     public void AddIngredient(string typePlus, int amount)
     {
-        Debug.Log(typePlus+"aaa");
         for (int i = 0; i < playerIngredients.Count; i++)
-        {                
-            Debug.Log(playerIngredients[i].type);
-
+        {
             if (playerIngredients[i].type == typePlus)
             {
                 var entry = playerIngredients[i];
@@ -229,7 +246,6 @@ public class IngridientManager : MonoBehaviour
         DisplayResources();
     }
 
-    // Giảm tài nguyên và cập nhật tiêu hao
     public bool RemoveIngredient(string typePlus, int amount)
     {
         for (int i = 0; i < playerIngredients.Count; i++)
@@ -265,13 +281,13 @@ public class IngridientManager : MonoBehaviour
     private List<Ingredient.IngredientEntry> InventoryDataToEntries(InventoryData inv)
     {
         var list = new List<Ingredient.IngredientEntry>
-    {
-        new Ingredient.IngredientEntry { type = "wood", quantity = inv != null ? inv.Wood : 0 },
-        new Ingredient.IngredientEntry { type = "stone", quantity = inv != null ? inv.Stone : 0 },
-        new Ingredient.IngredientEntry { type = "iron", quantity = inv != null ? inv.Iron : 0 },
-        new Ingredient.IngredientEntry { type = "gold", quantity = inv != null ? inv.Gold : 0 },
-        new Ingredient.IngredientEntry { type = "meat", quantity = inv != null ? inv.Meat : 0 }
-    };
+        {
+            new Ingredient.IngredientEntry { type = "wood", quantity = inv != null ? inv.wood : 0 },
+            new Ingredient.IngredientEntry { type = "stone", quantity = inv != null ? inv.stone : 0 },
+            new Ingredient.IngredientEntry { type = "iron", quantity = inv != null ? inv.iron : 0 },
+            new Ingredient.IngredientEntry { type = "gold", quantity = inv != null ? inv.gold : 0 },
+            new Ingredient.IngredientEntry { type = "meat", quantity = inv != null ? inv.meat : 0 }
+        };
         return list;
     }
 
@@ -283,55 +299,81 @@ public class IngridientManager : MonoBehaviour
             if (string.IsNullOrEmpty(e.type)) continue;
             switch (e.type.ToLower())
             {
-                case "wood": inv.Wood += e.quantity; break;
-                case "stone": inv.Stone += e.quantity; break;
-                case "iron": inv.Iron += e.quantity; break;
-                case "gold": inv.Gold += e.quantity; break;
-                case "meat": inv.Meat += e.quantity; break;
+                case "wood": inv.wood += e.quantity; break;
+                case "stone": inv.stone += e.quantity; break;
+                case "iron": inv.iron += e.quantity; break;
+                case "gold": inv.gold += e.quantity; break;
+                case "meat": inv.meat += e.quantity; break;
             }
         }
         return inv;
     }
 
     /// <summary>
-    /// Lưu trạng thái hiện tại (Level, Mode, playerResources, consumedResources) ra file Save_{saveIndex}.json
-    /// Trả về true nếu lưu thành công.
+    /// Save to�n b? game state k�m buildings
     /// </summary>
     public bool SavePlayerToDisk()
     {
-        try
+        if (playerStats == null)
         {
-            var save = new SaveFileData
-            {
-                Level = currentLevel,
-                Mode = mode.ToString(),
-                playerResources = EntriesToInventoryData(playerIngredients),
-                consumedResources = EntriesToInventoryData(consumedResources)
-            };
-
-            string json = JsonUtility.ToJson(save, true); // pretty print = true
-            string fileName = $"Save_{saveIndex}.json";
-            string path = Path.Combine(Application.persistentDataPath, fileName);
-
-            File.WriteAllText(path, json);
-            Debug.Log($"Save successful: {path}");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError("Save failed: " + ex.Message);
+            Debug.LogError("PlayerStats not assigned!");
             return false;
         }
+
+        // L?y list allies t? allyManager
+        List<GameObject> directChildren = new List<GameObject>();
+        for (int i = 0; i < allyManager.transform.childCount; i++)
+        {
+            directChildren.Add(allyManager.transform.GetChild(i).gameObject);
+        }
+
+        // L?y list buildings
+        List<BuildConstruction> buildingList = new List<BuildConstruction>();
+        if (buildingContainer != null)
+        {
+            BuildConstruction[] allBuildings = buildingContainer.GetComponentsInChildren<BuildConstruction>();
+            buildingList.AddRange(allBuildings);
+        }
+        else
+        {
+            // Fallback: t�m t?t c? BuildConstruction trong scene
+            BuildConstruction[] allBuildings = FindObjectsByType<BuildConstruction>(FindObjectsSortMode.None);
+            buildingList.AddRange(allBuildings);
+            Debug.LogWarning("?? buildingContainer not assigned! Using FindObjectsOfType instead.");
+        }
+
+        Debug.Log($"?? Saving {buildingList.Count} buildings...");
+
+        return SaveSystem.SavePlayerData(
+            saveIndex,
+            currentLevel,
+            mode.ToString(),
+            playerStats,
+            directChildren,
+            buildingList,
+            playerIngredients
+        );
     }
 
     public void SavePlayerToDiskWrapper()
     {
+        GameObject btn = EventSystem.current.currentSelectedGameObject;
+        saveIndex = btn.name switch
+        {
+            "Save_1" => 1,
+            "Save_2" => 2,
+            "Save_3" => 3,
+            "Save_4" => 4,
+            "Save_5" => 5,
+            "Save_6" => 6,
+            _ => 0,
+        };
         bool ok = SavePlayerToDisk();
         if (saveFeedbackText != null)
         {
-            saveFeedbackText.text = ok ? "Lưu thành công" : "Lưu thất bại";
+            saveFeedbackText.text = ok ? "? Luu th�nh c�ng" : "? Luu th?t b?i";
             saveFeedbackText.gameObject.SetActive(true);
-            StopAllCoroutines(); // optional: tránh nhiều coroutine chồng chéo
+            StopAllCoroutines();
             StartCoroutine(ClearSaveFeedbackAfterRealtime(2f));
         }
         Debug.Log(ok ? "Save successful (wrapper)" : "Save failed (wrapper)");
@@ -347,9 +389,6 @@ public class IngridientManager : MonoBehaviour
         }
     }
 
-
-
-    // Lấy số lượng tài nguyên
     public int GetIngredientAmount(string typePlus)
     {
         foreach (var entry in playerIngredients)
@@ -360,7 +399,6 @@ public class IngridientManager : MonoBehaviour
         return 0;
     }
 
-    // Chuyển đổi List<IngredientEntry> sang ResourceData
     public ResourceData ConvertEntriesToResourceData(List<Ingredient.IngredientEntry> entries)
     {
         int wood = 0, stone = 0, iron = 0, gold = 0, meat = 0;
@@ -378,19 +416,16 @@ public class IngridientManager : MonoBehaviour
         return new ResourceData(wood, stone, iron, gold, meat);
     }
 
-    // Lấy dữ liệu tài nguyên còn lại
     public ResourceData GetResourceData()
     {
         return ConvertEntriesToResourceData(playerIngredients);
     }
 
-    // Lấy dữ liệu tài nguyên đã tiêu hao
     public ResourceData GetConsumedResourceData()
     {
         return ConvertEntriesToResourceData(consumedResources);
     }
 
-    // Gửi dữ liệu tới ResourceSpawnPredictor
     public void UpdateResourcePredictor()
     {
         var predictor = GetComponent<ResourceSpawnPredictor>();
@@ -402,8 +437,7 @@ public class IngridientManager : MonoBehaviour
             );
         }
     }
-
-    // 🟩 Hàm hiển thị tài nguyên lên UI
+    [ContextMenu("Display Resources")]
     public void DisplayResources()
     {
         if (woodText != null) woodText.text = GetIngredientAmount("wood").ToString();
@@ -413,9 +447,6 @@ public class IngridientManager : MonoBehaviour
         if (meatText != null) meatText.text = GetIngredientAmount("meat").ToString();
     }
 
-    // ========================================================
-    // KIỂM TRA ĐỦ TÀI NGUYÊN ĐỂ HIRE HERO
-    // ========================================================
     public bool CheckEnough(UnitCostLevel cost, int meatCost)
     {
         if (cost == null) return false;
@@ -429,5 +460,4 @@ public class IngridientManager : MonoBehaviour
 
         return enough;
     }
-
 }

@@ -3,33 +3,31 @@
     {
       "Mode": "easy",
       "Inventory": {
-        "Wood": 300,
-        "Stone": 300,
-        "Iron": 150,
-        "Gold": 200,
-        "Meat": 200
+        "wood": 300,
+        "stone": 300,
+        "iron": 150,
+        "gold": 200,
+        "meat": 200
       }
-
     },
     {
       "Mode": "normal",
       "Inventory": {
-        "Wood": 300,
-        "Stone": 300,
-        "Iron": 100,
-        "Gold": 150,
-        "Meat": 200
+        "wood": 300,
+        "stone": 300,
+        "iron": 100,
+        "gold": 150,
+        "meat": 200
       }
-
     },
     {
       "Mode": "hard",
       "Inventory": {
-        "Wood": 200,
-        "Stone": 200,
-        "Iron": 100,
-        "Gold": 100,
-        "Meat": 150
+        "wood": 200,
+        "stone": 200,
+        "iron": 100,
+        "gold": 100,
+        "meat": 150
       }
     }
   ]
