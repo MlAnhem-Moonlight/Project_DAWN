@@ -94,6 +94,7 @@
     <Compile Include="Assets\Guide\ResourceSpawnPredictor.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearAttack.cs" />
     <Compile Include="Assets\Script\Ally\Spear\CheckEnemyInRangeAlly.cs" />
+    <Compile Include="Assets\Script\UI\TextController.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
     <Compile Include="Assets\Script\Mics\ProjectileArrow.cs" />

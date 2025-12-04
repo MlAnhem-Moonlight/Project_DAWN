@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIPanelManager : MonoBehaviour
 {
     [Header("Danh sách tất cả panel cần quản lý")]
     public List<GameObject> panels = new List<GameObject>();
+
+    public string scene;
 
     /// <summary>
     /// Bật panel được chọn và ẩn toàn bộ panel khác.
@@ -47,5 +50,11 @@ public class UIPanelManager : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(scene);
+        Time.timeScale = 1f; // Đảm bảo thời gian được tiếp tục khi chuyển cảnh
     }
 }
