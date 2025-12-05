@@ -1072,10 +1072,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{FDA6BB83-17DA-4B95-CE55-05C335C56685}</Project>
-      <Name>Unity.Burst</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Collections.csproj">
       <Project>{6AEFC853-480B-8699-3827-D33A5D588D68}</Project>
       <Name>Unity.Collections</Name>

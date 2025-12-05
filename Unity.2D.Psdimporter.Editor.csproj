@@ -1189,10 +1189,6 @@
       <Project>{8ABEC43B-6036-81C4-EABC-D5474559B69C}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{FDA6BB83-17DA-4B95-CE55-05C335C56685}</Project>
-      <Name>Unity.Burst</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
       <Project>{303D7E53-D450-D0A5-BDE7-C1FB13ABC417}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>

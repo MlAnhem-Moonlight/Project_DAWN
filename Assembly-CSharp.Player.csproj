@@ -74,6 +74,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxLayer.cs.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexWarp.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Script\Mics\EnemySpawner.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfMovement.cs" />
@@ -170,6 +171,7 @@
     <Compile Include="Assets\Script\Environment\Deer\DeerBehavior.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\Movement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PickingUp.cs" />
     <Compile Include="Assets\Script\Environment\Interact\SpawnM.cs" />
     <Compile Include="Assets\Script\Enemy\Stats.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="Assets\Script\Mics\BattleManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
+    <Compile Include="Assets\Script\System\Scene\LoadingScreen.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\CheckDistance.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Sequence.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\SetTargetNode.cs" />
@@ -1217,10 +1220,6 @@
       <Project>{B1756D8D-A147-46E3-0947-BEFC56494AEB}</Project>
       <Name>Unity.Muse.Behavior.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Gentleland.Utils.SteampunkUI.Player.csproj">
-      <Project>{801BE54E-F2A5-9B5E-36FE-C073374F502D}</Project>
-      <Name>Gentleland.Utils.SteampunkUI.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{A8E096BB-8D34-8822-8C23-FB8018E842A4}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
@@ -1248,10 +1247,6 @@
     <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
       <Project>{72AD9D54-7045-85F6-FB3A-05827EBF0BB4}</Project>
       <Name>Unity.2D.PixelPerfect.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{AB846318-B887-18A9-D8A5-B0FF9B0DC4F8}</Project>
-      <Name>Unity.Burst.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
       <Project>{314EE1B8-6950-214F-35AB-DF74E14000EF}</Project>
