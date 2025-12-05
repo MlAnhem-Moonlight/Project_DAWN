@@ -936,6 +936,10 @@
       <Project>{BF18B5F4-7F61-DADF-3195-820599253A62}</Project>
       <Name>Unity.Collections.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{AB846318-B887-18A9-D8A5-B0FF9B0DC4F8}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{7F372BA9-37AB-18AA-8B7C-F75E11A1B5EE}</Project>
       <Name>UnityEngine.UI.Player</Name>

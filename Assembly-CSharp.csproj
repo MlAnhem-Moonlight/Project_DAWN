@@ -171,7 +171,6 @@
     <Compile Include="Assets\Script\Environment\Deer\DeerBehavior.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\Movement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PickingUp.cs" />
     <Compile Include="Assets\Script\Environment\Interact\SpawnM.cs" />
     <Compile Include="Assets\Script\Enemy\Stats.cs" />
@@ -1596,9 +1595,17 @@
       <Project>{7E191A24-0C47-A4C0-E3B8-BBD6269ABA4A}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{D4295607-9E54-C70E-B168-D9C65414A68F}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
       <Project>{8576B9E2-89DA-D684-89E7-0FA93166211C}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{FDA6BB83-17DA-4B95-CE55-05C335C56685}</Project>
+      <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{472EF238-DF97-431A-5981-F49DE2854F61}</Project>

@@ -918,6 +918,10 @@
       <Project>{D49179AF-F477-ADB7-E943-0352FC1F7053}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{AB846318-B887-18A9-D8A5-B0FF9B0DC4F8}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
       <Project>{314EE1B8-6950-214F-35AB-DF74E14000EF}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>

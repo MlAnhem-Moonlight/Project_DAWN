@@ -939,6 +939,10 @@
       <Project>{41DE9F01-05CC-70E7-C81B-D301C0491D46}</Project>
       <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{AB846318-B887-18A9-D8A5-B0FF9B0DC4F8}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{7F372BA9-37AB-18AA-8B7C-F75E11A1B5EE}</Project>
       <Name>UnityEngine.UI.Player</Name>

@@ -1474,6 +1474,10 @@
       <Project>{D352AA29-06DA-13F6-272A-9A1987D42744}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{D4295607-9E54-C70E-B168-D9C65414A68F}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{BBBAE444-DD55-BAB7-0255-4B3EC5C5E249}</Project>
       <Name>Unity.Mathematics.Editor</Name>

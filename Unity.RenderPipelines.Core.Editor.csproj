@@ -1349,6 +1349,10 @@
       <Project>{D8201A9A-42BD-B24E-6532-351B67D014DD}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{FDA6BB83-17DA-4B95-CE55-05C335C56685}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{8ABEC43B-6036-81C4-EABC-D5474559B69C}</Project>
       <Name>Unity.Mathematics</Name>

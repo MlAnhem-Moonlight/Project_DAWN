@@ -2,17 +2,17 @@
 
 public class Movement : MonoBehaviour
 {
-    public float maxWalkingSpeed = 5f; 
-    public float maxRunningSpeed = 10f; 
-    public float acceleration = 2f; 
-    public float sprintAcceleration = 4f; 
+    public float maxWalkingSpeed = 5f;
+    public float maxRunningSpeed = 10f;
+    public float acceleration = 2f;
+    public float sprintAcceleration = 4f;
     public Animator animator;
-
     public AnimatorState playerState = AnimatorState.Idle;
 
-    private float currentSpeed = 0f; 
+    private float currentSpeed = 0f;
     private Vector3 movement;
-    private float previousDirection = 0f, dir = 1;
+    private float previousDirection = 0f;
+    private float lastNonZeroDirection = 1f; // Lưu hướng cuối cùng (mặc định phải)
     private AnimationController _controller;
 
     private void Start()
@@ -25,7 +25,6 @@ public class Movement : MonoBehaviour
     {
         PlayerMovement();
         AttackCommand();
-
     }
 
     public void setState(AnimatorState State)
@@ -36,30 +35,37 @@ public class Movement : MonoBehaviour
     public void PlayerMovement()
     {
         movement.x = Input.GetAxis("Horizontal");
-        dir = Input.GetAxis("Horizontal") != dir && Input.GetAxis("Horizontal") != 0f ? Input.GetAxis("Horizontal") : dir;
 
+        // Cập nhật hướng khi có input
+        if (movement.x != 0)
+        {
+            lastNonZeroDirection = Mathf.Sign(movement.x);
+        }
+
+        // Giảm tốc độ khi đổi hướng
         if (movement.x < 0 && previousDirection >= 0 || movement.x > 0 && previousDirection <= 0)
         {
             currentSpeed = currentSpeed / 2f;
         }
-        if (playerState == AnimatorState.Idle && Input.GetAxis("Horizontal") == 0)
-        {
+        Debug.Log("Horizontal = " + movement.x);
 
-            CheckMovement(dir, "Idle 1", "Idle", 0f);
+        if (playerState == AnimatorState.Idle && movement.x == 0)
+        {
+            CheckMovement(lastNonZeroDirection, "Idle 1", "Idle", 0f);
         }
         else if (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill)
         {
-            if(Input.GetAxis("Horizontal") != 0 )
-                CheckMovement(Input.GetAxis("Horizontal"), "Walk 1", "Walk", 0f);
+            if (movement.x != 0)
+                CheckMovement(lastNonZeroDirection, "Walk 1", "Walk", 0f);
             else
                 playerState = AnimatorState.Idle;
         }
 
         if (playerState != AnimatorState.Walk) return;
+
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         float targetSpeed = isSprinting ? maxRunningSpeed : maxWalkingSpeed;
         float currentAcceleration = isSprinting ? sprintAcceleration : acceleration;
-
 
         if (movement.x != 0)
         {
@@ -73,15 +79,14 @@ public class Movement : MonoBehaviour
         }
 
         previousDirection = movement.x;
-
         transform.position += movement.normalized * currentSpeed * Time.deltaTime;
     }
 
     public void AttackCommand()
     {
-        if(Input.GetKey(KeyCode.F) && (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill))
+        if (Input.GetKeyDown(KeyCode.F) && (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill))
         {
-            CheckMovement(dir, "Attack 1", "Attack", 0f);
+            CheckMovement(lastNonZeroDirection, "Attack 1", "Attack", 0f);
         }
     }
 

@@ -5119,6 +5119,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7473437829179478841, guid: e30d295e03621ca43bd450b4d0d6f66a, type: 3}
   m_PrefabInstance: {fileID: 533662346}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &213512022 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6859073842731676968, guid: 69e7855acf0538c4893233642e74819b, type: 3}
+  m_PrefabInstance: {fileID: 1943524717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &222637880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90213,6 +90218,7 @@ MonoBehaviour:
   - {fileID: 915741096}
   - {fileID: 566639312}
   - {fileID: 1555042212}
+  scene: 
 --- !u!1 &1467855290
 GameObject:
   m_ObjectHideFlags: 0
@@ -99343,6 +99349,10 @@ PrefabInstance:
       propertyPath: ingredientManager
       value: 
       objectReference: {fileID: 1645618529}
+    - target: {fileID: 6589927457406074338, guid: 69e7855acf0538c4893233642e74819b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 213512022}
     - target: {fileID: 7471082829421746114, guid: 69e7855acf0538c4893233642e74819b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0406498
