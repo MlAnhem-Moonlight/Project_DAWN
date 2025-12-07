@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEditor;
 // Explicitly alias namespaces for disambiguation
 using UI = UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class LoadingScreen : MonoBehaviour
 {
@@ -15,13 +16,40 @@ public class LoadingScreen : MonoBehaviour
     private bool isSceneActivationTriggered = false; // To track user input
     private float originalTimeScale = 1f; // To store the original time scale
 
+    public int level = 0;
+
     private void Start()
     {
         if (loadingScreen != null)
             loadingScreen.SetActive(false); // Hide the loading screen at the start
     }
 
-    [ContextMenu("Load Scene")]
+    public void StartGame()
+    {
+        SystemController sysCtrl = FindAnyObjectByType<SystemController>();
+        sysCtrl.loadStatus = level;
+        LoadScene();
+        
+    }
+
+    public void LoadGame()
+    {
+        // Load t? SaveSystem m?i
+        GameObject btn = EventSystem.current.currentSelectedGameObject;
+        SystemController sysCtrl = FindAnyObjectByType<SystemController>();
+        sysCtrl.loadStatus = btn.name switch
+        {
+            "Load_1" => 1,
+            "Load_2" => 2,
+            "Load_3" => 3,
+            "Load_4" => 4,
+            "Load_5" => 5,
+            "Load_6" => 6,
+            _ => 0,
+        };
+        LoadScene();
+    }
+
     public void LoadScene()
     {
         StartCoroutine(LoadAsynchronously(gameSceneName));

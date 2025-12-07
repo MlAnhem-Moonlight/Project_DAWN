@@ -65,30 +65,54 @@ public class IngridientManager : MonoBehaviour
 
     private void Start()
     {
+        if (Time.timeScale == 0f)
+            Time.timeScale = 1; // Restore the original time scale
         if (playerStats == null)
             playerStats = FindAnyObjectByType<PlayerStats>();
 
         if (allyManager == null)
             allyManager = GameObject.Find("AllyUnitController");
-
+        SystemController sysCtrl = FindAnyObjectByType<SystemController>();
+        if (sysCtrl != null)
+        {
+            switch (sysCtrl.loadStatus)
+            {
+                case 0:
+                    LoadDefaultInventory(gameMode.easy);
+                    break;
+                case 1:
+                    saveIndex = 1;
+                    LoadSave();
+                    break;
+                case 2:
+                    saveIndex = 2;
+                    LoadSave();
+                    break;
+                case 3:
+                    saveIndex = 3;
+                    LoadSave();
+                    break;
+                case 4:
+                    saveIndex = 4;
+                    LoadSave();
+                    break;
+                case 5:
+                    saveIndex = 5;
+                    LoadSave();
+                    break;
+                case 6:
+                    saveIndex = 6;
+                    LoadSave();
+                    break;
+                default:
+                    break;
+            }
+        }
         ResetConsumedResources();
     }
 
     public void LoadSave()
     {
-
-        // Load t? SaveSystem m?i
-        GameObject btn = EventSystem.current.currentSelectedGameObject;
-        saveIndex = btn.name switch
-        {
-            "Save_1" => 1,
-            "Save_2" => 2,
-            "Save_3" => 3,
-            "Save_4" => 4,
-            "Save_5" => 5,
-            "Save_6" => 6,
-            _ => 0,
-        };
         var loadedData = SaveSystem.LoadPlayerData(saveIndex);
         if (loadedData == null)
         {

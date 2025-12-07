@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum UnitFaction { Enemy, Ally }
@@ -16,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
         [HideInInspector]
         public List<GameObject> pool = new List<GameObject>();
     }
-    
+
     [Header("Danh sách các loại Enemy")]
     public List<EnemyPool> enemyPools = new List<EnemyPool>();
 
@@ -28,10 +29,12 @@ public class EnemySpawner : MonoBehaviour
     public int minEnemyLevel = 1;
 
     [Tooltip("Level tối đa của enemy")]
-    public int maxEnemyLevel = 20;
+    public int maxEnemyLevel = 8;
 
     private static EnemySpawner instance;
 
+    [Header("Spawn Limits")]
+    public int maxUnitCanSpawn = 0;
     private void Awake()
     {
         instance = this;
@@ -53,6 +56,35 @@ public class EnemySpawner : MonoBehaviour
             }
         }
     }
+
+    //private void Update()
+    //{
+
+    //}
+
+    public bool CheckSpawnLimit()
+    {
+        // Lấy toàn bộ BuildConstruction trong scene
+        BuildConstruction[] buildings =
+            FindObjectsByType<BuildConstruction>(FindObjectsSortMode.None);
+
+        // Lọc theo điều kiện:
+        // 1. isBuilt == true
+        // 2. buildingType == VillagerHouse hoặc Fortress
+        List<BuildConstruction> validBuildings = buildings
+            .Where(b => b.isBuilt &&
+                       (b.buildingType == BuildConstruction.BuildingType.VillagerHouse ||
+                        b.buildingType == BuildConstruction.BuildingType.Fortress))
+            .ToList();
+
+        maxUnitCanSpawn += validBuildings.Count * 10;
+
+        Debug.Log("Số lượng quân lính có thể sử dụng: " + maxUnitCanSpawn);
+        if(enemyPools.Count < maxUnitCanSpawn) return true;
+        else return false;
+
+    }
+
 
     /// <summary>
     /// Spawn enemy với level cụ thể

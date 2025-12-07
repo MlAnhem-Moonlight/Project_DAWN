@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             SelectUnit();
-            if (selectedUnit != null)
+            if (unitAlly != null)
             {
                 AllyPortrait.sprite = unitAlly.portrait;
                 AllyName.text = unitAlly.name.Replace("(Clone)", "").Trim(); ;

@@ -96,7 +96,7 @@ public class KnightStats : Stats
 
         //Debug.Log($"{name} synergy skill kết thúc, Shield trở lại bình thường.");
     }
-
+    [ContextMenu("Apply Stats")]
     public override void ApplyGrowth()
     {
         if (baseStats == null) return;

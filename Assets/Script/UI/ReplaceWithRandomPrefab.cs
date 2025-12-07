@@ -24,6 +24,7 @@ public class MultiUIRandomizer : MonoBehaviour
     public TextMeshProUGUI statText;
     public TextMeshProUGUI unitname;
     public TextMeshProUGUI reqDetail;
+    public TextMeshProUGUI log;
 
     [Header("Spawned Object")]
     public GameObject selected;
@@ -45,6 +46,18 @@ public class MultiUIRandomizer : MonoBehaviour
 
     public void HireHero()
     {
+
+        if (allySpawner != null)
+        {
+            if(allySpawner.CheckSpawnLimit() == false)
+            {
+                log.text = "No more room for this soldier!!!";
+                Debug.Log("Quá tải dân số");
+                return;
+            }
+
+        }
+        else Debug.LogWarning("Ally Spawner is null");
         if (cardSelected == null)
         {
             Debug.LogError("Chưa chọn card để Hire!");

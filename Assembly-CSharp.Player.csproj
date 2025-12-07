@@ -205,6 +205,7 @@
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandBehavior.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearBehavior.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\DefensiveMovement.cs" />
+    <Compile Include="Assets\Script\UI\PanelOn.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Selector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -218,9 +219,11 @@
     <Compile Include="Assets\Script\Ally\Spear\Movement\AggressiveMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Script\System\SystemController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Script\Mics\SeparationSteering.cs" />
     <Compile Include="Assets\Script\Mics\BattleManager.cs" />
+    <Compile Include="Assets\Script\System\PersistentSingleton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes.cs" />
     <Compile Include="Assets\Script\System\Scene\LoadingScreen.cs" />

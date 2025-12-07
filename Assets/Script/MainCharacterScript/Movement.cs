@@ -47,7 +47,6 @@ public class Movement : MonoBehaviour
         {
             currentSpeed = currentSpeed / 2f;
         }
-        Debug.Log("Horizontal = " + movement.x);
 
         if (playerState == AnimatorState.Idle && movement.x == 0)
         {

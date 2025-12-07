@@ -26,6 +26,7 @@ public class BuildConstruction : MonoBehaviour
     public GameObject buildAvailableUI;
     public GameObject buildingActionUI;
     public GameObject smokeUI;
+    public GameObject canvasPanel;
     public Vector3 uiOffset = new Vector3(0, 1f, 0);
 
     private BuildingResourceFileField allResources;
@@ -60,6 +61,10 @@ public class BuildConstruction : MonoBehaviour
         if (isPlayerInRange && !isBuilt && Input.GetKeyDown(KeyCode.E))
         {
             TryBuild();
+        }
+        else if(isPlayerInRange && isBuilt && Input.GetKeyDown(KeyCode.E) && canvasPanel != null)
+        {
+            canvasPanel.SetActive(true);
         }
 
         // 🟩 Khi công trình bị phá hủy
