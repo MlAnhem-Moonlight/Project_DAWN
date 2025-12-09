@@ -32,6 +32,11 @@ public class LoadingScreen : MonoBehaviour
         
     }
 
+    public void ReturnMenu()
+    {
+        LoadScene("Cover");
+    }
+
     public void LoadGame()
     {
         // Load t? SaveSystem m?i
@@ -47,6 +52,7 @@ public class LoadingScreen : MonoBehaviour
             "Load_6" => 6,
             _ => 0,
         };
+        Debug.Log("Loading save file " + sysCtrl.loadStatus + " " + btn.name);
         LoadScene();
     }
 

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\Enemy\TheMage\CastSpellNode.cs" />
     <Compile Include="Assets\Script\Q-Learning\QLearningEnemyBalancer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Script\System\GameController.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxLayer.cs.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Conditional.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexWarp.cs" />

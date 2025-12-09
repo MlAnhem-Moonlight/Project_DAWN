@@ -22,6 +22,8 @@ public class PlayerStats : Stats
 
     public void updateHP()
     {
+        hpBar = GameObject.Find("PlayerHP").GetComponent<Slider>();
+        Debug.Log(hpBar);
         hpBar.maxValue = currentHP;
     }
 

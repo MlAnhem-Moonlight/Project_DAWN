@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -25,10 +25,19 @@ public class IngridientManager : MonoBehaviour
     }
 
     [System.Serializable]
+    public class DefaultBuildingEntry
+    {
+        public string buildingType;
+        public bool isBuilt;
+        public int constructionHP;
+    }
+
+    [System.Serializable]
     public class DefaultLevelEntry
     {
         public string Mode;
         public InventoryData Inventory;
+        public DefaultBuildingEntry[] Buildings;
     }
 
     [System.Serializable]
@@ -37,10 +46,10 @@ public class IngridientManager : MonoBehaviour
         public DefaultLevelEntry[] DefaultLevel;
     }
 
-    [Header("T‡i nguyÍn c?a ngu?i choi")]
+    [Header("T√†i nguy√™n c?a ngu?i choi")]
     public List<Ingredient.IngredientEntry> playerIngredients = new List<Ingredient.IngredientEntry>();
 
-    [Header("T‡i nguyÍn d„ tiÍu hao")]
+    [Header("T√†i nguy√™n d√£ ti√™u hao")]
     public List<Ingredient.IngredientEntry> consumedResources = new List<Ingredient.IngredientEntry>();
 
     [Header("Level")]
@@ -55,7 +64,7 @@ public class IngridientManager : MonoBehaviour
     public GameObject allyManager;
     public GameObject buildingContainer;  // Parent ch?a t?t c? buildings
 
-    [Header("Text hi?n th? s? lu?ng t‡i nguyÍn")]
+    [Header("Text hi?n th? s? lu?ng t√†i nguy√™n")]
     public TextMeshProUGUI woodText;
     public TextMeshProUGUI stoneText;
     public TextMeshProUGUI ironText;
@@ -119,13 +128,13 @@ public class IngridientManager : MonoBehaviour
             Debug.LogWarning($"Save file not found. ");
             return;
         }
-
+        Debug.Log("‚úÖ Save file loaded successfully: " + saveIndex + " Save name: "+ loadedData.ToString());
         // C?p nh?t inventory
         playerIngredients = InventoryDataToEntries(loadedData.inventoryData);
         ResetConsumedResources();
         DisplayResources();
 
-        // C?p nh?t player position v‡ stats
+        // C?p nh?t player position v√† stats
         if (playerStats != null)
         {
             playerStats.transform.position = loadedData.playerData.position;
@@ -187,6 +196,25 @@ public class IngridientManager : MonoBehaviour
             playerIngredients = InventoryDataToEntries(selected.Inventory);
             ResetConsumedResources();
             DisplayResources();
+
+            // If the default file contains building entries, convert and apply them
+            if (selected.Buildings != null && selected.Buildings.Length > 0)
+            {
+                var buildingsData = new List<SaveSystem.BuildingData>();
+                foreach (var b in selected.Buildings)
+                {
+                    // Create SaveSystem.BuildingData instances to reuse ApplyBuildingsData
+                    var bd = new SaveSystem.BuildingData
+                    {
+                        buildingType = b.buildingType,
+                        isBuilt = b.isBuilt,
+                        constructionHP = b.constructionHP
+                    };
+                    buildingsData.Add(bd);
+                }
+
+                ApplyBuildingsData(buildingsData);
+            }
         }
         catch (Exception ex)
         {
@@ -209,7 +237,7 @@ public class IngridientManager : MonoBehaviour
         
         foreach (var buildingData in buildingsData)
         {
-            // TÏm building cÛ c˘ng lo?i
+            // T√¨m building c√≥ c√πng lo?i
             foreach (var building in allBuildings)
             {
                 if (building.buildingType.ToString() == buildingData.buildingType)
@@ -217,7 +245,7 @@ public class IngridientManager : MonoBehaviour
                     building.isBuilt = buildingData.isBuilt;
                     building.constructionHP = buildingData.constructionHP;
                     
-                    // ¡p d?ng tr?ng th·i visual
+                    // √Åp d?ng tr?ng th√°i visual
                     if (buildingData.isBuilt)
                     {
                         if (building.construction != null)
@@ -334,7 +362,7 @@ public class IngridientManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Save to‡n b? game state kËm buildings
+    /// Save to√†n b? game state k√®m buildings
     /// </summary>
     public bool SavePlayerToDisk()
     {
@@ -360,7 +388,7 @@ public class IngridientManager : MonoBehaviour
         }
         else
         {
-            // Fallback: tÏm t?t c? BuildConstruction trong scene
+            // Fallback: t√¨m t?t c? BuildConstruction trong scene
             BuildConstruction[] allBuildings = FindObjectsByType<BuildConstruction>(FindObjectsSortMode.None);
             buildingList.AddRange(allBuildings);
             Debug.LogWarning("?? buildingContainer not assigned! Using FindObjectsOfType instead.");
@@ -395,7 +423,7 @@ public class IngridientManager : MonoBehaviour
         bool ok = SavePlayerToDisk();
         if (saveFeedbackText != null)
         {
-            saveFeedbackText.text = ok ? "? Luu th‡nh cÙng" : "? Luu th?t b?i";
+            saveFeedbackText.text = ok ? "? Luu th√†nh c√¥ng" : "? Luu th?t b?i";
             saveFeedbackText.gameObject.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(ClearSaveFeedbackAfterRealtime(2f));

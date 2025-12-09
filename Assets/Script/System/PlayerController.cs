@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
         // Lọc collider có Stats
         foreach (var h in hits)
         {
+            if(h.CompareTag("Player")|| h.gameObject.layer == 7) continue; // bỏ qua enemy
             Stats s = h.GetComponent<Stats>();
             if (s != null)
             {

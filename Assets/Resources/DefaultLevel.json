@@ -3,12 +3,34 @@
     {
       "Mode": "easy",
       "Inventory": {
-        "wood": 300,
-        "stone": 300,
-        "iron": 150,
-        "gold": 200,
-        "meat": 200
-      }
+        "wood": 1000,
+        "stone": 1000,
+        "iron": 500,
+        "gold": 500,
+        "meat": 500
+      },
+      "Buildings": [
+        {
+          "buildingType": "Watchtown",
+          "isBuilt": true,
+          "constructionHP": 100
+        },
+        {
+          "buildingType": "Fortress",
+          "isBuilt": false,
+          "constructionHP": 0
+        },
+        {
+          "buildingType": "Barrack",
+          "isBuilt": false,
+          "constructionHP": 0
+        },
+        {
+          "buildingType": "Tavern",
+          "isBuilt": false,
+          "constructionHP": 0
+        }
+      ]
     },
     {
       "Mode": "normal",
