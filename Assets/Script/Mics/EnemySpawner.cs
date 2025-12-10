@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum UnitFaction { Enemy, Ally }
@@ -31,14 +32,11 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Level tối đa của enemy")]
     public int maxEnemyLevel = 8;
 
-    private static EnemySpawner instance;
-
     [Header("Spawn Limits")]
     public int maxUnitCanSpawn = 0;
+
     private void Awake()
     {
-        instance = this;
-
         // Tạo object pool cho từng loại enemy
         foreach (var pool in enemyPools)
         {
@@ -80,9 +78,8 @@ public class EnemySpawner : MonoBehaviour
         maxUnitCanSpawn += validBuildings.Count * 10;
 
         Debug.Log("Số lượng quân lính có thể sử dụng: " + maxUnitCanSpawn);
-        if(enemyPools.Count < maxUnitCanSpawn) return true;
+        if (enemyPools.Count < maxUnitCanSpawn) return true;
         else return false;
-
     }
 
 
@@ -92,8 +89,9 @@ public class EnemySpawner : MonoBehaviour
     /// difficultyLevel: số lượng/composition
     /// enemyLevel: level của enemy (1-20)
     /// </summary>
-    public static void SpawnEnemy(int type, int difficultyLevel, int enemyLevel)
+    public void SpawnEnemy(int type, int difficultyLevel, int enemyLevel)
     {
+        Debug.Log($"{this.name}");
         switch (type)
         {
             case 1:
@@ -118,17 +116,17 @@ public class EnemySpawner : MonoBehaviour
     {
         if (!EnsureInstance()) return;
 
-        var pool = instance.enemyPools.Find(p => p.name == allyName && p.faction == UnitFaction.Ally);
+        var pool = enemyPools.Find(p => p.name == allyName && p.faction == UnitFaction.Ally);
         if (pool == null)
         {
             Debug.LogWarning($"⚠️ Không tìm thấy Ally '{allyName}' trong pool!");
             return;
         }
 
-        SpawnUnitFromPool(pool, spawnPoint.position, allyLevel);
+        SpawnUnitFromPool(pool, spawnPoint != null ? spawnPoint.position : GetRandomSpawn(), allyLevel);
     }
 
-    private static void SpawnUnitFromPool(EnemyPool pool, Vector3 spawnPos, int level)
+    private void SpawnUnitFromPool(EnemyPool pool, Vector3 spawnPos, int level)
     {
         foreach (var unit in pool.pool)
         {
@@ -161,18 +159,27 @@ public class EnemySpawner : MonoBehaviour
     /// <summary>
     /// 🧩 Kiểu 1: Spawn 1 enemy duy nhất
     /// difficultyLevel ảnh hưởng đến variance của level
+    /// LƯU Ý: chỉ chọn pool có faction == Enemy
     /// </summary>
     [ContextMenu("Spawn Type 1 (Single Enemy)")]
-    public static void SpawnType1(int difficultyLevel = 1, int enemyLevel = 1)
+    public void SpawnType1(int difficultyLevel = 1, int enemyLevel = 1)
     {
+        Debug.Log("Spawn Type 1 called: ");
         if (!EnsureInstance()) return;
 
-        var pool = instance.enemyPools[Random.Range(0, instance.enemyPools.Count)];
+        var enemyOnlyPools = enemyPools.Where(p => p.faction == UnitFaction.Enemy).ToList();
+        if (enemyOnlyPools.Count == 0)
+        {
+            Debug.LogWarning("⚠️ Không có Enemy pool để spawn (tất cả là Ally?)");
+            return;
+        }
+
+        var pool = enemyOnlyPools[Random.Range(0, enemyOnlyPools.Count)];
 
         // Thêm variance dựa trên difficulty
         int variance = Mathf.Clamp(difficultyLevel - 1, 0, 3);
         int finalLevel = Mathf.Clamp(enemyLevel + Random.Range(-variance, variance + 1),
-                                     instance.minEnemyLevel, instance.maxEnemyLevel);
+                                     minEnemyLevel, maxEnemyLevel);
 
         SpawnEnemyFromPool(pool, finalLevel);
         Debug.Log($"⚔️ SpawnType1: 1 enemy ({pool.name}) level {finalLevel} (base: {enemyLevel}, difficulty: {difficultyLevel})");
@@ -184,11 +191,18 @@ public class EnemySpawner : MonoBehaviour
     /// enemyLevel quyết định sức mạnh
     /// </summary>
     [ContextMenu("Spawn Type 2 (Scaled Group)")]
-    public static void SpawnType2(int difficultyLevel = 1, int enemyLevel = 1)
+    public void SpawnType2(int difficultyLevel = 1, int enemyLevel = 1)
     {
         if (!EnsureInstance()) return;
 
-        var pool = instance.enemyPools[Random.Range(0, instance.enemyPools.Count)];
+        var enemyOnlyPools = enemyPools.Where(p => p.faction == UnitFaction.Enemy).ToList();
+        if (enemyOnlyPools.Count == 0)
+        {
+            Debug.LogWarning("⚠️ Không có Enemy pool để spawn (tất cả là Ally?)");
+            return;
+        }
+
+        var pool = enemyOnlyPools[Random.Range(0, enemyOnlyPools.Count)];
 
         // Số lượng tỉ lệ với difficulty
         int count = Mathf.Clamp(difficultyLevel * 2, 2, pool.poolSize);
@@ -198,7 +212,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!enemy.activeInHierarchy)
             {
-                Vector3 pos = instance.spawnPoint != null ? instance.spawnPoint.position : GetRandomSpawn();
+                Vector3 pos = spawnPoint != null ? spawnPoint.position : GetRandomSpawn();
                 enemy.transform.position = pos + new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
                 enemy.SetActive(true);
 
@@ -207,7 +221,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     // Variance nhỏ cho level của từng con
                     int finalLevel = Mathf.Clamp(enemyLevel + Random.Range(-1, 2),
-                                                 instance.minEnemyLevel, instance.maxEnemyLevel);
+                                                 minEnemyLevel, maxEnemyLevel);
                     stats.level = finalLevel;
                     stats.ApplyGrowth();
                 }
@@ -226,7 +240,7 @@ public class EnemySpawner : MonoBehaviour
     /// enemyLevel quyết định sức mạnh trung bình
     /// </summary>
     [ContextMenu("Spawn Type 3 (Mixed Group)")]
-    public static void SpawnType3(int difficultyLevel = 1, int enemyLevel = 1)
+    public void SpawnType3(int difficultyLevel = 1, int enemyLevel = 1)
     {
         if (!EnsureInstance()) return;
 
@@ -234,15 +248,22 @@ public class EnemySpawner : MonoBehaviour
         int count = Mathf.Clamp(2 + difficultyLevel, 2, 8);
         int spawned = 0;
 
+        var enemyOnlyPools = enemyPools.Where(p => p.faction == UnitFaction.Enemy).ToList();
+        if (enemyOnlyPools.Count == 0)
+        {
+            Debug.LogWarning("⚠️ Không có Enemy pool để spawn (tất cả là Ally?)");
+            return;
+        }
+
         for (int i = 0; i < count; i++)
         {
-            var pool = instance.enemyPools[Random.Range(0, instance.enemyPools.Count)];
+            var pool = enemyOnlyPools[Random.Range(0, enemyOnlyPools.Count)];
 
             foreach (var enemy in pool.pool)
             {
                 if (!enemy.activeInHierarchy)
                 {
-                    Vector3 pos = instance.spawnPoint != null ? instance.spawnPoint.position : GetRandomSpawn();
+                    Vector3 pos = spawnPoint != null ? spawnPoint.position : GetRandomSpawn();
                     enemy.transform.position = pos + new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-3f, 3f));
                     enemy.SetActive(true);
 
@@ -252,7 +273,7 @@ public class EnemySpawner : MonoBehaviour
                         // Tạo variance để có enemy mạnh/yếu khác nhau trong đội
                         int levelVariance = Random.Range(-2, 3);
                         int finalLevel = Mathf.Clamp(enemyLevel + levelVariance,
-                                                     instance.minEnemyLevel, instance.maxEnemyLevel);
+                                                     minEnemyLevel, maxEnemyLevel);
                         stats.level = finalLevel;
                         stats.ApplyGrowth();
                     }
@@ -270,15 +291,9 @@ public class EnemySpawner : MonoBehaviour
     // ⚙️ Tiện ích chung
     // ===============================
 
-    private static bool EnsureInstance()
+    private bool EnsureInstance()
     {
-        if (instance == null)
-        {
-            Debug.LogError("❌ EnemySpawner not found in scene!");
-            return false;
-        }
-
-        if (instance.enemyPools.Count == 0)
+        if (enemyPools == null || enemyPools.Count == 0)
         {
             Debug.LogWarning("⚠️ Không có EnemyPool nào trong EnemySpawner!");
             return false;
@@ -287,20 +302,20 @@ public class EnemySpawner : MonoBehaviour
         return true;
     }
 
-    private static void SpawnEnemyFromPool(EnemyPool pool, int level)
+    private void SpawnEnemyFromPool(EnemyPool pool, int level)
     {
         foreach (var enemy in pool.pool)
         {
             if (!enemy.activeInHierarchy)
             {
-                Vector3 spawnPos = instance.spawnPoint != null ? instance.spawnPoint.position : GetRandomSpawn();
+                Vector3 spawnPos = spawnPoint != null ? spawnPoint.position : GetRandomSpawn();
                 enemy.transform.position = spawnPos;
                 enemy.SetActive(true);
 
                 var stats = enemy.GetComponent<Stats>();
                 if (stats != null)
                 {
-                    stats.level = Mathf.Clamp(level, instance.minEnemyLevel, instance.maxEnemyLevel);
+                    stats.level = Mathf.Clamp(level, minEnemyLevel, maxEnemyLevel);
                     stats.ApplyGrowth();
                 }
                 return;
@@ -308,7 +323,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private static Vector3 GetRandomSpawn()
+    private Vector3 GetRandomSpawn()
     {
         return new Vector3(Random.Range(-5f, 5f), 0f, Random.Range(-5f, 5f));
     }

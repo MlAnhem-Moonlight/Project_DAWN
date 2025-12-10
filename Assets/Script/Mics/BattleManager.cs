@@ -7,6 +7,7 @@ public class BattleManager : MonoBehaviour
     [Header("References")]
     public BattleStateCollector stateCollector;
     public QLearningEnemyBalancer qLearning;
+    public EnemySpawner enemySpawner;
 
     [Header("Spawn Configuration")]
     [Tooltip("Loại spawn: 1 = Single, 2 = Scaled Group, 3 = Mixed")]
@@ -184,7 +185,7 @@ public class BattleManager : MonoBehaviour
         enemiesSpawned = true;
 
         // Spawn với level cụ thể
-        EnemySpawner.SpawnEnemy(spawnType, currentWaveDifficulty, currentWaveEnemyLevel);
+        enemySpawner.SpawnEnemy(spawnType, currentWaveDifficulty, currentWaveEnemyLevel);
 
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(0.2f);

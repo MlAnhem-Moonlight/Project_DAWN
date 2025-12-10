@@ -41,4 +41,9 @@ public class ListAllyManage : MonoBehaviour
 
         Debug.Log("Tạo xong " + activeAllies.Count + " Ally Cards.");
     }
+
+    private void OnEnable()
+    {
+        GenerateAllyCards();
+    }
 }
