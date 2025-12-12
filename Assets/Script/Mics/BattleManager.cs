@@ -296,6 +296,11 @@ public class BattleManager : MonoBehaviour
 
         // Save Q-Table
         qLearning.SaveQTable();
+        GameController gameController = FindAnyObjectByType<GameController>();
+        if (gameController != null)
+        {
+            gameController.GameStateController();
+        }
     }
 
     float CalculateBalancedReward(bool allyWon, float waveDuration)

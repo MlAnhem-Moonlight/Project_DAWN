@@ -96860,6 +96860,7 @@ GameObject:
   - component: {fileID: 1801777698}
   - component: {fileID: 1801777697}
   - component: {fileID: 1801777700}
+  - component: {fileID: 1801777701}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -96946,6 +96947,22 @@ MonoBehaviour:
   hint: {fileID: 707096004}
   text: {fileID: 707096003}
   level: 0
+--- !u!114 &1801777701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801777696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0929c56223239643ac49002b6106025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFightState: 0
+  night: {fileID: 1339046450}
+  day: {fileID: 981775338}
+  allyContainer: {fileID: 1922932302}
 --- !u!1 &1801871372
 GameObject:
   m_ObjectHideFlags: 0
