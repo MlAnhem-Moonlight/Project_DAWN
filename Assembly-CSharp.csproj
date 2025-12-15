@@ -63,7 +63,6 @@
     <Analyzer Include="C:\Users\Admin\Documents\GitHub\Project_DAWN\Library\PackageCache\com.unity.dt.app-ui@5d6dc8bfd8d9\Runtime\MVVM\SourceGenerators\netstandard2.0\MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Guide\ResourceAllocationGA.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherNeu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvestable.cs" />
@@ -85,7 +84,6 @@
     <Compile Include="Assets\Script\BehaviorTree\Condition.cs" />
     <Compile Include="Assets\Script\Enemy\Ton\TankStats.cs" />
     <Compile Include="Assets\Script\Mics\BattleStateCollector.cs" />
-    <Compile Include="Assets\Guide\ResourceAllocationCMAES.cs" />
     <Compile Include="Assets\Script\Ally\Spear\DefensiveAction.cs" />
     <Compile Include="Assets\Script\UI\ListAllyManage.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandCheckTarget.cs" />
@@ -93,16 +91,17 @@
     <Compile Include="Assets\Script\Environment\ObjectPooler.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\PlayerStats.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-    <Compile Include="Assets\Guide\ResourceSpawnPredictor.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearAttack.cs" />
     <Compile Include="Assets\Script\Ally\Spear\CheckEnemyInRangeAlly.cs" />
     <Compile Include="Assets\Script\UI\TextController.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\ResourceAllocationCMAES.cs" />
     <Compile Include="Assets\Script\Environment\Wolf\WolfBehavior.cs" />
     <Compile Include="Assets\Script\Ally\EnumState.cs" />
     <Compile Include="Assets\Script\Mics\ProjectileArrow.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandAttack.cs" />
     <Compile Include="Assets\Script\Q-Learning\QLearning.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Parallel.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\ResourceSpawnPredictor.cs" />
     <Compile Include="Assets\Script\UI\IngridentUIPrase.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\MeleeDPSStats.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\StateController.cs" />
@@ -118,11 +117,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageCheckEnemyInRange.cs" />
     <Compile Include="Assets\Script\Environment\MaterialSpawner.cs" />
-    <Compile Include="Assets\Guide\ResourceManager.cs" />
     <Compile Include="Assets\Script\UI\ShowStatsUI.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageBehavior.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxBackground.cs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\ResourceAllocationDE.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherArg.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\MageAttackNode.cs" />
     <Compile Include="Assets\Script\Environment\MaterialPool.cs" />
@@ -142,7 +141,6 @@
     <Compile Include="Assets\Script\UI\IngredientUI.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PlayerHarvestController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\Guide\TestScript.cs" />
     <Compile Include="Assets\Script\Ally\Archer\ArcherBehavior.cs" />
     <Compile Include="Assets\Script\Enemy\TheMage\TheMageMovement.cs" />
     <Compile Include="Assets\Script\UI\UIPanelManager.cs" />
@@ -161,7 +159,6 @@
     <Compile Include="Assets\Script\Environment\IngridientManager.cs" />
     <Compile Include="Assets\OnBegin.cs" />
     <Compile Include="Assets\Script\Environment\Interact\Harvest.cs" />
-    <Compile Include="Assets\Guide\ResourceAllocationDE.cs" />
     <Compile Include="Assets\Script\State.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\NeutralMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -196,13 +193,16 @@
     <Compile Include="Assets\Script\Enemy\TheAllah\BridBehavior.cs" />
     <Compile Include="Assets\Script\Mics\Mics.cs" />
     <Compile Include="Assets\Script\Mics\TurnPrefab.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\TestScript.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\ResourceManager.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearStats.cs" />
     <Compile Include="Assets\Script\Mics\LifetimeTracker.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\IMovementStrategy.cs" />
     <Compile Include="Assets\Script\BehaviorTree\Nodes\BTNode_Action.cs" />
+    <Compile Include="Assets\Script\Environment\Algorithm\ResourceAllocationGA.cs" />
     <Compile Include="Assets\Script\Enemy\TheHand\TheHandBehavior.cs" />
     <Compile Include="Assets\Script\Ally\Spear\SpearBehavior.cs" />
     <Compile Include="Assets\Script\Ally\Spear\Movement\DefensiveMovement.cs" />
@@ -296,7 +296,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Sprite\Steampunktheme\Gentleland\SteampunkUI\ThirdPartyLicenses\BebasNeue Font License.txt" />
     <None Include="Assets\Sprite\Unit\GandalfHardcore\GandalfHardcore Emoji Icons\READ ME.txt" />
-    <None Include="Assets\Guide\ResourceAllocationGA_NewMutation.txt" />
+    <None Include="Assets\Script\Environment\Algorithm\ResourceAllocationGA_NewMutation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sprite\Unit\Martial Hero\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

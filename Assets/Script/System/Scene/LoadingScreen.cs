@@ -34,12 +34,14 @@ public class LoadingScreen : MonoBehaviour
 
     public void ReturnMenu()
     {
+        Time.timeScale = 1f; // Ensure time scale is normal when returning to menu
         LoadScene("Cover");
     }
 
     public void LoadGame()
     {
         // Load t? SaveSystem m?i
+        Time.timeScale = 1f; // Ensure time scale is normal when returning to menu
         GameObject btn = EventSystem.current.currentSelectedGameObject;
         SystemController sysCtrl = FindAnyObjectByType<SystemController>();
         sysCtrl.loadStatus = btn.name switch

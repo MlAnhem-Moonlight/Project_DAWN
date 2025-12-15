@@ -87,7 +87,7 @@ public class MaterialSpawner : MonoBehaviour
             return;
         }
 
-        string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        string filePath = Path.Combine(Application.dataPath, "Resources/env.json");
         if (!File.Exists(filePath))
         {
             Debug.LogWarning("Không tìm thấy file JSON!");

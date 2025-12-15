@@ -7,18 +7,25 @@ public class GameController : MonoBehaviour
 
     public GameObject night, day;
     public GameObject allyContainer;
+    public GameObject player;
+
+    public GameObject losePanel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(player.GetComponent<Stats>().currentHP <= 0)
+        {
+            Losing();
+        }
     }
+
     [ContextMenu("Switch game state")]
     public void GameStateController()
     {
@@ -75,6 +82,9 @@ public class GameController : MonoBehaviour
     public void Losing()
     {
         //Xử lý khi người chơi thua
+        losePanel.SetActive(true);
+        Time.timeScale = 0f; // Pause the game
+
     }
 
     public void Winning()

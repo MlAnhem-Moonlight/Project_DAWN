@@ -13,7 +13,6 @@ public class ResourceSpawnPredictor : MonoBehaviour
     [SerializeField] private int epochs = 1500;
 
     [Header("Training Data")]
-    [SerializeField] private string trainingDataJsonPath = "Assets/Script/Environment/ingridient.json";
     [SerializeField] private List<TrainingData> trainingDataSet = new List<TrainingData>();
 
     [Header("Balance Factors")]
@@ -75,35 +74,40 @@ public class ResourceSpawnPredictor : MonoBehaviour
     {
         trainingDataSet.Clear();
 
-        if (!File.Exists(trainingDataJsonPath))
+        TextAsset jsonAsset = Resources.Load<TextAsset>("env");
+
+        if (jsonAsset == null)
         {
-            Debug.LogWarning($"Training data file not found: {trainingDataJsonPath}");
+            Debug.LogError("env.json not found in Resources!");
             CreateSampleTrainingData();
+            TrainModel(); // ⚠️ BẮT BUỘC
             return;
         }
 
         try
         {
-            string json = File.ReadAllText(trainingDataJsonPath);
-            var wrapper = JsonConvert.DeserializeObject<TrainingDataWrapper>(json);
+            var wrapper = JsonConvert.DeserializeObject<TrainingDataWrapper>(jsonAsset.text);
 
-            if (wrapper?.trainingData != null)
+            if (wrapper?.trainingData != null && wrapper.trainingData.Count > 0)
             {
                 trainingDataSet.AddRange(wrapper.trainingData);
-                //Debug.Log($"Successfully loaded {trainingDataSet.Count} training samples from JSON.");
+                TrainModel(); // ⚠️ BẮT BUỘC
             }
             else
             {
-                Debug.LogWarning("Invalid JSON format. Creating sample data.");
+                Debug.LogWarning("Invalid training data");
                 CreateSampleTrainingData();
+                TrainModel();
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error loading training data: {e.Message}");
+            Debug.LogError(e);
             CreateSampleTrainingData();
+            TrainModel();
         }
     }
+
 
     private void CreateSampleTrainingData()
     {
@@ -126,6 +130,8 @@ public class ResourceSpawnPredictor : MonoBehaviour
             new ResourceData(200, 160, 110, 70, 120),
             new ResourceData(40, 35, 20, 15, 25),
             new ResourceData(45, 40, 25, 18, 30)));
+
+        TrainModel(); // 🔥 BẮT BUỘC
     }
 
     public void TrainModel()
@@ -307,22 +313,6 @@ public class ResourceSpawnPredictor : MonoBehaviour
         ResourceData prediction = PredictNextLevelSpawn(testLevel, remaining, consumed);
         resourceDataDE = new ResourceDataDE((int)prediction.wood, (int)prediction.stone, (int)prediction.iron, (int)prediction.gold, (int)prediction.meat);
         return resourceDataDE;
-    }
-
-    [ContextMenu("Save Sample Training Data")]
-    public void SaveSampleTrainingData()
-    {
-        CreateSampleTrainingData();
-
-        TrainingDataWrapper wrapper = new TrainingDataWrapper()
-        {
-            trainingData = trainingDataSet
-        };
-
-        string json = JsonConvert.SerializeObject(wrapper, Formatting.Indented);
-        File.WriteAllText(trainingDataJsonPath, json);
-
-        //Debug.Log($"Sample training data saved to {trainingDataJsonPath}");
     }
 
     // Thêm phương thức này vào class ResourceSpawnPredictor

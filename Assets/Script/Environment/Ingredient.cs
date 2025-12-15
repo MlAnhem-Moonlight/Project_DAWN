@@ -73,7 +73,7 @@ public class Ingredient : MonoBehaviour
 
     public static void LoadEnvironmentData()
     {
-        string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        string filePath = Path.Combine(Application.dataPath, "Resources/env.json");
         if (File.Exists(filePath))
         {
             try
@@ -180,7 +180,7 @@ public class Ingredient : MonoBehaviour
     // Method để save GA results vào file
     public static void SaveGAResult(Dictionary<string, int> result)
     {
-        string filePath = Path.Combine(Application.dataPath, "Script/Environment/env.json");
+        string filePath = Path.Combine(Application.dataPath, "Resources/env.json");
 
         try
         {

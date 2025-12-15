@@ -76,8 +76,18 @@ MonoBehaviour:
     quantity: 0
   - type: meat
     quantity: 0
-  currentLevel: 0
+  currentLevel: -1
+  mode: 0
   saveIndex: 0
+  playerStats: {fileID: 0}
+  allyManager: {fileID: 0}
+  buildingContainer: {fileID: 0}
+  woodText: {fileID: 0}
+  stoneText: {fileID: 0}
+  ironText: {fileID: 0}
+  goldText: {fileID: 0}
+  meatText: {fileID: 0}
+  saveFeedbackText: {fileID: 0}
 --- !u!114 &5298066143546370134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +107,7 @@ MonoBehaviour:
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
   yOffset: -1.8583
+  destroyOldObjects: 0
 --- !u!114 &4786980259887309386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +127,7 @@ MonoBehaviour:
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
   yOffset: -1.983
+  destroyOldObjects: 0
 --- !u!114 &4449887098484519372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +147,7 @@ MonoBehaviour:
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
   yOffset: -2.0493
+  destroyOldObjects: 0
 --- !u!114 &1501330005798410616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +167,7 @@ MonoBehaviour:
   areaStart: {fileID: 0}
   areaEnd: {fileID: 0}
   yOffset: -1.93
+  destroyOldObjects: 0
 --- !u!114 &7782305108022120653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +190,7 @@ MonoBehaviour:
       possibleColors: {r: 1, g: 1, b: 1, a: 1}
     - sortingLayerName: back
       baseOrderInLayer: 3
-      possibleColors: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+      possibleColors: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 1}
     initialSize: 50
     expandable: 1
   - poolName: Rock
@@ -187,7 +201,7 @@ MonoBehaviour:
       possibleColors: {r: 1, g: 1, b: 1, a: 1}
     - sortingLayerName: back
       baseOrderInLayer: 3
-      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
+      possibleColors: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
     initialSize: 50
     expandable: 1
   - poolName: Ore
@@ -198,7 +212,7 @@ MonoBehaviour:
       possibleColors: {r: 1, g: 1, b: 1, a: 1}
     - sortingLayerName: back
       baseOrderInLayer: 3
-      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
+      possibleColors: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 1}
     initialSize: 50
     expandable: 1
   - poolName: Bush
@@ -209,7 +223,7 @@ MonoBehaviour:
       possibleColors: {r: 1, g: 1, b: 1, a: 1}
     - sortingLayerName: back
       baseOrderInLayer: 1
-      possibleColors: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
+      possibleColors: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 1}
     initialSize: 50
     expandable: 1
 --- !u!114 &6127381556460186418
@@ -227,7 +241,7 @@ MonoBehaviour:
   autoLoadAndTrain: 1
   learningRate: 0.001
   epochs: 1500
-  trainingDataJsonPath: Assets/Script/Environment/ingridient.json
+  trainingDataJsonPath: Assets/Resources/ingridient.json
   trainingDataSet: []
   woodFactor: 1
   stoneFactor: 1
@@ -254,7 +268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216859575004034585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8be422682ba46bf4cb7b2785c3107e31, type: 3}
   m_Name: 
@@ -296,11 +310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableResources:
-    wood: 0
-    stone: 0
-    iron: 0
-    gold: 0
-    meat: 0
+    wood: 300
+    stone: 250
+    iron: 100
+    gold: 180
+    meat: 350
   usePriorityAllocation: 1
   meatPriority: 1
   goldPriority: 2
@@ -328,17 +342,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216859575004034585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 125aae8d92c0329479a29b26b28ebc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   availableResources:
-    wood: 0
-    stone: 0
-    iron: 0
-    gold: 0
-    meat: 0
+    wood: 300
+    stone: 250
+    iron: 100
+    gold: 180
+    meat: 350
   populationSize: 50
   generations: 100
   mutationFactor: 0.8

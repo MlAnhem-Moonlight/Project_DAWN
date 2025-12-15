@@ -33,6 +33,10 @@ public class BuildConstruction : MonoBehaviour
     private IngridientManager ingredientManager;
     private bool isPlayerInRange = false;
 
+    [Header("Construction Manager")]
+    public Transform constructionManager;
+
+
     void Start()
     {
         LoadBuildingResource();
@@ -45,6 +49,8 @@ public class BuildConstruction : MonoBehaviour
 
     void Update()
     {
+
+
         if (!isBuilt)
         {
             // 🟩 Kiểm tra UI "có thể xây" khi chưa xây
@@ -94,7 +100,7 @@ public class BuildConstruction : MonoBehaviour
             if (!isBuilt && buildingActionUI != null)
             {
                 UpdateUIPosition();
-                buildingActionUI.SetActive(true);
+                buildingActionUI.SetActive(buildAvailableUI.activeSelf);
             }
         }
     }
@@ -141,6 +147,14 @@ public class BuildConstruction : MonoBehaviour
     {
         if (ingredientManager == null || buildAvailableUI == null) return;
 
+        // ❌ Chưa có Fortress thì khóa
+        if (!CanBuildByFortressRule())
+        {
+            buildAvailableUI.SetActive(false);
+            
+            return;
+        }
+
         bool canBuild =
             ingredientManager.GetIngredientAmount("wood") >= T1_Total.wood &&
             ingredientManager.GetIngredientAmount("stone") >= T1_Total.stone &&
@@ -150,6 +164,7 @@ public class BuildConstruction : MonoBehaviour
 
         buildAvailableUI.SetActive(canBuild);
     }
+
 
     // 🟩 Cập nhật vị trí UI
     void UpdateUIPosition()
@@ -168,6 +183,12 @@ public class BuildConstruction : MonoBehaviour
     // 🟩 Xây công trình
     void TryBuild()
     {
+        if (!CanBuildByFortressRule())
+        {
+            Debug.Log("Cần xây Fortress trước!");
+            return;
+        }
+
         bool success =
             ingredientManager.RemoveIngredient("wood", T1_Total.wood) &&
             ingredientManager.RemoveIngredient("stone", T1_Total.stone) &&
@@ -196,4 +217,33 @@ public class BuildConstruction : MonoBehaviour
         else
             Debug.Log("Không đủ tài nguyên!");
     }
+
+    bool IsFortressBuilt()
+    {
+        if (constructionManager == null) return false;
+
+        foreach (Transform child in constructionManager)
+        {
+            BuildConstruction bc = child.GetComponent<BuildConstruction>();
+            if (bc != null && bc.buildingType == BuildingType.Fortress && bc.isBuilt)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    bool CanBuildByFortressRule()
+    {
+        // Watchtown luôn được phép xây
+        if (buildingType == BuildingType.Watchtown)
+            return true;
+
+        // Fortress tự nó không cần điều kiện
+        if (buildingType == BuildingType.Fortress)
+            return true;
+
+        // Các công trình khác cần Fortress đã xây
+        return IsFortressBuilt();
+    }
+
 }
