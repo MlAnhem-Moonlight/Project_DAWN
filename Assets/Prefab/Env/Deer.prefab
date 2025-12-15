@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5635500907514796156}
   - component: {fileID: 690695777712581578}
   - component: {fileID: 3960917643381774571}
+  - component: {fileID: 5113410069120906731}
   m_Layer: 9
   m_Name: Deer
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 184057859
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 5427361251250927084, guid: 49ca8a4bdc4a1d8419722558efc5aa40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,8 +219,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectId: Deer
+  harvestTime: 0
+  environmentJsonAsset: {fileID: 0}
   ingredients:
   - type: 4
     quantity: 1
   - type: 2
     quantity: 1
+--- !u!114 &5113410069120906731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823285585516278095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffea5b534a00a4d449c0239b0ca0fcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
+  baseStats: {fileID: 0}
+  currentHP: 30
+  currentDMG: 0
+  currentSPD: 0
+  currentSkillCD: 0
+  currentShield: 0
+  currentAtkSpd: 0
+  currentSkillDmg: 0
+  currentSkillDuration: 0
+  currentAtkRange: 0
+  portrait: {fileID: 0}

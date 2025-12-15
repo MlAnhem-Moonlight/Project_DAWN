@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -8,6 +7,10 @@ public class Ingredient : MonoBehaviour
 {
     public string objectId; // set trong Inspector
     public float harvestTime;
+
+    [SerializeField]
+    private TextAsset environmentJsonAsset; // Gán file env.json ở Inspector
+
     [Serializable]
     public struct IngredientEntry
     {
@@ -44,6 +47,7 @@ public class Ingredient : MonoBehaviour
 
     public IngredientEntry[] ingredients;
     private static EnvironmentData environmentData;
+    private static TextAsset cachedAsset;
 
     void Start()
     {
@@ -54,7 +58,7 @@ public class Ingredient : MonoBehaviour
     {
         if (environmentData == null)
         {
-            LoadEnvironmentData();
+            LoadEnvironmentData(environmentJsonAsset);
         }
 
         if (environmentData != null && environmentData.objects != null)
@@ -71,51 +75,62 @@ public class Ingredient : MonoBehaviour
         }
     }
 
-    public static void LoadEnvironmentData()
+    public static void LoadEnvironmentData(TextAsset jsonAsset = null)
     {
-        string filePath = Path.Combine(Application.dataPath, "Resources/env.json");
-        if (File.Exists(filePath))
+        if (jsonAsset == null)
         {
-            try
+            if (cachedAsset == null)
             {
-                string jsonText = File.ReadAllText(filePath);
-
-                // Parse chỉ phần "objects"
-                int objectsStart = jsonText.IndexOf("\"objects\":");
-                if (objectsStart >= 0)
-                {
-                    int arrayStart = jsonText.IndexOf('[', objectsStart);
-                    int arrayEnd = FindMatchingBracket(jsonText, arrayStart);
-
-                    if (arrayStart >= 0 && arrayEnd >= 0)
-                    {
-                        string objectsArray = jsonText.Substring(arrayStart, arrayEnd - arrayStart + 1);
-                        string wrappedJson = "{\"objects\":" + objectsArray + "}";
-
-                        IngredientList data = JsonUtility.FromJson<IngredientList>(wrappedJson);
-                        environmentData = new EnvironmentData();
-                        environmentData.objects = data.objects;
-
-                        //Debug.Log($"Đã load thành công {data.objects.Length} objects từ env.json");
-                    }
-                    else
-                    {
-                        Debug.LogError("Không thể tìm thấy mảng 'objects' hợp lệ trong env.json");
-                    }
-                }
-                else
-                {
-                    Debug.LogError("Không tìm thấy key 'objects' trong env.json");
-                }
+                cachedAsset = Resources.Load<TextAsset>("env");
             }
-            catch (Exception e)
-            {
-                Debug.LogError($"Lỗi khi đọc env.json: {e.Message}");
-            }
+            jsonAsset = cachedAsset;
         }
         else
         {
-            Debug.LogError($"Không tìm thấy file env.json tại: {filePath}");
+            cachedAsset = jsonAsset;
+        }
+
+        if (jsonAsset == null)
+        {
+            Debug.LogError("❌ Không tìm thấy TextAsset 'env.json' trong Resources folder!");
+            return;
+        }
+
+        try
+        {
+            string jsonText = jsonAsset.text;
+
+            // Parse chỉ phần "objects"
+            int objectsStart = jsonText.IndexOf("\"objects\":");
+            if (objectsStart >= 0)
+            {
+                int arrayStart = jsonText.IndexOf('[', objectsStart);
+                int arrayEnd = FindMatchingBracket(jsonText, arrayStart);
+
+                if (arrayStart >= 0 && arrayEnd >= 0)
+                {
+                    string objectsArray = jsonText.Substring(arrayStart, arrayEnd - arrayStart + 1);
+                    string wrappedJson = "{\"objects\":" + objectsArray + "}";
+
+                    IngredientList data = JsonUtility.FromJson<IngredientList>(wrappedJson);
+                    environmentData = new EnvironmentData();
+                    environmentData.objects = data.objects;
+
+                    Debug.Log($"✅ Đã load thành công {data.objects.Length} objects từ env.json (TextAsset)");
+                }
+                else
+                {
+                    Debug.LogError("❌ Không thể tìm thấy mảng 'objects' hợp lệ trong env.json");
+                }
+            }
+            else
+            {
+                Debug.LogError("❌ Không tìm thấy key 'objects' trong env.json");
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"❌ Lỗi khi đọc env.json: {e.Message}");
         }
     }
 
@@ -173,61 +188,21 @@ public class Ingredient : MonoBehaviour
         return environmentData;
     }
 
-
     // Add event for GA result saved notification
     public static event System.Action onGAResultSaved;
 
-    // Method để save GA results vào file
+    // Ví dụ ghi vào file riêng biệt
     public static void SaveGAResult(Dictionary<string, int> result)
     {
-        string filePath = Path.Combine(Application.dataPath, "Resources/env.json");
-
-        try
-        {
-            string jsonText = File.ReadAllText(filePath);
-
-            int gaResultStart = jsonText.IndexOf("\"GA_Result\":");
-            if (gaResultStart >= 0)
-            {
-                int arrayStart = jsonText.IndexOf('[', gaResultStart);
-                int arrayEnd = FindMatchingBracket(jsonText, arrayStart);
-
-                if (arrayStart >= 0 && arrayEnd >= 0)
-                {
-                    string newGAResult = "[\n    {\n";
-                    bool first = true;
-                    foreach (var kvp in result)
-                    {
-                        if (!first) newGAResult += ",\n";
-                        newGAResult += $"      \"{kvp.Key}\": {kvp.Value}";
-                        first = false;
-                    }
-                    newGAResult += "\n    }\n  ]";
-
-                    string newJsonText = jsonText.Substring(0, arrayStart) + newGAResult + jsonText.Substring(arrayEnd + 1);
-
-                    // 🔒 Ghi với flush đảm bảo
-                    using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-                    using (var sw = new StreamWriter(fs))
-                    {
-                        sw.Write(newJsonText);
-                        sw.Flush();
-                        fs.Flush(true); // ép xuống ổ đĩa
-                    }
-
-                    //Debug.Log("Đã lưu kết quả GA vào env.json");
-                    onGAResultSaved?.Invoke();
-                }
-            }
-            else
-            {
-                Debug.LogWarning("Không tìm thấy 'GA_Result' trong file json");
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"Lỗi khi lưu GA result: {e.Message}");
-        }
+        string path = Path.Combine(Application.persistentDataPath, "GA_Result.json");
+        string json = JsonUtility.ToJson(new GAResultWrapper { data = result }, true);
+        File.WriteAllText(path, json);
+        onGAResultSaved?.Invoke();
     }
 
+    [Serializable]
+    private class GAResultWrapper
+    {
+        public Dictionary<string, int> data;
+    }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3593860505510978761}
   - component: {fileID: 7164877772841182141}
   - component: {fileID: 1479899490336145495}
+  - component: {fileID: 3911837430159795845}
   m_Layer: 10
   m_Name: Wolf
   m_TagString: Enemy
@@ -34,7 +35,8 @@ Transform:
   m_LocalPosition: {x: 100.81, y: -1.9, z: 0}
   m_LocalScale: {x: 2.6569192, y: 2.6225998, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4760390690154623222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4565542439878735736
@@ -79,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 184057859
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 785123538052453996, guid: d6bd4b218b5d26d4eb7f76266bbf1d5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -219,8 +221,137 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectId: Wolf
+  harvestTime: 0
+  environmentJsonAsset: {fileID: 0}
   ingredients:
   - type: 4
     quantity: 1
   - type: 2
     quantity: 1
+--- !u!114 &3911837430159795845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230696821796250990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffea5b534a00a4d449c0239b0ca0fcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  maxLevel: 8
+  baseStats: {fileID: 0}
+  currentHP: 25
+  currentDMG: 0
+  currentSPD: 0
+  currentSkillCD: 0
+  currentShield: 0
+  currentAtkSpd: 0
+  currentSkillDmg: 0
+  currentSkillDuration: 0
+  currentAtkRange: 0
+  portrait: {fileID: 0}
+--- !u!1 &8770042823418364635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4760390690154623222}
+  - component: {fileID: 6111792610627418877}
+  - component: {fileID: 253292099797993493}
+  m_Layer: 10
+  m_Name: AtkBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4760390690154623222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770042823418364635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.525, y: 0.379, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3347587473105108146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6111792610627418877
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770042823418364635}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.11183664, y: -0.034483194}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6596254, y: 0.6847248}
+  m_EdgeRadius: 0
+--- !u!114 &253292099797993493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770042823418364635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc654db0cce294998fc23ca92c24c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 5
+  damageAmount: 5
+  skillDamageAmount: 10
+  _atkSpd: 1
+  _rageDuration: 5
+  attackerAnimator: {fileID: 0}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  usingSkill: 0
+  skill3TickInterval: 0.5

@@ -169,6 +169,7 @@
     <Compile Include="Assets\Script\Environment\Deer\DeerBehavior.cs" />
     <Compile Include="Assets\Script\MainCharacterScript\Movement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
     <Compile Include="Assets\Script\Environment\Interact\PickingUp.cs" />
     <Compile Include="Assets\Script\Environment\Interact\SpawnM.cs" />
     <Compile Include="Assets\Script\Enemy\Stats.cs" />

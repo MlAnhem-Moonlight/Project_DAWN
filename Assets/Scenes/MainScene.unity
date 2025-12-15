@@ -99352,6 +99352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagement
       objectReference: {fileID: 0}
+    - target: {fileID: 1216859575004034585, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1501330005798410616, guid: 0fc1d962e5a5cdb419fdf200d0a5a9b5, type: 3}
       propertyPath: PObject
       value: 
