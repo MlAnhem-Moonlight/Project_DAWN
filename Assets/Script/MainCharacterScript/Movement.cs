@@ -12,19 +12,28 @@ public class Movement : MonoBehaviour
     private float currentSpeed = 0f;
     private Vector3 movement;
     private float previousDirection = 0f;
-    private float lastNonZeroDirection = 1f; // Lưu hướng cuối cùng (mặc định phải)
+    private float lastNonZeroDirection = 1f;
     private AnimationController _controller;
+
+    [Header("Shoot Settings")]
+    public GameObject arrowPrefab;
+    public Transform firePoint;
+
+    public bool isShooting = false;
+    Camera mainCam;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
         _controller = GetComponent<AnimationController>();
+        mainCam = Camera.main;
     }
 
     void Update()
     {
         PlayerMovement();
         AttackCommand();
+        if(Input.GetKeyDown(KeyCode.Q)) isShooting = !isShooting;
     }
 
     public void setState(AnimatorState State)
@@ -36,13 +45,11 @@ public class Movement : MonoBehaviour
     {
         movement.x = Input.GetAxis("Horizontal");
 
-        // Cập nhật hướng khi có input
         if (movement.x != 0)
         {
             lastNonZeroDirection = Mathf.Sign(movement.x);
         }
 
-        // Giảm tốc độ khi đổi hướng
         if (movement.x < 0 && previousDirection >= 0 || movement.x > 0 && previousDirection <= 0)
         {
             currentSpeed = currentSpeed / 2f;
@@ -85,7 +92,29 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && (playerState != AnimatorState.Attack && playerState != AnimatorState.UsingSkill))
         {
-            CheckMovement(lastNonZeroDirection, "Attack 1", "Attack", 0f);
+            if (isShooting == false)
+            {
+                CheckMovement(lastNonZeroDirection, "Attack 1", "Attack", 0f);
+            }
+            else
+            {
+                SpawnArrow();
+            }
+        }
+    }
+
+    void SpawnArrow()
+    {
+        GameObject arrow = Instantiate(
+            arrowPrefab,
+            firePoint.position,
+            Quaternion.identity
+        );
+
+        ArrowDamage arrowScript = arrow.GetComponent<ArrowDamage>();
+        if (arrowScript != null)
+        {
+            arrowScript.Initialize(firePoint.position, mainCam);
         }
     }
 

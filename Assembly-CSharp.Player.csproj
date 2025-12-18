@@ -109,6 +109,7 @@
     <Compile Include="Assets\Script\UI\AllyCard.cs" />
     <Compile Include="Assets\Script\Mics\Camera\Parallax\ParallaxCamera.cs.cs" />
     <Compile Include="Assets\Script\Mics\DestroyObject.cs" />
+    <Compile Include="Assets\Script\Enemy\ArrowDamage.cs" />
     <Compile Include="Assets\Script\Enemy\TheAllah\Collision2D.cs" />
     <Compile Include="Assets\Script\Enemy\CharacterStatsSO.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />

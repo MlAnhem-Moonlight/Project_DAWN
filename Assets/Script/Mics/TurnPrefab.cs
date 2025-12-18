@@ -20,6 +20,8 @@ public class TurnPrefab : MonoBehaviour
 
     private void OnEnable()
     {
+        if(owner == null)
+            return;
         duration = owner.GetComponent<Stats>().currentSkillDuration;
         if (isMage) SetupAnimatorDuration(animator, duration, clipName);
     }

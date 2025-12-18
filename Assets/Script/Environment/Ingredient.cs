@@ -49,6 +49,8 @@ public class Ingredient : MonoBehaviour
     private static EnvironmentData environmentData;
     private static TextAsset cachedAsset;
 
+
+
     void Start()
     {
         environmentJsonAsset = environmentJsonAsset ?? Resources.Load<TextAsset>("env");

@@ -7,14 +7,25 @@ using System.Linq;
 public class SerializableQTable
 {
     public List<string> keys = new List<string>();
-    public List<float[]> values = new List<float[]>();
+    public List<FloatArrayWrapper> values = new List<FloatArrayWrapper>(); // ✅ Wrapper để serialize array
+
+    [System.Serializable]
+    public class FloatArrayWrapper
+    {
+        public float[] data = new float[0];
+
+        public FloatArrayWrapper() { }
+        public FloatArrayWrapper(float[] arr) => data = arr;
+    }
+
+    public SerializableQTable() { } // ✅ Constructor mặc định cho deserialization
 
     public SerializableQTable(Dictionary<string, float[]> qTable)
     {
         foreach (var kvp in qTable)
         {
             keys.Add(kvp.Key);
-            values.Add(kvp.Value);
+            values.Add(new FloatArrayWrapper(kvp.Value));
         }
     }
 
@@ -22,7 +33,10 @@ public class SerializableQTable
     {
         Dictionary<string, float[]> dict = new Dictionary<string, float[]>();
         for (int i = 0; i < keys.Count; i++)
-            dict[keys[i]] = values[i];
+        {
+            if (values[i]?.data != null)
+                dict[keys[i]] = values[i].data;
+        }
         return dict;
     }
 }
@@ -341,11 +355,28 @@ public class QLearningEnemyBalancer : MonoBehaviour
                 return;
             }
 
+            // ✅ Thêm validation chi tiết trước deserialize
+            if (!json.Contains("\"keys\"") || !json.Contains("\"values\""))
+            {
+                Debug.LogError("❌ JSON missing required fields (keys/values). Resetting.");
+                qTable = new Dictionary<string, float[]>();
+                File.Delete(SavePath);
+                return;
+            }
+
             SerializableQTable s = JsonUtility.FromJson<SerializableQTable>(json);
 
-            if (s == null || s.keys == null || s.values == null)
+            if (s == null)
             {
-                Debug.LogError("❌ Failed to deserialize. Resetting.");
+                Debug.LogError("❌ Failed to deserialize (returned null). File format may be corrupted. Resetting.");
+                qTable = new Dictionary<string, float[]>();
+                File.Delete(SavePath);
+                return;
+            }
+
+            if (s.keys == null || s.values == null)
+            {
+                Debug.LogError("❌ Deserialized object has null collections. Resetting.");
                 qTable = new Dictionary<string, float[]>();
                 File.Delete(SavePath);
                 return;
@@ -353,20 +384,31 @@ public class QLearningEnemyBalancer : MonoBehaviour
 
             if (s.keys.Count != s.values.Count)
             {
-                Debug.LogError($"❌ Corrupted: keys={s.keys.Count}, values={s.values.Count}. Resetting.");
+                Debug.LogError($"❌ Mismatch: keys={s.keys.Count}, values={s.values.Count}. Resetting.");
                 qTable = new Dictionary<string, float[]>();
                 File.Delete(SavePath);
                 return;
             }
 
+            // ✅ Validate từng entry
             for (int i = 0; i < s.values.Count; i++)
             {
-                if (s.values[i] == null || s.values[i].Length != actionCount)
+                if (s.values[i] == null || s.values[i].data == null)
                 {
-                    Debug.LogError($"❌ Entry {i} ({s.keys[i]}) invalid. Resetting.");
+                    Debug.LogError($"❌ Entry {i} ({s.keys[i]}) has null data wrapper. Resetting.");
                     qTable = new Dictionary<string, float[]>();
                     File.Delete(SavePath);
                     return;
+                }
+
+                if (s.values[i].data.Length != actionCount)
+                {
+                    Debug.LogWarning($"⚠️ Entry {i} ({s.keys[i]}) has mismatched array size: {s.values[i].data.Length} (expected {actionCount}). Skipping entry.");
+                    // Nếu muốn reset toàn bộ:
+                    // qTable = new Dictionary<string, float[]>();
+                    // File.Delete(SavePath);
+                    // return;
+                    continue; // ✅ Skip entry thay vì reset toàn bộ
                 }
             }
 
@@ -469,6 +511,23 @@ public class QLearningEnemyBalancer : MonoBehaviour
         else
         {
             Debug.LogError($"❌ Q-Table has {invalidCount} invalid entries!");
+        }
+    }
+
+    [ContextMenu("Delete Q-Table File")]
+    public void DeleteQTableFile()
+    {
+        try
+        {
+            if (File.Exists(SavePath))
+            {
+                File.Delete(SavePath);
+                Debug.Log($"🗑️ Deleted Q-Table: {SavePath}");
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"❌ Failed to delete: {ex.Message}");
         }
     }
 

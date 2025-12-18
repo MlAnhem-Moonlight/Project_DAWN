@@ -18,6 +18,8 @@ public class StraightProjectile : MonoBehaviour
     private bool hasHit = false;
     private Vector2 moveDir;
 
+    public string layerEnemy;
+
     private void OnEnable()
     {
         dmg = GetComponentInParent<Stats>()?.currentDMG ?? dmg;
@@ -71,7 +73,7 @@ public class StraightProjectile : MonoBehaviour
         if (target == null)
         {
             // Kiểm tra layer bằng tên
-            if (other.gameObject.layer == LayerMask.NameToLayer("Human") ||
+            if (other.gameObject.layer == LayerMask.NameToLayer(layerEnemy) ||
                 other.gameObject.layer == LayerMask.NameToLayer("Construction"))
             {
                 if (fireAnimator != null) fireAnimator.SetTrigger("Hit");

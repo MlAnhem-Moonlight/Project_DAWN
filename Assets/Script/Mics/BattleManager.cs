@@ -52,6 +52,9 @@ public class BattleManager : MonoBehaviour
     [Tooltip("Khoảng thời gian chấp nhận được")]
     public float durationTolerance = 10f;
 
+    [Header("Turn On Switch State")]
+    public GameObject panel;
+
     [System.Serializable]
     private class WaveData
     {
@@ -301,6 +304,7 @@ public class BattleManager : MonoBehaviour
         {
             gameController.GameStateController();
         }
+        // gọi method chuyển state
     }
 
     float CalculateBalancedReward(bool allyWon, float waveDuration)

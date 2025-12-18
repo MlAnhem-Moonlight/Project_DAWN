@@ -38,26 +38,29 @@ public class GameController : MonoBehaviour
         //(chuyển sang combat khi tương tác với Hall (trời sáng), chuyển về collection khi hết quái (trời tối))
         StartCoroutine(wait(1.5f));
 
-        if(isFightState)
+        if (isFightState)
         {
+            trasition.SetActive(true);
+            trasition.GetComponent<Animator>().SetInteger("SwitchState", 0); // layer 0
+            StartCoroutine(wait(1f));
             //Chuyển sang trạng thái combat
             BattleManager battleManager = FindAnyObjectByType<BattleManager>();
             battleManager.StartCombatSession();
             SwitchAllyState();
             day.SetActive(false);
             night.SetActive(true);
-            trasition.SetActive(true);
-            trasition.GetComponent<Animation>().Play("SwitchState");
-            Time.timeScale = 0f;
+
+
         }
         else
         {
             //Chuyển về trạng thái collection
             trasition.SetActive(true);
-            trasition.GetComponent<Animation>().Play("SwitchState2");
+            trasition.SetActive(true);
+            trasition.GetComponent<Animator>().SetInteger("SwitchState", 1); // layer 0
             day.SetActive(true);
             night.SetActive(false);
-            Time.timeScale = 0f;
+
         }
     }
 
