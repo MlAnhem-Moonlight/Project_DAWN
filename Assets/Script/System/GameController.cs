@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public GameObject night, day;
     public GameObject allyContainer;
     public GameObject player;
+    public GameObject trasition;
 
     public GameObject losePanel;
 
@@ -15,6 +16,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+
     }
 
     // Update is called once per frame
@@ -43,12 +46,18 @@ public class GameController : MonoBehaviour
             SwitchAllyState();
             day.SetActive(false);
             night.SetActive(true);
+            trasition.SetActive(true);
+            trasition.GetComponent<Animation>().Play("SwitchState");
+            Time.timeScale = 0f;
         }
         else
         {
             //Chuyển về trạng thái collection
+            trasition.SetActive(true);
+            trasition.GetComponent<Animation>().Play("SwitchState2");
             day.SetActive(true);
             night.SetActive(false);
+            Time.timeScale = 0f;
         }
     }
 

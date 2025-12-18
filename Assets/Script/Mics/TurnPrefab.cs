@@ -115,6 +115,11 @@ public class TurnPrefab : MonoBehaviour
         //          $"AttackSpeedMul={attackSpeedMultiplier:F2}");
     }
 
+    public void ContinueTimeScale()
+    {
+        Time.timeScale = 1f;
+    }   
+
 
 
 

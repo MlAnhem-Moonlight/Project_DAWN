@@ -51,6 +51,7 @@ public class Ingredient : MonoBehaviour
 
     void Start()
     {
+        environmentJsonAsset = environmentJsonAsset ?? Resources.Load<TextAsset>("env");
         LoadFromJSON();
     }
 

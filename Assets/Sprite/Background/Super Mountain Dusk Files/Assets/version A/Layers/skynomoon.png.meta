@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d716ac5fce31960419fa915b6cfaac60
+guid: 634ad91d223c412429d00a6b8b14e632
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3202367026525795938
-    second: far-mountains_0
+      213: -8154069587578686414
+    second: skynomoon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: far-mountains_0
+      name: skynomoon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 320
-        height: 160
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e99818ff728ee83d0800000000000000
-      internalID: -3202367026525795938
+      spriteID: 2347e8689ece6de80800000000000000
+      internalID: -8154069587578686414
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      far-mountains_0: -3202367026525795938
+      skynomoon_0: -8154069587578686414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d716ac5fce31960419fa915b6cfaac60
+guid: 2f9dc4c1fdab7c24191a5125f3bc0c5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3202367026525795938
-    second: far-mountains_0
+      213: 167901717341673732
+    second: ezgif-frame-005_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: far-mountains_0
+      name: ezgif-frame-005_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 160
+        width: 640
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e99818ff728ee83d0800000000000000
-      internalID: -3202367026525795938
+      spriteID: 409145be8b1845200800000000000000
+      internalID: 167901717341673732
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      far-mountains_0: -3202367026525795938
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
