@@ -169,7 +169,7 @@ public class WolfMovement : Nodes
 
             if (Vector3.Distance(_transform.position, targetPosition) < 1f && _animator.GetFloat("State") != _atk)
             {
-                Debug.Log("Attacking target: " + _target);
+                //Debug.Log("Attacking target: " + _target);
                 _animator.SetFloat("State", _atk); // Set attack animation state
             }
             else if (Vector3.Distance(_transform.position, targetPosition) > 8f)

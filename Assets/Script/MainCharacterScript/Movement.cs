@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Unity.Cinemachine;
 
 public class Movement : MonoBehaviour
 {
@@ -18,15 +19,25 @@ public class Movement : MonoBehaviour
     [Header("Shoot Settings")]
     public GameObject arrowPrefab;
     public Transform firePoint;
-
+    public float shootCooldown = 0.5f;
+    
     public bool isShooting = false;
-    Camera mainCam;
+    private Camera mainCam;
+    private CinemachineCamera cinemachineCamera;  // ✅ Thêm Cinemachine reference
+
+    private float lastShootTime = -Mathf.Infinity;
+    private Vector3 lastMouseWorldPos = Vector3.zero;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
         _controller = GetComponent<AnimationController>();
         mainCam = Camera.main;
+        
+        // ✅ Tìm Cinemachine Virtual Camera (nếu có)
+        cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
+        
+        Debug.Log(mainCam.name);
     }
 
     void Update()
@@ -98,25 +109,40 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                SpawnArrow();
+                // ✅ Kiểm tra cooldown trước khi bắn
+                if (Time.time >= lastShootTime + shootCooldown)
+                {
+                    SpawnArrow();
+                    lastShootTime = Time.time;
+                }
+                else
+                {
+                    Debug.LogWarning($"[Arrow] Cooldown chưa hết! Còn {shootCooldown - (Time.time - lastShootTime):F2}s");
+                }
             }
         }
     }
 
     void SpawnArrow()
     {
+        Vector3 mouseWorldPos = GetMouseWorldPos();
+        Vector2 dir = (mouseWorldPos - firePoint.position).normalized;
+
         GameObject arrow = Instantiate(
             arrowPrefab,
             firePoint.position,
             Quaternion.identity
         );
 
+        arrow.transform.right = dir; // 🔥 xoay mũi tên theo hướng bắn
+
         ArrowDamage arrowScript = arrow.GetComponent<ArrowDamage>();
         if (arrowScript != null)
         {
-            arrowScript.Initialize(firePoint.position, mainCam);
+            arrowScript.SetDirection(dir);
         }
     }
+
 
     private void CheckMovement(float dir, string leftAnim, string rightAnim, float crossFade = 0.1f)
     {
@@ -124,5 +150,68 @@ public class Movement : MonoBehaviour
             _controller.ChangeAnimation(animator, leftAnim, crossFade);
         else
             _controller.ChangeAnimation(animator, rightAnim, crossFade);
+    }
+
+    private Vector3 GetMouseWorldPos()
+    {
+        if (mainCam == null || firePoint == null)
+            return firePoint.position + Vector3.right * lastNonZeroDirection;
+
+        Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
+
+        // ✅ Plane XY (chuẩn cho 2D side-scroll)
+        Plane plane = new Plane(
+            Vector3.forward,        // pháp tuyến Z
+            firePoint.position      // đi qua firePoint
+        );
+
+        if (plane.Raycast(ray, out float enter))
+        {
+            Vector3 hit = ray.GetPoint(enter);
+            lastMouseWorldPos = hit;
+            return hit;
+        }
+
+        return firePoint.position + Vector3.right * lastNonZeroDirection;
+    }
+
+
+
+    private void OnDrawGizmos()
+    {
+        if (!Application.isPlaying) return;
+        if (!isShooting || firePoint == null) return;
+
+        Vector3 mouseWorldPos = GetMouseWorldPos();
+        Vector3 dir = (mouseWorldPos - firePoint.position).normalized;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(
+            firePoint.position,
+            firePoint.position + dir * 5f
+        );
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(firePoint.position, 0.1f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(mouseWorldPos, 0.1f);
+    }
+
+
+    // ✅ Helper method: Vẽ hình tròn bằng Gizmos
+    private void DrawCircleGizmo(Vector3 center, float radius, int segments = 16)
+    {
+        Vector3[] points = new Vector3[segments + 1];
+        for (int i = 0; i <= segments; i++)
+        {
+            float angle = i * 360f / segments * Mathf.Deg2Rad;
+            points[i] = center + new Vector3(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0);
+        }
+
+        for (int i = 0; i < segments; i++)
+        {
+            Gizmos.DrawLine(points[i], points[i + 1]);
+        }
     }
 }

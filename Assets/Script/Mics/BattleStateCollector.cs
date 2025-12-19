@@ -110,6 +110,7 @@ public class BattleStateCollector : MonoBehaviour
     /// </summary>
     public string GetSimpleState()
     {
+        Debug.Log("Get state");
         if (activeAllies.Count == 0)
             return $"Empty_L{playerLevel}";
 
