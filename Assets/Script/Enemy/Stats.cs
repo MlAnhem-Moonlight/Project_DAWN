@@ -134,7 +134,7 @@ public class Stats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} đã chết!");
+        //Debug.Log($"{gameObject.name} đã chết!");
         gameObject.SetActive(false);
         // ở đây bạn có thể gọi animation, destroy, event...
     }

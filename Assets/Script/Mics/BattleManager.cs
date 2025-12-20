@@ -7,7 +7,7 @@ public class BattleManager : MonoBehaviour
     [Header("References")]
     public BattleStateCollector stateCollector;
     public QLearningEnemyBalancer qLearning;
-    public EnemySpawner enemySpawner;
+    public EnemySpawner enemySpawner;  // ✅ Existing reference
 
     [Header("Spawn Configuration")]
     [Tooltip("Loại spawn: 1 = Single, 2 = Scaled Group, 3 = Mixed")]
@@ -15,10 +15,10 @@ public class BattleManager : MonoBehaviour
 
     [Header("Combat Session Configuration")]
     [Tooltip("Thời gian chiến đấu tối thiểu (giây)")]
-    public float minCombatDuration = 90f; // 1p30s
+    public float minCombatDuration = 90f;
 
     [Tooltip("Thời gian chiến đấu tối đa (giây)")]
-    public float maxCombatDuration = 180f; // 3p
+    public float maxCombatDuration = 180f;
 
     [Tooltip("Delay giữa các wave (giây)")]
     public float waveDelay = 2f;
@@ -134,7 +134,6 @@ public class BattleManager : MonoBehaviour
     {
         if (!combatSessionActive) return;
 
-        // Kiểm tra ally còn sống
         CountLivingUnits();
         if (aliveAllyCount == 0)
         {
@@ -146,10 +145,7 @@ public class BattleManager : MonoBehaviour
         currentWave++;
         currentWaveState = stateCollector.GetSimpleState();
 
-        // Q-Learning chọn difficulty (số lượng/composition)
         currentWaveDifficulty = qLearning.ChooseEnemySetup(currentWaveState);
-
-        // Lấy enemy level từ Q-Learning
         currentWaveEnemyLevel = qLearning.GetCurrentEnemyLevel();
 
         currentWaveStartTime = Time.time;
@@ -170,7 +166,6 @@ public class BattleManager : MonoBehaviour
     {
         enemiesSpawned = true;
 
-        // Spawn với level cụ thể
         enemySpawner.SpawnEnemy(spawnType, currentWaveDifficulty, currentWaveEnemyLevel);
 
         yield return new WaitForEndOfFrame();
@@ -204,7 +199,6 @@ public class BattleManager : MonoBehaviour
 
         float reward = CalculateBalancedReward(allyWon, waveDuration);
 
-        // Lưu wave data
         WaveData waveData = new WaveData
         {
             waveNumber = currentWave,
@@ -227,30 +221,24 @@ public class BattleManager : MonoBehaviour
                   $"  👥 Còn lại - Ally: {aliveAllyCount}, Enemy: {aliveEnemyCount}\n" +
                   $"  ⚡ Enemy Level: {currentWaveEnemyLevel}");
 
-        // Update Q-Learning
         string nextState = allyWon ? stateCollector.GetSimpleState() : "Defeated";
         qLearning.UpdateAfterBattle(nextState, reward, allyWon, waveDuration);
 
-        // Disable enemies
         if (!allyWon)
         {
             qLearning.DisableAllEnemies();
         }
 
-        // Reset wave flags
         battleStarted = false;
         enemiesSpawned = false;
         enemiesFullyActivated = false;
 
-        // ✅ Nếu ally thua hoặc tất cả ally đã chết, kết thúc session
         if (!allyWon || aliveAllyCount == 0)
         {
             EndCombatSession();
             return;
         }
 
-        // ✅ Kiểm tra thời gian NGAY SAU KHI WAVE KẾT THÚC
-        // Nếu đã đủ thời gian tối thiểu, kết thúc session
         if (totalCombatTime >= minCombatDuration)
         {
             Debug.Log($"✅ Đã đạt thời gian tối thiểu ({totalCombatTime:F1}s ≥ {minCombatDuration}s). Kết thúc Combat Session.");
@@ -258,7 +246,6 @@ public class BattleManager : MonoBehaviour
             return;
         }
 
-        // Nếu chưa đủ thời gian nhưng vượt quá tối đa
         if (totalCombatTime >= maxCombatDuration)
         {
             Debug.Log($"⏰ Đã vượt thời gian tối đa ({totalCombatTime:F1}s ≥ {maxCombatDuration}s). Kết thúc Combat Session.");
@@ -266,7 +253,6 @@ public class BattleManager : MonoBehaviour
             return;
         }
 
-        // ✅ Chưa đủ thời gian: Spawn wave tiếp
         Debug.Log($"⏳ Chưa đủ thời gian ({totalCombatTime:F1}s < {minCombatDuration}s). Tiếp tục wave tiếp theo...");
         StartCoroutine(PrepareNextWave());
     }
@@ -276,7 +262,6 @@ public class BattleManager : MonoBehaviour
         Debug.Log($"⏳ Chuẩn bị wave tiếp theo sau {waveDelay}s...");
         yield return new WaitForSeconds(waveDelay);
 
-        // Refresh ally state
         stateCollector.RefreshActiveAllies();
 
         StartNextWave();
@@ -291,7 +276,7 @@ public class BattleManager : MonoBehaviour
                   $"  ⏱️ Tổng thời gian combat: {totalCombatTime:F1}s\n" +
                   $"  👥 Ally còn lại: {aliveAllyCount}\n" +
                   $"  📈 Wave history:");
-
+        Debug.Log($"  Reward tổng: {CalculateTotalReward()}");
         foreach (var wave in waveHistory)
         {
             Debug.Log($"    Wave {wave.waveNumber}: Lv{wave.enemyLevel} | {wave.duration:F1}s | " +
@@ -300,12 +285,58 @@ public class BattleManager : MonoBehaviour
                      $"Difficulty: {wave.difficulty}");
         }
 
-        // Save Q-Table
+        // ✅ Lưu tài nguyên đã sử dụng
+        SaveDayResources();
+
         qLearning.SaveQTable();
         GameController gameController = FindAnyObjectByType<GameController>();
-        if (gameController != null)
+        ResourceAllocationCMAES CMAES = FindAnyObjectByType<ResourceAllocationCMAES>();
+        if (gameController != null && CMAES != null)
         {
             gameController.GameStateController();
+            CMAES.RunCMAES();
+        }
+    }
+
+    // ✅ Lưu tài nguyên đã sử dụng trong ngày
+    void SaveDayResources()
+    {
+        IngridientManager ingredientManager = FindAnyObjectByType<IngridientManager>();
+        ResourceSpawnPredictor predictor = FindAnyObjectByType<ResourceSpawnPredictor>();
+
+        if (ingredientManager == null || predictor == null) return;
+
+        // Lấy dữ liệu tài nguyên hiện tại
+        ResourceData remainingResources = ingredientManager.GetResourceData();
+        ResourceData consumedResources = ingredientManager.GetConsumedResourceData();
+
+        Debug.Log($"💾 === SAVING DAY RESOURCES ===\n" +
+                  $"  Remaining: Wood={remainingResources.wood}, Stone={remainingResources.stone}, " +
+                  $"Iron={remainingResources.iron}, Gold={remainingResources.gold}, Meat={remainingResources.meat}\n" +
+                  $"  Consumed: Wood={consumedResources.wood}, Stone={consumedResources.stone}, " +
+                  $"Iron={consumedResources.iron}, Gold={consumedResources.gold}, Meat={consumedResources.meat}");
+
+        // ✅ Cập nhật predictor với dữ liệu tài nguyên thực tế
+        predictor.UpdateTestData(remainingResources, consumedResources);
+
+        // ✅ Thêm vào training data (để predictor học từ ngày này)
+        int playerLevel = FindAnyObjectByType<BattleStateCollector>().playerLevel;
+        predictor.AddTrainingData(playerLevel, remainingResources, consumedResources, remainingResources);
+
+        // ✅ Retrain model để cải thiện dự đoán
+        predictor.RetrainModel();
+
+        Debug.Log("✅ Predictor updated with today's resource data");
+    }
+
+    // ✅ Reset consumed resources cho ngày mới
+    public void ResetDayResources()
+    {
+        IngridientManager ingredientManager = FindAnyObjectByType<IngridientManager>();
+        if (ingredientManager != null)
+        {
+            ingredientManager.ResetConsumedResources();
+            Debug.Log("🔄 Day resources reset for new day");
         }
     }
 
@@ -313,7 +344,6 @@ public class BattleManager : MonoBehaviour
     {
         float reward = 0f;
 
-        // 1️⃣ Đánh giá thời gian wave
         float durationDeviation = Mathf.Abs(waveDuration - idealWaveDuration);
 
         if (durationDeviation <= durationTolerance)
@@ -332,7 +362,6 @@ public class BattleManager : MonoBehaviour
             Debug.Log($"🐌 Wave quá dài ({waveDuration:F1}s) → -10");
         }
 
-        // 2️⃣ Đánh giá tình trạng chiến thắng
         if (allyWon)
         {
             if (aliveAllyCount <= 2 && waveDuration > 20f)
@@ -360,7 +389,6 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        // 3️⃣ Bonus cho trận đấu căng thẳng
         float finalHealthRatio = (float)aliveAllyCount / Mathf.Max(1, aliveAllyCount + aliveEnemyCount);
         if (finalHealthRatio > 0.3f && finalHealthRatio < 0.7f)
         {
@@ -368,7 +396,6 @@ public class BattleManager : MonoBehaviour
             Debug.Log($"🎭 Trận đấu căng thẳng (health ratio: {finalHealthRatio:F2}) → +5");
         }
 
-        // 4️⃣ Bonus cho level progression phù hợp
         int levelDiff = Mathf.Abs(currentWaveEnemyLevel - stateCollector.playerLevel);
         if (levelDiff <= 2)
         {
@@ -379,8 +406,10 @@ public class BattleManager : MonoBehaviour
         return reward;
     }
 
+    // ✅ METHOD MỚI: Đếm enemy từ pool thay vì dùng FindGameObjectsWithTag
     void CountLivingUnits()
     {
+        // ✅ Đếm ally từ tag (như cũ)
         var allAllies = GameObject.FindGameObjectsWithTag("Ally");
         aliveAllyCount = allAllies.Count(obj =>
             obj.activeInHierarchy &&
@@ -388,12 +417,45 @@ public class BattleManager : MonoBehaviour
             obj.GetComponent<Stats>().currentHP > 0
         );
 
-        var allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        aliveEnemyCount = allEnemies.Count(obj =>
-            obj.activeInHierarchy &&
-            obj.GetComponent<Stats>() != null &&
-            obj.GetComponent<Stats>().currentHP > 0
-        );
+        // ✅ Đếm enemy từ pool của EnemySpawner (chính xác hơn)
+        aliveEnemyCount = CountEnemyFromPool();
+
+        //Debug.Log($"📊 Unit Count - Ally: {aliveAllyCount}, Enemy: {aliveEnemyCount}");
+    }
+
+    // ✅ Hàm mới: Đếm enemy còn sống trong pool
+    int CountEnemyFromPool()
+    {
+        if (enemySpawner == null)
+        {
+            Debug.LogWarning("⚠️ EnemySpawner chưa được gán!");
+            return 0;
+        }
+
+        int count = 0;
+
+        // ✅ Lặp qua tất cả pool (enemy và ally)
+        foreach (var pool in enemySpawner.enemyPools)
+        {
+            // ✅ Chỉ đếm Enemy pool, bỏ qua Ally pool
+            if (pool.faction != UnitFaction.Enemy) continue;
+
+            // ✅ Đếm những enemy đang active và còn HP > 0
+            foreach (var enemy in pool.pool)
+            {
+                if (enemy == null) continue;
+
+                if (!enemy.activeInHierarchy) continue;
+
+                Stats stats = enemy.GetComponent<Stats>();
+                if (stats != null && stats.currentHP > 0)
+                {
+                    count++;
+                }
+            }
+        }
+
+        return count;
     }
 
     void Update()
@@ -453,5 +515,18 @@ public class BattleManager : MonoBehaviour
     public void SetPlayerLevel()
     {
         // Gọi menu này để test với level khác nhau
+    }
+
+    // ✅ Method mới: Tính tổng reward từ tất cả wave
+    float CalculateTotalReward()
+    {
+        float totalReward = 0f;
+
+        foreach (var wave in waveHistory)
+        {
+            totalReward += wave.reward;
+        }
+
+        return totalReward;
     }
 }

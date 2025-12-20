@@ -259,7 +259,7 @@ public class IngridientManager : MonoBehaviour
                         building.GetComponent<SpriteRenderer>().enabled = true;
                     }
 
-                    Debug.Log($"? Loaded building {buildingData.buildingType} - Built: {buildingData.isBuilt}, HP: {buildingData.constructionHP}");
+                    //Debug.Log($"? Loaded building {buildingData.buildingType} - Built: {buildingData.isBuilt}, HP: {buildingData.constructionHP}");
                     break;
                 }
             }
@@ -473,9 +473,22 @@ public class IngridientManager : MonoBehaviour
         return ConvertEntriesToResourceData(playerIngredients);
     }
 
+    // ✅ Method mới: Lấy tài nguyên đã sử dụng
     public ResourceData GetConsumedResourceData()
     {
-        return ConvertEntriesToResourceData(consumedResources);
+        int wood = 0, stone = 0, iron = 0, gold = 0, meat = 0;
+        foreach (var entry in consumedResources)
+        {
+            switch (entry.type.ToLower())
+            {
+                case "wood": wood += entry.quantity; break;
+                case "stone": stone += entry.quantity; break;
+                case "iron": iron += entry.quantity; break;
+                case "gold": gold += entry.quantity; break;
+                case "meat": meat += entry.quantity; break;
+            }
+        }
+        return new ResourceData(wood, stone, iron, gold, meat);
     }
 
     public void UpdateResourcePredictor()

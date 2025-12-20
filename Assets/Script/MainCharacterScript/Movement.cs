@@ -37,7 +37,7 @@ public class Movement : MonoBehaviour
         // ✅ Tìm Cinemachine Virtual Camera (nếu có)
         cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
         
-        Debug.Log(mainCam.name);
+        //Debug.Log(mainCam.name);
     }
 
     void Update()
@@ -117,7 +117,7 @@ public class Movement : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"[Arrow] Cooldown chưa hết! Còn {shootCooldown - (Time.time - lastShootTime):F2}s");
+                    //Debug.LogWarning($"[Arrow] Cooldown chưa hết! Còn {shootCooldown - (Time.time - lastShootTime):F2}s");
                 }
             }
         }

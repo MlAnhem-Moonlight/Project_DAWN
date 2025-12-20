@@ -119,7 +119,7 @@ public class Ingredient : MonoBehaviour
                     environmentData = new EnvironmentData();
                     environmentData.objects = data.objects;
 
-                    Debug.Log($"✅ Đã load thành công {data.objects.Length} objects từ env.json (TextAsset)");
+                    //Debug.Log($"✅ Đã load thành công {data.objects.Length} objects từ env.json (TextAsset)");
                 }
                 else
                 {

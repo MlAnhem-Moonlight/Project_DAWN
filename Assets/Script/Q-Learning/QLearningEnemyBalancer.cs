@@ -422,7 +422,7 @@ public class QLearningEnemyBalancer : MonoBehaviour
             if (verboseLogging && qTable.Count > 0)
             {
                 var sample = qTable.First();
-                Debug.Log($"📝 Sample: {sample.Key} → [{string.Join(", ", sample.Value.Select(v => v.ToString("F2")))}]");
+                //Debug.Log($"📝 Sample: {sample.Key} → [{string.Join(", ", sample.Value.Select(v => v.ToString("F2")))}]");
             }
         }
         catch (System.Exception ex)

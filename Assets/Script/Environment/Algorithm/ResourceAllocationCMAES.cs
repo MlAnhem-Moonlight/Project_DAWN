@@ -83,6 +83,7 @@ public class ResourceAllocationCMAES : MonoBehaviour
     [ContextMenu("Run CMA-ES")]
     public void RunCMAES()
     {
+        Debug.Log("[CMA-ES] Starting optimization...");
         StartCoroutine(WaitPredictionAndRun());
     }
 
@@ -96,6 +97,7 @@ public class ResourceAllocationCMAES : MonoBehaviour
         yield return null;
 
         availableResources = predictor != null ? predictor.Prediction() : new ResourceDataGA(300, 250, 100, 180, 350);
+        //Debug.Log($"{availableResources}");
         rng = new System.Random();
         InitializeObjectTemplate();
         InitializeCMAES();
