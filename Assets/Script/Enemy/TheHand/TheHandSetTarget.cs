@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class TheHandSetTarget : Nodes
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private TheHandMovement _theHandMovement;
     private Transform _transform;
     private float _range;
@@ -19,16 +18,27 @@ public class TheHandSetTarget : Nodes
     {
         Transform target = (Transform)GetData("target");
 
+        if (target == null)
+        {
+            state = NodeState.FAILURE;
+            return state;
+        }
+
+        // ✅ Set target cho movement node
         _theHandMovement.SetTarget(target);
         float distance = Mathf.Abs(_transform.position.x - target.position.x);
 
-        // Nếu trong tầm đánh -> SUCCESS
+        // ✅ Nếu trong tầm đánh → SUCCESS (cho attack node xử lý)
+        // ✅ Nếu ngoài tầm → FAILURE (cho movement node di chuyển lại gần)
         if (distance <= _range)
         {
             state = NodeState.SUCCESS;
-            return state;
         }
-        state = NodeState.FAILURE;
+        else
+        {
+            state = NodeState.FAILURE;  // ✅ Ngoài tầm → di chuyển lại
+        }
+
         return state;
     }
 }

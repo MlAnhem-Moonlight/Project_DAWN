@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 184057859
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: -1900080688, guid: 1259646d6cda13b459b2a66bddd346e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -142,7 +142,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 36
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -222,6 +222,7 @@ MonoBehaviour:
   currentSkillDmg: 0
   currentSkillDuration: 0
   currentAtkRange: 0
+  portrait: {fileID: 0}
   hpLinear: 25
   dmgMultiplier: 4
   atkSpdMultiplier: 1.5
